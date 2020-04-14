@@ -66,7 +66,7 @@ This resource exports the following attributes:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#Image">Image</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#ImageArgs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#Image">Image</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#ImageArgs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -74,11 +74,11 @@ This resource exports the following attributes:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewImage<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#ImageArgs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#Image">Image</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewImage<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#ImageArgs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#Image">Image</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..Image.html">Image</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.ImageArgs.html">ImageArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Image.html">Image</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.ImageArgs.html">ImageArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -170,15 +170,6 @@ This resource exports the following attributes:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Disk<wbr>Id</span>
@@ -204,6 +195,15 @@ This resource exports the following attributes:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A detailed description of this Image.
 {{% /md %}}</dd>
 
 </dl>
@@ -213,15 +213,6 @@ This resource exports the following attributes:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Disk<wbr>Id</span>
@@ -249,21 +240,21 @@ This resource exports the following attributes:
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A detailed description of this Image.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -292,21 +283,21 @@ This resource exports the following attributes:
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A detailed description of this Image.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -333,6 +324,15 @@ This resource exports the following attributes:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A detailed description of this Image.
 {{% /md %}}</dd>
 
 </dl>
@@ -383,24 +383,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Expiry</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -415,24 +397,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Linode<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -499,24 +463,6 @@ a deleted Linode.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Expiry</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -531,24 +477,6 @@ a deleted Linode.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Linode<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -615,24 +543,6 @@ a deleted Linode.
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>expiry</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -647,24 +557,6 @@ a deleted Linode.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>linode<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -731,24 +623,6 @@ a deleted Linode.
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>expiry</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -763,24 +637,6 @@ a deleted Linode.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>linode_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -840,7 +696,7 @@ Get an existing Image resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..Image.html">Image</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..ImageState.html">ImageState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Image.html">Image</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..ImageState.html">ImageState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -950,7 +806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When this Image was created.
 {{% /md %}}</dd>
@@ -959,7 +815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the User who created this Image.
 {{% /md %}}</dd>
@@ -968,7 +824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deprecated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this Image is deprecated. Will only be True for deprecated public Images.
 {{% /md %}}</dd>
@@ -977,7 +833,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
 {{% /md %}}</dd>
@@ -986,7 +842,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
 {{% /md %}}</dd>
@@ -995,7 +851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
 {{% /md %}}</dd>
@@ -1004,7 +860,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
 {{% /md %}}</dd>
@@ -1013,7 +869,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
 {{% /md %}}</dd>
@@ -1022,7 +878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Linode<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd>
@@ -1031,7 +887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
 {{% /md %}}</dd>
@@ -1040,7 +896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the Image was created. 'Manual' Images can be created at any time. 'Automatic' images are created automatically from
 a deleted Linode.
@@ -1050,7 +906,7 @@ a deleted Linode.
             title="Optional">
         <span>Vendor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upstream distribution vendor. Nil for private Images.
 {{% /md %}}</dd>
@@ -1066,7 +922,7 @@ a deleted Linode.
             title="Optional">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When this Image was created.
 {{% /md %}}</dd>
@@ -1075,7 +931,7 @@ a deleted Linode.
             title="Optional">
         <span>Created<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the User who created this Image.
 {{% /md %}}</dd>
@@ -1084,7 +940,7 @@ a deleted Linode.
             title="Optional">
         <span>Deprecated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this Image is deprecated. Will only be True for deprecated public Images.
 {{% /md %}}</dd>
@@ -1093,7 +949,7 @@ a deleted Linode.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
 {{% /md %}}</dd>
@@ -1102,7 +958,7 @@ a deleted Linode.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
 {{% /md %}}</dd>
@@ -1111,7 +967,7 @@ a deleted Linode.
             title="Optional">
         <span>Expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
 {{% /md %}}</dd>
@@ -1120,7 +976,7 @@ a deleted Linode.
             title="Optional">
         <span>Is<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
 {{% /md %}}</dd>
@@ -1129,7 +985,7 @@ a deleted Linode.
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
 {{% /md %}}</dd>
@@ -1138,7 +994,7 @@ a deleted Linode.
             title="Optional">
         <span>Linode<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd>
@@ -1147,7 +1003,7 @@ a deleted Linode.
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
 {{% /md %}}</dd>
@@ -1156,7 +1012,7 @@ a deleted Linode.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the Image was created. 'Manual' Images can be created at any time. 'Automatic' images are created automatically from
 a deleted Linode.
@@ -1166,7 +1022,7 @@ a deleted Linode.
             title="Optional">
         <span>Vendor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upstream distribution vendor. Nil for private Images.
 {{% /md %}}</dd>
@@ -1182,7 +1038,7 @@ a deleted Linode.
             title="Optional">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When this Image was created.
 {{% /md %}}</dd>
@@ -1191,7 +1047,7 @@ a deleted Linode.
             title="Optional">
         <span>created<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the User who created this Image.
 {{% /md %}}</dd>
@@ -1200,7 +1056,7 @@ a deleted Linode.
             title="Optional">
         <span>deprecated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not this Image is deprecated. Will only be True for deprecated public Images.
 {{% /md %}}</dd>
@@ -1209,7 +1065,7 @@ a deleted Linode.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
 {{% /md %}}</dd>
@@ -1218,7 +1074,7 @@ a deleted Linode.
             title="Optional">
         <span>disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
 {{% /md %}}</dd>
@@ -1227,7 +1083,7 @@ a deleted Linode.
             title="Optional">
         <span>expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
 {{% /md %}}</dd>
@@ -1236,7 +1092,7 @@ a deleted Linode.
             title="Optional">
         <span>is<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
 {{% /md %}}</dd>
@@ -1245,7 +1101,7 @@ a deleted Linode.
             title="Optional">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
 {{% /md %}}</dd>
@@ -1254,7 +1110,7 @@ a deleted Linode.
             title="Optional">
         <span>linode<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
 {{% /md %}}</dd>
@@ -1263,7 +1119,7 @@ a deleted Linode.
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
 {{% /md %}}</dd>
@@ -1272,7 +1128,7 @@ a deleted Linode.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the Image was created. 'Manual' Images can be created at any time. 'Automatic' images are created automatically from
 a deleted Linode.
@@ -1282,7 +1138,7 @@ a deleted Linode.
             title="Optional">
         <span>vendor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upstream distribution vendor. Nil for private Images.
 {{% /md %}}</dd>

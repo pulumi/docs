@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,11 +118,20 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Alerts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -130,7 +139,7 @@ block_external_search_index: true
             title="Optional">
         <span>Authorized<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -139,7 +148,7 @@ block_external_search_index: true
             title="Optional">
         <span>Authorized<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -148,7 +157,7 @@ block_external_search_index: true
             title="Optional">
         <span>Backup<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -157,7 +166,7 @@ block_external_search_index: true
             title="Optional">
         <span>Backups<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
 {{% /md %}}</dd>
@@ -166,7 +175,7 @@ block_external_search_index: true
             title="Optional">
         <span>Boot<wbr>Config<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
 {{% /md %}}</dd>
@@ -175,7 +184,7 @@ block_external_search_index: true
             title="Optional">
         <span>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">List&lt;Instance<wbr>Config<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instanceconfig">List&lt;Instance<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 {{% /md %}}</dd>
@@ -184,7 +193,7 @@ block_external_search_index: true
             title="Optional">
         <span>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">List&lt;Instance<wbr>Disk<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instancedisk">List&lt;Instance<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -192,7 +201,7 @@ block_external_search_index: true
             title="Optional">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display group of the Linode instance.
 {{% /md %}}</dd>
@@ -201,7 +210,7 @@ block_external_search_index: true
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -210,7 +219,7 @@ block_external_search_index: true
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd>
@@ -219,10 +228,80 @@ block_external_search_index: true
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Root<wbr>Pass</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password that will be initialially assigned to the 'root' user account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Stackscript<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Stackscript<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Swap<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Watchdog<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -235,79 +314,9 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
-        <span>Root<wbr>Pass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The password that will be initialially assigned to the 'root' user account.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Stackscript<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Stackscript<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Swap<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Watchdog<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Alerts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">*Instance<wbr>Alerts</a></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -333,7 +342,7 @@ block_external_search_index: true
             title="Optional">
         <span>Backup<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -342,7 +351,7 @@ block_external_search_index: true
             title="Optional">
         <span>Backups<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
 {{% /md %}}</dd>
@@ -351,7 +360,7 @@ block_external_search_index: true
             title="Optional">
         <span>Boot<wbr>Config<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
 {{% /md %}}</dd>
@@ -377,7 +386,7 @@ block_external_search_index: true
             title="Optional">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display group of the Linode instance.
 {{% /md %}}</dd>
@@ -386,7 +395,7 @@ block_external_search_index: true
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -395,7 +404,7 @@ block_external_search_index: true
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd>
@@ -404,25 +413,16 @@ block_external_search_index: true
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Root<wbr>Pass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password that will be initialially assigned to the 'root' user account.
 {{% /md %}}</dd>
@@ -440,7 +440,7 @@ block_external_search_index: true
             title="Optional">
         <span>Stackscript<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -449,7 +449,7 @@ block_external_search_index: true
             title="Optional">
         <span>Swap<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 {{% /md %}}</dd>
@@ -467,7 +467,7 @@ block_external_search_index: true
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
 {{% /md %}}</dd>
@@ -476,7 +476,7 @@ block_external_search_index: true
             title="Optional">
         <span>Watchdog<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 {{% /md %}}</dd>
@@ -487,112 +487,6 @@ block_external_search_index: true
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>alerts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authorized<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authorized<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>backup<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>backups<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>boot<wbr>Config<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">Instance<wbr>Config[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">Instance<wbr>Disk[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The display group of the Linode instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -605,9 +499,115 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>alerts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authorized<wbr>Keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authorized<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>backup<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>backups<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>boot<wbr>Config<wbr>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceconfig">Instance<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancedisk">Instance<wbr>Disk[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display group of the Linode instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>private<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>root<wbr>Pass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password that will be initialially assigned to the 'root' user account.
 {{% /md %}}</dd>
@@ -616,7 +616,7 @@ block_external_search_index: true
             title="Optional">
         <span>stackscript<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -625,7 +625,7 @@ block_external_search_index: true
             title="Optional">
         <span>stackscript<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -634,7 +634,7 @@ block_external_search_index: true
             title="Optional">
         <span>swap<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 {{% /md %}}</dd>
@@ -643,7 +643,7 @@ block_external_search_index: true
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd>
@@ -652,7 +652,7 @@ block_external_search_index: true
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
 {{% /md %}}</dd>
@@ -661,7 +661,7 @@ block_external_search_index: true
             title="Optional">
         <span>watchdog<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 {{% /md %}}</dd>
@@ -672,6 +672,15 @@ block_external_search_index: true
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -777,15 +786,6 @@ block_external_search_index: true
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -872,99 +872,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Alerts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authorized<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authorized<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backup<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Backups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups</a></span>
     </dt>
     <dd>{{% md %}}Information about this Linode's backups status.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backups<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Boot<wbr>Config<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">List&lt;Instance<wbr>Config&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">List&lt;Instance<wbr>Disk&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The display group of the Linode instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -981,7 +893,7 @@ will be used for this field.
             title="">
         <span>Ipv4s</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}This Linode's IPv4 Addresses. Each Linode is assigned a single public IPv4 address upon creation, and may get a single
 private IPv4 address if needed. You may need to open a support ticket to get additional IPv4 addresses.
@@ -998,48 +910,12 @@ private IPv4 address if needed. You may need to open a support ticket to get add
 
     <dt class="property-"
             title="">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Private<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's Private IPv4 Address. The regional private IP address range is 192.168.128/17 address shared by all Linode
 Instances in a region.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Pass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The password that will be initialially assigned to the 'root' user account.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1052,65 +928,11 @@ Instances in a region.
 
     <dt class="property-"
             title="">
-        <span>Stackscript<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stackscript<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the instance, indicating the current readiness state.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Swap<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Watchdog<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 {{% /md %}}</dd>
 
 </dl>
@@ -1122,99 +944,11 @@ Instances in a region.
 
     <dt class="property-"
             title="">
-        <span>Alerts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authorized<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authorized<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backup<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Backups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups</a></span>
     </dt>
     <dd>{{% md %}}Information about this Linode's backups status.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backups<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Boot<wbr>Config<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">[]Instance<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">[]Instance<wbr>Disk</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The display group of the Linode instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1248,48 +982,12 @@ private IPv4 address if needed. You may need to open a support ticket to get add
 
     <dt class="property-"
             title="">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Private<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's Private IPv4 Address. The regional private IP address range is 192.168.128/17 address shared by all Linode
 Instances in a region.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Pass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The password that will be initialially assigned to the 'root' user account.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1302,65 +1000,11 @@ Instances in a region.
 
     <dt class="property-"
             title="">
-        <span>Stackscript<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stackscript<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the instance, indicating the current readiness state.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Swap<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Watchdog<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 {{% /md %}}</dd>
 
 </dl>
@@ -1372,99 +1016,11 @@ Instances in a region.
 
     <dt class="property-"
             title="">
-        <span>alerts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authorized<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authorized<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backup<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>backups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups</a></span>
     </dt>
     <dd>{{% md %}}Information about this Linode's backups status.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backups<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>boot<wbr>Config<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">Instance<wbr>Config[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">Instance<wbr>Disk[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The display group of the Linode instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1498,48 +1054,12 @@ private IPv4 address if needed. You may need to open a support ticket to get add
 
     <dt class="property-"
             title="">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>private<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's Private IPv4 Address. The regional private IP address range is 192.168.128/17 address shared by all Linode
 Instances in a region.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root<wbr>Pass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The password that will be initialially assigned to the 'root' user account.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1552,65 +1072,11 @@ Instances in a region.
 
     <dt class="property-"
             title="">
-        <span>stackscript<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>stackscript<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the instance, indicating the current readiness state.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>swap<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>watchdog<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 {{% /md %}}</dd>
 
 </dl>
@@ -1622,99 +1088,11 @@ Instances in a region.
 
     <dt class="property-"
             title="">
-        <span>alerts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Dict[Instance<wbr>Alerts]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authorized_<wbr>keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authorized_<wbr>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backup_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>backups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancebackups">Dict[Instance<wbr>Backups]</a></span>
     </dt>
     <dd>{{% md %}}Information about this Linode's backups status.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backups_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>boot_<wbr>config_<wbr>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">List[Instance<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">List[Instance<wbr>Disk]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The display group of the Linode instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1748,48 +1126,12 @@ private IPv4 address if needed. You may need to open a support ticket to get add
 
     <dt class="property-"
             title="">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>private_<wbr>ip_<wbr>address</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This Linode's Private IPv4 Address. The regional private IP address range is 192.168.128/17 address shared by all Linode
 Instances in a region.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root_<wbr>pass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The password that will be initialially assigned to the 'root' user account.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1802,65 +1144,11 @@ Instances in a region.
 
     <dt class="property-"
             title="">
-        <span>stackscript_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>stackscript_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the instance, indicating the current readiness state.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>swap_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>watchdog_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 {{% /md %}}</dd>
 
 </dl>
@@ -1892,7 +1180,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..InstanceState.html">InstanceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..InstanceState.html">InstanceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2002,7 +1290,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alerts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2010,7 +1298,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authorized<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2019,7 +1307,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authorized<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2028,7 +1316,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backup<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2037,7 +1325,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about this Linode's backups status.
 {{% /md %}}</dd>
@@ -2046,7 +1334,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backups<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
 {{% /md %}}</dd>
@@ -2055,7 +1343,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Boot<wbr>Config<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
 {{% /md %}}</dd>
@@ -2064,7 +1352,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">List&lt;Instance<wbr>Config<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instanceconfig">List&lt;Instance<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 {{% /md %}}</dd>
@@ -2073,7 +1361,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">List&lt;Instance<wbr>Disk<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instancedisk">List&lt;Instance<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2081,7 +1369,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display group of the Linode instance.
 {{% /md %}}</dd>
@@ -2090,7 +1378,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2099,7 +1387,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's Public IPv4 Address. If there are multiple public IPv4 addresses on this Instance, an arbitrary address
 will be used for this field.
@@ -2109,7 +1397,7 @@ will be used for this field.
             title="Optional">
         <span>Ipv4s</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}This Linode's IPv4 Addresses. Each Linode is assigned a single public IPv4 address upon creation, and may get a single
 private IPv4 address if needed. You may need to open a support ticket to get additional IPv4 addresses.
@@ -2119,7 +1407,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
             title="Optional">
         <span>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's IPv6 SLAAC addresses. This address is specific to a Linode, and may not be shared.
 {{% /md %}}</dd>
@@ -2128,7 +1416,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd>
@@ -2137,7 +1425,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
 {{% /md %}}</dd>
@@ -2146,7 +1434,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
             title="Optional">
         <span>Private<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's Private IPv4 Address. The regional private IP address range is 192.168.128/17 address shared by all Linode
 Instances in a region.
@@ -2156,7 +1444,7 @@ Instances in a region.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
 {{% /md %}}</dd>
@@ -2165,7 +1453,7 @@ Instances in a region.
             title="Optional">
         <span>Root<wbr>Pass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password that will be initialially assigned to the 'root' user account.
 {{% /md %}}</dd>
@@ -2174,7 +1462,7 @@ Instances in a region.
             title="Optional">
         <span>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2182,7 +1470,7 @@ Instances in a region.
             title="Optional">
         <span>Stackscript<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2191,7 +1479,7 @@ Instances in a region.
             title="Optional">
         <span>Stackscript<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2200,7 +1488,7 @@ Instances in a region.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the instance, indicating the current readiness state.
 {{% /md %}}</dd>
@@ -2209,7 +1497,7 @@ Instances in a region.
             title="Optional">
         <span>Swap<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 {{% /md %}}</dd>
@@ -2218,7 +1506,7 @@ Instances in a region.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd>
@@ -2227,7 +1515,7 @@ Instances in a region.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
 {{% /md %}}</dd>
@@ -2236,7 +1524,7 @@ Instances in a region.
             title="Optional">
         <span>Watchdog<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 {{% /md %}}</dd>
@@ -2252,7 +1540,7 @@ Instances in a region.
             title="Optional">
         <span>Alerts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">*Instance<wbr>Alerts</a></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2278,7 +1566,7 @@ Instances in a region.
             title="Optional">
         <span>Backup<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2287,7 +1575,7 @@ Instances in a region.
             title="Optional">
         <span>Backups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackups">*Instance<wbr>Backups</a></span>
+        <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups</a></span>
     </dt>
     <dd>{{% md %}}Information about this Linode's backups status.
 {{% /md %}}</dd>
@@ -2296,7 +1584,7 @@ Instances in a region.
             title="Optional">
         <span>Backups<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
 {{% /md %}}</dd>
@@ -2305,7 +1593,7 @@ Instances in a region.
             title="Optional">
         <span>Boot<wbr>Config<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
 {{% /md %}}</dd>
@@ -2331,7 +1619,7 @@ Instances in a region.
             title="Optional">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display group of the Linode instance.
 {{% /md %}}</dd>
@@ -2340,7 +1628,7 @@ Instances in a region.
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2349,7 +1637,7 @@ Instances in a region.
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's Public IPv4 Address. If there are multiple public IPv4 addresses on this Instance, an arbitrary address
 will be used for this field.
@@ -2369,7 +1657,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
             title="Optional">
         <span>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's IPv6 SLAAC addresses. This address is specific to a Linode, and may not be shared.
 {{% /md %}}</dd>
@@ -2378,7 +1666,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd>
@@ -2387,7 +1675,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
 {{% /md %}}</dd>
@@ -2396,7 +1684,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
             title="Optional">
         <span>Private<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's Private IPv4 Address. The regional private IP address range is 192.168.128/17 address shared by all Linode
 Instances in a region.
@@ -2406,7 +1694,7 @@ Instances in a region.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
 {{% /md %}}</dd>
@@ -2415,7 +1703,7 @@ Instances in a region.
             title="Optional">
         <span>Root<wbr>Pass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password that will be initialially assigned to the 'root' user account.
 {{% /md %}}</dd>
@@ -2424,7 +1712,7 @@ Instances in a region.
             title="Optional">
         <span>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancespecs">*Instance<wbr>Specs</a></span>
+        <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2441,7 +1729,7 @@ Instances in a region.
             title="Optional">
         <span>Stackscript<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2450,7 +1738,7 @@ Instances in a region.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the instance, indicating the current readiness state.
 {{% /md %}}</dd>
@@ -2459,7 +1747,7 @@ Instances in a region.
             title="Optional">
         <span>Swap<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 {{% /md %}}</dd>
@@ -2477,7 +1765,7 @@ Instances in a region.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
 {{% /md %}}</dd>
@@ -2486,7 +1774,7 @@ Instances in a region.
             title="Optional">
         <span>Watchdog<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 {{% /md %}}</dd>
@@ -2502,7 +1790,7 @@ Instances in a region.
             title="Optional">
         <span>alerts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts?</a></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2510,7 +1798,7 @@ Instances in a region.
             title="Optional">
         <span>authorized<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2519,7 +1807,7 @@ Instances in a region.
             title="Optional">
         <span>authorized<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2528,7 +1816,7 @@ Instances in a region.
             title="Optional">
         <span>backup<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2537,7 +1825,7 @@ Instances in a region.
             title="Optional">
         <span>backups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups?</a></span>
+        <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups</a></span>
     </dt>
     <dd>{{% md %}}Information about this Linode's backups status.
 {{% /md %}}</dd>
@@ -2546,7 +1834,7 @@ Instances in a region.
             title="Optional">
         <span>backups<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
 {{% /md %}}</dd>
@@ -2555,7 +1843,7 @@ Instances in a region.
             title="Optional">
         <span>boot<wbr>Config<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
 {{% /md %}}</dd>
@@ -2564,7 +1852,7 @@ Instances in a region.
             title="Optional">
         <span>configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">Instance<wbr>Config[]?</a></span>
+        <span class="property-type"><a href="#instanceconfig">Instance<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 {{% /md %}}</dd>
@@ -2573,7 +1861,7 @@ Instances in a region.
             title="Optional">
         <span>disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">Instance<wbr>Disk[]?</a></span>
+        <span class="property-type"><a href="#instancedisk">Instance<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2581,7 +1869,7 @@ Instances in a region.
             title="Optional">
         <span>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display group of the Linode instance.
 {{% /md %}}</dd>
@@ -2590,7 +1878,7 @@ Instances in a region.
             title="Optional">
         <span>image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2599,7 +1887,7 @@ Instances in a region.
             title="Optional">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's Public IPv4 Address. If there are multiple public IPv4 addresses on this Instance, an arbitrary address
 will be used for this field.
@@ -2609,7 +1897,7 @@ will be used for this field.
             title="Optional">
         <span>ipv4s</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}This Linode's IPv4 Addresses. Each Linode is assigned a single public IPv4 address upon creation, and may get a single
 private IPv4 address if needed. You may need to open a support ticket to get additional IPv4 addresses.
@@ -2619,7 +1907,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
             title="Optional">
         <span>ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's IPv6 SLAAC addresses. This address is specific to a Linode, and may not be shared.
 {{% /md %}}</dd>
@@ -2628,7 +1916,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
             title="Optional">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd>
@@ -2637,7 +1925,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
             title="Optional">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
 {{% /md %}}</dd>
@@ -2646,7 +1934,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
             title="Optional">
         <span>private<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's Private IPv4 Address. The regional private IP address range is 192.168.128/17 address shared by all Linode
 Instances in a region.
@@ -2656,7 +1944,7 @@ Instances in a region.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
 {{% /md %}}</dd>
@@ -2665,7 +1953,7 @@ Instances in a region.
             title="Optional">
         <span>root<wbr>Pass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password that will be initialially assigned to the 'root' user account.
 {{% /md %}}</dd>
@@ -2674,7 +1962,7 @@ Instances in a region.
             title="Optional">
         <span>specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs?</a></span>
+        <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2682,7 +1970,7 @@ Instances in a region.
             title="Optional">
         <span>stackscript<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2691,7 +1979,7 @@ Instances in a region.
             title="Optional">
         <span>stackscript<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2700,7 +1988,7 @@ Instances in a region.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the instance, indicating the current readiness state.
 {{% /md %}}</dd>
@@ -2709,7 +1997,7 @@ Instances in a region.
             title="Optional">
         <span>swap<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 {{% /md %}}</dd>
@@ -2718,7 +2006,7 @@ Instances in a region.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd>
@@ -2727,7 +2015,7 @@ Instances in a region.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
 {{% /md %}}</dd>
@@ -2736,7 +2024,7 @@ Instances in a region.
             title="Optional">
         <span>watchdog<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 {{% /md %}}</dd>
@@ -3024,7 +2312,7 @@ Instances in a region.
             title="Optional">
         <span>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3032,7 +2320,7 @@ Instances in a region.
             title="Optional">
         <span>Io</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3040,7 +2328,7 @@ Instances in a region.
             title="Optional">
         <span>Network<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3048,7 +2336,7 @@ Instances in a region.
             title="Optional">
         <span>Network<wbr>Out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3056,7 +2344,7 @@ Instances in a region.
             title="Optional">
         <span>Transfer<wbr>Quota</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3071,7 +2359,7 @@ Instances in a region.
             title="Optional">
         <span>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3079,7 +2367,7 @@ Instances in a region.
             title="Optional">
         <span>Io</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3087,7 +2375,7 @@ Instances in a region.
             title="Optional">
         <span>Network<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3095,7 +2383,7 @@ Instances in a region.
             title="Optional">
         <span>Network<wbr>Out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3103,7 +2391,7 @@ Instances in a region.
             title="Optional">
         <span>Transfer<wbr>Quota</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3118,7 +2406,7 @@ Instances in a region.
             title="Optional">
         <span>cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3126,7 +2414,7 @@ Instances in a region.
             title="Optional">
         <span>io</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3134,7 +2422,7 @@ Instances in a region.
             title="Optional">
         <span>network<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3142,7 +2430,7 @@ Instances in a region.
             title="Optional">
         <span>network<wbr>Out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3150,7 +2438,7 @@ Instances in a region.
             title="Optional">
         <span>transfer<wbr>Quota</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3227,7 +2515,7 @@ Instances in a region.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3235,7 +2523,7 @@ Instances in a region.
             title="Optional">
         <span>Schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3250,7 +2538,7 @@ Instances in a region.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3258,7 +2546,7 @@ Instances in a region.
             title="Optional">
         <span>Schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackupsschedule">*Instance<wbr>Backups<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3273,7 +2561,7 @@ Instances in a region.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3281,7 +2569,7 @@ Instances in a region.
             title="Optional">
         <span>schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule?</a></span>
+        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3334,7 +2622,7 @@ Instances in a region.
             title="Optional">
         <span>Day</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3342,7 +2630,7 @@ Instances in a region.
             title="Optional">
         <span>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3357,7 +2645,7 @@ Instances in a region.
             title="Optional">
         <span>Day</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3365,7 +2653,7 @@ Instances in a region.
             title="Optional">
         <span>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3380,7 +2668,7 @@ Instances in a region.
             title="Optional">
         <span>day</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3388,7 +2676,7 @@ Instances in a region.
             title="Optional">
         <span>window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3437,42 +2725,6 @@ Instances in a region.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Comments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}- Arbitrary user comments about this `config`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of `disk` or `volume` attachments for this `config`.  If the `boot_config_label` omits a `devices` block, the Linode will not be booted.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Helpers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kernel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}- A Kernel ID to boot a Linode with. Default is based on image choice. (examples: linode/latest-64bit, linode/grub2, linode/direct-disk)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Label</span>
@@ -3484,9 +2736,45 @@ Instances in a region.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Comments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- Arbitrary user comments about this `config`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `disk` or `volume` attachments for this `config`.  If the `boot_config_label` omits a `devices` block, the Linode will not be booted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Helpers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kernel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- A Kernel ID to boot a Linode with. Default is based on image choice. (examples: linode/latest-64bit, linode/grub2, linode/direct-disk)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Defaults to the total RAM of the Linode
 {{% /md %}}</dd>
@@ -3495,7 +2783,7 @@ Instances in a region.
             title="Optional">
         <span>Root<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The root device to boot. The corresponding disk must be attached to a `device` slot.  Example: `"/dev/sda"`
 {{% /md %}}</dd>
@@ -3504,7 +2792,7 @@ Instances in a region.
             title="Optional">
         <span>Run<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Defines the state of your Linode after booting. Defaults to `"default"`.
 {{% /md %}}</dd>
@@ -3513,7 +2801,7 @@ Instances in a region.
             title="Optional">
         <span>Virt<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Controls the virtualization mode. Defaults to `"paravirt"`.
 {{% /md %}}</dd>
@@ -3525,42 +2813,6 @@ Instances in a region.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Comments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}- Arbitrary user comments about this `config`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevices">*Instance<wbr>Config<wbr>Devices</a></span>
-    </dt>
-    <dd>{{% md %}}A list of `disk` or `volume` attachments for this `config`.  If the `boot_config_label` omits a `devices` block, the Linode will not be booted.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Helpers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfighelpers">*Instance<wbr>Config<wbr>Helpers</a></span>
-    </dt>
-    <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kernel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}- A Kernel ID to boot a Linode with. Default is based on image choice. (examples: linode/latest-64bit, linode/grub2, linode/direct-disk)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Label</span>
@@ -3572,9 +2824,45 @@ Instances in a region.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Comments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- Arbitrary user comments about this `config`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `disk` or `volume` attachments for this `config`.  If the `boot_config_label` omits a `devices` block, the Linode will not be booted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Helpers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers</a></span>
+    </dt>
+    <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kernel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- A Kernel ID to boot a Linode with. Default is based on image choice. (examples: linode/latest-64bit, linode/grub2, linode/direct-disk)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Defaults to the total RAM of the Linode
 {{% /md %}}</dd>
@@ -3583,7 +2871,7 @@ Instances in a region.
             title="Optional">
         <span>Root<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The root device to boot. The corresponding disk must be attached to a `device` slot.  Example: `"/dev/sda"`
 {{% /md %}}</dd>
@@ -3592,7 +2880,7 @@ Instances in a region.
             title="Optional">
         <span>Run<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Defines the state of your Linode after booting. Defaults to `"default"`.
 {{% /md %}}</dd>
@@ -3601,7 +2889,7 @@ Instances in a region.
             title="Optional">
         <span>Virt<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Controls the virtualization mode. Defaults to `"paravirt"`.
 {{% /md %}}</dd>
@@ -3612,42 +2900,6 @@ Instances in a region.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>comments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}- Arbitrary user comments about this `config`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of `disk` or `volume` attachments for this `config`.  If the `boot_config_label` omits a `devices` block, the Linode will not be booted.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>helpers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers?</a></span>
-    </dt>
-    <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kernel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}- A Kernel ID to boot a Linode with. Default is based on image choice. (examples: linode/latest-64bit, linode/grub2, linode/direct-disk)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3660,9 +2912,45 @@ Instances in a region.
 
     <dt class="property-optional"
             title="Optional">
+        <span>comments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- Arbitrary user comments about this `config`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `disk` or `volume` attachments for this `config`.  If the `boot_config_label` omits a `devices` block, the Linode will not be booted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>helpers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers</a></span>
+    </dt>
+    <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kernel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- A Kernel ID to boot a Linode with. Default is based on image choice. (examples: linode/latest-64bit, linode/grub2, linode/direct-disk)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- Defaults to the total RAM of the Linode
 {{% /md %}}</dd>
@@ -3671,7 +2959,7 @@ Instances in a region.
             title="Optional">
         <span>root<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The root device to boot. The corresponding disk must be attached to a `device` slot.  Example: `"/dev/sda"`
 {{% /md %}}</dd>
@@ -3680,7 +2968,7 @@ Instances in a region.
             title="Optional">
         <span>run<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Defines the state of your Linode after booting. Defaults to `"default"`.
 {{% /md %}}</dd>
@@ -3689,7 +2977,7 @@ Instances in a region.
             title="Optional">
         <span>virt<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Controls the virtualization mode. Defaults to `"paravirt"`.
 {{% /md %}}</dd>
@@ -3700,6 +2988,15 @@ Instances in a region.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3735,15 +3032,6 @@ Instances in a region.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- A Kernel ID to boot a Linode with. Default is based on image choice. (examples: linode/latest-64bit, linode/grub2, linode/direct-disk)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3808,7 +3096,7 @@ Instances in a region.
             title="Optional">
         <span>Sda</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3816,7 +3104,7 @@ Instances in a region.
             title="Optional">
         <span>Sdb</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3824,7 +3112,7 @@ Instances in a region.
             title="Optional">
         <span>Sdc</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3832,7 +3120,7 @@ Instances in a region.
             title="Optional">
         <span>Sdd</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3840,7 +3128,7 @@ Instances in a region.
             title="Optional">
         <span>Sde</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3848,7 +3136,7 @@ Instances in a region.
             title="Optional">
         <span>Sdf</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3856,7 +3144,7 @@ Instances in a region.
             title="Optional">
         <span>Sdg</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3864,7 +3152,7 @@ Instances in a region.
             title="Optional">
         <span>Sdh</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3879,7 +3167,7 @@ Instances in a region.
             title="Optional">
         <span>Sda</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessda">*Instance<wbr>Config<wbr>Devices<wbr>Sda</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3887,7 +3175,7 @@ Instances in a region.
             title="Optional">
         <span>Sdb</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdb">*Instance<wbr>Config<wbr>Devices<wbr>Sdb</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3895,7 +3183,7 @@ Instances in a region.
             title="Optional">
         <span>Sdc</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdc">*Instance<wbr>Config<wbr>Devices<wbr>Sdc</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3903,7 +3191,7 @@ Instances in a region.
             title="Optional">
         <span>Sdd</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdd">*Instance<wbr>Config<wbr>Devices<wbr>Sdd</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3911,7 +3199,7 @@ Instances in a region.
             title="Optional">
         <span>Sde</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessde">*Instance<wbr>Config<wbr>Devices<wbr>Sde</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3919,7 +3207,7 @@ Instances in a region.
             title="Optional">
         <span>Sdf</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdf">*Instance<wbr>Config<wbr>Devices<wbr>Sdf</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3927,7 +3215,7 @@ Instances in a region.
             title="Optional">
         <span>Sdg</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdg">*Instance<wbr>Config<wbr>Devices<wbr>Sdg</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3935,7 +3223,7 @@ Instances in a region.
             title="Optional">
         <span>Sdh</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdh">*Instance<wbr>Config<wbr>Devices<wbr>Sdh</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3950,7 +3238,7 @@ Instances in a region.
             title="Optional">
         <span>sda</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3958,7 +3246,7 @@ Instances in a region.
             title="Optional">
         <span>sdb</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3966,7 +3254,7 @@ Instances in a region.
             title="Optional">
         <span>sdc</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3974,7 +3262,7 @@ Instances in a region.
             title="Optional">
         <span>sdd</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3982,7 +3270,7 @@ Instances in a region.
             title="Optional">
         <span>sde</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3990,7 +3278,7 @@ Instances in a region.
             title="Optional">
         <span>sdf</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3998,7 +3286,7 @@ Instances in a region.
             title="Optional">
         <span>sdg</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4006,7 +3294,7 @@ Instances in a region.
             title="Optional">
         <span>sdh</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh?</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4107,7 +3395,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4116,7 +3404,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4125,7 +3413,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4141,7 +3429,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4150,7 +3438,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4159,7 +3447,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4175,7 +3463,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4184,7 +3472,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4193,7 +3481,7 @@ Instances in a region.
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4258,7 +3546,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4267,7 +3555,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4276,7 +3564,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4292,7 +3580,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4301,7 +3589,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4310,7 +3598,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4326,7 +3614,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4335,7 +3623,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4344,7 +3632,7 @@ Instances in a region.
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4409,7 +3697,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4418,7 +3706,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4427,7 +3715,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4443,7 +3731,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4452,7 +3740,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4461,7 +3749,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4477,7 +3765,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4486,7 +3774,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4495,7 +3783,7 @@ Instances in a region.
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4560,7 +3848,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4569,7 +3857,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4578,7 +3866,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4594,7 +3882,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4603,7 +3891,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4612,7 +3900,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4628,7 +3916,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4637,7 +3925,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4646,7 +3934,7 @@ Instances in a region.
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4711,7 +3999,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4720,7 +4008,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4729,7 +4017,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4745,7 +4033,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4754,7 +4042,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4763,7 +4051,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4779,7 +4067,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4788,7 +4076,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4797,7 +4085,7 @@ Instances in a region.
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4862,7 +4150,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4871,7 +4159,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4880,7 +4168,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4896,7 +4184,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4905,7 +4193,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4914,7 +4202,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4930,7 +4218,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4939,7 +4227,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4948,7 +4236,7 @@ Instances in a region.
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5013,7 +4301,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -5022,7 +4310,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5031,7 +4319,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5047,7 +4335,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -5056,7 +4344,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5065,7 +4353,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5081,7 +4369,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -5090,7 +4378,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5099,7 +4387,7 @@ Instances in a region.
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5164,7 +4452,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -5173,7 +4461,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5182,7 +4470,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5198,7 +4486,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -5207,7 +4495,7 @@ Instances in a region.
             title="Optional">
         <span>Disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5216,7 +4504,7 @@ Instances in a region.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5232,7 +4520,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -5241,7 +4529,7 @@ Instances in a region.
             title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5250,7 +4538,7 @@ Instances in a region.
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5315,7 +4603,7 @@ Instances in a region.
             title="Optional">
         <span>Devtmpfs<wbr>Automount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5323,7 +4611,7 @@ Instances in a region.
             title="Optional">
         <span>Distro</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls the behavior of the Linode Config's Distribution Helper setting.
 {{% /md %}}</dd>
@@ -5332,7 +4620,7 @@ Instances in a region.
             title="Optional">
         <span>Modules<wbr>Dep</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Creates a modules dependency file for the Kernel you run.
 {{% /md %}}</dd>
@@ -5341,7 +4629,7 @@ Instances in a region.
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls the behavior of the Linode Config's Network Helper setting, used to automatically configure additional IP addresses assigned to this instance.
 {{% /md %}}</dd>
@@ -5350,7 +4638,7 @@ Instances in a region.
             title="Optional">
         <span>Updatedb<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables updatedb cron job to avoid disk thrashing.
 {{% /md %}}</dd>
@@ -5366,7 +4654,7 @@ Instances in a region.
             title="Optional">
         <span>Devtmpfs<wbr>Automount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5374,7 +4662,7 @@ Instances in a region.
             title="Optional">
         <span>Distro</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls the behavior of the Linode Config's Distribution Helper setting.
 {{% /md %}}</dd>
@@ -5383,7 +4671,7 @@ Instances in a region.
             title="Optional">
         <span>Modules<wbr>Dep</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Creates a modules dependency file for the Kernel you run.
 {{% /md %}}</dd>
@@ -5392,7 +4680,7 @@ Instances in a region.
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls the behavior of the Linode Config's Network Helper setting, used to automatically configure additional IP addresses assigned to this instance.
 {{% /md %}}</dd>
@@ -5401,7 +4689,7 @@ Instances in a region.
             title="Optional">
         <span>Updatedb<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables updatedb cron job to avoid disk thrashing.
 {{% /md %}}</dd>
@@ -5417,7 +4705,7 @@ Instances in a region.
             title="Optional">
         <span>devtmpfs<wbr>Automount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5425,7 +4713,7 @@ Instances in a region.
             title="Optional">
         <span>distro</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls the behavior of the Linode Config's Distribution Helper setting.
 {{% /md %}}</dd>
@@ -5434,7 +4722,7 @@ Instances in a region.
             title="Optional">
         <span>modules<wbr>Dep</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Creates a modules dependency file for the Kernel you run.
 {{% /md %}}</dd>
@@ -5443,7 +4731,7 @@ Instances in a region.
             title="Optional">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls the behavior of the Linode Config's Network Helper setting, used to automatically configure additional IP addresses assigned to this instance.
 {{% /md %}}</dd>
@@ -5452,7 +4740,7 @@ Instances in a region.
             title="Optional">
         <span>updatedb<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disables updatedb cron job to avoid disk thrashing.
 {{% /md %}}</dd>
@@ -5530,50 +4818,6 @@ Instances in a region.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authorized<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authorized<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filesystem</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the disk in the Linode API.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Label</span>
@@ -5582,22 +4826,6 @@ Instances in a region.
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Read<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Root<wbr>Pass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5610,9 +4838,69 @@ Instances in a region.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Authorized<wbr>Keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Authorized<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Filesystem</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ID of the disk in the Linode API.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Read<wbr>Only</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Root<wbr>Pass</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Stackscript<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -5621,7 +4909,7 @@ Instances in a region.
             title="Optional">
         <span>Stackscript<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -5633,6 +4921,24 @@ Instances in a region.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The size of the Disk in MB.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Authorized<wbr>Keys</span>
@@ -5655,7 +4961,7 @@ Instances in a region.
             title="Optional">
         <span>Filesystem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5663,7 +4969,7 @@ Instances in a region.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the disk in the Linode API.
 {{% /md %}}</dd>
@@ -5672,25 +4978,16 @@ Instances in a region.
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Label</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5698,18 +4995,9 @@ Instances in a region.
             title="Optional">
         <span>Root<wbr>Pass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The size of the Disk in MB.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5724,7 +5012,7 @@ Instances in a region.
             title="Optional">
         <span>Stackscript<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -5736,50 +5024,6 @@ Instances in a region.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>authorized<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authorized<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>filesystem</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the disk in the Linode API.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>label</span>
@@ -5788,22 +5032,6 @@ Instances in a region.
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>read<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>root<wbr>Pass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5816,9 +5044,69 @@ Instances in a region.
 
     <dt class="property-optional"
             title="Optional">
+        <span>authorized<wbr>Keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authorized<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filesystem</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The ID of the disk in the Linode API.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>read<wbr>Only</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>root<wbr>Pass</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>stackscript<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -5827,7 +5115,7 @@ Instances in a region.
             title="Optional">
         <span>stackscript<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -5838,6 +5126,24 @@ Instances in a region.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The size of the Disk in MB.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5883,15 +5189,6 @@ Instances in a region.
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>read<wbr>Only</span>
@@ -5907,15 +5204,6 @@ Instances in a region.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The size of the Disk in MB.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5961,7 +5249,7 @@ Instances in a region.
             title="Optional">
         <span>Disk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5969,7 +5257,7 @@ Instances in a region.
             title="Optional">
         <span>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5977,7 +5265,7 @@ Instances in a region.
             title="Optional">
         <span>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5985,7 +5273,7 @@ Instances in a region.
             title="Optional">
         <span>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6000,7 +5288,7 @@ Instances in a region.
             title="Optional">
         <span>Disk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6008,7 +5296,7 @@ Instances in a region.
             title="Optional">
         <span>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6016,7 +5304,7 @@ Instances in a region.
             title="Optional">
         <span>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6024,7 +5312,7 @@ Instances in a region.
             title="Optional">
         <span>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6039,7 +5327,7 @@ Instances in a region.
             title="Optional">
         <span>disk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6047,7 +5335,7 @@ Instances in a region.
             title="Optional">
         <span>memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6055,7 +5343,7 @@ Instances in a region.
             title="Optional">
         <span>transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6063,7 +5351,7 @@ Instances in a region.
             title="Optional">
         <span>vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

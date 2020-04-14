@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#StackScript">StackScript</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#StackScriptArgs">StackScriptArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#StackScript">StackScript</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#StackScriptArgs">StackScriptArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewStackScript<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#StackScriptArgs">StackScriptArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#StackScript">StackScript</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewStackScript<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#StackScriptArgs">StackScriptArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#StackScript">StackScript</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..StackScript.html">StackScript</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.StackScriptArgs.html">StackScriptArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.StackScript.html">StackScript</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.StackScriptArgs.html">StackScriptArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -131,18 +131,9 @@ block_external_search_index: true
             title="Required">
         <span>Images</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -152,15 +143,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Rev<wbr>Note</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -174,9 +156,27 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Is<wbr>Public</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Rev<wbr>Note</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>User<wbr>Defined<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">List&lt;Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#stackscriptuserdefinedfield">List&lt;Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
@@ -207,15 +207,6 @@ parameters during deployment.
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Label</span>
@@ -225,15 +216,6 @@ parameters during deployment.
     <dd>{{% md %}}The StackScript's label is for display purposes only.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Rev<wbr>Note</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Script</span>
@@ -241,6 +223,24 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Public</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Rev<wbr>Note</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -278,15 +278,6 @@ parameters during deployment.
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>label</span>
@@ -294,15 +285,6 @@ parameters during deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>rev<wbr>Note</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -316,9 +298,27 @@ parameters during deployment.
 
     <dt class="property-optional"
             title="Optional">
+        <span>is<wbr>Public</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>rev<wbr>Note</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>user<wbr>Defined<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field[]?</a></span>
+        <span class="property-type"><a href="#stackscriptuserdefinedfield">Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field[]</a></span>
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
@@ -349,15 +349,6 @@ parameters during deployment.
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>is_<wbr>public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>label</span>
@@ -367,15 +358,6 @@ parameters during deployment.
     <dd>{{% md %}}The StackScript's label is for display purposes only.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>rev_<wbr>note</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>script</span>
@@ -383,6 +365,24 @@ parameters during deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is_<wbr>public</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>rev_<wbr>note</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -443,75 +443,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description for the StackScript.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Images</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Is<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rev<wbr>Note</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Updated</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Defined<wbr>Fields</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">List&lt;Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
-parameters during deployment.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -568,75 +504,11 @@ parameters during deployment.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description for the StackScript.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Images</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Is<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rev<wbr>Note</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Updated</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Defined<wbr>Fields</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">[]Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field</a></span>
-    </dt>
-    <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
-parameters during deployment.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -693,75 +565,11 @@ parameters during deployment.
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description for the StackScript.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>images</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>is<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rev<wbr>Note</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>updated</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Defined<wbr>Fields</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field[]</a></span>
-    </dt>
-    <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
-parameters during deployment.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -818,75 +626,11 @@ parameters during deployment.
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description for the StackScript.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>images</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>is_<wbr>public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The StackScript's label is for display purposes only.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rev_<wbr>note</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>updated</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>defined_<wbr>fields</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">List[Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field]</a></span>
-    </dt>
-    <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
-parameters during deployment.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -936,7 +680,7 @@ Get an existing StackScript resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..StackScript.html">StackScript</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..StackScriptState.html">StackScriptState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.StackScript.html">StackScript</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..StackScriptState.html">StackScriptState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1046,7 +790,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was created.
 {{% /md %}}</dd>
@@ -1055,7 +799,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployments<wbr>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of currently active, deployed Linodes created from this StackScript.
 {{% /md %}}</dd>
@@ -1064,7 +808,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployments<wbr>Total</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of times this StackScript has been deployed.
 {{% /md %}}</dd>
@@ -1073,7 +817,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the StackScript.
 {{% /md %}}</dd>
@@ -1082,7 +826,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Images</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
 {{% /md %}}</dd>
@@ -1091,7 +835,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
 {{% /md %}}</dd>
@@ -1100,7 +844,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
 {{% /md %}}</dd>
@@ -1109,7 +853,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rev<wbr>Note</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
 {{% /md %}}</dd>
@@ -1118,7 +862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Script</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
 {{% /md %}}</dd>
@@ -1127,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
 {{% /md %}}</dd>
@@ -1136,7 +880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Defined<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">List&lt;Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#stackscriptuserdefinedfield">List&lt;Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
@@ -1146,7 +890,7 @@ parameters during deployment.
             title="Optional">
         <span>User<wbr>Gravatar<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Gravatar ID for the User who created the StackScript.
 {{% /md %}}</dd>
@@ -1155,7 +899,7 @@ parameters during deployment.
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User who created the StackScript.
 {{% /md %}}</dd>
@@ -1171,7 +915,7 @@ parameters during deployment.
             title="Optional">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was created.
 {{% /md %}}</dd>
@@ -1180,7 +924,7 @@ parameters during deployment.
             title="Optional">
         <span>Deployments<wbr>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of currently active, deployed Linodes created from this StackScript.
 {{% /md %}}</dd>
@@ -1189,7 +933,7 @@ parameters during deployment.
             title="Optional">
         <span>Deployments<wbr>Total</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of times this StackScript has been deployed.
 {{% /md %}}</dd>
@@ -1198,7 +942,7 @@ parameters during deployment.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the StackScript.
 {{% /md %}}</dd>
@@ -1216,7 +960,7 @@ parameters during deployment.
             title="Optional">
         <span>Is<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
 {{% /md %}}</dd>
@@ -1225,7 +969,7 @@ parameters during deployment.
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
 {{% /md %}}</dd>
@@ -1234,7 +978,7 @@ parameters during deployment.
             title="Optional">
         <span>Rev<wbr>Note</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
 {{% /md %}}</dd>
@@ -1243,7 +987,7 @@ parameters during deployment.
             title="Optional">
         <span>Script</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
 {{% /md %}}</dd>
@@ -1252,7 +996,7 @@ parameters during deployment.
             title="Optional">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
 {{% /md %}}</dd>
@@ -1271,7 +1015,7 @@ parameters during deployment.
             title="Optional">
         <span>User<wbr>Gravatar<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Gravatar ID for the User who created the StackScript.
 {{% /md %}}</dd>
@@ -1280,7 +1024,7 @@ parameters during deployment.
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User who created the StackScript.
 {{% /md %}}</dd>
@@ -1296,7 +1040,7 @@ parameters during deployment.
             title="Optional">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was created.
 {{% /md %}}</dd>
@@ -1305,7 +1049,7 @@ parameters during deployment.
             title="Optional">
         <span>deployments<wbr>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Count of currently active, deployed Linodes created from this StackScript.
 {{% /md %}}</dd>
@@ -1314,7 +1058,7 @@ parameters during deployment.
             title="Optional">
         <span>deployments<wbr>Total</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total number of times this StackScript has been deployed.
 {{% /md %}}</dd>
@@ -1323,7 +1067,7 @@ parameters during deployment.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the StackScript.
 {{% /md %}}</dd>
@@ -1332,7 +1076,7 @@ parameters during deployment.
             title="Optional">
         <span>images</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
 {{% /md %}}</dd>
@@ -1341,7 +1085,7 @@ parameters during deployment.
             title="Optional">
         <span>is<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `is_public` forces the creation of a new StackScript*
 {{% /md %}}</dd>
@@ -1350,7 +1094,7 @@ parameters during deployment.
             title="Optional">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
 {{% /md %}}</dd>
@@ -1359,7 +1103,7 @@ parameters during deployment.
             title="Optional">
         <span>rev<wbr>Note</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field allows you to add notes for the set of revisions made to this StackScript.
 {{% /md %}}</dd>
@@ -1368,7 +1112,7 @@ parameters during deployment.
             title="Optional">
         <span>script</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script to execute when provisioning a new Linode with this StackScript.
 {{% /md %}}</dd>
@@ -1377,7 +1121,7 @@ parameters during deployment.
             title="Optional">
         <span>updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this StackScript was updated.
 {{% /md %}}</dd>
@@ -1386,7 +1130,7 @@ parameters during deployment.
             title="Optional">
         <span>user<wbr>Defined<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field[]?</a></span>
+        <span class="property-type"><a href="#stackscriptuserdefinedfield">Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field[]</a></span>
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
@@ -1396,7 +1140,7 @@ parameters during deployment.
             title="Optional">
         <span>user<wbr>Gravatar<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Gravatar ID for the User who created the StackScript.
 {{% /md %}}</dd>
@@ -1405,7 +1149,7 @@ parameters during deployment.
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User who created the StackScript.
 {{% /md %}}</dd>
@@ -1568,7 +1312,7 @@ parameters during deployment.
             title="Optional">
         <span>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1576,7 +1320,7 @@ parameters during deployment.
             title="Optional">
         <span>Example</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1584,7 +1328,7 @@ parameters during deployment.
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
 {{% /md %}}</dd>
@@ -1593,7 +1337,7 @@ parameters during deployment.
             title="Optional">
         <span>Many<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1601,7 +1345,7 @@ parameters during deployment.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1609,7 +1353,7 @@ parameters during deployment.
             title="Optional">
         <span>One<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1624,7 +1368,7 @@ parameters during deployment.
             title="Optional">
         <span>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1632,7 +1376,7 @@ parameters during deployment.
             title="Optional">
         <span>Example</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1640,7 +1384,7 @@ parameters during deployment.
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
 {{% /md %}}</dd>
@@ -1649,7 +1393,7 @@ parameters during deployment.
             title="Optional">
         <span>Many<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1657,7 +1401,7 @@ parameters during deployment.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1665,7 +1409,7 @@ parameters during deployment.
             title="Optional">
         <span>One<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1680,7 +1424,7 @@ parameters during deployment.
             title="Optional">
         <span>default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1688,7 +1432,7 @@ parameters during deployment.
             title="Optional">
         <span>example</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1696,7 +1440,7 @@ parameters during deployment.
             title="Optional">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The StackScript's label is for display purposes only.
 {{% /md %}}</dd>
@@ -1705,7 +1449,7 @@ parameters during deployment.
             title="Optional">
         <span>many<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1713,7 +1457,7 @@ parameters during deployment.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1721,7 +1465,7 @@ parameters during deployment.
             title="Optional">
         <span>one<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

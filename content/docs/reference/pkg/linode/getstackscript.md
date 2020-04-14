@@ -80,7 +80,7 @@ This resource exports the following attributes:
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStackScript<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#GetStackScriptArgs">GetStackScriptArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#LookupStackScriptResult">LookupStackScriptResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupStackScript<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#GetStackScriptArgs">GetStackScriptArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#LookupStackScriptResult">LookupStackScriptResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -112,7 +112,7 @@ The following arguments are supported:
             title="Optional">
         <span>User<wbr>Defined<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getstackscriptuserdefinedfield">List&lt;Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getstackscriptuserdefinedfield">List&lt;Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -160,7 +160,7 @@ The following arguments are supported:
             title="Optional">
         <span>user<wbr>Defined<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getstackscriptuserdefinedfield">Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field[]?</a></span>
+        <span class="property-type"><a href="#getstackscriptuserdefinedfield">Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -252,7 +252,7 @@ The following output properties are available:
             title="">
         <span>Images</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
