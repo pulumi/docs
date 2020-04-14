@@ -51,6 +51,8 @@ just how it is updated.</p></li>
 preview a deployment. It can be updated to false to actually deploy with real resources. ~&gt;<strong>NOTE</strong>: Deployment Manager
 does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
 deployments if either preview is updated to true or if other fields are updated while preview is true.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters that define your deployment, including the deployment configuration and relevant templates.</p></li>
 </ul>
 </dd>
@@ -135,6 +137,13 @@ deployments if either preview is updated to true or if other fields are updated 
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.deploymentmanager.Deployment.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.self_link">
 <code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.self_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output only. Server defined URL for the resource.</p>
@@ -186,6 +195,8 @@ just how it is updated.</p></li>
 preview a deployment. It can be updated to false to actually deploy with real resources. ~&gt;<strong>NOTE</strong>: Deployment Manager
 does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
 deployments if either preview is updated to true or if other fields are updated while preview is true.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Output only. Server defined URL for the resource.</p></li>
 <li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters that define your deployment, including the deployment configuration and relevant templates.</p></li>
 </ul>

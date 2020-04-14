@@ -84,6 +84,8 @@ Label values must be between 0 and 63 characters long, have a UTF-8 encoding of 
 the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be assigned to a given
 resource. An object containing a list of “key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3”
 }.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>replication</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
 created.</p></li>
 <li><p><strong>secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This must be unique within the project.</p></li>
@@ -124,6 +126,13 @@ resource. An object containing a list of “key”: value pairs. Example: { “n
 <dt id="pulumi_gcp.secretmanager.Secret.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.Secret.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource name of the Secret. Format: ‘projects/{{project}}/secrets/{{secret_id}}’</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.secretmanager.Secret.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.Secret.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -171,6 +180,8 @@ the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 
 resource. An object containing a list of “key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3”
 }.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the Secret. Format: ‘projects/{{project}}/secrets/{{secret_id}}’</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>replication</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
 created.</p></li>
 <li><p><strong>secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This must be unique within the project.</p></li>
