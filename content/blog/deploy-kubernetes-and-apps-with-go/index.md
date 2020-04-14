@@ -132,8 +132,9 @@ The real benefits of Go come when we extract common code into a reusable compone
 // Initialize config
 conf := config.New(ctx, "")
 
-// Minikube does not implement services of type `LoadBalancer`; require the user to specify if we're
-// running on minikube, and if so, create only services of type ClusterIP.
+// Minikube does not implement services of type `LoadBalancer` so
+// require the user to specify if we're running on minikube. If so, 
+// create only services of type ClusterIP.
 isMinikube := conf.GetBool("isMinikube")
 
 // Redis leader Deployment + Service
