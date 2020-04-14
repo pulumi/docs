@@ -1012,7 +1012,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[float] node_cidr_mask: The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 :param pulumi.Input[str] password: The password of ssh login cluster node. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.
 :param pulumi.Input[str] pod_cidr: [Flannel Specific] The CIDR block for the pod network when using Flannel. 
-:param pulumi.Input[list] pod_vswitch_ids: [Terway Specific] The vswitches for the pod network when using Terway.Be careful the <code class="docutils literal notranslate"><span class="pre">pod_vswitch_ids</span></code> can not equal to <code class="docutils literal notranslate"><span class="pre">worker_vswtich_ids</span></code> or <code class="docutils literal notranslate"><span class="pre">master_vswtich_ids</span></code> but must be in same availability zones.
+:param pulumi.Input[list] pod_vswitch_ids: [Terway Specific] The vswitches for the pod network when using Terway.Be careful the <code class="docutils literal notranslate"><span class="pre">pod_vswitch_ids</span></code> can not equal to <code class="docutils literal notranslate"><span class="pre">worker_vswtich_ids</span></code>.but must be in same availability zones.
 :param pulumi.Input[str] proxy_mode: Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 :param pulumi.Input[str] service_cidr: The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 :param pulumi.Input[bool] slb_internet_enabled: Whether to create internet load balancer for API Server. Default to true.
@@ -1064,7 +1064,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">api_server_internet</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - API Server Internet endpoint.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">api_server_intranet</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - API Server Intranet endpoint.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">master_public_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Master node SSH IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">master_public_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service_domain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Service Access Domain.</p></li>
 </ul>
 </dd></dl>
@@ -1156,7 +1156,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ManagedKubernetes.pod_vswitch_ids">
 <code class="sig-name descname">pod_vswitch_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ManagedKubernetes.pod_vswitch_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>[Terway Specific] The vswitches for the pod network when using Terway.Be careful the <code class="docutils literal notranslate"><span class="pre">pod_vswitch_ids</span></code> can not equal to <code class="docutils literal notranslate"><span class="pre">worker_vswtich_ids</span></code> or <code class="docutils literal notranslate"><span class="pre">master_vswtich_ids</span></code> but must be in same availability zones.</p>
+<dd><p>[Terway Specific] The vswitches for the pod network when using Terway.Be careful the <code class="docutils literal notranslate"><span class="pre">pod_vswitch_ids</span></code> can not equal to <code class="docutils literal notranslate"><span class="pre">worker_vswtich_ids</span></code>.but must be in same availability zones.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1303,7 +1303,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>node_cidr_mask</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24</p></li>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password of ssh login cluster node. You have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> <code class="docutils literal notranslate"><span class="pre">key_name</span></code> <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p></li>
 <li><p><strong>pod_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Flannel Specific] The CIDR block for the pod network when using Flannel.</p></li>
-<li><p><strong>pod_vswitch_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – [Terway Specific] The vswitches for the pod network when using Terway.Be careful the <code class="docutils literal notranslate"><span class="pre">pod_vswitch_ids</span></code> can not equal to <code class="docutils literal notranslate"><span class="pre">worker_vswtich_ids</span></code> or <code class="docutils literal notranslate"><span class="pre">master_vswtich_ids</span></code> but must be in same availability zones.</p></li>
+<li><p><strong>pod_vswitch_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – [Terway Specific] The vswitches for the pod network when using Terway.Be careful the <code class="docutils literal notranslate"><span class="pre">pod_vswitch_ids</span></code> can not equal to <code class="docutils literal notranslate"><span class="pre">worker_vswtich_ids</span></code>.but must be in same availability zones.</p></li>
 <li><p><strong>proxy_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.</p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of security group where the current cluster worker node is located.</p></li>
 <li><p><strong>service_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p></li>
@@ -1335,7 +1335,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">api_server_internet</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - API Server Internet endpoint.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">api_server_intranet</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - API Server Intranet endpoint.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">master_public_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Master node SSH IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">master_public_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service_domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Service Access Domain.</p></li>
 </ul>
 <p>The <strong>worker_nodes</strong> object supports the following:</p>

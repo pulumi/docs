@@ -238,13 +238,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.cms.SiteMonitor">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cms.</code><code class="sig-name descname">SiteMonitor</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">alert_ids=None</em>, <em class="sig-param">interval=None</em>, <em class="sig-param">options_json=None</em>, <em class="sig-param">task_name=None</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cms.</code><code class="sig-name descname">SiteMonitor</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">alert_ids=None</em>, <em class="sig-param">interval=None</em>, <em class="sig-param">isp_cities=None</em>, <em class="sig-param">options_json=None</em>, <em class="sig-param">task_name=None</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a SiteMonitor resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.</p>
+<p>The <strong>isp_cities</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">city</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <dl class="method">
 <dt id="pulumi_alicloud.cms.SiteMonitor.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">alert_ids=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">interval=None</em>, <em class="sig-param">options_json=None</em>, <em class="sig-param">task_name=None</em>, <em class="sig-param">task_state=None</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">update_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">alert_ids=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">interval=None</em>, <em class="sig-param">isp_cities=None</em>, <em class="sig-param">options_json=None</em>, <em class="sig-param">task_name=None</em>, <em class="sig-param">task_state=None</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">update_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cms.SiteMonitor.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SiteMonitor resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -256,6 +261,11 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>isp_cities</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">city</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
