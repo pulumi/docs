@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/#Alarm">Alarm</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/#AlarmArgs">AlarmArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/#Alarm">Alarm</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/#AlarmArgs">AlarmArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAlarm<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/go/cloudamqp/?tab=doc#AlarmArgs">AlarmArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/go/cloudamqp/?tab=doc#Alarm">Alarm</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAlarm<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/go/cloudamqp/?tab=doc#AlarmArgs">AlarmArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/go/cloudamqp/?tab=doc#Alarm">Alarm</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp..Alarm.html">Alarm</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp.AlarmArgs.html">AlarmArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp.Alarm.html">Alarm</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.CloudAmqp.AlarmArgs.html">AlarmArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -136,40 +136,13 @@ block_external_search_index: true
     <dd>{{% md %}}Instance identifier
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Message<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Queue<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Regex for which queues to check
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<int></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Identifiers for recipients to be notified.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Time<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -184,9 +157,36 @@ net_split
 
     <dt class="property-optional"
             title="Optional">
+        <span>Message<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Queue<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Regex for which queues to check
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Time<wbr>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Value<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What value to trigger the alarm for
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ net_split
             title="Optional">
         <span>Vhost<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex for which vhost the queues are in
 {{% /md %}}</dd>
@@ -225,24 +225,6 @@ net_split
     <dd>{{% md %}}Instance identifier
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Message<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Queue<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Regex for which queues to check
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Recipients</span>
@@ -250,15 +232,6 @@ net_split
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Identifiers for recipients to be notified.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Time<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -273,9 +246,36 @@ net_split
 
     <dt class="property-optional"
             title="Optional">
+        <span>Message<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Queue<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Regex for which queues to check
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Time<wbr>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Value<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What value to trigger the alarm for
 {{% /md %}}</dd>
@@ -284,7 +284,7 @@ net_split
             title="Optional">
         <span>Vhost<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex for which vhost the queues are in
 {{% /md %}}</dd>
@@ -314,24 +314,6 @@ net_split
     <dd>{{% md %}}Instance identifier
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>message<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>queue<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Regex for which queues to check
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>recipients</span>
@@ -341,407 +323,57 @@ net_split
     <dd>{{% md %}}Identifiers for recipients to be notified.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the alarm, valid options are: cpu, memory, disk_usage, queue_length, connection_count, consumers_count,
+net_split
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>message<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>queue<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Regex for which queues to check
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>time<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the alarm, valid options are: cpu, memory, disk_usage, queue_length, connection_count, consumers_count,
-net_split
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>value<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}What value to trigger the alarm for
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>vhost<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Regex for which vhost the queues are in
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable an alarm
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Instance identifier
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>message_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>queue_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Regex for which queues to check
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[Integer]</span>
-    </dt>
-    <dd>{{% md %}}Identifiers for recipients to be notified.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>time_<wbr>threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Type of the alarm, valid options are: cpu, memory, disk_usage, queue_length, connection_count, consumers_count,
-net_split
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>value_<wbr>threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}What value to trigger the alarm for
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>vhost_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Regex for which vhost the queues are in
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## Alarm Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable an alarm
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Instance identifier
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Message<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Queue<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Regex for which queues to check
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<int></span>
-    </dt>
-    <dd>{{% md %}}Identifiers for recipients to be notified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Time<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the alarm, valid options are: cpu, memory, disk_usage, queue_length, connection_count, consumers_count,
-net_split
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}What value to trigger the alarm for
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vhost<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Regex for which vhost the queues are in
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable an alarm
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Instance identifier
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Message<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Queue<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Regex for which queues to check
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]int</span>
-    </dt>
-    <dd>{{% md %}}Identifiers for recipients to be notified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Time<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the alarm, valid options are: cpu, memory, disk_usage, queue_length, connection_count, consumers_count,
-net_split
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}What value to trigger the alarm for
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vhost<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Regex for which vhost the queues are in
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable an alarm
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Instance identifier
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>message<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>queue<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Regex for which queues to check
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
-    </dt>
-    <dd>{{% md %}}Identifiers for recipients to be notified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>time<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
     <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of the alarm, valid options are: cpu, memory, disk_usage, queue_length, connection_count, consumers_count,
-net_split
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>value<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}What value to trigger the alarm for
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>vhost<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex for which vhost the queues are in
 {{% /md %}}</dd>
@@ -753,8 +385,8 @@ net_split
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -762,8 +394,8 @@ net_split
     <dd>{{% md %}}Enable or disable an alarm
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>instance_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
@@ -771,26 +403,8 @@ net_split
     <dd>{{% md %}}Instance identifier
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>message_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>queue_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Regex for which queues to check
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>recipients</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[Integer]</span>
@@ -798,17 +412,8 @@ net_split
     <dd>{{% md %}}Identifiers for recipients to be notified.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>time_<wbr>threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -817,8 +422,35 @@ net_split
 net_split
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
+        <span>message_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>queue_<wbr>regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Regex for which queues to check
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>time_<wbr>threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>value_<wbr>threshold</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
@@ -826,8 +458,8 @@ net_split
     <dd>{{% md %}}What value to trigger the alarm for
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>vhost_<wbr>regex</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -837,6 +469,8 @@ net_split
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -864,7 +498,7 @@ Get an existing Alarm resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp..Alarm.html">Alarm</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp..AlarmState.html">AlarmState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp.Alarm.html">Alarm</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp..AlarmState.html">AlarmState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -974,7 +608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable an alarm
 {{% /md %}}</dd>
@@ -983,7 +617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance identifier
 {{% /md %}}</dd>
@@ -992,7 +626,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Message<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
 {{% /md %}}</dd>
@@ -1001,7 +635,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Queue<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex for which queues to check
 {{% /md %}}</dd>
@@ -1010,7 +644,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<int>?</span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Identifiers for recipients to be notified.
 {{% /md %}}</dd>
@@ -1019,7 +653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
 {{% /md %}}</dd>
@@ -1028,7 +662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the alarm, valid options are: cpu, memory, disk_usage, queue_length, connection_count, consumers_count,
 net_split
@@ -1038,7 +672,7 @@ net_split
             title="Optional">
         <span>Value<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What value to trigger the alarm for
 {{% /md %}}</dd>
@@ -1047,7 +681,7 @@ net_split
             title="Optional">
         <span>Vhost<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex for which vhost the queues are in
 {{% /md %}}</dd>
@@ -1063,7 +697,7 @@ net_split
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable an alarm
 {{% /md %}}</dd>
@@ -1072,7 +706,7 @@ net_split
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance identifier
 {{% /md %}}</dd>
@@ -1081,7 +715,7 @@ net_split
             title="Optional">
         <span>Message<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
 {{% /md %}}</dd>
@@ -1090,7 +724,7 @@ net_split
             title="Optional">
         <span>Queue<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex for which queues to check
 {{% /md %}}</dd>
@@ -1108,7 +742,7 @@ net_split
             title="Optional">
         <span>Time<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
 {{% /md %}}</dd>
@@ -1117,7 +751,7 @@ net_split
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the alarm, valid options are: cpu, memory, disk_usage, queue_length, connection_count, consumers_count,
 net_split
@@ -1127,7 +761,7 @@ net_split
             title="Optional">
         <span>Value<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What value to trigger the alarm for
 {{% /md %}}</dd>
@@ -1136,7 +770,7 @@ net_split
             title="Optional">
         <span>Vhost<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex for which vhost the queues are in
 {{% /md %}}</dd>
@@ -1152,7 +786,7 @@ net_split
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or disable an alarm
 {{% /md %}}</dd>
@@ -1161,7 +795,7 @@ net_split
             title="Optional">
         <span>instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance identifier
 {{% /md %}}</dd>
@@ -1170,7 +804,7 @@ net_split
             title="Optional">
         <span>message<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Message types (total, unacked, ready) of the queue to trigger the alarm
 {{% /md %}}</dd>
@@ -1179,7 +813,7 @@ net_split
             title="Optional">
         <span>queue<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex for which queues to check
 {{% /md %}}</dd>
@@ -1188,7 +822,7 @@ net_split
             title="Optional">
         <span>recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]?</span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Identifiers for recipients to be notified.
 {{% /md %}}</dd>
@@ -1197,7 +831,7 @@ net_split
             title="Optional">
         <span>time<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For how long (in seconds) the value_threshold should be active before trigger alarm
 {{% /md %}}</dd>
@@ -1206,7 +840,7 @@ net_split
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the alarm, valid options are: cpu, memory, disk_usage, queue_length, connection_count, consumers_count,
 net_split
@@ -1216,7 +850,7 @@ net_split
             title="Optional">
         <span>value<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}What value to trigger the alarm for
 {{% /md %}}</dd>
@@ -1225,7 +859,7 @@ net_split
             title="Optional">
         <span>vhost<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex for which vhost the queues are in
 {{% /md %}}</dd>
