@@ -45,13 +45,13 @@ export const azureAdObjectId = example.id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#GetApplicationArgs">GetApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#LookupApplicationResult">LookupApplicationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#GetApplicationArgs">GetApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#LookupApplicationResult">LookupApplicationResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApplication </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.GetApplicationResult.html">GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.GetApplicationArgs.html">GetApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.Azuread.GetApplicationResult.html">GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.AzureAD.GetApplicationArgs.html">GetApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -68,7 +68,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
 {{% /md %}}</dd>
@@ -77,7 +77,7 @@ The following arguments are supported:
             title="Optional">
         <span>Oauth2Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoauth2permission">List&lt;Get<wbr>Application<wbr>Oauth2Permission<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getapplicationoauth2permission">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Oauth2Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -86,7 +86,7 @@ The following arguments are supported:
             title="Optional">
         <span>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
 {{% /md %}}</dd>
@@ -102,7 +102,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
 {{% /md %}}</dd>
@@ -120,7 +120,7 @@ The following arguments are supported:
             title="Optional">
         <span>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
 {{% /md %}}</dd>
@@ -136,7 +136,7 @@ The following arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
 {{% /md %}}</dd>
@@ -145,7 +145,7 @@ The following arguments are supported:
             title="Optional">
         <span>oauth2Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoauth2permission">Get<wbr>Application<wbr>Oauth2Permission[]?</a></span>
+        <span class="property-type"><a href="#getapplicationoauth2permission">Get<wbr>Application<wbr>Oauth2Permission[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -154,7 +154,7 @@ The following arguments are supported:
             title="Optional">
         <span>object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
 {{% /md %}}</dd>
@@ -217,7 +217,7 @@ The following output properties are available:
             title="">
         <span>App<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationapprole">List&lt;Get<wbr>Application<wbr>App<wbr>Role&gt;</a></span>
+        <span class="property-type"><a href="#getapplicationapprole">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Application<wbr>App<wbr>Role&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
@@ -270,7 +270,7 @@ The following output properties are available:
             title="">
         <span>Identifier<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ The following output properties are available:
             title="">
         <span>Oauth2Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoauth2permission">List&lt;Get<wbr>Application<wbr>Oauth2Permission&gt;</a></span>
+        <span class="property-type"><a href="#getapplicationoauth2permission">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Application<wbr>Oauth2Permission&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
@@ -323,7 +323,7 @@ The following output properties are available:
             title="">
         <span>Owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of User Object IDs that are assigned ownership of the application registration.
 {{% /md %}}</dd>
@@ -332,7 +332,7 @@ The following output properties are available:
             title="">
         <span>Reply<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
@@ -341,7 +341,7 @@ The following output properties are available:
             title="">
         <span>Required<wbr>Resource<wbr>Accesses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationrequiredresourceaccess">List&lt;Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access&gt;</a></span>
+        <span class="property-type"><a href="#getapplicationrequiredresourceaccess">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
@@ -833,7 +833,7 @@ The following output properties are available:
             title="Required">
         <span>Allowed<wbr>Member<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: `User` and `Application`, or both.
 {{% /md %}}</dd>
@@ -1423,7 +1423,7 @@ The following output properties are available:
             title="Required">
         <span>Resource<wbr>Accesses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">List&lt;Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of `resource_access` blocks as documented below
 {{% /md %}}</dd>
