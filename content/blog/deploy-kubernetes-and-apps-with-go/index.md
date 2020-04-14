@@ -1,7 +1,7 @@
 ---
 title: "Deploy Kubernetes and Applications with Go"
 date: 2020-04-14
-meta_desc: "Build Kubernetes deployments with Go using Pulumi's reusable components."
+meta_desc: "Manage Kubernetes clusters and apps with Go using Pulumi's reusable components."
 meta_image: gopher.png
 authors:
     - levi-blackstone
@@ -11,8 +11,7 @@ tags:
     - containers
 ---
 
-We're excited to announce that Go as a first-class language in Pulumi, and you can now build your infrastructure with Go on AWS, Azure, GCP, and many other clouds. Users often ask — "can I use Pulumi to manage Kubernetes infrastructure in Go today?" With the upcoming release of Pulumi 2.0., the answer is "yes!"
-
+We're excited that Go is now a first-class language in Pulumi and that you can build your infrastructure with Go on AWS, Azure, GCP, and many other clouds. Users often ask, "Can I use Pulumi to manage Kubernetes infrastructure in Go today?" With the release of Pulumi 2.0., the answer is "Yes!"
 <!--more-->
 
 Building your Kubernetes infrastructure with Infrastructure as Code offers several benefits:
@@ -26,7 +25,7 @@ These benefits provide a productive experience for Go developers using Kubernete
 
 ## Tour of Kubernetes with Go
 
-Let's start with a basic example, e.g.,  deploying an Nginx pod into a Kubernetes cluster.
+Let's start with a basic example, e.g. deploying an Nginx pod into a Kubernetes cluster.
 
 ```go
 pod, err := corev1.NewPod(ctx, "pod", &corev1.PodArgs{
@@ -126,7 +125,7 @@ Resources:
 Duration: 13s
 ```
 
-The real benefits of Go come when we extract common code into a reusable component. We can create a new `ServiceDeployment` component that combines both a Kubernetes Service and Deployment with opinionated defaults. Our `ServiceDeployment` component can describe entire Kubernetes applications (100s of lines of YAML), in a short snippet of Go:
+The benefits of Go start to shine when we extract common code into a reusable component. For example, we can create a new `ServiceDeployment` component that combines both a Kubernetes Service and Deployment with opinionated defaults. Our `ServiceDeployment` component can describe entire Kubernetes applications (100s of lines of YAML), in a short snippet of Go:
 
 ```go
 // Initialize config
@@ -218,13 +217,13 @@ FROM nginx
 COPY content /usr/share/nginx/html
 ```
 
-When we deploy this with Pulumi, the Dockerfile is built locally, pushed to a registry, then it is available by image name in the registry referenced from the Pod in Kubernetes. Our changes happen automatically, seamlessly deploying and versioning both the application code and infrastructure together with a simple `pulumi up`.
+When we deploy this with Pulumi, the Dockerfile is built locally, pushed to a registry, then made available by specifying the image name in the registry referenced from the Pod in Kubernetes. Our changes happen automatically, seamlessly deploying and versioning both the application code and infrastructure together with a simple `pulumi up`.
 
 We can also push to another Docker container registry (like ACR, GCR, ECR, or others) by using additional parameters on the `pulumi.docker.ImageArgs` class.
 
 ## Cloud + Kubernetes with Go
 
-Pulumi works with both Kubernetes and cloud providers (AWS, Azure, GCP, and more). In the same Pulumi program, you can build a Kubernetes cluster and then deploy applications and services into the cluster. Using Pulumi's programming model, we have access to all these various cloud technologies.
+Pulumi works with both Kubernetes and cloud providers (AWS, Azure, GCP, and more.) Within the same Pulumi program, you can build a Kubernetes cluster and then deploy applications and services into that cluster.
 
 For example, we can deploy a managed GKE cluster, and then deploy a Pod into it:
 
@@ -302,8 +301,8 @@ if err != nil {
 
 This example first deploys a GKE Kubernetes Cluster into GCP, then deploys Kubernetes resources into that GKE Cluster. This example combines infrastructure and application deployment in a few dozen lines of declarative and strongly typed Go code.
 
-Check out the full [GKE in Go example](https://github.com/pulumi/examples/tree/master/gcp-go-gke) on Github.
+Check out the full [GKE in Go example](https://github.com/pulumi/examples/tree/master/gcp-go-gke) on GitHub.
 
 ## Conclusion
 
-Kubernetes support is one of several significant new additions to the Pulumi Go support, and many more improvements are in progress over the coming weeks. Get started with Kubernetes and Go today, and let us know what you think!
+Kubernetes support is one of several significant new additions made available to Pulumi's Go community and more improvements are on the way. Get started with Kubernetes and Go today, and let us know what you think!
