@@ -41,13 +41,13 @@ const example = pulumi.output(openstack.keymanager.getContainer({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupContainer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#LookupContainerArgs">LookupContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#LookupContainerResult">LookupContainerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupContainer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#LookupContainerArgs">LookupContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#LookupContainerResult">LookupContainerResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetContainer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Keymanager.GetContainerResult.html">GetContainerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.KeyManager.GetContainerArgs.html">GetContainerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Keymanager.GetContainerResult.html">GetContainerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.GetContainerArgs.html">GetContainerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -64,7 +64,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
 {{% /md %}}</dd>
@@ -73,7 +73,7 @@ The following arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to fetch a container. If omitted, the `region`
@@ -91,7 +91,7 @@ argument of the provider is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
 {{% /md %}}</dd>
@@ -100,7 +100,7 @@ argument of the provider is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to fetch a container. If omitted, the `region`
@@ -118,7 +118,7 @@ argument of the provider is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
 {{% /md %}}</dd>
@@ -127,7 +127,7 @@ argument of the provider is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to fetch a container. If omitted, the `region`
@@ -185,7 +185,7 @@ The following output properties are available:
             title="">
         <span>Acls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontaineracl">List&lt;Get<wbr>Container<wbr>Acl&gt;</a></span>
+        <span class="property-type"><a href="#getcontaineracl">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Outputs.<wbr>Get<wbr>Container<wbr>Acl&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of ACLs assigned to a container. The `read` structure is
 described below.
@@ -195,7 +195,7 @@ described below.
             title="">
         <span>Consumers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainerconsumer">List&lt;Get<wbr>Container<wbr>Consumer&gt;</a></span>
+        <span class="property-type"><a href="#getcontainerconsumer">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Outputs.<wbr>Get<wbr>Container<wbr>Consumer&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of the container consumers. The structure is described
 below.
@@ -239,27 +239,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the consumer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Secret<wbr>Refs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainersecretref">List&lt;Get<wbr>Container<wbr>Secret<wbr>Ref&gt;</a></span>
+        <span class="property-type"><a href="#getcontainersecretref">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Outputs.<wbr>Get<wbr>Container<wbr>Secret<wbr>Ref&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The
 structure is described below.
@@ -290,6 +272,24 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the consumer.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
 </dl>
@@ -357,24 +357,6 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the consumer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Secret<wbr>Refs</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainersecretref">[]Get<wbr>Container<wbr>Secret<wbr>Ref</a></span>
@@ -408,6 +390,24 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the consumer.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
 </dl>
@@ -475,24 +475,6 @@ below.
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the consumer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>secret<wbr>Refs</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainersecretref">Get<wbr>Container<wbr>Secret<wbr>Ref[]</a></span>
@@ -526,6 +508,24 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the consumer.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
 </dl>
@@ -593,24 +593,6 @@ below.
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the consumer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>secret_<wbr>refs</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainersecretref">List[Get<wbr>Container<wbr>Secret<wbr>Ref]</a></span>
@@ -646,6 +628,24 @@ structure is described below.
     <dd>{{% md %}}The date the container ACL was last updated.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the consumer.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -677,7 +677,7 @@ structure is described below.
             title="Required">
         <span>Read</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontaineraclread">Get<wbr>Container<wbr>Acl<wbr>Read<wbr>Args</a></span>
+        <span class="property-type"><a href="#getcontaineraclread">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Acl<wbr>Read<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -757,15 +757,6 @@ structure is described below.
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Project<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the container is accessible project wide.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Updated<wbr>At</span>
@@ -777,9 +768,18 @@ structure is described below.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Project<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the container is accessible project wide.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the container,
 when `project_access` is set to `false`.
@@ -801,15 +801,6 @@ when `project_access` is set to `false`.
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Project<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the container is accessible project wide.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Updated<wbr>At</span>
@@ -817,6 +808,15 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the container is accessible project wide.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -845,15 +845,6 @@ when `project_access` is set to `false`.
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>project<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the container is accessible project wide.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>updated<wbr>At</span>
@@ -865,9 +856,18 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>project<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the container is accessible project wide.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the container,
 when `project_access` is set to `false`.
@@ -889,15 +889,6 @@ when `project_access` is set to `false`.
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>project<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the container is accessible project wide.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>updated_<wbr>at</span>
@@ -905,6 +896,15 @@ when `project_access` is set to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the container is accessible project wide.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -943,7 +943,7 @@ when `project_access` is set to `false`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
 {{% /md %}}</dd>
@@ -952,7 +952,7 @@ when `project_access` is set to `false`.
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The consumer URL.
 {{% /md %}}</dd>
@@ -968,7 +968,7 @@ when `project_access` is set to `false`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
 {{% /md %}}</dd>
@@ -977,7 +977,7 @@ when `project_access` is set to `false`.
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The consumer URL.
 {{% /md %}}</dd>
@@ -993,7 +993,7 @@ when `project_access` is set to `false`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
 {{% /md %}}</dd>
@@ -1002,7 +1002,7 @@ when `project_access` is set to `false`.
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The consumer URL.
 {{% /md %}}</dd>
@@ -1058,7 +1058,7 @@ when `project_access` is set to `false`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
 {{% /md %}}</dd>
@@ -1067,7 +1067,7 @@ when `project_access` is set to `false`.
             title="Optional">
         <span>Secret<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret, URL.
 {{% /md %}}</dd>
@@ -1083,7 +1083,7 @@ when `project_access` is set to `false`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
 {{% /md %}}</dd>
@@ -1092,7 +1092,7 @@ when `project_access` is set to `false`.
             title="Optional">
         <span>Secret<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret, URL.
 {{% /md %}}</dd>
@@ -1108,7 +1108,7 @@ when `project_access` is set to `false`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
 {{% /md %}}</dd>
@@ -1117,7 +1117,7 @@ when `project_access` is set to `false`.
             title="Optional">
         <span>secret<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret, URL.
 {{% /md %}}</dd>

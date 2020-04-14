@@ -44,7 +44,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/sharedfilesystem/#Share">Share</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/sharedfilesystem/#ShareArgs">ShareArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/sharedfilesystem/#Share">Share</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/sharedfilesystem/#ShareArgs">ShareArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -52,11 +52,11 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewShare<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/sharedfilesystem?tab=doc#ShareArgs">ShareArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/sharedfilesystem?tab=doc#Share">Share</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewShare<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/sharedfilesystem?tab=doc#ShareArgs">ShareArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/sharedfilesystem?tab=doc#Share">Share</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Sharedfilesystem.Share.html">Share</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.SharedFileSystem.ShareArgs.html">ShareArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.SharedFileSystem.Share.html">Share</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.SharedFileSystem.ShareArgs.html">ShareArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,79 +148,6 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The share availability zone. Changing this creates a
-new share.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the share.
-Changing this updates the description of the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The level of visibility for the share. Set to true to make
-share public. Set to false to make it private. Default value is false. Changing this
-updates the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
-strings.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the share. Changing this updates the name
-of the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-A Shared File System client is needed to create a share. Changing this
-creates a new share.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Share<wbr>Network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The UUID of a share network where the share server exists
-or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
-the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Share<wbr>Proto</span>
@@ -229,16 +156,6 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
     </dt>
     <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Share<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The share type name. If you omit this parameter, the default
-share type is used.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -253,9 +170,92 @@ than the allowed GB quota. Changing this resizes the existing share.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The share availability zone. Changing this creates a
+new share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The human-readable description for the share.
+Changing this updates the description of the existing share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Public</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The level of visibility for the share. Set to true to make
+share public. Set to false to make it private. Default value is false. Changing this
+updates the existing share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
+strings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the share. Changing this updates the name
+of the existing share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
+A Shared File System client is needed to create a share. Changing this
+creates a new share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Share<wbr>Network<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The UUID of a share network where the share server exists
+or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
+the share_network_id value from the snapshot is used. Changing this creates a new share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Share<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The share type name. If you omit this parameter, the default
+share type is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
@@ -268,11 +268,31 @@ a new share.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Share<wbr>Proto</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
+CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
+than the allowed GB quota. Changing this resizes the existing share.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share availability zone. Changing this creates a
 new share.
@@ -282,7 +302,7 @@ new share.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 Changing this updates the description of the existing share.
@@ -292,7 +312,7 @@ Changing this updates the description of the existing share.
             title="Optional">
         <span>Is<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The level of visibility for the share. Set to true to make
 share public. Set to false to make it private. Default value is false. Changing this
@@ -313,7 +333,7 @@ strings.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the share. Changing this updates the name
 of the existing share.
@@ -323,7 +343,7 @@ of the existing share.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share. Changing this
@@ -334,48 +354,28 @@ creates a new share.
             title="Optional">
         <span>Share<wbr>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of a share network where the share server exists
 or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
 the share_network_id value from the snapshot is used. Changing this creates a new share.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Share<wbr>Proto</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
-CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Share<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share type name. If you omit this parameter, the default
 share type is used.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
-than the allowed GB quota. Changing this resizes the existing share.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
@@ -388,79 +388,6 @@ a new share.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The share availability zone. Changing this creates a
-new share.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the share.
-Changing this updates the description of the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The level of visibility for the share. Set to true to make
-share public. Set to false to make it private. Default value is false. Changing this
-updates the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
-strings.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the share. Changing this updates the name
-of the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-A Shared File System client is needed to create a share. Changing this
-creates a new share.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>share<wbr>Network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The UUID of a share network where the share server exists
-or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
-the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>share<wbr>Proto</span>
@@ -469,16 +396,6 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
     </dt>
     <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>share<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The share type name. If you omit this parameter, the default
-share type is used.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -493,9 +410,92 @@ than the allowed GB quota. Changing this resizes the existing share.
 
     <dt class="property-optional"
             title="Optional">
+        <span>availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The share availability zone. Changing this creates a
+new share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The human-readable description for the share.
+Changing this updates the description of the existing share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Public</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The level of visibility for the share. Set to true to make
+share public. Set to false to make it private. Default value is false. Changing this
+updates the existing share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
+strings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the share. Changing this updates the name
+of the existing share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
+A Shared File System client is needed to create a share. Changing this
+creates a new share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>share<wbr>Network<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The UUID of a share network where the share server exists
+or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
+the share_network_id value from the snapshot is used. Changing this creates a new share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>share<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The share type name. If you omit this parameter, the default
+share type is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
@@ -507,6 +507,26 @@ a new share.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>share_<wbr>proto</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
+CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
+than the allowed GB quota. Changing this resizes the existing share.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -581,16 +601,6 @@ or will be created. If `share_network_id` is not set and you provide a `snapshot
 the share_network_id value from the snapshot is used. Changing this creates a new share.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>share_<wbr>proto</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
-CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>share_<wbr>type</span>
@@ -599,16 +609,6 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
     </dt>
     <dd>{{% md %}}The share type name. If you omit this parameter, the default
 share type is used.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
-than the allowed GB quota. Changing this resizes the existing share.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -644,7 +644,7 @@ The following output properties are available:
             title="">
         <span>All<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
@@ -652,29 +652,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The share availability zone. Changing this creates a
-new share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the share.
-Changing this updates the description of the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Export<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shareexportlocation">List&lt;Share<wbr>Export<wbr>Location&gt;</a></span>
+        <span class="property-type"><a href="#shareexportlocation">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Shared<wbr>File<wbr>System.<wbr>Outputs.<wbr>Share<wbr>Export<wbr>Location&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.
@@ -700,53 +680,11 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Is<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The level of visibility for the share. Set to true to make
-share public. Set to false to make it private. Default value is false. Changing this
-updates the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
-strings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the share. Changing this updates the name
-of the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-A Shared File System client is needed to create a share. Changing this
-creates a new share.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -760,62 +698,11 @@ creates a new share.
 
     <dt class="property-"
             title="">
-        <span>Share<wbr>Network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of a share network where the share server exists
-or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
-the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Share<wbr>Proto</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
-CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Share<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Share<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The share type name. If you omit this parameter, the default
-share type is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
-than the allowed GB quota. Changing this resizes the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshot<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
-a new share.
 {{% /md %}}</dd>
 
 </dl>
@@ -833,26 +720,6 @@ a new share.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The share availability zone. Changing this creates a
-new share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the share.
-Changing this updates the description of the existing share.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -885,53 +752,11 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Is<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}The level of visibility for the share. Set to true to make
-share public. Set to false to make it private. Default value is false. Changing this
-updates the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
-strings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the share. Changing this updates the name
-of the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-A Shared File System client is needed to create a share. Changing this
-creates a new share.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -945,62 +770,11 @@ creates a new share.
 
     <dt class="property-"
             title="">
-        <span>Share<wbr>Network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of a share network where the share server exists
-or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
-the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Share<wbr>Proto</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
-CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Share<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Share<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The share type name. If you omit this parameter, the default
-share type is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
-than the allowed GB quota. Changing this resizes the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshot<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
-a new share.
 {{% /md %}}</dd>
 
 </dl>
@@ -1018,26 +792,6 @@ a new share.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The share availability zone. Changing this creates a
-new share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the share.
-Changing this updates the description of the existing share.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1070,53 +824,11 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>is<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The level of visibility for the share. Set to true to make
-share public. Set to false to make it private. Default value is false. Changing this
-updates the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
-strings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the share. Changing this updates the name
-of the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-A Shared File System client is needed to create a share. Changing this
-creates a new share.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1130,62 +842,11 @@ creates a new share.
 
     <dt class="property-"
             title="">
-        <span>share<wbr>Network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of a share network where the share server exists
-or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
-the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>share<wbr>Proto</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
-CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>share<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>share<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The share type name. If you omit this parameter, the default
-share type is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
-than the allowed GB quota. Changing this resizes the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snapshot<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
-a new share.
 {{% /md %}}</dd>
 
 </dl>
@@ -1203,26 +864,6 @@ a new share.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability_<wbr>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The share availability zone. Changing this creates a
-new share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the share.
-Changing this updates the description of the existing share.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1255,53 +896,11 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>is_<wbr>public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The level of visibility for the share. Set to true to make
-share public. Set to false to make it private. Default value is false. Changing this
-updates the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
-strings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the share. Changing this updates the name
-of the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>project_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-A Shared File System client is needed to create a share. Changing this
-creates a new share.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1315,62 +914,11 @@ creates a new share.
 
     <dt class="property-"
             title="">
-        <span>share_<wbr>network_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The UUID of a share network where the share server exists
-or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
-the share_network_id value from the snapshot is used. Changing this creates a new share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>share_<wbr>proto</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
-CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>share_<wbr>server_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>share_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The share type name. If you omit this parameter, the default
-share type is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
-than the allowed GB quota. Changing this resizes the existing share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snapshot_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
-a new share.
 {{% /md %}}</dd>
 
 </dl>
@@ -1402,7 +950,7 @@ Get an existing Share resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Sharedfilesystem.Share.html">Share</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Sharedfilesystem.ShareState.html">ShareState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.SharedFileSystem.Share.html">Share</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.SharedFileSystem.ShareState.html">ShareState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1512,7 +1060,7 @@ The following state arguments are supported:
             title="Optional">
         <span>All<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
@@ -1522,7 +1070,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share availability zone. Changing this creates a
 new share.
@@ -1532,7 +1080,7 @@ new share.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 Changing this updates the description of the existing share.
@@ -1542,7 +1090,7 @@ Changing this updates the description of the existing share.
             title="Optional">
         <span>Export<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shareexportlocation">List&lt;Share<wbr>Export<wbr>Location<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#shareexportlocation">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Shared<wbr>File<wbr>System.<wbr>Inputs.<wbr>Share<wbr>Export<wbr>Location<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.
@@ -1552,7 +1100,7 @@ has more than one network interface, it can have multiple export locations.
             title="Optional">
         <span>Has<wbr>Replicas</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a share has replicas or not.
 {{% /md %}}</dd>
@@ -1561,7 +1109,7 @@ has more than one network interface, it can have multiple export locations.
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share host name.
 {{% /md %}}</dd>
@@ -1570,7 +1118,7 @@ has more than one network interface, it can have multiple export locations.
             title="Optional">
         <span>Is<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The level of visibility for the share. Set to true to make
 share public. Set to false to make it private. Default value is false. Changing this
@@ -1581,7 +1129,7 @@ updates the existing share.
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
@@ -1591,7 +1139,7 @@ strings.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the share. Changing this updates the name
 of the existing share.
@@ -1601,7 +1149,7 @@ of the existing share.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
 {{% /md %}}</dd>
@@ -1610,7 +1158,7 @@ of the existing share.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share. Changing this
@@ -1621,7 +1169,7 @@ creates a new share.
             title="Optional">
         <span>Replication<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share replication type.
 {{% /md %}}</dd>
@@ -1630,7 +1178,7 @@ creates a new share.
             title="Optional">
         <span>Share<wbr>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of a share network where the share server exists
 or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
@@ -1641,7 +1189,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
             title="Optional">
         <span>Share<wbr>Proto</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
@@ -1651,7 +1199,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
             title="Optional">
         <span>Share<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
 {{% /md %}}</dd>
@@ -1660,7 +1208,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
             title="Optional">
         <span>Share<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share type name. If you omit this parameter, the default
 share type is used.
@@ -1670,7 +1218,7 @@ share type is used.
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
 than the allowed GB quota. Changing this resizes the existing share.
@@ -1680,7 +1228,7 @@ than the allowed GB quota. Changing this resizes the existing share.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
@@ -1707,7 +1255,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share availability zone. Changing this creates a
 new share.
@@ -1717,7 +1265,7 @@ new share.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 Changing this updates the description of the existing share.
@@ -1737,7 +1285,7 @@ has more than one network interface, it can have multiple export locations.
             title="Optional">
         <span>Has<wbr>Replicas</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a share has replicas or not.
 {{% /md %}}</dd>
@@ -1746,7 +1294,7 @@ has more than one network interface, it can have multiple export locations.
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share host name.
 {{% /md %}}</dd>
@@ -1755,7 +1303,7 @@ has more than one network interface, it can have multiple export locations.
             title="Optional">
         <span>Is<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The level of visibility for the share. Set to true to make
 share public. Set to false to make it private. Default value is false. Changing this
@@ -1776,7 +1324,7 @@ strings.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the share. Changing this updates the name
 of the existing share.
@@ -1786,7 +1334,7 @@ of the existing share.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
 {{% /md %}}</dd>
@@ -1795,7 +1343,7 @@ of the existing share.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share. Changing this
@@ -1806,7 +1354,7 @@ creates a new share.
             title="Optional">
         <span>Replication<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share replication type.
 {{% /md %}}</dd>
@@ -1815,7 +1363,7 @@ creates a new share.
             title="Optional">
         <span>Share<wbr>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of a share network where the share server exists
 or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
@@ -1826,7 +1374,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
             title="Optional">
         <span>Share<wbr>Proto</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
@@ -1836,7 +1384,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
             title="Optional">
         <span>Share<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
 {{% /md %}}</dd>
@@ -1845,7 +1393,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
             title="Optional">
         <span>Share<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share type name. If you omit this parameter, the default
 share type is used.
@@ -1855,7 +1403,7 @@ share type is used.
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
 than the allowed GB quota. Changing this resizes the existing share.
@@ -1865,7 +1413,7 @@ than the allowed GB quota. Changing this resizes the existing share.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
@@ -1882,7 +1430,7 @@ a new share.
             title="Optional">
         <span>all<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the share, which has been
 explicitly and implicitly added.
@@ -1892,7 +1440,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share availability zone. Changing this creates a
 new share.
@@ -1902,7 +1450,7 @@ new share.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 Changing this updates the description of the existing share.
@@ -1912,7 +1460,7 @@ Changing this updates the description of the existing share.
             title="Optional">
         <span>export<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shareexportlocation">Share<wbr>Export<wbr>Location[]?</a></span>
+        <span class="property-type"><a href="#shareexportlocation">Share<wbr>Export<wbr>Location[]</a></span>
     </dt>
     <dd>{{% md %}}A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.
@@ -1922,7 +1470,7 @@ has more than one network interface, it can have multiple export locations.
             title="Optional">
         <span>has<wbr>Replicas</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether a share has replicas or not.
 {{% /md %}}</dd>
@@ -1931,7 +1479,7 @@ has more than one network interface, it can have multiple export locations.
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share host name.
 {{% /md %}}</dd>
@@ -1940,7 +1488,7 @@ has more than one network interface, it can have multiple export locations.
             title="Optional">
         <span>is<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The level of visibility for the share. Set to true to make
 share public. Set to false to make it private. Default value is false. Changing this
@@ -1951,7 +1499,7 @@ updates the existing share.
             title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
@@ -1961,7 +1509,7 @@ strings.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the share. Changing this updates the name
 of the existing share.
@@ -1971,7 +1519,7 @@ of the existing share.
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share.
 {{% /md %}}</dd>
@@ -1980,7 +1528,7 @@ of the existing share.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share. Changing this
@@ -1991,7 +1539,7 @@ creates a new share.
             title="Optional">
         <span>replication<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share replication type.
 {{% /md %}}</dd>
@@ -2000,7 +1548,7 @@ creates a new share.
             title="Optional">
         <span>share<wbr>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of a share network where the share server exists
 or will be created. If `share_network_id` is not set and you provide a `snapshot_id`,
@@ -2011,7 +1559,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
             title="Optional">
         <span>share<wbr>Proto</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share protocol - can either be NFS, CIFS,
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
@@ -2021,7 +1569,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
             title="Optional">
         <span>share<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share server.
 {{% /md %}}</dd>
@@ -2030,7 +1578,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
             title="Optional">
         <span>share<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share type name. If you omit this parameter, the default
 share type is used.
@@ -2040,7 +1588,7 @@ share type is used.
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The share size, in GBs. The requested share size cannot be greater
 than the allowed GB quota. Changing this resizes the existing share.
@@ -2050,7 +1598,7 @@ than the allowed GB quota. Changing this resizes the existing share.
             title="Optional">
         <span>snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot. Changing this creates
 a new share.
@@ -2274,7 +1822,7 @@ a new share.
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2282,7 +1830,7 @@ a new share.
             title="Optional">
         <span>Preferred</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2297,7 +1845,7 @@ a new share.
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2305,7 +1853,7 @@ a new share.
             title="Optional">
         <span>Preferred</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2320,7 +1868,7 @@ a new share.
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2328,7 +1876,7 @@ a new share.
             title="Optional">
         <span>preferred</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

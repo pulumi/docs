@@ -22,7 +22,7 @@ Manages a V2 compute quotaset resource within OpenStack.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#QuotaSetV2">QuotaSetV2</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#QuotaSetV2Args">QuotaSetV2Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#QuotaSetV2">QuotaSetV2</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#QuotaSetV2Args">QuotaSetV2Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -30,11 +30,11 @@ Manages a V2 compute quotaset resource within OpenStack.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewQuotaSetV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#QuotaSetV2Args">QuotaSetV2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#QuotaSetV2">QuotaSetV2</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewQuotaSetV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#QuotaSetV2Args">QuotaSetV2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#QuotaSetV2">QuotaSetV2</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Compute.QuotaSetV2.html">QuotaSetV2</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Compute.QuotaSetV2Args.html">QuotaSetV2Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Compute.QuotaSetV2.html">QuotaSetV2</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.QuotaSetV2Args.html">QuotaSetV2Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -126,96 +126,6 @@ Manages a V2 compute quotaset resource within OpenStack.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cores</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for cores.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Fixed<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for fixed IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Floating<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for floating IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Injected<wbr>File<wbr>Content<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for content bytes
-of injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Injected<wbr>File<wbr>Path<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for path bytes of
-injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Injected<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for injected files.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for instances.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Key<wbr>Pairs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for key pairs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metadata<wbr>Items</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for metadata items.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project<wbr>Id</span>
@@ -228,9 +138,99 @@ Changing this creates a new quotaset.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Cores</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for cores.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Fixed<wbr>Ips</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for fixed IPs.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Floating<wbr>Ips</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for floating IPs.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Injected<wbr>File<wbr>Content<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for content bytes
+of injected files. Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Injected<wbr>File<wbr>Path<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for path bytes of
+injected files. Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Injected<wbr>Files</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for injected files.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for instances.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Pairs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for key pairs.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metadata<wbr>Items</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for metadata items.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -240,7 +240,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -251,7 +251,7 @@ creates a new quotaset.
             title="Optional">
         <span>Security<wbr>Group<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -261,7 +261,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -271,7 +271,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Group<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -281,7 +281,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.
@@ -294,96 +294,6 @@ Changing this updates the existing quotaset.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cores</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for cores.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Fixed<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for fixed IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Floating<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for floating IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Injected<wbr>File<wbr>Content<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for content bytes
-of injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Injected<wbr>File<wbr>Path<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for path bytes of
-injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Injected<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for injected files.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for instances.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Key<wbr>Pairs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for key pairs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metadata<wbr>Items</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for metadata items.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project<wbr>Id</span>
@@ -396,9 +306,99 @@ Changing this creates a new quotaset.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Cores</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for cores.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Fixed<wbr>Ips</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for fixed IPs.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Floating<wbr>Ips</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for floating IPs.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Injected<wbr>File<wbr>Content<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for content bytes
+of injected files. Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Injected<wbr>File<wbr>Path<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for path bytes of
+injected files. Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Injected<wbr>Files</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for injected files.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for instances.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Pairs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for key pairs.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metadata<wbr>Items</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for metadata items.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -408,7 +408,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -419,7 +419,7 @@ creates a new quotaset.
             title="Optional">
         <span>Security<wbr>Group<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -429,7 +429,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -439,7 +439,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Group<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -449,7 +449,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.
@@ -461,96 +461,6 @@ Changing this updates the existing quotaset.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cores</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for cores.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>fixed<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for fixed IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>floating<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for floating IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>injected<wbr>File<wbr>Content<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for content bytes
-of injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>injected<wbr>File<wbr>Path<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for path bytes of
-injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>injected<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for injected files.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for instances.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>key<wbr>Pairs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for key pairs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metadata<wbr>Items</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for metadata items.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -564,9 +474,99 @@ Changing this creates a new quotaset.
 
     <dt class="property-optional"
             title="Optional">
+        <span>cores</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for cores.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>fixed<wbr>Ips</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for fixed IPs.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>floating<wbr>Ips</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for floating IPs.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>injected<wbr>File<wbr>Content<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for content bytes
+of injected files. Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>injected<wbr>File<wbr>Path<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for path bytes of
+injected files. Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>injected<wbr>Files</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for injected files.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for instances.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>key<wbr>Pairs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for key pairs.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metadata<wbr>Items</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for metadata items.
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -576,7 +576,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -587,7 +587,7 @@ creates a new quotaset.
             title="Optional">
         <span>security<wbr>Group<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -597,7 +597,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -607,7 +607,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>server<wbr>Group<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -617,7 +617,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>server<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.
@@ -629,6 +629,16 @@ Changing this updates the existing quotaset.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>project_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the project to manage quotas.
+Changing this creates a new quotaset.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -720,16 +730,6 @@ Changing this updates the existing quotaset.
 Changing this updates the existing quotaset.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>project_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the project to manage quotas.
-Changing this creates a new quotaset.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>ram</span>
@@ -795,688 +795,6 @@ Changing this updates the existing quotaset.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## QuotaSetV2 Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Cores</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for cores.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fixed<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for fixed IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Floating<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for floating IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Injected<wbr>File<wbr>Content<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for content bytes
-of injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Injected<wbr>File<wbr>Path<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for path bytes of
-injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Injected<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for injected files.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for instances.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Pairs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for key pairs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metadata<wbr>Items</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for metadata items.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the project to manage quotas.
-Changing this creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ram</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for RAM.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the volume. If
-omitted, the `region` argument of the provider is used. Changing this
-creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for security group rules.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for security groups.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Group<wbr>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for server groups members.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for server groups.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Cores</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for cores.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fixed<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for fixed IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Floating<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for floating IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Injected<wbr>File<wbr>Content<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for content bytes
-of injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Injected<wbr>File<wbr>Path<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for path bytes of
-injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Injected<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for injected files.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for instances.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Pairs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for key pairs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metadata<wbr>Items</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for metadata items.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the project to manage quotas.
-Changing this creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ram</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for RAM.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the volume. If
-omitted, the `region` argument of the provider is used. Changing this
-creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for security group rules.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for security groups.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Group<wbr>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for server groups members.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for server groups.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>cores</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for cores.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fixed<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for fixed IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>floating<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for floating IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>injected<wbr>File<wbr>Content<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for content bytes
-of injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>injected<wbr>File<wbr>Path<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for path bytes of
-injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>injected<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for injected files.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for instances.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key<wbr>Pairs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for key pairs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metadata<wbr>Items</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for metadata items.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the project to manage quotas.
-Changing this creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ram</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for RAM.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the volume. If
-omitted, the `region` argument of the provider is used. Changing this
-creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Group<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for security group rules.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for security groups.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>server<wbr>Group<wbr>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for server groups members.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>server<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for server groups.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>cores</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for cores.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fixed_<wbr>ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for fixed IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>floating_<wbr>ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for floating IPs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>injected_<wbr>file_<wbr>content_<wbr>bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for content bytes
-of injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>injected_<wbr>file_<wbr>path_<wbr>bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for path bytes of
-injected files. Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>injected_<wbr>files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for injected files.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for instances.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key_<wbr>pairs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for key pairs.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metadata_<wbr>items</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for metadata items.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the project to manage quotas.
-Changing this creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ram</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for RAM.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the volume. If
-omitted, the `region` argument of the provider is used. Changing this
-creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>group_<wbr>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for security group rules.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for security groups.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>server_<wbr>group_<wbr>members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for server groups members.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>server_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for server groups.
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1614,7 +932,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for cores.
 Changing this updates the existing quotaset.
@@ -1624,7 +942,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for fixed IPs.
 Changing this updates the existing quotaset.
@@ -1634,7 +952,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Floating<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs.
 Changing this updates the existing quotaset.
@@ -1644,7 +962,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>File<wbr>Content<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for content bytes
 of injected files. Changing this updates the existing quotaset.
@@ -1654,7 +972,7 @@ of injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>File<wbr>Path<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for path bytes of
 injected files. Changing this updates the existing quotaset.
@@ -1664,7 +982,7 @@ injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for injected files.
 Changing this updates the existing quotaset.
@@ -1674,7 +992,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for instances.
 Changing this updates the existing quotaset.
@@ -1684,7 +1002,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Key<wbr>Pairs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for key pairs.
 Changing this updates the existing quotaset.
@@ -1694,7 +1012,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Metadata<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for metadata items.
 Changing this updates the existing quotaset.
@@ -1704,7 +1022,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas.
 Changing this creates a new quotaset.
@@ -1714,7 +1032,7 @@ Changing this creates a new quotaset.
             title="Optional">
         <span>Ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -1724,7 +1042,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1735,7 +1053,7 @@ creates a new quotaset.
             title="Optional">
         <span>Security<wbr>Group<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -1745,7 +1063,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -1755,7 +1073,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Group<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -1765,7 +1083,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.
@@ -1782,7 +1100,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Cores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for cores.
 Changing this updates the existing quotaset.
@@ -1792,7 +1110,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for fixed IPs.
 Changing this updates the existing quotaset.
@@ -1802,7 +1120,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Floating<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs.
 Changing this updates the existing quotaset.
@@ -1812,7 +1130,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>File<wbr>Content<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for content bytes
 of injected files. Changing this updates the existing quotaset.
@@ -1822,7 +1140,7 @@ of injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>File<wbr>Path<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for path bytes of
 injected files. Changing this updates the existing quotaset.
@@ -1832,7 +1150,7 @@ injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for injected files.
 Changing this updates the existing quotaset.
@@ -1842,7 +1160,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for instances.
 Changing this updates the existing quotaset.
@@ -1852,7 +1170,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Key<wbr>Pairs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for key pairs.
 Changing this updates the existing quotaset.
@@ -1862,7 +1180,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Metadata<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for metadata items.
 Changing this updates the existing quotaset.
@@ -1872,7 +1190,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas.
 Changing this creates a new quotaset.
@@ -1882,7 +1200,7 @@ Changing this creates a new quotaset.
             title="Optional">
         <span>Ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -1892,7 +1210,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1903,7 +1221,7 @@ creates a new quotaset.
             title="Optional">
         <span>Security<wbr>Group<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -1913,7 +1231,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -1923,7 +1241,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Group<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -1933,7 +1251,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.
@@ -1950,7 +1268,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>cores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for cores.
 Changing this updates the existing quotaset.
@@ -1960,7 +1278,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for fixed IPs.
 Changing this updates the existing quotaset.
@@ -1970,7 +1288,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>floating<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs.
 Changing this updates the existing quotaset.
@@ -1980,7 +1298,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>injected<wbr>File<wbr>Content<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for content bytes
 of injected files. Changing this updates the existing quotaset.
@@ -1990,7 +1308,7 @@ of injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>injected<wbr>File<wbr>Path<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for path bytes of
 injected files. Changing this updates the existing quotaset.
@@ -2000,7 +1318,7 @@ injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>injected<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for injected files.
 Changing this updates the existing quotaset.
@@ -2010,7 +1328,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for instances.
 Changing this updates the existing quotaset.
@@ -2020,7 +1338,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>key<wbr>Pairs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for key pairs.
 Changing this updates the existing quotaset.
@@ -2030,7 +1348,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>metadata<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for metadata items.
 Changing this updates the existing quotaset.
@@ -2040,7 +1358,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas.
 Changing this creates a new quotaset.
@@ -2050,7 +1368,7 @@ Changing this creates a new quotaset.
             title="Optional">
         <span>ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -2060,7 +1378,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -2071,7 +1389,7 @@ creates a new quotaset.
             title="Optional">
         <span>security<wbr>Group<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -2081,7 +1399,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -2091,7 +1409,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>server<wbr>Group<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -2101,7 +1419,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>server<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.

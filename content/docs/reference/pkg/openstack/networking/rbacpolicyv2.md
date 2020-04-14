@@ -46,7 +46,7 @@ const rbacPolicy1 = new openstack.networking.RbacPolicyV2("rbac_policy_1", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#RbacPolicyV2">RbacPolicyV2</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#RbacPolicyV2Args">RbacPolicyV2Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#RbacPolicyV2">RbacPolicyV2</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#RbacPolicyV2Args">RbacPolicyV2Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -54,11 +54,11 @@ const rbacPolicy1 = new openstack.networking.RbacPolicyV2("rbac_policy_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRbacPolicyV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#RbacPolicyV2Args">RbacPolicyV2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#RbacPolicyV2">RbacPolicyV2</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRbacPolicyV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#RbacPolicyV2Args">RbacPolicyV2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#RbacPolicyV2">RbacPolicyV2</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.RbacPolicyV2.html">RbacPolicyV2</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.RbacPolicyV2Args.html">RbacPolicyV2Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.RbacPolicyV2.html">RbacPolicyV2</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Networking.RbacPolicyV2Args.html">RbacPolicyV2Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -181,18 +181,6 @@ const rbacPolicy1 = new openstack.networking.RbacPolicyV2("rbac_policy_1", {
 affects. Can either be `qos-policy` or `network`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to configure a routing entry on a subnet. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-routing entry.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Target<wbr>Tenant</span>
@@ -201,6 +189,18 @@ routing entry.
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V2 networking client.
+A networking client is needed to configure a routing entry on a subnet. If omitted, the
+`region` argument of the provider is used. Changing this creates a new
+routing entry.
 {{% /md %}}</dd>
 
 </dl>
@@ -241,18 +241,6 @@ will be enforced.
 affects. Can either be `qos-policy` or `network`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to configure a routing entry on a subnet. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-routing entry.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Target<wbr>Tenant</span>
@@ -261,6 +249,18 @@ routing entry.
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V2 networking client.
+A networking client is needed to configure a routing entry on a subnet. If omitted, the
+`region` argument of the provider is used. Changing this creates a new
+routing entry.
 {{% /md %}}</dd>
 
 </dl>
@@ -301,18 +301,6 @@ will be enforced.
 affects. Can either be `qos-policy` or `network`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to configure a routing entry on a subnet. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-routing entry.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>target<wbr>Tenant</span>
@@ -321,6 +309,18 @@ routing entry.
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V2 networking client.
+A networking client is needed to configure a routing entry on a subnet. If omitted, the
+`region` argument of the provider is used. Changing this creates a new
+routing entry.
 {{% /md %}}</dd>
 
 </dl>
@@ -361,6 +361,16 @@ will be enforced.
 affects. Can either be `qos-policy` or `network`.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>target_<wbr>tenant</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the tenant to which the RBAC policy
+will be enforced.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>region</span>
@@ -371,16 +381,6 @@ affects. Can either be `qos-policy` or `network`.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>target_<wbr>tenant</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the tenant to which the RBAC policy
-will be enforced.
 {{% /md %}}</dd>
 
 </dl>
@@ -404,64 +404,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Action for the RBAC policy. Can either be
-`access_as_external` or `access_as_shared`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Object<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the `object_type` resource. An
-`object_type` of `network` returns a network ID and an `object_type` of
-`qos_policy` returns a QoS ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Object<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the object that the RBAC policy
-affects. Can either be `qos-policy` or `network`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to configure a routing entry on a subnet. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Tenant</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the tenant to which the RBAC policy
-will be enforced.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -472,64 +419,11 @@ will be enforced.
 
     <dt class="property-"
             title="">
-        <span>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Action for the RBAC policy. Can either be
-`access_as_external` or `access_as_shared`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Object<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the `object_type` resource. An
-`object_type` of `network` returns a network ID and an `object_type` of
-`qos_policy` returns a QoS ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Object<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the object that the RBAC policy
-affects. Can either be `qos-policy` or `network`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to configure a routing entry on a subnet. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Tenant</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the tenant to which the RBAC policy
-will be enforced.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -540,64 +434,11 @@ will be enforced.
 
     <dt class="property-"
             title="">
-        <span>action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Action for the RBAC policy. Can either be
-`access_as_external` or `access_as_shared`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>object<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the `object_type` resource. An
-`object_type` of `network` returns a network ID and an `object_type` of
-`qos_policy` returns a QoS ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>object<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the object that the RBAC policy
-affects. Can either be `qos-policy` or `network`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to configure a routing entry on a subnet. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Tenant</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the tenant to which the RBAC policy
-will be enforced.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -608,64 +449,11 @@ will be enforced.
 
     <dt class="property-"
             title="">
-        <span>action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Action for the RBAC policy. Can either be
-`access_as_external` or `access_as_shared`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>object_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the `object_type` resource. An
-`object_type` of `network` returns a network ID and an `object_type` of
-`qos_policy` returns a QoS ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>object_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the object that the RBAC policy
-affects. Can either be `qos-policy` or `network`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>project_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to configure a routing entry on a subnet. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>tenant</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the tenant to which the RBAC policy
-will be enforced.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -806,7 +594,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for the RBAC policy. Can either be
 `access_as_external` or `access_as_shared`.
@@ -816,7 +604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the `object_type` resource. An
 `object_type` of `network` returns a network ID and an `object_type` of
@@ -827,7 +615,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Object<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
 affects. Can either be `qos-policy` or `network`.
@@ -837,7 +625,7 @@ affects. Can either be `qos-policy` or `network`.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -845,7 +633,7 @@ affects. Can either be `qos-policy` or `network`.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
@@ -857,7 +645,7 @@ routing entry.
             title="Optional">
         <span>Target<wbr>Tenant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.
@@ -874,7 +662,7 @@ will be enforced.
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for the RBAC policy. Can either be
 `access_as_external` or `access_as_shared`.
@@ -884,7 +672,7 @@ will be enforced.
             title="Optional">
         <span>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the `object_type` resource. An
 `object_type` of `network` returns a network ID and an `object_type` of
@@ -895,7 +683,7 @@ will be enforced.
             title="Optional">
         <span>Object<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
 affects. Can either be `qos-policy` or `network`.
@@ -905,7 +693,7 @@ affects. Can either be `qos-policy` or `network`.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -913,7 +701,7 @@ affects. Can either be `qos-policy` or `network`.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
@@ -925,7 +713,7 @@ routing entry.
             title="Optional">
         <span>Target<wbr>Tenant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.
@@ -942,7 +730,7 @@ will be enforced.
             title="Optional">
         <span>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for the RBAC policy. Can either be
 `access_as_external` or `access_as_shared`.
@@ -952,7 +740,7 @@ will be enforced.
             title="Optional">
         <span>object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the `object_type` resource. An
 `object_type` of `network` returns a network ID and an `object_type` of
@@ -963,7 +751,7 @@ will be enforced.
             title="Optional">
         <span>object<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
 affects. Can either be `qos-policy` or `network`.
@@ -973,7 +761,7 @@ affects. Can either be `qos-policy` or `network`.
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -981,7 +769,7 @@ affects. Can either be `qos-policy` or `network`.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
@@ -993,7 +781,7 @@ routing entry.
             title="Optional">
         <span>target<wbr>Tenant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.

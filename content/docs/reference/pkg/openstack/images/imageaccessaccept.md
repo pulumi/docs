@@ -37,7 +37,7 @@ const rancherosMember = new openstack.images.ImageAccessAccept("rancheros_member
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/images/#ImageAccessAccept">ImageAccessAccept</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/images/#ImageAccessAcceptArgs">ImageAccessAcceptArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/images/#ImageAccessAccept">ImageAccessAccept</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/images/#ImageAccessAcceptArgs">ImageAccessAcceptArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -45,11 +45,11 @@ const rancherosMember = new openstack.images.ImageAccessAccept("rancheros_member
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewImageAccessAccept<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/images?tab=doc#ImageAccessAcceptArgs">ImageAccessAcceptArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/images?tab=doc#ImageAccessAccept">ImageAccessAccept</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewImageAccessAccept<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/images?tab=doc#ImageAccessAcceptArgs">ImageAccessAcceptArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/images?tab=doc#ImageAccessAccept">ImageAccessAccept</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Images.ImageAccessAccept.html">ImageAccessAccept</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Images.ImageAccessAcceptArgs.html">ImageAccessAcceptArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Images.ImageAccessAccept.html">ImageAccessAccept</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Images.ImageAccessAcceptArgs.html">ImageAccessAcceptArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -150,11 +150,21 @@ const rancherosMember = new openstack.images.ImageAccessAccept("rancheros_member
     <dd>{{% md %}}The proposed image ID.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The membership proposal status. Can either be
+`accepted`, `rejected` or `pending`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Member<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
@@ -164,22 +174,12 @@ for admin accounts. Defaults to the current scope project ID.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image memberships. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 membership.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The membership proposal status. Can either be
-`accepted`, `rejected` or `pending`.
 {{% /md %}}</dd>
 
 </dl>
@@ -198,11 +198,21 @@ membership.
     <dd>{{% md %}}The proposed image ID.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The membership proposal status. Can either be
+`accepted`, `rejected` or `pending`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Member<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
@@ -212,22 +222,12 @@ for admin accounts. Defaults to the current scope project ID.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image memberships. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 membership.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The membership proposal status. Can either be
-`accepted`, `rejected` or `pending`.
 {{% /md %}}</dd>
 
 </dl>
@@ -246,11 +246,21 @@ membership.
     <dd>{{% md %}}The proposed image ID.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The membership proposal status. Can either be
+`accepted`, `rejected` or `pending`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>member<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
@@ -260,22 +270,12 @@ for admin accounts. Defaults to the current scope project ID.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image memberships. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 membership.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The membership proposal status. Can either be
-`accepted`, `rejected` or `pending`.
 {{% /md %}}</dd>
 
 </dl>
@@ -292,6 +292,16 @@ membership.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The proposed image ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The membership proposal status. Can either be
+`accepted`, `rejected` or `pending`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -314,16 +324,6 @@ for admin accounts. Defaults to the current scope project ID.
 A Glance client is needed to manage Image memberships. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 membership.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The membership proposal status. Can either be
-`accepted`, `rejected` or `pending`.
 {{% /md %}}</dd>
 
 </dl>
@@ -356,52 +356,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The proposed image ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Member<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
-for admin accounts. Defaults to the current scope project ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Glance client.
-A Glance client is needed to manage Image memberships. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-membership.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Schema</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership schema.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The membership proposal status. Can either be
-`accepted`, `rejected` or `pending`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -431,52 +390,11 @@ membership.
 
     <dt class="property-"
             title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The proposed image ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Member<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
-for admin accounts. Defaults to the current scope project ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Glance client.
-A Glance client is needed to manage Image memberships. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-membership.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Schema</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership schema.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The membership proposal status. Can either be
-`accepted`, `rejected` or `pending`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -506,52 +424,11 @@ membership.
 
     <dt class="property-"
             title="">
-        <span>image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The proposed image ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>member<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
-for admin accounts. Defaults to the current scope project ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Glance client.
-A Glance client is needed to manage Image memberships. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-membership.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>schema</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership schema.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The membership proposal status. Can either be
-`accepted`, `rejected` or `pending`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -581,52 +458,11 @@ membership.
 
     <dt class="property-"
             title="">
-        <span>image_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The proposed image ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>member_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
-for admin accounts. Defaults to the current scope project ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Glance client.
-A Glance client is needed to manage Image memberships. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-membership.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>schema</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The membership schema.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The membership proposal status. Can either be
-`accepted`, `rejected` or `pending`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -777,7 +613,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was created.
 {{% /md %}}</dd>
@@ -786,7 +622,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proposed image ID.
 {{% /md %}}</dd>
@@ -795,7 +631,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Member<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
@@ -805,7 +641,7 @@ for admin accounts. Defaults to the current scope project ID.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image memberships. If omitted, the
@@ -817,7 +653,7 @@ membership.
             title="Optional">
         <span>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership schema.
 {{% /md %}}</dd>
@@ -826,7 +662,7 @@ membership.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership proposal status. Can either be
 `accepted`, `rejected` or `pending`.
@@ -836,7 +672,7 @@ membership.
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was last updated.
 {{% /md %}}</dd>
@@ -852,7 +688,7 @@ membership.
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was created.
 {{% /md %}}</dd>
@@ -861,7 +697,7 @@ membership.
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proposed image ID.
 {{% /md %}}</dd>
@@ -870,7 +706,7 @@ membership.
             title="Optional">
         <span>Member<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
@@ -880,7 +716,7 @@ for admin accounts. Defaults to the current scope project ID.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image memberships. If omitted, the
@@ -892,7 +728,7 @@ membership.
             title="Optional">
         <span>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership schema.
 {{% /md %}}</dd>
@@ -901,7 +737,7 @@ membership.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership proposal status. Can either be
 `accepted`, `rejected` or `pending`.
@@ -911,7 +747,7 @@ membership.
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was last updated.
 {{% /md %}}</dd>
@@ -927,7 +763,7 @@ membership.
             title="Optional">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was created.
 {{% /md %}}</dd>
@@ -936,7 +772,7 @@ membership.
             title="Optional">
         <span>image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proposed image ID.
 {{% /md %}}</dd>
@@ -945,7 +781,7 @@ membership.
             title="Optional">
         <span>member<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
@@ -955,7 +791,7 @@ for admin accounts. Defaults to the current scope project ID.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image memberships. If omitted, the
@@ -967,7 +803,7 @@ membership.
             title="Optional">
         <span>schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership schema.
 {{% /md %}}</dd>
@@ -976,7 +812,7 @@ membership.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership proposal status. Can either be
 `accepted`, `rejected` or `pending`.
@@ -986,7 +822,7 @@ membership.
             title="Optional">
         <span>updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was last updated.
 {{% /md %}}</dd>

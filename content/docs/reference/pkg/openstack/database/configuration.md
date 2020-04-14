@@ -38,7 +38,7 @@ const test = new openstack.database.Configuration("test", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/database/#Configuration">Configuration</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/database/#ConfigurationArgs">ConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/database/#Configuration">Configuration</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/database/#ConfigurationArgs">ConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -46,11 +46,11 @@ const test = new openstack.database.Configuration("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/database?tab=doc#ConfigurationArgs">ConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/database?tab=doc#Configuration">Configuration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/database?tab=doc#ConfigurationArgs">ConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/database?tab=doc#Configuration">Configuration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Database.Configuration.html">Configuration</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Database.ConfigurationArgs.html">ConfigurationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Database.Configuration.html">Configuration</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Database.ConfigurationArgs.html">ConfigurationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -142,20 +142,11 @@ const test = new openstack.database.Configuration("test", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationconfiguration">List&lt;Configuration<wbr>Configuration<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Datastore</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationdatastore">Configuration<wbr>Datastore<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationdatastore">Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Configuration<wbr>Datastore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
@@ -172,9 +163,18 @@ object structure is documented below. Changing this creates resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationconfiguration">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Configuration<wbr>Configuration<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ object structure is documented below. Changing this creates resource.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
@@ -195,15 +195,6 @@ creates a new instance.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationconfiguration">[]Configuration<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -226,9 +217,18 @@ object structure is documented below. Changing this creates resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationconfiguration">[]Configuration<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
 {{% /md %}}</dd>
@@ -237,7 +237,7 @@ object structure is documented below. Changing this creates resource.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
@@ -249,15 +249,6 @@ creates a new instance.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationconfiguration">Configuration<wbr>Configuration[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -280,9 +271,18 @@ object structure is documented below. Changing this creates resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span>configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationconfiguration">Configuration<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
 {{% /md %}}</dd>
@@ -291,7 +291,7 @@ object structure is documented below. Changing this creates resource.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
@@ -303,15 +303,6 @@ creates a new instance.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationconfiguration">List[Configuration<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -334,6 +325,15 @@ object structure is documented below. Changing this creates resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span>configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationconfiguration">List[Configuration<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -355,232 +355,6 @@ creates a new instance.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Configuration Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationconfiguration">List&lt;Configuration<wbr>Configuration&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationdatastore">Configuration<wbr>Datastore</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database engine type and version. The datastore
-object structure is documented below. Changing this creates resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Description of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the db instance. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationconfiguration">[]Configuration<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationdatastore">Configuration<wbr>Datastore</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database engine type and version. The datastore
-object structure is documented below. Changing this creates resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Description of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the db instance. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationconfiguration">Configuration<wbr>Configuration[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationdatastore">Configuration<wbr>Datastore</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database engine type and version. The datastore
-object structure is documented below. Changing this creates resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Description of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the db instance. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationconfiguration">List[Configuration<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationdatastore">Dict[Configuration<wbr>Datastore]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database engine type and version. The datastore
-object structure is documented below. Changing this creates resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the db instance. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -718,7 +492,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationconfiguration">List&lt;Configuration<wbr>Configuration<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#configurationconfiguration">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Configuration<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
 {{% /md %}}</dd>
@@ -727,7 +501,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Datastore</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationdatastore">Configuration<wbr>Datastore<wbr>Args?</a></span>
+        <span class="property-type"><a href="#configurationdatastore">Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Configuration<wbr>Datastore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
@@ -737,7 +511,7 @@ object structure is documented below. Changing this creates resource.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the resource.
 {{% /md %}}</dd>
@@ -746,7 +520,7 @@ object structure is documented below. Changing this creates resource.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
 {{% /md %}}</dd>
@@ -755,7 +529,7 @@ object structure is documented below. Changing this creates resource.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
@@ -781,7 +555,7 @@ creates a new instance.
             title="Optional">
         <span>Datastore</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationdatastore">*Configuration<wbr>Datastore</a></span>
+        <span class="property-type"><a href="#configurationdatastore">Configuration<wbr>Datastore</a></span>
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
@@ -791,7 +565,7 @@ object structure is documented below. Changing this creates resource.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the resource.
 {{% /md %}}</dd>
@@ -800,7 +574,7 @@ object structure is documented below. Changing this creates resource.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
 {{% /md %}}</dd>
@@ -809,7 +583,7 @@ object structure is documented below. Changing this creates resource.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
@@ -826,7 +600,7 @@ creates a new instance.
             title="Optional">
         <span>configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationconfiguration">Configuration<wbr>Configuration[]?</a></span>
+        <span class="property-type"><a href="#configurationconfiguration">Configuration<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
 {{% /md %}}</dd>
@@ -835,7 +609,7 @@ creates a new instance.
             title="Optional">
         <span>datastore</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationdatastore">Configuration<wbr>Datastore?</a></span>
+        <span class="property-type"><a href="#configurationdatastore">Configuration<wbr>Datastore</a></span>
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
@@ -845,7 +619,7 @@ object structure is documented below. Changing this creates resource.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the resource.
 {{% /md %}}</dd>
@@ -854,7 +628,7 @@ object structure is documented below. Changing this creates resource.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
 {{% /md %}}</dd>
@@ -863,7 +637,7 @@ object structure is documented below. Changing this creates resource.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.

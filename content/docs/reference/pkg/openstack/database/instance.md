@@ -39,7 +39,7 @@ const test = new openstack.database.Instance("test", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/database/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/database/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/database/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/database/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -47,11 +47,11 @@ const test = new openstack.database.Instance("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/database?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/database?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/database?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/database?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Database.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Database.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Database.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Database.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -143,75 +143,14 @@ const test = new openstack.database.Instance("test", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Configuration<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
-will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Databases</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatabase">List&lt;Instance<wbr>Database<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database name, charset and collate. The database
-object structure is documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Datastore</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatastore">Instance<wbr>Datastore<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancedatastore">Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Instance<wbr>Datastore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Flavor<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
-Changing this creates new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
-new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Networks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List&lt;Instance<wbr>Network<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of one or more networks to attach to the
-instance. The network object structure is documented below. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the db instance. Changing this
-creates a new instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -225,9 +164,70 @@ creates a new instance.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Configuration<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
+will be rebooted when configuration is detached.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Databases</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancedatabase">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Instance<wbr>Database<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of database name, charset and collate. The database
+object structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Flavor<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
+Changing this creates new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
+new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Networks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancenetwork">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Instance<wbr>Network<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of one or more networks to attach to the
+instance. The network object structure is documented below. Changing this
+creates a new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to create the db instance. Changing this
+creates a new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceuser">List&lt;Instance<wbr>User<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instanceuser">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Instance<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
@@ -240,11 +240,30 @@ object structure is documented below.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Datastore</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancedatastore">Instance<wbr>Datastore</a></span>
+    </dt>
+    <dd>{{% md %}}An array of database engine type and version. The datastore
+object structure is documented below. Changing this creates a new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Configuration<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
 will be rebooted when configuration is detached.
@@ -260,21 +279,11 @@ will be rebooted when configuration is detached.
 object structure is documented below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatastore">Instance<wbr>Datastore</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database engine type and version. The datastore
-object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Flavor<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
 Changing this creates new instance.
@@ -284,7 +293,7 @@ Changing this creates new instance.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
@@ -305,19 +314,10 @@ creates a new instance.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -337,26 +337,6 @@ object structure is documented below.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>configuration<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
-will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>databases</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatabase">Instance<wbr>Database[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database name, charset and collate. The database
-object structure is documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>datastore</span>
@@ -365,47 +345,6 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>flavor<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
-Changing this creates new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
-new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>networks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of one or more networks to attach to the
-instance. The network object structure is documented below. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the db instance. Changing this
-creates a new instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -419,9 +358,70 @@ creates a new instance.
 
     <dt class="property-optional"
             title="Optional">
+        <span>configuration<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
+will be rebooted when configuration is detached.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>databases</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancedatabase">Instance<wbr>Database[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of database name, charset and collate. The database
+object structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>flavor<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
+Changing this creates new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
+new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>networks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of one or more networks to attach to the
+instance. The network object structure is documented below. Changing this
+creates a new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to create the db instance. Changing this
+creates a new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceuser">Instance<wbr>User[]?</a></span>
+        <span class="property-type"><a href="#instanceuser">Instance<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
@@ -433,6 +433,25 @@ object structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>datastore</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancedatastore">Dict[Instance<wbr>Datastore]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of database engine type and version. The datastore
+object structure is documented below. Changing this creates a new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -452,16 +471,6 @@ will be rebooted when configuration is detached.
     </dt>
     <dd>{{% md %}}An array of database name, charset and collate. The database
 object structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatastore">Dict[Instance<wbr>Datastore]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database engine type and version. The datastore
-object structure is documented below. Changing this creates a new instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -505,15 +514,6 @@ creates a new instance.
 creates a new instance.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>users</span>
@@ -528,404 +528,6 @@ object structure is documented below.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Instance Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Configuration<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
-will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Databases</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatabase">List&lt;Instance<wbr>Database&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database name, charset and collate. The database
-object structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatastore">Instance<wbr>Datastore</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database engine type and version. The datastore
-object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Flavor<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
-Changing this creates new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
-new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Networks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List&lt;Instance<wbr>Network&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of one or more networks to attach to the
-instance. The network object structure is documented below. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the db instance. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceuser">List&lt;Instance<wbr>User&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of username, password, host and databases. The user
-object structure is documented below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Configuration<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
-will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Databases</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatabase">[]Instance<wbr>Database</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database name, charset and collate. The database
-object structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatastore">Instance<wbr>Datastore</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database engine type and version. The datastore
-object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Flavor<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
-Changing this creates new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
-new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Networks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">[]Instance<wbr>Network</a></span>
-    </dt>
-    <dd>{{% md %}}An array of one or more networks to attach to the
-instance. The network object structure is documented below. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the db instance. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceuser">[]Instance<wbr>User</a></span>
-    </dt>
-    <dd>{{% md %}}An array of username, password, host and databases. The user
-object structure is documented below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>configuration<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
-will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>databases</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatabase">Instance<wbr>Database[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database name, charset and collate. The database
-object structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatastore">Instance<wbr>Datastore</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database engine type and version. The datastore
-object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>flavor<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
-Changing this creates new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
-new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>networks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of one or more networks to attach to the
-instance. The network object structure is documented below. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the db instance. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceuser">Instance<wbr>User[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of username, password, host and databases. The user
-object structure is documented below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>configuration_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
-will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>databases</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatabase">List[Instance<wbr>Database]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database name, charset and collate. The database
-object structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatastore">Dict[Instance<wbr>Datastore]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of database engine type and version. The datastore
-object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>flavor_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
-Changing this creates new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
-new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>networks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of one or more networks to attach to the
-instance. The network object structure is documented below. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the db instance. Changing this
-creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceuser">List[Instance<wbr>User]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of username, password, host and databases. The user
-object structure is documented below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1063,7 +665,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configuration<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
 will be rebooted when configuration is detached.
@@ -1073,7 +675,7 @@ will be rebooted when configuration is detached.
             title="Optional">
         <span>Databases</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatabase">List&lt;Instance<wbr>Database<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instancedatabase">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Instance<wbr>Database<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of database name, charset and collate. The database
 object structure is documented below.
@@ -1083,7 +685,7 @@ object structure is documented below.
             title="Optional">
         <span>Datastore</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatastore">Instance<wbr>Datastore<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instancedatastore">Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Instance<wbr>Datastore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
@@ -1093,7 +695,7 @@ object structure is documented below. Changing this creates a new instance.
             title="Optional">
         <span>Flavor<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
 Changing this creates new instance.
@@ -1103,7 +705,7 @@ Changing this creates new instance.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
@@ -1113,7 +715,7 @@ new instance.
             title="Optional">
         <span>Networks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List&lt;Instance<wbr>Network<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instancenetwork">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Instance<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -1124,7 +726,7 @@ creates a new instance.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
@@ -1134,7 +736,7 @@ creates a new instance.
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
 {{% /md %}}</dd>
@@ -1143,7 +745,7 @@ creates a new instance.
             title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceuser">List&lt;Instance<wbr>User<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instanceuser">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Instance<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
@@ -1160,7 +762,7 @@ object structure is documented below.
             title="Optional">
         <span>Configuration<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
 will be rebooted when configuration is detached.
@@ -1180,7 +782,7 @@ object structure is documented below.
             title="Optional">
         <span>Datastore</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatastore">*Instance<wbr>Datastore</a></span>
+        <span class="property-type"><a href="#instancedatastore">Instance<wbr>Datastore</a></span>
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
@@ -1190,7 +792,7 @@ object structure is documented below. Changing this creates a new instance.
             title="Optional">
         <span>Flavor<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
 Changing this creates new instance.
@@ -1200,7 +802,7 @@ Changing this creates new instance.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
@@ -1221,7 +823,7 @@ creates a new instance.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
@@ -1231,7 +833,7 @@ creates a new instance.
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
 {{% /md %}}</dd>
@@ -1257,7 +859,7 @@ object structure is documented below.
             title="Optional">
         <span>configuration<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
 will be rebooted when configuration is detached.
@@ -1267,7 +869,7 @@ will be rebooted when configuration is detached.
             title="Optional">
         <span>databases</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatabase">Instance<wbr>Database[]?</a></span>
+        <span class="property-type"><a href="#instancedatabase">Instance<wbr>Database[]</a></span>
     </dt>
     <dd>{{% md %}}An array of database name, charset and collate. The database
 object structure is documented below.
@@ -1277,7 +879,7 @@ object structure is documented below.
             title="Optional">
         <span>datastore</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatastore">Instance<wbr>Datastore?</a></span>
+        <span class="property-type"><a href="#instancedatastore">Instance<wbr>Datastore</a></span>
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
@@ -1287,7 +889,7 @@ object structure is documented below. Changing this creates a new instance.
             title="Optional">
         <span>flavor<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
 Changing this creates new instance.
@@ -1297,7 +899,7 @@ Changing this creates new instance.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
@@ -1307,7 +909,7 @@ new instance.
             title="Optional">
         <span>networks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]?</a></span>
+        <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -1318,7 +920,7 @@ creates a new instance.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
@@ -1328,7 +930,7 @@ creates a new instance.
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
 {{% /md %}}</dd>
@@ -1337,7 +939,7 @@ creates a new instance.
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceuser">Instance<wbr>User[]?</a></span>
+        <span class="property-type"><a href="#instanceuser">Instance<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
@@ -1469,11 +1071,21 @@ object structure is documented below.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
+new instance.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Charset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database character set. Changing this creates a
 new instance.
@@ -1483,19 +1095,9 @@ new instance.
             title="Optional">
         <span>Collate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Database collation. Changing this creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Name</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
-new instance.
+    <dd>{{% md %}}Database collation. Changing this creates a new instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -1505,25 +1107,6 @@ new instance.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Charset</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Database character set. Changing this creates a
-new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Collate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Database collation. Changing this creates a new instance.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1534,18 +1117,11 @@ new instance.
 new instance.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>charset</span>
+        <span>Charset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database character set. Changing this creates a
 new instance.
@@ -1553,12 +1129,19 @@ new instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span>collate</span>
+        <span>Collate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database collation. Changing this creates a new instance.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1570,12 +1153,41 @@ new instance.
 new instance.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>charset</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database character set. Changing this creates a
+new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>collate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database collation. Changing this creates a new instance.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
+new instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1594,16 +1206,6 @@ new instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database collation. Changing this creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
-new instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -1755,7 +1357,7 @@ Changing this creates a new instance.
             title="Optional">
         <span>Fixed<wbr>Ip<wbr>V4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv4 address to be used on this
 network. Changing this creates a new instance.
@@ -1765,7 +1367,7 @@ network. Changing this creates a new instance.
             title="Optional">
         <span>Fixed<wbr>Ip<wbr>V6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv6 address to be used on this
 network. Changing this creates a new instance.
@@ -1775,7 +1377,7 @@ network. Changing this creates a new instance.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port UUID of a
 network to attach to the instance. Changing this creates a new instance.
@@ -1785,7 +1387,7 @@ network to attach to the instance. Changing this creates a new instance.
             title="Optional">
         <span>Uuid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network UUID to
 attach to the instance. Changing this creates a new instance.
@@ -1802,7 +1404,7 @@ attach to the instance. Changing this creates a new instance.
             title="Optional">
         <span>Fixed<wbr>Ip<wbr>V4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv4 address to be used on this
 network. Changing this creates a new instance.
@@ -1812,7 +1414,7 @@ network. Changing this creates a new instance.
             title="Optional">
         <span>Fixed<wbr>Ip<wbr>V6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv6 address to be used on this
 network. Changing this creates a new instance.
@@ -1822,7 +1424,7 @@ network. Changing this creates a new instance.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port UUID of a
 network to attach to the instance. Changing this creates a new instance.
@@ -1832,7 +1434,7 @@ network to attach to the instance. Changing this creates a new instance.
             title="Optional">
         <span>Uuid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network UUID to
 attach to the instance. Changing this creates a new instance.
@@ -1849,7 +1451,7 @@ attach to the instance. Changing this creates a new instance.
             title="Optional">
         <span>fixed<wbr>Ip<wbr>V4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv4 address to be used on this
 network. Changing this creates a new instance.
@@ -1859,7 +1461,7 @@ network. Changing this creates a new instance.
             title="Optional">
         <span>fixed<wbr>Ip<wbr>V6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv6 address to be used on this
 network. Changing this creates a new instance.
@@ -1869,7 +1471,7 @@ network. Changing this creates a new instance.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port UUID of a
 network to attach to the instance. Changing this creates a new instance.
@@ -1879,7 +1481,7 @@ network to attach to the instance. Changing this creates a new instance.
             title="Optional">
         <span>uuid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network UUID to
 attach to the instance. Changing this creates a new instance.
@@ -1954,26 +1556,6 @@ attach to the instance. Changing this creates a new instance.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Databases</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of databases that user will have access to. If not specified, 
-user has access to all databases on th einstance. Changing this creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An ip address or % sign indicating what ip addresses can connect with
-this user credentials. Changing this creates a new instance.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1986,9 +1568,29 @@ new instance.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Databases</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of databases that user will have access to. If not specified, 
+user has access to all databases on th einstance. Changing this creates a new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Host</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An ip address or % sign indicating what ip addresses can connect with
+this user credentials. Changing this creates a new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's password. Changing this creates a
 new instance.
@@ -2000,6 +1602,16 @@ new instance.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
+new instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2015,27 +1627,17 @@ user has access to all databases on th einstance. Changing this creates a new in
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ip address or % sign indicating what ip addresses can connect with
 this user credentials. Changing this creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
-new instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's password. Changing this creates a
 new instance.
@@ -2047,26 +1649,6 @@ new instance.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>databases</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of databases that user will have access to. If not specified, 
-user has access to all databases on th einstance. Changing this creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An ip address or % sign indicating what ip addresses can connect with
-this user credentials. Changing this creates a new instance.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2080,9 +1662,29 @@ new instance.
 
     <dt class="property-optional"
             title="Optional">
+        <span>databases</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of databases that user will have access to. If not specified, 
+user has access to all databases on th einstance. Changing this creates a new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>host</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An ip address or % sign indicating what ip addresses can connect with
+this user credentials. Changing this creates a new instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's password. Changing this creates a
 new instance.
@@ -2094,6 +1696,16 @@ new instance.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
+new instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2113,16 +1725,6 @@ user has access to all databases on th einstance. Changing this creates a new in
     </dt>
     <dd>{{% md %}}An ip address or % sign indicating what ip addresses can connect with
 this user credentials. Changing this creates a new instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Database to be created on new instance. Changing this creates a
-new instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -49,7 +49,7 @@ resources:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/orchestration/#StackV1">StackV1</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/orchestration/#StackV1Args">StackV1Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/orchestration/#StackV1">StackV1</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/orchestration/#StackV1Args">StackV1Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -57,11 +57,11 @@ resources:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewStackV1<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/orchestration?tab=doc#StackV1Args">StackV1Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/orchestration?tab=doc#StackV1">StackV1</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewStackV1<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/orchestration?tab=doc#StackV1Args">StackV1Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/orchestration?tab=doc#StackV1">StackV1</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Orchestration.StackV1.html">StackV1</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Orchestration.StackV1Args.html">StackV1Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Orchestration.StackV1.html">StackV1</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Orchestration.StackV1Args.html">StackV1Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -153,11 +153,23 @@ resources:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Template<wbr>Opts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Template key/value pairs to associate with the
+stack which contains either the template file or url.
+Allowed keys: Bin, URL, Files. Changing this updates the existing stack
+Template Opts.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd>
@@ -166,7 +178,7 @@ resources:
             title="Optional">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -178,7 +190,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -187,7 +199,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Disable<wbr>Rollback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -198,7 +210,7 @@ resources are not deleted when stack creation fails.
             title="Optional">
         <span>Environment<wbr>Opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Environment key/value pairs to associate with
 the stack which contains details for the environment of the stack.
@@ -210,7 +222,7 @@ Environment Opts.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -220,7 +232,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>Notification<wbr>Topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd>
@@ -229,7 +241,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>Outputs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackv1output">List&lt;Stack<wbr>V1Output<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#stackv1output">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Orchestration.<wbr>Inputs.<wbr>Stack<wbr>V1Output<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of stack outputs.
 {{% /md %}}</dd>
@@ -238,7 +250,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}User-defined key/value pairs as parameters to pass
 to the template. Changing this updates the existing stack parameters.
@@ -248,7 +260,7 @@ to the template. Changing this updates the existing stack parameters.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -259,7 +271,7 @@ creates a new stack.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
@@ -268,7 +280,7 @@ creates a new stack.
             title="Optional">
         <span>Status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
@@ -277,7 +289,7 @@ creates a new stack.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd>
@@ -286,28 +298,16 @@ creates a new stack.
             title="Optional">
         <span>Template<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Template<wbr>Opts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Template key/value pairs to associate with the
-stack which contains either the template file or url.
-Allowed keys: Bin, URL, Files. Changing this updates the existing stack
-Template Opts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
@@ -316,7 +316,7 @@ Template Opts.
             title="Optional">
         <span>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -331,6 +331,18 @@ is the time zone as an offset from UTC.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Template<wbr>Opts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Template key/value pairs to associate with the
+stack which contains either the template file or url.
+Allowed keys: Bin, URL, Files. Changing this updates the existing stack
+Template Opts.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Capabilities</span>
@@ -344,7 +356,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -356,7 +368,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -365,7 +377,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Disable<wbr>Rollback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -388,7 +400,7 @@ Environment Opts.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -426,7 +438,7 @@ to the template. Changing this updates the existing stack parameters.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -437,7 +449,7 @@ creates a new stack.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
@@ -446,7 +458,7 @@ creates a new stack.
             title="Optional">
         <span>Status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
@@ -464,28 +476,16 @@ creates a new stack.
             title="Optional">
         <span>Template<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Template<wbr>Opts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Template key/value pairs to associate with the
-stack which contains either the template file or url.
-Allowed keys: Bin, URL, Files. Changing this updates the existing stack
-Template Opts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
@@ -494,7 +494,7 @@ Template Opts.
             title="Optional">
         <span>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -508,144 +508,6 @@ is the time zone as an offset from UTC.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of stack capabilities for stack.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>creation<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the resource was created. The date
-and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
-For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
-is the time zone as an offset from UTC.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>disable<wbr>Rollback</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables deletion of all stack
-resources when a stack creation fails. Default is true, meaning all
-resources are not deleted when stack creation fails.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>environment<wbr>Opts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Environment key/value pairs to associate with
-the stack which contains details for the environment of the stack.
-Allowed keys: Bin, URL, Files. Changing this updates the existing stack
-Environment Opts.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the stack. It must start with an
-alphabetic character. Changing this updates the stack's name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>notification<wbr>Topics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of notification topics for stack.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>outputs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackv1output">Stack<wbr>V1Output[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of stack outputs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}User-defined key/value pairs as parameters to pass
-to the template. Changing this updates the existing stack parameters.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the stack. If
-omitted, the `region` argument of the provider is used. Changing this
-creates a new stack.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status of the stack.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>status<wbr>Reason</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The reason for the current status of the stack.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of tags to assosciate with the Stack
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>template<wbr>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack template.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -661,580 +523,6 @@ Template Opts.
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The timeout for stack action in minutes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>updated<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the resource was updated. The date
-and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
-For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
-is the time zone as an offset from UTC.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of stack capabilities for stack.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>creation_<wbr>time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the resource was created. The date
-and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
-For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
-is the time zone as an offset from UTC.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>disable_<wbr>rollback</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables deletion of all stack
-resources when a stack creation fails. Default is true, meaning all
-resources are not deleted when stack creation fails.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>environment_<wbr>opts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Environment key/value pairs to associate with
-the stack which contains details for the environment of the stack.
-Allowed keys: Bin, URL, Files. Changing this updates the existing stack
-Environment Opts.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the stack. It must start with an
-alphabetic character. Changing this updates the stack's name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>notification_<wbr>topics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of notification topics for stack.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>outputs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackv1output">List[Stack<wbr>V1Output]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of stack outputs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}User-defined key/value pairs as parameters to pass
-to the template. Changing this updates the existing stack parameters.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the stack. If
-omitted, the `region` argument of the provider is used. Changing this
-creates a new stack.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The status of the stack.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>status_<wbr>reason</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The reason for the current status of the stack.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of tags to assosciate with the Stack
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>template_<wbr>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack template.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>template_<wbr>opts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Template key/value pairs to associate with the
-stack which contains either the template file or url.
-Allowed keys: Bin, URL, Files. Changing this updates the existing stack
-Template Opts.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The timeout for stack action in minutes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>updated_<wbr>time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the resource was updated. The date
-and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
-For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
-is the time zone as an offset from UTC.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## StackV1 Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}List of stack capabilities for stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Creation<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the resource was created. The date
-and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
-For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
-is the time zone as an offset from UTC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disable<wbr>Rollback</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables deletion of all stack
-resources when a stack creation fails. Default is true, meaning all
-resources are not deleted when stack creation fails.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Environment<wbr>Opts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Environment key/value pairs to associate with
-the stack which contains details for the environment of the stack.
-Allowed keys: Bin, URL, Files. Changing this updates the existing stack
-Environment Opts.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the stack. It must start with an
-alphabetic character. Changing this updates the stack's name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notification<wbr>Topics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}List of notification topics for stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Outputs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackv1output">List&lt;Stack<wbr>V1Output&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of stack outputs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}User-defined key/value pairs as parameters to pass
-to the template. Changing this updates the existing stack parameters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the stack. If
-omitted, the `region` argument of the provider is used. Changing this
-creates a new stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The status of the stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status<wbr>Reason</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The reason for the current status of the stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A list of tags to assosciate with the Stack
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Opts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Template key/value pairs to associate with the
-stack which contains either the template file or url.
-Allowed keys: Bin, URL, Files. Changing this updates the existing stack
-Template Opts.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The timeout for stack action in minutes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Updated<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the resource was updated. The date
-and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
-For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
-is the time zone as an offset from UTC.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of stack capabilities for stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Creation<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the resource was created. The date
-and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
-For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
-is the time zone as an offset from UTC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disable<wbr>Rollback</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables deletion of all stack
-resources when a stack creation fails. Default is true, meaning all
-resources are not deleted when stack creation fails.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Environment<wbr>Opts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Environment key/value pairs to associate with
-the stack which contains details for the environment of the stack.
-Allowed keys: Bin, URL, Files. Changing this updates the existing stack
-Environment Opts.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the stack. It must start with an
-alphabetic character. Changing this updates the stack's name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notification<wbr>Topics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of notification topics for stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Outputs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackv1output">[]Stack<wbr>V1Output</a></span>
-    </dt>
-    <dd>{{% md %}}A list of stack outputs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}User-defined key/value pairs as parameters to pass
-to the template. Changing this updates the existing stack parameters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the stack. If
-omitted, the `region` argument of the provider is used. Changing this
-creates a new stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The status of the stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status<wbr>Reason</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The reason for the current status of the stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of tags to assosciate with the Stack
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Opts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Template key/value pairs to associate with the
-stack which contains either the template file or url.
-Allowed keys: Bin, URL, Files. Changing this updates the existing stack
-Template Opts.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The timeout for stack action in minutes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Updated<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the resource was updated. The date
-and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
-For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
-is the time zone as an offset from UTC.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
         <span>capabilities</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -1242,8 +530,8 @@ is the time zone as an offset from UTC.
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>creation<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1254,8 +542,8 @@ For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
 is the time zone as an offset from UTC.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1263,8 +551,8 @@ is the time zone as an offset from UTC.
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>disable<wbr>Rollback</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -1274,11 +562,11 @@ resources when a stack creation fails. Default is true, meaning all
 resources are not deleted when stack creation fails.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>environment<wbr>Opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Environment key/value pairs to associate with
 the stack which contains details for the environment of the stack.
@@ -1286,8 +574,8 @@ Allowed keys: Bin, URL, Files. Changing this updates the existing stack
 Environment Opts.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1296,8 +584,8 @@ Environment Opts.
 alphabetic character. Changing this updates the stack's name.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>notification<wbr>Topics</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -1305,8 +593,8 @@ alphabetic character. Changing this updates the stack's name.
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>outputs</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stackv1output">Stack<wbr>V1Output[]</a></span>
@@ -1314,18 +602,18 @@ alphabetic character. Changing this updates the stack's name.
     <dd>{{% md %}}A list of stack outputs.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}User-defined key/value pairs as parameters to pass
 to the template. Changing this updates the existing stack parameters.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1335,8 +623,8 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new stack.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1344,8 +632,8 @@ creates a new stack.
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>status<wbr>Reason</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1353,8 +641,8 @@ creates a new stack.
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -1362,8 +650,8 @@ creates a new stack.
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>template<wbr>Description</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1371,20 +659,8 @@ creates a new stack.
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>template<wbr>Opts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Template key/value pairs to associate with the
-stack which contains either the template file or url.
-Allowed keys: Bin, URL, Files. Changing this updates the existing stack
-Template Opts.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -1392,8 +668,8 @@ Template Opts.
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>updated<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1411,146 +687,8 @@ is the time zone as an offset from UTC.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of stack capabilities for stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>creation_<wbr>time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the resource was created. The date
-and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
-For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
-is the time zone as an offset from UTC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disable_<wbr>rollback</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables deletion of all stack
-resources when a stack creation fails. Default is true, meaning all
-resources are not deleted when stack creation fails.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>environment_<wbr>opts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Environment key/value pairs to associate with
-the stack which contains details for the environment of the stack.
-Allowed keys: Bin, URL, Files. Changing this updates the existing stack
-Environment Opts.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the stack. It must start with an
-alphabetic character. Changing this updates the stack's name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>notification_<wbr>topics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of notification topics for stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>outputs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackv1output">List[Stack<wbr>V1Output]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of stack outputs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}User-defined key/value pairs as parameters to pass
-to the template. Changing this updates the existing stack parameters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the stack. If
-omitted, the `region` argument of the provider is used. Changing this
-creates a new stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The status of the stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status_<wbr>reason</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The reason for the current status of the stack.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of tags to assosciate with the Stack
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template_<wbr>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>template_<wbr>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
@@ -1561,8 +699,146 @@ Allowed keys: Bin, URL, Files. Changing this updates the existing stack
 Template Opts.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
+        <span>capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of stack capabilities for stack.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>creation_<wbr>time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The date and time when the resource was created. The date
+and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
+For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
+is the time zone as an offset from UTC.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the stack resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disable_<wbr>rollback</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables deletion of all stack
+resources when a stack creation fails. Default is true, meaning all
+resources are not deleted when stack creation fails.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>environment_<wbr>opts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Environment key/value pairs to associate with
+the stack which contains details for the environment of the stack.
+Allowed keys: Bin, URL, Files. Changing this updates the existing stack
+Environment Opts.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique name for the stack. It must start with an
+alphabetic character. Changing this updates the stack's name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>notification_<wbr>topics</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of notification topics for stack.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>outputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#stackv1output">List[Stack<wbr>V1Output]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of stack outputs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}User-defined key/value pairs as parameters to pass
+to the template. Changing this updates the existing stack parameters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region in which to create the stack. If
+omitted, the `region` argument of the provider is used. Changing this
+creates a new stack.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of the stack.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>status_<wbr>reason</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The reason for the current status of the stack.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of tags to assosciate with the Stack
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>template_<wbr>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the stack template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
@@ -1570,8 +846,8 @@ Template Opts.
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>updated_<wbr>time</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1584,6 +860,8 @@ is the time zone as an offset from UTC.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -1721,7 +999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd>
@@ -1730,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1742,7 +1020,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -1751,7 +1029,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Disable<wbr>Rollback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -1762,7 +1040,7 @@ resources are not deleted when stack creation fails.
             title="Optional">
         <span>Environment<wbr>Opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Environment key/value pairs to associate with
 the stack which contains details for the environment of the stack.
@@ -1774,7 +1052,7 @@ Environment Opts.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -1784,7 +1062,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>Notification<wbr>Topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd>
@@ -1793,7 +1071,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>Outputs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackv1output">List&lt;Stack<wbr>V1Output<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#stackv1output">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Orchestration.<wbr>Inputs.<wbr>Stack<wbr>V1Output<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of stack outputs.
 {{% /md %}}</dd>
@@ -1802,7 +1080,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}User-defined key/value pairs as parameters to pass
 to the template. Changing this updates the existing stack parameters.
@@ -1812,7 +1090,7 @@ to the template. Changing this updates the existing stack parameters.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1823,7 +1101,7 @@ creates a new stack.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
@@ -1832,7 +1110,7 @@ creates a new stack.
             title="Optional">
         <span>Status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
@@ -1841,7 +1119,7 @@ creates a new stack.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd>
@@ -1850,7 +1128,7 @@ creates a new stack.
             title="Optional">
         <span>Template<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd>
@@ -1859,7 +1137,7 @@ creates a new stack.
             title="Optional">
         <span>Template<wbr>Opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Template key/value pairs to associate with the
 stack which contains either the template file or url.
@@ -1871,7 +1149,7 @@ Template Opts.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
@@ -1880,7 +1158,7 @@ Template Opts.
             title="Optional">
         <span>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1908,7 +1186,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1920,7 +1198,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -1929,7 +1207,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Disable<wbr>Rollback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -1952,7 +1230,7 @@ Environment Opts.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -1990,7 +1268,7 @@ to the template. Changing this updates the existing stack parameters.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -2001,7 +1279,7 @@ creates a new stack.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
@@ -2010,7 +1288,7 @@ creates a new stack.
             title="Optional">
         <span>Status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
@@ -2028,7 +1306,7 @@ creates a new stack.
             title="Optional">
         <span>Template<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd>
@@ -2049,7 +1327,7 @@ Template Opts.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
@@ -2058,7 +1336,7 @@ Template Opts.
             title="Optional">
         <span>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -2077,7 +1355,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd>
@@ -2086,7 +1364,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -2098,7 +1376,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -2107,7 +1385,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>disable<wbr>Rollback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -2118,7 +1396,7 @@ resources are not deleted when stack creation fails.
             title="Optional">
         <span>environment<wbr>Opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Environment key/value pairs to associate with
 the stack which contains details for the environment of the stack.
@@ -2130,7 +1408,7 @@ Environment Opts.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -2140,7 +1418,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>notification<wbr>Topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd>
@@ -2149,7 +1427,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>outputs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackv1output">Stack<wbr>V1Output[]?</a></span>
+        <span class="property-type"><a href="#stackv1output">Stack<wbr>V1Output[]</a></span>
     </dt>
     <dd>{{% md %}}A list of stack outputs.
 {{% /md %}}</dd>
@@ -2158,7 +1436,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}User-defined key/value pairs as parameters to pass
 to the template. Changing this updates the existing stack parameters.
@@ -2168,7 +1446,7 @@ to the template. Changing this updates the existing stack parameters.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -2179,7 +1457,7 @@ creates a new stack.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
@@ -2188,7 +1466,7 @@ creates a new stack.
             title="Optional">
         <span>status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
@@ -2197,7 +1475,7 @@ creates a new stack.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd>
@@ -2206,7 +1484,7 @@ creates a new stack.
             title="Optional">
         <span>template<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd>
@@ -2215,7 +1493,7 @@ creates a new stack.
             title="Optional">
         <span>template<wbr>Opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Template key/value pairs to associate with the
 stack which contains either the template file or url.
@@ -2227,7 +1505,7 @@ Template Opts.
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
@@ -2236,7 +1514,7 @@ Template Opts.
             title="Optional">
         <span>updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -2451,15 +1729,6 @@ is the time zone as an offset from UTC.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Output<wbr>Key</span>
@@ -2475,6 +1744,15 @@ is the time zone as an offset from UTC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the stack resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2483,15 +1761,6 @@ is the time zone as an offset from UTC.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Output<wbr>Key</span>
@@ -2508,21 +1777,21 @@ is the time zone as an offset from UTC.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the stack resource.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack resource.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2539,6 +1808,15 @@ is the time zone as an offset from UTC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the stack resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2547,15 +1825,6 @@ is the time zone as an offset from UTC.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the stack resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>output<wbr>Key</span>
@@ -2571,6 +1840,15 @@ is the time zone as an offset from UTC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the stack resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
