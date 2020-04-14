@@ -3156,10 +3156,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>accessibility_error_redirect_url</strong> (<em>str</em>) – Custom error page URL.</p></li>
+<li><p><strong>accessibility_login_redirect_url</strong> (<em>str</em>) – Custom login page URL.</p></li>
+<li><p><strong>accessibility_self_service</strong> (<em>bool</em>) – Enable self service.</p></li>
 <li><p><strong>active_only</strong> (<em>bool</em>) – tells the provider to query for only <code class="docutils literal notranslate"><span class="pre">ACTIVE</span></code> applications.</p></li>
+<li><p><strong>app_settings_json</strong> (<em>str</em>) – Application settings in JSON format.</p></li>
+<li><p><strong>assertion_signed</strong> (<em>bool</em>) – Determines whether the SAML assertion is digitally signed.</p></li>
+<li><p><strong>attribute_statements</strong> (<em>list</em>) – SAML Attribute statements.</p></li>
+<li><p><strong>audience</strong> (<em>str</em>) – Audience restriction.</p></li>
+<li><p><strong>authn_context_class_ref</strong> (<em>str</em>) – Identifies the SAML authentication context class for the assertion’s authentication statement.</p></li>
+<li><p><strong>auto_submit_toolbar</strong> (<em>bool</em>) – Display auto submit toolbar.</p></li>
+<li><p><strong>default_relay_state</strong> (<em>str</em>) – Identifies a specific application resource in an IDP initiated SSO scenario.</p></li>
+<li><p><strong>destination</strong> (<em>str</em>) – Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.</p></li>
+<li><p><strong>digest_algorithm</strong> (<em>str</em>) – Determines the digest algorithm used to digitally sign the SAML assertion and response.</p></li>
+<li><p><strong>features</strong> (<em>list</em>) – features enabled.</p></li>
+<li><p><strong>hide_ios</strong> (<em>bool</em>) – Do not display application icon on mobile app.</p></li>
+<li><p><strong>hide_web</strong> (<em>bool</em>) – Do not display application icon to users</p></li>
+<li><p><strong>honor_force_authn</strong> (<em>bool</em>) – Prompt user to re-authenticate if SP asks for it.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – <code class="docutils literal notranslate"><span class="pre">id</span></code> of application to retrieve, conflicts with <code class="docutils literal notranslate"><span class="pre">label</span></code> and <code class="docutils literal notranslate"><span class="pre">label_prefix</span></code>.</p></li>
+<li><p><strong>idp_issuer</strong> (<em>str</em>) – SAML issuer ID.</p></li>
 <li><p><strong>label</strong> (<em>str</em>) – The label of the app to retrieve, conflicts with <code class="docutils literal notranslate"><span class="pre">label_prefix</span></code> and <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p></li>
 <li><p><strong>label_prefix</strong> (<em>str</em>) – Label prefix of the app to retrieve, conflicts with <code class="docutils literal notranslate"><span class="pre">label</span></code> and <code class="docutils literal notranslate"><span class="pre">id</span></code>. This will tell the provider to do a <code class="docutils literal notranslate"><span class="pre">starts</span> <span class="pre">with</span></code> query as opposed to an <code class="docutils literal notranslate"><span class="pre">equals</span></code> query.</p></li>
+<li><p><strong>recipient</strong> (<em>str</em>) – The location where the app may present the SAML assertion.</p></li>
+<li><p><strong>request_compressed</strong> (<em>bool</em>) – Denotes whether the request is compressed or not.</p></li>
+<li><p><strong>response_signed</strong> (<em>bool</em>) – Determines whether the SAML auth response message is digitally signed.</p></li>
+<li><p><strong>signature_algorithm</strong> (<em>str</em>) – Signature algorithm used ot digitally sign the assertion and response.</p></li>
+<li><p><strong>sp_issuer</strong> (<em>str</em>) – SAML service provider issuer.</p></li>
+<li><p><strong>sso_url</strong> (<em>str</em>) – Single Sign on Url.</p></li>
+<li><p><strong>subject_name_id_format</strong> (<em>str</em>) – Identifies the SAML processing rules.</p></li>
+<li><p><strong>subject_name_id_template</strong> (<em>str</em>) – Template for app user’s username when a user is assigned to the app.</p></li>
+<li><p><strong>user_name_template</strong> (<em>str</em>) – Username template.</p></li>
+<li><p><strong>user_name_template_suffix</strong> (<em>str</em>) – Username template suffix.</p></li>
+<li><p><strong>user_name_template_type</strong> (<em>str</em>) – Username template type.</p></li>
 </ul>
 </dd>
 </dl>

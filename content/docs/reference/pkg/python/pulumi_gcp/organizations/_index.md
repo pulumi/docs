@@ -909,16 +909,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>audit_log_configs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Identities that do not cause logging for this type of permission.
+Each entry can have one of the following values:</p>
+<ul>
+<li><p><strong>user:{emailid}</strong>: An email address that represents a specific Google account. For example, <a class="reference external" href="mailto:alice&#37;&#52;&#48;gmail&#46;com">alice<span>&#64;</span>gmail<span>&#46;</span>com</a> or <a class="reference external" href="mailto:joe&#37;&#52;&#48;example&#46;com">joe<span>&#64;</span>example<span>&#46;</span>com</a>.</p></li>
+<li><p><strong>serviceAccount:{emailid}</strong>: An email address that represents a service account. For example, <a class="reference external" href="mailto:my-other-app&#37;&#52;&#48;appspot&#46;gserviceaccount&#46;com">my-other-app<span>&#64;</span>appspot<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a>.</p></li>
+<li><p><strong>group:{emailid}</strong>: An email address that represents a Google group. For example, <a class="reference external" href="mailto:admins&#37;&#52;&#48;example&#46;com">admins<span>&#64;</span>example<span>&#46;</span>com</a>.</p></li>
+<li><p><strong>domain:{domain}</strong>: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Permission type for which logging is to be configured.  Must be one of <code class="docutils literal notranslate"><span class="pre">DATA_READ</span></code>, <code class="docutils literal notranslate"><span class="pre">DATA_WRITE</span></code>, or <code class="docutils literal notranslate"><span class="pre">ADMIN_READ</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.IamAuditConfig.audit_log_configs">
 <code class="sig-name descname">audit_log_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.audit_log_configs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Identities that do not cause logging for this type of permission.
+Each entry can have one of the following values:</p>
+<ul>
+<li><p><strong>user:{emailid}</strong>: An email address that represents a specific Google account. For example, <a class="reference external" href="mailto:alice&#37;&#52;&#48;gmail&#46;com">alice<span>&#64;</span>gmail<span>&#46;</span>com</a> or <a class="reference external" href="mailto:joe&#37;&#52;&#48;example&#46;com">joe<span>&#64;</span>example<span>&#46;</span>com</a>.</p></li>
+<li><p><strong>serviceAccount:{emailid}</strong>: An email address that represents a service account. For example, <a class="reference external" href="mailto:my-other-app&#37;&#52;&#48;appspot&#46;gserviceaccount&#46;com">my-other-app<span>&#64;</span>appspot<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a>.</p></li>
+<li><p><strong>group:{emailid}</strong>: An email address that represents a Google group. For example, <a class="reference external" href="mailto:admins&#37;&#52;&#48;example&#46;com">admins<span>&#64;</span>example<span>&#46;</span>com</a>.</p></li>
+<li><p><strong>domain:{domain}</strong>: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Permission type for which logging is to be configured.  Must be one of <code class="docutils literal notranslate"><span class="pre">DATA_READ</span></code>, <code class="docutils literal notranslate"><span class="pre">DATA_WRITE</span></code>, or <code class="docutils literal notranslate"><span class="pre">ADMIN_READ</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -953,8 +969,16 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>audit_log_configs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Identities that do not cause logging for this type of permission.
+Each entry can have one of the following values:</p>
+<ul>
+<li><p><strong>user:{emailid}</strong>: An email address that represents a specific Google account. For example, <a class="reference external" href="mailto:alice&#37;&#52;&#48;gmail&#46;com">alice<span>&#64;</span>gmail<span>&#46;</span>com</a> or <a class="reference external" href="mailto:joe&#37;&#52;&#48;example&#46;com">joe<span>&#64;</span>example<span>&#46;</span>com</a>.</p></li>
+<li><p><strong>serviceAccount:{emailid}</strong>: An email address that represents a service account. For example, <a class="reference external" href="mailto:my-other-app&#37;&#52;&#48;appspot&#46;gserviceaccount&#46;com">my-other-app<span>&#64;</span>appspot<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a>.</p></li>
+<li><p><strong>group:{emailid}</strong>: An email address that represents a Google group. For example, <a class="reference external" href="mailto:admins&#37;&#52;&#48;example&#46;com">admins<span>&#64;</span>example<span>&#46;</span>com</a>.</p></li>
+<li><p><strong>domain:{domain}</strong>: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Permission type for which logging is to be configured.  Must be one of <code class="docutils literal notranslate"><span class="pre">DATA_READ</span></code>, <code class="docutils literal notranslate"><span class="pre">DATA_WRITE</span></code>, or <code class="docutils literal notranslate"><span class="pre">ADMIN_READ</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1022,35 +1046,36 @@ documentation</a> and
 </dl>
 <p>The <strong>boolean_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enforced</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enforced</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, then the Policy is enforced. If false, then any configuration is acceptable.</p></li>
 </ul>
 <p>The <strong>list_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The policy allows or denies all values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The policy can define specific values that are allowed or denied.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deny</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The policy allows or denies all values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The policy can define specific values that are allowed or denied.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">inheritFromParent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">suggestedValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inheritFromParent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the values from the effective Policy of the parent resource
+are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">suggestedValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Google Cloud Console will try to default to a configuration that matches the value specified in this field.</p></li>
 </ul>
 <p>The <strong>restore_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - May only be set to true. If set, then the default Policy is restored.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.Policy.boolean_policy">
 <code class="sig-name descname">boolean_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.boolean_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A boolean policy is a constraint that is either enforced or not. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enforced</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enforced</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, then the Policy is enforced. If false, then any configuration is acceptable.</p></li>
 </ul>
 </dd></dl>
 
@@ -1073,18 +1098,19 @@ documentation</a> and
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The policy allows or denies all values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The policy can define specific values that are allowed or denied.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deny</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The policy allows or denies all values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The policy can define specific values that are allowed or denied.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">inheritFromParent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">suggestedValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inheritFromParent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to true, the values from the effective Policy of the parent resource
+are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">suggestedValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Google Cloud Console will try to default to a configuration that matches the value specified in this field.</p></li>
 </ul>
 </dd></dl>
 
@@ -1099,7 +1125,7 @@ documentation</a> and
 <code class="sig-name descname">restore_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.restore_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A restore policy is a constraint to restore the default policy. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - May only be set to true. If set, then the default Policy is restored.</p></li>
 </ul>
 </dd></dl>
 
@@ -1140,28 +1166,29 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>boolean_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enforced</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enforced</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, then the Policy is enforced. If false, then any configuration is acceptable.</p></li>
 </ul>
 <p>The <strong>list_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The policy allows or denies all values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The policy can define specific values that are allowed or denied.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deny</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The policy allows or denies all values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The policy can define specific values that are allowed or denied.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">inheritFromParent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">suggestedValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inheritFromParent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to true, the values from the effective Policy of the parent resource
+are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">suggestedValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Google Cloud Console will try to default to a configuration that matches the value specified in this field.</p></li>
 </ul>
 <p>The <strong>restore_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - May only be set to true. If set, then the default Policy is restored.</p></li>
 </ul>
 </dd></dl>
 
