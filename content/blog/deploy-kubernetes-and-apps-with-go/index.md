@@ -26,7 +26,7 @@ These benefits provide a productive experience for Go developers using Kubernete
 
 ## Tour of Kubernetes with Go
 
-Let's start with a basic example, e.g.,  deploying an Nginx pod into a Kubernetes cluster.
+Let's start with a basic example, e.g. deploying an Nginx pod into a Kubernetes cluster.
 
 ```go
 pod, err := corev1.NewPod(ctx, "pod", &corev1.PodArgs{
