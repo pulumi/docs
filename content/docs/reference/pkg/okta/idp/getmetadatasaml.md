@@ -41,7 +41,7 @@ const example = pulumi.output(okta.idp.getMetadataSaml({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMetadataSaml<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/idp?tab=doc#LookupMetadataSamlArgs">LookupMetadataSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/idp?tab=doc#LookupMetadataSamlResult">LookupMetadataSamlResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMetadataSaml<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/idp?tab=doc#LookupMetadataSamlArgs">LookupMetadataSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/idp?tab=doc#LookupMetadataSamlResult">LookupMetadataSamlResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -64,7 +64,7 @@ The following arguments are supported:
             title="Optional">
         <span>Idp<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the IdP to retrieve metadata for.
 {{% /md %}}</dd>
@@ -80,7 +80,7 @@ The following arguments are supported:
             title="Optional">
         <span>Idp<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the IdP to retrieve metadata for.
 {{% /md %}}</dd>
@@ -96,7 +96,7 @@ The following arguments are supported:
             title="Optional">
         <span>idp<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the IdP to retrieve metadata for.
 {{% /md %}}</dd>
@@ -202,14 +202,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Idp<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -225,6 +217,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SAML request signing certificate.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Idp<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -298,14 +298,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Idp<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -321,6 +313,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SAML request signing certificate.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Idp<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -394,14 +394,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>idp<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>metadata</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -417,6 +409,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SAML request signing certificate.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>idp<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -490,14 +490,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>idp_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>metadata</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -513,6 +505,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SAML request signing certificate.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>idp_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

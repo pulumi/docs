@@ -33,7 +33,7 @@ const example = new okta.auth.ServerClaim("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/auth/#ServerClaim">ServerClaim</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/auth/#ServerClaimArgs">ServerClaimArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/auth/#ServerClaim">ServerClaim</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/auth/#ServerClaimArgs">ServerClaimArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -41,7 +41,7 @@ const example = new okta.auth.ServerClaim("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServerClaim<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/auth?tab=doc#ServerClaimArgs">ServerClaimArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/auth?tab=doc#ServerClaim">ServerClaim</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServerClaim<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/auth?tab=doc#ServerClaimArgs">ServerClaimArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/auth?tab=doc#ServerClaim">ServerClaim</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -137,15 +137,6 @@ const example = new okta.auth.ServerClaim("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Always<wbr>Include<wbr>In<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Auth<wbr>Server<wbr>Id</span>
@@ -162,42 +153,6 @@ const example = new okta.auth.ServerClaim("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Filter<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of group filter if `value_type` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the claim.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The list of scopes the auth server claim is tied to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -211,9 +166,54 @@ const example = new okta.auth.ServerClaim("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Always<wbr>Include<wbr>In<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Filter<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of group filter if `value_type` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the claim.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scopes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of scopes the auth server claim is tied to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Value<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. It defaults to `"EXPRESSION"`.
 {{% /md %}}</dd>
@@ -224,15 +224,6 @@ const example = new okta.auth.ServerClaim("example", {
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Always<wbr>Include<wbr>In<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -252,11 +243,29 @@ const example = new okta.auth.ServerClaim("example", {
     <dd>{{% md %}}Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the claim.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Always<wbr>Include<wbr>In<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Group<wbr>Filter<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of group filter if `value_type` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
 {{% /md %}}</dd>
@@ -265,7 +274,7 @@ const example = new okta.auth.ServerClaim("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the claim.
 {{% /md %}}</dd>
@@ -283,25 +292,16 @@ const example = new okta.auth.ServerClaim("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Value</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the claim.
+    <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Value<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. It defaults to `"EXPRESSION"`.
 {{% /md %}}</dd>
@@ -312,15 +312,6 @@ const example = new okta.auth.ServerClaim("example", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>always<wbr>Include<wbr>In<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -340,42 +331,6 @@ const example = new okta.auth.ServerClaim("example", {
     <dd>{{% md %}}Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Filter<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of group filter if `value_type` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the claim.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The list of scopes the auth server claim is tied to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>value</span>
@@ -387,9 +342,54 @@ const example = new okta.auth.ServerClaim("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>always<wbr>Include<wbr>In<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Filter<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of group filter if `value_type` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the claim.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scopes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of scopes the auth server claim is tied to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>value<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. It defaults to `"EXPRESSION"`.
 {{% /md %}}</dd>
@@ -400,15 +400,6 @@ const example = new okta.auth.ServerClaim("example", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>always_<wbr>include_<wbr>in_<wbr>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -426,6 +417,24 @@ const example = new okta.auth.ServerClaim("example", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the claim.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>always_<wbr>include_<wbr>in_<wbr>token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -464,15 +473,6 @@ const example = new okta.auth.ServerClaim("example", {
     <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The value of the claim.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>value_<wbr>type</span>
@@ -486,368 +486,6 @@ const example = new okta.auth.ServerClaim("example", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ServerClaim Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Always<wbr>Include<wbr>In<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auth<wbr>Server<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Claim<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Filter<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of group filter if `value_type` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the claim.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The list of scopes the auth server claim is tied to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the claim.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. It defaults to `"EXPRESSION"`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Always<wbr>Include<wbr>In<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auth<wbr>Server<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Claim<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Filter<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of group filter if `value_type` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the claim.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The list of scopes the auth server claim is tied to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the claim.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. It defaults to `"EXPRESSION"`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>always<wbr>Include<wbr>In<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auth<wbr>Server<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>claim<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Filter<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of group filter if `value_type` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the claim.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The list of scopes the auth server claim is tied to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the claim.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. It defaults to `"EXPRESSION"`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>always_<wbr>include_<wbr>in_<wbr>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auth_<wbr>server_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>claim_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>filter_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of group filter if `value_type` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the claim.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The list of scopes the auth server claim is tied to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The value of the claim.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. It defaults to `"EXPRESSION"`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -985,7 +623,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Always<wbr>Include<wbr>In<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
 {{% /md %}}</dd>
@@ -994,7 +632,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
 {{% /md %}}</dd>
@@ -1003,7 +641,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Claim<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
 {{% /md %}}</dd>
@@ -1012,7 +650,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Filter<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of group filter if `value_type` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
 {{% /md %}}</dd>
@@ -1021,7 +659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the claim.
 {{% /md %}}</dd>
@@ -1030,7 +668,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of scopes the auth server claim is tied to.
 {{% /md %}}</dd>
@@ -1039,7 +677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
 {{% /md %}}</dd>
@@ -1048,7 +686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the claim.
 {{% /md %}}</dd>
@@ -1057,7 +695,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. It defaults to `"EXPRESSION"`.
 {{% /md %}}</dd>
@@ -1073,7 +711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Always<wbr>Include<wbr>In<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
 {{% /md %}}</dd>
@@ -1082,7 +720,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
 {{% /md %}}</dd>
@@ -1091,7 +729,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Claim<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
 {{% /md %}}</dd>
@@ -1100,7 +738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Filter<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of group filter if `value_type` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
 {{% /md %}}</dd>
@@ -1109,7 +747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the claim.
 {{% /md %}}</dd>
@@ -1127,7 +765,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
 {{% /md %}}</dd>
@@ -1136,7 +774,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the claim.
 {{% /md %}}</dd>
@@ -1145,7 +783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. It defaults to `"EXPRESSION"`.
 {{% /md %}}</dd>
@@ -1161,7 +799,7 @@ The following state arguments are supported:
             title="Optional">
         <span>always<wbr>Include<wbr>In<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to include claims in token, by default is is set to `true`.
 {{% /md %}}</dd>
@@ -1170,7 +808,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
 {{% /md %}}</dd>
@@ -1179,7 +817,7 @@ The following state arguments are supported:
             title="Optional">
         <span>claim<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the claim is for an access token `"RESOURCE"` or ID token `"IDENTITY"`.
 {{% /md %}}</dd>
@@ -1188,7 +826,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Filter<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of group filter if `value_type` is `"GROUPS"`. Can be set to one of the following `"STARTS_WITH"`, `"EQUALS"`, `"CONTAINS"`, `"REGEX"`.
 {{% /md %}}</dd>
@@ -1197,7 +835,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the claim.
 {{% /md %}}</dd>
@@ -1206,7 +844,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of scopes the auth server claim is tied to.
 {{% /md %}}</dd>
@@ -1215,7 +853,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application. It defaults to `"ACTIVE"`.
 {{% /md %}}</dd>
@@ -1224,7 +862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the claim.
 {{% /md %}}</dd>
@@ -1233,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of value of the claim. It can be set to `"EXPRESSION"` or `"GROUPS"`. It defaults to `"EXPRESSION"`.
 {{% /md %}}</dd>

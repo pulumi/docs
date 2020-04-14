@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicy">MfaPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyArgs">MfaPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicy">MfaPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyArgs">MfaPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMfaPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#MfaPolicyArgs">MfaPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#MfaPolicy">MfaPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMfaPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#MfaPolicyArgs">MfaPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#MfaPolicy">MfaPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,7 +122,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description
 {{% /md %}}</dd>
@@ -131,7 +131,7 @@ block_external_search_index: true
             title="Optional">
         <span>Duo</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -139,7 +139,7 @@ block_external_search_index: true
             title="Optional">
         <span>Fido<wbr>U2f</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -147,7 +147,7 @@ block_external_search_index: true
             title="Optional">
         <span>Fido<wbr>Webauthn</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -155,7 +155,7 @@ block_external_search_index: true
             title="Optional">
         <span>Google<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -163,7 +163,7 @@ block_external_search_index: true
             title="Optional">
         <span>Groups<wbr>Includeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include
 {{% /md %}}</dd>
@@ -172,7 +172,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name
 {{% /md %}}</dd>
@@ -181,7 +181,7 @@ block_external_search_index: true
             title="Optional">
         <span>Okta<wbr>Call</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -189,7 +189,7 @@ block_external_search_index: true
             title="Optional">
         <span>Okta<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -197,7 +197,7 @@ block_external_search_index: true
             title="Optional">
         <span>Okta<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -205,7 +205,7 @@ block_external_search_index: true
             title="Optional">
         <span>Okta<wbr>Push</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -213,7 +213,7 @@ block_external_search_index: true
             title="Optional">
         <span>Okta<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -221,7 +221,7 @@ block_external_search_index: true
             title="Optional">
         <span>Okta<wbr>Sms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -229,7 +229,7 @@ block_external_search_index: true
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -239,7 +239,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Rsa<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -247,7 +247,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -256,7 +256,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Symantec<wbr>Vip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -264,7 +264,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Yubikey<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -279,7 +279,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Duo</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyduo">*Mfa<wbr>Policy<wbr>Duo</a></span>
+        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -296,7 +296,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Fido<wbr>U2f</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidou2f">*Mfa<wbr>Policy<wbr>Fido<wbr>U2f</a></span>
+        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -304,7 +304,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Fido<wbr>Webauthn</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidowebauthn">*Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn</a></span>
+        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -312,7 +312,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Google<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicygoogleotp">*Mfa<wbr>Policy<wbr>Google<wbr>Otp</a></span>
+        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -329,7 +329,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name
 {{% /md %}}</dd>
@@ -338,7 +338,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Okta<wbr>Call</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktacall">*Mfa<wbr>Policy<wbr>Okta<wbr>Call</a></span>
+        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -346,7 +346,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Okta<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaotp">*Mfa<wbr>Policy<wbr>Okta<wbr>Otp</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -354,7 +354,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Okta<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapassword">*Mfa<wbr>Policy<wbr>Okta<wbr>Password</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -362,7 +362,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Okta<wbr>Push</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapush">*Mfa<wbr>Policy<wbr>Okta<wbr>Push</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -370,7 +370,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Okta<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaquestion">*Mfa<wbr>Policy<wbr>Okta<wbr>Question</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -378,7 +378,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Okta<wbr>Sms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktasms">*Mfa<wbr>Policy<wbr>Okta<wbr>Sms</a></span>
+        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -386,7 +386,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -396,7 +396,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Rsa<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyrsatoken">*Mfa<wbr>Policy<wbr>Rsa<wbr>Token</a></span>
+        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -404,7 +404,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -413,7 +413,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Symantec<wbr>Vip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicysymantecvip">*Mfa<wbr>Policy<wbr>Symantec<wbr>Vip</a></span>
+        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -421,7 +421,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Yubikey<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyyubikeytoken">*Mfa<wbr>Policy<wbr>Yubikey<wbr>Token</a></span>
+        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -436,7 +436,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description
 {{% /md %}}</dd>
@@ -445,7 +445,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>duo</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo?</a></span>
+        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -453,7 +453,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>fido<wbr>U2f</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f?</a></span>
+        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -461,7 +461,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>fido<wbr>Webauthn</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn?</a></span>
+        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -469,7 +469,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>google<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp?</a></span>
+        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -477,7 +477,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>groups<wbr>Includeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include
 {{% /md %}}</dd>
@@ -486,7 +486,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name
 {{% /md %}}</dd>
@@ -495,7 +495,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>okta<wbr>Call</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -503,7 +503,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>okta<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -511,7 +511,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>okta<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>okta<wbr>Push</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -527,7 +527,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>okta<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -535,7 +535,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>okta<wbr>Sms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -543,7 +543,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -553,7 +553,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>rsa<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token?</a></span>
+        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -561,7 +561,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -570,7 +570,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>symantec<wbr>Vip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip?</a></span>
+        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -578,7 +578,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>yubikey<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token?</a></span>
+        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -743,644 +743,6 @@ priority is provided. API defaults it to the last/lowest if not there.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## MfaPolicy Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Description
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Duo</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fido<wbr>U2f</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fido<wbr>Webauthn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Google<wbr>Otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups<wbr>Includeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of Group IDs to Include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Call</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Push</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Question</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Sms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
-priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rsa<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Symantec<wbr>Vip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Yubikey<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Policy Description
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Duo</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyduo">*Mfa<wbr>Policy<wbr>Duo</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fido<wbr>U2f</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidou2f">*Mfa<wbr>Policy<wbr>Fido<wbr>U2f</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fido<wbr>Webauthn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidowebauthn">*Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Google<wbr>Otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicygoogleotp">*Mfa<wbr>Policy<wbr>Google<wbr>Otp</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups<wbr>Includeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of Group IDs to Include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Call</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktacall">*Mfa<wbr>Policy<wbr>Okta<wbr>Call</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaotp">*Mfa<wbr>Policy<wbr>Okta<wbr>Otp</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapassword">*Mfa<wbr>Policy<wbr>Okta<wbr>Password</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Push</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapush">*Mfa<wbr>Policy<wbr>Okta<wbr>Push</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Question</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaquestion">*Mfa<wbr>Policy<wbr>Okta<wbr>Question</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Sms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktasms">*Mfa<wbr>Policy<wbr>Okta<wbr>Sms</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
-priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rsa<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyrsatoken">*Mfa<wbr>Policy<wbr>Rsa<wbr>Token</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Symantec<wbr>Vip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicysymantecvip">*Mfa<wbr>Policy<wbr>Symantec<wbr>Vip</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Yubikey<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyyubikeytoken">*Mfa<wbr>Policy<wbr>Yubikey<wbr>Token</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Description
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>duo</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fido<wbr>U2f</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fido<wbr>Webauthn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>google<wbr>Otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups<wbr>Includeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of Group IDs to Include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta<wbr>Call</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta<wbr>Otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta<wbr>Push</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta<wbr>Question</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta<wbr>Sms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
-priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rsa<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>symantec<wbr>Vip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>yubikey<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Description
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>duo</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyduo">Dict[Mfa<wbr>Policy<wbr>Duo]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fido_<wbr>u2f</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidou2f">Dict[Mfa<wbr>Policy<wbr>Fido<wbr>U2f]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fido_<wbr>webauthn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidowebauthn">Dict[Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>google_<wbr>otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicygoogleotp">Dict[Mfa<wbr>Policy<wbr>Google<wbr>Otp]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups_<wbr>includeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of Group IDs to Include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta_<wbr>call</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktacall">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Call]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta_<wbr>otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaotp">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Otp]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta_<wbr>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapassword">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Password]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta_<wbr>push</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapush">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Push]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta_<wbr>question</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaquestion">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Question]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta_<wbr>sms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktasms">Dict[Mfa<wbr>Policy<wbr>Okta<wbr>Sms]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
-priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rsa_<wbr>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyrsatoken">Dict[Mfa<wbr>Policy<wbr>Rsa<wbr>Token]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>symantec_<wbr>vip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicysymantecvip">Dict[Mfa<wbr>Policy<wbr>Symantec<wbr>Vip]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>yubikey_<wbr>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyyubikeytoken">Dict[Mfa<wbr>Policy<wbr>Yubikey<wbr>Token]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1518,7 +880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description
 {{% /md %}}</dd>
@@ -1527,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Duo</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1535,7 +897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fido<wbr>U2f</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1543,7 +905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fido<wbr>Webauthn</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1551,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Google<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1559,7 +921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Groups<wbr>Includeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include
 {{% /md %}}</dd>
@@ -1568,7 +930,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name
 {{% /md %}}</dd>
@@ -1577,7 +939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Call</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1585,7 +947,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1593,7 +955,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1601,7 +963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Push</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1609,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1617,7 +979,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Sms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1625,7 +987,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -1635,7 +997,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Rsa<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1643,7 +1005,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -1652,7 +1014,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Symantec<wbr>Vip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1660,7 +1022,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Yubikey<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1675,7 +1037,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description
 {{% /md %}}</dd>
@@ -1684,7 +1046,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Duo</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyduo">*Mfa<wbr>Policy<wbr>Duo</a></span>
+        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1692,7 +1054,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Fido<wbr>U2f</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidou2f">*Mfa<wbr>Policy<wbr>Fido<wbr>U2f</a></span>
+        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1700,7 +1062,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Fido<wbr>Webauthn</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidowebauthn">*Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn</a></span>
+        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1708,7 +1070,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Google<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicygoogleotp">*Mfa<wbr>Policy<wbr>Google<wbr>Otp</a></span>
+        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1725,7 +1087,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name
 {{% /md %}}</dd>
@@ -1734,7 +1096,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Okta<wbr>Call</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktacall">*Mfa<wbr>Policy<wbr>Okta<wbr>Call</a></span>
+        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1742,7 +1104,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Okta<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaotp">*Mfa<wbr>Policy<wbr>Okta<wbr>Otp</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1750,7 +1112,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Okta<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapassword">*Mfa<wbr>Policy<wbr>Okta<wbr>Password</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1758,7 +1120,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Okta<wbr>Push</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapush">*Mfa<wbr>Policy<wbr>Okta<wbr>Push</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1766,7 +1128,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Okta<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaquestion">*Mfa<wbr>Policy<wbr>Okta<wbr>Question</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1774,7 +1136,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Okta<wbr>Sms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktasms">*Mfa<wbr>Policy<wbr>Okta<wbr>Sms</a></span>
+        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1782,7 +1144,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -1792,7 +1154,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Rsa<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyrsatoken">*Mfa<wbr>Policy<wbr>Rsa<wbr>Token</a></span>
+        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1800,7 +1162,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -1809,7 +1171,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Symantec<wbr>Vip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicysymantecvip">*Mfa<wbr>Policy<wbr>Symantec<wbr>Vip</a></span>
+        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1817,7 +1179,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Yubikey<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyyubikeytoken">*Mfa<wbr>Policy<wbr>Yubikey<wbr>Token</a></span>
+        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1832,7 +1194,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description
 {{% /md %}}</dd>
@@ -1841,7 +1203,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>duo</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo?</a></span>
+        <span class="property-type"><a href="#mfapolicyduo">Mfa<wbr>Policy<wbr>Duo</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1849,7 +1211,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>fido<wbr>U2f</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f?</a></span>
+        <span class="property-type"><a href="#mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1857,7 +1219,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>fido<wbr>Webauthn</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn?</a></span>
+        <span class="property-type"><a href="#mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1865,7 +1227,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>google<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp?</a></span>
+        <span class="property-type"><a href="#mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1873,7 +1235,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>groups<wbr>Includeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include
 {{% /md %}}</dd>
@@ -1882,7 +1244,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name
 {{% /md %}}</dd>
@@ -1891,7 +1253,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>okta<wbr>Call</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1899,7 +1261,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>okta<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1907,7 +1269,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>okta<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1915,7 +1277,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>okta<wbr>Push</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1923,7 +1285,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>okta<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1931,7 +1293,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>okta<wbr>Sms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms?</a></span>
+        <span class="property-type"><a href="#mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1939,7 +1301,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -1949,7 +1311,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>rsa<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token?</a></span>
+        <span class="property-type"><a href="#mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1957,7 +1319,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -1966,7 +1328,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>symantec<wbr>Vip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip?</a></span>
+        <span class="property-type"><a href="#mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1974,7 +1336,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>yubikey<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token?</a></span>
+        <span class="property-type"><a href="#mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2168,7 +1530,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2176,7 +1538,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2191,7 +1553,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2199,7 +1561,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2214,7 +1576,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2222,7 +1584,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2275,7 +1637,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2283,7 +1645,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2298,7 +1660,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2306,7 +1668,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2321,7 +1683,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2329,7 +1691,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2382,7 +1744,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2390,7 +1752,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2405,7 +1767,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2413,7 +1775,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2428,7 +1790,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2436,7 +1798,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2489,7 +1851,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2497,7 +1859,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2512,7 +1874,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2520,7 +1882,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2535,7 +1897,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2543,7 +1905,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2596,7 +1958,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2604,7 +1966,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2619,7 +1981,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2627,7 +1989,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2642,7 +2004,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2650,7 +2012,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2703,7 +2065,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2711,7 +2073,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2726,7 +2088,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2734,7 +2096,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2749,7 +2111,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2757,7 +2119,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2810,7 +2172,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2818,7 +2180,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2833,7 +2195,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2841,7 +2203,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2856,7 +2218,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2864,7 +2226,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2917,7 +2279,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2925,7 +2287,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2940,7 +2302,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2948,7 +2310,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2963,7 +2325,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2971,7 +2333,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3024,7 +2386,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3032,7 +2394,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3047,7 +2409,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3055,7 +2417,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3070,7 +2432,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3078,7 +2440,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3131,7 +2493,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3139,7 +2501,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3154,7 +2516,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3162,7 +2524,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3177,7 +2539,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3185,7 +2547,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3238,7 +2600,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3246,7 +2608,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3261,7 +2623,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3269,7 +2631,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3284,7 +2646,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3292,7 +2654,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3345,7 +2707,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3353,7 +2715,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3368,7 +2730,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3376,7 +2738,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3391,7 +2753,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3399,7 +2761,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3452,7 +2814,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3460,7 +2822,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3475,7 +2837,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3483,7 +2845,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3498,7 +2860,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3506,7 +2868,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

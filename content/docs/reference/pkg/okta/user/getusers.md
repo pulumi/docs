@@ -45,7 +45,7 @@ const example = pulumi.output(okta.user.getUsers({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupUsers<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#LookupUsersArgs">LookupUsersArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#LookupUsersResult">LookupUsersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupUsers<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#LookupUsersArgs">LookupUsersArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#LookupUsersResult">LookupUsersResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -77,7 +77,7 @@ The following arguments are supported:
             title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersuser">List&lt;Get<wbr>Users<wbr>User<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getusersuser">List&lt;Get<wbr>Users<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}collection of users retrieved from Okta with the following properties.
 {{% /md %}}</dd>
@@ -127,7 +127,7 @@ The following arguments are supported:
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersuser">Get<wbr>Users<wbr>User[]?</a></span>
+        <span class="property-type"><a href="#getusersuser">Get<wbr>Users<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}collection of users retrieved from Okta with the following properties.
 {{% /md %}}</dd>
@@ -198,7 +198,7 @@ The following output properties are available:
             title="">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersuser">List&lt;Get<wbr>Users<wbr>User&gt;?</a></span>
+        <span class="property-type"><a href="#getusersuser">List&lt;Get<wbr>Users<wbr>User&gt;</a></span>
     </dt>
     <dd>{{% md %}}collection of users retrieved from Okta with the following properties.
 {{% /md %}}</dd>
@@ -264,7 +264,7 @@ The following output properties are available:
             title="">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersuser">Get<wbr>Users<wbr>User[]?</a></span>
+        <span class="property-type"><a href="#getusersuser">Get<wbr>Users<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}collection of users retrieved from Okta with the following properties.
 {{% /md %}}</dd>
@@ -329,15 +329,6 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Comparison</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Comparison to use.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -354,6 +345,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value to compare with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Comparison</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comparison to use.
 {{% /md %}}</dd>
 
 </dl>
@@ -363,15 +363,6 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Comparison</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Comparison to use.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -390,21 +381,21 @@ The following output properties are available:
     <dd>{{% md %}}Value to compare with.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Comparison</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comparison to use.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>comparison</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Comparison to use.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -422,6 +413,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value to compare with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>comparison</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comparison to use.
 {{% /md %}}</dd>
 
 </dl>
@@ -431,15 +431,6 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>comparison</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Comparison to use.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -456,6 +447,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value to compare with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>comparison</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Comparison to use.
 {{% /md %}}</dd>
 
 </dl>
@@ -484,7 +484,7 @@ The following output properties are available:
             title="Required">
         <span>Admin<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Administrator roles assigned to user.
 {{% /md %}}</dd>
@@ -583,7 +583,7 @@ The following output properties are available:
             title="Required">
         <span>Group<wbr>Memberships</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>

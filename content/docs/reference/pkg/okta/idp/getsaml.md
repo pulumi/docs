@@ -41,7 +41,7 @@ const example = pulumi.output(okta.idp.getSaml({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSaml<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/idp?tab=doc#LookupSamlArgs">LookupSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/idp?tab=doc#LookupSamlResult">LookupSamlResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSaml<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/idp?tab=doc#LookupSamlArgs">LookupSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/idp?tab=doc#LookupSamlResult">LookupSamlResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -64,7 +64,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the idp to retrieve, conflicts with `name`.
 {{% /md %}}</dd>
@@ -73,7 +73,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the idp to retrieve, conflicts with `id`.
 {{% /md %}}</dd>
@@ -89,7 +89,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the idp to retrieve, conflicts with `name`.
 {{% /md %}}</dd>
@@ -98,7 +98,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the idp to retrieve, conflicts with `id`.
 {{% /md %}}</dd>
@@ -114,7 +114,7 @@ The following arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the idp to retrieve, conflicts with `name`.
 {{% /md %}}</dd>
@@ -123,7 +123,7 @@ The following arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the idp to retrieve, conflicts with `id`.
 {{% /md %}}</dd>
@@ -202,15 +202,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}id of idp.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Issuer</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -234,15 +225,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key ID reference to the IdP's X.509 signature certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}name of the idp.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -285,7 +267,7 @@ The following output properties are available:
             title="">
         <span>Subject<wbr>Formats</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Expression to generate or transform a unique username for the IdP user.
 {{% /md %}}</dd>
@@ -297,6 +279,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}name of the idp.
 {{% /md %}}</dd>
 
 </dl>
@@ -335,15 +335,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}id of idp.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Issuer</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -367,15 +358,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key ID reference to the IdP's X.509 signature certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}name of the idp.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -432,6 +414,24 @@ The following output properties are available:
     <dd>{{% md %}}type of idp.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}name of the idp.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -468,15 +468,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}id of idp.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>issuer</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -500,15 +491,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key ID reference to the IdP's X.509 signature certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}name of the idp.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -565,6 +547,24 @@ The following output properties are available:
     <dd>{{% md %}}type of idp.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}name of the idp.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -601,15 +601,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}id of idp.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>issuer</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -633,15 +624,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key ID reference to the IdP's X.509 signature certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}name of the idp.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -696,6 +678,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}id of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}name of the idp.
 {{% /md %}}</dd>
 
 </dl>

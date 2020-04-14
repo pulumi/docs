@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#PasswordPolicy">PasswordPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#PasswordPolicyArgs">PasswordPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#PasswordPolicy">PasswordPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#PasswordPolicyArgs">PasswordPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPasswordPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#PasswordPolicyArgs">PasswordPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#PasswordPolicy">PasswordPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPasswordPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#PasswordPolicyArgs">PasswordPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#PasswordPolicy">PasswordPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,7 +122,7 @@ block_external_search_index: true
             title="Optional">
         <span>Auth<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication Provider: OKTA or ACTIVE_DIRECTORY.
 {{% /md %}}</dd>
@@ -131,7 +131,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description
 {{% /md %}}</dd>
@@ -140,7 +140,7 @@ block_external_search_index: true
             title="Optional">
         <span>Email<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable email password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ block_external_search_index: true
             title="Optional">
         <span>Groups<wbr>Includeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name
 {{% /md %}}</dd>
@@ -167,7 +167,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Auto<wbr>Unlock<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes before a locked account is unlocked: 0 = no limit.
 {{% /md %}}</dd>
@@ -176,7 +176,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Dictionary<wbr>Lookup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Check Passwords Against Common Password Dictionary.
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Exclude<wbr>First<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}User firstName attribute must be excluded from the password
 {{% /md %}}</dd>
@@ -194,7 +194,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Exclude<wbr>Last<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}User lastName attribute must be excluded from the password
 {{% /md %}}</dd>
@@ -203,7 +203,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Exclude<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the user name must be excluded from the password.
 {{% /md %}}</dd>
@@ -212,7 +212,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Expire<wbr>Warn<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length in days a user will be warned before password expiry: 0 = no warning.
 {{% /md %}}</dd>
@@ -221,7 +221,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>History<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
 {{% /md %}}</dd>
@@ -230,7 +230,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Max<wbr>Age<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.
 {{% /md %}}</dd>
@@ -239,7 +239,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Max<wbr>Lockout<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 {{% /md %}}</dd>
@@ -248,7 +248,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Min<wbr>Age<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum time interval in minutes between password changes: 0 = no limit.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum password length.
 {{% /md %}}</dd>
@@ -266,7 +266,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Min<wbr>Lowercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one lower case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -275,7 +275,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Min<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one number: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -284,7 +284,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Min<wbr>Symbol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one symbol (!@#$%^&*): 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -293,7 +293,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Min<wbr>Uppercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one upper case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password<wbr>Show<wbr>Lockout<wbr>Failures</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a user should be informed when their account is locked.
 {{% /md %}}</dd>
@@ -311,7 +311,7 @@ block_external_search_index: true
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -321,7 +321,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Question<wbr>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Min length of the password recovery question answer.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Question<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable security question password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -339,7 +339,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Recovery<wbr>Email<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime in minutes of the recovery email token.
 {{% /md %}}</dd>
@@ -348,7 +348,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Skip<wbr>Unlock</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When an Active Directory user is locked out of Okta, the Okta unlock operation should also attempt to unlock the user's
 Windows account.
@@ -358,7 +358,7 @@ Windows account.
             title="Optional">
         <span>Sms<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable SMS password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -367,7 +367,7 @@ Windows account.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -383,7 +383,7 @@ Windows account.
             title="Optional">
         <span>Auth<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication Provider: OKTA or ACTIVE_DIRECTORY.
 {{% /md %}}</dd>
@@ -392,7 +392,7 @@ Windows account.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description
 {{% /md %}}</dd>
@@ -401,7 +401,7 @@ Windows account.
             title="Optional">
         <span>Email<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable email password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -419,7 +419,7 @@ Windows account.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name
 {{% /md %}}</dd>
@@ -428,7 +428,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Auto<wbr>Unlock<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes before a locked account is unlocked: 0 = no limit.
 {{% /md %}}</dd>
@@ -437,7 +437,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Dictionary<wbr>Lookup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Check Passwords Against Common Password Dictionary.
 {{% /md %}}</dd>
@@ -446,7 +446,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Exclude<wbr>First<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}User firstName attribute must be excluded from the password
 {{% /md %}}</dd>
@@ -455,7 +455,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Exclude<wbr>Last<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}User lastName attribute must be excluded from the password
 {{% /md %}}</dd>
@@ -464,7 +464,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Exclude<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the user name must be excluded from the password.
 {{% /md %}}</dd>
@@ -473,7 +473,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Expire<wbr>Warn<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length in days a user will be warned before password expiry: 0 = no warning.
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>History<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
 {{% /md %}}</dd>
@@ -491,7 +491,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Max<wbr>Age<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.
 {{% /md %}}</dd>
@@ -500,7 +500,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Max<wbr>Lockout<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 {{% /md %}}</dd>
@@ -509,7 +509,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Min<wbr>Age<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum time interval in minutes between password changes: 0 = no limit.
 {{% /md %}}</dd>
@@ -518,7 +518,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum password length.
 {{% /md %}}</dd>
@@ -527,7 +527,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Min<wbr>Lowercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one lower case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -536,7 +536,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Min<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one number: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -545,7 +545,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Min<wbr>Symbol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one symbol (!@#$%^&*): 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -554,7 +554,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Min<wbr>Uppercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one upper case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -563,7 +563,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Show<wbr>Lockout<wbr>Failures</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a user should be informed when their account is locked.
 {{% /md %}}</dd>
@@ -572,7 +572,7 @@ Windows account.
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -582,7 +582,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Question<wbr>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Min length of the password recovery question answer.
 {{% /md %}}</dd>
@@ -591,7 +591,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Question<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable security question password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -600,7 +600,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Recovery<wbr>Email<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime in minutes of the recovery email token.
 {{% /md %}}</dd>
@@ -609,7 +609,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Skip<wbr>Unlock</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When an Active Directory user is locked out of Okta, the Okta unlock operation should also attempt to unlock the user's
 Windows account.
@@ -619,7 +619,7 @@ Windows account.
             title="Optional">
         <span>Sms<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable SMS password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -628,7 +628,7 @@ Windows account.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -644,7 +644,7 @@ Windows account.
             title="Optional">
         <span>auth<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication Provider: OKTA or ACTIVE_DIRECTORY.
 {{% /md %}}</dd>
@@ -653,7 +653,7 @@ Windows account.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description
 {{% /md %}}</dd>
@@ -662,7 +662,7 @@ Windows account.
             title="Optional">
         <span>email<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable email password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -671,7 +671,7 @@ Windows account.
             title="Optional">
         <span>groups<wbr>Includeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include
 {{% /md %}}</dd>
@@ -680,7 +680,7 @@ Windows account.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name
 {{% /md %}}</dd>
@@ -689,7 +689,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Auto<wbr>Unlock<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of minutes before a locked account is unlocked: 0 = no limit.
 {{% /md %}}</dd>
@@ -698,7 +698,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Dictionary<wbr>Lookup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Check Passwords Against Common Password Dictionary.
 {{% /md %}}</dd>
@@ -707,7 +707,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Exclude<wbr>First<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}User firstName attribute must be excluded from the password
 {{% /md %}}</dd>
@@ -716,7 +716,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Exclude<wbr>Last<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}User lastName attribute must be excluded from the password
 {{% /md %}}</dd>
@@ -725,7 +725,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Exclude<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the user name must be excluded from the password.
 {{% /md %}}</dd>
@@ -734,7 +734,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Expire<wbr>Warn<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length in days a user will be warned before password expiry: 0 = no warning.
 {{% /md %}}</dd>
@@ -743,7 +743,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>History<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
 {{% /md %}}</dd>
@@ -752,7 +752,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Max<wbr>Age<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.
 {{% /md %}}</dd>
@@ -761,7 +761,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Max<wbr>Lockout<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 {{% /md %}}</dd>
@@ -770,7 +770,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Min<wbr>Age<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum time interval in minutes between password changes: 0 = no limit.
 {{% /md %}}</dd>
@@ -779,7 +779,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum password length.
 {{% /md %}}</dd>
@@ -788,7 +788,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Min<wbr>Lowercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one lower case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -797,7 +797,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Min<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one number: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -806,7 +806,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Min<wbr>Symbol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one symbol (!@#$%^&*): 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -815,7 +815,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Min<wbr>Uppercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one upper case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -824,7 +824,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Show<wbr>Lockout<wbr>Failures</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a user should be informed when their account is locked.
 {{% /md %}}</dd>
@@ -833,7 +833,7 @@ Windows account.
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -843,7 +843,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>question<wbr>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Min length of the password recovery question answer.
 {{% /md %}}</dd>
@@ -852,7 +852,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>question<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable security question password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -861,7 +861,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>recovery<wbr>Email<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime in minutes of the recovery email token.
 {{% /md %}}</dd>
@@ -870,7 +870,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>skip<wbr>Unlock</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When an Active Directory user is locked out of Okta, the Okta unlock operation should also attempt to unlock the user's
 Windows account.
@@ -880,7 +880,7 @@ Windows account.
             title="Optional">
         <span>sms<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable SMS password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -889,7 +889,7 @@ Windows account.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -1159,1060 +1159,6 @@ Windows account.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## PasswordPolicy Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Auth<wbr>Provider</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authentication Provider: OKTA or ACTIVE_DIRECTORY.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Description
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Email<wbr>Recovery</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable email password recovery: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups<wbr>Includeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of Group IDs to Include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Auto<wbr>Unlock<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Number of minutes before a locked account is unlocked: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Dictionary<wbr>Lookup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Check Passwords Against Common Password Dictionary.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Exclude<wbr>First<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}User firstName attribute must be excluded from the password
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Exclude<wbr>Last<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}User lastName attribute must be excluded from the password
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Exclude<wbr>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Expire<wbr>Warn<wbr>Days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Length in days a user will be warned before password expiry: 0 = no warning.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>History<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Max<wbr>Age<wbr>Days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Max<wbr>Lockout<wbr>Attempts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Min<wbr>Age<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Minimum time interval in minutes between password changes: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Min<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Minimum password length.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Min<wbr>Lowercase</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one lower case letter: 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Min<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one number: 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Min<wbr>Symbol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one symbol (!@#$%^&*): 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Min<wbr>Uppercase</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one upper case letter: 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Show<wbr>Lockout<wbr>Failures</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If a user should be informed when their account is locked.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
-priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Question<wbr>Min<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Min length of the password recovery question answer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Question<wbr>Recovery</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable security question password recovery: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recovery<wbr>Email<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Lifetime in minutes of the recovery email token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Skip<wbr>Unlock</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When an Active Directory user is locked out of Okta, the Okta unlock operation should also attempt to unlock the user's
-Windows account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sms<wbr>Recovery</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable SMS password recovery: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Auth<wbr>Provider</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Authentication Provider: OKTA or ACTIVE_DIRECTORY.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Policy Description
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Email<wbr>Recovery</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable email password recovery: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups<wbr>Includeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of Group IDs to Include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Auto<wbr>Unlock<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Number of minutes before a locked account is unlocked: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Dictionary<wbr>Lookup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Check Passwords Against Common Password Dictionary.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Exclude<wbr>First<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}User firstName attribute must be excluded from the password
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Exclude<wbr>Last<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}User lastName attribute must be excluded from the password
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Exclude<wbr>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Expire<wbr>Warn<wbr>Days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Length in days a user will be warned before password expiry: 0 = no warning.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>History<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Max<wbr>Age<wbr>Days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Max<wbr>Lockout<wbr>Attempts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Min<wbr>Age<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Minimum time interval in minutes between password changes: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Min<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Minimum password length.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Min<wbr>Lowercase</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one lower case letter: 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Min<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one number: 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Min<wbr>Symbol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one symbol (!@#$%^&*): 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Min<wbr>Uppercase</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one upper case letter: 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Show<wbr>Lockout<wbr>Failures</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If a user should be informed when their account is locked.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
-priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Question<wbr>Min<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Min length of the password recovery question answer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Question<wbr>Recovery</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable security question password recovery: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recovery<wbr>Email<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Lifetime in minutes of the recovery email token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Skip<wbr>Unlock</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When an Active Directory user is locked out of Okta, the Okta unlock operation should also attempt to unlock the user's
-Windows account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sms<wbr>Recovery</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable SMS password recovery: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>auth<wbr>Provider</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authentication Provider: OKTA or ACTIVE_DIRECTORY.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Description
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>email<wbr>Recovery</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable email password recovery: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups<wbr>Includeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of Group IDs to Include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Auto<wbr>Unlock<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Number of minutes before a locked account is unlocked: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Dictionary<wbr>Lookup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Check Passwords Against Common Password Dictionary.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Exclude<wbr>First<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}User firstName attribute must be excluded from the password
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Exclude<wbr>Last<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}User lastName attribute must be excluded from the password
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Exclude<wbr>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Expire<wbr>Warn<wbr>Days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Length in days a user will be warned before password expiry: 0 = no warning.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>History<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Max<wbr>Age<wbr>Days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Max<wbr>Lockout<wbr>Attempts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Min<wbr>Age<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Minimum time interval in minutes between password changes: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Min<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Minimum password length.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Min<wbr>Lowercase</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one lower case letter: 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Min<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one number: 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Min<wbr>Symbol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one symbol (!@#$%^&*): 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Min<wbr>Uppercase</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one upper case letter: 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Show<wbr>Lockout<wbr>Failures</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If a user should be informed when their account is locked.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
-priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>question<wbr>Min<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Min length of the password recovery question answer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>question<wbr>Recovery</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable security question password recovery: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recovery<wbr>Email<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Lifetime in minutes of the recovery email token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>skip<wbr>Unlock</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When an Active Directory user is locked out of Okta, the Okta unlock operation should also attempt to unlock the user's
-Windows account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sms<wbr>Recovery</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable SMS password recovery: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>auth_<wbr>provider</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Authentication Provider: OKTA or ACTIVE_DIRECTORY.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Description
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>email_<wbr>recovery</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable email password recovery: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups_<wbr>includeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of Group IDs to Include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>auto_<wbr>unlock_<wbr>minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Number of minutes before a locked account is unlocked: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>dictionary_<wbr>lookup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Check Passwords Against Common Password Dictionary.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>exclude_<wbr>first_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}User firstName attribute must be excluded from the password
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>exclude_<wbr>last_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}User lastName attribute must be excluded from the password
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>exclude_<wbr>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>expire_<wbr>warn_<wbr>days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Length in days a user will be warned before password expiry: 0 = no warning.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>history_<wbr>count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>max_<wbr>age_<wbr>days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>max_<wbr>lockout_<wbr>attempts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>min_<wbr>age_<wbr>minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Minimum time interval in minutes between password changes: 0 = no limit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>min_<wbr>length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Minimum password length.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>min_<wbr>lowercase</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one lower case letter: 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>min_<wbr>number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one number: 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>min_<wbr>symbol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one symbol (!@#$%^&*): 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>min_<wbr>uppercase</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}If a password must contain at least one upper case letter: 0 = no, 1 = yes. Default = 1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>show_<wbr>lockout_<wbr>failures</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If a user should be informed when their account is locked.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
-priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>question_<wbr>min_<wbr>length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Min length of the password recovery question answer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>question_<wbr>recovery</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable security question password recovery: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recovery_<wbr>email_<wbr>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Lifetime in minutes of the recovery email token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>skip_<wbr>unlock</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When an Active Directory user is locked out of Okta, the Okta unlock operation should also attempt to unlock the user's
-Windows account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sms_<wbr>recovery</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Enable or disable SMS password recovery: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -2350,7 +1296,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication Provider: OKTA or ACTIVE_DIRECTORY.
 {{% /md %}}</dd>
@@ -2359,7 +1305,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description
 {{% /md %}}</dd>
@@ -2368,7 +1314,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable email password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -2377,7 +1323,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Groups<wbr>Includeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include
 {{% /md %}}</dd>
@@ -2386,7 +1332,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name
 {{% /md %}}</dd>
@@ -2395,7 +1341,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Auto<wbr>Unlock<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes before a locked account is unlocked: 0 = no limit.
 {{% /md %}}</dd>
@@ -2404,7 +1350,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Dictionary<wbr>Lookup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Check Passwords Against Common Password Dictionary.
 {{% /md %}}</dd>
@@ -2413,7 +1359,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Exclude<wbr>First<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}User firstName attribute must be excluded from the password
 {{% /md %}}</dd>
@@ -2422,7 +1368,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Exclude<wbr>Last<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}User lastName attribute must be excluded from the password
 {{% /md %}}</dd>
@@ -2431,7 +1377,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Exclude<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the user name must be excluded from the password.
 {{% /md %}}</dd>
@@ -2440,7 +1386,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Expire<wbr>Warn<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length in days a user will be warned before password expiry: 0 = no warning.
 {{% /md %}}</dd>
@@ -2449,7 +1395,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>History<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
 {{% /md %}}</dd>
@@ -2458,7 +1404,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Max<wbr>Age<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.
 {{% /md %}}</dd>
@@ -2467,7 +1413,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Max<wbr>Lockout<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 {{% /md %}}</dd>
@@ -2476,7 +1422,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Min<wbr>Age<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum time interval in minutes between password changes: 0 = no limit.
 {{% /md %}}</dd>
@@ -2485,7 +1431,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum password length.
 {{% /md %}}</dd>
@@ -2494,7 +1440,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Min<wbr>Lowercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one lower case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -2503,7 +1449,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Min<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one number: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -2512,7 +1458,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Min<wbr>Symbol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one symbol (!@#$%^&*): 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -2521,7 +1467,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Min<wbr>Uppercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one upper case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -2530,7 +1476,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Show<wbr>Lockout<wbr>Failures</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a user should be informed when their account is locked.
 {{% /md %}}</dd>
@@ -2539,7 +1485,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -2549,7 +1495,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Question<wbr>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Min length of the password recovery question answer.
 {{% /md %}}</dd>
@@ -2558,7 +1504,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Question<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable security question password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -2567,7 +1513,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Recovery<wbr>Email<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime in minutes of the recovery email token.
 {{% /md %}}</dd>
@@ -2576,7 +1522,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Skip<wbr>Unlock</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When an Active Directory user is locked out of Okta, the Okta unlock operation should also attempt to unlock the user's
 Windows account.
@@ -2586,7 +1532,7 @@ Windows account.
             title="Optional">
         <span>Sms<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable SMS password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -2595,7 +1541,7 @@ Windows account.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -2611,7 +1557,7 @@ Windows account.
             title="Optional">
         <span>Auth<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication Provider: OKTA or ACTIVE_DIRECTORY.
 {{% /md %}}</dd>
@@ -2620,7 +1566,7 @@ Windows account.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description
 {{% /md %}}</dd>
@@ -2629,7 +1575,7 @@ Windows account.
             title="Optional">
         <span>Email<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable email password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -2647,7 +1593,7 @@ Windows account.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name
 {{% /md %}}</dd>
@@ -2656,7 +1602,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Auto<wbr>Unlock<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes before a locked account is unlocked: 0 = no limit.
 {{% /md %}}</dd>
@@ -2665,7 +1611,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Dictionary<wbr>Lookup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Check Passwords Against Common Password Dictionary.
 {{% /md %}}</dd>
@@ -2674,7 +1620,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Exclude<wbr>First<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}User firstName attribute must be excluded from the password
 {{% /md %}}</dd>
@@ -2683,7 +1629,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Exclude<wbr>Last<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}User lastName attribute must be excluded from the password
 {{% /md %}}</dd>
@@ -2692,7 +1638,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Exclude<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the user name must be excluded from the password.
 {{% /md %}}</dd>
@@ -2701,7 +1647,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Expire<wbr>Warn<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length in days a user will be warned before password expiry: 0 = no warning.
 {{% /md %}}</dd>
@@ -2710,7 +1656,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>History<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
 {{% /md %}}</dd>
@@ -2719,7 +1665,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Max<wbr>Age<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.
 {{% /md %}}</dd>
@@ -2728,7 +1674,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Max<wbr>Lockout<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 {{% /md %}}</dd>
@@ -2737,7 +1683,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Min<wbr>Age<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum time interval in minutes between password changes: 0 = no limit.
 {{% /md %}}</dd>
@@ -2746,7 +1692,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum password length.
 {{% /md %}}</dd>
@@ -2755,7 +1701,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Min<wbr>Lowercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one lower case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -2764,7 +1710,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Min<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one number: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -2773,7 +1719,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Min<wbr>Symbol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one symbol (!@#$%^&*): 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -2782,7 +1728,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Min<wbr>Uppercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one upper case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -2791,7 +1737,7 @@ Windows account.
             title="Optional">
         <span>Password<wbr>Show<wbr>Lockout<wbr>Failures</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a user should be informed when their account is locked.
 {{% /md %}}</dd>
@@ -2800,7 +1746,7 @@ Windows account.
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -2810,7 +1756,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Question<wbr>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Min length of the password recovery question answer.
 {{% /md %}}</dd>
@@ -2819,7 +1765,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Question<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable security question password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -2828,7 +1774,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Recovery<wbr>Email<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime in minutes of the recovery email token.
 {{% /md %}}</dd>
@@ -2837,7 +1783,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Skip<wbr>Unlock</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When an Active Directory user is locked out of Okta, the Okta unlock operation should also attempt to unlock the user's
 Windows account.
@@ -2847,7 +1793,7 @@ Windows account.
             title="Optional">
         <span>Sms<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable SMS password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -2856,7 +1802,7 @@ Windows account.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -2872,7 +1818,7 @@ Windows account.
             title="Optional">
         <span>auth<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication Provider: OKTA or ACTIVE_DIRECTORY.
 {{% /md %}}</dd>
@@ -2881,7 +1827,7 @@ Windows account.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description
 {{% /md %}}</dd>
@@ -2890,7 +1836,7 @@ Windows account.
             title="Optional">
         <span>email<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable email password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -2899,7 +1845,7 @@ Windows account.
             title="Optional">
         <span>groups<wbr>Includeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include
 {{% /md %}}</dd>
@@ -2908,7 +1854,7 @@ Windows account.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name
 {{% /md %}}</dd>
@@ -2917,7 +1863,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Auto<wbr>Unlock<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of minutes before a locked account is unlocked: 0 = no limit.
 {{% /md %}}</dd>
@@ -2926,7 +1872,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Dictionary<wbr>Lookup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Check Passwords Against Common Password Dictionary.
 {{% /md %}}</dd>
@@ -2935,7 +1881,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Exclude<wbr>First<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}User firstName attribute must be excluded from the password
 {{% /md %}}</dd>
@@ -2944,7 +1890,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Exclude<wbr>Last<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}User lastName attribute must be excluded from the password
 {{% /md %}}</dd>
@@ -2953,7 +1899,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Exclude<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the user name must be excluded from the password.
 {{% /md %}}</dd>
@@ -2962,7 +1908,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Expire<wbr>Warn<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length in days a user will be warned before password expiry: 0 = no warning.
 {{% /md %}}</dd>
@@ -2971,7 +1917,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>History<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of distinct passwords that must be created before they can be reused: 0 = none.
 {{% /md %}}</dd>
@@ -2980,7 +1926,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Max<wbr>Age<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.
 {{% /md %}}</dd>
@@ -2989,7 +1935,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Max<wbr>Lockout<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 {{% /md %}}</dd>
@@ -2998,7 +1944,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Min<wbr>Age<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum time interval in minutes between password changes: 0 = no limit.
 {{% /md %}}</dd>
@@ -3007,7 +1953,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum password length.
 {{% /md %}}</dd>
@@ -3016,7 +1962,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Min<wbr>Lowercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one lower case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -3025,7 +1971,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Min<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one number: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -3034,7 +1980,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Min<wbr>Symbol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one symbol (!@#$%^&*): 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -3043,7 +1989,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Min<wbr>Uppercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If a password must contain at least one upper case letter: 0 = no, 1 = yes. Default = 1
 {{% /md %}}</dd>
@@ -3052,7 +1998,7 @@ Windows account.
             title="Optional">
         <span>password<wbr>Show<wbr>Lockout<wbr>Failures</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a user should be informed when their account is locked.
 {{% /md %}}</dd>
@@ -3061,7 +2007,7 @@ Windows account.
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid
 priority is provided. API defaults it to the last/lowest if not there.
@@ -3071,7 +2017,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>question<wbr>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Min length of the password recovery question answer.
 {{% /md %}}</dd>
@@ -3080,7 +2026,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>question<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable security question password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -3089,7 +2035,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>recovery<wbr>Email<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime in minutes of the recovery email token.
 {{% /md %}}</dd>
@@ -3098,7 +2044,7 @@ priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>skip<wbr>Unlock</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When an Active Directory user is locked out of Okta, the Okta unlock operation should also attempt to unlock the user's
 Windows account.
@@ -3108,7 +2054,7 @@ Windows account.
             title="Optional">
         <span>sms<wbr>Recovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable SMS password recovery: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -3117,7 +2063,7 @@ Windows account.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
