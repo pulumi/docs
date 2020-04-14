@@ -449,7 +449,7 @@ For more information, see <a class="reference external" href="https://www.alibab
 
 <dl class="class">
 <dt id="pulumi_alicloud.kvstore.Instance">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_renew=None</em>, <em class="sig-param">auto_renew_period=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">backup_id=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">maintain_end_time=None</em>, <em class="sig-param">maintain_start_time=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">security_ips=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_auth_mode=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kvstore.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_renew=None</em>, <em class="sig-param">auto_renew_period=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">backup_id=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">maintain_end_time=None</em>, <em class="sig-param">maintain_start_time=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">security_ips=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_auth_mode=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ApsaraDB Redis / Memcache instance resource. A DB instance is an isolated database environment in the cloud. It can be associated with IP whitelists and backup configuration which are separate resource providers.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_instance.html.markdown</a>.</p>
@@ -481,6 +481,18 @@ For more information, see <a class="reference external" href="https://www.alibab
 <li><p><strong>maintain_start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time).</p></li>
 <li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set of parameters needs to be set after instance was launched. Available parameters can refer to the latest docs <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/61209.htm">Instance configurations table</a> .</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration that you will buy DB instance (in month). It is valid when instance_charge_type is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Valid values: [1~9], 12, 24, 36. Default to 1.</p></li>
+<li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Security Group ID of ECS.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `private_ip`- (Optional) Set the instance&#39;s private IP.
+* `backup_id`- (Optional) If an instance created based on a backup set generated by another instance is valid, this parameter indicates the ID of the generated backup set.
+* `vpc_auth_mode`- (Optional) Only meaningful if instance_type is `Redis` and network type is VPC. Valid values are `Close`, `Open`. Defaults to `Open`.  `Close` means the redis instance can be accessed without authentication. `Open` means authentication is required.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of VSwitch.</p></li>
 </ul>
@@ -488,9 +500,6 @@ For more information, see <a class="reference external" href="https://www.alibab
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `engine_version`- (Optional, ForceNew) Engine version. Supported values: 2.8, 4.0 and 5.0. Default value: 2.8. Only 2.8 can be supported for Memcache Instance.
 * `security_ips`- (Optional) Set the instance&#39;s IP whitelist of the default security group.
-* `private_ip`- (Optional) Set the instance&#39;s private IP.
-* `backup_id`- (Optional) If an instance created based on a backup set generated by another instance is valid, this parameter indicates the ID of the generated backup set.
-* `vpc_auth_mode`- (Optional) Only meaningful if instance_type is `Redis` and network type is VPC. Valid values are `Close`, `Open`. Defaults to `Open`.  `Close` means the redis instance can be accessed without authentication. `Open` means authentication is required.
 </pre></div>
 </div>
 <p>The <strong>parameters</strong> object supports the following:</p>
@@ -584,6 +593,17 @@ For more information, see <a class="reference external" href="https://www.alibab
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_alicloud.kvstore.Instance.security_group_id">
+<code class="sig-name descname">security_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.Instance.security_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Security Group ID of ECS.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code>- (Optional) Set the instance’s private IP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backup_id</span></code>- (Optional) If an instance created based on a backup set generated by another instance is valid, this parameter indicates the ID of the generated backup set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_auth_mode</span></code>- (Optional) Only meaningful if instance_type is <code class="docutils literal notranslate"><span class="pre">Redis</span></code> and network type is VPC. Valid values are <code class="docutils literal notranslate"><span class="pre">Close</span></code>, <code class="docutils literal notranslate"><span class="pre">Open</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Open</span></code>.  <code class="docutils literal notranslate"><span class="pre">Close</span></code> means the redis instance can be accessed without authentication. <code class="docutils literal notranslate"><span class="pre">Open</span></code> means authentication is required.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_alicloud.kvstore.Instance.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kvstore.Instance.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
@@ -596,15 +616,12 @@ For more information, see <a class="reference external" href="https://www.alibab
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">engine_version</span></code>- (Optional, ForceNew) Engine version. Supported values: 2.8, 4.0 and 5.0. Default value: 2.8. Only 2.8 can be supported for Memcache Instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">security_ips</span></code>- (Optional) Set the instance’s IP whitelist of the default security group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_ip</span></code>- (Optional) Set the instance’s private IP.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backup_id</span></code>- (Optional) If an instance created based on a backup set generated by another instance is valid, this parameter indicates the ID of the generated backup set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vpc_auth_mode</span></code>- (Optional) Only meaningful if instance_type is <code class="docutils literal notranslate"><span class="pre">Redis</span></code> and network type is VPC. Valid values are <code class="docutils literal notranslate"><span class="pre">Close</span></code>, <code class="docutils literal notranslate"><span class="pre">Open</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Open</span></code>.  <code class="docutils literal notranslate"><span class="pre">Close</span></code> means the redis instance can be accessed without authentication. <code class="docutils literal notranslate"><span class="pre">Open</span></code> means authentication is required.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_alicloud.kvstore.Instance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_renew=None</em>, <em class="sig-param">auto_renew_period=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">backup_id=None</em>, <em class="sig-param">connection_domain=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">maintain_end_time=None</em>, <em class="sig-param">maintain_start_time=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">security_ips=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_auth_mode=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.Instance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_renew=None</em>, <em class="sig-param">auto_renew_period=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">backup_id=None</em>, <em class="sig-param">connection_domain=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">maintain_end_time=None</em>, <em class="sig-param">maintain_start_time=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">security_ips=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_auth_mode=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kvstore.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -637,6 +654,18 @@ properties used to qualify the lookup.</p>
 <li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Set of parameters needs to be set after instance was launched. Available parameters can refer to the latest docs <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/61209.htm">Instance configurations table</a> .</p>
 </p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration that you will buy DB instance (in month). It is valid when instance_charge_type is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Valid values: [1~9], 12, 24, 36. Default to 1.</p></li>
+<li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Security Group ID of ECS.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `private_ip`- (Optional) Set the instance&#39;s private IP.
+* `backup_id`- (Optional) If an instance created based on a backup set generated by another instance is valid, this parameter indicates the ID of the generated backup set.
+* `vpc_auth_mode`- (Optional) Only meaningful if instance_type is `Redis` and network type is VPC. Valid values are `Close`, `Open`. Defaults to `Open`.  `Close` means the redis instance can be accessed without authentication. `Open` means authentication is required.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of VSwitch.</p></li>
 </ul>
@@ -644,9 +673,6 @@ properties used to qualify the lookup.</p>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `engine_version`- (Optional, ForceNew) Engine version. Supported values: 2.8, 4.0 and 5.0. Default value: 2.8. Only 2.8 can be supported for Memcache Instance.
 * `security_ips`- (Optional) Set the instance&#39;s IP whitelist of the default security group.
-* `private_ip`- (Optional) Set the instance&#39;s private IP.
-* `backup_id`- (Optional) If an instance created based on a backup set generated by another instance is valid, this parameter indicates the ID of the generated backup set.
-* `vpc_auth_mode`- (Optional) Only meaningful if instance_type is `Redis` and network type is VPC. Valid values are `Close`, `Open`. Defaults to `Open`.  `Close` means the redis instance can be accessed without authentication. `Open` means authentication is required.
 </pre></div>
 </div>
 <p>The <strong>parameters</strong> object supports the following:</p>

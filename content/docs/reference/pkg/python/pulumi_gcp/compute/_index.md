@@ -353,6 +353,8 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.</p></li>
 ‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the managed instance group that this autoscaler will scale.</p></li>
 <li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the zone where the instance group resides.</p></li>
 </ul>
@@ -436,6 +438,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.compute.Autoscalar.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Autoscalar.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.compute.Autoscalar.self_link">
 <code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Autoscalar.self_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URI of the created resource.</p>
@@ -473,6 +482,8 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.</p></li>
 ‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
 <li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the managed instance group that this autoscaler will scale.</p></li>
 <li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the zone where the instance group resides.</p></li>
@@ -527,6 +538,240 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_gcp.compute.Autoscalar.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Autoscalar.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.compute.Autoscaler">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">Autoscaler</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling_policy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">target=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Autoscaler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents an Autoscaler resource.</p>
+<p>Autoscalers allow you to automatically scale virtual machine instances in
+managed instance groups according to an autoscaling policy that you
+define.</p>
+<p>To get more information about Autoscaler, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/autoscalers">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/compute/docs/autoscaler/">Autoscaling Groups of Instances</a></p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_autoscaler.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_autoscaler.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>autoscaling_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
+autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the
+default will be to autoscale based on cpuUtilization to 0.6 or 60%.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the resource. The name must be 1-63 characters long and match the regular expression
+‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the managed instance group that this autoscaler will scale.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the zone where the instance group resides.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>autoscaling_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cooldownPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancingUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.Autoscaler.autoscaling_policy">
+<code class="sig-name descname">autoscaling_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Autoscaler.autoscaling_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
+autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the
+default will be to autoscale based on cpuUtilization to 0.6 or 60%.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cooldownPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancingUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metrics</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.Autoscaler.creation_timestamp">
+<code class="sig-name descname">creation_timestamp</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Autoscaler.creation_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creation timestamp in RFC3339 text format.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.Autoscaler.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Autoscaler.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional description of this resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.Autoscaler.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Autoscaler.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the resource. The name must be 1-63 characters long and match the regular expression
+‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.Autoscaler.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Autoscaler.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.Autoscaler.self_link">
+<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Autoscaler.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URI of the created resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.Autoscaler.target">
+<code class="sig-name descname">target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Autoscaler.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL of the managed instance group that this autoscaler will scale.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.Autoscaler.zone">
+<code class="sig-name descname">zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Autoscaler.zone" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL of the zone where the instance group resides.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.Autoscaler.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling_policy=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">target=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Autoscaler.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Autoscaler resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>autoscaling_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
+autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the
+default will be to autoscale based on cpuUtilization to 0.6 or 60%.</p></li>
+<li><p><strong>creation_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creation timestamp in RFC3339 text format.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the resource. The name must be 1-63 characters long and match the regular expression
+‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
+<li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the managed instance group that this autoscaler will scale.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the zone where the instance group resides.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>autoscaling_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cooldownPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancingUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minReplicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.Autoscaler.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Autoscaler.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.Autoscaler.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Autoscaler.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -5947,85 +6192,156 @@ Structure is documented below.
 </dl>
 <p>The <strong>attached_disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeyRaw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name with which the attached disk will be accessible
+under <code class="docutils literal notranslate"><span class="pre">/dev/disk/by-id/google-*</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeyRaw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A 256-bit [customer-supplied encryption key]
+(<a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-supplied-encryption">https://cloud.google.com/compute/docs/disks/customer-supplied-encryption</a>),
+encoded in <a class="reference external" href="https://tools.ietf.org/html/rfc4648#section-4">RFC 4648 base64</a>
+to encrypt this disk. Only one of <code class="docutils literal notranslate"><span class="pre">kms_key_self_link</span></code> and <code class="docutils literal notranslate"><span class="pre">disk_encryption_key_raw</span></code> may be set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeySha256</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The self_link of the encryption key that is
+stored in Google Cloud KMS to encrypt this disk. Only one of <code class="docutils literal notranslate"><span class="pre">kms_key_self_link</span></code>
+and <code class="docutils literal notranslate"><span class="pre">disk_encryption_key_raw</span></code> may be set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Either “READ_ONLY” or “READ_WRITE”, defaults to “READ_WRITE”
+If you have a persistent disk with data that you want to share
+between multiple instances, detach it from any read-write instances and
+attach it to one or more instances in read-only mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name or self_link of the disk to attach to this instance.</p></li>
 </ul>
 <p>The <strong>boot_disk</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeyRaw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the disk will be auto-deleted when the instance
+is deleted. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name with which the attached disk will be accessible
+under <code class="docutils literal notranslate"><span class="pre">/dev/disk/by-id/google-*</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeyRaw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A 256-bit [customer-supplied encryption key]
+(<a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-supplied-encryption">https://cloud.google.com/compute/docs/disks/customer-supplied-encryption</a>),
+encoded in <a class="reference external" href="https://tools.ietf.org/html/rfc4648#section-4">RFC 4648 base64</a>
+to encrypt this disk. Only one of <code class="docutils literal notranslate"><span class="pre">kms_key_self_link</span></code> and <code class="docutils literal notranslate"><span class="pre">disk_encryption_key_raw</span></code> may be set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeySha256</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initializeParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">initializeParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Parameters for a new disk that will be created
+alongside the new instance. Either <code class="docutils literal notranslate"><span class="pre">initialize_params</span></code> or <code class="docutils literal notranslate"><span class="pre">source</span></code> must be set.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The image from which to initialize this disk. This can be
+one of: the image’s <code class="docutils literal notranslate"><span class="pre">self_link</span></code>, <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/{image}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">global/images/{image}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">{project}/{family}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">{project}/{image}</span></code>, <code class="docutils literal notranslate"><span class="pre">{family}</span></code>, or <code class="docutils literal notranslate"><span class="pre">{image}</span></code>. If referred by family, the
+images names must include the family name. If they don’t, use the
+<a class="reference external" href="https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html">compute.Image data source</a>.
+For instance, the image <code class="docutils literal notranslate"><span class="pre">centos-6-v20180104</span></code> includes its family name <code class="docutils literal notranslate"><span class="pre">centos-6</span></code>.
+These images can be referred by family name here.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of key/value label pairs to assign to the instance.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the image in gigabytes. If not specified, it
+will inherit the size of its base image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The self_link of the encryption key that is
+stored in Google Cloud KMS to encrypt this disk. Only one of <code class="docutils literal notranslate"><span class="pre">kms_key_self_link</span></code>
+and <code class="docutils literal notranslate"><span class="pre">disk_encryption_key_raw</span></code> may be set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Either “READ_ONLY” or “READ_WRITE”, defaults to “READ_WRITE”
+If you have a persistent disk with data that you want to share
+between multiple instances, detach it from any read-write instances and
+attach it to one or more instances in read-only mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name or self_link of the disk to attach to this instance.</p></li>
 </ul>
 <p>The <strong>guest_accelerators</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of the guest accelerator cards exposed to this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Access configurations, i.e. IPs via which this
+instance can be accessed via the Internet. Omit to ensure that the instance
+is not accessible from the Internet. If omitted, ssh will not
+work unless this provider can send traffic to the instance’s network (e.g. via
+tunnel or because it is running on another cloud instance on that network).
+This block can be repeated multiple times. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">natIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network_tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicPtrDomainName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">natIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address that will be 1:1 mapped to the instance’s
+network ip. If not given, one will be generated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The [networking tier][network-tier] used for configuring this instance.
+This field can take the following values: PREMIUM or STANDARD. If this field is
+not specified, it is assumed to be PREMIUM.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicPtrDomainName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DNS domain name for the public PTR record.
+To set this field on an instance, you must be verified as the owner of the domain.
+See <a class="reference external" href="https://cloud.google.com/compute/docs/instances/create-ptr-record">the docs</a> for how
+to become verified as a domain owner.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">aliasIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">aliasIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An
+array of alias IP ranges for this network interface. Can only be specified for network
+interfaces on subnet-mode networks. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_cidr_range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_cidr_range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP CIDR range represented by this alias IP range. This IP CIDR range
+must belong to the specified subnetwork and cannot contain IP addresses reserved by
+system or used by other network interfaces. This range may be a single IP address
+(e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnetwork secondary range name specifying
+the secondary range from which to allocate the IP CIDR range for this alias IP
+range. If left unspecified, the primary range of the subnetwork will be used.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkProject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name or self_link of the network to attach this interface to.
+Either <code class="docutils literal notranslate"><span class="pre">network</span></code> or <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> must be provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address to assign to the instance. If
+empty, the address will be automatically assigned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name or self_link of the subnetwork to attach this
+interface to. The subnetwork must exist in the same region this instance will be
+created in. Either <code class="docutils literal notranslate"><span class="pre">network</span></code> or <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> must be provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkProject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The project in which the subnetwork belongs.
+If the <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> is a self_link, this field is ignored in favor of the project
+defined in the subnetwork self_link. If the <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> is a name and this
+field is not provided, the provider project is used.</p></li>
 </ul>
 <p>The <strong>scheduling</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if the instance should be
+restarted if it was terminated by Compute Engine (not a user).
+Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies node affinities or anti-affinities
+to determine which sole-tenant nodes your instances and managed instance
+groups will use as host systems. Read more on sole-tenant node creation
+<a class="reference external" href="https://cloud.google.com/compute/docs/nodes/create-nodes">here</a>.
+Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The key for the node affinity label.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator. Can be <code class="docutils literal notranslate"><span class="pre">IN</span></code> for node-affinities
+or <code class="docutils literal notranslate"><span class="pre">NOT_IN</span></code> for anti-affinities.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">onHostMaintenance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onHostMaintenance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes maintenance behavior for the
+instance. Can be MIGRATE or TERMINATE, for more info, read
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if the instance is preemptible.
+If this field is set to true, then <code class="docutils literal notranslate"><span class="pre">automatic_restart</span></code> must be
+set to false.  Defaults to false.</p></li>
 </ul>
 <p>The <strong>scratch_disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The disk interface to use for attaching this disk; either SCSI or NVME.</p></li>
 </ul>
 <p>The <strong>service_account</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service account e-mail address. If not given, the
+default Google Compute Engine service account is used.
+<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true or your instance must have a <code class="docutils literal notranslate"><span class="pre">desired_status</span></code> of <code class="docutils literal notranslate"><span class="pre">TERMINATED</span></code> in order to update this field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of service scopes. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+<code class="docutils literal notranslate"><span class="pre">cloud-platform</span></code> scope. See a complete list of scopes <a class="reference external" href="https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes">here</a>.
+<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true or your instance must have a <code class="docutils literal notranslate"><span class="pre">desired_status</span></code> of <code class="docutils literal notranslate"><span class="pre">TERMINATED</span></code> in order to update this field.</p></li>
 </ul>
 <p>The <strong>shielded_instance_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableVtpm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - – Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - – Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableVtpm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - – Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Instance.allow_stopping_for_update">
@@ -6039,12 +6355,21 @@ If you try to update a property that requires stopping the instance without sett
 <code class="sig-name descname">attached_disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Instance.attached_disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeyRaw</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name with which the attached disk will be accessible
+under <code class="docutils literal notranslate"><span class="pre">/dev/disk/by-id/google-*</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeyRaw</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A 256-bit [customer-supplied encryption key]
+(<a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-supplied-encryption">https://cloud.google.com/compute/docs/disks/customer-supplied-encryption</a>),
+encoded in <a class="reference external" href="https://tools.ietf.org/html/rfc4648#section-4">RFC 4648 base64</a>
+to encrypt this disk. Only one of <code class="docutils literal notranslate"><span class="pre">kms_key_self_link</span></code> and <code class="docutils literal notranslate"><span class="pre">disk_encryption_key_raw</span></code> may be set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeySha256</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The self_link of the encryption key that is
+stored in Google Cloud KMS to encrypt this disk. Only one of <code class="docutils literal notranslate"><span class="pre">kms_key_self_link</span></code>
+and <code class="docutils literal notranslate"><span class="pre">disk_encryption_key_raw</span></code> may be set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Either “READ_ONLY” or “READ_WRITE”, defaults to “READ_WRITE”
+If you have a persistent disk with data that you want to share
+between multiple instances, detach it from any read-write instances and
+attach it to one or more instances in read-only mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name or self_link of the disk to attach to this instance.</p></li>
 </ul>
 </dd></dl>
 
@@ -6054,21 +6379,42 @@ If you try to update a property that requires stopping the instance without sett
 <dd><p>The boot disk for the instance.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeyRaw</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the disk will be auto-deleted when the instance
+is deleted. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name with which the attached disk will be accessible
+under <code class="docutils literal notranslate"><span class="pre">/dev/disk/by-id/google-*</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeyRaw</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A 256-bit [customer-supplied encryption key]
+(<a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-supplied-encryption">https://cloud.google.com/compute/docs/disks/customer-supplied-encryption</a>),
+encoded in <a class="reference external" href="https://tools.ietf.org/html/rfc4648#section-4">RFC 4648 base64</a>
+to encrypt this disk. Only one of <code class="docutils literal notranslate"><span class="pre">kms_key_self_link</span></code> and <code class="docutils literal notranslate"><span class="pre">disk_encryption_key_raw</span></code> may be set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeySha256</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initializeParams</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">initializeParams</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Parameters for a new disk that will be created
+alongside the new instance. Either <code class="docutils literal notranslate"><span class="pre">initialize_params</span></code> or <code class="docutils literal notranslate"><span class="pre">source</span></code> must be set.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The image from which to initialize this disk. This can be
+one of: the image’s <code class="docutils literal notranslate"><span class="pre">self_link</span></code>, <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/{image}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">global/images/{image}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">{project}/{family}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">{project}/{image}</span></code>, <code class="docutils literal notranslate"><span class="pre">{family}</span></code>, or <code class="docutils literal notranslate"><span class="pre">{image}</span></code>. If referred by family, the
+images names must include the family name. If they don’t, use the
+<a class="reference external" href="https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html">compute.Image data source</a>.
+For instance, the image <code class="docutils literal notranslate"><span class="pre">centos-6-v20180104</span></code> includes its family name <code class="docutils literal notranslate"><span class="pre">centos-6</span></code>.
+These images can be referred by family name here.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of key/value label pairs to assign to the instance.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the image in gigabytes. If not specified, it
+will inherit the size of its base image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The self_link of the encryption key that is
+stored in Google Cloud KMS to encrypt this disk. Only one of <code class="docutils literal notranslate"><span class="pre">kms_key_self_link</span></code>
+and <code class="docutils literal notranslate"><span class="pre">disk_encryption_key_raw</span></code> may be set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Either “READ_ONLY” or “READ_WRITE”, defaults to “READ_WRITE”
+If you have a persistent disk with data that you want to share
+between multiple instances, detach it from any read-write instances and
+attach it to one or more instances in read-only mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name or self_link of the disk to attach to this instance.</p></li>
 </ul>
 </dd></dl>
 
@@ -6119,8 +6465,8 @@ This defaults to false.</p>
 <dd><p>List of the type and count of accelerator cards attached to the instance. Structure documented below.
 <strong>Note:</strong> GPU accelerators can only be used with <code class="docutils literal notranslate"><span class="pre">on_host_maintenance</span></code> option set to TERMINATE.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of the guest accelerator cards exposed to this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -6207,25 +6553,50 @@ Changing this forces a new resource to be created.</p>
 <dd><p>Networks to attach to the instance. This can
 be specified multiple times. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Access configurations, i.e. IPs via which this
+instance can be accessed via the Internet. Omit to ensure that the instance
+is not accessible from the Internet. If omitted, ssh will not
+work unless this provider can send traffic to the instance’s network (e.g. via
+tunnel or because it is running on another cloud instance on that network).
+This block can be repeated multiple times. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">natIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network_tier</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicPtrDomainName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">natIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP address that will be 1:1 mapped to the instance’s
+network ip. If not given, one will be generated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_tier</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The [networking tier][network-tier] used for configuring this instance.
+This field can take the following values: PREMIUM or STANDARD. If this field is
+not specified, it is assumed to be PREMIUM.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicPtrDomainName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The DNS domain name for the public PTR record.
+To set this field on an instance, you must be verified as the owner of the domain.
+See <a class="reference external" href="https://cloud.google.com/compute/docs/instances/create-ptr-record">the docs</a> for how
+to become verified as a domain owner.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">aliasIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">aliasIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An
+array of alias IP ranges for this network interface. Can only be specified for network
+interfaces on subnet-mode networks. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_cidr_range</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_cidr_range</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP CIDR range represented by this alias IP range. This IP CIDR range
+must belong to the specified subnetwork and cannot contain IP addresses reserved by
+system or used by other network interfaces. This range may be a single IP address
+(e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The subnetwork secondary range name specifying
+the secondary range from which to allocate the IP CIDR range for this alias IP
+range. If left unspecified, the primary range of the subnetwork will be used.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkProject</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name or self_link of the network to attach this interface to.
+Either <code class="docutils literal notranslate"><span class="pre">network</span></code> or <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> must be provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address to assign to the instance. If
+empty, the address will be automatically assigned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name or self_link of the subnetwork to attach this
+interface to. The subnetwork must exist in the same region this instance will be
+created in. Either <code class="docutils literal notranslate"><span class="pre">network</span></code> or <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> must be provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkProject</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The project in which the subnetwork belongs.
+If the <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> is a self_link, this field is ignored in favor of the project
+defined in the subnetwork self_link. If the <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> is a name and this
+field is not provided, the provider project is used.</p></li>
 </ul>
 </dd></dl>
 
@@ -6242,16 +6613,27 @@ is not provided, the provider project is used.</p>
 <dd><p>The scheduling strategy to use. More details about
 this configuration option are detailed below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if the instance should be
+restarted if it was terminated by Compute Engine (not a user).
+Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies node affinities or anti-affinities
+to determine which sole-tenant nodes your instances and managed instance
+groups will use as host systems. Read more on sole-tenant node creation
+<a class="reference external" href="https://cloud.google.com/compute/docs/nodes/create-nodes">here</a>.
+Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The key for the node affinity label.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator. Can be <code class="docutils literal notranslate"><span class="pre">IN</span></code> for node-affinities
+or <code class="docutils literal notranslate"><span class="pre">NOT_IN</span></code> for anti-affinities.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">onHostMaintenance</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onHostMaintenance</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Describes maintenance behavior for the
+instance. Can be MIGRATE or TERMINATE, for more info, read
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if the instance is preemptible.
+If this field is set to true, then <code class="docutils literal notranslate"><span class="pre">automatic_restart</span></code> must be
+set to false.  Defaults to false.</p></li>
 </ul>
 </dd></dl>
 
@@ -6261,7 +6643,7 @@ this configuration option are detailed below.</p>
 <dd><p>Scratch disks to attach to the instance. This can be
 specified multiple times for multiple scratch disks. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The disk interface to use for attaching this disk; either SCSI or NVME.</p></li>
 </ul>
 </dd></dl>
 
@@ -6278,8 +6660,13 @@ specified multiple times for multiple scratch disks. Structure is documented bel
 Structure is documented below.
 <strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true or your instance must have a <code class="docutils literal notranslate"><span class="pre">desired_status</span></code> of <code class="docutils literal notranslate"><span class="pre">TERMINATED</span></code> in order to update this field.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The service account e-mail address. If not given, the
+default Google Compute Engine service account is used.
+<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true or your instance must have a <code class="docutils literal notranslate"><span class="pre">desired_status</span></code> of <code class="docutils literal notranslate"><span class="pre">TERMINATED</span></code> in order to update this field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of service scopes. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+<code class="docutils literal notranslate"><span class="pre">cloud-platform</span></code> scope. See a complete list of scopes <a class="reference external" href="https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes">here</a>.
+<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true or your instance must have a <code class="docutils literal notranslate"><span class="pre">desired_status</span></code> of <code class="docutils literal notranslate"><span class="pre">TERMINATED</span></code> in order to update this field.</p></li>
 </ul>
 </dd></dl>
 
@@ -6289,9 +6676,9 @@ Structure is documented below.
 <dd><p>Enable <a class="reference external" href="https://cloud.google.com/security/shielded-cloud/shielded-vm">Shielded VM</a> on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 <strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> can only be used with boot images with shielded vm support. See the complete list <a class="reference external" href="https://cloud.google.com/compute/docs/images#shielded-images">here</a>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableVtpm</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - – Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - – Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableVtpm</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - – Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.</p></li>
 </ul>
 </dd></dl>
 
@@ -6394,85 +6781,156 @@ Structure is documented below.
 </dl>
 <p>The <strong>attached_disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeyRaw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name with which the attached disk will be accessible
+under <code class="docutils literal notranslate"><span class="pre">/dev/disk/by-id/google-*</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeyRaw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A 256-bit [customer-supplied encryption key]
+(<a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-supplied-encryption">https://cloud.google.com/compute/docs/disks/customer-supplied-encryption</a>),
+encoded in <a class="reference external" href="https://tools.ietf.org/html/rfc4648#section-4">RFC 4648 base64</a>
+to encrypt this disk. Only one of <code class="docutils literal notranslate"><span class="pre">kms_key_self_link</span></code> and <code class="docutils literal notranslate"><span class="pre">disk_encryption_key_raw</span></code> may be set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeySha256</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The self_link of the encryption key that is
+stored in Google Cloud KMS to encrypt this disk. Only one of <code class="docutils literal notranslate"><span class="pre">kms_key_self_link</span></code>
+and <code class="docutils literal notranslate"><span class="pre">disk_encryption_key_raw</span></code> may be set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Either “READ_ONLY” or “READ_WRITE”, defaults to “READ_WRITE”
+If you have a persistent disk with data that you want to share
+between multiple instances, detach it from any read-write instances and
+attach it to one or more instances in read-only mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name or self_link of the disk to attach to this instance.</p></li>
 </ul>
 <p>The <strong>boot_disk</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeyRaw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the disk will be auto-deleted when the instance
+is deleted. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name with which the attached disk will be accessible
+under <code class="docutils literal notranslate"><span class="pre">/dev/disk/by-id/google-*</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeyRaw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A 256-bit [customer-supplied encryption key]
+(<a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-supplied-encryption">https://cloud.google.com/compute/docs/disks/customer-supplied-encryption</a>),
+encoded in <a class="reference external" href="https://tools.ietf.org/html/rfc4648#section-4">RFC 4648 base64</a>
+to encrypt this disk. Only one of <code class="docutils literal notranslate"><span class="pre">kms_key_self_link</span></code> and <code class="docutils literal notranslate"><span class="pre">disk_encryption_key_raw</span></code> may be set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKeySha256</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initializeParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">initializeParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Parameters for a new disk that will be created
+alongside the new instance. Either <code class="docutils literal notranslate"><span class="pre">initialize_params</span></code> or <code class="docutils literal notranslate"><span class="pre">source</span></code> must be set.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The image from which to initialize this disk. This can be
+one of: the image’s <code class="docutils literal notranslate"><span class="pre">self_link</span></code>, <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/{image}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">global/images/{image}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">{project}/{family}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">{project}/{image}</span></code>, <code class="docutils literal notranslate"><span class="pre">{family}</span></code>, or <code class="docutils literal notranslate"><span class="pre">{image}</span></code>. If referred by family, the
+images names must include the family name. If they don’t, use the
+<a class="reference external" href="https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html">compute.Image data source</a>.
+For instance, the image <code class="docutils literal notranslate"><span class="pre">centos-6-v20180104</span></code> includes its family name <code class="docutils literal notranslate"><span class="pre">centos-6</span></code>.
+These images can be referred by family name here.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of key/value label pairs to assign to the instance.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the image in gigabytes. If not specified, it
+will inherit the size of its base image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The self_link of the encryption key that is
+stored in Google Cloud KMS to encrypt this disk. Only one of <code class="docutils literal notranslate"><span class="pre">kms_key_self_link</span></code>
+and <code class="docutils literal notranslate"><span class="pre">disk_encryption_key_raw</span></code> may be set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Either “READ_ONLY” or “READ_WRITE”, defaults to “READ_WRITE”
+If you have a persistent disk with data that you want to share
+between multiple instances, detach it from any read-write instances and
+attach it to one or more instances in read-only mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name or self_link of the disk to attach to this instance.</p></li>
 </ul>
 <p>The <strong>guest_accelerators</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of the guest accelerator cards exposed to this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Access configurations, i.e. IPs via which this
+instance can be accessed via the Internet. Omit to ensure that the instance
+is not accessible from the Internet. If omitted, ssh will not
+work unless this provider can send traffic to the instance’s network (e.g. via
+tunnel or because it is running on another cloud instance on that network).
+This block can be repeated multiple times. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">natIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network_tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicPtrDomainName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">natIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address that will be 1:1 mapped to the instance’s
+network ip. If not given, one will be generated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The [networking tier][network-tier] used for configuring this instance.
+This field can take the following values: PREMIUM or STANDARD. If this field is
+not specified, it is assumed to be PREMIUM.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicPtrDomainName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DNS domain name for the public PTR record.
+To set this field on an instance, you must be verified as the owner of the domain.
+See <a class="reference external" href="https://cloud.google.com/compute/docs/instances/create-ptr-record">the docs</a> for how
+to become verified as a domain owner.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">aliasIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">aliasIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An
+array of alias IP ranges for this network interface. Can only be specified for network
+interfaces on subnet-mode networks. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_cidr_range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_cidr_range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP CIDR range represented by this alias IP range. This IP CIDR range
+must belong to the specified subnetwork and cannot contain IP addresses reserved by
+system or used by other network interfaces. This range may be a single IP address
+(e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnetwork secondary range name specifying
+the secondary range from which to allocate the IP CIDR range for this alias IP
+range. If left unspecified, the primary range of the subnetwork will be used.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkProject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name or self_link of the network to attach this interface to.
+Either <code class="docutils literal notranslate"><span class="pre">network</span></code> or <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> must be provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address to assign to the instance. If
+empty, the address will be automatically assigned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name or self_link of the subnetwork to attach this
+interface to. The subnetwork must exist in the same region this instance will be
+created in. Either <code class="docutils literal notranslate"><span class="pre">network</span></code> or <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> must be provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkProject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The project in which the subnetwork belongs.
+If the <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> is a self_link, this field is ignored in favor of the project
+defined in the subnetwork self_link. If the <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> is a name and this
+field is not provided, the provider project is used.</p></li>
 </ul>
 <p>The <strong>scheduling</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if the instance should be
+restarted if it was terminated by Compute Engine (not a user).
+Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies node affinities or anti-affinities
+to determine which sole-tenant nodes your instances and managed instance
+groups will use as host systems. Read more on sole-tenant node creation
+<a class="reference external" href="https://cloud.google.com/compute/docs/nodes/create-nodes">here</a>.
+Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The key for the node affinity label.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator. Can be <code class="docutils literal notranslate"><span class="pre">IN</span></code> for node-affinities
+or <code class="docutils literal notranslate"><span class="pre">NOT_IN</span></code> for anti-affinities.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">onHostMaintenance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onHostMaintenance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes maintenance behavior for the
+instance. Can be MIGRATE or TERMINATE, for more info, read
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if the instance is preemptible.
+If this field is set to true, then <code class="docutils literal notranslate"><span class="pre">automatic_restart</span></code> must be
+set to false.  Defaults to false.</p></li>
 </ul>
 <p>The <strong>scratch_disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The disk interface to use for attaching this disk; either SCSI or NVME.</p></li>
 </ul>
 <p>The <strong>service_account</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service account e-mail address. If not given, the
+default Google Compute Engine service account is used.
+<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true or your instance must have a <code class="docutils literal notranslate"><span class="pre">desired_status</span></code> of <code class="docutils literal notranslate"><span class="pre">TERMINATED</span></code> in order to update this field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of service scopes. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+<code class="docutils literal notranslate"><span class="pre">cloud-platform</span></code> scope. See a complete list of scopes <a class="reference external" href="https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes">here</a>.
+<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true or your instance must have a <code class="docutils literal notranslate"><span class="pre">desired_status</span></code> of <code class="docutils literal notranslate"><span class="pre">TERMINATED</span></code> in order to update this field.</p></li>
 </ul>
 <p>The <strong>shielded_instance_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableVtpm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - – Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - – Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableVtpm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - – Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.</p></li>
 </ul>
 </dd></dl>
 
@@ -6805,10 +7263,7 @@ group.</p></li>
 <li><p><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of instances in the group. They should be given
 as self_link URLs. When adding instances they must all be in the same
 network and zone as the instance group.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance group. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name which the port will be mapped to.</p></li>
 <li><p><strong>named_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The named port configuration. See the section below
 for details on configuration.</p></li>
 <li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the network the instance group is in. If
@@ -6823,11 +7278,8 @@ is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>named_ports</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name which the port will be mapped to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number to map the name to.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceGroup.description">
@@ -6847,10 +7299,7 @@ network and zone as the instance group.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceGroup.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroup.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the instance group. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p>
+<dd><p>The name which the port will be mapped to.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6859,11 +7308,8 @@ include lowercase letters, numbers, and hyphens.</p>
 <dd><p>The named port configuration. See the section below
 for details on configuration.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the instance group. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name which the port will be mapped to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port number to map the name to.</p></li>
 </ul>
 </dd></dl>
 
@@ -6917,11 +7363,7 @@ group.</p></li>
 <li><p><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of instances in the group. They should be given
 as self_link URLs. When adding instances they must all be in the same
 network and zone as the instance group.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the instance group. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p>
-</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name which the port will be mapped to.</p></li>
 <li><p><strong>named_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The named port configuration. See the section below
 for details on configuration.</p></li>
 <li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the network the instance group is in. If
@@ -6938,11 +7380,8 @@ is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>named_ports</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name which the port will be mapped to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number to map the name to.</p></li>
 </ul>
 </dd></dl>
 
@@ -7003,19 +7442,17 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <li><p><strong>auto_healing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups">official documentation</a>.</p>
 </p></li>
-<li><p><strong>base_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The base instance name to use for
+<li><p><strong>base_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The base instance name to use for
 instances in this group. The value must be a valid
 <a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a> name. Supported characters
 are lowercase letters, numbers, and hyphens (-). Instances are named by
 appending a hyphen and a random four-character string to the base instance
-name.</p>
-</p></li>
+name.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional textual description of the instance
 group manager.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
+<li><p>Version name.</p></li>
+</ul>
 </p></li>
 <li><p><strong>named_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The named port configuration. See the section below
 for details on configuration.</p></li>
@@ -7024,9 +7461,10 @@ is not provided, the provider project is used.</p></li>
 <li><p><strong>target_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.</p></li>
-<li><p><strong>target_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><strong>target_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <ul>
+<li><p>The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</p></li>
+</ul>
+</p></li>
 <li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch">API</a></p>
 </p></li>
 </ul>
@@ -7051,40 +7489,35 @@ in.</p></li>
 </dl>
 <p>The <strong>auto_healing_policies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The health check resource that signals autohealing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds that the managed instance group waits before
+it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.</p></li>
 </ul>
 <p>The <strong>named_ports</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Version name.</p></li>
+<li></li>
 </ul>
 <p>The <strong>update_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailablePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minReadySec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimalAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_surge_percent</span></code>. If neither is set, defaults to 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_surge_fixed</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances that can be unavailable during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_unavailable_percent</span></code>. If neither is set, defaults to 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailablePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_unavailable_fixed</span></code>.</p></li>
+<li></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimalAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Minimal action to be taken on an instance. You can specify either <code class="docutils literal notranslate"><span class="pre">RESTART</span></code> to restart existing instances or <code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> to delete and create new instances from the target template. If you specify a <code class="docutils literal notranslate"><span class="pre">RESTART</span></code>, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - The type of update process. You can specify either <code class="docutils literal notranslate"><span class="pre">PROACTIVE</span></code> so that the instance group manager proactively executes actions in order to bring instances to their target versions or <code class="docutils literal notranslate"><span class="pre">OPPORTUNISTIC</span></code> so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).</p></li>
 </ul>
 <p>The <strong>versions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - The full URL to an instance template from which all new instances of this version will be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Version name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">fixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The number of instances which are managed for this version. Conflicts with <code class="docutils literal notranslate"><span class="pre">percent</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The number of instances (calculated as percentage) which are managed for this version. Conflicts with <code class="docutils literal notranslate"><span class="pre">fixed</span></code>.
+Note that when using <code class="docutils literal notranslate"><span class="pre">percent</span></code>, rounding will be in favor of explicitly set <code class="docutils literal notranslate"><span class="pre">target_size</span></code> values; a managed instance group with 2 instances and 2 <code class="docutils literal notranslate"><span class="pre">version</span></code>s,
+one of which has a <code class="docutils literal notranslate"><span class="pre">target_size.percent</span></code> of <code class="docutils literal notranslate"><span class="pre">60</span></code> will create 2 instances of that <code class="docutils literal notranslate"><span class="pre">version</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -7094,8 +7527,9 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <dd><p>The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups">official documentation</a>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySec</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The health check resource that signals autohealing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySec</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of seconds that the managed instance group waits before
+it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.</p></li>
 </ul>
 </dd></dl>
 
@@ -7132,10 +7566,9 @@ group manager.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceGroupManager.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p>
+<dd><ul class="simple">
+<li><p>Version name.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -7144,11 +7577,8 @@ include lowercase letters, numbers, and hyphens.</p>
 <dd><p>The named port configuration. See the section below
 for details on configuration.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - Version name.</p></li>
+<li></li>
 </ul>
 </dd></dl>
 
@@ -7176,9 +7606,9 @@ not affect existing instances.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceGroupManager.target_size">
 <code class="sig-name descname">target_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.target_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<dd><ul class="simple">
+<li><p>The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -7186,13 +7616,13 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <code class="sig-name descname">update_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.update_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch">API</a></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailablePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minReadySec</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimalAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - , The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_surge_percent</span></code>. If neither is set, defaults to 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - , The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_surge_fixed</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - , The maximum number of instances that can be unavailable during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_unavailable_percent</span></code>. If neither is set, defaults to 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailablePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - , The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_unavailable_fixed</span></code>.</p></li>
+<li></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimalAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - Minimal action to be taken on an instance. You can specify either <code class="docutils literal notranslate"><span class="pre">RESTART</span></code> to restart existing instances or <code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> to delete and create new instances from the target template. If you specify a <code class="docutils literal notranslate"><span class="pre">RESTART</span></code>, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - The type of update process. You can specify either <code class="docutils literal notranslate"><span class="pre">PROACTIVE</span></code> so that the instance group manager proactively executes actions in order to bring instances to their target versions or <code class="docutils literal notranslate"><span class="pre">OPPORTUNISTIC</span></code> so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).</p></li>
 </ul>
 </dd></dl>
 
@@ -7203,17 +7633,14 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_size</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - The full URL to an instance template from which all new instances of this version will be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - Version name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_size</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">fixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - , The number of instances which are managed for this version. Conflicts with <code class="docutils literal notranslate"><span class="pre">percent</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - , The number of instances (calculated as percentage) which are managed for this version. Conflicts with <code class="docutils literal notranslate"><span class="pre">fixed</span></code>.
+Note that when using <code class="docutils literal notranslate"><span class="pre">percent</span></code>, rounding will be in favor of explicitly set <code class="docutils literal notranslate"><span class="pre">target_size</span></code> values; a managed instance group with 2 instances and 2 <code class="docutils literal notranslate"><span class="pre">version</span></code>s,
+one of which has a <code class="docutils literal notranslate"><span class="pre">target_size.percent</span></code> of <code class="docutils literal notranslate"><span class="pre">60</span></code> will create 2 instances of that <code class="docutils literal notranslate"><span class="pre">version</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -7259,10 +7686,9 @@ name.</p>
 group manager.</p></li>
 <li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint of the instance group manager.</p></li>
 <li><p><strong>instance_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full URL of the instance group created by the manager.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
+<li><p>Version name.</p></li>
+</ul>
 </p></li>
 <li><p><strong>named_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The named port configuration. See the section below
 for details on configuration.</p></li>
@@ -7272,9 +7698,10 @@ is not provided, the provider project is used.</p></li>
 <li><p><strong>target_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.</p></li>
-<li><p><strong>target_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><strong>target_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <ul>
+<li><p>The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</p></li>
+</ul>
+</p></li>
 <li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch">API</a></p>
 </p></li>
 </ul>
@@ -7299,40 +7726,35 @@ in.</p></li>
 </dl>
 <p>The <strong>auto_healing_policies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The health check resource that signals autohealing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds that the managed instance group waits before
+it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.</p></li>
 </ul>
 <p>The <strong>named_ports</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Version name.</p></li>
+<li></li>
 </ul>
 <p>The <strong>update_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailablePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minReadySec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimalAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_surge_percent</span></code>. If neither is set, defaults to 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_surge_fixed</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances that can be unavailable during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_unavailable_percent</span></code>. If neither is set, defaults to 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailablePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_unavailable_fixed</span></code>.</p></li>
+<li></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimalAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Minimal action to be taken on an instance. You can specify either <code class="docutils literal notranslate"><span class="pre">RESTART</span></code> to restart existing instances or <code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> to delete and create new instances from the target template. If you specify a <code class="docutils literal notranslate"><span class="pre">RESTART</span></code>, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - The type of update process. You can specify either <code class="docutils literal notranslate"><span class="pre">PROACTIVE</span></code> so that the instance group manager proactively executes actions in order to bring instances to their target versions or <code class="docutils literal notranslate"><span class="pre">OPPORTUNISTIC</span></code> so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).</p></li>
 </ul>
 <p>The <strong>versions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - The full URL to an instance template from which all new instances of this version will be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Version name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">fixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The number of instances which are managed for this version. Conflicts with <code class="docutils literal notranslate"><span class="pre">percent</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The number of instances (calculated as percentage) which are managed for this version. Conflicts with <code class="docutils literal notranslate"><span class="pre">fixed</span></code>.
+Note that when using <code class="docutils literal notranslate"><span class="pre">percent</span></code>, rounding will be in favor of explicitly set <code class="docutils literal notranslate"><span class="pre">target_size</span></code> values; a managed instance group with 2 instances and 2 <code class="docutils literal notranslate"><span class="pre">version</span></code>s,
+one of which has a <code class="docutils literal notranslate"><span class="pre">target_size.percent</span></code> of <code class="docutils literal notranslate"><span class="pre">60</span></code> will create 2 instances of that <code class="docutils literal notranslate"><span class="pre">version</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -7359,6 +7781,130 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_gcp.compute.InstanceGroupManager.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.compute.InstanceGroupNamedPort">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceGroupNamedPort</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupNamedPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mange the named ports setting for a managed instance group without
+managing the group as whole. This resource is primarily intended for use
+with GKE-generated groups that shouldn’t otherwise be managed by other
+tools.</p>
+<p>To get more information about InstanceGroupNamedPort, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroup">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_group_named_port.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_group_named_port.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance group.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port number, which can be a value between 1 and 65535.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone of the instance group.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.InstanceGroupNamedPort.group">
+<code class="sig-name descname">group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupNamedPort.group" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the instance group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.InstanceGroupNamedPort.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupNamedPort.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.InstanceGroupNamedPort.port">
+<code class="sig-name descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupNamedPort.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port number, which can be a value between 1 and 65535.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.InstanceGroupNamedPort.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupNamedPort.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.InstanceGroupNamedPort.zone">
+<code class="sig-name descname">zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupNamedPort.zone" title="Permalink to this definition">¶</a></dt>
+<dd><p>The zone of the instance group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.InstanceGroupNamedPort.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupNamedPort.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing InstanceGroupNamedPort resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance group.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port number, which can be a value between 1 and 65535.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone of the instance group.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.InstanceGroupNamedPort.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupNamedPort.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.InstanceGroupNamedPort.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupNamedPort.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -7411,9 +7957,9 @@ zone is specified, it is taken from the provider configuration.</p></li>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMBinding.condition">
@@ -7421,9 +7967,9 @@ zone is specified, it is taken from the provider configuration.</p></li>
 <dd><p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </dd></dl>
 
@@ -7491,9 +8037,9 @@ zone is specified, it is taken from the provider configuration.</p></li>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </dd></dl>
 
@@ -7571,9 +8117,9 @@ zone is specified, it is taken from the provider configuration.</p></li>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMMember.condition">
@@ -7581,9 +8127,9 @@ zone is specified, it is taken from the provider configuration.</p></li>
 <dd><p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </dd></dl>
 
@@ -7651,9 +8197,9 @@ zone is specified, it is taken from the provider configuration.</p></li>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </dd></dl>
 
@@ -7888,75 +8434,126 @@ this configuration option are detailed below.</p></li>
 </dl>
 <p>The <strong>disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">boot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not the disk should be auto-deleted.
+This defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates that this is a boot disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique device name that is reflected into the
+/dev/  tree of a Linux operating system running within the instance. If not
+specified, the server chooses a default device name to apply to this disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Encrypts or decrypts a disk using a customer-supplied encryption key.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The self link of the encryption key that is stored in Google Cloud KMS</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the disk. When not provided, this defaults
+to the name of the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the image in gigabytes. If not
+specified, it will inherit the size of its base image. For SCRATCH disks,
+the size must be exactly 375GB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The GCE disk type. Can be either <code class="docutils literal notranslate"><span class="pre">&quot;pd-ssd&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;local-ssd&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;pd-standard&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the disk interface to use for attaching
+this disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A set of key/value label pairs to assign to instances
 created from this template,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceImage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mode in which to attach this disk, either READ_WRITE
+or READ_ONLY. If you are attaching or creating a boot disk, this must
+read-write mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name (<strong>not self_link</strong>)
+of the disk (such as those managed by <code class="docutils literal notranslate"><span class="pre">compute.Disk</span></code>) to attach.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceImage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The image from which to
+initialize this disk. This can be one of: the image’s <code class="docutils literal notranslate"><span class="pre">self_link</span></code>,
+<code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/{image}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">global/images/{image}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">{project}/{family}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">{project}/{image}</span></code>, <code class="docutils literal notranslate"><span class="pre">{family}</span></code>, or <code class="docutils literal notranslate"><span class="pre">{image}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 <p>The <strong>guest_accelerators</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of the guest accelerator cards exposed to this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Access configurations, i.e. IPs via which this
+instance can be accessed via the Internet. Omit to ensure that the instance
+is not accessible from the Internet (this means that ssh provisioners will
+not work unless you can send traffic to the instance’s
+network (e.g. via tunnel or because it is running on another cloud instance
+on that network). This block can be repeated multiple times. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">natIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network_tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">natIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address that will be 1:1 mapped to the instance’s
+network ip. If not given, one will be generated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The [networking tier][network-tier] used for configuring
+this instance template. This field can take the following values: PREMIUM or
+STANDARD. If this field is not specified, it is assumed to be PREMIUM.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicPtrDomainName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">aliasIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">aliasIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An
+array of alias IP ranges for this network interface. Can only be specified for network
+interfaces on subnet-mode networks. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_cidr_range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_cidr_range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP CIDR range represented by this alias IP range. This IP CIDR range
+must belong to the specified subnetwork and cannot contain IP addresses reserved by
+system or used by other network interfaces. At the time of writing only a
+netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API
+error.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnetwork secondary range name specifying
+the secondary range from which to allocate the IP CIDR range for this alias IP
+range. If left unspecified, the primary range of the subnetwork will be used.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance template. If you leave
 this blank, the provider will auto-generate a unique name.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkProject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name or self_link of the network to attach this interface to.
+Use <code class="docutils literal notranslate"><span class="pre">network</span></code> attribute for Legacy or Auto subnetted networks and
+<code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> for custom subnetted networks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address to assign to the instance. If
+empty, the address will be automatically assigned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the name of the subnetwork to attach this interface
+to. The subnetwork must exist in the same <code class="docutils literal notranslate"><span class="pre">region</span></code> this instance will be
+created in. Either <code class="docutils literal notranslate"><span class="pre">network</span></code> or <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> must be provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkProject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project in which the subnetwork belongs.
+If it is not provided, the provider project is used.</p></li>
 </ul>
 <p>The <strong>scheduling</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether the instance should be
+automatically restarted if it is terminated by Compute Engine (not
+terminated by a user). This defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies node affinities or anti-affinities
+to determine which sole-tenant nodes your instances and managed instance
+groups will use as host systems. Read more on sole-tenant node creation
+<a class="reference external" href="https://cloud.google.com/compute/docs/nodes/create-nodes">here</a>.
+Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The key for the node affinity label.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator. Can be <code class="docutils literal notranslate"><span class="pre">IN</span></code> for node-affinities
+or <code class="docutils literal notranslate"><span class="pre">NOT_IN</span></code> for anti-affinities.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">onHostMaintenance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onHostMaintenance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines the maintenance behavior for this
+instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allows instance to be preempted. This defaults to
+false. Read more on this
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/preemptible">here</a>.</p></li>
 </ul>
 <p>The <strong>service_account</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service account e-mail address. If not given, the
+default Google Compute Engine service account is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of service scopes. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+<code class="docutils literal notranslate"><span class="pre">cloud-platform</span></code> scope. See a complete list of scopes <a class="reference external" href="https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes">here</a>.</p></li>
 </ul>
 <p>The <strong>shielded_instance_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableVtpm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - – Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - – Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableVtpm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - – Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceTemplate.can_ip_forward">
@@ -7978,24 +8575,40 @@ packets with non-matching source or destination IPs. This defaults to false.</p>
 This can be specified multiple times for multiple disks. Structure is
 documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">boot</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_key</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether or not the disk should be auto-deleted.
+This defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boot</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates that this is a boot disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A unique device name that is reflected into the
+/dev/  tree of a Linux operating system running within the instance. If not
+specified, the server chooses a default device name to apply to this disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_key</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Encrypts or decrypts a disk using a customer-supplied encryption key.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The self link of the encryption key that is stored in Google Cloud KMS</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the disk. When not provided, this defaults
+to the name of the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the image in gigabytes. If not
+specified, it will inherit the size of its base image. For SCRATCH disks,
+the size must be exactly 375GB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The GCE disk type. Can be either <code class="docutils literal notranslate"><span class="pre">&quot;pd-ssd&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;local-ssd&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;pd-standard&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the disk interface to use for attaching
+this disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A set of key/value label pairs to assign to instances
 created from this template,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceImage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The mode in which to attach this disk, either READ_WRITE
+or READ_ONLY. If you are attaching or creating a boot disk, this must
+read-write mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name (<strong>not self_link</strong>)
+of the disk (such as those managed by <code class="docutils literal notranslate"><span class="pre">compute.Disk</span></code>) to attach.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceImage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The image from which to
+initialize this disk. This can be one of: the image’s <code class="docutils literal notranslate"><span class="pre">self_link</span></code>,
+<code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/{image}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">global/images/{image}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">{project}/{family}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">{project}/{image}</span></code>, <code class="docutils literal notranslate"><span class="pre">{family}</span></code>, or <code class="docutils literal notranslate"><span class="pre">{image}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -8011,8 +8624,8 @@ created from this template,</p></li>
 <code class="sig-name descname">guest_accelerators</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate.guest_accelerators" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of the type and count of accelerator cards attached to the instance. Structure documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of the guest accelerator cards exposed to this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -8086,25 +8699,47 @@ prefix. Conflicts with <code class="docutils literal notranslate"><span class="p
 this template. This can be specified multiple times for multiple networks.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Access configurations, i.e. IPs via which this
+instance can be accessed via the Internet. Omit to ensure that the instance
+is not accessible from the Internet (this means that ssh provisioners will
+not work unless you can send traffic to the instance’s
+network (e.g. via tunnel or because it is running on another cloud instance
+on that network). This block can be repeated multiple times. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">natIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network_tier</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">natIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP address that will be 1:1 mapped to the instance’s
+network ip. If not given, one will be generated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_tier</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The [networking tier][network-tier] used for configuring
+this instance template. This field can take the following values: PREMIUM or
+STANDARD. If this field is not specified, it is assumed to be PREMIUM.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicPtrDomainName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">aliasIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">aliasIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An
+array of alias IP ranges for this network interface. Can only be specified for network
+interfaces on subnet-mode networks. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_cidr_range</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_cidr_range</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP CIDR range represented by this alias IP range. This IP CIDR range
+must belong to the specified subnetwork and cannot contain IP addresses reserved by
+system or used by other network interfaces. At the time of writing only a
+netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API
+error.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The subnetwork secondary range name specifying
+the secondary range from which to allocate the IP CIDR range for this alias IP
+range. If left unspecified, the primary range of the subnetwork will be used.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the instance template. If you leave
 this blank, the provider will auto-generate a unique name.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkProject</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name or self_link of the network to attach this interface to.
+Use <code class="docutils literal notranslate"><span class="pre">network</span></code> attribute for Legacy or Auto subnetted networks and
+<code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> for custom subnetted networks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address to assign to the instance. If
+empty, the address will be automatically assigned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - the name of the subnetwork to attach this interface
+to. The subnetwork must exist in the same <code class="docutils literal notranslate"><span class="pre">region</span></code> this instance will be
+created in. Either <code class="docutils literal notranslate"><span class="pre">network</span></code> or <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> must be provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkProject</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project in which the subnetwork belongs.
+If it is not provided, the provider project is used.</p></li>
 </ul>
 </dd></dl>
 
@@ -8132,16 +8767,26 @@ Provider if no value is given.</p>
 <dd><p>The scheduling strategy to use. More details about
 this configuration option are detailed below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether the instance should be
+automatically restarted if it is terminated by Compute Engine (not
+terminated by a user). This defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies node affinities or anti-affinities
+to determine which sole-tenant nodes your instances and managed instance
+groups will use as host systems. Read more on sole-tenant node creation
+<a class="reference external" href="https://cloud.google.com/compute/docs/nodes/create-nodes">here</a>.
+Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The key for the node affinity label.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator. Can be <code class="docutils literal notranslate"><span class="pre">IN</span></code> for node-affinities
+or <code class="docutils literal notranslate"><span class="pre">NOT_IN</span></code> for anti-affinities.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">onHostMaintenance</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onHostMaintenance</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Defines the maintenance behavior for this
+instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allows instance to be preempted. This defaults to
+false. Read more on this
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/preemptible">here</a>.</p></li>
 </ul>
 </dd></dl>
 
@@ -8156,8 +8801,11 @@ this configuration option are detailed below.</p>
 <code class="sig-name descname">service_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate.service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Service account to attach to the instance. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The service account e-mail address. If not given, the
+default Google Compute Engine service account is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of service scopes. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+<code class="docutils literal notranslate"><span class="pre">cloud-platform</span></code> scope. See a complete list of scopes <a class="reference external" href="https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes">here</a>.</p></li>
 </ul>
 </dd></dl>
 
@@ -8167,9 +8815,9 @@ this configuration option are detailed below.</p>
 <dd><p>Enable <a class="reference external" href="https://cloud.google.com/security/shielded-cloud/shielded-vm">Shielded VM</a> on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 <strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> can only be used with boot images with shielded vm support. See the complete list <a class="reference external" href="https://cloud.google.com/compute/docs/images#shielded-images">here</a>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableVtpm</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - – Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - – Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableVtpm</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - – Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.</p></li>
 </ul>
 </dd></dl>
 
@@ -8250,75 +8898,126 @@ this configuration option are detailed below.</p></li>
 </dl>
 <p>The <strong>disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">boot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not the disk should be auto-deleted.
+This defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates that this is a boot disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique device name that is reflected into the
+/dev/  tree of a Linux operating system running within the instance. If not
+specified, the server chooses a default device name to apply to this disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Encrypts or decrypts a disk using a customer-supplied encryption key.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The self link of the encryption key that is stored in Google Cloud KMS</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the disk. When not provided, this defaults
+to the name of the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the image in gigabytes. If not
+specified, it will inherit the size of its base image. For SCRATCH disks,
+the size must be exactly 375GB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The GCE disk type. Can be either <code class="docutils literal notranslate"><span class="pre">&quot;pd-ssd&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;local-ssd&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;pd-standard&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the disk interface to use for attaching
+this disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A set of key/value label pairs to assign to instances
 created from this template,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceImage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mode in which to attach this disk, either READ_WRITE
+or READ_ONLY. If you are attaching or creating a boot disk, this must
+read-write mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name (<strong>not self_link</strong>)
+of the disk (such as those managed by <code class="docutils literal notranslate"><span class="pre">compute.Disk</span></code>) to attach.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceImage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The image from which to
+initialize this disk. This can be one of: the image’s <code class="docutils literal notranslate"><span class="pre">self_link</span></code>,
+<code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/{image}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">global/images/{image}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">{project}/{family}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">{project}/{image}</span></code>, <code class="docutils literal notranslate"><span class="pre">{family}</span></code>, or <code class="docutils literal notranslate"><span class="pre">{image}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 <p>The <strong>guest_accelerators</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of the guest accelerator cards exposed to this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Access configurations, i.e. IPs via which this
+instance can be accessed via the Internet. Omit to ensure that the instance
+is not accessible from the Internet (this means that ssh provisioners will
+not work unless you can send traffic to the instance’s
+network (e.g. via tunnel or because it is running on another cloud instance
+on that network). This block can be repeated multiple times. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">natIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network_tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">natIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address that will be 1:1 mapped to the instance’s
+network ip. If not given, one will be generated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The [networking tier][network-tier] used for configuring
+this instance template. This field can take the following values: PREMIUM or
+STANDARD. If this field is not specified, it is assumed to be PREMIUM.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicPtrDomainName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">aliasIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">aliasIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An
+array of alias IP ranges for this network interface. Can only be specified for network
+interfaces on subnet-mode networks. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_cidr_range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_cidr_range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP CIDR range represented by this alias IP range. This IP CIDR range
+must belong to the specified subnetwork and cannot contain IP addresses reserved by
+system or used by other network interfaces. At the time of writing only a
+netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API
+error.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnetwork secondary range name specifying
+the secondary range from which to allocate the IP CIDR range for this alias IP
+range. If left unspecified, the primary range of the subnetwork will be used.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance template. If you leave
 this blank, the provider will auto-generate a unique name.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkProject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name or self_link of the network to attach this interface to.
+Use <code class="docutils literal notranslate"><span class="pre">network</span></code> attribute for Legacy or Auto subnetted networks and
+<code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> for custom subnetted networks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address to assign to the instance. If
+empty, the address will be automatically assigned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the name of the subnetwork to attach this interface
+to. The subnetwork must exist in the same <code class="docutils literal notranslate"><span class="pre">region</span></code> this instance will be
+created in. Either <code class="docutils literal notranslate"><span class="pre">network</span></code> or <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code> must be provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetworkProject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project in which the subnetwork belongs.
+If it is not provided, the provider project is used.</p></li>
 </ul>
 <p>The <strong>scheduling</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether the instance should be
+automatically restarted if it is terminated by Compute Engine (not
+terminated by a user). This defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies node affinities or anti-affinities
+to determine which sole-tenant nodes your instances and managed instance
+groups will use as host systems. Read more on sole-tenant node creation
+<a class="reference external" href="https://cloud.google.com/compute/docs/nodes/create-nodes">here</a>.
+Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The key for the node affinity label.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator. Can be <code class="docutils literal notranslate"><span class="pre">IN</span></code> for node-affinities
+or <code class="docutils literal notranslate"><span class="pre">NOT_IN</span></code> for anti-affinities.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">onHostMaintenance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onHostMaintenance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines the maintenance behavior for this
+instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allows instance to be preempted. This defaults to
+false. Read more on this
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/preemptible">here</a>.</p></li>
 </ul>
 <p>The <strong>service_account</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service account e-mail address. If not given, the
+default Google Compute Engine service account is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of service scopes. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+<code class="docutils literal notranslate"><span class="pre">cloud-platform</span></code> scope. See a complete list of scopes <a class="reference external" href="https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes">here</a>.</p></li>
 </ul>
 <p>The <strong>shielded_instance_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableVtpm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - – Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - – Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableVtpm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - – Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.</p></li>
 </ul>
 </dd></dl>
 
@@ -10169,6 +10868,8 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
 the given network. All mirrored subnetworks should belong to the given network.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Since only one rule can be active at a time, priority is used to break ties in the case of two rules that apply to the
 same instances.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Region in which the created address should reside. If it is not provided, the provider region is used.</p></li>
 </ul>
 </dd>
@@ -10269,6 +10970,13 @@ same instances.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.compute.PacketMirroring.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.PacketMirroring.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.compute.PacketMirroring.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.PacketMirroring.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Region in which the created address should reside. If it is not provided, the provider region is used.</p>
@@ -10295,6 +11003,8 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
 the given network. All mirrored subnetworks should belong to the given network.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Since only one rule can be active at a time, priority is used to break ties in the case of two rules that apply to the
 same instances.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Region in which the created address should reside. If it is not provided, the provider region is used.</p></li>
 </ul>
 </dd>
@@ -10687,6 +11397,8 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.</p></li>
 ‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the region where the instance group resides.</p></li>
 <li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the managed instance group that this autoscaler will scale.</p></li>
 </ul>
@@ -10770,6 +11482,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.compute.RegionAutoscaler.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionAutoscaler.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionAutoscaler.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionAutoscaler.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL of the region where the instance group resides.</p>
@@ -10807,6 +11526,8 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.</p></li>
 ‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the region where the instance group resides.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
 <li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the managed instance group that this autoscaler will scale.</p></li>
@@ -12303,10 +13024,9 @@ group. You can specify one or more values. For more information, see the <a clas
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
+<li><p>Version name.</p></li>
+</ul>
 </p></li>
 <li><p><strong>named_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The named port configuration. See the section below
 for details on configuration.</p></li>
@@ -12316,9 +13036,10 @@ is not provided, the provider project is used.</p></li>
 <li><p><strong>target_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.</p></li>
-<li><p><strong>target_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><strong>target_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <ul>
+<li><p>The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</p></li>
+</ul>
+</p></li>
 <li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch">API</a></p>
 </p></li>
 <li><p><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Application versions managed by this instance group. Each
@@ -12332,41 +13053,36 @@ continue trying until it times out.</p></li>
 </dl>
 <p>The <strong>auto_healing_policies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The health check resource that signals autohealing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds that the managed instance group waits before
+it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.</p></li>
 </ul>
 <p>The <strong>named_ports</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Version name.</p></li>
+<li></li>
 </ul>
 <p>The <strong>update_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceRedistributionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailablePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minReadySec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimalAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceRedistributionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - The instance redistribution policy for regional managed instance groups. Valid values are: <code class="docutils literal notranslate"><span class="pre">&quot;PROACTIVE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;NONE&quot;</span></code>. If <code class="docutils literal notranslate"><span class="pre">PROACTIVE</span></code> (default), the group attempts to maintain an even distribution of VM instances across zones in the region. If <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, proactive redistribution is disabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_surge_percent</span></code>. It has to be either 0 or at least equal to the number of zones.  If fixed values are used, at least one of <code class="docutils literal notranslate"><span class="pre">max_unavailable_fixed</span></code> or <code class="docutils literal notranslate"><span class="pre">max_surge_fixed</span></code> must be greater than 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_surge_fixed</span></code>. Percent value is only allowed for regional managed instance groups with size at least 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances that can be unavailable during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_unavailable_percent</span></code>. It has to be either 0 or at least equal to the number of zones. If fixed values are used, at least one of <code class="docutils literal notranslate"><span class="pre">max_unavailable_fixed</span></code> or <code class="docutils literal notranslate"><span class="pre">max_surge_fixed</span></code> must be greater than 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailablePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_unavailable_fixed</span></code>. Percent value is only allowed for regional managed instance groups with size at least 10.</p></li>
+<li></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimalAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Minimal action to be taken on an instance. You can specify either <code class="docutils literal notranslate"><span class="pre">RESTART</span></code> to restart existing instances or <code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> to delete and create new instances from the target template. If you specify a <code class="docutils literal notranslate"><span class="pre">RESTART</span></code>, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - The type of update process. You can specify either <code class="docutils literal notranslate"><span class="pre">PROACTIVE</span></code> so that the instance group manager proactively executes actions in order to bring instances to their target versions or <code class="docutils literal notranslate"><span class="pre">OPPORTUNISTIC</span></code> so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).</p></li>
 </ul>
 <p>The <strong>versions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - The full URL to an instance template from which all new instances of this version will be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Version name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">fixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The number of instances which are managed for this version. Conflicts with <code class="docutils literal notranslate"><span class="pre">percent</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The number of instances (calculated as percentage) which are managed for this version. Conflicts with <code class="docutils literal notranslate"><span class="pre">fixed</span></code>.
+Note that when using <code class="docutils literal notranslate"><span class="pre">percent</span></code>, rounding will be in favor of explicitly set <code class="docutils literal notranslate"><span class="pre">target_size</span></code> values; a managed instance group with 2 instances and 2 <code class="docutils literal notranslate"><span class="pre">version</span></code>s,
+one of which has a <code class="docutils literal notranslate"><span class="pre">target_size.percent</span></code> of <code class="docutils literal notranslate"><span class="pre">60</span></code> will create 2 instances of that <code class="docutils literal notranslate"><span class="pre">version</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -12376,8 +13092,9 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <dd><p>The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups">official documentation</a>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySec</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The health check resource that signals autohealing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySec</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of seconds that the managed instance group waits before
+it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.</p></li>
 </ul>
 </dd></dl>
 
@@ -12421,10 +13138,9 @@ group. You can specify one or more values. For more information, see the <a clas
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionInstanceGroupManager.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p>
+<dd><ul class="simple">
+<li><p>Version name.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -12433,11 +13149,8 @@ include lowercase letters, numbers, and hyphens.</p>
 <dd><p>The named port configuration. See the section below
 for details on configuration.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - Version name.</p></li>
+<li></li>
 </ul>
 </dd></dl>
 
@@ -12471,9 +13184,9 @@ not affect existing instances.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionInstanceGroupManager.target_size">
 <code class="sig-name descname">target_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager.target_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<dd><ul class="simple">
+<li><p>The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -12481,14 +13194,14 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <code class="sig-name descname">update_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager.update_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch">API</a></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceRedistributionType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailablePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minReadySec</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimalAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceRedistributionType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - The instance redistribution policy for regional managed instance groups. Valid values are: <code class="docutils literal notranslate"><span class="pre">&quot;PROACTIVE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;NONE&quot;</span></code>. If <code class="docutils literal notranslate"><span class="pre">PROACTIVE</span></code> (default), the group attempts to maintain an even distribution of VM instances across zones in the region. If <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, proactive redistribution is disabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - , The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_surge_percent</span></code>. It has to be either 0 or at least equal to the number of zones.  If fixed values are used, at least one of <code class="docutils literal notranslate"><span class="pre">max_unavailable_fixed</span></code> or <code class="docutils literal notranslate"><span class="pre">max_surge_fixed</span></code> must be greater than 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - , The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_surge_fixed</span></code>. Percent value is only allowed for regional managed instance groups with size at least 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - , The maximum number of instances that can be unavailable during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_unavailable_percent</span></code>. It has to be either 0 or at least equal to the number of zones. If fixed values are used, at least one of <code class="docutils literal notranslate"><span class="pre">max_unavailable_fixed</span></code> or <code class="docutils literal notranslate"><span class="pre">max_surge_fixed</span></code> must be greater than 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailablePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - , The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_unavailable_fixed</span></code>. Percent value is only allowed for regional managed instance groups with size at least 10.</p></li>
+<li></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimalAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - Minimal action to be taken on an instance. You can specify either <code class="docutils literal notranslate"><span class="pre">RESTART</span></code> to restart existing instances or <code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> to delete and create new instances from the target template. If you specify a <code class="docutils literal notranslate"><span class="pre">RESTART</span></code>, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - The type of update process. You can specify either <code class="docutils literal notranslate"><span class="pre">PROACTIVE</span></code> so that the instance group manager proactively executes actions in order to bring instances to their target versions or <code class="docutils literal notranslate"><span class="pre">OPPORTUNISTIC</span></code> so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).</p></li>
 </ul>
 </dd></dl>
 
@@ -12499,17 +13212,14 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_size</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - The full URL to an instance template from which all new instances of this version will be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - Version name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_size</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">fixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - , The number of instances which are managed for this version. Conflicts with <code class="docutils literal notranslate"><span class="pre">percent</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - , The number of instances (calculated as percentage) which are managed for this version. Conflicts with <code class="docutils literal notranslate"><span class="pre">fixed</span></code>.
+Note that when using <code class="docutils literal notranslate"><span class="pre">percent</span></code>, rounding will be in favor of explicitly set <code class="docutils literal notranslate"><span class="pre">target_size</span></code> values; a managed instance group with 2 instances and 2 <code class="docutils literal notranslate"><span class="pre">version</span></code>s,
+one of which has a <code class="docutils literal notranslate"><span class="pre">target_size.percent</span></code> of <code class="docutils literal notranslate"><span class="pre">60</span></code> will create 2 instances of that <code class="docutils literal notranslate"><span class="pre">version</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -12560,10 +13270,9 @@ group. You can specify one or more values. For more information, see the <a clas
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint of the instance group manager.</p></li>
 <li><p><strong>instance_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full URL of the instance group created by the manager.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
+<li><p>Version name.</p></li>
+</ul>
 </p></li>
 <li><p><strong>named_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The named port configuration. See the section below
 for details on configuration.</p></li>
@@ -12574,9 +13283,10 @@ is not provided, the provider project is used.</p></li>
 <li><p><strong>target_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.</p></li>
-<li><p><strong>target_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><strong>target_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <ul>
+<li><p>The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</p></li>
+</ul>
+</p></li>
 <li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch">API</a></p>
 </p></li>
 <li><p><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Application versions managed by this instance group. Each
@@ -12590,41 +13300,36 @@ continue trying until it times out.</p></li>
 </dl>
 <p>The <strong>auto_healing_policies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The health check resource that signals autohealing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds that the managed instance group waits before
+it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.</p></li>
 </ul>
 <p>The <strong>named_ports</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Version name.</p></li>
+<li></li>
 </ul>
 <p>The <strong>update_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceRedistributionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailablePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minReadySec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimalAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceRedistributionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - The instance redistribution policy for regional managed instance groups. Valid values are: <code class="docutils literal notranslate"><span class="pre">&quot;PROACTIVE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;NONE&quot;</span></code>. If <code class="docutils literal notranslate"><span class="pre">PROACTIVE</span></code> (default), the group attempts to maintain an even distribution of VM instances across zones in the region. If <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, proactive redistribution is disabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_surge_percent</span></code>. It has to be either 0 or at least equal to the number of zones.  If fixed values are used, at least one of <code class="docutils literal notranslate"><span class="pre">max_unavailable_fixed</span></code> or <code class="docutils literal notranslate"><span class="pre">max_surge_fixed</span></code> must be greater than 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurgePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_surge_fixed</span></code>. Percent value is only allowed for regional managed instance groups with size at least 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailableFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances that can be unavailable during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_unavailable_percent</span></code>. It has to be either 0 or at least equal to the number of zones. If fixed values are used, at least one of <code class="docutils literal notranslate"><span class="pre">max_unavailable_fixed</span></code> or <code class="docutils literal notranslate"><span class="pre">max_surge_fixed</span></code> must be greater than 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailablePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_unavailable_fixed</span></code>. Percent value is only allowed for regional managed instance groups with size at least 10.</p></li>
+<li></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimalAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Minimal action to be taken on an instance. You can specify either <code class="docutils literal notranslate"><span class="pre">RESTART</span></code> to restart existing instances or <code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> to delete and create new instances from the target template. If you specify a <code class="docutils literal notranslate"><span class="pre">RESTART</span></code>, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - The type of update process. You can specify either <code class="docutils literal notranslate"><span class="pre">PROACTIVE</span></code> so that the instance group manager proactively executes actions in order to bring instances to their target versions or <code class="docutils literal notranslate"><span class="pre">OPPORTUNISTIC</span></code> so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).</p></li>
 </ul>
 <p>The <strong>versions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - The full URL to an instance template from which all new instances of this version will be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Version name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">fixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The number of instances which are managed for this version. Conflicts with <code class="docutils literal notranslate"><span class="pre">percent</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - , The number of instances (calculated as percentage) which are managed for this version. Conflicts with <code class="docutils literal notranslate"><span class="pre">fixed</span></code>.
+Note that when using <code class="docutils literal notranslate"><span class="pre">percent</span></code>, rounding will be in favor of explicitly set <code class="docutils literal notranslate"><span class="pre">target_size</span></code> values; a managed instance group with 2 instances and 2 <code class="docutils literal notranslate"><span class="pre">version</span></code>s,
+one of which has a <code class="docutils literal notranslate"><span class="pre">target_size.percent</span></code> of <code class="docutils literal notranslate"><span class="pre">60</span></code> will create 2 instances of that <code class="docutils literal notranslate"><span class="pre">version</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -14273,6 +14978,8 @@ comply with RFC1035. Specifically, the name must be 1-63 characters long and mat
 ‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>specific_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Reservation for instances with specific machine shapes.</p></li>
 <li><p><strong>specific_reservation_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When set to true, only VMs that target this reservation by name can consume this reservation. Otherwise, it can be
 consumed by VMs with affinity for any reservation. Defaults to false.</p></li>
@@ -14328,6 +15035,13 @@ consumed by VMs with affinity for any reservation. Defaults to false.</p></li>
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
 ‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.Reservation.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Reservation.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -14402,6 +15116,8 @@ comply with RFC1035. Specifically, the name must be 1-63 characters long and mat
 ‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
 <li><p><strong>specific_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Reservation for instances with specific machine shapes.</p></li>
 <li><p><strong>specific_reservation_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When set to true, only VMs that target this reservation by name can consume this reservation. Otherwise, it can be
@@ -16237,7 +16953,7 @@ and the <a class="reference external" href="https://cloud.google.com/compute/doc
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this security policy. Max size is 2048.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this rule. Max size is 64.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security policy.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
@@ -16249,30 +16965,50 @@ security policy, a default rule with action “allow” will be added. Structure
 </dl>
 <p>The <strong>rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of this security policy. Max size is 2048.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Action to take when <code class="docutils literal notranslate"><span class="pre">match</span></code> matches the request. Valid values:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">srcIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p>“allow” : allow access to target</p></li>
+<li><p>“deny(status)” : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of this rule. Max size is 64.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A match condition that incoming traffic is evaluated against.
+If it evaluates to true, the corresponding <code class="docutils literal notranslate"><span class="pre">action</span></code> is enforced. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The configuration options available when specifying <code class="docutils literal notranslate"><span class="pre">versioned_expr</span></code>.
+This field must be specified if <code class="docutils literal notranslate"><span class="pre">versioned_expr</span></code> is specified and cannot be specified if <code class="docutils literal notranslate"><span class="pre">versioned_expr</span></code> is not specified.
+Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">srcIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
+to match against inbound traffic. There is a limit of 5 IP ranges per rule. A value of ‘*’ matches all IPs
+(can be used to override the default behavior).</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">versionedExpr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - User defined CEVAL expression. A CEVAL expression is used to specify match criteria
+such as origin.ip, source.region_code and contents in the request header.
+Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.
+The application context of the containing message determines which well-known feature set of CEL is supported.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preview</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">versionedExpr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Predefined rule expression. If this field is specified, <code class="docutils literal notranslate"><span class="pre">config</span></code> must also be specified.
+Available options:</p>
+<ul>
+<li><p>SRC_IPS_V1: Must specify the corresponding <code class="docutils literal notranslate"><span class="pre">src_ip_ranges</span></code> field in <code class="docutils literal notranslate"><span class="pre">config</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preview</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When set to true, the <code class="docutils literal notranslate"><span class="pre">action</span></code> specified above is not enforced.
+Stackdriver logs for requests that trigger a preview action are annotated as such.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - An unique positive integer indicating the priority of evaluation for a rule.
+Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SecurityPolicy.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SecurityPolicy.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>An optional description of this security policy. Max size is 2048.</p>
+<dd><p>An optional description of this rule. Max size is 64.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -16301,25 +17037,45 @@ is not provided, the provider project is used.</p>
 rule (rule with priority 2147483647 and match “*”). If no rules are provided when creating a
 security policy, a default rule with action “allow” will be added. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An optional description of this security policy. Max size is 2048.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Action to take when <code class="docutils literal notranslate"><span class="pre">match</span></code> matches the request. Valid values:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">srcIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p>“allow” : allow access to target</p></li>
+<li><p>“deny(status)” : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expr</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An optional description of this rule. Max size is 64.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A match condition that incoming traffic is evaluated against.
+If it evaluates to true, the corresponding <code class="docutils literal notranslate"><span class="pre">action</span></code> is enforced. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The configuration options available when specifying <code class="docutils literal notranslate"><span class="pre">versioned_expr</span></code>.
+This field must be specified if <code class="docutils literal notranslate"><span class="pre">versioned_expr</span></code> is specified and cannot be specified if <code class="docutils literal notranslate"><span class="pre">versioned_expr</span></code> is not specified.
+Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">srcIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
+to match against inbound traffic. There is a limit of 5 IP ranges per rule. A value of ‘*’ matches all IPs
+(can be used to override the default behavior).</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">versionedExpr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expr</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - User defined CEVAL expression. A CEVAL expression is used to specify match criteria
+such as origin.ip, source.region_code and contents in the request header.
+Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Textual representation of an expression in Common Expression Language syntax.
+The application context of the containing message determines which well-known feature set of CEL is supported.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preview</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">versionedExpr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Predefined rule expression. If this field is specified, <code class="docutils literal notranslate"><span class="pre">config</span></code> must also be specified.
+Available options:</p>
+<ul>
+<li><p>SRC_IPS_V1: Must specify the corresponding <code class="docutils literal notranslate"><span class="pre">src_ip_ranges</span></code> field in <code class="docutils literal notranslate"><span class="pre">config</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preview</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When set to true, the <code class="docutils literal notranslate"><span class="pre">action</span></code> specified above is not enforced.
+Stackdriver logs for requests that trigger a preview action are annotated as such.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - An unique positive integer indicating the priority of evaluation for a rule.
+Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.</p></li>
 </ul>
 </dd></dl>
 
@@ -16340,7 +17096,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this security policy. Max size is 2048.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this rule. Max size is 64.</p></li>
 <li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fingerprint of this resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security policy.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the resource belongs. If it
@@ -16354,25 +17110,45 @@ security policy, a default rule with action “allow” will be added. Structure
 </dl>
 <p>The <strong>rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of this security policy. Max size is 2048.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Action to take when <code class="docutils literal notranslate"><span class="pre">match</span></code> matches the request. Valid values:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">srcIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p>“allow” : allow access to target</p></li>
+<li><p>“deny(status)” : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of this rule. Max size is 64.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A match condition that incoming traffic is evaluated against.
+If it evaluates to true, the corresponding <code class="docutils literal notranslate"><span class="pre">action</span></code> is enforced. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The configuration options available when specifying <code class="docutils literal notranslate"><span class="pre">versioned_expr</span></code>.
+This field must be specified if <code class="docutils literal notranslate"><span class="pre">versioned_expr</span></code> is specified and cannot be specified if <code class="docutils literal notranslate"><span class="pre">versioned_expr</span></code> is not specified.
+Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">srcIpRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
+to match against inbound traffic. There is a limit of 5 IP ranges per rule. A value of ‘*’ matches all IPs
+(can be used to override the default behavior).</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">versionedExpr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - User defined CEVAL expression. A CEVAL expression is used to specify match criteria
+such as origin.ip, source.region_code and contents in the request header.
+Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.
+The application context of the containing message determines which well-known feature set of CEL is supported.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preview</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">versionedExpr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Predefined rule expression. If this field is specified, <code class="docutils literal notranslate"><span class="pre">config</span></code> must also be specified.
+Available options:</p>
+<ul>
+<li><p>SRC_IPS_V1: Must specify the corresponding <code class="docutils literal notranslate"><span class="pre">src_ip_ranges</span></code> field in <code class="docutils literal notranslate"><span class="pre">config</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preview</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When set to true, the <code class="docutils literal notranslate"><span class="pre">action</span></code> specified above is not enforced.
+Stackdriver logs for requests that trigger a preview action are annotated as such.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - An unique positive integer indicating the priority of evaluation for a rule.
+Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.</p></li>
 </ul>
 </dd></dl>
 
@@ -17387,6 +18163,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
@@ -17402,10 +18181,22 @@ region is specified, it is taken from the provider configuration.</p></li>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.SubnetworkIAMBinding.condition">
+<code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding.condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
+</ul>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMBinding.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding.etag" title="Permalink to this definition">¶</a></dt>
@@ -17453,6 +18244,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
@@ -17469,9 +18263,9 @@ region is specified, it is taken from the provider configuration.</p></li>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </dd></dl>
 
@@ -17532,6 +18326,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
@@ -17547,10 +18344,22 @@ region is specified, it is taken from the provider configuration.</p></li>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.SubnetworkIAMMember.condition">
+<code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember.condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
+</ul>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMMember.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember.etag" title="Permalink to this definition">¶</a></dt>
@@ -17598,6 +18407,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
@@ -17614,9 +18426,9 @@ region is specified, it is taken from the provider configuration.</p></li>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </dd></dl>
 
@@ -20583,9 +21395,13 @@ is not provided, the provider project is used.</p></li>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>project</strong> (<em>str</em>) – The project in which the resource belongs. If it is not
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>family</strong> (<em>str</em>) – The family name of the image.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the image.</p></li>
+<li><p><strong>project</strong> (<em>str</em>) – The project in which the resource belongs. If it is not
 provided, the provider project is used. If you are using a
-[public base image][pubimg], be sure to specify the correct Image Project.</p>
+[public base image][pubimg], be sure to specify the correct Image Project.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

@@ -834,6 +834,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>ali_domain</strong> (<em>bool</em>) – Specifies whether the domain is from Alibaba Cloud or not.</p></li>
 <li><p><strong>domain_name_regex</strong> (<em>str</em>) – A regex string to filter results by the domain name.</p></li>
 <li><p><strong>group_name_regex</strong> (<em>str</em>) – A regex string to filter results by the group name.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – A list of domain IDs.</p></li>
 <li><p><strong>instance_id</strong> (<em>str</em>) – Cloud analysis product ID.</p></li>
 <li><p><strong>resource_group_id</strong> (<em>str</em>) – The Id of resource group which the dns belongs.</p></li>
 <li><p><strong>version_code</strong> (<em>str</em>) – Cloud analysis version code.</p></li>
