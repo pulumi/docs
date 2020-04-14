@@ -94,7 +94,7 @@ taking. With Pulumi's
 [Crosswalk]({{< relref "/docs/guides/crosswalk/aws" >}}) APIs it's simple
 to get at this information. Inside all the main "Crosswalk for AWS"
 modules are exposed
-[Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#Metric" >}})
+[Metrics]({{< relref "/docs/guides/crosswalk/aws/cloudwatch/#subscribing-to-cloudwatch-metrics" >}})
 for almost anything you might ever need. In this case, we want to know
 how long those Functions are taking so we can get that information as
 follows:
@@ -137,7 +137,7 @@ of the health of this app:
         ],
     });
 
-The [Crosswalk for AWS API for dashboards](https://github.com/pulumi/pulumi-awsx/tree/master/nodejs/awsx/cloudwatch#dashboards)
+The [Crosswalk for AWS API for dashboards]({{< relref "/docs/guides/crosswalk/aws/cloudwatch/#defining-cloudwatch-dashboards-in-code" >}})
 gives a lot of options for building up a dashboard programmatically.
 There are a wealth of Widgets and Annotations to expose the full power
 of Cloudwatch's dashboards to your app in a simple to use manner.
