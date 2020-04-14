@@ -299,7 +299,7 @@ if err != nil {
 }
 ```
 
-This example first deploys a GKE Kubernetes Cluster into GCP, then into Kubernetes itself (deployment via a `providers.Provider` configured to connect to the GKE Kubernetes cluster). This example combines infrastructure and application deployment in a few dozen lines of declarative and strongly typed Go code.
+This example first deploys a GKE Kubernetes Cluster into GCP, then deploys Kubernetes resources into that GKE Cluster. This example combines infrastructure and application deployment in a few dozen lines of declarative and strongly typed Go code.
 
 Check out the full [GKE in Go example](https://github.com/pulumi/examples/tree/master/gcp-go-gke) on Github.
 
