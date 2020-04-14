@@ -16,7 +16,7 @@ AWS, Azure and GCP. In addition to this, Pulumi recently added support for manag
 instances themselves to manage permissions, create databases, and other common tasks.
 
 In this post, we’ll walk through a quick tutorial of how to use this new
-[Pulumi MySQL provider]({{< relref "/docs/reference/pkg/nodejs/pulumi/mysql" >}}) to manage existing
+[Pulumi MySQL provider]({{< relref "/docs/intro/cloud-providers/mysql/" >}}) to manage existing
 and new MySQL databases.
 <!--more-->
 
@@ -160,7 +160,7 @@ $ pulumi up
 Wrapping Up
 Pulumi allows you to manage your MySQL cloud instances in AWS, Azure, and GCP, as well as manage MySQL databases,
 users and more. Together, this enables end-to-end provisioning of your application’s database infrastructure.
-Read more about the [Pulumi MySQL provider]({{< relref "/docs/reference/pkg/nodejs/pulumi/mysql" >}}).
+Read more about the [Pulumi MySQL provider]({{< relref "/docs/intro/cloud-providers/mysql" >}}).
 
 We’ve only shown a little bit of what Pulumi can do. If you need any help, feel free to create an issue
 [on GitHub](https://github.com/pulumi/) or join the [Pulumi Community Slack](https://slack.pulumi.com) channel.

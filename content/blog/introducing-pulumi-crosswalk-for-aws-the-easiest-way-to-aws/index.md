@@ -97,7 +97,7 @@ pay nearly zero fixed costs, and gain the ability to iterate quickly.
 With just a few more lines of code, we can
 [wire up to our own domain]({{< relref "/docs/guides/crosswalk/aws/api-gateway#configuring-api-gateway-custom-domains-and-ssl-using-route53-and-acm" >}}),
 [add authorization]({{< relref "/docs/guides/crosswalk/aws/api-gateway#controlling-and-managing-access-to-apis" >}}),
-[provision a database]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/dynamodb#Table" >}}),
+[provision a database]({{< relref "/docs/reference/pkg/aws/dynamodb/table/" >}}),
 or [chain together a more complex event-driven application]({{< relref "/docs/guides/crosswalk/aws/lambda#available-aws-services-with-event-sources" >}}).
 
 ### Containers (ECS, Fargate)

@@ -87,7 +87,7 @@ const kibana = new helm.v2.Chart("kibana", {
 
 Check out the [Kubernetes
 overview]({{< relref "/docs/get-started/kubernetes" >}}) docs, the [API
-documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
+documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes" TODO NEW K8s doc link>}})
 and the [pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes)
 GitHub project for additional details.
 
@@ -194,7 +194,7 @@ const instance = new os.compute.Instance("test", {
 exports.instanceIP = instance.accessIpV4;
 ```
 
-Check out the [API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/openstack" >}})
+Check out the [Resource documentation]({{< relref "docs/intro/cloud-providers/openstack/" >}})
 and the [pulumi-openstack](https://github.com/pulumi/pulumi-openstack)
 GitHub project for additional details. Huge thanks to Fraser for his
 work on this!
