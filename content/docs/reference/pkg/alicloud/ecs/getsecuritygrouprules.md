@@ -62,13 +62,13 @@ const backend = new alicloud.ecs.Instance("backend", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecurityGroupRules<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupSecurityGroupRulesArgs">LookupSecurityGroupRulesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupSecurityGroupRulesResult">LookupSecurityGroupRulesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecurityGroupRules<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupSecurityGroupRulesArgs">LookupSecurityGroupRulesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupSecurityGroupRulesResult">LookupSecurityGroupRulesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSecurityGroupRules </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.GetSecurityGroupRulesResult.html">GetSecurityGroupRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.GetSecurityGroupRulesArgs.html">GetSecurityGroupRulesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.GetSecurityGroupRulesResult.html">GetSecurityGroupRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.GetSecurityGroupRulesArgs.html">GetSecurityGroupRulesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -81,15 +81,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Group<wbr>Id</span>
@@ -101,9 +92,18 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Direction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Ip<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol. Valid values are: `tcp`, `udp`, `icmp`, `gre` and `all`.
 {{% /md %}}</dd>
@@ -112,7 +112,7 @@ The following arguments are supported:
             title="Optional">
         <span>Nic<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Refers to the network type. Can be either `internet` or `intranet`. The default value is `internet`.
 {{% /md %}}</dd>
@@ -121,7 +121,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -129,7 +129,7 @@ The following arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`. The default value is `accept`.
 {{% /md %}}</dd>
@@ -141,15 +141,6 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Group<wbr>Id</span>
@@ -161,9 +152,18 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Direction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Ip<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol. Valid values are: `tcp`, `udp`, `icmp`, `gre` and `all`.
 {{% /md %}}</dd>
@@ -172,7 +172,7 @@ The following arguments are supported:
             title="Optional">
         <span>Nic<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Refers to the network type. Can be either `internet` or `intranet`. The default value is `internet`.
 {{% /md %}}</dd>
@@ -181,7 +181,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -189,7 +189,7 @@ The following arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`. The default value is `accept`.
 {{% /md %}}</dd>
@@ -200,15 +200,6 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -221,9 +212,18 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>direction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>ip<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol. Valid values are: `tcp`, `udp`, `icmp`, `gre` and `all`.
 {{% /md %}}</dd>
@@ -232,7 +232,7 @@ The following arguments are supported:
             title="Optional">
         <span>nic<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Refers to the network type. Can be either `internet` or `intranet`. The default value is `internet`.
 {{% /md %}}</dd>
@@ -241,7 +241,7 @@ The following arguments are supported:
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -249,7 +249,7 @@ The following arguments are supported:
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`. The default value is `accept`.
 {{% /md %}}</dd>
@@ -261,15 +261,6 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>group_<wbr>id</span>
@@ -277,6 +268,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the security group that owns the rules.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>direction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -336,15 +336,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authorization direction, `ingress` or `egress`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Group<wbr>Desc</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -380,9 +371,27 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsecuritygrouprulesrule">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Outputs.<wbr>Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of security group rules. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Direction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization direction, `ingress` or `egress`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ip<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
 {{% /md %}}</dd>
@@ -391,7 +400,7 @@ The following output properties are available:
             title="">
         <span>Nic<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type, `internet` or `intranet`.
 {{% /md %}}</dd>
@@ -400,7 +409,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -408,18 +417,9 @@ The following output properties are available:
             title="">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecuritygrouprulesrule">List&lt;Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of security group rules. Each element contains the following attributes:
 {{% /md %}}</dd>
 
 </dl>
@@ -431,15 +431,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Authorization direction, `ingress` or `egress`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Group<wbr>Desc</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -475,9 +466,27 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsecuritygrouprulesrule">[]Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}A list of security group rules. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Direction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization direction, `ingress` or `egress`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ip<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
 {{% /md %}}</dd>
@@ -486,7 +495,7 @@ The following output properties are available:
             title="">
         <span>Nic<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type, `internet` or `intranet`.
 {{% /md %}}</dd>
@@ -495,7 +504,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -503,18 +512,9 @@ The following output properties are available:
             title="">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecuritygrouprulesrule">[]Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}A list of security group rules. Each element contains the following attributes:
 {{% /md %}}</dd>
 
 </dl>
@@ -523,15 +523,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authorization direction, `ingress` or `egress`.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -570,9 +561,27 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsecuritygrouprulesrule">Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of security group rules. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>direction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization direction, `ingress` or `egress`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ip<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
 {{% /md %}}</dd>
@@ -581,7 +590,7 @@ The following output properties are available:
             title="">
         <span>nic<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type, `internet` or `intranet`.
 {{% /md %}}</dd>
@@ -590,7 +599,7 @@ The following output properties are available:
             title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -598,18 +607,9 @@ The following output properties are available:
             title="">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecuritygrouprulesrule">Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of security group rules. Each element contains the following attributes:
 {{% /md %}}</dd>
 
 </dl>
@@ -618,15 +618,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Authorization direction, `ingress` or `egress`.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -665,6 +656,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsecuritygrouprulesrule">List[Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of security group rules. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>direction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Authorization direction, `ingress` or `egress`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ip_<wbr>protocol</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -696,15 +705,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecuritygrouprulesrule">List[Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of security group rules. Each element contains the following attributes:
 {{% /md %}}</dd>
 
 </dl>

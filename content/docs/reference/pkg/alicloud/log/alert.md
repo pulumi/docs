@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/log/#Alert">Alert</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/log/#AlertArgs">AlertArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/log/#Alert">Alert</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/log/#AlertArgs">AlertArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAlert<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/log?tab=doc#AlertArgs">AlertArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/log?tab=doc#Alert">Alert</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAlert<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/log?tab=doc#AlertArgs">AlertArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/log?tab=doc#Alert">Alert</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Log.Alert.html">Alert</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Log.AlertArgs.html">AlertArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Log.Alert.html">Alert</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Log.AlertArgs.html">AlertArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,15 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Alert<wbr>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Alert<wbr>Displayname</span>
@@ -162,31 +153,13 @@ block_external_search_index: true
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mute<wbr>Until</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Notification<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertnotificationlist">List&lt;Alert<wbr>Notification<wbr>List<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#alertnotificationlist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Log.<wbr>Inputs.<wbr>Alert<wbr>Notification<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Notify<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -202,16 +175,43 @@ block_external_search_index: true
             title="Required">
         <span>Query<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertquerylist">List&lt;Alert<wbr>Query<wbr>List<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#alertquerylist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Log.<wbr>Inputs.<wbr>Alert<wbr>Query<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Alert<wbr>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alert description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mute<wbr>Until</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timestamp, notifications before closing again.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Notify<wbr>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Schedule<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
 {{% /md %}}</dd>
@@ -220,7 +220,7 @@ block_external_search_index: true
             title="Optional">
         <span>Schedule<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
 {{% /md %}}</dd>
@@ -229,7 +229,7 @@ block_external_search_index: true
             title="Optional">
         <span>Throttling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
 {{% /md %}}</dd>
@@ -240,15 +240,6 @@ block_external_search_index: true
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Alert<wbr>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -285,15 +276,6 @@ block_external_search_index: true
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mute<wbr>Until</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Notification<wbr>Lists</span>
@@ -301,15 +283,6 @@ block_external_search_index: true
         <span class="property-type"><a href="#alertnotificationlist">[]Alert<wbr>Notification<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Notify<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -332,9 +305,36 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Alert<wbr>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alert description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mute<wbr>Until</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timestamp, notifications before closing again.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Notify<wbr>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Schedule<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
 {{% /md %}}</dd>
@@ -343,7 +343,7 @@ block_external_search_index: true
             title="Optional">
         <span>Schedule<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
 {{% /md %}}</dd>
@@ -352,7 +352,7 @@ block_external_search_index: true
             title="Optional">
         <span>Throttling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
 {{% /md %}}</dd>
@@ -363,15 +363,6 @@ block_external_search_index: true
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>alert<wbr>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -408,15 +399,6 @@ block_external_search_index: true
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>mute<wbr>Until</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>notification<wbr>Lists</span>
@@ -424,15 +406,6 @@ block_external_search_index: true
         <span class="property-type"><a href="#alertnotificationlist">Alert<wbr>Notification<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>notify<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -455,531 +428,54 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
-        <span>schedule<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>schedule<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>throttling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>alert_<wbr>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>alert_<wbr>displayname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Alert displayname.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>alert_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of logstore for configuring alarm service.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Conditional expression, such as: count> 100.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>dashboard</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mute_<wbr>until</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>notification_<wbr>lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertnotificationlist">List[Alert<wbr>Notification<wbr>List]</a></span>
-    </dt>
-    <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>notify_<wbr>threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>project_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project name.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>query_<wbr>lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertquerylist">List[Alert<wbr>Query<wbr>List]</a></span>
-    </dt>
-    <dd>{{% md %}}Multiple conditions for configured alarm query.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>schedule_<wbr>interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>schedule_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>throttling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## Alert Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Alert<wbr>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Alert<wbr>Displayname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Alert displayname.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Alert<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of logstore for configuring alarm service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Conditional expression, such as: count> 100.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dashboard</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mute<wbr>Until</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notification<wbr>Lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertnotificationlist">List&lt;Alert<wbr>Notification<wbr>List&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notify<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Query<wbr>Lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertquerylist">List&lt;Alert<wbr>Query<wbr>List&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Multiple conditions for configured alarm query.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Throttling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Alert<wbr>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Alert<wbr>Displayname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Alert displayname.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Alert<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of logstore for configuring alarm service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Conditional expression, such as: count> 100.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dashboard</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mute<wbr>Until</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notification<wbr>Lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertnotificationlist">[]Alert<wbr>Notification<wbr>List</a></span>
-    </dt>
-    <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notify<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Query<wbr>Lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertquerylist">[]Alert<wbr>Query<wbr>List</a></span>
-    </dt>
-    <dd>{{% md %}}Multiple conditions for configured alarm query.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Throttling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
         <span>alert<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert description.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>alert<wbr>Displayname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Alert displayname.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>alert<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of logstore for configuring alarm service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Conditional expression, such as: count> 100.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dashboard</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>mute<wbr>Until</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>notification<wbr>Lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertnotificationlist">Alert<wbr>Notification<wbr>List[]</a></span>
-    </dt>
-    <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>notify<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>project<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>query<wbr>Lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertquerylist">Alert<wbr>Query<wbr>List[]</a></span>
-    </dt>
-    <dd>{{% md %}}Multiple conditions for configured alarm query.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>schedule<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>schedule<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>throttling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
 {{% /md %}}</dd>
@@ -991,17 +487,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>alert_<wbr>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>alert_<wbr>displayname</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1009,8 +496,8 @@ The following output properties are available:
     <dd>{{% md %}}Alert displayname.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>alert_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1018,8 +505,8 @@ The following output properties are available:
     <dd>{{% md %}}Name of logstore for configuring alarm service.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>condition</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1027,25 +514,16 @@ The following output properties are available:
     <dd>{{% md %}}Conditional expression, such as: count> 100.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>dashboard</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>mute_<wbr>until</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>notification_<wbr>lists</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertnotificationlist">List[Alert<wbr>Notification<wbr>List]</a></span>
@@ -1053,17 +531,8 @@ The following output properties are available:
     <dd>{{% md %}}Alarm information notification list.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>notify_<wbr>threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>project_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1071,8 +540,8 @@ The following output properties are available:
     <dd>{{% md %}}The project name.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>query_<wbr>lists</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertquerylist">List[Alert<wbr>Query<wbr>List]</a></span>
@@ -1080,8 +549,35 @@ The following output properties are available:
     <dd>{{% md %}}Multiple conditions for configured alarm query.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
+        <span>alert_<wbr>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Alert description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mute_<wbr>until</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Timestamp, notifications before closing again.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>notify_<wbr>threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>schedule_<wbr>interval</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1089,8 +585,8 @@ The following output properties are available:
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>schedule_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1098,8 +594,8 @@ The following output properties are available:
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>throttling</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1109,6 +605,8 @@ The following output properties are available:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -1246,7 +744,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alert<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert description.
 {{% /md %}}</dd>
@@ -1255,7 +753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alert<wbr>Displayname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
 {{% /md %}}</dd>
@@ -1264,7 +762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alert<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
 {{% /md %}}</dd>
@@ -1273,7 +771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
 {{% /md %}}</dd>
@@ -1282,7 +780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dashboard</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1290,7 +788,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mute<wbr>Until</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
 {{% /md %}}</dd>
@@ -1299,7 +797,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertnotificationlist">List&lt;Alert<wbr>Notification<wbr>List<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#alertnotificationlist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Log.<wbr>Inputs.<wbr>Alert<wbr>Notification<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
 {{% /md %}}</dd>
@@ -1308,7 +806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notify<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 {{% /md %}}</dd>
@@ -1317,7 +815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name.
 {{% /md %}}</dd>
@@ -1326,7 +824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Query<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertquerylist">List&lt;Alert<wbr>Query<wbr>List<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#alertquerylist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Log.<wbr>Inputs.<wbr>Alert<wbr>Query<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
 {{% /md %}}</dd>
@@ -1335,7 +833,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schedule<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
 {{% /md %}}</dd>
@@ -1344,7 +842,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schedule<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
 {{% /md %}}</dd>
@@ -1353,7 +851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Throttling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
 {{% /md %}}</dd>
@@ -1369,7 +867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alert<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert description.
 {{% /md %}}</dd>
@@ -1378,7 +876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alert<wbr>Displayname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
 {{% /md %}}</dd>
@@ -1387,7 +885,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alert<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
 {{% /md %}}</dd>
@@ -1396,7 +894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
 {{% /md %}}</dd>
@@ -1405,7 +903,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dashboard</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1413,7 +911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mute<wbr>Until</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
 {{% /md %}}</dd>
@@ -1431,7 +929,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notify<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 {{% /md %}}</dd>
@@ -1440,7 +938,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name.
 {{% /md %}}</dd>
@@ -1458,7 +956,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schedule<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
 {{% /md %}}</dd>
@@ -1467,7 +965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schedule<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
 {{% /md %}}</dd>
@@ -1476,7 +974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Throttling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
 {{% /md %}}</dd>
@@ -1492,7 +990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>alert<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert description.
 {{% /md %}}</dd>
@@ -1501,7 +999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>alert<wbr>Displayname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
 {{% /md %}}</dd>
@@ -1510,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>alert<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
 {{% /md %}}</dd>
@@ -1519,7 +1017,7 @@ The following state arguments are supported:
             title="Optional">
         <span>condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
 {{% /md %}}</dd>
@@ -1528,7 +1026,7 @@ The following state arguments are supported:
             title="Optional">
         <span>dashboard</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1536,7 +1034,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mute<wbr>Until</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
 {{% /md %}}</dd>
@@ -1545,7 +1043,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notification<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertnotificationlist">Alert<wbr>Notification<wbr>List[]?</a></span>
+        <span class="property-type"><a href="#alertnotificationlist">Alert<wbr>Notification<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
 {{% /md %}}</dd>
@@ -1554,7 +1052,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notify<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 {{% /md %}}</dd>
@@ -1563,7 +1061,7 @@ The following state arguments are supported:
             title="Optional">
         <span>project<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name.
 {{% /md %}}</dd>
@@ -1572,7 +1070,7 @@ The following state arguments are supported:
             title="Optional">
         <span>query<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertquerylist">Alert<wbr>Query<wbr>List[]?</a></span>
+        <span class="property-type"><a href="#alertquerylist">Alert<wbr>Query<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
 {{% /md %}}</dd>
@@ -1581,7 +1079,7 @@ The following state arguments are supported:
             title="Optional">
         <span>schedule<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
 {{% /md %}}</dd>
@@ -1590,7 +1088,7 @@ The following state arguments are supported:
             title="Optional">
         <span>schedule<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
 {{% /md %}}</dd>
@@ -1599,7 +1097,7 @@ The following state arguments are supported:
             title="Optional">
         <span>throttling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
 {{% /md %}}</dd>
@@ -1765,11 +1263,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Notice content of alarm.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Notification type. support Email, SMS, DingTalk.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Email<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Email address list.   
 {{% /md %}}</dd>
@@ -1778,7 +1285,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mobile<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}SMS sending mobile number.
 {{% /md %}}</dd>
@@ -1787,18 +1294,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Request address.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notification type. support Email, SMS, DingTalk.
+    <dd>{{% md %}}Request address.
 {{% /md %}}</dd>
 
 </dl>
@@ -1817,6 +1315,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Notice content of alarm.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Notification type. support Email, SMS, DingTalk.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Email<wbr>Lists</span>
@@ -1839,18 +1346,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Request address.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notification type. support Email, SMS, DingTalk.
+    <dd>{{% md %}}Request address.
 {{% /md %}}</dd>
 
 </dl>
@@ -1869,11 +1367,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Notice content of alarm.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Notification type. support Email, SMS, DingTalk.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>email<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Email address list.   
 {{% /md %}}</dd>
@@ -1882,7 +1389,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mobile<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}SMS sending mobile number.
 {{% /md %}}</dd>
@@ -1891,18 +1398,9 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Request address.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notification type. support Email, SMS, DingTalk.
+    <dd>{{% md %}}Request address.
 {{% /md %}}</dd>
 
 </dl>
@@ -1921,6 +1419,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Notice content of alarm.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Notification type. support Email, SMS, DingTalk.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>email<wbr>Lists</span>
@@ -1946,15 +1453,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Request address.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Notification type. support Email, SMS, DingTalk.
 {{% /md %}}</dd>
 
 </dl>
@@ -2028,7 +1526,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Span<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default Custom. No need to configure this parameter.
 {{% /md %}}</dd>
@@ -2089,7 +1587,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Span<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default Custom. No need to configure this parameter.
 {{% /md %}}</dd>
@@ -2150,7 +1648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>time<wbr>Span<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default Custom. No need to configure this parameter.
 {{% /md %}}</dd>

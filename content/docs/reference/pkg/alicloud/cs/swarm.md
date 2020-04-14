@@ -41,7 +41,7 @@ const myCluster = new alicloud.cs.Swarm("my_cluster", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#Swarm">Swarm</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#SwarmArgs">SwarmArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#Swarm">Swarm</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#SwarmArgs">SwarmArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -49,11 +49,11 @@ const myCluster = new alicloud.cs.Swarm("my_cluster", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSwarm<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#SwarmArgs">SwarmArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#Swarm">Swarm</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSwarm<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#SwarmArgs">SwarmArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#Swarm">Swarm</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cs.Swarm.html">Swarm</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.SwarmArgs.html">SwarmArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.Swarm.html">Swarm</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.CS.SwarmArgs.html">SwarmArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -158,33 +158,6 @@ Valid value:
 - 10.0.0.0/16
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Disk<wbr>Category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The data disk category of ECS instance node. Its valid value are `cloud`, `cloud_ssd`, `cloud_essd`, `ephemeral_essd` and `cloud_efficiency`. Default to `cloud_efficiency`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Instance<wbr>Type</span>
@@ -192,49 +165,6 @@ Valid value:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of ECS instance node.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Outdated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Need<wbr>Slb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Node<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -246,11 +176,90 @@ Valid value:
     <dd>{{% md %}}The password of ECS instance node.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Vswitch<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Disk<wbr>Category</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data disk category of ECS instance node. Its valid value are `cloud`, `cloud_ssd`, `cloud_essd`, `ephemeral_essd` and `cloud_efficiency`. Default to `cloud_efficiency`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Disk<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Outdated</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Need<wbr>Slb</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Node<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Release<wbr>Eip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
 * `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
@@ -260,19 +269,10 @@ Valid value:
             title="Optional, Deprecated">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field &#39;node_number&#39; replaces it.{{% /md %}}</p></dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -294,33 +294,6 @@ Valid value:
 - 10.0.0.0/16
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Disk<wbr>Category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The data disk category of ECS instance node. Its valid value are `cloud`, `cloud_ssd`, `cloud_essd`, `ephemeral_essd` and `cloud_efficiency`. Default to `cloud_efficiency`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Instance<wbr>Type</span>
@@ -328,49 +301,6 @@ Valid value:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of ECS instance node.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Outdated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Need<wbr>Slb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Node<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -382,11 +312,90 @@ Valid value:
     <dd>{{% md %}}The password of ECS instance node.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Vswitch<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Disk<wbr>Category</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data disk category of ECS instance node. Its valid value are `cloud`, `cloud_ssd`, `cloud_essd`, `ephemeral_essd` and `cloud_efficiency`. Default to `cloud_efficiency`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Disk<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Outdated</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Need<wbr>Slb</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Node<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Release<wbr>Eip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
 * `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
@@ -396,19 +405,10 @@ Valid value:
             title="Optional, Deprecated">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field &#39;node_number&#39; replaces it.{{% /md %}}</p></dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -430,33 +430,6 @@ Valid value:
 - 10.0.0.0/16
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>disk<wbr>Category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The data disk category of ECS instance node. Its valid value are `cloud`, `cloud_ssd`, `cloud_essd`, `ephemeral_essd` and `cloud_efficiency`. Default to `cloud_efficiency`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>instance<wbr>Type</span>
@@ -464,49 +437,6 @@ Valid value:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of ECS instance node.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Outdated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>need<wbr>Slb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>node<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -518,11 +448,90 @@ Valid value:
     <dd>{{% md %}}The password of ECS instance node.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>vswitch<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk<wbr>Category</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data disk category of ECS instance node. Its valid value are `cloud`, `cloud_ssd`, `cloud_essd`, `ephemeral_essd` and `cloud_efficiency`. Default to `cloud_efficiency`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Outdated</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>need<wbr>Slb</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>node<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>release<wbr>Eip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
 * `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
@@ -532,19 +541,10 @@ Valid value:
             title="Optional, Deprecated">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field &#39;node_number&#39; replaces it.{{% /md %}}</p></dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -564,6 +564,33 @@ Valid value:
 - 192.168.0.0/16
 - 172.19-30.0.0/16
 - 10.0.0.0/16
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of ECS instance node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password of ECS instance node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>vswitch_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -591,15 +618,6 @@ Valid value:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of ECS instance node.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -645,15 +663,6 @@ Valid value:
     <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The password of ECS instance node.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>release_<wbr>eip</span>
@@ -672,15 +681,6 @@ Valid value:
     </dt>
     <dd>{{% md %}}Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field &#39;node_number&#39; replaces it.{{% /md %}}</p></dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>vswitch_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -712,122 +712,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block for the Container. It can not be same as the CIDR used by the VPC.
-Valid value:
-- 192.168.0.0/16
-- 172.19-30.0.0/16
-- 10.0.0.0/16
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The data disk category of ECS instance node. Its valid value are `cloud`, `cloud_ssd`, `cloud_essd`, `ephemeral_essd` and `cloud_efficiency`. Default to `cloud_efficiency`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of ECS instance node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Is<wbr>Outdated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Need<wbr>Slb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#swarmnode">List&lt;Swarm<wbr>Node&gt;</a></span>
+        <span class="property-type"><a href="#swarmnode">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Outputs.<wbr>Swarm<wbr>Node&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of cluster nodes. It contains several attributes to `Block Nodes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of ECS instance node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Release<wbr>Eip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -838,15 +727,6 @@ Valid value:
     </dt>
     <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field &#39;node_number&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -864,15 +744,6 @@ Valid value:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of VPC where the current cluster is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
 {{% /md %}}</dd>
 
 </dl>
@@ -893,122 +764,11 @@ Valid value:
 
     <dt class="property-"
             title="">
-        <span>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block for the Container. It can not be same as the CIDR used by the VPC.
-Valid value:
-- 192.168.0.0/16
-- 172.19-30.0.0/16
-- 10.0.0.0/16
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The data disk category of ECS instance node. Its valid value are `cloud`, `cloud_ssd`, `cloud_essd`, `ephemeral_essd` and `cloud_efficiency`. Default to `cloud_efficiency`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of ECS instance node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Is<wbr>Outdated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Need<wbr>Slb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Nodes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#swarmnode">[]Swarm<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}List of cluster nodes. It contains several attributes to `Block Nodes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of ECS instance node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Release<wbr>Eip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1019,15 +779,6 @@ Valid value:
     </dt>
     <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field &#39;node_number&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -1045,15 +796,6 @@ Valid value:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of VPC where the current cluster is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1074,122 +816,11 @@ Valid value:
 
     <dt class="property-"
             title="">
-        <span>cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block for the Container. It can not be same as the CIDR used by the VPC.
-Valid value:
-- 192.168.0.0/16
-- 172.19-30.0.0/16
-- 10.0.0.0/16
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk<wbr>Category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The data disk category of ECS instance node. Its valid value are `cloud`, `cloud_ssd`, `cloud_essd`, `ephemeral_essd` and `cloud_efficiency`. Default to `cloud_efficiency`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of ECS instance node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>is<wbr>Outdated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>need<wbr>Slb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>nodes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#swarmnode">Swarm<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster nodes. It contains several attributes to `Block Nodes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of ECS instance node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>release<wbr>Eip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1200,15 +831,6 @@ Valid value:
     </dt>
     <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field &#39;node_number&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -1226,15 +848,6 @@ Valid value:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of VPC where the current cluster is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1255,122 +868,11 @@ Valid value:
 
     <dt class="property-"
             title="">
-        <span>cidr_<wbr>block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block for the Container. It can not be same as the CIDR used by the VPC.
-Valid value:
-- 192.168.0.0/16
-- 172.19-30.0.0/16
-- 10.0.0.0/16
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk_<wbr>category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The data disk category of ECS instance node. Its valid value are `cloud`, `cloud_ssd`, `cloud_essd`, `ephemeral_essd` and `cloud_efficiency`. Default to `cloud_efficiency`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of ECS instance node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>is_<wbr>outdated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>need_<wbr>slb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node_<wbr>number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>nodes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#swarmnode">List[Swarm<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster nodes. It contains several attributes to `Block Nodes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The password of ECS instance node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>release_<wbr>eip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1381,15 +883,6 @@ Valid value:
     </dt>
     <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field &#39;node_number&#39; replaces it.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -1407,15 +900,6 @@ Valid value:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of VPC where the current cluster is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vswitch_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1447,7 +931,7 @@ Get an existing Swarm resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cs.Swarm.html">Swarm</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cs.SwarmState.html">SwarmState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.Swarm.html">Swarm</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.SwarmState.html">SwarmState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1557,7 +1041,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Agent<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nodes agent version.
 {{% /md %}}</dd>
@@ -1566,7 +1050,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the Container. It can not be same as the CIDR used by the VPC.
 Valid value:
@@ -1579,7 +1063,7 @@ Valid value:
             title="Optional">
         <span>Disk<wbr>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data disk category of ECS instance node. Its valid value are `cloud`, `cloud_ssd`, `cloud_essd`, `ephemeral_essd` and `cloud_efficiency`. Default to `cloud_efficiency`.
 {{% /md %}}</dd>
@@ -1588,7 +1072,7 @@ Valid value:
             title="Optional">
         <span>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
 {{% /md %}}</dd>
@@ -1597,7 +1081,7 @@ Valid value:
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
 {{% /md %}}</dd>
@@ -1606,7 +1090,7 @@ Valid value:
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of ECS instance node.
 {{% /md %}}</dd>
@@ -1615,7 +1099,7 @@ Valid value:
             title="Optional">
         <span>Is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use outdated instance type. Default to false.
 {{% /md %}}</dd>
@@ -1624,7 +1108,7 @@ Valid value:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
 {{% /md %}}</dd>
@@ -1633,7 +1117,7 @@ Valid value:
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1641,7 +1125,7 @@ Valid value:
             title="Optional">
         <span>Need<wbr>Slb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1649,7 +1133,7 @@ Valid value:
             title="Optional">
         <span>Node<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
 {{% /md %}}</dd>
@@ -1658,7 +1142,7 @@ Valid value:
             title="Optional">
         <span>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#swarmnode">List&lt;Swarm<wbr>Node<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#swarmnode">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Swarm<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of cluster nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
@@ -1667,7 +1151,7 @@ Valid value:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of ECS instance node.
 {{% /md %}}</dd>
@@ -1676,7 +1160,7 @@ Valid value:
             title="Optional">
         <span>Release<wbr>Eip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
 * `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
@@ -1686,7 +1170,7 @@ Valid value:
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
@@ -1695,7 +1179,7 @@ Valid value:
             title="Optional, Deprecated">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field &#39;node_number&#39; replaces it.{{% /md %}}</p></dd>
@@ -1704,7 +1188,7 @@ Valid value:
             title="Optional">
         <span>Slb<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of load balancer where the current cluster worker node is located.
 {{% /md %}}</dd>
@@ -1713,7 +1197,7 @@ Valid value:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of VPC where the current cluster is located.
 {{% /md %}}</dd>
@@ -1722,7 +1206,7 @@ Valid value:
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
 {{% /md %}}</dd>
@@ -1738,7 +1222,7 @@ Valid value:
             title="Optional">
         <span>Agent<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nodes agent version.
 {{% /md %}}</dd>
@@ -1747,7 +1231,7 @@ Valid value:
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the Container. It can not be same as the CIDR used by the VPC.
 Valid value:
@@ -1760,7 +1244,7 @@ Valid value:
             title="Optional">
         <span>Disk<wbr>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data disk category of ECS instance node. Its valid value are `cloud`, `cloud_ssd`, `cloud_essd`, `ephemeral_essd` and `cloud_efficiency`. Default to `cloud_efficiency`.
 {{% /md %}}</dd>
@@ -1769,7 +1253,7 @@ Valid value:
             title="Optional">
         <span>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
 {{% /md %}}</dd>
@@ -1778,7 +1262,7 @@ Valid value:
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
 {{% /md %}}</dd>
@@ -1787,7 +1271,7 @@ Valid value:
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of ECS instance node.
 {{% /md %}}</dd>
@@ -1796,7 +1280,7 @@ Valid value:
             title="Optional">
         <span>Is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use outdated instance type. Default to false.
 {{% /md %}}</dd>
@@ -1805,7 +1289,7 @@ Valid value:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
 {{% /md %}}</dd>
@@ -1814,7 +1298,7 @@ Valid value:
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1822,7 +1306,7 @@ Valid value:
             title="Optional">
         <span>Need<wbr>Slb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1830,7 +1314,7 @@ Valid value:
             title="Optional">
         <span>Node<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
 {{% /md %}}</dd>
@@ -1848,7 +1332,7 @@ Valid value:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of ECS instance node.
 {{% /md %}}</dd>
@@ -1857,7 +1341,7 @@ Valid value:
             title="Optional">
         <span>Release<wbr>Eip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
 * `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
@@ -1867,7 +1351,7 @@ Valid value:
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
@@ -1876,7 +1360,7 @@ Valid value:
             title="Optional, Deprecated">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field &#39;node_number&#39; replaces it.{{% /md %}}</p></dd>
@@ -1885,7 +1369,7 @@ Valid value:
             title="Optional">
         <span>Slb<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of load balancer where the current cluster worker node is located.
 {{% /md %}}</dd>
@@ -1894,7 +1378,7 @@ Valid value:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of VPC where the current cluster is located.
 {{% /md %}}</dd>
@@ -1903,7 +1387,7 @@ Valid value:
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
 {{% /md %}}</dd>
@@ -1919,7 +1403,7 @@ Valid value:
             title="Optional">
         <span>agent<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nodes agent version.
 {{% /md %}}</dd>
@@ -1928,7 +1412,7 @@ Valid value:
             title="Optional">
         <span>cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block for the Container. It can not be same as the CIDR used by the VPC.
 Valid value:
@@ -1941,7 +1425,7 @@ Valid value:
             title="Optional">
         <span>disk<wbr>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data disk category of ECS instance node. Its valid value are `cloud`, `cloud_ssd`, `cloud_essd`, `ephemeral_essd` and `cloud_efficiency`. Default to `cloud_efficiency`.
 {{% /md %}}</dd>
@@ -1950,7 +1434,7 @@ Valid value:
             title="Optional">
         <span>disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
 {{% /md %}}</dd>
@@ -1959,7 +1443,7 @@ Valid value:
             title="Optional">
         <span>image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image ID of ECS instance node used. Default to System automate allocated.
 {{% /md %}}</dd>
@@ -1968,7 +1452,7 @@ Valid value:
             title="Optional">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of ECS instance node.
 {{% /md %}}</dd>
@@ -1977,7 +1461,7 @@ Valid value:
             title="Optional">
         <span>is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use outdated instance type. Default to false.
 {{% /md %}}</dd>
@@ -1986,7 +1470,7 @@ Valid value:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
 {{% /md %}}</dd>
@@ -1995,7 +1479,7 @@ Valid value:
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2003,7 +1487,7 @@ Valid value:
             title="Optional">
         <span>need<wbr>Slb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2011,7 +1495,7 @@ Valid value:
             title="Optional">
         <span>node<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
 {{% /md %}}</dd>
@@ -2020,7 +1504,7 @@ Valid value:
             title="Optional">
         <span>nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#swarmnode">Swarm<wbr>Node[]?</a></span>
+        <span class="property-type"><a href="#swarmnode">Swarm<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
@@ -2029,7 +1513,7 @@ Valid value:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of ECS instance node.
 {{% /md %}}</dd>
@@ -2038,7 +1522,7 @@ Valid value:
             title="Optional">
         <span>release<wbr>Eip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
 * `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
@@ -2048,7 +1532,7 @@ Valid value:
             title="Optional">
         <span>security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
@@ -2057,7 +1541,7 @@ Valid value:
             title="Optional, Deprecated">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field &#39;node_number&#39; replaces it.{{% /md %}}</p></dd>
@@ -2066,7 +1550,7 @@ Valid value:
             title="Optional">
         <span>slb<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of load balancer where the current cluster worker node is located.
 {{% /md %}}</dd>
@@ -2075,7 +1559,7 @@ Valid value:
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of VPC where the current cluster is located.
 {{% /md %}}</dd>
@@ -2084,7 +1568,7 @@ Valid value:
             title="Optional">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
 {{% /md %}}</dd>
@@ -2303,7 +1787,7 @@ Valid value:
             title="Optional">
         <span>Eip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Elastic IP address of node.
 {{% /md %}}</dd>
@@ -2312,7 +1796,7 @@ Valid value:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the node.
 {{% /md %}}</dd>
@@ -2321,7 +1805,7 @@ Valid value:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
 {{% /md %}}</dd>
@@ -2330,7 +1814,7 @@ Valid value:
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address of node.
 {{% /md %}}</dd>
@@ -2339,7 +1823,7 @@ Valid value:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node current status. It is different with instance status.
 {{% /md %}}</dd>
@@ -2355,7 +1839,7 @@ Valid value:
             title="Optional">
         <span>Eip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Elastic IP address of node.
 {{% /md %}}</dd>
@@ -2364,7 +1848,7 @@ Valid value:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the node.
 {{% /md %}}</dd>
@@ -2373,7 +1857,7 @@ Valid value:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
 {{% /md %}}</dd>
@@ -2382,7 +1866,7 @@ Valid value:
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address of node.
 {{% /md %}}</dd>
@@ -2391,7 +1875,7 @@ Valid value:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node current status. It is different with instance status.
 {{% /md %}}</dd>
@@ -2407,7 +1891,7 @@ Valid value:
             title="Optional">
         <span>eip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Elastic IP address of node.
 {{% /md %}}</dd>
@@ -2416,7 +1900,7 @@ Valid value:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the node.
 {{% /md %}}</dd>
@@ -2425,7 +1909,7 @@ Valid value:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container cluster's name. It is the only in one Alicloud account.
 {{% /md %}}</dd>
@@ -2434,7 +1918,7 @@ Valid value:
             title="Optional">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address of node.
 {{% /md %}}</dd>
@@ -2443,7 +1927,7 @@ Valid value:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node current status. It is different with instance status.
 {{% /md %}}</dd>

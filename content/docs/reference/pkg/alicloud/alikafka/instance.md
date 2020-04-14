@@ -58,7 +58,7 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -66,11 +66,11 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/alikafka?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/alikafka?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/alikafka?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/alikafka?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Alikafka.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.AliKafka.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.AliKafka.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.AliKafka.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -189,15 +189,6 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
     <dd>{{% md %}}The disk type of the instance. 0: efficient cloud disk , 1: SSD.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Eip<wbr>Max</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Io<wbr>Max</span>
@@ -205,42 +196,6 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max value of io of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Paid<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay. 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Spec<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -259,6 +214,51 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of attaching vswitch to instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Eip<wbr>Max</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Paid<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Spec<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -295,15 +295,6 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
     <dd>{{% md %}}The disk type of the instance. 0: efficient cloud disk , 1: SSD.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Eip<wbr>Max</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Io<wbr>Max</span>
@@ -311,42 +302,6 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max value of io of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Paid<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay. 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Spec<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -365,6 +320,51 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of attaching vswitch to instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Eip<wbr>Max</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Paid<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Spec<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -401,15 +401,6 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
     <dd>{{% md %}}The disk type of the instance. 0: efficient cloud disk , 1: SSD.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>eip<wbr>Max</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>io<wbr>Max</span>
@@ -417,42 +408,6 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max value of io of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>paid<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay. 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>spec<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -471,6 +426,51 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of attaching vswitch to instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>eip<wbr>Max</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>paid<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>spec<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -507,15 +507,6 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
     <dd>{{% md %}}The disk type of the instance. 0: efficient cloud disk , 1: SSD.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>eip_<wbr>max</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>io_<wbr>max</span>
@@ -523,6 +514,33 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The max value of io of the instance. When modify this value, it only support adjust to a greater value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>topic_<wbr>quota</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The max num of topic can be create of the instance. When modify this value, it only adjust to a greater value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>vswitch_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of attaching vswitch to instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>eip_<wbr>max</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -559,24 +577,6 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>topic_<wbr>quota</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The max num of topic can be create of the instance. When modify this value, it only adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>vswitch_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of attaching vswitch to instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -600,110 +600,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Deploy<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The deploy type of the instance. Currently only support two deploy type, 4: eip/vpc instance, 5: vpc instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The disk size of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The disk type of the instance. 0: efficient cloud disk , 1: SSD.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Eip<wbr>Max</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Io<wbr>Max</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The max value of io of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Paid<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spec<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Topic<wbr>Quota</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The max num of topic can be create of the instance. When modify this value, it only adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of attaching VPC to instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of attaching vswitch to instance.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -724,110 +625,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Deploy<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The deploy type of the instance. Currently only support two deploy type, 4: eip/vpc instance, 5: vpc instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The disk size of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The disk type of the instance. 0: efficient cloud disk , 1: SSD.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Eip<wbr>Max</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Io<wbr>Max</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The max value of io of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Paid<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spec<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Topic<wbr>Quota</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The max num of topic can be create of the instance. When modify this value, it only adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of attaching VPC to instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of attaching vswitch to instance.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -848,110 +650,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>deploy<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The deploy type of the instance. Currently only support two deploy type, 4: eip/vpc instance, 5: vpc instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The disk size of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The disk type of the instance. 0: efficient cloud disk , 1: SSD.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>eip<wbr>Max</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>io<wbr>Max</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The max value of io of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>paid<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spec<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>topic<wbr>Quota</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The max num of topic can be create of the instance. When modify this value, it only adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of attaching VPC to instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of attaching vswitch to instance.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -972,110 +675,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>deploy_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The deploy type of the instance. Currently only support two deploy type, 4: eip/vpc instance, 5: vpc instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The disk size of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The disk type of the instance. 0: efficient cloud disk , 1: SSD.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>eip_<wbr>max</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>io_<wbr>max</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The max value of io of the instance. When modify this value, it only support adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>paid_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spec_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>topic_<wbr>quota</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The max num of topic can be create of the instance. When modify this value, it only adjust to a greater value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of attaching VPC to instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vswitch_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of attaching vswitch to instance.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1116,7 +720,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Alikafka.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Alikafka.InstanceState.html">InstanceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.AliKafka.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.AliKafka.InstanceState.html">InstanceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1226,7 +830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deploy<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The deploy type of the instance. Currently only support two deploy type, 4: eip/vpc instance, 5: vpc instance.
 {{% /md %}}</dd>
@@ -1235,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk size of the instance. When modify this value, it only support adjust to a greater value.
 {{% /md %}}</dd>
@@ -1244,7 +848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk type of the instance. 0: efficient cloud disk , 1: SSD.
 {{% /md %}}</dd>
@@ -1253,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Eip<wbr>Max</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
 {{% /md %}}</dd>
@@ -1262,7 +866,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Io<wbr>Max</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max value of io of the instance. When modify this value, it only support adjust to a greater value.
 {{% /md %}}</dd>
@@ -1271,7 +875,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
 {{% /md %}}</dd>
@@ -1280,7 +884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Paid<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay. 
 {{% /md %}}</dd>
@@ -1289,7 +893,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Spec<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
 {{% /md %}}</dd>
@@ -1298,7 +902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1307,7 +911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Quota</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max num of topic can be create of the instance. When modify this value, it only adjust to a greater value.
 {{% /md %}}</dd>
@@ -1316,7 +920,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of attaching VPC to instance.
 {{% /md %}}</dd>
@@ -1325,7 +929,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of attaching vswitch to instance.
 {{% /md %}}</dd>
@@ -1334,7 +938,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the kafka instance.
 {{% /md %}}</dd>
@@ -1350,7 +954,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deploy<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The deploy type of the instance. Currently only support two deploy type, 4: eip/vpc instance, 5: vpc instance.
 {{% /md %}}</dd>
@@ -1359,7 +963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk size of the instance. When modify this value, it only support adjust to a greater value.
 {{% /md %}}</dd>
@@ -1368,7 +972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk type of the instance. 0: efficient cloud disk , 1: SSD.
 {{% /md %}}</dd>
@@ -1377,7 +981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Eip<wbr>Max</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
 {{% /md %}}</dd>
@@ -1386,7 +990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Io<wbr>Max</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max value of io of the instance. When modify this value, it only support adjust to a greater value.
 {{% /md %}}</dd>
@@ -1395,7 +999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
 {{% /md %}}</dd>
@@ -1404,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Paid<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay. 
 {{% /md %}}</dd>
@@ -1413,7 +1017,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Spec<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
 {{% /md %}}</dd>
@@ -1431,7 +1035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Quota</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max num of topic can be create of the instance. When modify this value, it only adjust to a greater value.
 {{% /md %}}</dd>
@@ -1440,7 +1044,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of attaching VPC to instance.
 {{% /md %}}</dd>
@@ -1449,7 +1053,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of attaching vswitch to instance.
 {{% /md %}}</dd>
@@ -1458,7 +1062,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the kafka instance.
 {{% /md %}}</dd>
@@ -1474,7 +1078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deploy<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The deploy type of the instance. Currently only support two deploy type, 4: eip/vpc instance, 5: vpc instance.
 {{% /md %}}</dd>
@@ -1483,7 +1087,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The disk size of the instance. When modify this value, it only support adjust to a greater value.
 {{% /md %}}</dd>
@@ -1492,7 +1096,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The disk type of the instance. 0: efficient cloud disk , 1: SSD.
 {{% /md %}}</dd>
@@ -1501,7 +1105,7 @@ The following state arguments are supported:
             title="Optional">
         <span>eip<wbr>Max</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max bandwidth of the instance. When modify this value, it only support adjust to a greater value.
 {{% /md %}}</dd>
@@ -1510,7 +1114,7 @@ The following state arguments are supported:
             title="Optional">
         <span>io<wbr>Max</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max value of io of the instance. When modify this value, it only support adjust to a greater value.
 {{% /md %}}</dd>
@@ -1519,7 +1123,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of your Kafka instance. The length should between 3 and 64 characters. If not set, will use instance id as instance name.
 {{% /md %}}</dd>
@@ -1528,7 +1132,7 @@ The following state arguments are supported:
             title="Optional">
         <span>paid<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The paid type of the instance. Support two type, "PrePaid": pre paid type instance, "PostPaid": post paid type instance. Default is PostPaid. When modify this value, it only support adjust from post pay to pre pay. 
 {{% /md %}}</dd>
@@ -1537,7 +1141,7 @@ The following state arguments are supported:
             title="Optional">
         <span>spec<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The spec type of the instance. Support two type, "normal": normal version instance, "professional": professional version instance. Default is normal. When modify this value, it only support adjust from normal to professional. Note only pre paid type instance support professional specific type.
 {{% /md %}}</dd>
@@ -1546,7 +1150,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1555,7 +1159,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic<wbr>Quota</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max num of topic can be create of the instance. When modify this value, it only adjust to a greater value.
 {{% /md %}}</dd>
@@ -1564,7 +1168,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of attaching VPC to instance.
 {{% /md %}}</dd>
@@ -1573,7 +1177,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of attaching vswitch to instance.
 {{% /md %}}</dd>
@@ -1582,7 +1186,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the kafka instance.
 {{% /md %}}</dd>

@@ -47,13 +47,13 @@ export const output = k8sClusters.clusters;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesClusters<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#LookupKubernetesClustersArgs">LookupKubernetesClustersArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#LookupKubernetesClustersResult">LookupKubernetesClustersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesClusters<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#LookupKubernetesClustersArgs">LookupKubernetesClustersArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#LookupKubernetesClustersResult">LookupKubernetesClustersResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKubernetesClusters </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cs.GetKubernetesClustersResult.html">GetKubernetesClustersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.GetKubernetesClustersArgs.html">GetKubernetesClustersArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cs.GetKubernetesClustersResult.html">GetKubernetesClustersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.CS.GetKubernetesClustersArgs.html">GetKubernetesClustersArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -70,7 +70,7 @@ The following arguments are supported:
             title="Optional">
         <span>Enable<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -78,7 +78,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Cluster IDs to filter.
 {{% /md %}}</dd>
@@ -87,7 +87,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by cluster name.
 {{% /md %}}</dd>
@@ -96,7 +96,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -111,7 +111,7 @@ The following arguments are supported:
             title="Optional">
         <span>Enable<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -128,7 +128,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by cluster name.
 {{% /md %}}</dd>
@@ -137,7 +137,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -152,7 +152,7 @@ The following arguments are supported:
             title="Optional">
         <span>enable<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -160,7 +160,7 @@ The following arguments are supported:
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Cluster IDs to filter.
 {{% /md %}}</dd>
@@ -169,7 +169,7 @@ The following arguments are supported:
             title="Optional">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by cluster name.
 {{% /md %}}</dd>
@@ -178,7 +178,7 @@ The following arguments are supported:
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -247,18 +247,10 @@ The following output properties are available:
             title="">
         <span>Clusters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterscluster">List&lt;Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterscluster">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Outputs.<wbr>Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of matched Kubernetes clusters. Each element contains the following attributes:
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -273,33 +265,41 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of matched Kubernetes clusters' ids.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of matched Kubernetes clusters' names.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span>Enable<wbr>Details</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -321,14 +321,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Enable<wbr>Details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -347,14 +339,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Names</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -364,9 +348,25 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Enable<wbr>Details</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -388,14 +388,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>enable<wbr>Details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -414,14 +406,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>names</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -431,9 +415,25 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>enable<wbr>Details</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -455,14 +455,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>enable_<wbr>details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -481,20 +473,28 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>names</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of matched Kubernetes clusters' names.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>enable_<wbr>details</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name_<wbr>regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -552,7 +552,7 @@ The following output properties are available:
             title="Required">
         <span>Connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclustersclusterconnections">Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkubernetesclustersclusterconnections">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
 {{% /md %}}</dd>
@@ -588,7 +588,7 @@ The following output properties are available:
             title="Required">
         <span>Log<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclustersclusterlogconfig">List&lt;Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Log<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclustersclusterlogconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Log<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing information about the associated log store. It contains the following attributes:
 {{% /md %}}</dd>
@@ -639,7 +639,7 @@ The following output properties are available:
             title="Required">
         <span>Master<wbr>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The instance type of master node.
 {{% /md %}}</dd>
@@ -648,7 +648,7 @@ The following output properties are available:
             title="Required">
         <span>Master<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclustersclustermasternode">List&lt;Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Master<wbr>Node<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclustersclustermasternode">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Master<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of cluster master nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
@@ -743,7 +743,7 @@ The following output properties are available:
             title="Required">
         <span>Vswitch<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ID of VSwitches where the current cluster is located.
 {{% /md %}}</dd>
@@ -812,7 +812,7 @@ The following output properties are available:
             title="Required">
         <span>Worker<wbr>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The instance type of worker node.
 {{% /md %}}</dd>
@@ -821,7 +821,7 @@ The following output properties are available:
             title="Required">
         <span>Worker<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclustersclusterworkernode">List&lt;Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Worker<wbr>Node<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclustersclusterworkernode">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Worker<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
@@ -830,7 +830,7 @@ The following output properties are available:
             title="Required">
         <span>Worker<wbr>Numbers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<int></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}The ECS instance node number in the current container cluster.
 {{% /md %}}</dd>

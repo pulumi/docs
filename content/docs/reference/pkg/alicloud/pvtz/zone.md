@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/pvtz/#Zone">Zone</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/pvtz/#ZoneArgs">ZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/pvtz/#Zone">Zone</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/pvtz/#ZoneArgs">ZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewZone<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/pvtz?tab=doc#ZoneArgs">ZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/pvtz?tab=doc#Zone">Zone</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewZone<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/pvtz?tab=doc#ZoneArgs">ZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/pvtz?tab=doc#Zone">Zone</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Pvtz.Zone.html">Zone</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Pvtz.ZoneArgs.html">ZoneArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Pvtz.Zone.html">Zone</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Pvtz.ZoneArgs.html">ZoneArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -122,7 +122,7 @@ block_external_search_index: true
             title="Optional">
         <span>Lang</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
 {{% /md %}}</dd>
@@ -131,7 +131,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
 {{% /md %}}</dd>
@@ -140,7 +140,7 @@ block_external_search_index: true
             title="Optional">
         <span>Proxy<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recursive DNS proxy. Valid values:
 - ZONE: indicates that the recursive DNS proxy is disabled.
@@ -151,7 +151,7 @@ block_external_search_index: true
             title="Optional">
         <span>Remark</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
 {{% /md %}}</dd>
@@ -160,7 +160,7 @@ block_external_search_index: true
             title="Optional">
         <span>User<wbr>Client<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
 {{% /md %}}</dd>
@@ -176,7 +176,7 @@ block_external_search_index: true
             title="Optional">
         <span>Lang</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
 {{% /md %}}</dd>
@@ -194,7 +194,7 @@ block_external_search_index: true
             title="Optional">
         <span>Proxy<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recursive DNS proxy. Valid values:
 - ZONE: indicates that the recursive DNS proxy is disabled.
@@ -205,7 +205,7 @@ block_external_search_index: true
             title="Optional">
         <span>Remark</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ block_external_search_index: true
             title="Optional">
         <span>User<wbr>Client<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
 {{% /md %}}</dd>
@@ -230,7 +230,7 @@ block_external_search_index: true
             title="Optional">
         <span>lang</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
 {{% /md %}}</dd>
@@ -239,7 +239,7 @@ block_external_search_index: true
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
 {{% /md %}}</dd>
@@ -248,7 +248,7 @@ block_external_search_index: true
             title="Optional">
         <span>proxy<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recursive DNS proxy. Valid values:
 - ZONE: indicates that the recursive DNS proxy is disabled.
@@ -259,7 +259,7 @@ block_external_search_index: true
             title="Optional">
         <span>remark</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
 {{% /md %}}</dd>
@@ -268,7 +268,7 @@ block_external_search_index: true
             title="Optional">
         <span>user<wbr>Client<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
 {{% /md %}}</dd>
@@ -364,35 +364,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Lang</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Private Zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Proxy<wbr>Pattern</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The recursive DNS proxy. Valid values:
-- ZONE: indicates that the recursive DNS proxy is disabled.
-- RECORD: indicates that the recursive DNS proxy is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Record<wbr>Count</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -402,29 +373,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Remark</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The remark of the Private Zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Update<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Client<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The IP address of the client.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -451,35 +404,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Lang</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Private Zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Proxy<wbr>Pattern</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The recursive DNS proxy. Valid values:
-- ZONE: indicates that the recursive DNS proxy is disabled.
-- RECORD: indicates that the recursive DNS proxy is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Record<wbr>Count</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -489,29 +413,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Remark</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The remark of the Private Zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Update<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Client<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The IP address of the client.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -538,35 +444,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>lang</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Private Zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>proxy<wbr>Pattern</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The recursive DNS proxy. Valid values:
-- ZONE: indicates that the recursive DNS proxy is disabled.
-- RECORD: indicates that the recursive DNS proxy is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>record<wbr>Count</span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -576,29 +453,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>remark</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The remark of the Private Zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>update<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Client<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The IP address of the client.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -625,35 +484,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>lang</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Private Zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>proxy_<wbr>pattern</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The recursive DNS proxy. Valid values:
-- ZONE: indicates that the recursive DNS proxy is disabled.
-- RECORD: indicates that the recursive DNS proxy is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>record_<wbr>count</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
@@ -663,29 +493,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>remark</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The remark of the Private Zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>update_<wbr>time</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>client_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IP address of the client.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -826,7 +638,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -834,7 +646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Ptr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -842,7 +654,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lang</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
 {{% /md %}}</dd>
@@ -851,7 +663,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
 {{% /md %}}</dd>
@@ -860,7 +672,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Proxy<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recursive DNS proxy. Valid values:
 - ZONE: indicates that the recursive DNS proxy is disabled.
@@ -871,7 +683,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Record<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The count of the Private Zone Record.
 {{% /md %}}</dd>
@@ -880,7 +692,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Remark</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
 {{% /md %}}</dd>
@@ -889,7 +701,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Update<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -897,7 +709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Client<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
 {{% /md %}}</dd>
@@ -913,7 +725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -921,7 +733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Ptr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -929,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lang</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
 {{% /md %}}</dd>
@@ -938,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
 {{% /md %}}</dd>
@@ -947,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Proxy<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recursive DNS proxy. Valid values:
 - ZONE: indicates that the recursive DNS proxy is disabled.
@@ -958,7 +770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Record<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The count of the Private Zone Record.
 {{% /md %}}</dd>
@@ -967,7 +779,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Remark</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
 {{% /md %}}</dd>
@@ -976,7 +788,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Update<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -984,7 +796,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Client<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
 {{% /md %}}</dd>
@@ -1000,7 +812,7 @@ The following state arguments are supported:
             title="Optional">
         <span>creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1008,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>is<wbr>Ptr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1016,7 +828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lang</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
 {{% /md %}}</dd>
@@ -1025,7 +837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
 {{% /md %}}</dd>
@@ -1034,7 +846,7 @@ The following state arguments are supported:
             title="Optional">
         <span>proxy<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recursive DNS proxy. Valid values:
 - ZONE: indicates that the recursive DNS proxy is disabled.
@@ -1045,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>record<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The count of the Private Zone Record.
 {{% /md %}}</dd>
@@ -1054,7 +866,7 @@ The following state arguments are supported:
             title="Optional">
         <span>remark</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
 {{% /md %}}</dd>
@@ -1063,7 +875,7 @@ The following state arguments are supported:
             title="Optional">
         <span>update<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1071,7 +883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Client<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
 {{% /md %}}</dd>

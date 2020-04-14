@@ -41,7 +41,7 @@ const my_repo = new alicloud.cr.Repo("my-repo", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cr/#Repo">Repo</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cr/#RepoArgs">RepoArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cr/#Repo">Repo</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cr/#RepoArgs">RepoArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -49,11 +49,11 @@ const my_repo = new alicloud.cr.Repo("my-repo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRepo<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cr?tab=doc#RepoArgs">RepoArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cr?tab=doc#Repo">Repo</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRepo<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cr?tab=doc#RepoArgs">RepoArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cr?tab=doc#Repo">Repo</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cr.Repo.html">Repo</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CR.RepoArgs.html">RepoArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CR.Repo.html">Repo</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.CR.RepoArgs.html">RepoArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -145,24 +145,6 @@ const my_repo = new alicloud.cr.Repo("my-repo", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Detail</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The repository specific information. MarkDown format is supported, and the length limit is 2000.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of container registry repository.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Namespace</span>
@@ -188,6 +170,24 @@ const my_repo = new alicloud.cr.Repo("my-repo", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository general information. It can contain 1 to 80 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Detail</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository specific information. MarkDown format is supported, and the length limit is 2000.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of container registry repository.
 {{% /md %}}</dd>
 
 </dl>
@@ -197,24 +197,6 @@ const my_repo = new alicloud.cr.Repo("my-repo", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Detail</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The repository specific information. MarkDown format is supported, and the length limit is 2000.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Name of container registry repository.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Namespace</span>
@@ -242,30 +224,30 @@ const my_repo = new alicloud.cr.Repo("my-repo", {
     <dd>{{% md %}}The repository general information. It can contain 1 to 80 characters.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>detail</span>
+        <span>Detail</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository specific information. MarkDown format is supported, and the length limit is 2000.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of container registry repository.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -294,18 +276,11 @@ const my_repo = new alicloud.cr.Repo("my-repo", {
     <dd>{{% md %}}The repository general information. It can contain 1 to 80 characters.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>detail</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository specific information. MarkDown format is supported, and the length limit is 2000.
 {{% /md %}}</dd>
@@ -314,10 +289,17 @@ const my_repo = new alicloud.cr.Repo("my-repo", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of container registry repository.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -344,6 +326,24 @@ const my_repo = new alicloud.cr.Repo("my-repo", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repository general information. It can contain 1 to 80 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>detail</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The repository specific information. MarkDown format is supported, and the length limit is 2000.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of container registry repository.
 {{% /md %}}</dd>
 
 </dl>
@@ -367,56 +367,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Detail</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The repository specific information. MarkDown format is supported, and the length limit is 2000.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Domain<wbr>List</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repodomainlist">Repo<wbr>Domain<wbr>List</a></span>
+        <span class="property-type"><a href="#repodomainlist">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CR.<wbr>Outputs.<wbr>Repo<wbr>Domain<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}The repository domain list.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of container registry repository.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of container registry namespace where repository is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Repo<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`PUBLIC` or `PRIVATE`, repo's visibility.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Summary</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The repository general information. It can contain 1 to 80 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -428,56 +383,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Detail</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The repository specific information. MarkDown format is supported, and the length limit is 2000.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Domain<wbr>List</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repodomainlist">Repo<wbr>Domain<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}The repository domain list.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of container registry repository.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of container registry namespace where repository is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Repo<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`PUBLIC` or `PRIVATE`, repo's visibility.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Summary</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The repository general information. It can contain 1 to 80 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -489,56 +399,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>detail</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The repository specific information. MarkDown format is supported, and the length limit is 2000.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>domain<wbr>List</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repodomainlist">Repo<wbr>Domain<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}The repository domain list.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of container registry repository.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of container registry namespace where repository is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>repo<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`PUBLIC` or `PRIVATE`, repo's visibility.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>summary</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The repository general information. It can contain 1 to 80 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -550,56 +415,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>detail</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The repository specific information. MarkDown format is supported, and the length limit is 2000.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>domain_<wbr>list</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repodomainlist">Dict[Repo<wbr>Domain<wbr>List]</a></span>
     </dt>
     <dd>{{% md %}}The repository domain list.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of container registry repository.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of container registry namespace where repository is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>repo_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}`PUBLIC` or `PRIVATE`, repo's visibility.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>summary</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The repository general information. It can contain 1 to 80 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -631,7 +451,7 @@ Get an existing Repo resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cr.Repo.html">Repo</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cr.RepoState.html">RepoState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CR.Repo.html">Repo</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CR.RepoState.html">RepoState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -741,7 +561,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Detail</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository specific information. MarkDown format is supported, and the length limit is 2000.
 {{% /md %}}</dd>
@@ -750,7 +570,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>List</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repodomainlist">Repo<wbr>Domain<wbr>List<wbr>Args?</a></span>
+        <span class="property-type"><a href="#repodomainlist">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CR.<wbr>Inputs.<wbr>Repo<wbr>Domain<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The repository domain list.
 {{% /md %}}</dd>
@@ -759,7 +579,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of container registry repository.
 {{% /md %}}</dd>
@@ -768,7 +588,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of container registry namespace where repository is located.
 {{% /md %}}</dd>
@@ -777,7 +597,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Repo<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`PUBLIC` or `PRIVATE`, repo's visibility.
 {{% /md %}}</dd>
@@ -786,7 +606,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Summary</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository general information. It can contain 1 to 80 characters.
 {{% /md %}}</dd>
@@ -802,7 +622,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Detail</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository specific information. MarkDown format is supported, and the length limit is 2000.
 {{% /md %}}</dd>
@@ -811,7 +631,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>List</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repodomainlist">*Repo<wbr>Domain<wbr>List</a></span>
+        <span class="property-type"><a href="#repodomainlist">Repo<wbr>Domain<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}The repository domain list.
 {{% /md %}}</dd>
@@ -820,7 +640,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of container registry repository.
 {{% /md %}}</dd>
@@ -829,7 +649,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of container registry namespace where repository is located.
 {{% /md %}}</dd>
@@ -838,7 +658,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Repo<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`PUBLIC` or `PRIVATE`, repo's visibility.
 {{% /md %}}</dd>
@@ -847,7 +667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Summary</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository general information. It can contain 1 to 80 characters.
 {{% /md %}}</dd>
@@ -863,7 +683,7 @@ The following state arguments are supported:
             title="Optional">
         <span>detail</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository specific information. MarkDown format is supported, and the length limit is 2000.
 {{% /md %}}</dd>
@@ -872,7 +692,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain<wbr>List</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repodomainlist">Repo<wbr>Domain<wbr>List?</a></span>
+        <span class="property-type"><a href="#repodomainlist">Repo<wbr>Domain<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}The repository domain list.
 {{% /md %}}</dd>
@@ -881,7 +701,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of container registry repository.
 {{% /md %}}</dd>
@@ -890,7 +710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of container registry namespace where repository is located.
 {{% /md %}}</dd>
@@ -899,7 +719,7 @@ The following state arguments are supported:
             title="Optional">
         <span>repo<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`PUBLIC` or `PRIVATE`, repo's visibility.
 {{% /md %}}</dd>
@@ -908,7 +728,7 @@ The following state arguments are supported:
             title="Optional">
         <span>summary</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository general information. It can contain 1 to 80 characters.
 {{% /md %}}</dd>
@@ -1007,7 +827,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Internal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain of internal endpoint, only in some regions.
 {{% /md %}}</dd>
@@ -1016,7 +836,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain of public endpoint.
 {{% /md %}}</dd>
@@ -1025,7 +845,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain of vpc endpoint.
 {{% /md %}}</dd>
@@ -1041,7 +861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Internal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain of internal endpoint, only in some regions.
 {{% /md %}}</dd>
@@ -1050,7 +870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain of public endpoint.
 {{% /md %}}</dd>
@@ -1059,7 +879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain of vpc endpoint.
 {{% /md %}}</dd>
@@ -1075,7 +895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>internal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain of internal endpoint, only in some regions.
 {{% /md %}}</dd>
@@ -1084,7 +904,7 @@ The following state arguments are supported:
             title="Optional">
         <span>public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain of public endpoint.
 {{% /md %}}</dd>
@@ -1093,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain of vpc endpoint.
 {{% /md %}}</dd>

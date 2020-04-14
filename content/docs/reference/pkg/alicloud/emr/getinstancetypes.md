@@ -54,13 +54,13 @@ export const firstInstanceType = defaultInstanceTypes.types[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstanceTypes<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/emr?tab=doc#LookupInstanceTypesArgs">LookupInstanceTypesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/emr?tab=doc#LookupInstanceTypesResult">LookupInstanceTypesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstanceTypes<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/emr?tab=doc#LookupInstanceTypesArgs">LookupInstanceTypesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/emr?tab=doc#LookupInstanceTypesResult">LookupInstanceTypesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstanceTypes </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Emr.GetInstanceTypesResult.html">GetInstanceTypesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Emr.GetInstanceTypesArgs.html">GetInstanceTypesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Emr.GetInstanceTypesResult.html">GetInstanceTypesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Emr.GetInstanceTypesArgs.html">GetInstanceTypesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -104,7 +104,7 @@ The following arguments are supported:
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the specific ecs instance type to create emr cluster.
 {{% /md %}}</dd>
@@ -113,7 +113,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -121,7 +121,7 @@ The following arguments are supported:
             title="Optional">
         <span>Support<wbr>Local<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the current storage disk is local or not.
 {{% /md %}}</dd>
@@ -130,7 +130,7 @@ The following arguments are supported:
             title="Optional">
         <span>Support<wbr>Node<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The specific supported node type list.
 Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK", "GATEWAY"]
@@ -140,7 +140,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported resources of specific zoneId.
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the specific ecs instance type to create emr cluster.
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -200,7 +200,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>Support<wbr>Local<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the current storage disk is local or not.
 {{% /md %}}</dd>
@@ -219,7 +219,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported resources of specific zoneId.
 {{% /md %}}</dd>
@@ -262,7 +262,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the specific ecs instance type to create emr cluster.
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -279,7 +279,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>support<wbr>Local<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the current storage disk is local or not.
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>support<wbr>Node<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The specific supported node type list.
 Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK", "GATEWAY"]
@@ -298,7 +298,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported resources of specific zoneId.
 {{% /md %}}</dd>
@@ -431,7 +431,7 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of emr instance types IDs. 
 {{% /md %}}</dd>
@@ -446,9 +446,18 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetypestype">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Emr.<wbr>Outputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Type&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of emr instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -456,7 +465,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -464,7 +473,7 @@ The following output properties are available:
             title="">
         <span>Support<wbr>Local<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -472,24 +481,15 @@ The following output properties are available:
             title="">
         <span>Support<wbr>Node<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypestype">List&lt;Get<wbr>Instance<wbr>Types<wbr>Type&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of emr instance types. Each element contains the following attributes:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The available zone id in Alibaba Cloud account
 {{% /md %}}</dd>
@@ -545,9 +545,18 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetypestype">[]Get<wbr>Instance<wbr>Types<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}A list of emr instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -555,7 +564,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -563,7 +572,7 @@ The following output properties are available:
             title="">
         <span>Support<wbr>Local<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -577,18 +586,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypestype">[]Get<wbr>Instance<wbr>Types<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}A list of emr instance types. Each element contains the following attributes:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The available zone id in Alibaba Cloud account
 {{% /md %}}</dd>
@@ -644,38 +644,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>output<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>support<wbr>Local<wbr>Storage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>support<wbr>Node<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>types</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypestype">Get<wbr>Instance<wbr>Types<wbr>Type[]</a></span>
@@ -685,9 +653,41 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>support<wbr>Local<wbr>Storage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>support<wbr>Node<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The available zone id in Alibaba Cloud account
 {{% /md %}}</dd>
@@ -743,6 +743,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetypestype">List[Get<wbr>Instance<wbr>Types<wbr>Type]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of emr instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>instance_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -772,15 +781,6 @@ The following output properties are available:
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypestype">List[Get<wbr>Instance<wbr>Types<wbr>Type]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of emr instance types. Each element contains the following attributes:
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

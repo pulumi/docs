@@ -46,7 +46,7 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#KubernetesAutoscaler">KubernetesAutoscaler</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#KubernetesAutoscalerArgs">KubernetesAutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#KubernetesAutoscaler">KubernetesAutoscaler</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#KubernetesAutoscalerArgs">KubernetesAutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -54,11 +54,11 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewKubernetesAutoscaler<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#KubernetesAutoscalerArgs">KubernetesAutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#KubernetesAutoscaler">KubernetesAutoscaler</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewKubernetesAutoscaler<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#KubernetesAutoscalerArgs">KubernetesAutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#KubernetesAutoscaler">KubernetesAutoscaler</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cs.KubernetesAutoscaler.html">KubernetesAutoscaler</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.KubernetesAutoscalerArgs.html">KubernetesAutoscalerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.KubernetesAutoscaler.html">KubernetesAutoscaler</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.CS.KubernetesAutoscalerArgs.html">KubernetesAutoscalerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -177,18 +177,6 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nodepools</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesautoscalernodepool">List&lt;Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
-* `nodepools.taints` - (Required) The taints for the nodes in scaling group.
-* `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Utilization</span>
@@ -196,6 +184,18 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nodepools</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesautoscalernodepool">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}
+* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+* `nodepools.taints` - (Required) The taints for the nodes in scaling group.
+* `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
 
 </dl>
@@ -232,6 +232,15 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Utilization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The utilization option of cluster-autoscaler.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Nodepools</span>
@@ -242,15 +251,6 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
 * `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Utilization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The utilization option of cluster-autoscaler.
 {{% /md %}}</dd>
 
 </dl>
@@ -287,18 +287,6 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>nodepools</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesautoscalernodepool">Kubernetes<wbr>Autoscaler<wbr>Nodepool[]?</a></span>
-    </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
-* `nodepools.taints` - (Required) The taints for the nodes in scaling group.
-* `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>utilization</span>
@@ -306,6 +294,18 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nodepools</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesautoscalernodepool">Kubernetes<wbr>Autoscaler<wbr>Nodepool[]</a></span>
+    </dt>
+    <dd>{{% md %}}
+* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+* `nodepools.taints` - (Required) The taints for the nodes in scaling group.
+* `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
 
 </dl>
@@ -342,6 +342,15 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>utilization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The utilization option of cluster-autoscaler.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>nodepools</span>
@@ -354,249 +363,10 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>utilization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The utilization option of cluster-autoscaler.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## KubernetesAutoscaler Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of kubernetes cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cool<wbr>Down<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Defer<wbr>Scale<wbr>In<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Nodepools</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesautoscalernodepool">List&lt;Kubernetes<wbr>Autoscaler<wbr>Nodepool&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
-* `nodepools.taints` - (Required) The taints for the nodes in scaling group.
-* `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Utilization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The utilization option of cluster-autoscaler.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of kubernetes cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cool<wbr>Down<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Defer<wbr>Scale<wbr>In<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Nodepools</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesautoscalernodepool">[]Kubernetes<wbr>Autoscaler<wbr>Nodepool</a></span>
-    </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
-* `nodepools.taints` - (Required) The taints for the nodes in scaling group.
-* `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Utilization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The utilization option of cluster-autoscaler.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of kubernetes cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cool<wbr>Down<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>defer<wbr>Scale<wbr>In<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>nodepools</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesautoscalernodepool">Kubernetes<wbr>Autoscaler<wbr>Nodepool[]?</a></span>
-    </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
-* `nodepools.taints` - (Required) The taints for the nodes in scaling group.
-* `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>utilization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The utilization option of cluster-autoscaler.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>cluster_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of kubernetes cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cool_<wbr>down_<wbr>duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>defer_<wbr>scale_<wbr>in_<wbr>duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>nodepools</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesautoscalernodepool">List[Kubernetes<wbr>Autoscaler<wbr>Nodepool]</a></span>
-    </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
-* `nodepools.taints` - (Required) The taints for the nodes in scaling group.
-* `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>utilization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The utilization option of cluster-autoscaler.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -624,7 +394,7 @@ Get an existing KubernetesAutoscaler resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cs.KubernetesAutoscaler.html">KubernetesAutoscaler</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cs.KubernetesAutoscalerState.html">KubernetesAutoscalerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.KubernetesAutoscaler.html">KubernetesAutoscaler</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.KubernetesAutoscalerState.html">KubernetesAutoscalerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -734,7 +504,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd>
@@ -743,7 +513,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cool<wbr>Down<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
 {{% /md %}}</dd>
@@ -752,7 +522,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Defer<wbr>Scale<wbr>In<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
@@ -761,7 +531,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nodepools</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesautoscalernodepool">List&lt;Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#kubernetesautoscalernodepool">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}
 * `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
@@ -773,7 +543,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Utilization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
 {{% /md %}}</dd>
@@ -789,7 +559,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd>
@@ -798,7 +568,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cool<wbr>Down<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
 {{% /md %}}</dd>
@@ -807,7 +577,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Defer<wbr>Scale<wbr>In<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
@@ -828,7 +598,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Utilization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
 {{% /md %}}</dd>
@@ -844,7 +614,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd>
@@ -853,7 +623,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cool<wbr>Down<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
 {{% /md %}}</dd>
@@ -862,7 +632,7 @@ The following state arguments are supported:
             title="Optional">
         <span>defer<wbr>Scale<wbr>In<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
@@ -871,7 +641,7 @@ The following state arguments are supported:
             title="Optional">
         <span>nodepools</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesautoscalernodepool">Kubernetes<wbr>Autoscaler<wbr>Nodepool[]?</a></span>
+        <span class="property-type"><a href="#kubernetesautoscalernodepool">Kubernetes<wbr>Autoscaler<wbr>Nodepool[]</a></span>
     </dt>
     <dd>{{% md %}}
 * `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
@@ -883,7 +653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>utilization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
 {{% /md %}}</dd>
@@ -976,7 +746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -984,7 +754,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -992,7 +762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Taints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1007,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1015,7 +785,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1023,7 +793,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Taints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1038,7 +808,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1046,7 +816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1054,7 +824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>taints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

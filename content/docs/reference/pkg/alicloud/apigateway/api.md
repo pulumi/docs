@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/apigateway/#Api">Api</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/apigateway/#ApiArgs">ApiArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/apigateway/#Api">Api</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/apigateway/#ApiArgs">ApiArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApi<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/apigateway?tab=doc#ApiArgs">ApiArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/apigateway?tab=doc#Api">Api</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApi<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/apigateway?tab=doc#ApiArgs">ApiArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/apigateway?tab=doc#Api">Api</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Apigateway.Api.html">Api</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.ApiGateway.ApiArgs.html">ApiArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.ApiGateway.Api.html">Api</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.ApiGateway.ApiArgs.html">ApiArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -127,15 +127,6 @@ block_external_search_index: true
     <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Constant<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">List&lt;Api<wbr>Constant<wbr>Parameter<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Description</span>
@@ -143,15 +134,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Fc<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -163,58 +145,13 @@ block_external_search_index: true
     <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Http<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Http<wbr>Vpc<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mock<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Request<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#apirequestconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Request<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Request_config defines how users can send requests to your API.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Request<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">List&lt;Api<wbr>Request<wbr>Parameter<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}request_parameters defines the request parameters of the api.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -228,9 +165,72 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Constant<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apiconstantparameter">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Constant<wbr>Parameter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Fc<wbr>Service<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apifcserviceconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Fc<wbr>Service<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Http<wbr>Service<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apihttpserviceconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Http<wbr>Service<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Http<wbr>Vpc<wbr>Service<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apihttpvpcserviceconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mock<wbr>Service<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apimockserviceconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Mock<wbr>Service<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Request<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apirequestparameter">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Request<wbr>Parameter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}request_parameters defines the request parameters of the api.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Stage<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 {{% /md %}}</dd>
@@ -239,7 +239,7 @@ block_external_search_index: true
             title="Optional">
         <span>System<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">List&lt;Api<wbr>System<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apisystemparameter">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>System<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd>
@@ -260,15 +260,6 @@ block_external_search_index: true
     <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Constant<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">[]Api<wbr>Constant<wbr>Parameter</a></span>
-    </dt>
-    <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Description</span>
@@ -276,15 +267,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Fc<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">*Api<wbr>Fc<wbr>Service<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -296,42 +278,6 @@ block_external_search_index: true
     <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Http<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">*Api<wbr>Http<wbr>Service<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Http<wbr>Vpc<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">*Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mock<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">*Api<wbr>Mock<wbr>Service<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Request<wbr>Config</span>
@@ -341,15 +287,6 @@ block_external_search_index: true
     <dd>{{% md %}}Request_config defines how users can send requests to your API.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Request<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">[]Api<wbr>Request<wbr>Parameter</a></span>
-    </dt>
-    <dd>{{% md %}}request_parameters defines the request parameters of the api.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Service<wbr>Type</span>
@@ -357,6 +294,69 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Constant<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apiconstantparameter">[]Api<wbr>Constant<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Fc<wbr>Service<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Http<wbr>Service<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Http<wbr>Vpc<wbr>Service<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mock<wbr>Service<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Request<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apirequestparameter">[]Api<wbr>Request<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}request_parameters defines the request parameters of the api.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -393,15 +393,6 @@ block_external_search_index: true
     <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>constant<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">Api<wbr>Constant<wbr>Parameter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>description</span>
@@ -409,15 +400,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>fc<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -429,42 +411,6 @@ block_external_search_index: true
     <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>http<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>http<wbr>Vpc<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mock<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>request<wbr>Config</span>
@@ -472,15 +418,6 @@ block_external_search_index: true
         <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Request_config defines how users can send requests to your API.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>request<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">Api<wbr>Request<wbr>Parameter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}request_parameters defines the request parameters of the api.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -494,9 +431,72 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>constant<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apiconstantparameter">Api<wbr>Constant<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>fc<wbr>Service<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>http<wbr>Service<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>http<wbr>Vpc<wbr>Service<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mock<wbr>Service<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>request<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apirequestparameter">Api<wbr>Request<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}request_parameters defines the request parameters of the api.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>stage<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 {{% /md %}}</dd>
@@ -505,7 +505,7 @@ block_external_search_index: true
             title="Optional">
         <span>system<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">Api<wbr>System<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#apisystemparameter">Api<wbr>System<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd>
@@ -526,15 +526,6 @@ block_external_search_index: true
     <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>constant_<wbr>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">List[Api<wbr>Constant<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>description</span>
@@ -544,15 +535,6 @@ block_external_search_index: true
     <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>fc_<wbr>service_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">Dict[Api<wbr>Fc<wbr>Service<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>group_<wbr>id</span>
@@ -560,6 +542,42 @@ block_external_search_index: true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>request_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apirequestconfig">Dict[Api<wbr>Request<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}Request_config defines how users can send requests to your API.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>service_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>constant_<wbr>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apiconstantparameter">List[Api<wbr>Constant<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>fc_<wbr>service_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apifcserviceconfig">Dict[Api<wbr>Fc<wbr>Service<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -598,15 +616,6 @@ block_external_search_index: true
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>request_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">Dict[Api<wbr>Request<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Request_config defines how users can send requests to your API.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>request_<wbr>parameters</span>
@@ -614,15 +623,6 @@ block_external_search_index: true
         <span class="property-type"><a href="#apirequestparameter">List[Api<wbr>Request<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}request_parameters defines the request parameters of the api.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>service_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -671,132 +671,6 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the api of api gateway.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Auth<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Constant<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">List&lt;Api<wbr>Constant<wbr>Parameter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fc<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Http<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Http<wbr>Vpc<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mock<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Request<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Request_config defines how users can send requests to your API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Request<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">List&lt;Api<wbr>Request<wbr>Parameter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}request_parameters defines the request parameters of the api.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stage<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>System<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">List&lt;Api<wbr>System<wbr>Parameter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}system_parameters defines the system parameters of the api.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -811,132 +685,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the api of api gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auth<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Constant<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">[]Api<wbr>Constant<wbr>Parameter</a></span>
-    </dt>
-    <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fc<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">*Api<wbr>Fc<wbr>Service<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Http<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">*Api<wbr>Http<wbr>Service<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Http<wbr>Vpc<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">*Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mock<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">*Api<wbr>Mock<wbr>Service<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Request<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Request_config defines how users can send requests to your API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Request<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">[]Api<wbr>Request<wbr>Parameter</a></span>
-    </dt>
-    <dd>{{% md %}}request_parameters defines the request parameters of the api.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stage<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>System<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">[]Api<wbr>System<wbr>Parameter</a></span>
-    </dt>
-    <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd>
 
 </dl>
@@ -955,132 +703,6 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the api of api gateway.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>auth<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>constant<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">Api<wbr>Constant<wbr>Parameter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fc<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>http<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>http<wbr>Vpc<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mock<wbr>Service<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>request<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Request_config defines how users can send requests to your API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>request<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">Api<wbr>Request<wbr>Parameter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}request_parameters defines the request parameters of the api.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>stage<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>system<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">Api<wbr>System<wbr>Parameter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}system_parameters defines the system parameters of the api.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1095,132 +717,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the api of api gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auth_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>constant_<wbr>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">List[Api<wbr>Constant<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fc_<wbr>service_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">Dict[Api<wbr>Fc<wbr>Service<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>http_<wbr>service_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">Dict[Api<wbr>Http<wbr>Service<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>http_<wbr>vpc_<wbr>service_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">Dict[Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mock_<wbr>service_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">Dict[Api<wbr>Mock<wbr>Service<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>request_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">Dict[Api<wbr>Request<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Request_config defines how users can send requests to your API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>request_<wbr>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">List[Api<wbr>Request<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}request_parameters defines the request parameters of the api.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>stage_<wbr>names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>system_<wbr>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">List[Api<wbr>System<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd>
 
 </dl>
@@ -1252,7 +748,7 @@ Get an existing Api resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Apigateway.Api.html">Api</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Apigateway.ApiState.html">ApiState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.ApiGateway.Api.html">Api</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.ApiGateway.ApiState.html">ApiState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1362,7 +858,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the api of api gateway.
 {{% /md %}}</dd>
@@ -1371,7 +867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
 {{% /md %}}</dd>
@@ -1380,7 +876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Constant<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">List&lt;Api<wbr>Constant<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apiconstantparameter">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Constant<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
 {{% /md %}}</dd>
@@ -1389,7 +885,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd>
@@ -1398,7 +894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fc<wbr>Service<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#apifcserviceconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Fc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
 {{% /md %}}</dd>
@@ -1407,7 +903,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
 {{% /md %}}</dd>
@@ -1416,7 +912,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Service<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#apihttpserviceconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Http<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
 {{% /md %}}</dd>
@@ -1425,7 +921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Vpc<wbr>Service<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#apihttpvpcserviceconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
 {{% /md %}}</dd>
@@ -1434,7 +930,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mock<wbr>Service<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#apimockserviceconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Mock<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
 {{% /md %}}</dd>
@@ -1443,7 +939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd>
@@ -1452,7 +948,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Request<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#apirequestconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Request<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Request_config defines how users can send requests to your API.
 {{% /md %}}</dd>
@@ -1461,7 +957,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Request<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">List&lt;Api<wbr>Request<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apirequestparameter">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>Request<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}request_parameters defines the request parameters of the api.
 {{% /md %}}</dd>
@@ -1470,7 +966,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 {{% /md %}}</dd>
@@ -1479,7 +975,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stage<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 {{% /md %}}</dd>
@@ -1488,7 +984,7 @@ The following state arguments are supported:
             title="Optional">
         <span>System<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">List&lt;Api<wbr>System<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apisystemparameter">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Inputs.<wbr>Api<wbr>System<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd>
@@ -1504,7 +1000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the api of api gateway.
 {{% /md %}}</dd>
@@ -1513,7 +1009,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
 {{% /md %}}</dd>
@@ -1531,7 +1027,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd>
@@ -1540,7 +1036,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fc<wbr>Service<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">*Api<wbr>Fc<wbr>Service<wbr>Config</a></span>
+        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
 {{% /md %}}</dd>
@@ -1549,7 +1045,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
 {{% /md %}}</dd>
@@ -1558,7 +1054,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Service<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">*Api<wbr>Http<wbr>Service<wbr>Config</a></span>
+        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
 {{% /md %}}</dd>
@@ -1567,7 +1063,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Vpc<wbr>Service<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">*Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config</a></span>
+        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
 {{% /md %}}</dd>
@@ -1576,7 +1072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mock<wbr>Service<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">*Api<wbr>Mock<wbr>Service<wbr>Config</a></span>
+        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
 {{% /md %}}</dd>
@@ -1585,7 +1081,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd>
@@ -1594,7 +1090,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Request<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">*Api<wbr>Request<wbr>Config</a></span>
+        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Request_config defines how users can send requests to your API.
 {{% /md %}}</dd>
@@ -1612,7 +1108,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 {{% /md %}}</dd>
@@ -1646,7 +1142,7 @@ The following state arguments are supported:
             title="Optional">
         <span>api<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the api of api gateway.
 {{% /md %}}</dd>
@@ -1655,7 +1151,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorization Type including APP and ANONYMOUS. Defaults to null.
 {{% /md %}}</dd>
@@ -1664,7 +1160,7 @@ The following state arguments are supported:
             title="Optional">
         <span>constant<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">Api<wbr>Constant<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#apiconstantparameter">Api<wbr>Constant<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
 {{% /md %}}</dd>
@@ -1673,7 +1169,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd>
@@ -1682,7 +1178,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fc<wbr>Service<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config?</a></span>
+        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
 {{% /md %}}</dd>
@@ -1691,7 +1187,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The api gateway that the api belongs to. Defaults to null.
 {{% /md %}}</dd>
@@ -1700,7 +1196,7 @@ The following state arguments are supported:
             title="Optional">
         <span>http<wbr>Service<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config?</a></span>
+        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
 {{% /md %}}</dd>
@@ -1709,7 +1205,7 @@ The following state arguments are supported:
             title="Optional">
         <span>http<wbr>Vpc<wbr>Service<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config?</a></span>
+        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
 {{% /md %}}</dd>
@@ -1718,7 +1214,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mock<wbr>Service<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config?</a></span>
+        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
 {{% /md %}}</dd>
@@ -1727,7 +1223,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System parameter name which supports values including in [system parameter list](https://www.alibabacloud.com/help/doc-detail/43677.html)
 {{% /md %}}</dd>
@@ -1736,7 +1232,7 @@ The following state arguments are supported:
             title="Optional">
         <span>request<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config?</a></span>
+        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Request_config defines how users can send requests to your API.
 {{% /md %}}</dd>
@@ -1745,7 +1241,7 @@ The following state arguments are supported:
             title="Optional">
         <span>request<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">Api<wbr>Request<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#apirequestparameter">Api<wbr>Request<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}request_parameters defines the request parameters of the api.
 {{% /md %}}</dd>
@@ -1754,7 +1250,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of backend service. Type including HTTP,VPC and MOCK. Defaults to null.
 {{% /md %}}</dd>
@@ -1763,7 +1259,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stage<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 {{% /md %}}</dd>
@@ -1772,7 +1268,7 @@ The following state arguments are supported:
             title="Optional">
         <span>system<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">Api<wbr>System<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#apisystemparameter">Api<wbr>System<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd>
@@ -1948,15 +1444,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>In</span>
@@ -1982,6 +1469,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Constant parameter value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd>
 
 </dl>
@@ -1991,15 +1487,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>In</span>
@@ -2027,21 +1514,21 @@ The following state arguments are supported:
     <dd>{{% md %}}Constant parameter value.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of Constant parameter.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2068,6 +1555,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Constant parameter value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd>
 
 </dl>
@@ -2077,15 +1573,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>in</span>
@@ -2111,6 +1598,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Constant parameter value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd>
 
 </dl>
@@ -2135,15 +1631,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Arn<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Function<wbr>Name</span>
@@ -2178,6 +1665,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn<wbr>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -2187,15 +1683,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Arn<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Function<wbr>Name</span>
@@ -2232,21 +1719,21 @@ The following state arguments are supported:
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn<wbr>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>arn<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2284,21 +1771,21 @@ The following state arguments are supported:
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn<wbr>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>arn<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2336,6 +1823,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn<wbr>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2367,14 +1863,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The address of backend service.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Aone<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Method</span>
@@ -2401,6 +1889,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Aone<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2418,14 +1914,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The address of backend service.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Aone<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Method</span>
@@ -2453,6 +1941,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Aone<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2468,14 +1964,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The address of backend service.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>aone<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2504,6 +1992,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>aone<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2519,14 +2015,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The address of backend service.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>aone<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2554,6 +2042,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>aone<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2577,14 +2073,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Aone<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Method</span>
@@ -2620,6 +2108,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Aone<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2628,14 +2124,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Aone<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Method</span>
@@ -2672,20 +2160,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Aone<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>aone<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2723,20 +2211,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>aone<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>aone<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2774,6 +2262,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>aone<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2796,14 +2292,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Aone<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Result</span>
@@ -2812,6 +2300,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The result of the mock service.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Aone<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2820,14 +2316,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Aone<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Result</span>
@@ -2837,20 +2325,20 @@ The following state arguments are supported:
     <dd>{{% md %}}The result of the mock service.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Aone<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>aone<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2861,20 +2349,20 @@ The following state arguments are supported:
     <dd>{{% md %}}The result of the mock service.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>aone<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>aone<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2884,6 +2372,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The result of the mock service.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>aone<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2907,15 +2403,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Body<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The body format of the api, which support the values of 'STREAM' and 'FORM'
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Method</span>
@@ -2950,6 +2437,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of api which supports values of 'HTTP','HTTPS' or 'HTTP,HTTPS'
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Body<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The body format of the api, which support the values of 'STREAM' and 'FORM'
 {{% /md %}}</dd>
 
 </dl>
@@ -2959,15 +2455,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Body<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The body format of the api, which support the values of 'STREAM' and 'FORM'
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Method</span>
@@ -3004,21 +2491,21 @@ The following state arguments are supported:
     <dd>{{% md %}}The protocol of api which supports values of 'HTTP','HTTPS' or 'HTTP,HTTPS'
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Body<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The body format of the api, which support the values of 'STREAM' and 'FORM'
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>body<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The body format of the api, which support the values of 'STREAM' and 'FORM'
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3054,6 +2541,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of api which supports values of 'HTTP','HTTPS' or 'HTTP,HTTPS'
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>body<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The body format of the api, which support the values of 'STREAM' and 'FORM'
 {{% /md %}}</dd>
 
 </dl>
@@ -3063,15 +2559,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>body<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The body format of the api, which support the values of 'STREAM' and 'FORM'
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>method</span>
@@ -3106,6 +2593,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol of api which supports values of 'HTTP','HTTPS' or 'HTTP,HTTPS'
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>body<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The body format of the api, which support the values of 'STREAM' and 'FORM'
 {{% /md %}}</dd>
 
 </dl>
@@ -3130,24 +2626,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default value of the parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>In</span>
@@ -3200,6 +2678,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameter type which supports values of 'STRING','INT','BOOLEAN','LONG',"FLOAT" and "DOUBLE"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default value of the parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd>
 
 </dl>
@@ -3209,24 +2705,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The default value of the parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>In</span>
@@ -3281,30 +2759,30 @@ The following state arguments are supported:
     <dd>{{% md %}}Parameter type which supports values of 'STRING','INT','BOOLEAN','LONG',"FLOAT" and "DOUBLE"
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Value</span>
+        <span>Default<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value of the parameter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -3358,6 +2836,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameter type which supports values of 'STRING','INT','BOOLEAN','LONG',"FLOAT" and "DOUBLE"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default value of the parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd>
 
 </dl>
@@ -3367,24 +2863,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The default value of the parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of Constant parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>in</span>
@@ -3437,6 +2915,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameter type which supports values of 'STRING','INT','BOOLEAN','LONG',"FLOAT" and "DOUBLE"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default value of the parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of Constant parameter.
 {{% /md %}}</dd>
 
 </dl>

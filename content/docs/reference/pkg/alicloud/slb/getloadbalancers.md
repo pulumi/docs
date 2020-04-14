@@ -43,13 +43,13 @@ export const firstSlbId = slbsDs.slbs[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancers<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/slb?tab=doc#LookupLoadBalancersArgs">LookupLoadBalancersArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/slb?tab=doc#LookupLoadBalancersResult">LookupLoadBalancersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancers<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/slb?tab=doc#LookupLoadBalancersArgs">LookupLoadBalancersArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/slb?tab=doc#LookupLoadBalancersResult">LookupLoadBalancersResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLoadBalancers </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Slb.GetLoadBalancersResult.html">GetLoadBalancersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Slb.GetLoadBalancersArgs.html">GetLoadBalancersArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Slb.GetLoadBalancersResult.html">GetLoadBalancersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Slb.GetLoadBalancersArgs.html">GetLoadBalancersArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -66,7 +66,7 @@ The following arguments are supported:
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service address of the SLBs.
 {{% /md %}}</dd>
@@ -75,7 +75,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of SLBs IDs.
 {{% /md %}}</dd>
@@ -84,7 +84,7 @@ The following arguments are supported:
             title="Optional">
         <span>Master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -93,7 +93,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by SLB name.
 {{% /md %}}</dd>
@@ -102,7 +102,7 @@ The following arguments are supported:
             title="Optional">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type of the SLBs. Valid values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -111,7 +111,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -119,7 +119,7 @@ The following arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which SLB belongs.
 {{% /md %}}</dd>
@@ -128,7 +128,7 @@ The following arguments are supported:
             title="Optional">
         <span>Slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -137,7 +137,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instances. The `tags` can have a maximum of 5 tag. It must be in the format:
 ```
@@ -154,7 +154,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC linked to the SLBs.
 {{% /md %}}</dd>
@@ -163,7 +163,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch linked to the SLBs.
 {{% /md %}}</dd>
@@ -179,7 +179,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service address of the SLBs.
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by SLB name.
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type of the SLBs. Valid values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -232,7 +232,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which SLB belongs.
 {{% /md %}}</dd>
@@ -241,7 +241,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -267,7 +267,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC linked to the SLBs.
 {{% /md %}}</dd>
@@ -276,7 +276,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch linked to the SLBs.
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service address of the SLBs.
 {{% /md %}}</dd>
@@ -301,7 +301,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of SLBs IDs.
 {{% /md %}}</dd>
@@ -310,7 +310,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -319,7 +319,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by SLB name.
 {{% /md %}}</dd>
@@ -328,7 +328,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type of the SLBs. Valid values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -337,7 +337,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -345,7 +345,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which SLB belongs.
 {{% /md %}}</dd>
@@ -354,7 +354,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -363,7 +363,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instances. The `tags` can have a maximum of 5 tag. It must be in the format:
 ```
@@ -380,7 +380,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC linked to the SLBs.
 {{% /md %}}</dd>
@@ -389,7 +389,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch linked to the SLBs.
 {{% /md %}}</dd>
@@ -529,15 +529,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Service address of the SLB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -549,16 +540,43 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of slb IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of slb names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Slbs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getloadbalancersslb">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Outputs.<wbr>Get<wbr>Load<wbr>Balancers<wbr>Slb&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of SLBs. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service address of the SLB.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -567,24 +585,15 @@ The following output properties are available:
             title="">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A list of slb names.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type of the SLB. Possible values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -593,7 +602,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -601,7 +610,7 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -609,25 +618,16 @@ The following output properties are available:
             title="">
         <span>Slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Slbs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancersslb">List&lt;Get<wbr>Load<wbr>Balancers<wbr>Slb&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of SLBs. Each element contains the following attributes:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instance.
 {{% /md %}}</dd>
@@ -636,7 +636,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC the SLB belongs to.
 {{% /md %}}</dd>
@@ -645,7 +645,7 @@ The following output properties are available:
             title="">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch the SLB belongs to.
 {{% /md %}}</dd>
@@ -659,15 +659,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Service address of the SLB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -686,23 +677,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Master<wbr>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Master availability zone of the SLBs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Names</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -712,9 +686,44 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Slbs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getloadbalancersslb">[]Get<wbr>Load<wbr>Balancers<wbr>Slb</a></span>
+    </dt>
+    <dd>{{% md %}}A list of SLBs. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service address of the SLB.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Master<wbr>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Master availability zone of the SLBs.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type of the SLB. Possible values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -723,7 +732,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -731,7 +740,7 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -739,18 +748,9 @@ The following output properties are available:
             title="">
         <span>Slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Slbs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancersslb">[]Get<wbr>Load<wbr>Balancers<wbr>Slb</a></span>
-    </dt>
-    <dd>{{% md %}}A list of SLBs. Each element contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -766,7 +766,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC the SLB belongs to.
 {{% /md %}}</dd>
@@ -775,7 +775,7 @@ The following output properties are available:
             title="">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch the SLB belongs to.
 {{% /md %}}</dd>
@@ -786,15 +786,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Service address of the SLB.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -816,62 +807,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>master<wbr>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Master availability zone of the SLBs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>names</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of slb names.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network type of the SLB. Possible values: `vpc` and `classic`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>output<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>slave<wbr>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -885,9 +825,69 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service address of the SLB.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>master<wbr>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Master availability zone of the SLBs.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>network<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network type of the SLB. Possible values: `vpc` and `classic`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>resource<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>slave<wbr>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Slave availability zone of the SLBs.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instance.
 {{% /md %}}</dd>
@@ -896,7 +896,7 @@ The following output properties are available:
             title="">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC the SLB belongs to.
 {{% /md %}}</dd>
@@ -905,7 +905,7 @@ The following output properties are available:
             title="">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch the SLB belongs to.
 {{% /md %}}</dd>
@@ -916,15 +916,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Service address of the SLB.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -942,6 +933,33 @@ The following output properties are available:
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of slb IDs.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of slb names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>slbs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getloadbalancersslb">List[Get<wbr>Load<wbr>Balancers<wbr>Slb]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of SLBs. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Service address of the SLB.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -960,15 +978,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of slb names.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1002,15 +1011,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>slbs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancersslb">List[Get<wbr>Load<wbr>Balancers<wbr>Slb]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of SLBs. Each element contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1161,7 +1161,7 @@ The following output properties are available:
             title="Required">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the SLB instances. The `tags` can have a maximum of 5 tag. It must be in the format:
 ```
