@@ -250,8 +250,10 @@ if err != nil {
 
 ctx.Export("kubeconfig", generateKubeconfig(cluster.Endpoint, cluster.Name, cluster.MasterAuth))
 
-k8sProvider, err := providers.NewProvider(ctx, "k8sprovider", &providers.ProviderArgs{
-	Kubeconfig: generateKubeconfig(cluster.Endpoint, cluster.Name, cluster.MasterAuth),
+k8sProvider, err := providers.NewProvider(
+    ctx, "k8sprovider", &providers.ProviderArgs{
+	Kubeconfig: generateKubeconfig(
+	    cluster.Endpoint, cluster.Name, cluster.MasterAuth),
 }, pulumi.DependsOn([]pulumi.Resource{cluster}))
 if err != nil {
 	return err
