@@ -1131,7 +1131,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.ess.ScalingGroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">ScalingGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">db_instance_ids=None</em>, <em class="sig-param">default_cooldown=None</em>, <em class="sig-param">loadbalancer_ids=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">multi_az_policy=None</em>, <em class="sig-param">on_demand_base_capacity=None</em>, <em class="sig-param">on_demand_percentage_above_base_capacity=None</em>, <em class="sig-param">removal_policies=None</em>, <em class="sig-param">scaling_group_name=None</em>, <em class="sig-param">spot_instance_pools=None</em>, <em class="sig-param">spot_instance_remedy=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">vswitch_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.ScalingGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ess.</code><code class="sig-name descname">ScalingGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">db_instance_ids=None</em>, <em class="sig-param">default_cooldown=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">loadbalancer_ids=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">multi_az_policy=None</em>, <em class="sig-param">on_demand_base_capacity=None</em>, <em class="sig-param">on_demand_percentage_above_base_capacity=None</em>, <em class="sig-param">removal_policies=None</em>, <em class="sig-param">scaling_group_name=None</em>, <em class="sig-param">spot_instance_pools=None</em>, <em class="sig-param">spot_instance_remedy=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">vswitch_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.ScalingGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ScalingGroup resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1144,6 +1144,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>default_cooldown</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400]. The default value is 300s.</p></li>
+<li><p><strong>desired_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].</p></li>
 <li><p><strong>loadbalancer_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If a Server Load Balancer instance is specified in the scaling group, the scaling group automatically attaches its ECS instances to the Server Load Balancer instance.</p></li>
 </ul>
 </dd>
@@ -1199,6 +1200,12 @@ targeting your `slb.Listener` in order to make sure the listener with its Health
 <dt id="pulumi_alicloud.ess.ScalingGroup.default_cooldown">
 <code class="sig-name descname">default_cooldown</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.ScalingGroup.default_cooldown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400]. The default value is 300s.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.ess.ScalingGroup.desired_capacity">
+<code class="sig-name descname">desired_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.ScalingGroup.desired_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1288,7 +1295,7 @@ targeting your <code class="docutils literal notranslate"><span class="pre">slb.
 
 <dl class="method">
 <dt id="pulumi_alicloud.ess.ScalingGroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">db_instance_ids=None</em>, <em class="sig-param">default_cooldown=None</em>, <em class="sig-param">loadbalancer_ids=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">multi_az_policy=None</em>, <em class="sig-param">on_demand_base_capacity=None</em>, <em class="sig-param">on_demand_percentage_above_base_capacity=None</em>, <em class="sig-param">removal_policies=None</em>, <em class="sig-param">scaling_group_name=None</em>, <em class="sig-param">spot_instance_pools=None</em>, <em class="sig-param">spot_instance_remedy=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">vswitch_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.ScalingGroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">db_instance_ids=None</em>, <em class="sig-param">default_cooldown=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">loadbalancer_ids=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">multi_az_policy=None</em>, <em class="sig-param">on_demand_base_capacity=None</em>, <em class="sig-param">on_demand_percentage_above_base_capacity=None</em>, <em class="sig-param">removal_policies=None</em>, <em class="sig-param">scaling_group_name=None</em>, <em class="sig-param">spot_instance_pools=None</em>, <em class="sig-param">spot_instance_remedy=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">vswitch_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ess.ScalingGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ScalingGroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1309,6 +1316,7 @@ properties used to qualify the lookup.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>default_cooldown</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400]. The default value is 300s.</p></li>
+<li><p><strong>desired_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].</p></li>
 <li><p><strong>loadbalancer_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If a Server Load Balancer instance is specified in the scaling group, the scaling group automatically attaches its ECS instances to the Server Load Balancer instance.</p></li>
 </ul>
 </dd>

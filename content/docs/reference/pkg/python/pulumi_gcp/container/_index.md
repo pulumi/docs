@@ -194,81 +194,137 @@ Structure is documented below.</p></li>
 </dl>
 <p>The <strong>addons_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+The status of the CloudRun addon. It requires <code class="docutils literal notranslate"><span class="pre">istio_config</span></code> enabled. It is disabled by default.
+Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable. This addon can only be enabled at cluster creation time.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+The status of the NodeLocal DNSCache addon. It is disabled by default.
+Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">horizontalPodAutoscaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">horizontalPodAutoscaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The status of the Horizontal Pod Autoscaling
+addon, which increases or decreases the number of replica pods a replication controller
+has based on the resource usage of the existing pods.
+It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
+It is enabled by default;
+set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to disable.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpLoadBalancing</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpLoadBalancing</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The status of the HTTP (L7) load balancing
+controller addon, which makes it easy to set up HTTP load balancers for services in a
+cluster. It is enabled by default; set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to disable.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">istioConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">istioConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">auth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authentication type between services in Istio. Available options include <code class="docutils literal notranslate"><span class="pre">AUTH_MUTUAL_TLS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Whether we should enable the network policy addon
+for the master.  This must be enabled in order to enable network policy for the nodes.
+To enable this, you must also define a <code class="docutils literal notranslate"><span class="pre">network_policy</span></code> block,
+otherwise nothing will happen.
+It can only be disabled if the nodes already do not have network policies enabled.
+Defaults to disabled; set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>authenticator_groups_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format <code class="docutils literal notranslate"><span class="pre">gke-security-groups&#64;yourdomain.com</span></code>.</p></li>
 </ul>
 <p>The <strong>cluster_autoscaling</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoProvisioningDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoProvisioningDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Contains defaults for a node pool created by NAP.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of Google API scopes to be made available
+on all of the node VMs under the “default” service account. These can be
+either FQDNs, or scope aliases. The following scopes are necessary to ensure
+the correct functioning of the cluster:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service account to be used by the Node VMs.
+If not specified, the “default” service account is used.
+In order to use the configured <code class="docutils literal notranslate"><span class="pre">oauth_scopes</span></code> for logging and monitoring, the service account being used needs the
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles">roles/logging.logWriter</a> and
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceLimits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Configuration
+options for the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles">Autoscaling profile</a>
+feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
+when deciding to remove nodes from a cluster. Can be <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code> or <code class="docutils literal notranslate"><span class="pre">OPTIMIZE_UTILIZATION</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceLimits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Global constraints for machine resources in the
+cluster. Configuring the <code class="docutils literal notranslate"><span class="pre">cpu</span></code> and <code class="docutils literal notranslate"><span class="pre">memory</span></code> types is required if node
+auto-provisioning is enabled. These limits will apply to node pool autoscaling
+in addition to node auto-provisioning. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum amount of the resource in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum amount of the resource in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of the resource. For example, <code class="docutils literal notranslate"><span class="pre">cpu</span></code> and
+<code class="docutils literal notranslate"><span class="pre">memory</span></code>.  See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide to using Node Auto-Provisioning</a>
+for a list of types.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>database_encryption</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">keyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the key to use to encrypt/decrypt secrets.  See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption">DatabaseEncryption definition</a> for more information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <code class="docutils literal notranslate"><span class="pre">ENCRYPTED</span></code> or <code class="docutils literal notranslate"><span class="pre">DECRYPTED</span></code></p></li>
 </ul>
 <p>The <strong>ip_allocation_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">clusterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clusterSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">servicesIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">servicesSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clusterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address range for the cluster pod IPs.
+Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
+to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14)
+from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
+pick a specific range to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clusterSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the existing secondary
+range in the cluster’s subnetwork to use for pod IP addresses. Alternatively,
+<code class="docutils literal notranslate"><span class="pre">cluster_ipv4_cidr_block</span></code> can be used to automatically create a GKE-managed one.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">servicesIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address range of the services IPs in this cluster.
+Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
+to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14)
+from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
+pick a specific range to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">servicesSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the existing
+secondary range in the cluster’s subnetwork to use for service <code class="docutils literal notranslate"><span class="pre">ClusterIP</span></code>s.
+Alternatively, <code class="docutils literal notranslate"><span class="pre">services_ipv4_cidr_block</span></code> can be used to automatically create a
+GKE-managed one.</p></li>
 </ul>
 <p>The <strong>maintenance_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dailyMaintenanceWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dailyMaintenanceWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Time window specified for daily maintenance operations.
+Specify <code class="docutils literal notranslate"><span class="pre">start_time</span></code> in <a class="reference external" href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339</a> format “HH:MM”,
+where HH : [00-23] and MM : [00-59] GMT. For example:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">duration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recurringWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurringWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Time window for
+recurring maintenance operations.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">endTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -279,72 +335,120 @@ Structure is documented below.</p></li>
 <p>The <strong>master_auth</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">clientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificateConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificateConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Whether client certificate authorization is enabled for this cluster.  For example:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">issueClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clientKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clusterCaCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to use for HTTP basic authentication when accessing
+the Kubernetes master endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to use for HTTP basic authentication when accessing
+the Kubernetes master endpoint. If not present basic auth will be disabled.</p></li>
 </ul>
 <p>The <strong>master_authorized_networks_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cidrBlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidrBlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - External networks that can access the
+Kubernetes cluster master through HTTPS.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - External network that can access Kubernetes master through HTTPS.
+Must be specified in CIDR notation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Field for users to identify CIDR blocks.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>network_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.</p></li>
 </ul>
 <p>The <strong>node_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">guest_accelerators</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Size of the disk attached to each node, specified
+in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of the disk attached to each node
+(e.g. ‘pd-standard’ or ‘pd-ssd’). If unspecified, the default disk type is ‘pd-standard’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">guest_accelerators</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of the type and count of accelerator cards attached to the instance.
+Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of the guest accelerator cards exposed to this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">localSsdCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sandboxConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The image type to use for this node. Note that changing the image type
+will delete and recreate all nodes in the node pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Kubernetes labels (key/value pairs) to be applied to each node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localSsdCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of local SSD disks that will be
+attached to each cluster node. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a Google Compute Engine machine type.
+Defaults to <code class="docutils literal notranslate"><span class="pre">n1-standard-1</span></code>. To create a custom machine type, value should be set as specified
+<a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instances#machineType">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The metadata key/value pairs assigned to instances in
+the cluster. From GKE <code class="docutils literal notranslate"><span class="pre">1.12</span></code> onwards, <code class="docutils literal notranslate"><span class="pre">disable-legacy-endpoints</span></code> is set to
+<code class="docutils literal notranslate"><span class="pre">true</span></code> by the API; if <code class="docutils literal notranslate"><span class="pre">metadata</span></code> is set but that default value is not
+included, the provider will attempt to unset the value. To avoid this, set the
+value in your config.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Minimum CPU platform to be used by this instance.
+The instance may be scheduled on the specified or newer CPU platform. Applicable
+values are the friendly names of CPU platforms, such as <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Haswell</span></code>. See the
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">official documentation</a>
+for more information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of Google API scopes to be made available
+on all of the node VMs under the “default” service account. These can be
+either FQDNs, or scope aliases. The following scopes are necessary to ensure
+the correct functioning of the cluster:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - A boolean that represents whether or not the underlying node VMs
+are preemptible. See the <a class="reference external" href="https://cloud.google.com/container-engine/docs/preemptible-vm">official documentation</a>
+for more information. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sandboxConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods">GKE Sandbox</a> configuration. When enabling this feature you must specify <code class="docutils literal notranslate"><span class="pre">image_type</span> <span class="pre">=</span> <span class="pre">&quot;COS_CONTAINERD&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">node_version</span> <span class="pre">=</span> <span class="pre">&quot;1.12.7-gke.17&quot;</span></code> or later to use it.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">sandboxType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sandboxType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Which sandbox to use for pods in the node pool.
+Accepted values are:</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service account to be used by the Node VMs.
+If not specified, the “default” service account is used.
+In order to use the configured <code class="docutils literal notranslate"><span class="pre">oauth_scopes</span></code> for logging and monitoring, the service account being used needs the
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles">roles/logging.logWriter</a> and
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Shielded Instance options. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defines if the instance has integrity monitoring enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defines if the instance has Secure Boot enabled.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of instance tags applied to all nodes. Tags are used to identify
+valid sources or targets for network firewalls.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of <a class="reference external" href="https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/">Kubernetes taints</a>
+to apply to nodes. GKE’s API can only set this field on cluster creation.
+However, GKE will add taints to your nodes if you enable certain features such
+as GPUs. If this field is set, any diffs on this field will cause the provider to
+recreate the underlying resource. Taint values can be updated safely in
+Kubernetes (eg. through <code class="docutils literal notranslate"><span class="pre">kubectl</span></code>), and it’s recommended that you do not use
+this field to manage taints. If you do, <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span></code> is
+recommended. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Effect for taint. Accepted values are <code class="docutils literal notranslate"><span class="pre">NO_SCHEDULE</span></code>, <code class="docutils literal notranslate"><span class="pre">PREFER_NO_SCHEDULE</span></code>, and <code class="docutils literal notranslate"><span class="pre">NO_EXECUTE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Key for taint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value for taint.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">workloadMetadataConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">workloadMetadataConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Metadata configuration to expose to workloads on the node pool.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to expose the node metadata to the workload running on the node.
+Accepted values are:</p>
+<ul>
+<li><p>UNSPECIFIED: Not Set</p></li>
+<li><p>SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy">Metadata Concealment</a> documentation.</p></li>
+<li><p>EXPOSE: Expose all VM metadata to pods.</p></li>
+<li><p>GKE_METADATA_SERVER: Enables <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">workload identity</a> on the node.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -380,46 +484,89 @@ Generally, this field should not be used at the same time as a
 manages the default node pool, which isn’t recommended to be used with
 this provider. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">guest_accelerators</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Size of the disk attached to each node, specified
+in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of the disk attached to each node
+(e.g. ‘pd-standard’ or ‘pd-ssd’). If unspecified, the default disk type is ‘pd-standard’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">guest_accelerators</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of the type and count of accelerator cards attached to the instance.
+Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of the guest accelerator cards exposed to this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">localSsdCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sandboxConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The image type to use for this node. Note that changing the image type
+will delete and recreate all nodes in the node pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Kubernetes labels (key/value pairs) to be applied to each node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localSsdCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of local SSD disks that will be
+attached to each cluster node. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a Google Compute Engine machine type.
+Defaults to <code class="docutils literal notranslate"><span class="pre">n1-standard-1</span></code>. To create a custom machine type, value should be set as specified
+<a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instances#machineType">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The metadata key/value pairs assigned to instances in
+the cluster. From GKE <code class="docutils literal notranslate"><span class="pre">1.12</span></code> onwards, <code class="docutils literal notranslate"><span class="pre">disable-legacy-endpoints</span></code> is set to
+<code class="docutils literal notranslate"><span class="pre">true</span></code> by the API; if <code class="docutils literal notranslate"><span class="pre">metadata</span></code> is set but that default value is not
+included, the provider will attempt to unset the value. To avoid this, set the
+value in your config.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Minimum CPU platform to be used by this instance.
+The instance may be scheduled on the specified or newer CPU platform. Applicable
+values are the friendly names of CPU platforms, such as <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Haswell</span></code>. See the
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">official documentation</a>
+for more information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of Google API scopes to be made available
+on all of the node VMs under the “default” service account. These can be
+either FQDNs, or scope aliases. The following scopes are necessary to ensure
+the correct functioning of the cluster:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - A boolean that represents whether or not the underlying node VMs
+are preemptible. See the <a class="reference external" href="https://cloud.google.com/container-engine/docs/preemptible-vm">official documentation</a>
+for more information. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sandboxConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods">GKE Sandbox</a> configuration. When enabling this feature you must specify <code class="docutils literal notranslate"><span class="pre">image_type</span> <span class="pre">=</span> <span class="pre">&quot;COS_CONTAINERD&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">node_version</span> <span class="pre">=</span> <span class="pre">&quot;1.12.7-gke.17&quot;</span></code> or later to use it.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">sandboxType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sandboxType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Which sandbox to use for pods in the node pool.
+Accepted values are:</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service account to be used by the Node VMs.
+If not specified, the “default” service account is used.
+In order to use the configured <code class="docutils literal notranslate"><span class="pre">oauth_scopes</span></code> for logging and monitoring, the service account being used needs the
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles">roles/logging.logWriter</a> and
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Shielded Instance options. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defines if the instance has integrity monitoring enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defines if the instance has Secure Boot enabled.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of instance tags applied to all nodes. Tags are used to identify
+valid sources or targets for network firewalls.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of <a class="reference external" href="https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/">Kubernetes taints</a>
+to apply to nodes. GKE’s API can only set this field on cluster creation.
+However, GKE will add taints to your nodes if you enable certain features such
+as GPUs. If this field is set, any diffs on this field will cause the provider to
+recreate the underlying resource. Taint values can be updated safely in
+Kubernetes (eg. through <code class="docutils literal notranslate"><span class="pre">kubectl</span></code>), and it’s recommended that you do not use
+this field to manage taints. If you do, <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span></code> is
+recommended. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Effect for taint. Accepted values are <code class="docutils literal notranslate"><span class="pre">NO_SCHEDULE</span></code>, <code class="docutils literal notranslate"><span class="pre">PREFER_NO_SCHEDULE</span></code>, and <code class="docutils literal notranslate"><span class="pre">NO_EXECUTE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Key for taint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value for taint.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">workloadMetadataConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">workloadMetadataConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Metadata configuration to expose to workloads on the node pool.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to expose the node metadata to the workload running on the node.
+Accepted values are:</p>
+<ul>
+<li><p>UNSPECIFIED: Not Set</p></li>
+<li><p>SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy">Metadata Concealment</a> documentation.</p></li>
+<li><p>EXPOSE: Expose all VM metadata to pods.</p></li>
+<li><p>GKE_METADATA_SERVER: Enables <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">workload identity</a> on the node.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -439,37 +586,65 @@ a zonal cluster, omit the cluster’s zone.</p></li>
 </ul>
 <p>The <strong>pod_security_policy_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 <p>The <strong>private_cluster_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">peeringName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When <code class="docutils literal notranslate"><span class="pre">true</span></code>, the cluster’s private
+endpoint is used as the cluster endpoint and access through the public endpoint
+is disabled. When <code class="docutils literal notranslate"><span class="pre">false</span></code>, either endpoint can be used. This field only applies
+to private clusters, when <code class="docutils literal notranslate"><span class="pre">enable_private_nodes</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables the private cluster feature,
+creating a private endpoint on the cluster. In a private cluster, nodes only
+have RFC 1918 private addresses and communicate with the master’s private
+endpoint via private networking.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP range in CIDR notation to use for
+the hosted master network. This range will be used for assigning private IP
+addresses to the cluster master(s) and the ILB VIP. This range must not overlap
+with any other ranges in use within the cluster’s network, and it must be a /28
+subnet. See <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#limitations">Private Cluster Limitations</a>
+for more details. This field only applies to private clusters, when
+<code class="docutils literal notranslate"><span class="pre">enable_private_nodes</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peeringName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the peering between this cluster and the Google owned VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The internal IP address of this cluster’s master endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external IP address of this cluster’s master endpoint.</p></li>
 </ul>
 <p>The <strong>release_channel</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">channel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">channel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The selected release channel.
+Accepted values are:</p>
+<ul>
+<li><p>UNSPECIFIED: Not set.</p></li>
+<li><p>RAPID: Weekly upgrade cadence; Early testers and developers who requires new features.</p></li>
+<li><p>REGULAR: Multiple per month upgrade cadence; Production users who need features not yet offered in the Stable channel.</p></li>
+<li><p>STABLE: Every few months upgrade cadence; Production users who need stability above all else, and for whom frequent upgrades are too risky.</p></li>
+</ul>
+</li>
 </ul>
 <p>The <strong>resource_usage_export_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bigqueryDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">bigqueryDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Parameters for using BigQuery as the destination of resource usage export.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableNetworkEgressMetering</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableNetworkEgressMetering</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created
+in the cluster to meter network egress traffic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableResourceConsumptionMetering</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable resource
+consumption metering on this cluster. When enabled, a table will be created in
+the resource export BigQuery dataset to store resource consumption data. The
+resulting table can be joined with the resource usage table or with BigQuery
+billing export. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
 <p>The <strong>vertical_pod_autoscaling</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 <p>The <strong>workload_identity_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Currently, the only supported identity namespace is the project’s default.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.addons_config">
@@ -477,35 +652,58 @@ a zonal cluster, omit the cluster’s zone.</p></li>
 <dd><p>The configuration for addons supported by GKE.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - .
+The status of the CloudRun addon. It requires <code class="docutils literal notranslate"><span class="pre">istio_config</span></code> enabled. It is disabled by default.
+Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable. This addon can only be enabled at cluster creation time.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - .
+The status of the NodeLocal DNSCache addon. It is disabled by default.
+Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">horizontalPodAutoscaling</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">horizontalPodAutoscaling</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The status of the Horizontal Pod Autoscaling
+addon, which increases or decreases the number of replica pods a replication controller
+has based on the resource usage of the existing pods.
+It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
+It is enabled by default;
+set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to disable.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpLoadBalancing</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpLoadBalancing</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The status of the HTTP (L7) load balancing
+controller addon, which makes it easy to set up HTTP load balancers for services in a
+cluster. It is enabled by default; set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to disable.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">istioConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">istioConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - .
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">auth</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auth</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The authentication type between services in Istio. Available options include <code class="docutils literal notranslate"><span class="pre">AUTH_MUTUAL_TLS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Whether we should enable the network policy addon
+for the master.  This must be enabled in order to enable network policy for the nodes.
+To enable this, you must also define a <code class="docutils literal notranslate"><span class="pre">network_policy</span></code> block,
+otherwise nothing will happen.
+It can only be disabled if the nodes already do not have network policies enabled.
+Defaults to disabled; set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
 </ul>
@@ -518,7 +716,7 @@ Structure is documented below.</p>
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite">Google Groups for GKE</a> feature.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format <code class="docutils literal notranslate"><span class="pre">gke-security-groups&#64;yourdomain.com</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -531,19 +729,36 @@ on the current needs of the cluster’s workload. See the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide to using Node Auto-Provisioning</a>
 for more details. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoProvisioningDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoProvisioningDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Contains defaults for a node pool created by NAP.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The set of Google API scopes to be made available
+on all of the node VMs under the “default” service account. These can be
+either FQDNs, or scope aliases. The following scopes are necessary to ensure
+the correct functioning of the cluster:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The service account to be used by the Node VMs.
+If not specified, the “default” service account is used.
+In order to use the configured <code class="docutils literal notranslate"><span class="pre">oauth_scopes</span></code> for logging and monitoring, the service account being used needs the
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles">roles/logging.logWriter</a> and
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceLimits</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Configuration
+options for the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles">Autoscaling profile</a>
+feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
+when deciding to remove nodes from a cluster. Can be <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code> or <code class="docutils literal notranslate"><span class="pre">OPTIMIZE_UTILIZATION</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceLimits</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Global constraints for machine resources in the
+cluster. Configuring the <code class="docutils literal notranslate"><span class="pre">cpu</span></code> and <code class="docutils literal notranslate"><span class="pre">memory</span></code> types is required if node
+auto-provisioning is enabled. These limits will apply to node pool autoscaling
+in addition to node auto-provisioning. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum amount of the resource in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minimum amount of the resource in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of the resource. For example, <code class="docutils literal notranslate"><span class="pre">cpu</span></code> and
+<code class="docutils literal notranslate"><span class="pre">memory</span></code>.  See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide to using Node Auto-Provisioning</a>
+for a list of types.</p></li>
 </ul>
 </li>
 </ul>
@@ -564,8 +779,8 @@ only work for routes-based clusters, where <code class="docutils literal notrans
 <dd><p>.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">keyName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - the key to use to encrypt/decrypt secrets.  See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption">DatabaseEncryption definition</a> for more information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <code class="docutils literal notranslate"><span class="pre">ENCRYPTED</span></code> or <code class="docutils literal notranslate"><span class="pre">DECRYPTED</span></code></p></li>
 </ul>
 </dd></dl>
 
@@ -659,10 +874,23 @@ VPC-native clusters. Adding this block enables <a class="reference external" hre
 making the cluster VPC-native instead of routes-based. Structure is documented
 below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">clusterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clusterSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">servicesIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">servicesSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clusterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP address range for the cluster pod IPs.
+Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
+to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14)
+from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
+pick a specific range to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clusterSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the existing secondary
+range in the cluster’s subnetwork to use for pod IP addresses. Alternatively,
+<code class="docutils literal notranslate"><span class="pre">cluster_ipv4_cidr_block</span></code> can be used to automatically create a GKE-managed one.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">servicesIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP address range of the services IPs in this cluster.
+Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
+to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14)
+from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
+pick a specific range to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">servicesSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the existing
+secondary range in the cluster’s subnetwork to use for service <code class="docutils literal notranslate"><span class="pre">ClusterIP</span></code>s.
+Alternatively, <code class="docutils literal notranslate"><span class="pre">services_ipv4_cidr_block</span></code> can be used to automatically create a
+GKE-managed one.</p></li>
 </ul>
 </dd></dl>
 
@@ -697,13 +925,16 @@ write logs to. Available options include <code class="docutils literal notransla
 <dd><p>The maintenance policy to use for the cluster. Structure is
 documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dailyMaintenanceWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dailyMaintenanceWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Time window specified for daily maintenance operations.
+Specify <code class="docutils literal notranslate"><span class="pre">start_time</span></code> in <a class="reference external" href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339</a> format “HH:MM”,
+where HH : [00-23] and MM : [00-59] GMT. For example:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">duration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recurringWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurringWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Time window for
+recurring maintenance operations.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">endTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -724,15 +955,17 @@ cert, ensure you have the <code class="docutils literal notranslate"><span class
 Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">clientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificateConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificateConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Whether client certificate authorization is enabled for this cluster.  For example:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">issueClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clientKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clusterCaCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password to use for HTTP basic authentication when accessing
+the Kubernetes master endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username to use for HTTP basic authentication when accessing
+the Kubernetes master endpoint. If not present basic auth will be disabled.</p></li>
 </ul>
 </dd></dl>
 
@@ -743,10 +976,12 @@ Structure is documented below.</p>
 for master authorized networks. Omit the nested <code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> attribute to disallow
 external access (except the cluster node IPs, which GKE automatically whitelists).</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cidrBlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidrBlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - External networks that can access the
+Kubernetes cluster master through HTTPS.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - External network that can access Kubernetes master through HTTPS.
+Must be specified in CIDR notation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Field for users to identify CIDR blocks.</p></li>
 </ul>
 </li>
 </ul>
@@ -809,8 +1044,9 @@ shared network.</p>
 <a class="reference external" href="https://kubernetes.io/docs/concepts/services-networking/networkpolicies/">NetworkPolicy</a>
 feature. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.</p></li>
 </ul>
 </dd></dl>
 
@@ -823,46 +1059,89 @@ Generally, this field should not be used at the same time as a
 manages the default node pool, which isn’t recommended to be used with
 this provider. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">guest_accelerators</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Size of the disk attached to each node, specified
+in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of the disk attached to each node
+(e.g. ‘pd-standard’ or ‘pd-ssd’). If unspecified, the default disk type is ‘pd-standard’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">guest_accelerators</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of the type and count of accelerator cards attached to the instance.
+Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of the guest accelerator cards exposed to this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">localSsdCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sandboxConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The image type to use for this node. Note that changing the image type
+will delete and recreate all nodes in the node pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Kubernetes labels (key/value pairs) to be applied to each node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localSsdCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of local SSD disks that will be
+attached to each cluster node. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of a Google Compute Engine machine type.
+Defaults to <code class="docutils literal notranslate"><span class="pre">n1-standard-1</span></code>. To create a custom machine type, value should be set as specified
+<a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instances#machineType">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The metadata key/value pairs assigned to instances in
+the cluster. From GKE <code class="docutils literal notranslate"><span class="pre">1.12</span></code> onwards, <code class="docutils literal notranslate"><span class="pre">disable-legacy-endpoints</span></code> is set to
+<code class="docutils literal notranslate"><span class="pre">true</span></code> by the API; if <code class="docutils literal notranslate"><span class="pre">metadata</span></code> is set but that default value is not
+included, the provider will attempt to unset the value. To avoid this, set the
+value in your config.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Minimum CPU platform to be used by this instance.
+The instance may be scheduled on the specified or newer CPU platform. Applicable
+values are the friendly names of CPU platforms, such as <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Haswell</span></code>. See the
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">official documentation</a>
+for more information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The set of Google API scopes to be made available
+on all of the node VMs under the “default” service account. These can be
+either FQDNs, or scope aliases. The following scopes are necessary to ensure
+the correct functioning of the cluster:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - A boolean that represents whether or not the underlying node VMs
+are preemptible. See the <a class="reference external" href="https://cloud.google.com/container-engine/docs/preemptible-vm">official documentation</a>
+for more information. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sandboxConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods">GKE Sandbox</a> configuration. When enabling this feature you must specify <code class="docutils literal notranslate"><span class="pre">image_type</span> <span class="pre">=</span> <span class="pre">&quot;COS_CONTAINERD&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">node_version</span> <span class="pre">=</span> <span class="pre">&quot;1.12.7-gke.17&quot;</span></code> or later to use it.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">sandboxType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sandboxType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Which sandbox to use for pods in the node pool.
+Accepted values are:</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The service account to be used by the Node VMs.
+If not specified, the “default” service account is used.
+In order to use the configured <code class="docutils literal notranslate"><span class="pre">oauth_scopes</span></code> for logging and monitoring, the service account being used needs the
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles">roles/logging.logWriter</a> and
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Shielded Instance options. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defines if the instance has integrity monitoring enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defines if the instance has Secure Boot enabled.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of instance tags applied to all nodes. Tags are used to identify
+valid sources or targets for network firewalls.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of <a class="reference external" href="https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/">Kubernetes taints</a>
+to apply to nodes. GKE’s API can only set this field on cluster creation.
+However, GKE will add taints to your nodes if you enable certain features such
+as GPUs. If this field is set, any diffs on this field will cause the provider to
+recreate the underlying resource. Taint values can be updated safely in
+Kubernetes (eg. through <code class="docutils literal notranslate"><span class="pre">kubectl</span></code>), and it’s recommended that you do not use
+this field to manage taints. If you do, <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span></code> is
+recommended. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Effect for taint. Accepted values are <code class="docutils literal notranslate"><span class="pre">NO_SCHEDULE</span></code>, <code class="docutils literal notranslate"><span class="pre">PREFER_NO_SCHEDULE</span></code>, and <code class="docutils literal notranslate"><span class="pre">NO_EXECUTE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Key for taint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Value for taint.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">workloadMetadataConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">workloadMetadataConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Metadata configuration to expose to workloads on the node pool.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - How to expose the node metadata to the workload running on the node.
+Accepted values are:</p>
+<ul>
+<li><p>UNSPECIFIED: Not Set</p></li>
+<li><p>SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy">Metadata Concealment</a> documentation.</p></li>
+<li><p>EXPOSE: Expose all VM metadata to pods.</p></li>
+<li><p>GKE_METADATA_SERVER: Enables <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">workload identity</a> on the node.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -917,46 +1196,89 @@ Generally, this field should not be used at the same time as a
 manages the default node pool, which isn’t recommended to be used with
 this provider. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">guest_accelerators</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Size of the disk attached to each node, specified
+in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of the disk attached to each node
+(e.g. ‘pd-standard’ or ‘pd-ssd’). If unspecified, the default disk type is ‘pd-standard’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">guest_accelerators</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of the type and count of accelerator cards attached to the instance.
+Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of the guest accelerator cards exposed to this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">localSsdCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sandboxConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The image type to use for this node. Note that changing the image type
+will delete and recreate all nodes in the node pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Kubernetes labels (key/value pairs) to be applied to each node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localSsdCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of local SSD disks that will be
+attached to each cluster node. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of a Google Compute Engine machine type.
+Defaults to <code class="docutils literal notranslate"><span class="pre">n1-standard-1</span></code>. To create a custom machine type, value should be set as specified
+<a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instances#machineType">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The metadata key/value pairs assigned to instances in
+the cluster. From GKE <code class="docutils literal notranslate"><span class="pre">1.12</span></code> onwards, <code class="docutils literal notranslate"><span class="pre">disable-legacy-endpoints</span></code> is set to
+<code class="docutils literal notranslate"><span class="pre">true</span></code> by the API; if <code class="docutils literal notranslate"><span class="pre">metadata</span></code> is set but that default value is not
+included, the provider will attempt to unset the value. To avoid this, set the
+value in your config.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Minimum CPU platform to be used by this instance.
+The instance may be scheduled on the specified or newer CPU platform. Applicable
+values are the friendly names of CPU platforms, such as <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Haswell</span></code>. See the
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">official documentation</a>
+for more information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The set of Google API scopes to be made available
+on all of the node VMs under the “default” service account. These can be
+either FQDNs, or scope aliases. The following scopes are necessary to ensure
+the correct functioning of the cluster:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - A boolean that represents whether or not the underlying node VMs
+are preemptible. See the <a class="reference external" href="https://cloud.google.com/container-engine/docs/preemptible-vm">official documentation</a>
+for more information. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sandboxConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods">GKE Sandbox</a> configuration. When enabling this feature you must specify <code class="docutils literal notranslate"><span class="pre">image_type</span> <span class="pre">=</span> <span class="pre">&quot;COS_CONTAINERD&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">node_version</span> <span class="pre">=</span> <span class="pre">&quot;1.12.7-gke.17&quot;</span></code> or later to use it.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">sandboxType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sandboxType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Which sandbox to use for pods in the node pool.
+Accepted values are:</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The service account to be used by the Node VMs.
+If not specified, the “default” service account is used.
+In order to use the configured <code class="docutils literal notranslate"><span class="pre">oauth_scopes</span></code> for logging and monitoring, the service account being used needs the
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles">roles/logging.logWriter</a> and
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Shielded Instance options. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defines if the instance has integrity monitoring enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defines if the instance has Secure Boot enabled.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of instance tags applied to all nodes. Tags are used to identify
+valid sources or targets for network firewalls.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of <a class="reference external" href="https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/">Kubernetes taints</a>
+to apply to nodes. GKE’s API can only set this field on cluster creation.
+However, GKE will add taints to your nodes if you enable certain features such
+as GPUs. If this field is set, any diffs on this field will cause the provider to
+recreate the underlying resource. Taint values can be updated safely in
+Kubernetes (eg. through <code class="docutils literal notranslate"><span class="pre">kubectl</span></code>), and it’s recommended that you do not use
+this field to manage taints. If you do, <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span></code> is
+recommended. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Effect for taint. Accepted values are <code class="docutils literal notranslate"><span class="pre">NO_SCHEDULE</span></code>, <code class="docutils literal notranslate"><span class="pre">PREFER_NO_SCHEDULE</span></code>, and <code class="docutils literal notranslate"><span class="pre">NO_EXECUTE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Key for taint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Value for taint.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">workloadMetadataConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">workloadMetadataConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Metadata configuration to expose to workloads on the node pool.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - How to expose the node metadata to the workload running on the node.
+Accepted values are:</p>
+<ul>
+<li><p>UNSPECIFIED: Not Set</p></li>
+<li><p>SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy">Metadata Concealment</a> documentation.</p></li>
+<li><p>EXPOSE: Expose all VM metadata to pods.</p></li>
+<li><p>GKE_METADATA_SERVER: Enables <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">workload identity</a> on the node.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -996,7 +1318,8 @@ To update nodes in other node pools, use the <code class="docutils literal notra
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -1006,12 +1329,24 @@ Structure is documented below.</p>
 <dd><p>Configuration for <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters">private clusters</a>,
 clusters with private nodes. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">peeringName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When <code class="docutils literal notranslate"><span class="pre">true</span></code>, the cluster’s private
+endpoint is used as the cluster endpoint and access through the public endpoint
+is disabled. When <code class="docutils literal notranslate"><span class="pre">false</span></code>, either endpoint can be used. This field only applies
+to private clusters, when <code class="docutils literal notranslate"><span class="pre">enable_private_nodes</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables the private cluster feature,
+creating a private endpoint on the cluster. In a private cluster, nodes only
+have RFC 1918 private addresses and communicate with the master’s private
+endpoint via private networking.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP range in CIDR notation to use for
+the hosted master network. This range will be used for assigning private IP
+addresses to the cluster master(s) and the ILB VIP. This range must not overlap
+with any other ranges in use within the cluster’s network, and it must be a /28
+subnet. See <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#limitations">Private Cluster Limitations</a>
+for more details. This field only applies to private clusters, when
+<code class="docutils literal notranslate"><span class="pre">enable_private_nodes</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peeringName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the peering between this cluster and the Google owned VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The internal IP address of this cluster’s master endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The external IP address of this cluster’s master endpoint.</p></li>
 </ul>
 </dd></dl>
 
@@ -1029,7 +1364,15 @@ is not provided, the provider project is used.</p>
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels">Release channel</a>
 feature, which provide more control over automatic upgrades of your GKE clusters. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">channel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">channel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The selected release channel.
+Accepted values are:</p>
+<ul>
+<li><p>UNSPECIFIED: Not set.</p></li>
+<li><p>RAPID: Weekly upgrade cadence; Early testers and developers who requires new features.</p></li>
+<li><p>REGULAR: Multiple per month upgrade cadence; Production users who need features not yet offered in the Stable channel.</p></li>
+<li><p>STABLE: Every few months upgrade cadence; Production users who need stability above all else, and for whom frequent upgrades are too risky.</p></li>
+</ul>
+</li>
 </ul>
 </dd></dl>
 
@@ -1055,12 +1398,18 @@ setting <code class="docutils literal notranslate"><span class="pre">initial_nod
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering">ResourceUsageExportConfig</a> feature.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bigqueryDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">bigqueryDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Parameters for using BigQuery as the destination of resource usage export.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableNetworkEgressMetering</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableNetworkEgressMetering</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created
+in the cluster to meter network egress traffic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableResourceConsumptionMetering</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable resource
+consumption metering on this cluster. When enabled, a table will be created in
+the resource export BigQuery dataset to store resource consumption data. The
+resulting table can be joined with the resource usage table or with BigQuery
+billing export. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1094,7 +1443,8 @@ notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.
 <dd><p>Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -1105,7 +1455,7 @@ Structure is documented below.</p>
 <a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Currently, the only supported identity namespace is the project’s default.</p></li>
 </ul>
 </dd></dl>
 
@@ -1291,81 +1641,137 @@ Structure is documented below.</p>
 </dl>
 <p>The <strong>addons_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudrunConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+The status of the CloudRun addon. It requires <code class="docutils literal notranslate"><span class="pre">istio_config</span></code> enabled. It is disabled by default.
+Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable. This addon can only be enabled at cluster creation time.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+The status of the NodeLocal DNSCache addon. It is disabled by default.
+Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">horizontalPodAutoscaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">horizontalPodAutoscaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The status of the Horizontal Pod Autoscaling
+addon, which increases or decreases the number of replica pods a replication controller
+has based on the resource usage of the existing pods.
+It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
+It is enabled by default;
+set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to disable.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpLoadBalancing</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpLoadBalancing</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The status of the HTTP (L7) load balancing
+controller addon, which makes it easy to set up HTTP load balancers for services in a
+cluster. It is enabled by default; set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to disable.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">istioConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">istioConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">auth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authentication type between services in Istio. Available options include <code class="docutils literal notranslate"><span class="pre">AUTH_MUTUAL_TLS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkPolicyConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Whether we should enable the network policy addon
+for the master.  This must be enabled in order to enable network policy for the nodes.
+To enable this, you must also define a <code class="docutils literal notranslate"><span class="pre">network_policy</span></code> block,
+otherwise nothing will happen.
+It can only be disabled if the nodes already do not have network policies enabled.
+Defaults to disabled; set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The status of the Istio addon, which makes it easy to set up Istio for services in a
+cluster. It is disabled by default. Set <code class="docutils literal notranslate"><span class="pre">disabled</span> <span class="pre">=</span> <span class="pre">false</span></code> to enable.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>authenticator_groups_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format <code class="docutils literal notranslate"><span class="pre">gke-security-groups&#64;yourdomain.com</span></code>.</p></li>
 </ul>
 <p>The <strong>cluster_autoscaling</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoProvisioningDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoProvisioningDefaults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Contains defaults for a node pool created by NAP.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of Google API scopes to be made available
+on all of the node VMs under the “default” service account. These can be
+either FQDNs, or scope aliases. The following scopes are necessary to ensure
+the correct functioning of the cluster:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service account to be used by the Node VMs.
+If not specified, the “default” service account is used.
+In order to use the configured <code class="docutils literal notranslate"><span class="pre">oauth_scopes</span></code> for logging and monitoring, the service account being used needs the
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles">roles/logging.logWriter</a> and
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceLimits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscalingProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Configuration
+options for the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles">Autoscaling profile</a>
+feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
+when deciding to remove nodes from a cluster. Can be <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code> or <code class="docutils literal notranslate"><span class="pre">OPTIMIZE_UTILIZATION</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">BALANCED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceLimits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Global constraints for machine resources in the
+cluster. Configuring the <code class="docutils literal notranslate"><span class="pre">cpu</span></code> and <code class="docutils literal notranslate"><span class="pre">memory</span></code> types is required if node
+auto-provisioning is enabled. These limits will apply to node pool autoscaling
+in addition to node auto-provisioning. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum amount of the resource in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum amount of the resource in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of the resource. For example, <code class="docutils literal notranslate"><span class="pre">cpu</span></code> and
+<code class="docutils literal notranslate"><span class="pre">memory</span></code>.  See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide to using Node Auto-Provisioning</a>
+for a list of types.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>database_encryption</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">keyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the key to use to encrypt/decrypt secrets.  See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption">DatabaseEncryption definition</a> for more information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <code class="docutils literal notranslate"><span class="pre">ENCRYPTED</span></code> or <code class="docutils literal notranslate"><span class="pre">DECRYPTED</span></code></p></li>
 </ul>
 <p>The <strong>ip_allocation_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">clusterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clusterSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">servicesIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">servicesSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clusterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address range for the cluster pod IPs.
+Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
+to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14)
+from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
+pick a specific range to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clusterSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the existing secondary
+range in the cluster’s subnetwork to use for pod IP addresses. Alternatively,
+<code class="docutils literal notranslate"><span class="pre">cluster_ipv4_cidr_block</span></code> can be used to automatically create a GKE-managed one.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">servicesIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address range of the services IPs in this cluster.
+Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
+to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14)
+from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
+pick a specific range to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">servicesSecondaryRangeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the existing
+secondary range in the cluster’s subnetwork to use for service <code class="docutils literal notranslate"><span class="pre">ClusterIP</span></code>s.
+Alternatively, <code class="docutils literal notranslate"><span class="pre">services_ipv4_cidr_block</span></code> can be used to automatically create a
+GKE-managed one.</p></li>
 </ul>
 <p>The <strong>maintenance_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dailyMaintenanceWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dailyMaintenanceWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Time window specified for daily maintenance operations.
+Specify <code class="docutils literal notranslate"><span class="pre">start_time</span></code> in <a class="reference external" href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339</a> format “HH:MM”,
+where HH : [00-23] and MM : [00-59] GMT. For example:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">duration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recurringWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurringWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Time window for
+recurring maintenance operations.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">endTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -1376,72 +1782,120 @@ Structure is documented below.</p>
 <p>The <strong>master_auth</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">clientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificateConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificateConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Whether client certificate authorization is enabled for this cluster.  For example:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">issueClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clientKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clusterCaCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to use for HTTP basic authentication when accessing
+the Kubernetes master endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to use for HTTP basic authentication when accessing
+the Kubernetes master endpoint. If not present basic auth will be disabled.</p></li>
 </ul>
 <p>The <strong>master_authorized_networks_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cidrBlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidrBlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - External networks that can access the
+Kubernetes cluster master through HTTPS.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - External network that can access Kubernetes master through HTTPS.
+Must be specified in CIDR notation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Field for users to identify CIDR blocks.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>network_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.</p></li>
 </ul>
 <p>The <strong>node_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">guest_accelerators</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Size of the disk attached to each node, specified
+in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of the disk attached to each node
+(e.g. ‘pd-standard’ or ‘pd-ssd’). If unspecified, the default disk type is ‘pd-standard’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">guest_accelerators</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of the type and count of accelerator cards attached to the instance.
+Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of the guest accelerator cards exposed to this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">localSsdCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sandboxConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The image type to use for this node. Note that changing the image type
+will delete and recreate all nodes in the node pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Kubernetes labels (key/value pairs) to be applied to each node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localSsdCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of local SSD disks that will be
+attached to each cluster node. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a Google Compute Engine machine type.
+Defaults to <code class="docutils literal notranslate"><span class="pre">n1-standard-1</span></code>. To create a custom machine type, value should be set as specified
+<a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instances#machineType">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The metadata key/value pairs assigned to instances in
+the cluster. From GKE <code class="docutils literal notranslate"><span class="pre">1.12</span></code> onwards, <code class="docutils literal notranslate"><span class="pre">disable-legacy-endpoints</span></code> is set to
+<code class="docutils literal notranslate"><span class="pre">true</span></code> by the API; if <code class="docutils literal notranslate"><span class="pre">metadata</span></code> is set but that default value is not
+included, the provider will attempt to unset the value. To avoid this, set the
+value in your config.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Minimum CPU platform to be used by this instance.
+The instance may be scheduled on the specified or newer CPU platform. Applicable
+values are the friendly names of CPU platforms, such as <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Haswell</span></code>. See the
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">official documentation</a>
+for more information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of Google API scopes to be made available
+on all of the node VMs under the “default” service account. These can be
+either FQDNs, or scope aliases. The following scopes are necessary to ensure
+the correct functioning of the cluster:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - A boolean that represents whether or not the underlying node VMs
+are preemptible. See the <a class="reference external" href="https://cloud.google.com/container-engine/docs/preemptible-vm">official documentation</a>
+for more information. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sandboxConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods">GKE Sandbox</a> configuration. When enabling this feature you must specify <code class="docutils literal notranslate"><span class="pre">image_type</span> <span class="pre">=</span> <span class="pre">&quot;COS_CONTAINERD&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">node_version</span> <span class="pre">=</span> <span class="pre">&quot;1.12.7-gke.17&quot;</span></code> or later to use it.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">sandboxType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sandboxType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Which sandbox to use for pods in the node pool.
+Accepted values are:</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service account to be used by the Node VMs.
+If not specified, the “default” service account is used.
+In order to use the configured <code class="docutils literal notranslate"><span class="pre">oauth_scopes</span></code> for logging and monitoring, the service account being used needs the
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles">roles/logging.logWriter</a> and
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Shielded Instance options. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defines if the instance has integrity monitoring enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defines if the instance has Secure Boot enabled.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of instance tags applied to all nodes. Tags are used to identify
+valid sources or targets for network firewalls.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of <a class="reference external" href="https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/">Kubernetes taints</a>
+to apply to nodes. GKE’s API can only set this field on cluster creation.
+However, GKE will add taints to your nodes if you enable certain features such
+as GPUs. If this field is set, any diffs on this field will cause the provider to
+recreate the underlying resource. Taint values can be updated safely in
+Kubernetes (eg. through <code class="docutils literal notranslate"><span class="pre">kubectl</span></code>), and it’s recommended that you do not use
+this field to manage taints. If you do, <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span></code> is
+recommended. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Effect for taint. Accepted values are <code class="docutils literal notranslate"><span class="pre">NO_SCHEDULE</span></code>, <code class="docutils literal notranslate"><span class="pre">PREFER_NO_SCHEDULE</span></code>, and <code class="docutils literal notranslate"><span class="pre">NO_EXECUTE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Key for taint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value for taint.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">workloadMetadataConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">workloadMetadataConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Metadata configuration to expose to workloads on the node pool.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to expose the node metadata to the workload running on the node.
+Accepted values are:</p>
+<ul>
+<li><p>UNSPECIFIED: Not Set</p></li>
+<li><p>SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy">Metadata Concealment</a> documentation.</p></li>
+<li><p>EXPOSE: Expose all VM metadata to pods.</p></li>
+<li><p>GKE_METADATA_SERVER: Enables <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">workload identity</a> on the node.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1477,46 +1931,89 @@ Generally, this field should not be used at the same time as a
 manages the default node pool, which isn’t recommended to be used with
 this provider. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">guest_accelerators</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">bootDiskKmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a class="reference external" href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Size of the disk attached to each node, specified
+in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of the disk attached to each node
+(e.g. ‘pd-standard’ or ‘pd-ssd’). If unspecified, the default disk type is ‘pd-standard’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">guest_accelerators</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of the type and count of accelerator cards attached to the instance.
+Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of the guest accelerator cards exposed to this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">localSsdCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sandboxConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The image type to use for this node. Note that changing the image type
+will delete and recreate all nodes in the node pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Kubernetes labels (key/value pairs) to be applied to each node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localSsdCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of local SSD disks that will be
+attached to each cluster node. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">machine_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a Google Compute Engine machine type.
+Defaults to <code class="docutils literal notranslate"><span class="pre">n1-standard-1</span></code>. To create a custom machine type, value should be set as specified
+<a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instances#machineType">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The metadata key/value pairs assigned to instances in
+the cluster. From GKE <code class="docutils literal notranslate"><span class="pre">1.12</span></code> onwards, <code class="docutils literal notranslate"><span class="pre">disable-legacy-endpoints</span></code> is set to
+<code class="docutils literal notranslate"><span class="pre">true</span></code> by the API; if <code class="docutils literal notranslate"><span class="pre">metadata</span></code> is set but that default value is not
+included, the provider will attempt to unset the value. To avoid this, set the
+value in your config.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_cpu_platform</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Minimum CPU platform to be used by this instance.
+The instance may be scheduled on the specified or newer CPU platform. Applicable
+values are the friendly names of CPU platforms, such as <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Haswell</span></code>. See the
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">official documentation</a>
+for more information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauthScopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of Google API scopes to be made available
+on all of the node VMs under the “default” service account. These can be
+either FQDNs, or scope aliases. The following scopes are necessary to ensure
+the correct functioning of the cluster:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - A boolean that represents whether or not the underlying node VMs
+are preemptible. See the <a class="reference external" href="https://cloud.google.com/container-engine/docs/preemptible-vm">official documentation</a>
+for more information. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sandboxConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods">GKE Sandbox</a> configuration. When enabling this feature you must specify <code class="docutils literal notranslate"><span class="pre">image_type</span> <span class="pre">=</span> <span class="pre">&quot;COS_CONTAINERD&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">node_version</span> <span class="pre">=</span> <span class="pre">&quot;1.12.7-gke.17&quot;</span></code> or later to use it.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">sandboxType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sandboxType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Which sandbox to use for pods in the node pool.
+Accepted values are:</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The service account to be used by the Node VMs.
+If not specified, the “default” service account is used.
+In order to use the configured <code class="docutils literal notranslate"><span class="pre">oauth_scopes</span></code> for logging and monitoring, the service account being used needs the
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles">roles/logging.logWriter</a> and
+<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shielded_instance_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Shielded Instance options. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableIntegrityMonitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defines if the instance has integrity monitoring enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableSecureBoot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defines if the instance has Secure Boot enabled.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of instance tags applied to all nodes. Tags are used to identify
+valid sources or targets for network firewalls.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of <a class="reference external" href="https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/">Kubernetes taints</a>
+to apply to nodes. GKE’s API can only set this field on cluster creation.
+However, GKE will add taints to your nodes if you enable certain features such
+as GPUs. If this field is set, any diffs on this field will cause the provider to
+recreate the underlying resource. Taint values can be updated safely in
+Kubernetes (eg. through <code class="docutils literal notranslate"><span class="pre">kubectl</span></code>), and it’s recommended that you do not use
+this field to manage taints. If you do, <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span></code> is
+recommended. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Effect for taint. Accepted values are <code class="docutils literal notranslate"><span class="pre">NO_SCHEDULE</span></code>, <code class="docutils literal notranslate"><span class="pre">PREFER_NO_SCHEDULE</span></code>, and <code class="docutils literal notranslate"><span class="pre">NO_EXECUTE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Key for taint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value for taint.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">workloadMetadataConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">workloadMetadataConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Metadata configuration to expose to workloads on the node pool.
+Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to expose the node metadata to the workload running on the node.
+Accepted values are:</p>
+<ul>
+<li><p>UNSPECIFIED: Not Set</p></li>
+<li><p>SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy">Metadata Concealment</a> documentation.</p></li>
+<li><p>EXPOSE: Expose all VM metadata to pods.</p></li>
+<li><p>GKE_METADATA_SERVER: Enables <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">workload identity</a> on the node.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1536,37 +2033,65 @@ a zonal cluster, omit the cluster’s zone.</p></li>
 </ul>
 <p>The <strong>pod_security_policy_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 <p>The <strong>private_cluster_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">peeringName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When <code class="docutils literal notranslate"><span class="pre">true</span></code>, the cluster’s private
+endpoint is used as the cluster endpoint and access through the public endpoint
+is disabled. When <code class="docutils literal notranslate"><span class="pre">false</span></code>, either endpoint can be used. This field only applies
+to private clusters, when <code class="docutils literal notranslate"><span class="pre">enable_private_nodes</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables the private cluster feature,
+creating a private endpoint on the cluster. In a private cluster, nodes only
+have RFC 1918 private addresses and communicate with the master’s private
+endpoint via private networking.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP range in CIDR notation to use for
+the hosted master network. This range will be used for assigning private IP
+addresses to the cluster master(s) and the ILB VIP. This range must not overlap
+with any other ranges in use within the cluster’s network, and it must be a /28
+subnet. See <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#limitations">Private Cluster Limitations</a>
+for more details. This field only applies to private clusters, when
+<code class="docutils literal notranslate"><span class="pre">enable_private_nodes</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peeringName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the peering between this cluster and the Google owned VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The internal IP address of this cluster’s master endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external IP address of this cluster’s master endpoint.</p></li>
 </ul>
 <p>The <strong>release_channel</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">channel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">channel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The selected release channel.
+Accepted values are:</p>
+<ul>
+<li><p>UNSPECIFIED: Not set.</p></li>
+<li><p>RAPID: Weekly upgrade cadence; Early testers and developers who requires new features.</p></li>
+<li><p>REGULAR: Multiple per month upgrade cadence; Production users who need features not yet offered in the Stable channel.</p></li>
+<li><p>STABLE: Every few months upgrade cadence; Production users who need stability above all else, and for whom frequent upgrades are too risky.</p></li>
+</ul>
+</li>
 </ul>
 <p>The <strong>resource_usage_export_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bigqueryDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">bigqueryDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Parameters for using BigQuery as the destination of resource usage export.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableNetworkEgressMetering</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableNetworkEgressMetering</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created
+in the cluster to meter network egress traffic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableResourceConsumptionMetering</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable resource
+consumption metering on this cluster. When enabled, a table will be created in
+the resource export BigQuery dataset to store resource consumption data. The
+resulting table can be joined with the resource usage table or with BigQuery
+billing export. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
 <p>The <strong>vertical_pod_autoscaling</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 <p>The <strong>workload_identity_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Currently, the only supported identity namespace is the project’s default.</p></li>
 </ul>
 </dd></dl>
 
@@ -1743,13 +2268,14 @@ when fuzzy versions are used. See the <code class="docutils literal notranslate"
 </dl>
 <p>The <strong>autoscaling</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxNodeCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxNodeCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum number of nodes in the NodePool. Must be &gt;=0 and
+&lt;= <code class="docutils literal notranslate"><span class="pre">max_node_count</span></code>.</p></li>
 </ul>
 <p>The <strong>management</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoRepair</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoRepair</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the nodes will be automatically repaired.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the nodes will be automatically upgraded.</p></li>
 </ul>
 <p>The <strong>node_config</strong> object supports the following:</p>
 <ul class="simple">
@@ -1798,8 +2324,12 @@ when fuzzy versions are used. See the <code class="docutils literal notranslate"
 </ul>
 <p>The <strong>upgrade_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of additional nodes that can be added to the node pool during
+an upgrade. Increasing <code class="docutils literal notranslate"><span class="pre">max_surge</span></code> raises the number of nodes that can be upgraded simultaneously.
+Can be set to 0 or greater.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of nodes that can be simultaneously unavailable during
+an upgrade. Increasing <code class="docutils literal notranslate"><span class="pre">max_unavailable</span></code> raises the number of nodes that can be upgraded in
+parallel. Can be set to 0 or greater.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.autoscaling">
@@ -1807,8 +2337,9 @@ when fuzzy versions are used. See the <code class="docutils literal notranslate"
 <dd><p>Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxNodeCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxNodeCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minimum number of nodes in the NodePool. Must be &gt;=0 and
+&lt;= <code class="docutils literal notranslate"><span class="pre">max_node_count</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1844,8 +2375,8 @@ this will force recreation of the resource.</p>
 <dd><p>Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoRepair</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoRepair</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the nodes will be automatically repaired.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the nodes will be automatically upgraded.</p></li>
 </ul>
 </dd></dl>
 
@@ -1954,8 +2485,12 @@ the provider-configured project will be used.</p>
 upgrade at once. The number of nodes upgraded simultaneously is the sum of <code class="docutils literal notranslate"><span class="pre">max_surge</span></code> and <code class="docutils literal notranslate"><span class="pre">max_unavailable</span></code>.
 The maximum number of nodes upgraded simultaneously is limited to 20.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of additional nodes that can be added to the node pool during
+an upgrade. Increasing <code class="docutils literal notranslate"><span class="pre">max_surge</span></code> raises the number of nodes that can be upgraded simultaneously.
+Can be set to 0 or greater.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of nodes that can be simultaneously unavailable during
+an upgrade. Increasing <code class="docutils literal notranslate"><span class="pre">max_unavailable</span></code> raises the number of nodes that can be upgraded in
+parallel. Can be set to 0 or greater.</p></li>
 </ul>
 </dd></dl>
 
@@ -2025,13 +2560,14 @@ when fuzzy versions are used. See the <code class="docutils literal notranslate"
 </dl>
 <p>The <strong>autoscaling</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxNodeCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxNodeCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum number of nodes in the NodePool. Must be &gt;=0 and
+&lt;= <code class="docutils literal notranslate"><span class="pre">max_node_count</span></code>.</p></li>
 </ul>
 <p>The <strong>management</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoRepair</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoRepair</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the nodes will be automatically repaired.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the nodes will be automatically upgraded.</p></li>
 </ul>
 <p>The <strong>node_config</strong> object supports the following:</p>
 <ul class="simple">
@@ -2080,8 +2616,12 @@ when fuzzy versions are used. See the <code class="docutils literal notranslate"
 </ul>
 <p>The <strong>upgrade_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxSurge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of additional nodes that can be added to the node pool during
+an upgrade. Increasing <code class="docutils literal notranslate"><span class="pre">max_surge</span></code> raises the number of nodes that can be upgraded simultaneously.
+Can be set to 0 or greater.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnavailable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of nodes that can be simultaneously unavailable during
+an upgrade. Increasing <code class="docutils literal notranslate"><span class="pre">max_unavailable</span></code> raises the number of nodes that can be upgraded in
+parallel. Can be set to 0 or greater.</p></li>
 </ul>
 </dd></dl>
 

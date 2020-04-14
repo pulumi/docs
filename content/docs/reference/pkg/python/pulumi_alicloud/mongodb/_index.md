@@ -97,7 +97,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_alicloud.mongodb.Instance">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mongodb.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_password=None</em>, <em class="sig-param">backup_periods=None</em>, <em class="sig-param">backup_time=None</em>, <em class="sig-param">db_instance_class=None</em>, <em class="sig-param">db_instance_storage=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">maintain_end_time=None</em>, <em class="sig-param">maintain_start_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">replication_factor=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">security_ip_lists=None</em>, <em class="sig-param">storage_engine=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tde_status=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mongodb.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_password=None</em>, <em class="sig-param">backup_periods=None</em>, <em class="sig-param">backup_time=None</em>, <em class="sig-param">db_instance_class=None</em>, <em class="sig-param">db_instance_storage=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">maintain_end_time=None</em>, <em class="sig-param">maintain_start_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">replication_factor=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">security_ip_lists=None</em>, <em class="sig-param">ssl_action=None</em>, <em class="sig-param">storage_engine=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tde_status=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Instance resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -133,6 +133,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Security Group ID of ECS.</p></li>
 <li><p><strong>security_ip_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).</p></li>
+<li><p><strong>ssl_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Actions performed on SSL functions, Valid values: <cite>Open</cite>: turn on SSL encryption; <cite>Close</cite>: turn off SSL encryption; <code class="docutils literal notranslate"><span class="pre">Update</span></code>: update SSL certificate.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>tde_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TDE(Transparent Data Encryption) status.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC.</p></li>
@@ -258,6 +259,18 @@ The multiple zone ID can be retrieved by setting <code class="docutils literal n
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_alicloud.mongodb.Instance.ssl_action">
+<code class="sig-name descname">ssl_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.Instance.ssl_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Actions performed on SSL functions, Valid values: <cite>Open</cite>: turn on SSL encryption; <cite>Close</cite>: turn off SSL encryption; <code class="docutils literal notranslate"><span class="pre">Update</span></code>: update SSL certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.mongodb.Instance.ssl_status">
+<code class="sig-name descname">ssl_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.Instance.ssl_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of the SSL feature. <cite>Open</cite>: SSL is turned on; <cite>Closed</cite>: SSL is turned off.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_alicloud.mongodb.Instance.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.Instance.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
@@ -285,7 +298,7 @@ The multiple zone ID can be retrieved by setting <code class="docutils literal n
 
 <dl class="method">
 <dt id="pulumi_alicloud.mongodb.Instance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_password=None</em>, <em class="sig-param">backup_periods=None</em>, <em class="sig-param">backup_time=None</em>, <em class="sig-param">db_instance_class=None</em>, <em class="sig-param">db_instance_storage=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">maintain_end_time=None</em>, <em class="sig-param">maintain_start_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">replica_set_name=None</em>, <em class="sig-param">replication_factor=None</em>, <em class="sig-param">retention_period=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">security_ip_lists=None</em>, <em class="sig-param">storage_engine=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tde_status=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.Instance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_password=None</em>, <em class="sig-param">backup_periods=None</em>, <em class="sig-param">backup_time=None</em>, <em class="sig-param">db_instance_class=None</em>, <em class="sig-param">db_instance_storage=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">maintain_end_time=None</em>, <em class="sig-param">maintain_start_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">replica_set_name=None</em>, <em class="sig-param">replication_factor=None</em>, <em class="sig-param">retention_period=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">security_ip_lists=None</em>, <em class="sig-param">ssl_action=None</em>, <em class="sig-param">ssl_status=None</em>, <em class="sig-param">storage_engine=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tde_status=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -334,6 +347,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Instance log backup retention days. Available in 1.42.0+.</p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Security Group ID of ECS.</p></li>
 <li><p><strong>security_ip_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).</p></li>
+<li><p><strong>ssl_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Actions performed on SSL functions, Valid values: <cite>Open</cite>: turn on SSL encryption; <cite>Close</cite>: turn off SSL encryption; <code class="docutils literal notranslate"><span class="pre">Update</span></code>: update SSL certificate.</p></li>
+<li><p><strong>ssl_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of the SSL feature. <cite>Open</cite>: SSL is turned on; <cite>Closed</cite>: SSL is turned off.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>tde_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TDE(Transparent Data Encryption) status.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC.</p></li>
@@ -385,7 +400,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.mongodb.ShardingInstance">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mongodb.</code><code class="sig-name descname">ShardingInstance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_password=None</em>, <em class="sig-param">backup_periods=None</em>, <em class="sig-param">backup_time=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">mongo_lists=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">security_ip_lists=None</em>, <em class="sig-param">shard_lists=None</em>, <em class="sig-param">storage_engine=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.mongodb.</code><code class="sig-name descname">ShardingInstance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_password=None</em>, <em class="sig-param">backup_periods=None</em>, <em class="sig-param">backup_time=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">mongo_lists=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">security_ip_lists=None</em>, <em class="sig-param">shard_lists=None</em>, <em class="sig-param">storage_engine=None</em>, <em class="sig-param">tde_status=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ShardingInstance resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -415,6 +430,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of DB instance. It a string of 2 to 256 characters.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration that you will buy DB instance (in month). It is valid when instance_charge_type is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Valid values: [1~9], 12, 24, 36. System default to 1.</p></li>
+<li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Security Group ID of ECS.</p></li>
 <li><p><strong>security_ip_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to <code class="docutils literal notranslate"><span class="pre">[&quot;127.0.0.1&quot;]</span></code>.</p></li>
 <li><p><strong>shard_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – the shard-node count can be purchased is in range of [2, 32].</p></li>
 </ul>
@@ -426,6 +442,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>tde_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TDE(Transparent Data Encryption) status.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone to launch the DB instance. MongoDB sharding instance does not support multiple-zone.
 If it is a multi-zone and <code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> is specified, the vswitch must in one of them.</p></li>
@@ -538,6 +555,12 @@ If it is a multi-zone and <code class="docutils literal notranslate"><span class
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_alicloud.mongodb.ShardingInstance.security_group_id">
+<code class="sig-name descname">security_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance.security_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Security Group ID of ECS.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_alicloud.mongodb.ShardingInstance.security_ip_lists">
 <code class="sig-name descname">security_ip_lists</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance.security_ip_lists" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to <code class="docutils literal notranslate"><span class="pre">[&quot;127.0.0.1&quot;]</span></code>.</p>
@@ -564,6 +587,12 @@ If it is a multi-zone and <code class="docutils literal notranslate"><span class
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_alicloud.mongodb.ShardingInstance.tde_status">
+<code class="sig-name descname">tde_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance.tde_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The TDE(Transparent Data Encryption) status.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_alicloud.mongodb.ShardingInstance.vswitch_id">
 <code class="sig-name descname">vswitch_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance.vswitch_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The virtual switch ID to launch DB instances in one VPC.</p>
@@ -578,7 +607,7 @@ If it is a multi-zone and <code class="docutils literal notranslate"><span class
 
 <dl class="method">
 <dt id="pulumi_alicloud.mongodb.ShardingInstance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_password=None</em>, <em class="sig-param">backup_periods=None</em>, <em class="sig-param">backup_time=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">mongo_lists=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">retention_period=None</em>, <em class="sig-param">security_ip_lists=None</em>, <em class="sig-param">shard_lists=None</em>, <em class="sig-param">storage_engine=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_password=None</em>, <em class="sig-param">backup_periods=None</em>, <em class="sig-param">backup_time=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">mongo_lists=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">retention_period=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">security_ip_lists=None</em>, <em class="sig-param">shard_lists=None</em>, <em class="sig-param">storage_engine=None</em>, <em class="sig-param">tde_status=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ShardingInstance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -618,6 +647,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of DB instance. It a string of 2 to 256 characters.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration that you will buy DB instance (in month). It is valid when instance_charge_type is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Valid values: [1~9], 12, 24, 36. System default to 1.</p></li>
 <li><p><strong>retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Instance log backup retention days. Available in 1.42.0+.</p></li>
+<li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Security Group ID of ECS.</p></li>
 <li><p><strong>security_ip_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to <code class="docutils literal notranslate"><span class="pre">[&quot;127.0.0.1&quot;]</span></code>.</p></li>
 <li><p><strong>shard_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – the shard-node count can be purchased is in range of [2, 32].</p></li>
 </ul>
@@ -629,6 +659,7 @@ properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>tde_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TDE(Transparent Data Encryption) status.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone to launch the DB instance. MongoDB sharding instance does not support multiple-zone.
 If it is a multi-zone and <code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> is specified, the vswitch must in one of them.</p></li>

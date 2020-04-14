@@ -4277,6 +4277,18 @@ tagKey2 = &quot;tagValue2&quot;
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/network_interfaces.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/network_interfaces.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>instance_id</strong> (<em>str</em>) – ID of the instance that the ENI is attached to.</p></li>
+<li><p><strong>private_ip</strong> (<em>str</em>) – Primary private IP of the ENI.</p></li>
+<li><p><strong>resource_group_id</strong> (<em>str</em>) – The Id of resource group.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags assigned to the ENI.</p></li>
+<li><p><strong>vpc_id</strong> (<em>str</em>) – ID of the VPC that the ENI belongs to.</p></li>
+<li><p><strong>vswitch_id</strong> (<em>str</em>) – ID of the VSwitch that the ENI is linked to.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
@@ -4394,6 +4406,43 @@ tagKey2 = &quot;tagValue2&quot;
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/snapshots.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/snapshots.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encrypted</strong> (<em>bool</em>) – Whether the snapshot is encrypted or not.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – A list of snapshot IDs.</p></li>
+<li><p><strong>source_disk_type</strong> (<em>str</em>) – Source disk attribute. Value range:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">System</span>
+<span class="o">*</span> <span class="n">Data</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>status</strong> (<em>str</em>) – The snapshot status. Value range:</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">progressing</span>
+<span class="o">*</span> <span class="n">accomplished</span>
+<span class="o">*</span> <span class="n">failed</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags assigned to the snapshot.</p></li>
+<li><p><strong>usage</strong> (<em>str</em>) – Whether the snapshots are used to create resources or not. Value range:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">image</span>
+<span class="o">*</span> <span class="n">disk</span>
+<span class="o">*</span> <span class="n">image_disk</span>
+<span class="o">*</span> <span class="n">none</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>
