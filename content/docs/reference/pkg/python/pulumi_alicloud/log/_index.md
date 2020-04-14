@@ -14,6 +14,222 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/issues">terraform-providers/terraform-provider-alicloud repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.log"></span><dl class="class">
+<dt id="pulumi_alicloud.log.Alert">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.log.</code><code class="sig-name descname">Alert</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alert_description=None</em>, <em class="sig-param">alert_displayname=None</em>, <em class="sig-param">alert_name=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">dashboard=None</em>, <em class="sig-param">mute_until=None</em>, <em class="sig-param">notification_lists=None</em>, <em class="sig-param">notify_threshold=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">query_lists=None</em>, <em class="sig-param">schedule_interval=None</em>, <em class="sig-param">schedule_type=None</em>, <em class="sig-param">throttling=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.Alert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log alert is a unit of log service, which is used to monitor and alert the user’s logstore status information. 
+Log Service enables you to configure alerts based on the charts in a dashboard to monitor the service status in real time.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in 1.78.0</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_alert.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_alert.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>alert_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alert description.</p></li>
+<li><p><strong>alert_displayname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alert displayname.</p></li>
+<li><p><strong>alert_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of logstore for configuring alarm service.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Conditional expression, such as: count&gt; 100.</p></li>
+<li><p><strong>mute_until</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Timestamp, notifications before closing again.</p></li>
+<li><p><strong>notification_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Alarm information notification list.</p></li>
+<li><p><strong>notify_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Notification threshold, which is not notified until the number of triggers is reached. The default is 1.</p></li>
+<li><p><strong>project_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project name.</p></li>
+<li><p><strong>query_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Multiple conditions for configured alarm query.</p></li>
+<li><p><strong>schedule_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Execution interval. 60 seconds minimum, such as 60s, 1h.</p></li>
+<li><p><strong>schedule_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Default FixedRate. No need to configure this parameter.</p></li>
+<li><p><strong>throttling</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>notification_lists</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Notice content of alarm.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Email address list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mobileLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - SMS sending mobile number.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Request address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Notification type. support Email, SMS, DingTalk.</p></li>
+</ul>
+<p>The <strong>query_lists</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">chartTitle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - chart title</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - end time. example: 20s.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logstore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Query logstore</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - query corresponding to chart. example: * AND aliyun.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - begin time. example: -60s.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeSpanType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - default Custom. No need to configure this parameter.</p></li>
+</ul>
+<dl class="attribute">
+<dt id="pulumi_alicloud.log.Alert.alert_description">
+<code class="sig-name descname">alert_description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Alert.alert_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alert description.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.log.Alert.alert_displayname">
+<code class="sig-name descname">alert_displayname</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Alert.alert_displayname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alert displayname.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.log.Alert.alert_name">
+<code class="sig-name descname">alert_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Alert.alert_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of logstore for configuring alarm service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.log.Alert.condition">
+<code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Alert.condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Conditional expression, such as: count&gt; 100.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.log.Alert.mute_until">
+<code class="sig-name descname">mute_until</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Alert.mute_until" title="Permalink to this definition">¶</a></dt>
+<dd><p>Timestamp, notifications before closing again.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.log.Alert.notification_lists">
+<code class="sig-name descname">notification_lists</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Alert.notification_lists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alarm information notification list.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Notice content of alarm.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailLists</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Email address list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mobileLists</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - SMS sending mobile number.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Request address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Notification type. support Email, SMS, DingTalk.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.log.Alert.notify_threshold">
+<code class="sig-name descname">notify_threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Alert.notify_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification threshold, which is not notified until the number of triggers is reached. The default is 1.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.log.Alert.project_name">
+<code class="sig-name descname">project_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Alert.project_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The project name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.log.Alert.query_lists">
+<code class="sig-name descname">query_lists</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Alert.query_lists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiple conditions for configured alarm query.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">chartTitle</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - chart title</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - end time. example: 20s.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logstore</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Query logstore</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - query corresponding to chart. example: * AND aliyun.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - begin time. example: -60s.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeSpanType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - default Custom. No need to configure this parameter.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.log.Alert.schedule_interval">
+<code class="sig-name descname">schedule_interval</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Alert.schedule_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execution interval. 60 seconds minimum, such as 60s, 1h.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.log.Alert.schedule_type">
+<code class="sig-name descname">schedule_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Alert.schedule_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default FixedRate. No need to configure this parameter.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.log.Alert.throttling">
+<code class="sig-name descname">throttling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Alert.throttling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.log.Alert.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alert_description=None</em>, <em class="sig-param">alert_displayname=None</em>, <em class="sig-param">alert_name=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">dashboard=None</em>, <em class="sig-param">mute_until=None</em>, <em class="sig-param">notification_lists=None</em>, <em class="sig-param">notify_threshold=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">query_lists=None</em>, <em class="sig-param">schedule_interval=None</em>, <em class="sig-param">schedule_type=None</em>, <em class="sig-param">throttling=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.Alert.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Alert resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>alert_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alert description.</p></li>
+<li><p><strong>alert_displayname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alert displayname.</p></li>
+<li><p><strong>alert_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of logstore for configuring alarm service.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Conditional expression, such as: count&gt; 100.</p></li>
+<li><p><strong>mute_until</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Timestamp, notifications before closing again.</p></li>
+<li><p><strong>notification_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Alarm information notification list.</p></li>
+<li><p><strong>notify_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Notification threshold, which is not notified until the number of triggers is reached. The default is 1.</p></li>
+<li><p><strong>project_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project name.</p></li>
+<li><p><strong>query_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Multiple conditions for configured alarm query.</p></li>
+<li><p><strong>schedule_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Execution interval. 60 seconds minimum, such as 60s, 1h.</p></li>
+<li><p><strong>schedule_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Default FixedRate. No need to configure this parameter.</p></li>
+<li><p><strong>throttling</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>notification_lists</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Notice content of alarm.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Email address list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mobileLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - SMS sending mobile number.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Request address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Notification type. support Email, SMS, DingTalk.</p></li>
+</ul>
+<p>The <strong>query_lists</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">chartTitle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - chart title</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - end time. example: 20s.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logstore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Query logstore</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - query corresponding to chart. example: * AND aliyun.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - begin time. example: -60s.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeSpanType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - default Custom. No need to configure this parameter.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.log.Alert.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.Alert.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.log.Alert.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.Alert.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_alicloud.log.LogTailAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.log.</code><code class="sig-name descname">LogTailAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">logtail_config_name=None</em>, <em class="sig-param">machine_group_name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.LogTailAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Logtail access service is a log collection agent provided by Log Service.

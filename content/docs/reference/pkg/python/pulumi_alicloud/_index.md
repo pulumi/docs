@@ -41,6 +41,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="kvstore/">kvstore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="log/">log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="marketplace/">marketplace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maxcompute/">maxcompute</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mns/">mns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mongodb/">mongodb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nas/">nas</a></li>

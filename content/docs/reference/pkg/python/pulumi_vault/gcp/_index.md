@@ -598,8 +598,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>bindings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">roles</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Resource or resource path for which IAM policy information will be bound. The resource path may be specified in a few different <a class="reference external" href="https://www.vaultproject.io/docs/secrets/gcp/index.html#roleset-bindings">formats</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">roles</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of <a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles">GCP IAM roles</a> for the resource.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_vault.gcp.SecretRoleset.backend">
@@ -612,8 +612,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">bindings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.gcp.SecretRoleset.bindings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bindings to create for this roleset. This can be specified multiple times for multiple bindings. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">roles</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Resource or resource path for which IAM policy information will be bound. The resource path may be specified in a few different <a class="reference external" href="https://www.vaultproject.io/docs/secrets/gcp/index.html#roleset-bindings">formats</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">roles</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of <a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles">GCP IAM roles</a> for the resource.</p></li>
 </ul>
 </dd></dl>
 
@@ -670,8 +670,8 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>bindings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">roles</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Resource or resource path for which IAM policy information will be bound. The resource path may be specified in a few different <a class="reference external" href="https://www.vaultproject.io/docs/secrets/gcp/index.html#roleset-bindings">formats</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">roles</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of <a class="reference external" href="https://cloud.google.com/iam/docs/understanding-roles">GCP IAM roles</a> for the resource.</p></li>
 </ul>
 </dd></dl>
 
