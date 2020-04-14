@@ -17,7 +17,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#DataLink">DataLink</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#DataLinkArgs">DataLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#DataLink">DataLink</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#DataLinkArgs">DataLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,11 +25,11 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDataLink<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#DataLinkArgs">DataLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#DataLink">DataLink</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDataLink<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#DataLinkArgs">DataLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#DataLink">DataLink</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..DataLink.html">DataLink</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.DataLinkArgs.html">DataLinkArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.DataLink.html">DataLink</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.DataLinkArgs.html">DataLinkArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -125,7 +125,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>Context<wbr>Dashboard<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, scopes this data link to the supplied dashboard id. If omitted then the link will be global.
 {{% /md %}}</dd>
@@ -134,7 +134,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>Property<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name (key) of the metadata that's the trigger of a data link. If you specify `property_value`, you must specify `property_name`.
 {{% /md %}}</dd>
@@ -143,7 +143,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>Property<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the metadata that's the trigger of a data link. If you specify this property, you must also specify `property_name`.
 {{% /md %}}</dd>
@@ -152,7 +152,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>Target<wbr>External<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetexternalurl">List&lt;Data<wbr>Link<wbr>Target<wbr>External<wbr>Url<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#datalinktargetexternalurl">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Data<wbr>Link<wbr>Target<wbr>External<wbr>Url<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Link to an external URL
 {{% /md %}}</dd>
@@ -161,7 +161,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>Target<wbr>Signalfx<wbr>Dashboards</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">List&lt;Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Link to a SignalFx dashboard
 {{% /md %}}</dd>
@@ -170,7 +170,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>Target<wbr>Splunks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsplunk">List&lt;Data<wbr>Link<wbr>Target<wbr>Splunk<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#datalinktargetsplunk">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Data<wbr>Link<wbr>Target<wbr>Splunk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Link to an external URL
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>Context<wbr>Dashboard<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, scopes this data link to the supplied dashboard id. If omitted then the link will be global.
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>Property<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name (key) of the metadata that's the trigger of a data link. If you specify `property_value`, you must specify `property_name`.
 {{% /md %}}</dd>
@@ -204,7 +204,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>Property<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the metadata that's the trigger of a data link. If you specify this property, you must also specify `property_name`.
 {{% /md %}}</dd>
@@ -247,7 +247,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>context<wbr>Dashboard<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, scopes this data link to the supplied dashboard id. If omitted then the link will be global.
 {{% /md %}}</dd>
@@ -256,7 +256,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>property<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name (key) of the metadata that's the trigger of a data link. If you specify `property_value`, you must specify `property_name`.
 {{% /md %}}</dd>
@@ -265,7 +265,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>property<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the metadata that's the trigger of a data link. If you specify this property, you must also specify `property_name`.
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>target<wbr>External<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetexternalurl">Data<wbr>Link<wbr>Target<wbr>External<wbr>Url[]?</a></span>
+        <span class="property-type"><a href="#datalinktargetexternalurl">Data<wbr>Link<wbr>Target<wbr>External<wbr>Url[]</a></span>
     </dt>
     <dd>{{% md %}}Link to an external URL
 {{% /md %}}</dd>
@@ -283,7 +283,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>target<wbr>Signalfx<wbr>Dashboards</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard[]?</a></span>
+        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard[]</a></span>
     </dt>
     <dd>{{% md %}}Link to a SignalFx dashboard
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
             title="Optional">
         <span>target<wbr>Splunks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsplunk">Data<wbr>Link<wbr>Target<wbr>Splunk[]?</a></span>
+        <span class="property-type"><a href="#datalinktargetsplunk">Data<wbr>Link<wbr>Target<wbr>Splunk[]</a></span>
     </dt>
     <dd>{{% md %}}Link to an external URL
 {{% /md %}}</dd>
@@ -362,260 +362,6 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
 {{% /choosable %}}
 
 
-
-
-
-
-
-## DataLink Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Context<wbr>Dashboard<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If provided, scopes this data link to the supplied dashboard id. If omitted then the link will be global.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Property<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name (key) of the metadata that's the trigger of a data link. If you specify `property_value`, you must specify `property_name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Property<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Value of the metadata that's the trigger of a data link. If you specify this property, you must also specify `property_name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>External<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetexternalurl">List&lt;Data<wbr>Link<wbr>Target<wbr>External<wbr>Url&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Link to an external URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Signalfx<wbr>Dashboards</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">List&lt;Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Link to a SignalFx dashboard
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Splunks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsplunk">List&lt;Data<wbr>Link<wbr>Target<wbr>Splunk&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Link to an external URL
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Context<wbr>Dashboard<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}If provided, scopes this data link to the supplied dashboard id. If omitted then the link will be global.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Property<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Name (key) of the metadata that's the trigger of a data link. If you specify `property_value`, you must specify `property_name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Property<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Value of the metadata that's the trigger of a data link. If you specify this property, you must also specify `property_name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>External<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetexternalurl">[]Data<wbr>Link<wbr>Target<wbr>External<wbr>Url</a></span>
-    </dt>
-    <dd>{{% md %}}Link to an external URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Signalfx<wbr>Dashboards</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">[]Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard</a></span>
-    </dt>
-    <dd>{{% md %}}Link to a SignalFx dashboard
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Splunks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsplunk">[]Data<wbr>Link<wbr>Target<wbr>Splunk</a></span>
-    </dt>
-    <dd>{{% md %}}Link to an external URL
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>context<wbr>Dashboard<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If provided, scopes this data link to the supplied dashboard id. If omitted then the link will be global.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>property<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name (key) of the metadata that's the trigger of a data link. If you specify `property_value`, you must specify `property_name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>property<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Value of the metadata that's the trigger of a data link. If you specify this property, you must also specify `property_name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>External<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetexternalurl">Data<wbr>Link<wbr>Target<wbr>External<wbr>Url[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Link to an external URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Signalfx<wbr>Dashboards</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Link to a SignalFx dashboard
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Splunks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsplunk">Data<wbr>Link<wbr>Target<wbr>Splunk[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Link to an external URL
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>context_<wbr>dashboard_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}If provided, scopes this data link to the supplied dashboard id. If omitted then the link will be global.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>property_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name (key) of the metadata that's the trigger of a data link. If you specify `property_value`, you must specify `property_name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>property_<wbr>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Value of the metadata that's the trigger of a data link. If you specify this property, you must also specify `property_name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>external_<wbr>urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetexternalurl">List[Data<wbr>Link<wbr>Target<wbr>External<wbr>Url]</a></span>
-    </dt>
-    <dd>{{% md %}}Link to an external URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>signalfx_<wbr>dashboards</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">List[Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard]</a></span>
-    </dt>
-    <dd>{{% md %}}Link to a SignalFx dashboard
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>splunks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsplunk">List[Data<wbr>Link<wbr>Target<wbr>Splunk]</a></span>
-    </dt>
-    <dd>{{% md %}}Link to an external URL
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -643,7 +389,7 @@ Get an existing DataLink resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..DataLink.html">DataLink</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..DataLinkState.html">DataLinkState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.DataLink.html">DataLink</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..DataLinkState.html">DataLinkState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -753,7 +499,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Context<wbr>Dashboard<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, scopes this data link to the supplied dashboard id. If omitted then the link will be global.
 {{% /md %}}</dd>
@@ -762,7 +508,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Property<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name (key) of the metadata that's the trigger of a data link. If you specify `property_value`, you must specify `property_name`.
 {{% /md %}}</dd>
@@ -771,7 +517,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Property<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the metadata that's the trigger of a data link. If you specify this property, you must also specify `property_name`.
 {{% /md %}}</dd>
@@ -780,7 +526,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>External<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetexternalurl">List&lt;Data<wbr>Link<wbr>Target<wbr>External<wbr>Url<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#datalinktargetexternalurl">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Data<wbr>Link<wbr>Target<wbr>External<wbr>Url<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Link to an external URL
 {{% /md %}}</dd>
@@ -789,7 +535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Signalfx<wbr>Dashboards</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">List&lt;Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Link to a SignalFx dashboard
 {{% /md %}}</dd>
@@ -798,7 +544,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Splunks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsplunk">List&lt;Data<wbr>Link<wbr>Target<wbr>Splunk<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#datalinktargetsplunk">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Data<wbr>Link<wbr>Target<wbr>Splunk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Link to an external URL
 {{% /md %}}</dd>
@@ -814,7 +560,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Context<wbr>Dashboard<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, scopes this data link to the supplied dashboard id. If omitted then the link will be global.
 {{% /md %}}</dd>
@@ -823,7 +569,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Property<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name (key) of the metadata that's the trigger of a data link. If you specify `property_value`, you must specify `property_name`.
 {{% /md %}}</dd>
@@ -832,7 +578,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Property<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the metadata that's the trigger of a data link. If you specify this property, you must also specify `property_name`.
 {{% /md %}}</dd>
@@ -875,7 +621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>context<wbr>Dashboard<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, scopes this data link to the supplied dashboard id. If omitted then the link will be global.
 {{% /md %}}</dd>
@@ -884,7 +630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>property<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name (key) of the metadata that's the trigger of a data link. If you specify `property_value`, you must specify `property_name`.
 {{% /md %}}</dd>
@@ -893,7 +639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>property<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the metadata that's the trigger of a data link. If you specify this property, you must also specify `property_name`.
 {{% /md %}}</dd>
@@ -902,7 +648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target<wbr>External<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetexternalurl">Data<wbr>Link<wbr>Target<wbr>External<wbr>Url[]?</a></span>
+        <span class="property-type"><a href="#datalinktargetexternalurl">Data<wbr>Link<wbr>Target<wbr>External<wbr>Url[]</a></span>
     </dt>
     <dd>{{% md %}}Link to an external URL
 {{% /md %}}</dd>
@@ -911,7 +657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target<wbr>Signalfx<wbr>Dashboards</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard[]?</a></span>
+        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard[]</a></span>
     </dt>
     <dd>{{% md %}}Link to a SignalFx dashboard
 {{% /md %}}</dd>
@@ -920,7 +666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target<wbr>Splunks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsplunk">Data<wbr>Link<wbr>Target<wbr>Splunk[]?</a></span>
+        <span class="property-type"><a href="#datalinktargetsplunk">Data<wbr>Link<wbr>Target<wbr>Splunk[]</a></span>
     </dt>
     <dd>{{% md %}}Link to an external URL
 {{% /md %}}</dd>
@@ -1015,24 +761,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Minimum<wbr>Time<wbr>Window</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The [minimum time window](https://developers.signalfx.com/administration/data_links_overview.html#_minimum_time_window) for a search sent to an external site. Defaults to `6000`
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1040,24 +768,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Property<wbr>Key<wbr>Mapping</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Describes the relationship between SignalFx metadata keys and external system properties when the key names are different.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Time<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}[Designates the format](https://developers.signalfx.com/administration/data_links_overview.html#_minimum_time_window) of `minimum_time_window` in the same data link target object. Must be one of `"ISO8601"`, `"EpochSeconds"` or `"Epoch"` (which is milliseconds). Defaults to `"ISO8601"`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1068,18 +778,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Is<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
@@ -1088,10 +791,35 @@ The following state arguments are supported:
             title="Optional">
         <span>Minimum<wbr>Time<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [minimum time window](https://developers.signalfx.com/administration/data_links_overview.html#_minimum_time_window) for a search sent to an external site. Defaults to `6000`
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Property<wbr>Key<wbr>Mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Describes the relationship between SignalFx metadata keys and external system properties when the key names are different.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Time<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Designates the format](https://developers.signalfx.com/administration/data_links_overview.html#_minimum_time_window) of `minimum_time_window` in the same data link target object. Must be one of `"ISO8601"`, `"EpochSeconds"` or `"Epoch"` (which is milliseconds). Defaults to `"ISO8601"`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1100,6 +828,32 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Minimum<wbr>Time<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The [minimum time window](https://developers.signalfx.com/administration/data_links_overview.html#_minimum_time_window) for a search sent to an external site. Defaults to `6000`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1115,18 +869,10 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Designates the format](https://developers.signalfx.com/administration/data_links_overview.html#_minimum_time_window) of `minimum_time_window` in the same data link target object. Must be one of `"ISO8601"`, `"EpochSeconds"` or `"Epoch"` (which is milliseconds). Defaults to `"ISO8601"`.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1134,24 +880,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>minimum<wbr>Time<wbr>Window</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The [minimum time window](https://developers.signalfx.com/administration/data_links_overview.html#_minimum_time_window) for a search sent to an external site. Defaults to `6000`
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1162,24 +890,6 @@ The following state arguments are supported:
     <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>property<wbr>Key<wbr>Mapping</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Describes the relationship between SignalFx metadata keys and external system properties when the key names are different.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>time<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}[Designates the format](https://developers.signalfx.com/administration/data_links_overview.html#_minimum_time_window) of `minimum_time_window` in the same data link target object. Must be one of `"ISO8601"`, `"EpochSeconds"` or `"Epoch"` (which is milliseconds). Defaults to `"ISO8601"`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>url</span>
@@ -1188,12 +898,65 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>minimum<wbr>Time<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The [minimum time window](https://developers.signalfx.com/administration/data_links_overview.html#_minimum_time_window) for a search sent to an external site. Defaults to `6000`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>property<wbr>Key<wbr>Mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Describes the relationship between SignalFx metadata keys and external system properties when the key names are different.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>time<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Designates the format](https://developers.signalfx.com/administration/data_links_overview.html#_minimum_time_window) of `minimum_time_window` in the same data link target object. Must be one of `"ISO8601"`, `"EpochSeconds"` or `"Epoch"` (which is milliseconds). Defaults to `"ISO8601"`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1213,15 +976,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The [minimum time window](https://developers.signalfx.com/administration/data_links_overview.html#_minimum_time_window) for a search sent to an external site. Defaults to `6000`
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>property<wbr>Key<wbr>Mapping</span>
@@ -1239,14 +993,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}[Designates the format](https://developers.signalfx.com/administration/data_links_overview.html#_minimum_time_window) of `minimum_time_window` in the same data link target object. Must be one of `"ISO8601"`, `"EpochSeconds"` or `"Epoch"` (which is milliseconds). Defaults to `"ISO8601"`.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1288,15 +1034,6 @@ The following state arguments are supported:
     <dd>{{% md %}}SignalFx-assigned ID of the dashboard link target
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1304,6 +1041,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
 
 </dl>
@@ -1331,15 +1077,6 @@ The following state arguments are supported:
     <dd>{{% md %}}SignalFx-assigned ID of the dashboard link target
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1347,6 +1084,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
 
 </dl>
@@ -1374,15 +1120,6 @@ The following state arguments are supported:
     <dd>{{% md %}}SignalFx-assigned ID of the dashboard link target
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -1390,6 +1127,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
 
 </dl>
@@ -1417,15 +1163,6 @@ The following state arguments are supported:
     <dd>{{% md %}}SignalFx-assigned ID of the dashboard link target
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -1433,6 +1170,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
 
 </dl>
@@ -1457,15 +1203,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1477,9 +1214,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Is<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Property<wbr>Key<wbr>Mapping</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Describes the relationship between SignalFx metadata keys and external system properties when the key names are different.
 {{% /md %}}</dd>
@@ -1491,15 +1237,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1507,6 +1244,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1525,15 +1271,6 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -1545,9 +1282,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>is<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>property<wbr>Key<wbr>Mapping</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Describes the relationship between SignalFx metadata keys and external system properties when the key names are different.
 {{% /md %}}</dd>
@@ -1559,15 +1305,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -1575,6 +1312,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
 
     <dt class="property-optional"

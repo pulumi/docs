@@ -44,7 +44,7 @@ data("cpu.total.idle", filter=myfilters).publish()
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#HeatmapChart">HeatmapChart</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#HeatmapChartArgs">HeatmapChartArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#HeatmapChart">HeatmapChart</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#HeatmapChartArgs">HeatmapChartArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -52,11 +52,11 @@ data("cpu.total.idle", filter=myfilters).publish()
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHeatmapChart<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#HeatmapChartArgs">HeatmapChartArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#HeatmapChart">HeatmapChart</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHeatmapChart<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#HeatmapChartArgs">HeatmapChartArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#HeatmapChart">HeatmapChart</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..HeatmapChart.html">HeatmapChart</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.HeatmapChartArgs.html">HeatmapChartArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.HeatmapChart.html">HeatmapChart</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.HeatmapChartArgs.html">HeatmapChartArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,11 +148,20 @@ data("cpu.total.idle", filter=myfilters).publish()
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Program<wbr>Text</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Color<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args?</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorrange">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
@@ -161,7 +170,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Color<wbr>Scales</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorscale">List&lt;Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorscale">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
@@ -170,7 +179,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
@@ -179,7 +188,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Disable<wbr>Sampling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
 {{% /md %}}</dd>
@@ -188,7 +197,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Group<wbr>Bies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
 {{% /md %}}</dd>
@@ -197,7 +206,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Hide<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
@@ -206,7 +215,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Max<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
@@ -215,7 +224,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Minimum<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
@@ -224,10 +233,44 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Refresh<wbr>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Sort<wbr>By</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Unit<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -240,43 +283,9 @@ data("cpu.total.idle", filter=myfilters).publish()
 
     <dt class="property-optional"
             title="Optional">
-        <span>Refresh<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Sort<wbr>By</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Unit<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Color<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">*Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
@@ -294,7 +303,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
@@ -303,7 +312,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Disable<wbr>Sampling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
 {{% /md %}}</dd>
@@ -321,7 +330,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Hide<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
@@ -330,7 +339,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Max<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
@@ -339,7 +348,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Minimum<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
@@ -348,25 +357,16 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Program<wbr>Text</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
+    <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Refresh<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
@@ -375,7 +375,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Sort<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
 {{% /md %}}</dd>
@@ -384,7 +384,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>Unit<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd>
@@ -395,87 +395,6 @@ data("cpu.total.idle", filter=myfilters).publish()
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>color<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range?</a></span>
-    </dt>
-    <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>color<wbr>Scales</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorscale">Heatmap<wbr>Chart<wbr>Color<wbr>Scale[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>disable<wbr>Sampling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Bies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>hide<wbr>Timestamp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max<wbr>Delay</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>minimum<wbr>Resolution</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -488,9 +407,90 @@ data("cpu.total.idle", filter=myfilters).publish()
 
     <dt class="property-optional"
             title="Optional">
+        <span>color<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>color<wbr>Scales</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#heatmapchartcolorscale">Heatmap<wbr>Chart<wbr>Color<wbr>Scale[]</a></span>
+    </dt>
+    <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the chart.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disable<wbr>Sampling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Bies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hide<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Delay</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>minimum<wbr>Resolution</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the chart.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>refresh<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>sort<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
 {{% /md %}}</dd>
@@ -508,7 +508,7 @@ data("cpu.total.idle", filter=myfilters).publish()
             title="Optional">
         <span>unit<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd>
@@ -519,6 +519,15 @@ data("cpu.total.idle", filter=myfilters).publish()
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>program_<wbr>text</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -599,15 +608,6 @@ data("cpu.total.idle", filter=myfilters).publish()
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>program_<wbr>text</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -658,123 +658,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Color<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range?</a></span>
-    </dt>
-    <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Color<wbr>Scales</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorscale">List&lt;Heatmap<wbr>Chart<wbr>Color<wbr>Scale&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disable<wbr>Sampling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Bies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hide<wbr>Timestamp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Delay</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Minimum<wbr>Resolution</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Program<wbr>Text</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Refresh<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sort<wbr>By</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Unit<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -788,123 +671,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Color<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">*Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
-    </dt>
-    <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Color<wbr>Scales</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorscale">[]Heatmap<wbr>Chart<wbr>Color<wbr>Scale</a></span>
-    </dt>
-    <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disable<wbr>Sampling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Bies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hide<wbr>Timestamp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Delay</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Minimum<wbr>Resolution</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Program<wbr>Text</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Refresh<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sort<wbr>By</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Unit<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -924,123 +690,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>color<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range?</a></span>
-    </dt>
-    <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>color<wbr>Scales</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorscale">Heatmap<wbr>Chart<wbr>Color<wbr>Scale[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disable<wbr>Sampling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Bies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hide<wbr>Timestamp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Delay</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>minimum<wbr>Resolution</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>program<wbr>Text</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>refresh<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sort<wbr>By</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>unit<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1054,123 +703,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>color_<wbr>range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">Dict[Heatmap<wbr>Chart<wbr>Color<wbr>Range]</a></span>
-    </dt>
-    <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>color_<wbr>scales</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorscale">List[Heatmap<wbr>Chart<wbr>Color<wbr>Scale]</a></span>
-    </dt>
-    <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disable_<wbr>sampling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>bies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hide_<wbr>timestamp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>delay</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>minimum_<wbr>resolution</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>program_<wbr>text</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>refresh_<wbr>interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sort_<wbr>by</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>unit_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1210,7 +742,7 @@ Get an existing HeatmapChart resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..HeatmapChart.html">HeatmapChart</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..HeatmapChartState.html">HeatmapChartState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.HeatmapChart.html">HeatmapChart</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..HeatmapChartState.html">HeatmapChartState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1320,7 +852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Color<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args?</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorrange">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
@@ -1329,7 +861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Color<wbr>Scales</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorscale">List&lt;Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorscale">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
@@ -1338,7 +870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
@@ -1347,7 +879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disable<wbr>Sampling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
 {{% /md %}}</dd>
@@ -1356,7 +888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Bies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
 {{% /md %}}</dd>
@@ -1365,7 +897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hide<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
@@ -1374,7 +906,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
@@ -1383,7 +915,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Minimum<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
@@ -1392,7 +924,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
@@ -1401,7 +933,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Program<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
 {{% /md %}}</dd>
@@ -1410,7 +942,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Refresh<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
@@ -1419,7 +951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sort<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
 {{% /md %}}</dd>
@@ -1428,7 +960,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Unit<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd>
@@ -1437,7 +969,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the chart
 {{% /md %}}</dd>
@@ -1453,7 +985,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Color<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">*Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
@@ -1471,7 +1003,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
@@ -1480,7 +1012,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disable<wbr>Sampling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
 {{% /md %}}</dd>
@@ -1498,7 +1030,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hide<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
@@ -1507,7 +1039,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
@@ -1516,7 +1048,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Minimum<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
@@ -1525,7 +1057,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
@@ -1534,7 +1066,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Program<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
 {{% /md %}}</dd>
@@ -1543,7 +1075,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Refresh<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
@@ -1552,7 +1084,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sort<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
 {{% /md %}}</dd>
@@ -1561,7 +1093,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Unit<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd>
@@ -1570,7 +1102,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the chart
 {{% /md %}}</dd>
@@ -1586,7 +1118,7 @@ The following state arguments are supported:
             title="Optional">
         <span>color<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range?</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
@@ -1595,7 +1127,7 @@ The following state arguments are supported:
             title="Optional">
         <span>color<wbr>Scales</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorscale">Heatmap<wbr>Chart<wbr>Color<wbr>Scale[]?</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorscale">Heatmap<wbr>Chart<wbr>Color<wbr>Scale[]</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
@@ -1604,7 +1136,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
@@ -1613,7 +1145,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disable<wbr>Sampling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
 {{% /md %}}</dd>
@@ -1622,7 +1154,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Bies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
 {{% /md %}}</dd>
@@ -1631,7 +1163,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hide<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
@@ -1640,7 +1172,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
@@ -1649,7 +1181,7 @@ The following state arguments are supported:
             title="Optional">
         <span>minimum<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
@@ -1658,7 +1190,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
@@ -1667,7 +1199,7 @@ The following state arguments are supported:
             title="Optional">
         <span>program<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
 {{% /md %}}</dd>
@@ -1676,7 +1208,7 @@ The following state arguments are supported:
             title="Optional">
         <span>refresh<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
@@ -1685,7 +1217,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sort<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
 {{% /md %}}</dd>
@@ -1694,7 +1226,7 @@ The following state arguments are supported:
             title="Optional">
         <span>unit<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd>
@@ -1703,7 +1235,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the chart
 {{% /md %}}</dd>
@@ -1883,7 +1415,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum value within the coloring range.
 {{% /md %}}</dd>
@@ -1892,7 +1424,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The minimum value within the coloring range.
 {{% /md %}}</dd>
@@ -1917,7 +1449,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum value within the coloring range.
 {{% /md %}}</dd>
@@ -1926,7 +1458,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum value within the coloring range.
 {{% /md %}}</dd>
@@ -1951,7 +1483,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum value within the coloring range.
 {{% /md %}}</dd>
@@ -1960,7 +1492,7 @@ The following state arguments are supported:
             title="Optional">
         <span>min<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum value within the coloring range.
 {{% /md %}}</dd>
@@ -2034,7 +1566,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
 {{% /md %}}</dd>
@@ -2043,7 +1575,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gte</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
 {{% /md %}}</dd>
@@ -2052,7 +1584,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inclusive value for this range.
 {{% /md %}}</dd>
@@ -2061,7 +1593,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lte</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
 {{% /md %}}</dd>
@@ -2086,7 +1618,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
 {{% /md %}}</dd>
@@ -2095,7 +1627,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gte</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
 {{% /md %}}</dd>
@@ -2104,7 +1636,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inclusive value for this range.
 {{% /md %}}</dd>
@@ -2113,7 +1645,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lte</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
 {{% /md %}}</dd>
@@ -2138,7 +1670,7 @@ The following state arguments are supported:
             title="Optional">
         <span>gt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
 {{% /md %}}</dd>
@@ -2147,7 +1679,7 @@ The following state arguments are supported:
             title="Optional">
         <span>gte</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
 {{% /md %}}</dd>
@@ -2156,7 +1688,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inclusive value for this range.
 {{% /md %}}</dd>
@@ -2165,7 +1697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lte</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
 {{% /md %}}</dd>
