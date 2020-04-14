@@ -1573,7 +1573,7 @@ func NewMyComponent(ctx *pulumi.Context, name string, opts ...pulumi.ResourceOpt
 class MyComponent : Pulumi.ComponentResource
 {
     public MyComponent(string name, ComponentResourceOptions opts)
-        : base("pkg:index:MyComponent", name, opts);
+        : base("pkg:index:MyComponent", name, opts)
     {
         // initialization logic.
 
