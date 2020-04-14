@@ -10,4 +10,4 @@ stop_heartbeat() {
 }
 trap stop_heartbeat EXIT
 
-NODE_ENV=production hugo --minify -v
+NODE_ENV=production hugo --minify

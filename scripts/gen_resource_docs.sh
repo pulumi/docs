@@ -31,7 +31,7 @@ popd
 generate_docs() {
     provider=$1
 
-    # Checkout the latest branch of the provider repo, rather than
+    # Checkout the master branch of the provider repo, rather than
     # using the update_repos script. This is only temporary until
     # 2.0 is GA.
     # ./scripts/update_repos.sh "pulumi-${provider}"
