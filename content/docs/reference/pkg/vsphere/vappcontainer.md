@@ -97,7 +97,7 @@ const vm = new vsphere.VirtualMachine("vm", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappContainer">VappContainer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappContainerArgs">VappContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappContainer">VappContainer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappContainerArgs">VappContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -105,11 +105,11 @@ const vm = new vsphere.VirtualMachine("vm", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVappContainer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#VappContainerArgs">VappContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#VappContainer">VappContainer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVappContainer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#VappContainerArgs">VappContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#VappContainer">VappContainer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..VappContainer.html">VappContainer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.VappContainerArgs.html">VappContainerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.VappContainer.html">VappContainer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.VappContainerArgs.html">VappContainerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -201,11 +201,24 @@ const vm = new vsphere.VirtualMachine("vm", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
+of the parent resource pool. This can be the root resource pool for a cluster
+or standalone host, or a resource pool itself. When moving a vApp container
+from one parent resource pool to another, both must share a common root
+resource pool or the move will fail.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Cpu<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
@@ -216,7 +229,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Cpu<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
@@ -228,7 +241,7 @@ Default: `-1`
             title="Optional">
         <span>Cpu<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
@@ -238,7 +251,7 @@ available to the vApp container. Default: `0`
             title="Optional">
         <span>Cpu<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -251,7 +264,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Cpu<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -262,7 +275,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Custom<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
 {{% /md %}}</dd>
@@ -271,7 +284,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Memory<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
@@ -282,7 +295,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
@@ -294,7 +307,7 @@ Default: `-1`
             title="Optional">
         <span>Memory<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
@@ -304,7 +317,7 @@ available to the vApp container. Default: `0`
             title="Optional">
         <span>Memory<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -317,7 +330,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Memory<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -328,7 +341,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vApp container.
 {{% /md %}}</dd>
@@ -337,11 +350,28 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Parent<wbr>Folder<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the vApp container's parent folder.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
+[here][docs-applying-tags] for a reference on how to apply tags.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -358,26 +388,9 @@ resource pool or the move will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Cpu<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
@@ -388,7 +401,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Cpu<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
@@ -400,7 +413,7 @@ Default: `-1`
             title="Optional">
         <span>Cpu<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
@@ -410,7 +423,7 @@ available to the vApp container. Default: `0`
             title="Optional">
         <span>Cpu<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -423,7 +436,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Cpu<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -443,7 +456,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Memory<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
@@ -454,7 +467,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
@@ -466,7 +479,7 @@ Default: `-1`
             title="Optional">
         <span>Memory<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
@@ -476,7 +489,7 @@ available to the vApp container. Default: `0`
             title="Optional">
         <span>Memory<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -489,7 +502,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Memory<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -500,7 +513,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vApp container.
 {{% /md %}}</dd>
@@ -509,23 +522,10 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Parent<wbr>Folder<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the vApp container's parent folder.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
-of the parent resource pool. This can be the root resource pool for a cluster
-or standalone host, or a resource pool itself. When moving a vApp container
-from one parent resource pool to another, both must share a common root
-resource pool or the move will fail.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -545,148 +545,6 @@ resource pool or the move will fail.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>cpu<wbr>Expandable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Determines if the reservation on a vApp
-container can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: `true`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cpu<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The CPU utilization of a vApp container will not
-exceed this limit, even if there are available resources. Set to `-1` for
-unlimited.
-Default: `-1`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cpu<wbr>Reservation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
-available to the vApp container. Default: `0`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cpu<wbr>Share<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The CPU allocation level. The level is a
-simplified view of shares. Levels map to a pre-determined set of numeric
-values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
-`low`, `normal`, or `high` are specified values in `cpu_shares` will be
-ignored.  Default: `normal`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cpu<wbr>Shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of shares allocated for CPU. Used to
-determine resource allocation in case of resource contention. If this is set,
-`cpu_share_level` must be `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>custom<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>memory<wbr>Expandable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Determines if the reservation on a vApp
-container can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: `true`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>memory<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The CPU utilization of a vApp container will not
-exceed this limit, even if there are available resources. Set to `-1` for
-unlimited.
-Default: `-1`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>memory<wbr>Reservation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
-available to the vApp container. Default: `0`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>memory<wbr>Share<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The CPU allocation level. The level is a
-simplified view of shares. Levels map to a pre-determined set of numeric
-values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
-`low`, `normal`, or `high` are specified values in `memory_shares` will be
-ignored.  Default: `normal`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>memory<wbr>Shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of shares allocated for CPU. Used to
-determine resource allocation in case of resource contention. If this is set,
-`memory_share_level` must be `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the vApp container.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>parent<wbr>Folder<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
-the vApp container's parent folder.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>parent<wbr>Resource<wbr>Pool<wbr>Id</span>
@@ -702,9 +560,151 @@ resource pool or the move will fail.
 
     <dt class="property-optional"
             title="Optional">
+        <span>cpu<wbr>Expandable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines if the reservation on a vApp
+container can grow beyond the specified value if the parent resource pool has
+unreserved resources. Default: `true`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cpu<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The CPU utilization of a vApp container will not
+exceed this limit, even if there are available resources. Set to `-1` for
+unlimited.
+Default: `-1`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cpu<wbr>Reservation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
+available to the vApp container. Default: `0`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cpu<wbr>Share<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CPU allocation level. The level is a
+simplified view of shares. Levels map to a pre-determined set of numeric
+values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
+`low`, `normal`, or `high` are specified values in `cpu_shares` will be
+ignored.  Default: `normal`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cpu<wbr>Shares</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of shares allocated for CPU. Used to
+determine resource allocation in case of resource contention. If this is set,
+`cpu_share_level` must be `custom`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>custom<wbr>Attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A list of custom attributes to set on this resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>memory<wbr>Expandable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines if the reservation on a vApp
+container can grow beyond the specified value if the parent resource pool has
+unreserved resources. Default: `true`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>memory<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The CPU utilization of a vApp container will not
+exceed this limit, even if there are available resources. Set to `-1` for
+unlimited.
+Default: `-1`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>memory<wbr>Reservation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
+available to the vApp container. Default: `0`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>memory<wbr>Share<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CPU allocation level. The level is a
+simplified view of shares. Levels map to a pre-determined set of numeric
+values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
+`low`, `normal`, or `high` are specified values in `memory_shares` will be
+ignored.  Default: `normal`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>memory<wbr>Shares</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of shares allocated for CPU. Used to
+determine resource allocation in case of resource contention. If this is set,
+`memory_share_level` must be `custom`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the vApp container.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parent<wbr>Folder<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
+the vApp container's parent folder.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -716,6 +716,19 @@ resource pool or the move will fail.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>parent_<wbr>resource_<wbr>pool_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
+of the parent resource pool. This can be the root resource pool for a cluster
+or standalone host, or a resource pool itself. When moving a vApp container
+from one parent resource pool to another, both must share a common root
+resource pool or the move will fail.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -859,19 +872,6 @@ determine resource allocation in case of resource contention. If this is set,
 the vApp container's parent folder.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>parent_<wbr>resource_<wbr>pool_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
-of the parent resource pool. This can be the root resource pool for a cluster
-or standalone host, or a resource pool itself. When moving a vApp container
-from one parent resource pool to another, both must share a common root
-resource pool or the move will fail.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
@@ -886,704 +886,6 @@ resource pool or the move will fail.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## VappContainer Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Expandable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Determines if the reservation on a vApp
-container can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: `true`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The CPU utilization of a vApp container will not
-exceed this limit, even if there are available resources. Set to `-1` for
-unlimited.
-Default: `-1`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Reservation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
-available to the vApp container. Default: `0`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Share<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The CPU allocation level. The level is a
-simplified view of shares. Levels map to a pre-determined set of numeric
-values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
-`low`, `normal`, or `high` are specified values in `cpu_shares` will be
-ignored.  Default: `normal`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of shares allocated for CPU. Used to
-determine resource allocation in case of resource contention. If this is set,
-`cpu_share_level` must be `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory<wbr>Expandable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Determines if the reservation on a vApp
-container can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: `true`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The CPU utilization of a vApp container will not
-exceed this limit, even if there are available resources. Set to `-1` for
-unlimited.
-Default: `-1`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory<wbr>Reservation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
-available to the vApp container. Default: `0`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory<wbr>Share<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The CPU allocation level. The level is a
-simplified view of shares. Levels map to a pre-determined set of numeric
-values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
-`low`, `normal`, or `high` are specified values in `memory_shares` will be
-ignored.  Default: `normal`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory<wbr>Shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of shares allocated for CPU. Used to
-determine resource allocation in case of resource contention. If this is set,
-`memory_share_level` must be `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the vApp container.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parent<wbr>Folder<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
-the vApp container's parent folder.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
-of the parent resource pool. This can be the root resource pool for a cluster
-or standalone host, or a resource pool itself. When moving a vApp container
-from one parent resource pool to another, both must share a common root
-resource pool or the move will fail.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Expandable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Determines if the reservation on a vApp
-container can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: `true`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The CPU utilization of a vApp container will not
-exceed this limit, even if there are available resources. Set to `-1` for
-unlimited.
-Default: `-1`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Reservation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
-available to the vApp container. Default: `0`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Share<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The CPU allocation level. The level is a
-simplified view of shares. Levels map to a pre-determined set of numeric
-values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
-`low`, `normal`, or `high` are specified values in `cpu_shares` will be
-ignored.  Default: `normal`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of shares allocated for CPU. Used to
-determine resource allocation in case of resource contention. If this is set,
-`cpu_share_level` must be `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory<wbr>Expandable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Determines if the reservation on a vApp
-container can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: `true`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The CPU utilization of a vApp container will not
-exceed this limit, even if there are available resources. Set to `-1` for
-unlimited.
-Default: `-1`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory<wbr>Reservation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
-available to the vApp container. Default: `0`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory<wbr>Share<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The CPU allocation level. The level is a
-simplified view of shares. Levels map to a pre-determined set of numeric
-values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
-`low`, `normal`, or `high` are specified values in `memory_shares` will be
-ignored.  Default: `normal`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory<wbr>Shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of shares allocated for CPU. Used to
-determine resource allocation in case of resource contention. If this is set,
-`memory_share_level` must be `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the vApp container.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parent<wbr>Folder<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
-the vApp container's parent folder.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
-of the parent resource pool. This can be the root resource pool for a cluster
-or standalone host, or a resource pool itself. When moving a vApp container
-from one parent resource pool to another, both must share a common root
-resource pool or the move will fail.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>cpu<wbr>Expandable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Determines if the reservation on a vApp
-container can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: `true`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The CPU utilization of a vApp container will not
-exceed this limit, even if there are available resources. Set to `-1` for
-unlimited.
-Default: `-1`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu<wbr>Reservation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
-available to the vApp container. Default: `0`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu<wbr>Share<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The CPU allocation level. The level is a
-simplified view of shares. Levels map to a pre-determined set of numeric
-values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
-`low`, `normal`, or `high` are specified values in `cpu_shares` will be
-ignored.  Default: `normal`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu<wbr>Shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The number of shares allocated for CPU. Used to
-determine resource allocation in case of resource contention. If this is set,
-`cpu_share_level` must be `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>memory<wbr>Expandable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Determines if the reservation on a vApp
-container can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: `true`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>memory<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The CPU utilization of a vApp container will not
-exceed this limit, even if there are available resources. Set to `-1` for
-unlimited.
-Default: `-1`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>memory<wbr>Reservation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
-available to the vApp container. Default: `0`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>memory<wbr>Share<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The CPU allocation level. The level is a
-simplified view of shares. Levels map to a pre-determined set of numeric
-values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
-`low`, `normal`, or `high` are specified values in `memory_shares` will be
-ignored.  Default: `normal`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>memory<wbr>Shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The number of shares allocated for CPU. Used to
-determine resource allocation in case of resource contention. If this is set,
-`memory_share_level` must be `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the vApp container.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parent<wbr>Folder<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
-the vApp container's parent folder.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parent<wbr>Resource<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
-of the parent resource pool. This can be the root resource pool for a cluster
-or standalone host, or a resource pool itself. When moving a vApp container
-from one parent resource pool to another, both must share a common root
-resource pool or the move will fail.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>cpu_<wbr>expandable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Determines if the reservation on a vApp
-container can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: `true`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu_<wbr>limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The CPU utilization of a vApp container will not
-exceed this limit, even if there are available resources. Set to `-1` for
-unlimited.
-Default: `-1`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu_<wbr>reservation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
-available to the vApp container. Default: `0`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu_<wbr>share_<wbr>level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The CPU allocation level. The level is a
-simplified view of shares. Levels map to a pre-determined set of numeric
-values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
-`low`, `normal`, or `high` are specified values in `cpu_shares` will be
-ignored.  Default: `normal`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu_<wbr>shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of shares allocated for CPU. Used to
-determine resource allocation in case of resource contention. If this is set,
-`cpu_share_level` must be `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>memory_<wbr>expandable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Determines if the reservation on a vApp
-container can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: `true`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>memory_<wbr>limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The CPU utilization of a vApp container will not
-exceed this limit, even if there are available resources. Set to `-1` for
-unlimited.
-Default: `-1`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>memory_<wbr>reservation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
-available to the vApp container. Default: `0`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>memory_<wbr>share_<wbr>level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The CPU allocation level. The level is a
-simplified view of shares. Levels map to a pre-determined set of numeric
-values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
-`low`, `normal`, or `high` are specified values in `memory_shares` will be
-ignored.  Default: `normal`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>memory_<wbr>shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of shares allocated for CPU. Used to
-determine resource allocation in case of resource contention. If this is set,
-`memory_share_level` must be `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the vApp container.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parent_<wbr>folder_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
-the vApp container's parent folder.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parent_<wbr>resource_<wbr>pool_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The [managed object ID][docs-about-morefs]
-of the parent resource pool. This can be the root resource pool for a cluster
-or standalone host, or a resource pool itself. When moving a vApp container
-from one parent resource pool to another, both must share a common root
-resource pool or the move will fail.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1611,7 +913,7 @@ Get an existing VappContainer resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..VappContainer.html">VappContainer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..VappContainerState.html">VappContainerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.VappContainer.html">VappContainer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..VappContainerState.html">VappContainerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1721,7 +1023,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cpu<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
@@ -1732,7 +1034,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Cpu<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
@@ -1744,7 +1046,7 @@ Default: `-1`
             title="Optional">
         <span>Cpu<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
@@ -1754,7 +1056,7 @@ available to the vApp container. Default: `0`
             title="Optional">
         <span>Cpu<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1767,7 +1069,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Cpu<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -1778,7 +1080,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Custom<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
 {{% /md %}}</dd>
@@ -1787,7 +1089,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Memory<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
@@ -1798,7 +1100,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
@@ -1810,7 +1112,7 @@ Default: `-1`
             title="Optional">
         <span>Memory<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
@@ -1820,7 +1122,7 @@ available to the vApp container. Default: `0`
             title="Optional">
         <span>Memory<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1833,7 +1135,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Memory<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -1844,7 +1146,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vApp container.
 {{% /md %}}</dd>
@@ -1853,7 +1155,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Parent<wbr>Folder<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the vApp container's parent folder.
@@ -1863,7 +1165,7 @@ the vApp container's parent folder.
             title="Optional">
         <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs]
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -1876,7 +1178,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -1893,7 +1195,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>Cpu<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
@@ -1904,7 +1206,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Cpu<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
@@ -1916,7 +1218,7 @@ Default: `-1`
             title="Optional">
         <span>Cpu<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
@@ -1926,7 +1228,7 @@ available to the vApp container. Default: `0`
             title="Optional">
         <span>Cpu<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1939,7 +1241,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Cpu<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -1959,7 +1261,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Memory<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
@@ -1970,7 +1272,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
@@ -1982,7 +1284,7 @@ Default: `-1`
             title="Optional">
         <span>Memory<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
@@ -1992,7 +1294,7 @@ available to the vApp container. Default: `0`
             title="Optional">
         <span>Memory<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -2005,7 +1307,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Memory<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -2016,7 +1318,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vApp container.
 {{% /md %}}</dd>
@@ -2025,7 +1327,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Parent<wbr>Folder<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the vApp container's parent folder.
@@ -2035,7 +1337,7 @@ the vApp container's parent folder.
             title="Optional">
         <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs]
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -2065,7 +1367,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>cpu<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
@@ -2076,7 +1378,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>cpu<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
@@ -2088,7 +1390,7 @@ Default: `-1`
             title="Optional">
         <span>cpu<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
@@ -2098,7 +1400,7 @@ available to the vApp container. Default: `0`
             title="Optional">
         <span>cpu<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -2111,7 +1413,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>cpu<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -2122,7 +1424,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>custom<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
 {{% /md %}}</dd>
@@ -2131,7 +1433,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>memory<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
@@ -2142,7 +1444,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to `-1` for
@@ -2154,7 +1456,7 @@ Default: `-1`
             title="Optional">
         <span>memory<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
@@ -2164,7 +1466,7 @@ available to the vApp container. Default: `0`
             title="Optional">
         <span>memory<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -2177,7 +1479,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>memory<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -2188,7 +1490,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vApp container.
 {{% /md %}}</dd>
@@ -2197,7 +1499,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>parent<wbr>Folder<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the vApp container's parent folder.
@@ -2207,7 +1509,7 @@ the vApp container's parent folder.
             title="Optional">
         <span>parent<wbr>Resource<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs]
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -2220,7 +1522,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.

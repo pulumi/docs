@@ -55,7 +55,7 @@ const demo1 = new vsphere.VirtualMachineSnapshot("demo1", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshotArgs">VirtualMachineSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineSnapshotArgs">VirtualMachineSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -63,11 +63,11 @@ const demo1 = new vsphere.VirtualMachineSnapshot("demo1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVirtualMachineSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#VirtualMachineSnapshotArgs">VirtualMachineSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVirtualMachineSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#VirtualMachineSnapshotArgs">VirtualMachineSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#VirtualMachineSnapshot">VirtualMachineSnapshot</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..VirtualMachineSnapshot.html">VirtualMachineSnapshot</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.VirtualMachineSnapshotArgs.html">VirtualMachineSnapshotArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.VirtualMachineSnapshot.html">VirtualMachineSnapshot</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.VirtualMachineSnapshotArgs.html">VirtualMachineSnapshotArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -159,17 +159,6 @@ const demo1 = new vsphere.VirtualMachineSnapshot("demo1", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Consolidate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the delta disks involved in this
-snapshot will be consolidated into the parent when this resource is
-destroyed.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Description</span>
@@ -200,16 +189,6 @@ on when the snapshot is taken, VMware Tools is used to quiesce the file
 system in the virtual machine.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Remove<wbr>Children</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the entire snapshot subtree
-is removed when this resource is destroyed.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Snapshot<wbr>Name</span>
@@ -226,6 +205,27 @@ is removed when this resource is destroyed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual machine UUID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Consolidate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the delta disks involved in this
+snapshot will be consolidated into the parent when this resource is
+destroyed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Remove<wbr>Children</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the entire snapshot subtree
+is removed when this resource is destroyed.
 {{% /md %}}</dd>
 
 </dl>
@@ -235,17 +235,6 @@ is removed when this resource is destroyed.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Consolidate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the delta disks involved in this
-snapshot will be consolidated into the parent when this resource is
-destroyed.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Description</span>
@@ -276,16 +265,6 @@ on when the snapshot is taken, VMware Tools is used to quiesce the file
 system in the virtual machine.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Remove<wbr>Children</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the entire snapshot subtree
-is removed when this resource is destroyed.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Snapshot<wbr>Name</span>
@@ -304,23 +283,33 @@ is removed when this resource is destroyed.
     <dd>{{% md %}}The virtual machine UUID.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Consolidate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the delta disks involved in this
+snapshot will be consolidated into the parent when this resource is
+destroyed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Remove<wbr>Children</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the entire snapshot subtree
+is removed when this resource is destroyed.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>consolidate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the delta disks involved in this
-snapshot will be consolidated into the parent when this resource is
-destroyed.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -350,16 +339,6 @@ virtual machine is included in the snapshot.
     <dd>{{% md %}}If set to `true`, and the virtual machine is powered
 on when the snapshot is taken, VMware Tools is used to quiesce the file
 system in the virtual machine.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>remove<wbr>Children</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the entire snapshot subtree
-is removed when this resource is destroyed.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -380,320 +359,25 @@ is removed when this resource is destroyed.
     <dd>{{% md %}}The virtual machine UUID.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>consolidate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the delta disks involved in this
 snapshot will be consolidated into the parent when this resource is
 destroyed.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description for the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>memory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, a dump of the internal state of the
-virtual machine is included in the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>quiesce</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, and the virtual machine is powered
-on when the snapshot is taken, VMware Tools is used to quiesce the file
-system in the virtual machine.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>remove_<wbr>children</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the entire snapshot subtree
-is removed when this resource is destroyed.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>snapshot_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>virtual_<wbr>machine_<wbr>uuid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The virtual machine UUID.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## VirtualMachineSnapshot Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Consolidate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the delta disks involved in this
-snapshot will be consolidated into the parent when this resource is
-destroyed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description for the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, a dump of the internal state of the
-virtual machine is included in the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Quiesce</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, and the virtual machine is powered
-on when the snapshot is taken, VMware Tools is used to quiesce the file
-system in the virtual machine.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Remove<wbr>Children</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the entire snapshot subtree
-is removed when this resource is destroyed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshot<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtual<wbr>Machine<wbr>Uuid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The virtual machine UUID.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Consolidate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the delta disks involved in this
-snapshot will be consolidated into the parent when this resource is
-destroyed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description for the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, a dump of the internal state of the
-virtual machine is included in the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Quiesce</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, and the virtual machine is powered
-on when the snapshot is taken, VMware Tools is used to quiesce the file
-system in the virtual machine.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Remove<wbr>Children</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the entire snapshot subtree
-is removed when this resource is destroyed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshot<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtual<wbr>Machine<wbr>Uuid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The virtual machine UUID.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>consolidate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the delta disks involved in this
-snapshot will be consolidated into the parent when this resource is
-destroyed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description for the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>memory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, a dump of the internal state of the
-virtual machine is included in the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>quiesce</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, and the virtual machine is powered
-on when the snapshot is taken, VMware Tools is used to quiesce the file
-system in the virtual machine.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>remove<wbr>Children</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the entire snapshot subtree
 is removed when this resource is destroyed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snapshot<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>virtual<wbr>Machine<wbr>Uuid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The virtual machine UUID.
 {{% /md %}}</dd>
 
 </dl>
@@ -703,19 +387,8 @@ is removed when this resource is destroyed.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>consolidate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the delta disks involved in this
-snapshot will be consolidated into the parent when this resource is
-destroyed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -723,8 +396,8 @@ destroyed.
     <dd>{{% md %}}A description for the snapshot.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>memory</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -733,8 +406,8 @@ destroyed.
 virtual machine is included in the snapshot.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>quiesce</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -744,8 +417,37 @@ on when the snapshot is taken, VMware Tools is used to quiesce the file
 system in the virtual machine.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
+        <span>snapshot_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the snapshot.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>virtual_<wbr>machine_<wbr>uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The virtual machine UUID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>consolidate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the delta disks involved in this
+snapshot will be consolidated into the parent when this resource is
+destroyed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>remove_<wbr>children</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -754,26 +456,10 @@ system in the virtual machine.
 is removed when this resource is destroyed.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>snapshot_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>virtual_<wbr>machine_<wbr>uuid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The virtual machine UUID.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -801,7 +487,7 @@ Get an existing VirtualMachineSnapshot resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..VirtualMachineSnapshot.html">VirtualMachineSnapshot</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..VirtualMachineSnapshotState.html">VirtualMachineSnapshotState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.VirtualMachineSnapshot.html">VirtualMachineSnapshot</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..VirtualMachineSnapshotState.html">VirtualMachineSnapshotState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -911,7 +597,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consolidate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the delta disks involved in this
 snapshot will be consolidated into the parent when this resource is
@@ -922,7 +608,7 @@ destroyed.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the snapshot.
 {{% /md %}}</dd>
@@ -931,7 +617,7 @@ destroyed.
             title="Optional">
         <span>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, a dump of the internal state of the
 virtual machine is included in the snapshot.
@@ -941,7 +627,7 @@ virtual machine is included in the snapshot.
             title="Optional">
         <span>Quiesce</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, and the virtual machine is powered
 on when the snapshot is taken, VMware Tools is used to quiesce the file
@@ -952,7 +638,7 @@ system in the virtual machine.
             title="Optional">
         <span>Remove<wbr>Children</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the entire snapshot subtree
 is removed when this resource is destroyed.
@@ -962,7 +648,7 @@ is removed when this resource is destroyed.
             title="Optional">
         <span>Snapshot<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the snapshot.
 {{% /md %}}</dd>
@@ -971,7 +657,7 @@ is removed when this resource is destroyed.
             title="Optional">
         <span>Virtual<wbr>Machine<wbr>Uuid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual machine UUID.
 {{% /md %}}</dd>
@@ -987,7 +673,7 @@ is removed when this resource is destroyed.
             title="Optional">
         <span>Consolidate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the delta disks involved in this
 snapshot will be consolidated into the parent when this resource is
@@ -998,7 +684,7 @@ destroyed.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the snapshot.
 {{% /md %}}</dd>
@@ -1007,7 +693,7 @@ destroyed.
             title="Optional">
         <span>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, a dump of the internal state of the
 virtual machine is included in the snapshot.
@@ -1017,7 +703,7 @@ virtual machine is included in the snapshot.
             title="Optional">
         <span>Quiesce</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, and the virtual machine is powered
 on when the snapshot is taken, VMware Tools is used to quiesce the file
@@ -1028,7 +714,7 @@ system in the virtual machine.
             title="Optional">
         <span>Remove<wbr>Children</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the entire snapshot subtree
 is removed when this resource is destroyed.
@@ -1038,7 +724,7 @@ is removed when this resource is destroyed.
             title="Optional">
         <span>Snapshot<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the snapshot.
 {{% /md %}}</dd>
@@ -1047,7 +733,7 @@ is removed when this resource is destroyed.
             title="Optional">
         <span>Virtual<wbr>Machine<wbr>Uuid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual machine UUID.
 {{% /md %}}</dd>
@@ -1063,7 +749,7 @@ is removed when this resource is destroyed.
             title="Optional">
         <span>consolidate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the delta disks involved in this
 snapshot will be consolidated into the parent when this resource is
@@ -1074,7 +760,7 @@ destroyed.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the snapshot.
 {{% /md %}}</dd>
@@ -1083,7 +769,7 @@ destroyed.
             title="Optional">
         <span>memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, a dump of the internal state of the
 virtual machine is included in the snapshot.
@@ -1093,7 +779,7 @@ virtual machine is included in the snapshot.
             title="Optional">
         <span>quiesce</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, and the virtual machine is powered
 on when the snapshot is taken, VMware Tools is used to quiesce the file
@@ -1104,7 +790,7 @@ system in the virtual machine.
             title="Optional">
         <span>remove<wbr>Children</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the entire snapshot subtree
 is removed when this resource is destroyed.
@@ -1114,7 +800,7 @@ is removed when this resource is destroyed.
             title="Optional">
         <span>snapshot<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the snapshot.
 {{% /md %}}</dd>
@@ -1123,7 +809,7 @@ is removed when this resource is destroyed.
             title="Optional">
         <span>virtual<wbr>Machine<wbr>Uuid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual machine UUID.
 {{% /md %}}</dd>

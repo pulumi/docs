@@ -55,13 +55,13 @@ const available = host.apply(host => vsphere.getVmfsDisks({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVmfsDisks<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#GetVmfsDisksArgs">GetVmfsDisksArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#LookupVmfsDisksResult">LookupVmfsDisksResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVmfsDisks<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#GetVmfsDisksArgs">GetVmfsDisksArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#LookupVmfsDisksResult">LookupVmfsDisksResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVmfsDisks </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.GetVmfsDisksResult.html">GetVmfsDisksResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.GetVmfsDisksArgs.html">GetVmfsDisksArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.GetVmfsDisksResult.html">GetVmfsDisksResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.GetVmfsDisksArgs.html">GetVmfsDisksArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -73,16 +73,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A regular expression to filter the disks against. Only
-disks with canonical names that match will be included.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -96,9 +86,19 @@ the host to look for disks on.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression to filter the disks against. Only
+disks with canonical names that match will be included.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Rescan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to rescan storage adapters before
 searching for disks. This may lengthen the time it takes to perform the
@@ -112,16 +112,6 @@ search. Default: `false`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A regular expression to filter the disks against. Only
-disks with canonical names that match will be included.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Host<wbr>System<wbr>Id</span>
@@ -134,9 +124,19 @@ the host to look for disks on.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression to filter the disks against. Only
+disks with canonical names that match will be included.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Rescan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to rescan storage adapters before
 searching for disks. This may lengthen the time it takes to perform the
@@ -150,16 +150,6 @@ search. Default: `false`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A regular expression to filter the disks against. Only
-disks with canonical names that match will be included.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>host<wbr>System<wbr>Id</span>
@@ -172,9 +162,19 @@ the host to look for disks on.
 
     <dt class="property-optional"
             title="Optional">
+        <span>filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression to filter the disks against. Only
+disks with canonical names that match will be included.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>rescan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to rescan storage adapters before
 searching for disks. This may lengthen the time it takes to perform the
@@ -188,16 +188,6 @@ search. Default: `false`.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A regular expression to filter the disks against. Only
-disks with canonical names that match will be included.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>host_<wbr>system_<wbr>id</span>
@@ -206,6 +196,16 @@ disks with canonical names that match will be included.
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the host to look for disks on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A regular expression to filter the disks against. Only
+disks with canonical names that match will be included.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -243,19 +243,11 @@ The following output properties are available:
             title="">
         <span>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A lexicographically sorted list of devices discovered by the
 operation, matching the supplied `filter`, if provided.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -276,9 +268,17 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
+        <span>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Rescan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -301,14 +301,6 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -326,9 +318,17 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
+        <span>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Rescan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -351,14 +351,6 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -376,9 +368,17 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
+        <span>filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>rescan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -401,14 +401,6 @@ operation, matching the supplied `filter`, if provided.
 
     <dt class="property-"
             title="">
-        <span>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>host_<wbr>system_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -423,6 +415,14 @@ operation, matching the supplied `filter`, if provided.
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
