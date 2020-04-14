@@ -1069,11 +1069,11 @@ policy block supports fields documented below.</p></li>
 </dl>
 <p>The <strong>policies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">createWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">usageWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the specified ROLE have CREATE privileges to the specified SCHEMA.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the specified ROLE have CREATE privileges to the specified SCHEMA and the ability to GRANT the CREATE privilege to other ROLEs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ROLE who is receiving the policy.  If this value is empty or not specified it implies the policy is referring to the <cite>``PUBLIC`</cite> role &lt;<a class="reference external" href="https://www.postgresql.org/docs/current/static/sql-grant.html">https://www.postgresql.org/docs/current/static/sql-grant.html</a>&gt;`_.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the specified ROLE have USAGE privileges to the specified SCHEMA.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usageWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the specified ROLE have USAGE privileges to the specified SCHEMA and the ability to GRANT the USAGE privilege to other ROLEs.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_postgresql.Schema.database">
@@ -1112,11 +1112,11 @@ database instance where it is configured.</p>
 <dd><p>Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">createWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">usageWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the specified ROLE have CREATE privileges to the specified SCHEMA.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the specified ROLE have CREATE privileges to the specified SCHEMA and the ability to GRANT the CREATE privilege to other ROLEs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ROLE who is receiving the policy.  If this value is empty or not specified it implies the policy is referring to the <cite>``PUBLIC`</cite> role &lt;<a class="reference external" href="https://www.postgresql.org/docs/current/static/sql-grant.html">https://www.postgresql.org/docs/current/static/sql-grant.html</a>&gt;`_.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the specified ROLE have USAGE privileges to the specified SCHEMA.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usageWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the specified ROLE have USAGE privileges to the specified SCHEMA and the ability to GRANT the USAGE privilege to other ROLEs.</p></li>
 </ul>
 </dd></dl>
 
@@ -1144,11 +1144,11 @@ policy block supports fields documented below.</p></li>
 </dl>
 <p>The <strong>policies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">createWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">usageWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the specified ROLE have CREATE privileges to the specified SCHEMA.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the specified ROLE have CREATE privileges to the specified SCHEMA and the ability to GRANT the CREATE privilege to other ROLEs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ROLE who is receiving the policy.  If this value is empty or not specified it implies the policy is referring to the <cite>``PUBLIC`</cite> role &lt;<a class="reference external" href="https://www.postgresql.org/docs/current/static/sql-grant.html">https://www.postgresql.org/docs/current/static/sql-grant.html</a>&gt;`_.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the specified ROLE have USAGE privileges to the specified SCHEMA.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usageWithGrant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the specified ROLE have USAGE privileges to the specified SCHEMA and the ability to GRANT the USAGE privilege to other ROLEs.</p></li>
 </ul>
 </dd></dl>
 
