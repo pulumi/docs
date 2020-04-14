@@ -502,6 +502,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_vault.azure.AwaitableGetAccessCredentialsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">AwaitableGetAccessCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">backend=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">max_cred_validation_seconds=None</em>, <em class="sig-param">num_seconds_between_tests=None</em>, <em class="sig-param">num_sequential_successes=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">validate_creds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AwaitableGetAccessCredentialsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_vault.azure.Backend">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">Backend</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">subscription_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.Backend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Backend resource with the given unique name, props, and options.
@@ -776,6 +781,73 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_vault.azure.GetAccessCredentialsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">GetAccessCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">backend=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lease_duration=None</em>, <em class="sig-param">lease_id=None</em>, <em class="sig-param">lease_renewable=None</em>, <em class="sig-param">lease_start_time=None</em>, <em class="sig-param">max_cred_validation_seconds=None</em>, <em class="sig-param">num_seconds_between_tests=None</em>, <em class="sig-param">num_sequential_successes=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">validate_creds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.GetAccessCredentialsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAccessCredentials.</p>
+<dl class="attribute">
+<dt id="pulumi_vault.azure.GetAccessCredentialsResult.client_id">
+<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.GetAccessCredentialsResult.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The client id for credentials to query the Azure APIs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.azure.GetAccessCredentialsResult.client_secret">
+<code class="sig-name descname">client_secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.GetAccessCredentialsResult.client_secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>The client secret for credentials to query the Azure APIs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.azure.GetAccessCredentialsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.GetAccessCredentialsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.azure.GetAccessCredentialsResult.lease_duration">
+<code class="sig-name descname">lease_duration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.GetAccessCredentialsResult.lease_duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>The duration of the secret lease, in seconds relative
+to the time the data was requested. Once this time has passed any plan
+generated with this data may fail to apply.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.azure.GetAccessCredentialsResult.lease_id">
+<code class="sig-name descname">lease_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.GetAccessCredentialsResult.lease_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lease identifier assigned by Vault.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_vault.azure.get_access_credentials">
+<code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">get_access_credentials</code><span class="sig-paren">(</span><em class="sig-param">backend=None</em>, <em class="sig-param">max_cred_validation_seconds=None</em>, <em class="sig-param">num_seconds_between_tests=None</em>, <em class="sig-param">num_sequential_successes=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">validate_creds=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.get_access_credentials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>backend</strong> (<em>str</em>) – The path to the Azure secret backend to
+read credentials from, with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
+<li><p><strong>max_cred_validation_seconds</strong> (<em>float</em>) – If ‘validate_creds’ is true, 
+the number of seconds after which to give up validating credentials. Defaults
+to 1,200 (20 minutes).</p></li>
+<li><p><strong>num_seconds_between_tests</strong> (<em>float</em>) – If ‘validate_creds’ is true, 
+the number of seconds to wait between each test of generated credentials.
+Defaults to 7.</p></li>
+<li><p><strong>num_sequential_successes</strong> (<em>float</em>) – If ‘validate_creds’ is true, 
+the number of sequential successes required to validate generated
+credentials. Defaults to 8.</p></li>
+<li><p><strong>role</strong> (<em>str</em>) – The name of the Azure secret backend role to read
+credentials from, with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
+<li><p><strong>validate_creds</strong> (<em>bool</em>) – Whether generated credentials should be 
+validated before being returned. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, which returns
+credentials without checking whether they have fully propagated throughout
+Azure Active Directory. Designating <code class="docutils literal notranslate"><span class="pre">true</span></code> activates testing.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
