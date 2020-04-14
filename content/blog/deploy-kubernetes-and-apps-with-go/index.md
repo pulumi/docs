@@ -248,7 +248,8 @@ if err != nil {
 	return err
 }
 
-ctx.Export("kubeconfig", generateKubeconfig(cluster.Endpoint, cluster.Name, cluster.MasterAuth))
+ctx.Export("kubeconfig", generateKubeconfig(
+    cluster.Endpoint, cluster.Name, cluster.MasterAuth))
 
 k8sProvider, err := providers.NewProvider(
     ctx, "k8sprovider", &providers.ProviderArgs{
