@@ -181,7 +181,7 @@ The complete implementation of the ServiceDeployment component is detailed in th
 
 ## Building Docker Images for Kubernetes with Go
 
-In the previous examples, we specified the Docker image to deploy as part of our Kubernetes Deployments by referring to an image in a registry. If we wanted to push our custom Docker image that uses our application's source code, and deploy that in our Kubernetes Pod or Deployment, we can do it with the [@pulumi/docker]({{< relref "/docs/reference/pkg/nodejs/pulumi/docker" >}}) package. For example, we can deploy our custom Nginx Docker image with the following:
+In the previous examples, we specified the Docker image to deploy as part of our Kubernetes Deployments by referring to an image in a registry. If we wanted to push our custom Docker image that uses our application's source code, and deploy that in our Kubernetes Pod or Deployment, we can do it with the [pulumi-docker](https://github.com/pulumi/pulumi-docker/tree/master/sdk/go/docker) package. For example, we can deploy our custom Nginx Docker image with the following:
 
 ```go
 image, err := docker.NewImage(ctx, "node-app", &docker.ImageArgs{
