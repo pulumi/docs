@@ -35,7 +35,8 @@ pod, err := corev1.NewPod(ctx, "pod", &corev1.PodArgs{
 			corev1.ContainerArgs{
 				Name:  pulumi.String("nginx"),
 				Image: pulumi.String("nginx"),
-			}},
+			}
+		},
 	},
 })
 if err != nil {
