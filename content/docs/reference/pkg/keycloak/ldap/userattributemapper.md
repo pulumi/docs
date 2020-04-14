@@ -68,7 +68,7 @@ The following arguments are supported:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/ldap/#UserAttributeMapper">UserAttributeMapper</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/ldap/#UserAttributeMapperArgs">UserAttributeMapperArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/ldap/#UserAttributeMapper">UserAttributeMapper</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/ldap/#UserAttributeMapperArgs">UserAttributeMapperArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -76,7 +76,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserAttributeMapper<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/ldap?tab=doc#UserAttributeMapperArgs">UserAttributeMapperArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/ldap?tab=doc#UserAttributeMapper">UserAttributeMapper</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserAttributeMapper<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/ldap?tab=doc#UserAttributeMapperArgs">UserAttributeMapperArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/ldap?tab=doc#UserAttributeMapper">UserAttributeMapper</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -172,24 +172,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Always<wbr>Read<wbr>Value<wbr>From<wbr>Ldap</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, the value fetched from LDAP will override the value stored in Keycloak.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Mandatory<wbr>In<wbr>Ldap</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, this attribute must exist in LDAP.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Ldap<wbr>Attribute</span>
@@ -208,24 +190,6 @@ The following arguments are supported:
     <dd>{{% md %}}The ldap user federation provider to attach this mapper to.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Display name of the mapper when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Read<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Realm<wbr>Id</span>
@@ -242,6 +206,42 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the UserModel property or attribute you want to map the LDAP attribute into.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Always<wbr>Read<wbr>Value<wbr>From<wbr>Ldap</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, the value fetched from LDAP will override the value stored in Keycloak.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Mandatory<wbr>In<wbr>Ldap</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, this attribute must exist in LDAP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the mapper when displayed in the console.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Read<wbr>Only</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
 {{% /md %}}</dd>
 
 </dl>
@@ -251,24 +251,6 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Always<wbr>Read<wbr>Value<wbr>From<wbr>Ldap</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, the value fetched from LDAP will override the value stored in Keycloak.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Mandatory<wbr>In<wbr>Ldap</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, this attribute must exist in LDAP.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Ldap<wbr>Attribute</span>
@@ -285,24 +267,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ldap user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Display name of the mapper when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Read<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -323,30 +287,48 @@ The following arguments are supported:
     <dd>{{% md %}}Name of the UserModel property or attribute you want to map the LDAP attribute into.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>always<wbr>Read<wbr>Value<wbr>From<wbr>Ldap</span>
+        <span>Always<wbr>Read<wbr>Value<wbr>From<wbr>Ldap</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the value fetched from LDAP will override the value stored in Keycloak.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Mandatory<wbr>In<wbr>Ldap</span>
+        <span>Is<wbr>Mandatory<wbr>In<wbr>Ldap</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, this attribute must exist in LDAP.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the mapper when displayed in the console.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Read<wbr>Only</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -364,24 +346,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ldap user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Display name of the mapper when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>read<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -402,300 +366,26 @@ The following arguments are supported:
     <dd>{{% md %}}Name of the UserModel property or attribute you want to map the LDAP attribute into.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>always_<wbr>read_<wbr>value_<wbr>from_<wbr>ldap</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true, the value fetched from LDAP will override the value stored in Keycloak.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>is_<wbr>mandatory_<wbr>in_<wbr>ldap</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true, this attribute must exist in LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>ldap_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the mapped attribute on LDAP object.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>ldap_<wbr>user_<wbr>federation_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ldap user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Display name of the mapper when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>read_<wbr>only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>realm_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The realm in which the ldap user federation provider exists.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user_<wbr>model_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the UserModel property or attribute you want to map the LDAP attribute into.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## UserAttributeMapper Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Always<wbr>Read<wbr>Value<wbr>From<wbr>Ldap</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, the value fetched from LDAP will override the value stored in Keycloak.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Is<wbr>Mandatory<wbr>In<wbr>Ldap</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, this attribute must exist in LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ldap<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the mapped attribute on LDAP object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ldap<wbr>User<wbr>Federation<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ldap user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Display name of the mapper when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Read<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Realm<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The realm in which the ldap user federation provider exists.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Model<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the UserModel property or attribute you want to map the LDAP attribute into.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Always<wbr>Read<wbr>Value<wbr>From<wbr>Ldap</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, the value fetched from LDAP will override the value stored in Keycloak.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Is<wbr>Mandatory<wbr>In<wbr>Ldap</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, this attribute must exist in LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ldap<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the mapped attribute on LDAP object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ldap<wbr>User<wbr>Federation<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ldap user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Display name of the mapper when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Read<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Realm<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The realm in which the ldap user federation provider exists.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Model<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the UserModel property or attribute you want to map the LDAP attribute into.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
         <span>always<wbr>Read<wbr>Value<wbr>From<wbr>Ldap</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, the value fetched from LDAP will override the value stored in Keycloak.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>is<wbr>Mandatory<wbr>In<wbr>Ldap</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, this attribute must exist in LDAP.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>ldap<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the mapped attribute on LDAP object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ldap<wbr>User<wbr>Federation<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ldap user federation provider to attach this mapper to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -703,31 +393,13 @@ The following output properties are available:
     <dd>{{% md %}}Display name of the mapper when displayed in the console.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>realm<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The realm in which the ldap user federation provider exists.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Model<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the UserModel property or attribute you want to map the LDAP attribute into.
 {{% /md %}}</dd>
 
 </dl>
@@ -737,26 +409,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>always_<wbr>read_<wbr>value_<wbr>from_<wbr>ldap</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true, the value fetched from LDAP will override the value stored in Keycloak.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>is_<wbr>mandatory_<wbr>in_<wbr>ldap</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true, this attribute must exist in LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>ldap_<wbr>attribute</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -764,8 +418,8 @@ The following output properties are available:
     <dd>{{% md %}}Name of the mapped attribute on LDAP object.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>ldap_<wbr>user_<wbr>federation_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -773,26 +427,8 @@ The following output properties are available:
     <dd>{{% md %}}The ldap user federation provider to attach this mapper to.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Display name of the mapper when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>read_<wbr>only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>realm_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -800,8 +436,8 @@ The following output properties are available:
     <dd>{{% md %}}The realm in which the ldap user federation provider exists.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>user_<wbr>model_<wbr>attribute</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -809,8 +445,46 @@ The following output properties are available:
     <dd>{{% md %}}Name of the UserModel property or attribute you want to map the LDAP attribute into.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>always_<wbr>read_<wbr>value_<wbr>from_<wbr>ldap</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, the value fetched from LDAP will override the value stored in Keycloak.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is_<wbr>mandatory_<wbr>in_<wbr>ldap</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, this attribute must exist in LDAP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Display name of the mapper when displayed in the console.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>read_<wbr>only</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -948,7 +622,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Always<wbr>Read<wbr>Value<wbr>From<wbr>Ldap</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the value fetched from LDAP will override the value stored in Keycloak.
 {{% /md %}}</dd>
@@ -957,7 +631,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Mandatory<wbr>In<wbr>Ldap</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, this attribute must exist in LDAP.
 {{% /md %}}</dd>
@@ -966,7 +640,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ldap<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapped attribute on LDAP object.
 {{% /md %}}</dd>
@@ -975,7 +649,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ldap<wbr>User<wbr>Federation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ldap user federation provider to attach this mapper to.
 {{% /md %}}</dd>
@@ -984,7 +658,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the mapper when displayed in the console.
 {{% /md %}}</dd>
@@ -993,7 +667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
 {{% /md %}}</dd>
@@ -1002,7 +676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Realm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm in which the ldap user federation provider exists.
 {{% /md %}}</dd>
@@ -1011,7 +685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Model<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the UserModel property or attribute you want to map the LDAP attribute into.
 {{% /md %}}</dd>
@@ -1027,7 +701,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Always<wbr>Read<wbr>Value<wbr>From<wbr>Ldap</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the value fetched from LDAP will override the value stored in Keycloak.
 {{% /md %}}</dd>
@@ -1036,7 +710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Mandatory<wbr>In<wbr>Ldap</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, this attribute must exist in LDAP.
 {{% /md %}}</dd>
@@ -1045,7 +719,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ldap<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapped attribute on LDAP object.
 {{% /md %}}</dd>
@@ -1054,7 +728,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ldap<wbr>User<wbr>Federation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ldap user federation provider to attach this mapper to.
 {{% /md %}}</dd>
@@ -1063,7 +737,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the mapper when displayed in the console.
 {{% /md %}}</dd>
@@ -1072,7 +746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
 {{% /md %}}</dd>
@@ -1081,7 +755,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Realm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm in which the ldap user federation provider exists.
 {{% /md %}}</dd>
@@ -1090,7 +764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Model<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the UserModel property or attribute you want to map the LDAP attribute into.
 {{% /md %}}</dd>
@@ -1106,7 +780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>always<wbr>Read<wbr>Value<wbr>From<wbr>Ldap</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, the value fetched from LDAP will override the value stored in Keycloak.
 {{% /md %}}</dd>
@@ -1115,7 +789,7 @@ The following state arguments are supported:
             title="Optional">
         <span>is<wbr>Mandatory<wbr>In<wbr>Ldap</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, this attribute must exist in LDAP.
 {{% /md %}}</dd>
@@ -1124,7 +798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ldap<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapped attribute on LDAP object.
 {{% /md %}}</dd>
@@ -1133,7 +807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ldap<wbr>User<wbr>Federation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ldap user federation provider to attach this mapper to.
 {{% /md %}}</dd>
@@ -1142,7 +816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the mapper when displayed in the console.
 {{% /md %}}</dd>
@@ -1151,7 +825,7 @@ The following state arguments are supported:
             title="Optional">
         <span>read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.
 {{% /md %}}</dd>
@@ -1160,7 +834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>realm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm in which the ldap user federation provider exists.
 {{% /md %}}</dd>
@@ -1169,7 +843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Model<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the UserModel property or attribute you want to map the LDAP attribute into.
 {{% /md %}}</dd>

@@ -78,7 +78,7 @@ In addition to the arguments listed above, the following computed attributes are
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#Client">Client</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#ClientArgs">ClientArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#Client">Client</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#ClientArgs">ClientArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -86,11 +86,11 @@ In addition to the arguments listed above, the following computed attributes are
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewClient<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/openid?tab=doc#ClientArgs">ClientArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/openid?tab=doc#Client">Client</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewClient<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/openid?tab=doc#ClientArgs">ClientArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/openid?tab=doc#Client">Client</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Openid.Client.html">Client</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientArgs.html">ClientArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Client.html">Client</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientArgs.html">ClientArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -182,14 +182,6 @@ In addition to the arguments listed above, the following computed attributes are
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Access<wbr>Token<wbr>Lifespan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Access<wbr>Type</span>
@@ -198,115 +190,11 @@ In addition to the arguments listed above, the following computed attributes are
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Admin<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authorization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Base<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Consent<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Direct<wbr>Access<wbr>Grants<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Full<wbr>Scope<wbr>Allowed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Implicit<wbr>Flow<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Pkce<wbr>Code<wbr>Challenge<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -320,9 +208,121 @@ In addition to the arguments listed above, the following computed attributes are
 
     <dt class="property-optional"
             title="Optional">
+        <span>Access<wbr>Token<wbr>Lifespan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Admin<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Authorization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Base<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Consent<wbr>Required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Direct<wbr>Access<wbr>Grants<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Full<wbr>Scope<wbr>Allowed</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Implicit<wbr>Flow<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pkce<wbr>Code<wbr>Challenge<wbr>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Service<wbr>Accounts<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -330,7 +330,7 @@ In addition to the arguments listed above, the following computed attributes are
             title="Optional">
         <span>Standard<wbr>Flow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -338,7 +338,7 @@ In addition to the arguments listed above, the following computed attributes are
             title="Optional">
         <span>Valid<wbr>Redirect<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -346,7 +346,7 @@ In addition to the arguments listed above, the following computed attributes are
             title="Optional">
         <span>Web<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -357,14 +357,6 @@ In addition to the arguments listed above, the following computed attributes are
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Access<wbr>Token<wbr>Lifespan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Access<wbr>Type</span>
@@ -373,115 +365,11 @@ In addition to the arguments listed above, the following computed attributes are
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Admin<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authorization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthorization">*Client<wbr>Authorization</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Base<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Consent<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Direct<wbr>Access<wbr>Grants<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Full<wbr>Scope<wbr>Allowed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Implicit<wbr>Flow<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Pkce<wbr>Code<wbr>Challenge<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -495,9 +383,121 @@ In addition to the arguments listed above, the following computed attributes are
 
     <dt class="property-optional"
             title="Optional">
+        <span>Access<wbr>Token<wbr>Lifespan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Admin<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Authorization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Base<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Consent<wbr>Required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Direct<wbr>Access<wbr>Grants<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Full<wbr>Scope<wbr>Allowed</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Implicit<wbr>Flow<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pkce<wbr>Code<wbr>Challenge<wbr>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Service<wbr>Accounts<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -505,7 +505,7 @@ In addition to the arguments listed above, the following computed attributes are
             title="Optional">
         <span>Standard<wbr>Flow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -532,14 +532,6 @@ In addition to the arguments listed above, the following computed attributes are
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>access<wbr>Token<wbr>Lifespan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>access<wbr>Type</span>
@@ -548,115 +540,11 @@ In addition to the arguments listed above, the following computed attributes are
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>admin<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authorization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>base<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>client<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>client<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>consent<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>direct<wbr>Access<wbr>Grants<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>full<wbr>Scope<wbr>Allowed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>implicit<wbr>Flow<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>pkce<wbr>Code<wbr>Challenge<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -670,9 +558,121 @@ In addition to the arguments listed above, the following computed attributes are
 
     <dt class="property-optional"
             title="Optional">
+        <span>access<wbr>Token<wbr>Lifespan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>admin<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authorization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>base<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>consent<wbr>Required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>direct<wbr>Access<wbr>Grants<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>full<wbr>Scope<wbr>Allowed</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>implicit<wbr>Flow<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pkce<wbr>Code<wbr>Challenge<wbr>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>service<wbr>Accounts<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -680,7 +680,7 @@ In addition to the arguments listed above, the following computed attributes are
             title="Optional">
         <span>standard<wbr>Flow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -688,7 +688,7 @@ In addition to the arguments listed above, the following computed attributes are
             title="Optional">
         <span>valid<wbr>Redirect<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -696,7 +696,7 @@ In addition to the arguments listed above, the following computed attributes are
             title="Optional">
         <span>web<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -707,9 +707,9 @@ In addition to the arguments listed above, the following computed attributes are
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>access_<wbr>token_<wbr>lifespan</span>
+    <dt class="property-required"
+            title="Required">
+        <span>access_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -717,7 +717,23 @@ In addition to the arguments listed above, the following computed attributes are
 
     <dt class="property-required"
             title="Required">
-        <span>access_<wbr>type</span>
+        <span>client_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>realm_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>access_<wbr>token_<wbr>lifespan</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -742,14 +758,6 @@ In addition to the arguments listed above, the following computed attributes are
     <dt class="property-optional"
             title="Optional">
         <span>base_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>client_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -830,14 +838,6 @@ In addition to the arguments listed above, the following computed attributes are
     <dt class="property-optional"
             title="Optional">
         <span>pkce_<wbr>code_<wbr>challenge_<wbr>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>realm_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -896,142 +896,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Token<wbr>Lifespan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Access<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Admin<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authorization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Base<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Consent<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Direct<wbr>Access<wbr>Grants<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Full<wbr>Scope<wbr>Allowed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Implicit<wbr>Flow<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pkce<wbr>Code<wbr>Challenge<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Realm<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Resource<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1043,38 +907,6 @@ The following output properties are available:
         <span>Service<wbr>Account<wbr>User<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Accounts<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Standard<wbr>Flow<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Valid<wbr>Redirect<wbr>Uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Web<wbr>Origins</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1087,142 +919,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Token<wbr>Lifespan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Access<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Admin<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authorization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthorization">*Client<wbr>Authorization</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Base<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Consent<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Direct<wbr>Access<wbr>Grants<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Full<wbr>Scope<wbr>Allowed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Implicit<wbr>Flow<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pkce<wbr>Code<wbr>Challenge<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Realm<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Resource<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1237,180 +933,12 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Accounts<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Standard<wbr>Flow<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Valid<wbr>Redirect<wbr>Uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Web<wbr>Origins</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access<wbr>Token<wbr>Lifespan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>access<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>admin<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authorization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>base<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>consent<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>direct<wbr>Access<wbr>Grants<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>full<wbr>Scope<wbr>Allowed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>implicit<wbr>Flow<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pkce<wbr>Code<wbr>Challenge<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>realm<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1428,180 +956,12 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>service<wbr>Accounts<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>standard<wbr>Flow<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>valid<wbr>Redirect<wbr>Uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>web<wbr>Origins</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access_<wbr>token_<wbr>lifespan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>access_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>admin_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authorization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthorization">Dict[Client<wbr>Authorization]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>base_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client_<wbr>secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>consent_<wbr>required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>direct_<wbr>access_<wbr>grants_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>exclude_<wbr>session_<wbr>state_<wbr>from_<wbr>auth_<wbr>response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>full_<wbr>scope_<wbr>allowed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>implicit_<wbr>flow_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pkce_<wbr>code_<wbr>challenge_<wbr>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>realm_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1616,38 +976,6 @@ The following output properties are available:
         <span>service_<wbr>account_<wbr>user_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service_<wbr>accounts_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>standard_<wbr>flow_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>valid_<wbr>redirect_<wbr>uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>web_<wbr>origins</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1680,7 +1008,7 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Openid.Client.html">Client</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Openid.ClientState.html">ClientState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Client.html">Client</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientState.html">ClientState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1790,7 +1118,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Token<wbr>Lifespan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1798,7 +1126,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1806,7 +1134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1814,7 +1142,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authorization</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1822,7 +1150,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Base<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1830,7 +1158,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1838,7 +1166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1846,7 +1174,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1854,7 +1182,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1862,7 +1190,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Direct<wbr>Access<wbr>Grants<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1870,7 +1198,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1878,7 +1206,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1886,7 +1214,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Full<wbr>Scope<wbr>Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1894,7 +1222,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Implicit<wbr>Flow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1902,7 +1230,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1910,7 +1238,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pkce<wbr>Code<wbr>Challenge<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1918,7 +1246,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Realm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1926,7 +1254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1934,7 +1262,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Account<wbr>User<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1942,7 +1270,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Accounts<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1950,7 +1278,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Standard<wbr>Flow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1958,7 +1286,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Valid<wbr>Redirect<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1966,7 +1294,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Web<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1981,7 +1309,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Token<wbr>Lifespan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1989,7 +1317,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1997,7 +1325,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2005,7 +1333,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authorization</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthorization">*Client<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2013,7 +1341,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Base<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2021,7 +1349,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2029,7 +1357,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2037,7 +1365,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2045,7 +1373,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2053,7 +1381,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Direct<wbr>Access<wbr>Grants<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2061,7 +1389,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2069,7 +1397,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2077,7 +1405,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Full<wbr>Scope<wbr>Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2085,7 +1413,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Implicit<wbr>Flow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2093,7 +1421,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2101,7 +1429,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pkce<wbr>Code<wbr>Challenge<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2109,7 +1437,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Realm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2117,7 +1445,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2125,7 +1453,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Account<wbr>User<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2133,7 +1461,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Accounts<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2141,7 +1469,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Standard<wbr>Flow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2172,7 +1500,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Token<wbr>Lifespan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2180,7 +1508,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2188,7 +1516,7 @@ The following state arguments are supported:
             title="Optional">
         <span>admin<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2196,7 +1524,7 @@ The following state arguments are supported:
             title="Optional">
         <span>authorization</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization?</a></span>
+        <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2204,7 +1532,7 @@ The following state arguments are supported:
             title="Optional">
         <span>base<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2212,7 +1540,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2220,7 +1548,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2228,7 +1556,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2236,7 +1564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2244,7 +1572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>direct<wbr>Access<wbr>Grants<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2252,7 +1580,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2260,7 +1588,7 @@ The following state arguments are supported:
             title="Optional">
         <span>exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2268,7 +1596,7 @@ The following state arguments are supported:
             title="Optional">
         <span>full<wbr>Scope<wbr>Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2276,7 +1604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>implicit<wbr>Flow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2284,7 +1612,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2292,7 +1620,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pkce<wbr>Code<wbr>Challenge<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2300,7 +1628,7 @@ The following state arguments are supported:
             title="Optional">
         <span>realm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2308,7 +1636,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2316,7 +1644,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Account<wbr>User<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2324,7 +1652,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Accounts<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2332,7 +1660,7 @@ The following state arguments are supported:
             title="Optional">
         <span>standard<wbr>Flow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2340,7 +1668,7 @@ The following state arguments are supported:
             title="Optional">
         <span>valid<wbr>Redirect<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2348,7 +1676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>web<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2572,11 +1900,19 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Policy<wbr>Enforcement<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Allow<wbr>Remote<wbr>Resource<wbr>Management</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2584,15 +1920,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Keep<wbr>Defaults</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Policy<wbr>Enforcement<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2603,11 +1931,19 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Policy<wbr>Enforcement<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Allow<wbr>Remote<wbr>Resource<wbr>Management</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2615,15 +1951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Keep<wbr>Defaults</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Policy<wbr>Enforcement<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2634,11 +1962,19 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>policy<wbr>Enforcement<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>allow<wbr>Remote<wbr>Resource<wbr>Management</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2646,15 +1982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>keep<wbr>Defaults</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>policy<wbr>Enforcement<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2665,6 +1993,14 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>policy<wbr>Enforcement<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>allow<wbr>Remote<wbr>Resource<wbr>Management</span>
@@ -2678,14 +2014,6 @@ The following state arguments are supported:
         <span>keep<wbr>Defaults</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>policy<wbr>Enforcement<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
