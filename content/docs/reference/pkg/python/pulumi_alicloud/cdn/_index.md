@@ -343,8 +343,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>function_args</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">argName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">argValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">argName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of arg.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">argValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of arg.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cdn.DomainConfig.domain_name">
@@ -357,8 +357,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">function_args</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cdn.DomainConfig.function_args" title="Permalink to this definition">¶</a></dt>
 <dd><p>The args of the domain config.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">argName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">argValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">argName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of arg.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">argValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of arg.</p></li>
 </ul>
 </dd></dl>
 
@@ -387,8 +387,8 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>function_args</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">argName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">argValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">argName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of arg.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">argValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of arg.</p></li>
 </ul>
 </dd></dl>
 
@@ -450,25 +450,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource group ID.</p></li>
 <li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Scope of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">domestic</span></code>, <code class="docutils literal notranslate"><span class="pre">overseas</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">domestic</span></code>. This parameter’s setting is valid Only for the international users and domestic L3 and above users .</p></li>
 <li><p><strong>sources</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The source address list of the accelerated domain. Defaults to null. See Block Sources.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>certificate_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">forceSet</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">server_certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL certificate name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL certificate type, can be “upload”, “cas” and “free”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forceSet</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Set <code class="docutils literal notranslate"><span class="pre">1</span></code> to ignore the repeated verification for certificate name, and cover the information of the origin certificate (with the same name). Set <code class="docutils literal notranslate"><span class="pre">0</span></code> to work the verification.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL private key. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server_certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL server certificate string. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This parameter indicates whether or not enable https. Valid values are <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">on</span></code>.</p></li>
 </ul>
 <p>The <strong>sources</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The adress of source. Valid values can be ip or doaminName. Each item’s <code class="docutils literal notranslate"><span class="pre">content</span></code> can not be repeated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port of source. Valid values are <code class="docutils literal notranslate"><span class="pre">443</span></code> and <code class="docutils literal notranslate"><span class="pre">80</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">80</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Priority of the source. Valid values are <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">20</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of the source. Valid values are <code class="docutils literal notranslate"><span class="pre">ipaddr</span></code>, <code class="docutils literal notranslate"><span class="pre">domain</span></code> and <code class="docutils literal notranslate"><span class="pre">oss</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Weight of the source. Valid values are from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">100</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">10</span></code>, but if type is <code class="docutils literal notranslate"><span class="pre">ipaddr</span></code>, the value can only be <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cdn.DomainNew.cdn_type">
@@ -481,12 +482,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">certificate_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cdn.DomainNew.certificate_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Certificate config of the accelerated domain. It’s a list and consist of at most 1 item.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">forceSet</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">server_certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The SSL certificate name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The SSL certificate type, can be “upload”, “cas” and “free”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forceSet</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Set <code class="docutils literal notranslate"><span class="pre">1</span></code> to ignore the repeated verification for certificate name, and cover the information of the origin certificate (with the same name). Set <code class="docutils literal notranslate"><span class="pre">0</span></code> to work the verification.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The SSL private key. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server_certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The SSL server certificate string. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This parameter indicates whether or not enable https. Valid values are <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">on</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -513,12 +514,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">sources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cdn.DomainNew.sources" title="Permalink to this definition">¶</a></dt>
 <dd><p>The source address list of the accelerated domain. Defaults to null. See Block Sources.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The adress of source. Valid values can be ip or doaminName. Each item’s <code class="docutils literal notranslate"><span class="pre">content</span></code> can not be repeated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port of source. Valid values are <code class="docutils literal notranslate"><span class="pre">443</span></code> and <code class="docutils literal notranslate"><span class="pre">80</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">80</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Priority of the source. Valid values are <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">20</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of the source. Valid values are <code class="docutils literal notranslate"><span class="pre">ipaddr</span></code>, <code class="docutils literal notranslate"><span class="pre">domain</span></code> and <code class="docutils literal notranslate"><span class="pre">oss</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Weight of the source. Valid values are from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">100</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">10</span></code>, but if type is <code class="docutils literal notranslate"><span class="pre">ipaddr</span></code>, the value can only be <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cdn.DomainNew.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cdn.DomainNew.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="method">
@@ -538,25 +545,26 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource group ID.</p></li>
 <li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Scope of the accelerated domain. Valid values are <code class="docutils literal notranslate"><span class="pre">domestic</span></code>, <code class="docutils literal notranslate"><span class="pre">overseas</span></code>, <code class="docutils literal notranslate"><span class="pre">global</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">domestic</span></code>. This parameter’s setting is valid Only for the international users and domestic L3 and above users .</p></li>
 <li><p><strong>sources</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The source address list of the accelerated domain. Defaults to null. See Block Sources.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>certificate_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">forceSet</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">server_certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL certificate name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL certificate type, can be “upload”, “cas” and “free”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forceSet</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Set <code class="docutils literal notranslate"><span class="pre">1</span></code> to ignore the repeated verification for certificate name, and cover the information of the origin certificate (with the same name). Set <code class="docutils literal notranslate"><span class="pre">0</span></code> to work the verification.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL private key. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server_certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SSL server certificate string. This is required if <code class="docutils literal notranslate"><span class="pre">server_certificate_status</span></code> is <code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This parameter indicates whether or not enable https. Valid values are <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">on</span></code>.</p></li>
 </ul>
 <p>The <strong>sources</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The adress of source. Valid values can be ip or doaminName. Each item’s <code class="docutils literal notranslate"><span class="pre">content</span></code> can not be repeated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port of source. Valid values are <code class="docutils literal notranslate"><span class="pre">443</span></code> and <code class="docutils literal notranslate"><span class="pre">80</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">80</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Priority of the source. Valid values are <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">20</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of the source. Valid values are <code class="docutils literal notranslate"><span class="pre">ipaddr</span></code>, <code class="docutils literal notranslate"><span class="pre">domain</span></code> and <code class="docutils literal notranslate"><span class="pre">oss</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Weight of the source. Valid values are from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">100</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">10</span></code>, but if type is <code class="docutils literal notranslate"><span class="pre">ipaddr</span></code>, the value can only be <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p></li>
 </ul>
 </dd></dl>
 

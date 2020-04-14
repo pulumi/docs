@@ -648,7 +648,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by function name.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of functions ids.</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by function name.</p></li>
+</ul>
 </dd>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ids` (Optional, Available in 1.53.0+) - A list of functions ids.
@@ -670,7 +673,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by FC service name.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of FC services ids.</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by FC service name.</p></li>
+</ul>
 </dd>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ids` (Optional, Available in 1.53.0+) - A list of FC services ids.
@@ -689,6 +695,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>function_name</strong> (<em>str</em>) – FC function name.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – A list of FC triggers ids.</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by FC trigger name.</p></li>
 </ul>
 </dd>

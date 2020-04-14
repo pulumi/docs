@@ -69,7 +69,7 @@ bucket that contains objects, the provider will fail that run.</p></li>
 is not provided, the provider project is used.</p></li>
 <li><p><strong>requester_pays</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables <a class="reference external" href="https://cloud.google.com/storage/docs/requester-pays">Requester Pays</a> on a storage bucket.</p></li>
 <li><p><strong>retention_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration of the bucket’s data retention policy for how long objects in the bucket should be retained. Structure is documented below.</p></li>
-<li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
+<li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of objects affected by this Lifecycle Rule. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
 <li><p><strong>versioning</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The bucket’s <a class="reference external" href="https://cloud.google.com/storage/docs/object-versioning">Versioning</a> configuration.</p></li>
 <li><p><strong>website</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration if the bucket acts as a website. Structure is documented below.</p></li>
 </ul>
@@ -77,10 +77,10 @@ is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>cors</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">origins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The value, in seconds, to return in the <a class="reference external" href="https://www.w3.org/TR/cors/#access-control-max-age-response-header">Access-Control-Max-Age header</a> used in preflight responses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: “*” is permitted in the list of methods, and means “any method”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">origins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of <a class="reference external" href="https://tools.ietf.org/html/rfc6454">Origins</a> eligible to receive CORS response headers. Note: “*” is permitted in the list of origins, and means “any Origin”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of HTTP headers other than the <a class="reference external" href="https://www.w3.org/TR/cors/#simple-response-header">simple response headers</a> to give permission for the user-agent to share across domains.</p></li>
 </ul>
 <p>The <strong>encryption</strong> object supports the following:</p>
 <ul class="simple">
@@ -88,40 +88,43 @@ is not provided, the provider project is used.</p></li>
 </ul>
 <p>The <strong>lifecycle_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Lifecycle Rule’s action configuration. A single block of this type is supported. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The target <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of objects affected by this Lifecycle Rule. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of the action of this Lifecycle Rule. Supported values include: <code class="docutils literal notranslate"><span class="pre">Delete</span></code> and <code class="docutils literal notranslate"><span class="pre">SetStorageClass</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Lifecycle Rule’s condition configuration. A single block of this type is supported. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">age</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">createdBefore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">matchesStorageClasses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numNewerVersions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">withState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">age</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum age of an object in days to satisfy this condition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createdBefore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Creation date of an object in RFC 3339 (e.g. <code class="docutils literal notranslate"><span class="pre">2017-06-13</span></code>) to satisfy this condition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matchesStorageClasses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of objects to satisfy this condition. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">DURABLE_REDUCED_AVAILABILITY</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numNewerVersions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">withState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: <code class="docutils literal notranslate"><span class="pre">&quot;LIVE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ARCHIVED&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ANY&quot;</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>logging</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">logBucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logObjectPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logBucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bucket that will receive log objects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logObjectPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The object prefix for log objects. If it’s not provided,
+by default GCS sets this to this bucket’s name.</p></li>
 </ul>
 <p>The <strong>retention_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">isLocked</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isLocked</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will be <a class="reference external" href="https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket">locked</a> and permanently restrict edits to the bucket’s retention policy.  Caution: Locking a bucket is an irreversible action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds.</p></li>
 </ul>
 <p>The <strong>versioning</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - While set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, versioning is fully enabled for this bucket.</p></li>
 </ul>
 <p>The <strong>website</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">mainPageSuffix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">notFoundPage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mainPageSuffix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Behaves as the bucket’s directory index where
+missing objects are treated as potential directories.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notFoundPage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The custom object to return when a requested
+resource is not found.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.Bucket.bucket_policy_only">
@@ -134,10 +137,10 @@ is not provided, the provider project is used.</p></li>
 <code class="sig-name descname">cors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Bucket.cors" title="Permalink to this definition">¶</a></dt>
 <dd><p>The bucket’s <a class="reference external" href="https://www.w3.org/TR/cors/">Cross-Origin Resource Sharing (CORS)</a> configuration. Multiple blocks of this type are permitted. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">origins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The value, in seconds, to return in the <a class="reference external" href="https://www.w3.org/TR/cors/#access-control-max-age-response-header">Access-Control-Max-Age header</a> used in preflight responses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: “*” is permitted in the list of methods, and means “any method”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">origins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of <a class="reference external" href="https://tools.ietf.org/html/rfc6454">Origins</a> eligible to receive CORS response headers. Note: “*” is permitted in the list of origins, and means “any Origin”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of HTTP headers other than the <a class="reference external" href="https://www.w3.org/TR/cors/#simple-response-header">simple response headers</a> to give permission for the user-agent to share across domains.</p></li>
 </ul>
 </dd></dl>
 
@@ -169,19 +172,19 @@ bucket that contains objects, the provider will fail that run.</p>
 <code class="sig-name descname">lifecycle_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Bucket.lifecycle_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>The bucket’s <a class="reference external" href="https://cloud.google.com/storage/docs/lifecycle#configuration">Lifecycle Rules</a> configuration. Multiple blocks of this type are permitted. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Lifecycle Rule’s action configuration. A single block of this type is supported. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The target <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of objects affected by this Lifecycle Rule. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of the action of this Lifecycle Rule. Supported values include: <code class="docutils literal notranslate"><span class="pre">Delete</span></code> and <code class="docutils literal notranslate"><span class="pre">SetStorageClass</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Lifecycle Rule’s condition configuration. A single block of this type is supported. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">age</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">createdBefore</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">matchesStorageClasses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numNewerVersions</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">withState</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">age</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minimum age of an object in days to satisfy this condition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createdBefore</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Creation date of an object in RFC 3339 (e.g. <code class="docutils literal notranslate"><span class="pre">2017-06-13</span></code>) to satisfy this condition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matchesStorageClasses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of objects to satisfy this condition. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">DURABLE_REDUCED_AVAILABILITY</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numNewerVersions</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">withState</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: <code class="docutils literal notranslate"><span class="pre">&quot;LIVE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ARCHIVED&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ANY&quot;</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -198,8 +201,9 @@ bucket that contains objects, the provider will fail that run.</p>
 <code class="sig-name descname">logging</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Bucket.logging" title="Permalink to this definition">¶</a></dt>
 <dd><p>The bucket’s <a class="reference external" href="https://cloud.google.com/storage/docs/access-logs">Access &amp; Storage Logs</a> configuration.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">logBucket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logObjectPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logBucket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The bucket that will receive log objects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logObjectPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The object prefix for log objects. If it’s not provided,
+by default GCS sets this to this bucket’s name.</p></li>
 </ul>
 </dd></dl>
 
@@ -227,8 +231,8 @@ is not provided, the provider project is used.</p>
 <code class="sig-name descname">retention_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Bucket.retention_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration of the bucket’s data retention policy for how long objects in the bucket should be retained. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">isLocked</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isLocked</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will be <a class="reference external" href="https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket">locked</a> and permanently restrict edits to the bucket’s retention policy.  Caution: Locking a bucket is an irreversible action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds.</p></li>
 </ul>
 </dd></dl>
 
@@ -241,7 +245,7 @@ is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.Bucket.storage_class">
 <code class="sig-name descname">storage_class</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Bucket.storage_class" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p>
+<dd><p>The target <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of objects affected by this Lifecycle Rule. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -255,7 +259,7 @@ is not provided, the provider project is used.</p>
 <code class="sig-name descname">versioning</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Bucket.versioning" title="Permalink to this definition">¶</a></dt>
 <dd><p>The bucket’s <a class="reference external" href="https://cloud.google.com/storage/docs/object-versioning">Versioning</a> configuration.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - While set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, versioning is fully enabled for this bucket.</p></li>
 </ul>
 </dd></dl>
 
@@ -264,8 +268,10 @@ is not provided, the provider project is used.</p>
 <code class="sig-name descname">website</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Bucket.website" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration if the bucket acts as a website. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">mainPageSuffix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">notFoundPage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mainPageSuffix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Behaves as the bucket’s directory index where
+missing objects are treated as potential directories.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notFoundPage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The custom object to return when a requested
+resource is not found.</p></li>
 </ul>
 </dd></dl>
 
@@ -302,7 +308,7 @@ is not provided, the provider project is used.</p></li>
 </p></li>
 <li><p><strong>retention_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration of the bucket’s data retention policy for how long objects in the bucket should be retained. Structure is documented below.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
-<li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p>
+<li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The target <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of objects affected by this Lifecycle Rule. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p>
 </p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The base URL of the bucket, in the format <code class="docutils literal notranslate"><span class="pre">gs://&lt;bucket-name&gt;</span></code>.</p></li>
 <li><p><strong>versioning</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The bucket’s <a class="reference external" href="https://cloud.google.com/storage/docs/object-versioning">Versioning</a> configuration.</p>
@@ -313,10 +319,10 @@ is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>cors</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">origins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The value, in seconds, to return in the <a class="reference external" href="https://www.w3.org/TR/cors/#access-control-max-age-response-header">Access-Control-Max-Age header</a> used in preflight responses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: “*” is permitted in the list of methods, and means “any method”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">origins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of <a class="reference external" href="https://tools.ietf.org/html/rfc6454">Origins</a> eligible to receive CORS response headers. Note: “*” is permitted in the list of origins, and means “any Origin”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of HTTP headers other than the <a class="reference external" href="https://www.w3.org/TR/cors/#simple-response-header">simple response headers</a> to give permission for the user-agent to share across domains.</p></li>
 </ul>
 <p>The <strong>encryption</strong> object supports the following:</p>
 <ul class="simple">
@@ -324,40 +330,43 @@ is not provided, the provider project is used.</p></li>
 </ul>
 <p>The <strong>lifecycle_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Lifecycle Rule’s action configuration. A single block of this type is supported. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The target <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of objects affected by this Lifecycle Rule. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of the action of this Lifecycle Rule. Supported values include: <code class="docutils literal notranslate"><span class="pre">Delete</span></code> and <code class="docutils literal notranslate"><span class="pre">SetStorageClass</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Lifecycle Rule’s condition configuration. A single block of this type is supported. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">age</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">createdBefore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">matchesStorageClasses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numNewerVersions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">withState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">age</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum age of an object in days to satisfy this condition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createdBefore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Creation date of an object in RFC 3339 (e.g. <code class="docutils literal notranslate"><span class="pre">2017-06-13</span></code>) to satisfy this condition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matchesStorageClasses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of objects to satisfy this condition. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">DURABLE_REDUCED_AVAILABILITY</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numNewerVersions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">withState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: <code class="docutils literal notranslate"><span class="pre">&quot;LIVE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ARCHIVED&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ANY&quot;</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>logging</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">logBucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logObjectPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logBucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bucket that will receive log objects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logObjectPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The object prefix for log objects. If it’s not provided,
+by default GCS sets this to this bucket’s name.</p></li>
 </ul>
 <p>The <strong>retention_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">isLocked</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isLocked</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will be <a class="reference external" href="https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket">locked</a> and permanently restrict edits to the bucket’s retention policy.  Caution: Locking a bucket is an irreversible action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds.</p></li>
 </ul>
 <p>The <strong>versioning</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - While set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, versioning is fully enabled for this bucket.</p></li>
 </ul>
 <p>The <strong>website</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">mainPageSuffix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">notFoundPage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mainPageSuffix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Behaves as the bucket’s directory index where
+missing objects are treated as potential directories.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notFoundPage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The custom object to return when a requested
+resource is not found.</p></li>
 </ul>
 </dd></dl>
 
@@ -675,9 +684,9 @@ Structure is documented below.</p></li>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.BucketIAMBinding.bucket">
@@ -691,9 +700,9 @@ Structure is documented below.</p></li>
 <dd><p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </dd></dl>
 
@@ -735,9 +744,9 @@ Structure is documented below.</p>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </dd></dl>
 
@@ -810,9 +819,9 @@ Structure is documented below.</p>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.BucketIAMMember.bucket">
@@ -826,9 +835,9 @@ Structure is documented below.</p>
 <dd><p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
 Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </dd></dl>
 
@@ -870,9 +879,9 @@ Structure is documented below.</p>
 </dl>
 <p>The <strong>condition</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </dd></dl>
 
@@ -1420,7 +1429,7 @@ domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}
 <code class="sig-name descname">project_team</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl.project_team" title="Permalink to this definition">¶</a></dt>
 <dd><p>The project team associated with the entity</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">projectNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_number</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">team</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -1458,7 +1467,7 @@ domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}
 </dl>
 <p>The <strong>project_team</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">projectNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_number</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">team</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -1779,7 +1788,9 @@ account’s email address, use the <code class="docutils literal notranslate"><s
 for an example of enabling notifications by granting the correct IAM permission. See
 <a class="reference external" href="https://cloud.google.com/storage/docs/gsutil/commands/notification">the notifications documentation</a> for more details.</p>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_notification.html.markdown</a>.</p>
+<div><p><strong>NOTE</strong>: This resource can affect your storage IAM policy. If you are using this in the same config as your storage IAM policy resources, consider
+making this resource dependent on those IAM resources via <code class="docutils literal notranslate"><span class="pre">depends_on</span></code>. This will safeguard against errors due to IAM race conditions.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_notification.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2118,7 +2129,7 @@ domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}
 <code class="sig-name descname">project_team</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl.project_team" title="Permalink to this definition">¶</a></dt>
 <dd><p>The project team associated with the entity</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">projectNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_number</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">team</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -2156,7 +2167,7 @@ domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}
 </dl>
 <p>The <strong>project_team</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">projectNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_number</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">team</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -2232,70 +2243,72 @@ is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>schedule</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">scheduleEndDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduleEndDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The last day the recurring transfer will be run. If <code class="docutils literal notranslate"><span class="pre">schedule_end_date</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">schedule_start_date</span></code>, the transfer will be executed only once. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">month</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Day of month. Must be from 1 to 31 and valid for the year and month.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">month</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Month of year. Must be from 1 to 12.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Year of date. Must be from 1 to 9999.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheduleStartDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduleStartDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The first day the recurring transfer is scheduled to run. If <code class="docutils literal notranslate"><span class="pre">schedule_start_date</span></code> is in the past, the transfer will run for the first time on the following day. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">month</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Day of month. Must be from 1 to 31 and valid for the year and month.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">month</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Month of year. Must be from 1 to 12.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Year of date. Must be from 1 to 9999.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startTimeOfDay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTimeOfDay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer’s start time in a day is specified in your local timezone. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">hours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Hours of day in 24 hour format. Should be from 0 to 23</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minutes of hour of day. Must be from 0 to 59.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Seconds of minutes of the time. Must normally be from 0 to 59.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>transfer_spec</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">awsS3DataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">awsS3DataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An AWS S3 data source. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">awsAccessKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">awsAccessKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - AWS credentials block.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">accessKeyId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secretAccessKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessKeyId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS Key ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretAccessKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS Secret Access Key.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - S3 Bucket name.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gcsDataSink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">gcsDataSink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A Google Cloud Storage data sink. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - S3 Bucket name.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gcsDataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">gcsDataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A Google Cloud Storage data source. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - S3 Bucket name.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpDataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpDataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An HTTP URL data source. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">listUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">objectConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">objectConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects’ <code class="docutils literal notranslate"><span class="pre">last_modification_time</span></code> do not exclude objects in a data sink. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">excludePrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includePrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxTimeElapsedSinceLastModification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minTimeElapsedSinceLastModification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludePrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - <code class="docutils literal notranslate"><span class="pre">exclude_prefixes</span></code> must follow the requirements described for <code class="docutils literal notranslate"><span class="pre">include_prefixes</span></code>. See <a class="reference external" href="https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions">Requirements</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includePrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">include_refixes</span></code> is specified, objects that satisfy the object conditions must have names that start with one of the <code class="docutils literal notranslate"><span class="pre">include_prefixes</span></code> and that do not start with any of the <code class="docutils literal notranslate"><span class="pre">exclude_prefixes</span></code>. If <code class="docutils literal notranslate"><span class="pre">include_prefixes</span></code> is not specified, all objects except those that have names starting with one of the <code class="docutils literal notranslate"><span class="pre">exclude_prefixes</span></code> must satisfy the object conditions. See <a class="reference external" href="https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions">Requirements</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxTimeElapsedSinceLastModification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minTimeElapsedSinceLastModification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - 
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">transferOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">transferOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Characteristics of how to treat files from datasource and sink during job. If the option <code class="docutils literal notranslate"><span class="pre">delete_objects_unique_in_sink</span></code> is true, object conditions based on objects’ <code class="docutils literal notranslate"><span class="pre">last_modification_time</span></code> are ignored and do not exclude objects in a data source or a data sink. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">deleteObjectsFromSourceAfterTransfer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deleteObjectsUniqueInSink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">overwriteObjectsAlreadyExistingInSink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteObjectsFromSourceAfterTransfer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and <code class="docutils literal notranslate"><span class="pre">delete_objects_unique_in_sink</span></code> are mutually exclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteObjectsUniqueInSink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether objects that exist only in the sink should be deleted. Note that this option and
+<code class="docutils literal notranslate"><span class="pre">delete_objects_from_source_after_transfer</span></code> are mutually exclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overwriteObjectsAlreadyExistingInSink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether overwriting objects that already exist in the sink is allowed.</p></li>
 </ul>
 </li>
 </ul>
@@ -2341,26 +2354,26 @@ is not provided, the provider project is used.</p>
 <code class="sig-name descname">schedule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.schedule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">scheduleEndDate</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduleEndDate</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The last day the recurring transfer will be run. If <code class="docutils literal notranslate"><span class="pre">schedule_end_date</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">schedule_start_date</span></code>, the transfer will be executed only once. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">month</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Day of month. Must be from 1 to 31 and valid for the year and month.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">month</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Month of year. Must be from 1 to 12.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Year of date. Must be from 1 to 9999.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheduleStartDate</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduleStartDate</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The first day the recurring transfer is scheduled to run. If <code class="docutils literal notranslate"><span class="pre">schedule_start_date</span></code> is in the past, the transfer will run for the first time on the following day. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">month</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Day of month. Must be from 1 to 31 and valid for the year and month.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">month</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Month of year. Must be from 1 to 12.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Year of date. Must be from 1 to 9999.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startTimeOfDay</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTimeOfDay</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer’s start time in a day is specified in your local timezone. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">hours</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hours</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Hours of day in 24 hour format. Should be from 0 to 23</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minutes of hour of day. Must be from 0 to 59.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Seconds of minutes of the time. Must normally be from 0 to 59.</p></li>
 </ul>
 </li>
 </ul>
@@ -2377,45 +2390,47 @@ is not provided, the provider project is used.</p>
 <code class="sig-name descname">transfer_spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.transfer_spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transfer specification. Structure documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">awsS3DataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">awsS3DataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - An AWS S3 data source. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">awsAccessKey</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">awsAccessKey</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - AWS credentials block.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">accessKeyId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secretAccessKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessKeyId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - AWS Key ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretAccessKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - AWS Secret Access Key.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - S3 Bucket name.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gcsDataSink</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">gcsDataSink</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A Google Cloud Storage data sink. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - S3 Bucket name.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gcsDataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">gcsDataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A Google Cloud Storage data source. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - S3 Bucket name.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpDataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpDataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - An HTTP URL data source. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">listUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">objectConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">objectConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects’ <code class="docutils literal notranslate"><span class="pre">last_modification_time</span></code> do not exclude objects in a data sink. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">excludePrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includePrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxTimeElapsedSinceLastModification</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minTimeElapsedSinceLastModification</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludePrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - <code class="docutils literal notranslate"><span class="pre">exclude_prefixes</span></code> must follow the requirements described for <code class="docutils literal notranslate"><span class="pre">include_prefixes</span></code>. See <a class="reference external" href="https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions">Requirements</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includePrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - If <code class="docutils literal notranslate"><span class="pre">include_refixes</span></code> is specified, objects that satisfy the object conditions must have names that start with one of the <code class="docutils literal notranslate"><span class="pre">include_prefixes</span></code> and that do not start with any of the <code class="docutils literal notranslate"><span class="pre">exclude_prefixes</span></code>. If <code class="docutils literal notranslate"><span class="pre">include_prefixes</span></code> is not specified, all objects except those that have names starting with one of the <code class="docutils literal notranslate"><span class="pre">exclude_prefixes</span></code> must satisfy the object conditions. See <a class="reference external" href="https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions">Requirements</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxTimeElapsedSinceLastModification</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minTimeElapsedSinceLastModification</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - 
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">transferOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">transferOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Characteristics of how to treat files from datasource and sink during job. If the option <code class="docutils literal notranslate"><span class="pre">delete_objects_unique_in_sink</span></code> is true, object conditions based on objects’ <code class="docutils literal notranslate"><span class="pre">last_modification_time</span></code> are ignored and do not exclude objects in a data source or a data sink. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">deleteObjectsFromSourceAfterTransfer</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deleteObjectsUniqueInSink</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">overwriteObjectsAlreadyExistingInSink</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteObjectsFromSourceAfterTransfer</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and <code class="docutils literal notranslate"><span class="pre">delete_objects_unique_in_sink</span></code> are mutually exclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteObjectsUniqueInSink</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether objects that exist only in the sink should be deleted. Note that this option and
+<code class="docutils literal notranslate"><span class="pre">delete_objects_from_source_after_transfer</span></code> are mutually exclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overwriteObjectsAlreadyExistingInSink</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether overwriting objects that already exist in the sink is allowed.</p></li>
 </ul>
 </li>
 </ul>
@@ -2447,70 +2462,72 @@ is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>schedule</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">scheduleEndDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduleEndDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The last day the recurring transfer will be run. If <code class="docutils literal notranslate"><span class="pre">schedule_end_date</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">schedule_start_date</span></code>, the transfer will be executed only once. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">month</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Day of month. Must be from 1 to 31 and valid for the year and month.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">month</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Month of year. Must be from 1 to 12.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Year of date. Must be from 1 to 9999.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheduleStartDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduleStartDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The first day the recurring transfer is scheduled to run. If <code class="docutils literal notranslate"><span class="pre">schedule_start_date</span></code> is in the past, the transfer will run for the first time on the following day. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">month</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Day of month. Must be from 1 to 31 and valid for the year and month.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">month</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Month of year. Must be from 1 to 12.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Year of date. Must be from 1 to 9999.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startTimeOfDay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTimeOfDay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer’s start time in a day is specified in your local timezone. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">hours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Hours of day in 24 hour format. Should be from 0 to 23</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minutes of hour of day. Must be from 0 to 59.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Seconds of minutes of the time. Must normally be from 0 to 59.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>transfer_spec</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">awsS3DataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">awsS3DataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An AWS S3 data source. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">awsAccessKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">awsAccessKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - AWS credentials block.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">accessKeyId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secretAccessKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessKeyId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS Key ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretAccessKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS Secret Access Key.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - S3 Bucket name.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gcsDataSink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">gcsDataSink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A Google Cloud Storage data sink. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - S3 Bucket name.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gcsDataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">gcsDataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A Google Cloud Storage data source. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - S3 Bucket name.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpDataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpDataSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An HTTP URL data source. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">listUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">objectConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">objectConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects’ <code class="docutils literal notranslate"><span class="pre">last_modification_time</span></code> do not exclude objects in a data sink. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">excludePrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includePrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxTimeElapsedSinceLastModification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minTimeElapsedSinceLastModification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludePrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - <code class="docutils literal notranslate"><span class="pre">exclude_prefixes</span></code> must follow the requirements described for <code class="docutils literal notranslate"><span class="pre">include_prefixes</span></code>. See <a class="reference external" href="https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions">Requirements</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includePrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">include_refixes</span></code> is specified, objects that satisfy the object conditions must have names that start with one of the <code class="docutils literal notranslate"><span class="pre">include_prefixes</span></code> and that do not start with any of the <code class="docutils literal notranslate"><span class="pre">exclude_prefixes</span></code>. If <code class="docutils literal notranslate"><span class="pre">include_prefixes</span></code> is not specified, all objects except those that have names starting with one of the <code class="docutils literal notranslate"><span class="pre">exclude_prefixes</span></code> must satisfy the object conditions. See <a class="reference external" href="https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions">Requirements</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxTimeElapsedSinceLastModification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minTimeElapsedSinceLastModification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - 
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">transferOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">transferOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Characteristics of how to treat files from datasource and sink during job. If the option <code class="docutils literal notranslate"><span class="pre">delete_objects_unique_in_sink</span></code> is true, object conditions based on objects’ <code class="docutils literal notranslate"><span class="pre">last_modification_time</span></code> are ignored and do not exclude objects in a data source or a data sink. Structure documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">deleteObjectsFromSourceAfterTransfer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deleteObjectsUniqueInSink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">overwriteObjectsAlreadyExistingInSink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteObjectsFromSourceAfterTransfer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and <code class="docutils literal notranslate"><span class="pre">delete_objects_unique_in_sink</span></code> are mutually exclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteObjectsUniqueInSink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether objects that exist only in the sink should be deleted. Note that this option and
+<code class="docutils literal notranslate"><span class="pre">delete_objects_from_source_after_transfer</span></code> are mutually exclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overwriteObjectsAlreadyExistingInSink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether overwriting objects that already exist in the sink is allowed.</p></li>
 </ul>
 </li>
 </ul>
