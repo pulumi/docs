@@ -36,7 +36,7 @@ const slack = new gitlab.ServiceSlack("slack", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceSlack">ServiceSlack</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceSlackArgs">ServiceSlackArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceSlack">ServiceSlack</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceSlackArgs">ServiceSlackArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -44,11 +44,11 @@ const slack = new gitlab.ServiceSlack("slack", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServiceSlack<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ServiceSlackArgs">ServiceSlackArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ServiceSlack">ServiceSlack</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServiceSlack<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ServiceSlackArgs">ServiceSlackArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ServiceSlack">ServiceSlack</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ServiceSlack.html">ServiceSlack</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.ServiceSlackArgs.html">ServiceSlackArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.ServiceSlack.html">ServiceSlack</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.ServiceSlackArgs.html">ServiceSlackArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -140,132 +140,6 @@ const slack = new gitlab.ServiceSlack("slack", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Branches<wbr>To<wbr>Be<wbr>Notified</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Confidential<wbr>Issue<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Confidential<wbr>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Confidential<wbr>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential note events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Issue<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Merge<wbr>Request<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive merge request events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for merge requests events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Note<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive note events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for note events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Notify<wbr>Only<wbr>Broken<wbr>Pipelines</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Send notifications for broken pipelines.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Notify<wbr>Only<wbr>Default<wbr>Branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Pipeline<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Pipeline<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for pipeline events.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project</span>
@@ -273,51 +147,6 @@ const slack = new gitlab.ServiceSlack("slack", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Push<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tag<wbr>Push<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive tag push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tag<wbr>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -331,9 +160,180 @@ const slack = new gitlab.ServiceSlack("slack", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Branches<wbr>To<wbr>Be<wbr>Notified</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Confidential<wbr>Issue<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Confidential<wbr>Issues<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for confidential issues events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Confidential<wbr>Note<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for confidential note events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Issue<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive issue events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Issues<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for issues events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Merge<wbr>Request<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive merge request events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Merge<wbr>Requests<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for merge requests events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Note<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive note events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Note<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for note events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Notify<wbr>Only<wbr>Broken<wbr>Pipelines</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Send notifications for broken pipelines.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Notify<wbr>Only<wbr>Default<wbr>Branch</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pipeline<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pipeline<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for pipeline events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Push<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive push events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Push<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for push events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tag<wbr>Push<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive tag push events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tag<wbr>Push<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for tag push events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username to use.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Wiki<wbr>Page<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
@@ -342,7 +342,7 @@ const slack = new gitlab.ServiceSlack("slack", {
             title="Optional">
         <span>Wiki<wbr>Page<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>
@@ -354,132 +354,6 @@ const slack = new gitlab.ServiceSlack("slack", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Branches<wbr>To<wbr>Be<wbr>Notified</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Confidential<wbr>Issue<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Confidential<wbr>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Confidential<wbr>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential note events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Issue<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Merge<wbr>Request<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive merge request events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for merge requests events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Note<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive note events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for note events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Notify<wbr>Only<wbr>Broken<wbr>Pipelines</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Send notifications for broken pipelines.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Notify<wbr>Only<wbr>Default<wbr>Branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Pipeline<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Pipeline<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for pipeline events.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project</span>
@@ -487,51 +361,6 @@ const slack = new gitlab.ServiceSlack("slack", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Push<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tag<wbr>Push<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive tag push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tag<wbr>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -545,9 +374,180 @@ const slack = new gitlab.ServiceSlack("slack", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Branches<wbr>To<wbr>Be<wbr>Notified</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Confidential<wbr>Issue<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Confidential<wbr>Issues<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for confidential issues events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Confidential<wbr>Note<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for confidential note events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Issue<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive issue events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Issues<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for issues events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Merge<wbr>Request<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive merge request events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Merge<wbr>Requests<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for merge requests events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Note<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive note events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Note<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for note events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Notify<wbr>Only<wbr>Broken<wbr>Pipelines</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Send notifications for broken pipelines.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Notify<wbr>Only<wbr>Default<wbr>Branch</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pipeline<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pipeline<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for pipeline events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Push<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive push events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Push<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for push events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tag<wbr>Push<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive tag push events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tag<wbr>Push<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for tag push events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username to use.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Wiki<wbr>Page<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
@@ -556,7 +556,7 @@ const slack = new gitlab.ServiceSlack("slack", {
             title="Optional">
         <span>Wiki<wbr>Page<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>
@@ -568,132 +568,6 @@ const slack = new gitlab.ServiceSlack("slack", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>branches<wbr>To<wbr>Be<wbr>Notified</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>confidential<wbr>Issue<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>confidential<wbr>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>confidential<wbr>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential note events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>issue<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>merge<wbr>Request<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive merge request events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for merge requests events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>note<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive note events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for note events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>notify<wbr>Only<wbr>Broken<wbr>Pipelines</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Send notifications for broken pipelines.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>notify<wbr>Only<wbr>Default<wbr>Branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>pipeline<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>pipeline<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for pipeline events.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>project</span>
@@ -701,51 +575,6 @@ const slack = new gitlab.ServiceSlack("slack", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>push<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tag<wbr>Push<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive tag push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tag<wbr>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -759,9 +588,180 @@ const slack = new gitlab.ServiceSlack("slack", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>branches<wbr>To<wbr>Be<wbr>Notified</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>confidential<wbr>Issue<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>confidential<wbr>Issues<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for confidential issues events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>confidential<wbr>Note<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for confidential note events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>issue<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive issue events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>issues<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for issues events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>merge<wbr>Request<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive merge request events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>merge<wbr>Requests<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for merge requests events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>note<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive note events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>note<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for note events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>notify<wbr>Only<wbr>Broken<wbr>Pipelines</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Send notifications for broken pipelines.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>notify<wbr>Only<wbr>Default<wbr>Branch</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pipeline<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pipeline<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for pipeline events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>push<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive push events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>push<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for push events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tag<wbr>Push<wbr>Channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the channel to receive tag push events notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tag<wbr>Push<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for tag push events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username to use.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>wiki<wbr>Page<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
@@ -770,7 +770,7 @@ const slack = new gitlab.ServiceSlack("slack", {
             title="Optional">
         <span>wiki<wbr>Page<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>
@@ -781,6 +781,24 @@ const slack = new gitlab.ServiceSlack("slack", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the project you want to activate integration on.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>webhook</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -908,15 +926,6 @@ const slack = new gitlab.ServiceSlack("slack", {
     <dd>{{% md %}}Enable notifications for pipeline events.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>push_<wbr>channel</span>
@@ -960,15 +969,6 @@ const slack = new gitlab.ServiceSlack("slack", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username to use.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>webhook</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1010,218 +1010,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Branches<wbr>To<wbr>Be<wbr>Notified</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Confidential<wbr>Issue<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Confidential<wbr>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Confidential<wbr>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential note events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issue<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Job<wbr>Events</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Merge<wbr>Request<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive merge request events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for merge requests events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Note<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive note events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for note events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notify<wbr>Only<wbr>Broken<wbr>Pipelines</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Send notifications for broken pipelines.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Notify<wbr>Only<wbr>Default<wbr>Branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pipeline<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pipeline<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for pipeline events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Push<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tag<wbr>Push<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive tag push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tag<wbr>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Username to use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Webhook</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wiki<wbr>Page<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wiki<wbr>Page<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for wiki page events.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1232,218 +1025,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Branches<wbr>To<wbr>Be<wbr>Notified</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Confidential<wbr>Issue<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Confidential<wbr>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Confidential<wbr>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential note events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issue<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Job<wbr>Events</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Merge<wbr>Request<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive merge request events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for merge requests events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Note<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive note events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for note events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notify<wbr>Only<wbr>Broken<wbr>Pipelines</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Send notifications for broken pipelines.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Notify<wbr>Only<wbr>Default<wbr>Branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pipeline<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pipeline<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for pipeline events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Push<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tag<wbr>Push<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive tag push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tag<wbr>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Username to use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Webhook</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wiki<wbr>Page<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wiki<wbr>Page<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for wiki page events.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1454,218 +1040,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>branches<wbr>To<wbr>Be<wbr>Notified</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>confidential<wbr>Issue<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>confidential<wbr>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>confidential<wbr>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential note events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>issue<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>job<wbr>Events</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>merge<wbr>Request<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive merge request events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for merge requests events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>note<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive note events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for note events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>notify<wbr>Only<wbr>Broken<wbr>Pipelines</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Send notifications for broken pipelines.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>notify<wbr>Only<wbr>Default<wbr>Branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>pipeline<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pipeline<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for pipeline events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>push<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tag<wbr>Push<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive tag push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tag<wbr>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Username to use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>webhook</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wiki<wbr>Page<wbr>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wiki<wbr>Page<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for wiki page events.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1676,218 +1055,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>branches_<wbr>to_<wbr>be_<wbr>notified</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>confidential_<wbr>issue_<wbr>channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>confidential_<wbr>issues_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>confidential_<wbr>note_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for confidential note events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>issue_<wbr>channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive issue events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>issues_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>job_<wbr>events</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>merge_<wbr>request_<wbr>channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive merge request events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>merge_<wbr>requests_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for merge requests events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>note_<wbr>channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive note events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>note_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for note events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>notify_<wbr>only_<wbr>broken_<wbr>pipelines</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Send notifications for broken pipelines.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>notify_<wbr>only_<wbr>default_<wbr>branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>pipeline_<wbr>channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pipeline_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for pipeline events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>push_<wbr>channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>push_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tag_<wbr>push_<wbr>channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive tag push events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tag_<wbr>push_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Username to use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>webhook</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wiki_<wbr>page_<wbr>channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wiki_<wbr>page_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for wiki page events.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1918,7 +1090,7 @@ Get an existing ServiceSlack resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ServiceSlack.html">ServiceSlack</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ServiceSlackState.html">ServiceSlackState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.ServiceSlack.html">ServiceSlack</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ServiceSlackState.html">ServiceSlackState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2028,7 +1200,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Branches<wbr>To<wbr>Be<wbr>Notified</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
 {{% /md %}}</dd>
@@ -2037,7 +1209,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Confidential<wbr>Issue<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
 {{% /md %}}</dd>
@@ -2046,7 +1218,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Confidential<wbr>Issues<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential issues events.
 {{% /md %}}</dd>
@@ -2055,7 +1227,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Confidential<wbr>Note<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential note events.
 {{% /md %}}</dd>
@@ -2064,7 +1236,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issue<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive issue events notifications.
 {{% /md %}}</dd>
@@ -2073,7 +1245,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issues<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for issues events.
 {{% /md %}}</dd>
@@ -2082,7 +1254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Job<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2090,7 +1262,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Merge<wbr>Request<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive merge request events notifications.
 {{% /md %}}</dd>
@@ -2099,7 +1271,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge requests events.
 {{% /md %}}</dd>
@@ -2108,7 +1280,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Note<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive note events notifications.
 {{% /md %}}</dd>
@@ -2117,7 +1289,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Note<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for note events.
 {{% /md %}}</dd>
@@ -2126,7 +1298,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notify<wbr>Only<wbr>Broken<wbr>Pipelines</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Send notifications for broken pipelines.
 {{% /md %}}</dd>
@@ -2135,7 +1307,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Notify<wbr>Only<wbr>Default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
@@ -2144,7 +1316,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pipeline<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
 {{% /md %}}</dd>
@@ -2153,7 +1325,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pipeline<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for pipeline events.
 {{% /md %}}</dd>
@@ -2162,7 +1334,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
@@ -2171,7 +1343,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Push<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive push events notifications.
 {{% /md %}}</dd>
@@ -2180,7 +1352,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Push<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for push events.
 {{% /md %}}</dd>
@@ -2189,7 +1361,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tag<wbr>Push<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive tag push events notifications.
 {{% /md %}}</dd>
@@ -2198,7 +1370,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tag<wbr>Push<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for tag push events.
 {{% /md %}}</dd>
@@ -2207,7 +1379,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
@@ -2216,7 +1388,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Webhook</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}</dd>
@@ -2225,7 +1397,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Wiki<wbr>Page<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
@@ -2234,7 +1406,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Wiki<wbr>Page<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>
@@ -2250,7 +1422,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Branches<wbr>To<wbr>Be<wbr>Notified</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
 {{% /md %}}</dd>
@@ -2259,7 +1431,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Confidential<wbr>Issue<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
 {{% /md %}}</dd>
@@ -2268,7 +1440,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Confidential<wbr>Issues<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential issues events.
 {{% /md %}}</dd>
@@ -2277,7 +1449,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Confidential<wbr>Note<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential note events.
 {{% /md %}}</dd>
@@ -2286,7 +1458,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issue<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive issue events notifications.
 {{% /md %}}</dd>
@@ -2295,7 +1467,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issues<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for issues events.
 {{% /md %}}</dd>
@@ -2304,7 +1476,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Job<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2312,7 +1484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Merge<wbr>Request<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive merge request events notifications.
 {{% /md %}}</dd>
@@ -2321,7 +1493,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge requests events.
 {{% /md %}}</dd>
@@ -2330,7 +1502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Note<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive note events notifications.
 {{% /md %}}</dd>
@@ -2339,7 +1511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Note<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for note events.
 {{% /md %}}</dd>
@@ -2348,7 +1520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notify<wbr>Only<wbr>Broken<wbr>Pipelines</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Send notifications for broken pipelines.
 {{% /md %}}</dd>
@@ -2357,7 +1529,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Notify<wbr>Only<wbr>Default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
@@ -2366,7 +1538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pipeline<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
 {{% /md %}}</dd>
@@ -2375,7 +1547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pipeline<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for pipeline events.
 {{% /md %}}</dd>
@@ -2384,7 +1556,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
@@ -2393,7 +1565,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Push<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive push events notifications.
 {{% /md %}}</dd>
@@ -2402,7 +1574,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Push<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for push events.
 {{% /md %}}</dd>
@@ -2411,7 +1583,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tag<wbr>Push<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive tag push events notifications.
 {{% /md %}}</dd>
@@ -2420,7 +1592,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tag<wbr>Push<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for tag push events.
 {{% /md %}}</dd>
@@ -2429,7 +1601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
@@ -2438,7 +1610,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Webhook</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}</dd>
@@ -2447,7 +1619,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Wiki<wbr>Page<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
@@ -2456,7 +1628,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Wiki<wbr>Page<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>
@@ -2472,7 +1644,7 @@ The following state arguments are supported:
             title="Optional">
         <span>branches<wbr>To<wbr>Be<wbr>Notified</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
 {{% /md %}}</dd>
@@ -2481,7 +1653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>confidential<wbr>Issue<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
 {{% /md %}}</dd>
@@ -2490,7 +1662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>confidential<wbr>Issues<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential issues events.
 {{% /md %}}</dd>
@@ -2499,7 +1671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>confidential<wbr>Note<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential note events.
 {{% /md %}}</dd>
@@ -2508,7 +1680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>issue<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive issue events notifications.
 {{% /md %}}</dd>
@@ -2517,7 +1689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>issues<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for issues events.
 {{% /md %}}</dd>
@@ -2526,7 +1698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>job<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2534,7 +1706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>merge<wbr>Request<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive merge request events notifications.
 {{% /md %}}</dd>
@@ -2543,7 +1715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>merge<wbr>Requests<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge requests events.
 {{% /md %}}</dd>
@@ -2552,7 +1724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>note<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive note events notifications.
 {{% /md %}}</dd>
@@ -2561,7 +1733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>note<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for note events.
 {{% /md %}}</dd>
@@ -2570,7 +1742,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notify<wbr>Only<wbr>Broken<wbr>Pipelines</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Send notifications for broken pipelines.
 {{% /md %}}</dd>
@@ -2579,7 +1751,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>notify<wbr>Only<wbr>Default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
@@ -2588,7 +1760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pipeline<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
 {{% /md %}}</dd>
@@ -2597,7 +1769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pipeline<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for pipeline events.
 {{% /md %}}</dd>
@@ -2606,7 +1778,7 @@ The following state arguments are supported:
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
@@ -2615,7 +1787,7 @@ The following state arguments are supported:
             title="Optional">
         <span>push<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive push events notifications.
 {{% /md %}}</dd>
@@ -2624,7 +1796,7 @@ The following state arguments are supported:
             title="Optional">
         <span>push<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for push events.
 {{% /md %}}</dd>
@@ -2633,7 +1805,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tag<wbr>Push<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive tag push events notifications.
 {{% /md %}}</dd>
@@ -2642,7 +1814,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tag<wbr>Push<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for tag push events.
 {{% /md %}}</dd>
@@ -2651,7 +1823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
@@ -2660,7 +1832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>webhook</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}</dd>
@@ -2669,7 +1841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>wiki<wbr>Page<wbr>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
@@ -2678,7 +1850,7 @@ The following state arguments are supported:
             title="Optional">
         <span>wiki<wbr>Page<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>

@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#Project">Project</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#Project">Project</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..Project.html">Project</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.ProjectArgs.html">ProjectArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.Project.html">Project</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.ProjectArgs.html">ProjectArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -122,7 +122,7 @@ block_external_search_index: true
             title="Optional">
         <span>Approvals<wbr>Before<wbr>Merge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}</dd>
@@ -131,7 +131,7 @@ block_external_search_index: true
             title="Optional">
         <span>Archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
 {{% /md %}}</dd>
@@ -140,7 +140,7 @@ block_external_search_index: true
             title="Optional">
         <span>Container<wbr>Registry<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable container registry for the project.
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ block_external_search_index: true
             title="Optional">
         <span>Default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -167,7 +167,7 @@ block_external_search_index: true
             title="Optional">
         <span>Initialize<wbr>With<wbr>Readme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create master branch with first commit containing a README.md file.
 {{% /md %}}</dd>
@@ -176,7 +176,7 @@ block_external_search_index: true
             title="Optional">
         <span>Issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ block_external_search_index: true
             title="Optional">
         <span>Lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -194,7 +194,7 @@ block_external_search_index: true
             title="Optional">
         <span>Merge<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set to `ff` to create fast-forward merges
 Valid values are `merge`, `rebase_merge`, `ff`
@@ -205,7 +205,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
 {{% /md %}}</dd>
@@ -223,7 +223,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -233,7 +233,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
 {{% /md %}}</dd>
@@ -242,7 +242,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -278,7 +278,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Shared<wbr>Runners<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable shared runners for this project.
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Shared<wbr>With<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">List&lt;Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#projectsharedwithgroup">List&lt;Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
 {{% /md %}}</dd>
@@ -296,7 +296,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
 {{% /md %}}</dd>
@@ -314,7 +314,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set to `public` to create a public project.
 Valid values are `private`, `internal`, `public`.
@@ -325,7 +325,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -341,7 +341,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Approvals<wbr>Before<wbr>Merge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}</dd>
@@ -350,7 +350,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
 {{% /md %}}</dd>
@@ -359,7 +359,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Container<wbr>Registry<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable container registry for the project.
 {{% /md %}}</dd>
@@ -368,7 +368,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -377,7 +377,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -386,7 +386,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Initialize<wbr>With<wbr>Readme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create master branch with first commit containing a README.md file.
 {{% /md %}}</dd>
@@ -395,7 +395,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -404,7 +404,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -413,7 +413,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Merge<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set to `ff` to create fast-forward merges
 Valid values are `merge`, `rebase_merge`, `ff`
@@ -424,7 +424,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -433,7 +433,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
 {{% /md %}}</dd>
@@ -442,7 +442,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -452,7 +452,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
 {{% /md %}}</dd>
@@ -461,7 +461,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
 {{% /md %}}</dd>
@@ -470,7 +470,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -479,7 +479,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -488,7 +488,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -497,7 +497,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Shared<wbr>Runners<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable shared runners for this project.
 {{% /md %}}</dd>
@@ -515,7 +515,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -533,7 +533,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set to `public` to create a public project.
 Valid values are `private`, `internal`, `public`.
@@ -544,7 +544,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -560,7 +560,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>approvals<wbr>Before<wbr>Merge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}</dd>
@@ -569,7 +569,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
 {{% /md %}}</dd>
@@ -578,7 +578,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>container<wbr>Registry<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable container registry for the project.
 {{% /md %}}</dd>
@@ -587,7 +587,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -596,7 +596,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -605,7 +605,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>initialize<wbr>With<wbr>Readme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Create master branch with first commit containing a README.md file.
 {{% /md %}}</dd>
@@ -614,7 +614,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -623,7 +623,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -632,7 +632,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>merge<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set to `ff` to create fast-forward merges
 Valid values are `merge`, `rebase_merge`, `ff`
@@ -643,7 +643,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -652,7 +652,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
 {{% /md %}}</dd>
@@ -661,7 +661,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -671,7 +671,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
 {{% /md %}}</dd>
@@ -680,7 +680,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
 {{% /md %}}</dd>
@@ -689,7 +689,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -698,7 +698,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -707,7 +707,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -716,7 +716,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>shared<wbr>Runners<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable shared runners for this project.
 {{% /md %}}</dd>
@@ -725,7 +725,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>shared<wbr>With<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">Project<wbr>Shared<wbr>With<wbr>Group[]?</a></span>
+        <span class="property-type"><a href="#projectsharedwithgroup">Project<wbr>Shared<wbr>With<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
 {{% /md %}}</dd>
@@ -734,7 +734,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -743,7 +743,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
 {{% /md %}}</dd>
@@ -752,7 +752,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set to `public` to create a public project.
 Valid values are `private`, `internal`, `public`.
@@ -763,7 +763,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -1008,51 +1008,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Approvals<wbr>Before<wbr>Merge</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Archived</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Container<wbr>Registry<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable container registry for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default branch for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1063,149 +1018,11 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Initialize<wbr>With<wbr>Readme</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Create master branch with first commit containing a README.md file.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issues<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable issue tracking for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Lfs<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable LFS for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Merge<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set to `ff` to create fast-forward merges
-Valid values are `merge`, `rebase_merge`, `ff`
-Repositories are created with `merge` by default
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Merge<wbr>Requests<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable merge requests for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The path of the repository.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pipelines<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable pipelines for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Request<wbr>Access<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Allow users to request member access.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Runners<wbr>Token</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Shared<wbr>Runners<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable shared runners for this project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Shared<wbr>With<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">List&lt;Project<wbr>Shared<wbr>With<wbr>Group&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snippets<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1220,40 +1037,11 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Tags (topics) of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Visibility<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set to `public` to create a public project.
-Valid values are `private`, `internal`, `public`.
-Repositories are created as private by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Web<wbr>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wiki<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
 
 </dl>
@@ -1265,51 +1053,6 @@ Repositories are created as private by default.
 
     <dt class="property-"
             title="">
-        <span>Approvals<wbr>Before<wbr>Merge</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Archived</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Container<wbr>Registry<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable container registry for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The default branch for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1320,149 +1063,11 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Initialize<wbr>With<wbr>Readme</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Create master branch with first commit containing a README.md file.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issues<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable issue tracking for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Lfs<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable LFS for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Merge<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Set to `ff` to create fast-forward merges
-Valid values are `merge`, `rebase_merge`, `ff`
-Repositories are created with `merge` by default
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Merge<wbr>Requests<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable merge requests for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The path of the repository.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pipelines<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable pipelines for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Request<wbr>Access<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Allow users to request member access.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Runners<wbr>Token</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Shared<wbr>Runners<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable shared runners for this project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Shared<wbr>With<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">[]Project<wbr>Shared<wbr>With<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snippets<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1477,40 +1082,11 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Tags (topics) of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Visibility<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Set to `public` to create a public project.
-Valid values are `private`, `internal`, `public`.
-Repositories are created as private by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Web<wbr>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wiki<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
 
 </dl>
@@ -1519,51 +1095,6 @@ Repositories are created as private by default.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>approvals<wbr>Before<wbr>Merge</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>archived</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>container<wbr>Registry<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable container registry for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default<wbr>Branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default branch for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the project.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1577,149 +1108,11 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>initialize<wbr>With<wbr>Readme</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Create master branch with first commit containing a README.md file.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>issues<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable issue tracking for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>lfs<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable LFS for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>merge<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set to `ff` to create fast-forward merges
-Valid values are `merge`, `rebase_merge`, `ff`
-Repositories are created with `merge` by default
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>merge<wbr>Requests<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable merge requests for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The path of the repository.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pipelines<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable pipelines for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>request<wbr>Access<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Allow users to request member access.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>runners<wbr>Token</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>shared<wbr>Runners<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable shared runners for this project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>shared<wbr>With<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">Project<wbr>Shared<wbr>With<wbr>Group[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snippets<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1734,40 +1127,11 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Tags (topics) of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>visibility<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set to `public` to create a public project.
-Valid values are `private`, `internal`, `public`.
-Repositories are created as private by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>web<wbr>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wiki<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
 
 </dl>
@@ -1776,51 +1140,6 @@ Repositories are created as private by default.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>approvals_<wbr>before_<wbr>merge</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>archived</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>container_<wbr>registry_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable container registry for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default_<wbr>branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The default branch for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of the project.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1834,149 +1153,11 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>initialize_<wbr>with_<wbr>readme</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Create master branch with first commit containing a README.md file.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>issues_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable issue tracking for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>lfs_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable LFS for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>merge_<wbr>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Set to `ff` to create fast-forward merges
-Valid values are `merge`, `rebase_merge`, `ff`
-Repositories are created with `merge` by default
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>merge_<wbr>requests_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable merge requests for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
-See `gitlab..Group` for an example.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>all_<wbr>discussions_<wbr>are_<wbr>resolved</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>pipeline_<wbr>succeeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The path of the repository.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pipelines_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable pipelines for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>request_<wbr>access_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Allow users to request member access.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>runners_<wbr>token</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>shared_<wbr>runners_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable shared runners for this project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>shared_<wbr>with_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">List[Project<wbr>Shared<wbr>With<wbr>Group]</a></span>
-    </dt>
-    <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snippets_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1991,40 +1172,11 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Tags (topics) of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>visibility_<wbr>level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Set to `public` to create a public project.
-Valid values are `private`, `internal`, `public`.
-Repositories are created as private by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>web_<wbr>url</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wiki_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
 
 </dl>
@@ -2056,7 +1208,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..Project.html">Project</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ProjectState.html">ProjectState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.Project.html">Project</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ProjectState.html">ProjectState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2166,7 +1318,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Approvals<wbr>Before<wbr>Merge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}</dd>
@@ -2175,7 +1327,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
 {{% /md %}}</dd>
@@ -2184,7 +1336,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Container<wbr>Registry<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable container registry for the project.
 {{% /md %}}</dd>
@@ -2193,7 +1345,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -2202,7 +1354,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -2211,7 +1363,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
@@ -2221,7 +1373,7 @@ repository via HTTP.
             title="Optional">
         <span>Initialize<wbr>With<wbr>Readme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create master branch with first commit containing a README.md file.
 {{% /md %}}</dd>
@@ -2230,7 +1382,7 @@ repository via HTTP.
             title="Optional">
         <span>Issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -2239,7 +1391,7 @@ repository via HTTP.
             title="Optional">
         <span>Lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -2248,7 +1400,7 @@ repository via HTTP.
             title="Optional">
         <span>Merge<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set to `ff` to create fast-forward merges
 Valid values are `merge`, `rebase_merge`, `ff`
@@ -2259,7 +1411,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -2268,7 +1420,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
 {{% /md %}}</dd>
@@ -2277,7 +1429,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -2287,7 +1439,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
 {{% /md %}}</dd>
@@ -2296,7 +1448,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
 {{% /md %}}</dd>
@@ -2305,7 +1457,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -2314,7 +1466,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -2323,7 +1475,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -2332,7 +1484,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Runners<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -2341,7 +1493,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Shared<wbr>Runners<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable shared runners for this project.
 {{% /md %}}</dd>
@@ -2350,7 +1502,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Shared<wbr>With<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">List&lt;Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#projectsharedwithgroup">List&lt;Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
 {{% /md %}}</dd>
@@ -2359,7 +1511,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -2368,7 +1520,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -2378,7 +1530,7 @@ repository via SSH.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
 {{% /md %}}</dd>
@@ -2387,7 +1539,7 @@ repository via SSH.
             title="Optional">
         <span>Visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set to `public` to create a public project.
 Valid values are `private`, `internal`, `public`.
@@ -2398,7 +1550,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -2407,7 +1559,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -2423,7 +1575,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Approvals<wbr>Before<wbr>Merge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}</dd>
@@ -2432,7 +1584,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
 {{% /md %}}</dd>
@@ -2441,7 +1593,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Container<wbr>Registry<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable container registry for the project.
 {{% /md %}}</dd>
@@ -2450,7 +1602,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -2459,7 +1611,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -2468,7 +1620,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
@@ -2478,7 +1630,7 @@ repository via HTTP.
             title="Optional">
         <span>Initialize<wbr>With<wbr>Readme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create master branch with first commit containing a README.md file.
 {{% /md %}}</dd>
@@ -2487,7 +1639,7 @@ repository via HTTP.
             title="Optional">
         <span>Issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -2496,7 +1648,7 @@ repository via HTTP.
             title="Optional">
         <span>Lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -2505,7 +1657,7 @@ repository via HTTP.
             title="Optional">
         <span>Merge<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set to `ff` to create fast-forward merges
 Valid values are `merge`, `rebase_merge`, `ff`
@@ -2516,7 +1668,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -2525,7 +1677,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
 {{% /md %}}</dd>
@@ -2534,7 +1686,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -2544,7 +1696,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
 {{% /md %}}</dd>
@@ -2553,7 +1705,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
 {{% /md %}}</dd>
@@ -2562,7 +1714,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -2571,7 +1723,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -2580,7 +1732,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -2589,7 +1741,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Runners<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -2598,7 +1750,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Shared<wbr>Runners<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable shared runners for this project.
 {{% /md %}}</dd>
@@ -2616,7 +1768,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -2625,7 +1777,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -2644,7 +1796,7 @@ repository via SSH.
             title="Optional">
         <span>Visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set to `public` to create a public project.
 Valid values are `private`, `internal`, `public`.
@@ -2655,7 +1807,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -2664,7 +1816,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>Wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -2680,7 +1832,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>approvals<wbr>Before<wbr>Merge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}</dd>
@@ -2689,7 +1841,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived). Repositories can be archived/unarchived by toggling this parameter.
 {{% /md %}}</dd>
@@ -2698,7 +1850,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>container<wbr>Registry<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable container registry for the project.
 {{% /md %}}</dd>
@@ -2707,7 +1859,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -2716,7 +1868,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -2725,7 +1877,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>http<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
@@ -2735,7 +1887,7 @@ repository via HTTP.
             title="Optional">
         <span>initialize<wbr>With<wbr>Readme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Create master branch with first commit containing a README.md file.
 {{% /md %}}</dd>
@@ -2744,7 +1896,7 @@ repository via HTTP.
             title="Optional">
         <span>issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -2753,7 +1905,7 @@ repository via HTTP.
             title="Optional">
         <span>lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -2762,7 +1914,7 @@ repository via HTTP.
             title="Optional">
         <span>merge<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set to `ff` to create fast-forward merges
 Valid values are `merge`, `rebase_merge`, `ff`
@@ -2773,7 +1925,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -2782,7 +1934,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
 {{% /md %}}</dd>
@@ -2791,7 +1943,7 @@ Repositories are created with `merge` by default
             title="Optional">
         <span>namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -2801,7 +1953,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if all discussions are resolved.
 {{% /md %}}</dd>
@@ -2810,7 +1962,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
 {{% /md %}}</dd>
@@ -2819,7 +1971,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -2828,7 +1980,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -2837,7 +1989,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -2846,7 +1998,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>runners<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -2855,7 +2007,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>shared<wbr>Runners<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable shared runners for this project.
 {{% /md %}}</dd>
@@ -2864,7 +2016,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>shared<wbr>With<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">Project<wbr>Shared<wbr>With<wbr>Group[]?</a></span>
+        <span class="property-type"><a href="#projectsharedwithgroup">Project<wbr>Shared<wbr>With<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
 {{% /md %}}</dd>
@@ -2873,7 +2025,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -2882,7 +2034,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>ssh<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -2892,7 +2044,7 @@ repository via SSH.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
 {{% /md %}}</dd>
@@ -2901,7 +2053,7 @@ repository via SSH.
             title="Optional">
         <span>visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set to `public` to create a public project.
 Valid values are `private`, `internal`, `public`.
@@ -2912,7 +2064,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -2921,7 +2073,7 @@ Repositories are created as private by default.
             title="Optional">
         <span>wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -3235,7 +2387,7 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
             title="Optional">
         <span>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group's name.
 {{% /md %}}</dd>
@@ -3270,7 +2422,7 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
             title="Optional">
         <span>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group's name.
 {{% /md %}}</dd>
@@ -3305,7 +2457,7 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
             title="Optional">
         <span>group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group's name.
 {{% /md %}}</dd>

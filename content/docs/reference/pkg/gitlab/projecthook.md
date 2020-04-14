@@ -33,7 +33,7 @@ const example = new gitlab.ProjectHook("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectHook">ProjectHook</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectHookArgs">ProjectHookArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectHook">ProjectHook</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectHookArgs">ProjectHookArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -41,11 +41,11 @@ const example = new gitlab.ProjectHook("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProjectHook<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ProjectHookArgs">ProjectHookArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ProjectHook">ProjectHook</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProjectHook<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ProjectHookArgs">ProjectHookArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ProjectHook">ProjectHook</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ProjectHook.html">ProjectHook</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.ProjectHookArgs.html">ProjectHookArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.ProjectHook.html">ProjectHook</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.ProjectHookArgs.html">ProjectHookArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -137,61 +137,6 @@ const example = new gitlab.ProjectHook("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Ssl<wbr>Verification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable ssl verification when invoking
-the hook.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Job<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Pipeline<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project</span>
@@ -199,33 +144,6 @@ the hook.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tag<wbr>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A token to present when invoking the hook.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -239,9 +157,91 @@ the hook.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Enable<wbr>Ssl<wbr>Verification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable ssl verification when invoking
+the hook.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Issues<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for issues events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Job<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for job events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Merge<wbr>Requests<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for merge requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Note<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for notes events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pipeline<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for pipeline events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Push<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for push events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tag<wbr>Push<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for tag push events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A token to present when invoking the hook.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Wiki<wbr>Page<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
 {{% /md %}}</dd>
@@ -253,61 +253,6 @@ the hook.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Ssl<wbr>Verification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable ssl verification when invoking
-the hook.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Job<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Pipeline<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project</span>
@@ -315,33 +260,6 @@ the hook.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tag<wbr>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A token to present when invoking the hook.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -355,9 +273,91 @@ the hook.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Enable<wbr>Ssl<wbr>Verification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable ssl verification when invoking
+the hook.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Issues<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for issues events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Job<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for job events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Merge<wbr>Requests<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for merge requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Note<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for notes events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pipeline<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for pipeline events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Push<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for push events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tag<wbr>Push<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for tag push events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A token to present when invoking the hook.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Wiki<wbr>Page<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
 {{% /md %}}</dd>
@@ -369,61 +369,6 @@ the hook.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>enable<wbr>Ssl<wbr>Verification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable ssl verification when invoking
-the hook.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>job<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>pipeline<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>project</span>
@@ -431,33 +376,6 @@ the hook.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tag<wbr>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A token to present when invoking the hook.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -471,9 +389,91 @@ the hook.
 
     <dt class="property-optional"
             title="Optional">
+        <span>enable<wbr>Ssl<wbr>Verification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable ssl verification when invoking
+the hook.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>issues<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for issues events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>job<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for job events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>merge<wbr>Requests<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for merge requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>note<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for notes events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pipeline<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for pipeline events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>push<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for push events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tag<wbr>Push<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Invoke the hook for tag push events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A token to present when invoking the hook.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>wiki<wbr>Page<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
 {{% /md %}}</dd>
@@ -484,6 +484,24 @@ the hook.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name or id of the project to add the hook to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The url of the hook to invoke.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -540,15 +558,6 @@ the hook.
     <dd>{{% md %}}Invoke the hook for pipeline events.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>push_<wbr>events</span>
@@ -576,15 +585,6 @@ the hook.
     <dd>{{% md %}}A token to present when invoking the hook.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The url of the hook to invoke.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>wiki_<wbr>page_<wbr>events</span>
@@ -598,480 +598,6 @@ the hook.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ProjectHook Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Ssl<wbr>Verification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable ssl verification when invoking
-the hook.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Job<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pipeline<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tag<wbr>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A token to present when invoking the hook.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The url of the hook to invoke.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wiki<wbr>Page<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for wiki page events.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Ssl<wbr>Verification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable ssl verification when invoking
-the hook.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Job<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pipeline<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tag<wbr>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A token to present when invoking the hook.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The url of the hook to invoke.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wiki<wbr>Page<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for wiki page events.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>enable<wbr>Ssl<wbr>Verification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable ssl verification when invoking
-the hook.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>issues<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>job<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>note<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pipeline<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tag<wbr>Push<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A token to present when invoking the hook.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The url of the hook to invoke.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wiki<wbr>Page<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for wiki page events.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>enable_<wbr>ssl_<wbr>verification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable ssl verification when invoking
-the hook.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>issues_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>job_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>merge_<wbr>requests_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>note_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pipeline_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>push_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tag_<wbr>push_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A token to present when invoking the hook.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The url of the hook to invoke.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wiki_<wbr>page_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Invoke the hook for wiki page events.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1099,7 +625,7 @@ Get an existing ProjectHook resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ProjectHook.html">ProjectHook</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ProjectHookState.html">ProjectHookState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.ProjectHook.html">ProjectHook</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ProjectHookState.html">ProjectHookState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1209,7 +735,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Ssl<wbr>Verification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking
 the hook.
@@ -1219,7 +745,7 @@ the hook.
             title="Optional">
         <span>Issues<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
 {{% /md %}}</dd>
@@ -1228,7 +754,7 @@ the hook.
             title="Optional">
         <span>Job<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
 {{% /md %}}</dd>
@@ -1237,7 +763,7 @@ the hook.
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
 {{% /md %}}</dd>
@@ -1246,7 +772,7 @@ the hook.
             title="Optional">
         <span>Note<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
 {{% /md %}}</dd>
@@ -1255,7 +781,7 @@ the hook.
             title="Optional">
         <span>Pipeline<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
 {{% /md %}}</dd>
@@ -1264,7 +790,7 @@ the hook.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
 {{% /md %}}</dd>
@@ -1273,7 +799,7 @@ the hook.
             title="Optional">
         <span>Push<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
 {{% /md %}}</dd>
@@ -1282,7 +808,7 @@ the hook.
             title="Optional">
         <span>Tag<wbr>Push<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
 {{% /md %}}</dd>
@@ -1291,7 +817,7 @@ the hook.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
 {{% /md %}}</dd>
@@ -1300,7 +826,7 @@ the hook.
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
 {{% /md %}}</dd>
@@ -1309,7 +835,7 @@ the hook.
             title="Optional">
         <span>Wiki<wbr>Page<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
 {{% /md %}}</dd>
@@ -1325,7 +851,7 @@ the hook.
             title="Optional">
         <span>Enable<wbr>Ssl<wbr>Verification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking
 the hook.
@@ -1335,7 +861,7 @@ the hook.
             title="Optional">
         <span>Issues<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
 {{% /md %}}</dd>
@@ -1344,7 +870,7 @@ the hook.
             title="Optional">
         <span>Job<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
 {{% /md %}}</dd>
@@ -1353,7 +879,7 @@ the hook.
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
 {{% /md %}}</dd>
@@ -1362,7 +888,7 @@ the hook.
             title="Optional">
         <span>Note<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
 {{% /md %}}</dd>
@@ -1371,7 +897,7 @@ the hook.
             title="Optional">
         <span>Pipeline<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
 {{% /md %}}</dd>
@@ -1380,7 +906,7 @@ the hook.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
 {{% /md %}}</dd>
@@ -1389,7 +915,7 @@ the hook.
             title="Optional">
         <span>Push<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
 {{% /md %}}</dd>
@@ -1398,7 +924,7 @@ the hook.
             title="Optional">
         <span>Tag<wbr>Push<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
 {{% /md %}}</dd>
@@ -1407,7 +933,7 @@ the hook.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
 {{% /md %}}</dd>
@@ -1416,7 +942,7 @@ the hook.
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
 {{% /md %}}</dd>
@@ -1425,7 +951,7 @@ the hook.
             title="Optional">
         <span>Wiki<wbr>Page<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
 {{% /md %}}</dd>
@@ -1441,7 +967,7 @@ the hook.
             title="Optional">
         <span>enable<wbr>Ssl<wbr>Verification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking
 the hook.
@@ -1451,7 +977,7 @@ the hook.
             title="Optional">
         <span>issues<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
 {{% /md %}}</dd>
@@ -1460,7 +986,7 @@ the hook.
             title="Optional">
         <span>job<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
 {{% /md %}}</dd>
@@ -1469,7 +995,7 @@ the hook.
             title="Optional">
         <span>merge<wbr>Requests<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
 {{% /md %}}</dd>
@@ -1478,7 +1004,7 @@ the hook.
             title="Optional">
         <span>note<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
 {{% /md %}}</dd>
@@ -1487,7 +1013,7 @@ the hook.
             title="Optional">
         <span>pipeline<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
 {{% /md %}}</dd>
@@ -1496,7 +1022,7 @@ the hook.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
 {{% /md %}}</dd>
@@ -1505,7 +1031,7 @@ the hook.
             title="Optional">
         <span>push<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
 {{% /md %}}</dd>
@@ -1514,7 +1040,7 @@ the hook.
             title="Optional">
         <span>tag<wbr>Push<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
 {{% /md %}}</dd>
@@ -1523,7 +1049,7 @@ the hook.
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
 {{% /md %}}</dd>
@@ -1532,7 +1058,7 @@ the hook.
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
 {{% /md %}}</dd>
@@ -1541,7 +1067,7 @@ the hook.
             title="Optional">
         <span>wiki<wbr>Page<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
 {{% /md %}}</dd>
