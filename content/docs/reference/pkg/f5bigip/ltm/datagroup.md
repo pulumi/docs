@@ -43,7 +43,7 @@ const datagroup = new f5bigip.ltm.DataGroup("datagroup", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#DataGroup">DataGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#DataGroupArgs">DataGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#DataGroup">DataGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#DataGroupArgs">DataGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -51,11 +51,11 @@ const datagroup = new f5bigip.ltm.DataGroup("datagroup", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDataGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#DataGroupArgs">DataGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#DataGroup">DataGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDataGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#DataGroupArgs">DataGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#DataGroup">DataGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5bigip.Ltm.DataGroup.html">DataGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5bigip.Ltm.DataGroupArgs.html">DataGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5bigip.Ltm.DataGroup.html">DataGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Ltm.DataGroupArgs.html">DataGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -156,15 +156,6 @@ const datagroup = new f5bigip.ltm.DataGroup("datagroup", {
     <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Records</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datagrouprecord">List&lt;Data<wbr>Group<wbr>Record<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -172,6 +163,15 @@ const datagroup = new f5bigip.ltm.DataGroup("datagroup", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}datagroup type (applies to the `name` field of the record), supports: `string`, `ip` or `integer`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Records</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datagrouprecord">List&lt;Pulumi.<wbr>F5Big<wbr>IP.<wbr>Ltm.<wbr>Inputs.<wbr>Data<wbr>Group<wbr>Record<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
 {{% /md %}}</dd>
 
 </dl>
@@ -190,15 +190,6 @@ const datagroup = new f5bigip.ltm.DataGroup("datagroup", {
     <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Records</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datagrouprecord">[]Data<wbr>Group<wbr>Record</a></span>
-    </dt>
-    <dd>{{% md %}}a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -206,6 +197,15 @@ const datagroup = new f5bigip.ltm.DataGroup("datagroup", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}datagroup type (applies to the `name` field of the record), supports: `string`, `ip` or `integer`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Records</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datagrouprecord">[]Data<wbr>Group<wbr>Record</a></span>
+    </dt>
+    <dd>{{% md %}}a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
 {{% /md %}}</dd>
 
 </dl>
@@ -224,15 +224,6 @@ const datagroup = new f5bigip.ltm.DataGroup("datagroup", {
     <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>records</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datagrouprecord">Data<wbr>Group<wbr>Record[]?</a></span>
-    </dt>
-    <dd>{{% md %}}a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>type</span>
@@ -240,6 +231,15 @@ const datagroup = new f5bigip.ltm.DataGroup("datagroup", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}datagroup type (applies to the `name` field of the record), supports: `string`, `ip` or `integer`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>records</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datagrouprecord">Data<wbr>Group<wbr>Record[]</a></span>
+    </dt>
+    <dd>{{% md %}}a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
 {{% /md %}}</dd>
 
 </dl>
@@ -258,15 +258,6 @@ const datagroup = new f5bigip.ltm.DataGroup("datagroup", {
     <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>records</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datagrouprecord">List[Data<wbr>Group<wbr>Record]</a></span>
-    </dt>
-    <dd>{{% md %}}a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>type</span>
@@ -276,138 +267,8 @@ const datagroup = new f5bigip.ltm.DataGroup("datagroup", {
     <dd>{{% md %}}datagroup type (applies to the `name` field of the record), supports: `string`, `ip` or `integer`
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## DataGroup Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Records</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datagrouprecord">List&lt;Data<wbr>Group<wbr>Record&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}datagroup type (applies to the `name` field of the record), supports: `string`, `ip` or `integer`
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Records</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datagrouprecord">[]Data<wbr>Group<wbr>Record</a></span>
-    </dt>
-    <dd>{{% md %}}a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}datagroup type (applies to the `name` field of the record), supports: `string`, `ip` or `integer`
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>records</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datagrouprecord">Data<wbr>Group<wbr>Record[]?</a></span>
-    </dt>
-    <dd>{{% md %}}a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}datagroup type (applies to the `name` field of the record), supports: `string`, `ip` or `integer`
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>records</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datagrouprecord">List[Data<wbr>Group<wbr>Record]</a></span>
@@ -415,17 +276,10 @@ The following output properties are available:
     <dd>{{% md %}}a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}datagroup type (applies to the `name` field of the record), supports: `string`, `ip` or `integer`
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -563,7 +417,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
 {{% /md %}}</dd>
@@ -572,7 +426,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Records</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datagrouprecord">List&lt;Data<wbr>Group<wbr>Record<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#datagrouprecord">List&lt;Pulumi.<wbr>F5Big<wbr>IP.<wbr>Ltm.<wbr>Inputs.<wbr>Data<wbr>Group<wbr>Record<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
 {{% /md %}}</dd>
@@ -581,7 +435,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}datagroup type (applies to the `name` field of the record), supports: `string`, `ip` or `integer`
 {{% /md %}}</dd>
@@ -597,7 +451,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
 {{% /md %}}</dd>
@@ -615,7 +469,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}datagroup type (applies to the `name` field of the record), supports: `string`, `ip` or `integer`
 {{% /md %}}</dd>
@@ -631,7 +485,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
 {{% /md %}}</dd>
@@ -640,7 +494,7 @@ The following state arguments are supported:
             title="Optional">
         <span>records</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datagrouprecord">Data<wbr>Group<wbr>Record[]?</a></span>
+        <span class="property-type"><a href="#datagrouprecord">Data<wbr>Group<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}a set of `name` and `data` attributes, name must be of type specified by the `type` attributed (`string`, `ip` and `integer`), data is optional and can take any value, multiple `record` sets can be specified as needed.
 {{% /md %}}</dd>
@@ -649,7 +503,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}datagroup type (applies to the `name` field of the record), supports: `string`, `ip` or `integer`
 {{% /md %}}</dd>
@@ -717,15 +571,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}, sets the value of the record's `data` attribute, specifying a value here will create a record in the form of `name := data`
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -733,6 +578,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}, sets the value of the record's `data` attribute, specifying a value here will create a record in the form of `name := data`
 {{% /md %}}</dd>
 
 </dl>
@@ -742,15 +596,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}, sets the value of the record's `data` attribute, specifying a value here will create a record in the form of `name := data`
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -760,21 +605,21 @@ The following state arguments are supported:
     <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}, sets the value of the record's `data` attribute, specifying a value here will create a record in the form of `name := data`
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}, sets the value of the record's `data` attribute, specifying a value here will create a record in the form of `name := data`
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -785,21 +630,21 @@ The following state arguments are supported:
     <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}, sets the value of the record's `data` attribute, specifying a value here will create a record in the form of `name := data`
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}, sets the value of the record's `data` attribute, specifying a value here will create a record in the form of `name := data`
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -808,6 +653,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}, sets the value of the record's `name` attribute, must be of type defined in `type` attribute
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}, sets the value of the record's `data` attribute, specifying a value here will create a record in the form of `name := data`
 {{% /md %}}</dd>
 
 </dl>

@@ -35,7 +35,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#ProfileServerSsl">ProfileServerSsl</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#ProfileServerSslArgs">ProfileServerSslArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#ProfileServerSsl">ProfileServerSsl</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#ProfileServerSslArgs">ProfileServerSslArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -43,11 +43,11 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProfileServerSsl<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#ProfileServerSslArgs">ProfileServerSslArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#ProfileServerSsl">ProfileServerSsl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProfileServerSsl<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#ProfileServerSslArgs">ProfileServerSslArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#ProfileServerSsl">ProfileServerSsl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5bigip.Ltm.ProfileServerSsl.html">ProfileServerSsl</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5bigip.Ltm.ProfileServerSslArgs.html">ProfileServerSslArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5bigip.Ltm.ProfileServerSsl.html">ProfileServerSsl</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Ltm.ProfileServerSslArgs.html">ProfileServerSslArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -139,168 +139,6 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Alert<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Alert time out
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authenticate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authenticate<wbr>Depth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ca<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Client certificate file path. Default None.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cache<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Cache size (sessions).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cache<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Cache time out
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ciphers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Defaults<wbr>From</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Expire<wbr>Cert<wbr>Response<wbr>Control</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Response if the cert is expired (drop / ignore).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Full<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}full path of the profile
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Generation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}generation
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Generic<wbr>Alert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Generic alerts enabled / disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Handshake<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Handshake time out (seconds)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the file name of the SSL key.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mod<wbr>Ssl<wbr>Methods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -312,9 +150,171 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Alert<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alert time out
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Authenticate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Server authentication once / always (default is once).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Authenticate<wbr>Depth</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ca<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client certificate file path. Default None.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cache<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Cache size (sessions).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cache<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Cache time out
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Chain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ciphers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Defaults<wbr>From</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Expire<wbr>Cert<wbr>Response<wbr>Control</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Response if the cert is expired (drop / ignore).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Full<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}full path of the profile
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Generation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}generation
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Generic<wbr>Alert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Generic alerts enabled / disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Handshake<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Handshake time out (seconds)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the file name of the SSL key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mod<wbr>Ssl<wbr>Methods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Partition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
@@ -323,7 +323,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Passphrase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
@@ -332,7 +332,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Peer<wbr>Cert<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
@@ -341,7 +341,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Proxy<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -350,7 +350,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Renegotiate<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
@@ -359,7 +359,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Renegotiate<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
@@ -368,7 +368,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -377,7 +377,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Retain<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
@@ -386,7 +386,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Secure<wbr>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -398,7 +398,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
@@ -407,7 +407,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Mirroring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
@@ -416,7 +416,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Ticket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
@@ -425,7 +425,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Sni<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -435,7 +435,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Sni<wbr>Require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -444,7 +444,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
@@ -453,7 +453,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
@@ -462,7 +462,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Sign<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
@@ -471,7 +471,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Strict<wbr>Resume</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
@@ -480,7 +480,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Tm<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -488,7 +488,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Unclean<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
@@ -497,7 +497,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (drop / ignore)
 {{% /md %}}</dd>
@@ -509,168 +509,6 @@ There can be only one SSL profile with this setting enabled.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Alert<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Alert time out
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authenticate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authenticate<wbr>Depth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ca<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Client certificate file path. Default None.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cache<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Cache size (sessions).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cache<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Cache time out
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ciphers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Defaults<wbr>From</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Expire<wbr>Cert<wbr>Response<wbr>Control</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Response if the cert is expired (drop / ignore).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Full<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}full path of the profile
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Generation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}generation
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Generic<wbr>Alert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Generic alerts enabled / disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Handshake<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Handshake time out (seconds)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the file name of the SSL key.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mod<wbr>Ssl<wbr>Methods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -682,9 +520,171 @@ There can be only one SSL profile with this setting enabled.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Alert<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alert time out
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Authenticate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Server authentication once / always (default is once).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Authenticate<wbr>Depth</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ca<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client certificate file path. Default None.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cache<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Cache size (sessions).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cache<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Cache time out
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Chain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ciphers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Defaults<wbr>From</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Expire<wbr>Cert<wbr>Response<wbr>Control</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Response if the cert is expired (drop / ignore).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Full<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}full path of the profile
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Generation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}generation
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Generic<wbr>Alert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Generic alerts enabled / disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Handshake<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Handshake time out (seconds)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the file name of the SSL key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mod<wbr>Ssl<wbr>Methods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Partition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
@@ -693,7 +693,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Passphrase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
@@ -702,7 +702,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Peer<wbr>Cert<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
@@ -711,7 +711,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Proxy<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -720,7 +720,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Renegotiate<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
@@ -729,7 +729,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Renegotiate<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
@@ -738,7 +738,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -747,7 +747,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Retain<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
@@ -756,7 +756,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Secure<wbr>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -768,7 +768,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
@@ -777,7 +777,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Mirroring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
@@ -786,7 +786,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Ticket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
@@ -795,7 +795,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Sni<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -805,7 +805,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Sni<wbr>Require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -814,7 +814,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
@@ -823,7 +823,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
@@ -832,7 +832,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Sign<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
@@ -841,7 +841,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Strict<wbr>Resume</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
@@ -858,1505 +858,13 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Unclean<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Unclean Shutdown (drop / ignore)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>alert<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Alert time out
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authenticate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authenticate<wbr>Depth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ca<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Client certificate file path. Default None.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cache<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Cache size (sessions).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cache<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Cache time out
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ciphers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>defaults<wbr>From</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>expire<wbr>Cert<wbr>Response<wbr>Control</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Response if the cert is expired (drop / ignore).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>full<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}full path of the profile
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>generation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}generation
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>generic<wbr>Alert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Generic alerts enabled / disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>handshake<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Handshake time out (seconds)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the file name of the SSL key.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mod<wbr>Ssl<wbr>Methods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the profile. (type `string`)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>partition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Device partition to manage resources on.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>passphrase</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>peer<wbr>Cert<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>proxy<wbr>Ssl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>renegotiate<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Renogotiate Period (seconds)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>renegotiate<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Renogotiate Size
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>renegotiation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>retain<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>secure<wbr>Renegotiation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
-When `request` is set the system request secure renegotation of SSL connections.
-`require` is a default setting and when set the system permits initial SSL handshakes from clients but terminates renegotiations from unpatched clients.
-The `require-strict` setting the system requires strict renegotiation of SSL connections. In this mode the system refuses connections to insecure servers, and terminates existing SSL connections to insecure servers
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>server<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>session<wbr>Mirroring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Session Mirroring (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>session<wbr>Ticket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Session Ticket (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>sni<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
-There can be only one SSL profile with this setting enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>sni<wbr>Require</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssl<wbr>Forward<wbr>Proxy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssl<wbr>Sign<wbr>Hash</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>strict<wbr>Resume</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tm<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>unclean<wbr>Shutdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Unclean Shutdown (drop / ignore)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>alert_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Alert time out
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authenticate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authenticate_<wbr>depth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ca_<wbr>file</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Client certificate file path. Default None.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cache_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Cache size (sessions).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cache_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Cache time out
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ciphers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>defaults_<wbr>from</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>expire_<wbr>cert_<wbr>response_<wbr>control</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Response if the cert is expired (drop / ignore).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>full_<wbr>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}full path of the profile
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>generation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}generation
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>generic_<wbr>alert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Generic alerts enabled / disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>handshake_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Handshake time out (seconds)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the file name of the SSL key.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mod_<wbr>ssl_<wbr>methods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the profile. (type `string`)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>partition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Device partition to manage resources on.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>passphrase</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>peer_<wbr>cert_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>proxy_<wbr>ssl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>renegotiate_<wbr>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Renogotiate Period (seconds)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>renegotiate_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Renogotiate Size
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>renegotiation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>retain_<wbr>certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>secure_<wbr>renegotiation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
-When `request` is set the system request secure renegotation of SSL connections.
-`require` is a default setting and when set the system permits initial SSL handshakes from clients but terminates renegotiations from unpatched clients.
-The `require-strict` setting the system requires strict renegotiation of SSL connections. In this mode the system refuses connections to insecure servers, and terminates existing SSL connections to insecure servers
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>server_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>session_<wbr>mirroring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Session Mirroring (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>session_<wbr>ticket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Session Ticket (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>sni_<wbr>default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
-There can be only one SSL profile with this setting enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>sni_<wbr>require</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssl_<wbr>forward_<wbr>proxy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssl_<wbr>forward_<wbr>proxy_<wbr>bypass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssl_<wbr>sign_<wbr>hash</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>strict_<wbr>resume</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tm_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>unclean_<wbr>shutdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>untrusted_<wbr>cert_<wbr>response_<wbr>control</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Unclean Shutdown (drop / ignore)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## ProfileServerSsl Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Alert<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Alert time out
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authenticate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authenticate<wbr>Depth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ca<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Client certificate file path. Default None.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cache<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Cache size (sessions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cache<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Cache time out
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ciphers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Defaults<wbr>From</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Expire<wbr>Cert<wbr>Response<wbr>Control</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Response if the cert is expired (drop / ignore).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Full<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}full path of the profile
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Generation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}generation
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Generic<wbr>Alert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Generic alerts enabled / disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Handshake<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Handshake time out (seconds)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the file name of the SSL key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mod<wbr>Ssl<wbr>Methods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the profile. (type `string`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Partition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Device partition to manage resources on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Passphrase</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Cert<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Proxy<wbr>Ssl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Renegotiate<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Renogotiate Period (seconds)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Renegotiate<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Renogotiate Size
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Renegotiation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Retain<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secure<wbr>Renegotiation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
-When `request` is set the system request secure renegotation of SSL connections.
-`require` is a default setting and when set the system permits initial SSL handshakes from clients but terminates renegotiations from unpatched clients.
-The `require-strict` setting the system requires strict renegotiation of SSL connections. In this mode the system refuses connections to insecure servers, and terminates existing SSL connections to insecure servers
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session<wbr>Mirroring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Session Mirroring (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session<wbr>Ticket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Session Ticket (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sni<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
-There can be only one SSL profile with this setting enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sni<wbr>Require</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Forward<wbr>Proxy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Sign<wbr>Hash</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Strict<wbr>Resume</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tm<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Unclean<wbr>Shutdown</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Unclean Shutdown (drop / ignore)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Alert<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Alert time out
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authenticate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authenticate<wbr>Depth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ca<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Client certificate file path. Default None.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cache<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Cache size (sessions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cache<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Cache time out
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ciphers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Defaults<wbr>From</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Expire<wbr>Cert<wbr>Response<wbr>Control</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Response if the cert is expired (drop / ignore).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Full<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}full path of the profile
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Generation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}generation
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Generic<wbr>Alert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Generic alerts enabled / disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Handshake<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Handshake time out (seconds)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the file name of the SSL key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mod<wbr>Ssl<wbr>Methods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the profile. (type `string`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Partition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Device partition to manage resources on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Passphrase</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Cert<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Proxy<wbr>Ssl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Renegotiate<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Renogotiate Period (seconds)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Renegotiate<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Renogotiate Size
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Renegotiation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Retain<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secure<wbr>Renegotiation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
-When `request` is set the system request secure renegotation of SSL connections.
-`require` is a default setting and when set the system permits initial SSL handshakes from clients but terminates renegotiations from unpatched clients.
-The `require-strict` setting the system requires strict renegotiation of SSL connections. In this mode the system refuses connections to insecure servers, and terminates existing SSL connections to insecure servers
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session<wbr>Mirroring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Session Mirroring (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session<wbr>Ticket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Session Ticket (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sni<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
-There can be only one SSL profile with this setting enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sni<wbr>Require</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Forward<wbr>Proxy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Sign<wbr>Hash</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Strict<wbr>Resume</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tm<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Unclean<wbr>Shutdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>Untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2371,170 +879,8 @@ There can be only one SSL profile with this setting enabled.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>alert<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Alert time out
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authenticate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authenticate<wbr>Depth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ca<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Client certificate file path. Default None.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cache<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Cache size (sessions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cache<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Cache time out
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ciphers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>defaults<wbr>From</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expire<wbr>Cert<wbr>Response<wbr>Control</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Response if the cert is expired (drop / ignore).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>full<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}full path of the profile
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>generation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}generation
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>generic<wbr>Alert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Generic alerts enabled / disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>handshake<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Handshake time out (seconds)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the file name of the SSL key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mod<wbr>Ssl<wbr>Methods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2542,8 +888,170 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Specifies the name of the profile. (type `string`)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
+        <span>alert<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alert time out
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authenticate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Server authentication once / always (default is once).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authenticate<wbr>Depth</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ca<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client certificate file path. Default None.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cache<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Cache size (sessions).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cache<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Cache time out
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>chain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ciphers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>defaults<wbr>From</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>expire<wbr>Cert<wbr>Response<wbr>Control</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Response if the cert is expired (drop / ignore).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>full<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}full path of the profile
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>generation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}generation
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>generic<wbr>Alert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Generic alerts enabled / disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>handshake<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Handshake time out (seconds)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the file name of the SSL key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mod<wbr>Ssl<wbr>Methods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>partition</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2551,8 +1059,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>passphrase</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2560,8 +1068,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>peer<wbr>Cert<wbr>Mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2569,8 +1077,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>proxy<wbr>Ssl</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2578,8 +1086,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>renegotiate<wbr>Period</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2587,8 +1095,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>renegotiate<wbr>Size</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2596,8 +1104,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>renegotiation</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2605,8 +1113,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>retain<wbr>Certificate</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2614,8 +1122,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>secure<wbr>Renegotiation</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2626,8 +1134,8 @@ When `request` is set the system request secure renegotation of SSL connections.
 The `require-strict` setting the system requires strict renegotiation of SSL connections. In this mode the system refuses connections to insecure servers, and terminates existing SSL connections to insecure servers
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>server<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2635,8 +1143,8 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>session<wbr>Mirroring</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2644,8 +1152,8 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>session<wbr>Ticket</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2653,8 +1161,8 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>sni<wbr>Default</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2663,8 +1171,8 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 There can be only one SSL profile with this setting enabled.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>sni<wbr>Require</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2672,8 +1180,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>ssl<wbr>Forward<wbr>Proxy</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2681,8 +1189,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2690,8 +1198,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>ssl<wbr>Sign<wbr>Hash</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2699,8 +1207,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>strict<wbr>Resume</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2708,16 +1216,16 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tm<wbr>Options</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>unclean<wbr>Shutdown</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2725,8 +1233,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2741,170 +1249,8 @@ There can be only one SSL profile with this setting enabled.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>alert_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Alert time out
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authenticate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Server authentication once / always (default is once).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authenticate_<wbr>depth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ca_<wbr>file</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Client certificate file path. Default None.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cache_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Cache size (sessions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cache_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Cache time out
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ciphers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>defaults_<wbr>from</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expire_<wbr>cert_<wbr>response_<wbr>control</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Response if the cert is expired (drop / ignore).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>full_<wbr>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}full path of the profile
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>generation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}generation
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>generic_<wbr>alert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Generic alerts enabled / disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>handshake_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Handshake time out (seconds)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the file name of the SSL key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mod_<wbr>ssl_<wbr>methods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2912,8 +1258,170 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Specifies the name of the profile. (type `string`)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
+        <span>alert_<wbr>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Alert time out
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authenticate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Server authentication once / always (default is once).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authenticate_<wbr>depth</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ca_<wbr>file</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Client certificate file path. Default None.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cache_<wbr>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Cache size (sessions).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cache_<wbr>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Cache time out
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>chain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ciphers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>defaults_<wbr>from</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>expire_<wbr>cert_<wbr>response_<wbr>control</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Response if the cert is expired (drop / ignore).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>full_<wbr>path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}full path of the profile
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>generation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}generation
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>generic_<wbr>alert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Generic alerts enabled / disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>handshake_<wbr>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Handshake time out (seconds)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the file name of the SSL key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mod_<wbr>ssl_<wbr>methods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>partition</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2921,8 +1429,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>passphrase</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2930,8 +1438,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>peer_<wbr>cert_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2939,8 +1447,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>proxy_<wbr>ssl</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2948,8 +1456,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>renegotiate_<wbr>period</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2957,8 +1465,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>renegotiate_<wbr>size</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2966,8 +1474,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>renegotiation</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2975,8 +1483,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>retain_<wbr>certificate</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2984,8 +1492,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>secure_<wbr>renegotiation</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2996,8 +1504,8 @@ When `request` is set the system request secure renegotation of SSL connections.
 The `require-strict` setting the system requires strict renegotiation of SSL connections. In this mode the system refuses connections to insecure servers, and terminates existing SSL connections to insecure servers
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>server_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3005,8 +1513,8 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>session_<wbr>mirroring</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3014,8 +1522,8 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>session_<wbr>ticket</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3023,8 +1531,8 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>sni_<wbr>default</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3033,8 +1541,8 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
 There can be only one SSL profile with this setting enabled.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>sni_<wbr>require</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3042,8 +1550,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>ssl_<wbr>forward_<wbr>proxy</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3051,8 +1559,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>ssl_<wbr>forward_<wbr>proxy_<wbr>bypass</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3060,8 +1568,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>ssl_<wbr>sign_<wbr>hash</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3069,8 +1577,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>strict_<wbr>resume</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3078,16 +1586,16 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tm_<wbr>options</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>unclean_<wbr>shutdown</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3095,8 +1603,8 @@ There can be only one SSL profile with this setting enabled.
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>untrusted_<wbr>cert_<wbr>response_<wbr>control</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3106,6 +1614,8 @@ There can be only one SSL profile with this setting enabled.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -3243,7 +1753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alert<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd>
@@ -3252,7 +1762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authenticate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server authentication once / always (default is once).
 {{% /md %}}</dd>
@@ -3261,7 +1771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authenticate<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
 {{% /md %}}</dd>
@@ -3270,7 +1780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ca<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd>
@@ -3279,7 +1789,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cache<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd>
@@ -3288,7 +1798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cache<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd>
@@ -3297,7 +1807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
 {{% /md %}}</dd>
@@ -3306,7 +1816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
 {{% /md %}}</dd>
@@ -3315,7 +1825,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd>
@@ -3324,7 +1834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Defaults<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
 {{% /md %}}</dd>
@@ -3333,7 +1843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expire<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Response if the cert is expired (drop / ignore).
 {{% /md %}}</dd>
@@ -3342,7 +1852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd>
@@ -3351,7 +1861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd>
@@ -3360,7 +1870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Generic<wbr>Alert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd>
@@ -3369,7 +1879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Handshake<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd>
@@ -3378,7 +1888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the file name of the SSL key.
 {{% /md %}}</dd>
@@ -3387,7 +1897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mod<wbr>Ssl<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -3396,7 +1906,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -3405,7 +1915,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile. (type `string`)
 {{% /md %}}</dd>
@@ -3414,7 +1924,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Partition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
@@ -3423,7 +1933,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Passphrase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
@@ -3432,7 +1942,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Peer<wbr>Cert<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
@@ -3441,7 +1951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Proxy<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -3450,7 +1960,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Renegotiate<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
@@ -3459,7 +1969,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Renegotiate<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
@@ -3468,7 +1978,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -3477,7 +1987,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Retain<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
@@ -3486,7 +1996,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secure<wbr>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -3498,7 +2008,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
@@ -3507,7 +2017,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Mirroring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
@@ -3516,7 +2026,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Ticket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
@@ -3525,7 +2035,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Sni<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -3535,7 +2045,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Sni<wbr>Require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -3544,7 +2054,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
@@ -3553,7 +2063,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
@@ -3562,7 +2072,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Sign<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
@@ -3571,7 +2081,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Strict<wbr>Resume</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
@@ -3580,7 +2090,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Tm<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3588,7 +2098,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Unclean<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
@@ -3597,7 +2107,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (drop / ignore)
 {{% /md %}}</dd>
@@ -3613,7 +2123,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Alert<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd>
@@ -3622,7 +2132,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Authenticate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server authentication once / always (default is once).
 {{% /md %}}</dd>
@@ -3631,7 +2141,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Authenticate<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
 {{% /md %}}</dd>
@@ -3640,7 +2150,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ca<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd>
@@ -3649,7 +2159,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Cache<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd>
@@ -3658,7 +2168,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Cache<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd>
@@ -3667,7 +2177,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
 {{% /md %}}</dd>
@@ -3676,7 +2186,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
 {{% /md %}}</dd>
@@ -3685,7 +2195,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd>
@@ -3694,7 +2204,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Defaults<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
 {{% /md %}}</dd>
@@ -3703,7 +2213,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Expire<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Response if the cert is expired (drop / ignore).
 {{% /md %}}</dd>
@@ -3712,7 +2222,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd>
@@ -3721,7 +2231,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd>
@@ -3730,7 +2240,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Generic<wbr>Alert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd>
@@ -3739,7 +2249,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Handshake<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd>
@@ -3748,7 +2258,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the file name of the SSL key.
 {{% /md %}}</dd>
@@ -3757,7 +2267,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Mod<wbr>Ssl<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -3766,7 +2276,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -3775,7 +2285,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile. (type `string`)
 {{% /md %}}</dd>
@@ -3784,7 +2294,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Partition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
@@ -3793,7 +2303,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Passphrase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
@@ -3802,7 +2312,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Peer<wbr>Cert<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
@@ -3811,7 +2321,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Proxy<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -3820,7 +2330,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Renegotiate<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
@@ -3829,7 +2339,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Renegotiate<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
@@ -3838,7 +2348,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -3847,7 +2357,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Retain<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
@@ -3856,7 +2366,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Secure<wbr>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -3868,7 +2378,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
@@ -3877,7 +2387,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Mirroring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
@@ -3886,7 +2396,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Ticket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
@@ -3895,7 +2405,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Sni<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -3905,7 +2415,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Sni<wbr>Require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -3914,7 +2424,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
@@ -3923,7 +2433,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
@@ -3932,7 +2442,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Sign<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
@@ -3941,7 +2451,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Strict<wbr>Resume</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
@@ -3958,7 +2468,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Unclean<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
@@ -3967,7 +2477,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (drop / ignore)
 {{% /md %}}</dd>
@@ -3983,7 +2493,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>alert<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd>
@@ -3992,7 +2502,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>authenticate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server authentication once / always (default is once).
 {{% /md %}}</dd>
@@ -4001,7 +2511,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>authenticate<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
 {{% /md %}}</dd>
@@ -4010,7 +2520,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ca<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd>
@@ -4019,7 +2529,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cache<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd>
@@ -4028,7 +2538,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cache<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd>
@@ -4037,7 +2547,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
 {{% /md %}}</dd>
@@ -4046,7 +2556,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
 {{% /md %}}</dd>
@@ -4055,7 +2565,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd>
@@ -4064,7 +2574,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>defaults<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
 {{% /md %}}</dd>
@@ -4073,7 +2583,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>expire<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Response if the cert is expired (drop / ignore).
 {{% /md %}}</dd>
@@ -4082,7 +2592,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd>
@@ -4091,7 +2601,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd>
@@ -4100,7 +2610,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>generic<wbr>Alert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd>
@@ -4109,7 +2619,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>handshake<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd>
@@ -4118,7 +2628,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the file name of the SSL key.
 {{% /md %}}</dd>
@@ -4127,7 +2637,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>mod<wbr>Ssl<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -4136,7 +2646,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -4145,7 +2655,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile. (type `string`)
 {{% /md %}}</dd>
@@ -4154,7 +2664,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>partition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
@@ -4163,7 +2673,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>passphrase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
@@ -4172,7 +2682,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>peer<wbr>Cert<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
@@ -4181,7 +2691,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>proxy<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -4190,7 +2700,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiate<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
@@ -4199,7 +2709,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiate<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
@@ -4208,7 +2718,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -4217,7 +2727,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>retain<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
@@ -4226,7 +2736,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>secure<wbr>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -4238,7 +2748,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
@@ -4247,7 +2757,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>session<wbr>Mirroring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
@@ -4256,7 +2766,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>session<wbr>Ticket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
@@ -4265,7 +2775,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>sni<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -4275,7 +2785,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>sni<wbr>Require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -4284,7 +2794,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl<wbr>Forward<wbr>Proxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
@@ -4293,7 +2803,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
@@ -4302,7 +2812,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl<wbr>Sign<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
@@ -4311,7 +2821,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>strict<wbr>Resume</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
@@ -4320,7 +2830,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>tm<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4328,7 +2838,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>unclean<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
@@ -4337,7 +2847,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (drop / ignore)
 {{% /md %}}</dd>
