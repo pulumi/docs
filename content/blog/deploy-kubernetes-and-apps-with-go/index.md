@@ -126,7 +126,7 @@ Resources:
 Duration: 13s
 ```
 
-The real benefits of Go come when we extract common code into a reusable component. We can create a new `ServiceDeployment` component that combines both a Kubernetes Service and Deployment with opinionated defaults. Our `ServiceDeployment` component can describe entire Kubernetes applications (100s of lines of YAML), in a short snippet of Go:
+The benefits of Go start to shine when we extract common code into a reusable component. For example, we can create a new `ServiceDeployment` component that combines both a Kubernetes Service and Deployment with opinionated defaults. Our `ServiceDeployment` component can describe entire Kubernetes applications (100s of lines of YAML), in a short snippet of Go:
 
 ```go
 // Initialize config
