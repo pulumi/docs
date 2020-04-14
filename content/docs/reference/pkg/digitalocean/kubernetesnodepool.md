@@ -17,7 +17,7 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#KubernetesNodePool">KubernetesNodePool</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#KubernetesNodePoolArgs">KubernetesNodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#KubernetesNodePool">KubernetesNodePool</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#KubernetesNodePoolArgs">KubernetesNodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,11 +25,11 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewKubernetesNodePool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#KubernetesNodePoolArgs">KubernetesNodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#KubernetesNodePool">KubernetesNodePool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewKubernetesNodePool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#KubernetesNodePoolArgs">KubernetesNodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#KubernetesNodePool">KubernetesNodePool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..KubernetesNodePool.html">KubernetesNodePool</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.KubernetesNodePoolArgs.html">KubernetesNodePoolArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.KubernetesNodePool.html">KubernetesNodePool</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.KubernetesNodePoolArgs.html">KubernetesNodePoolArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -121,15 +121,6 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Scale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Id</span>
@@ -137,51 +128,6 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Nodes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Min<wbr>Nodes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Node<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -195,9 +141,63 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
 
     <dt class="property-optional"
             title="Optional">
+        <span>Auto<wbr>Scale</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the node pool.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Node<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -209,15 +209,6 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Scale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Id</span>
@@ -225,6 +216,24 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Scale</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -240,7 +249,7 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
             title="Optional">
         <span>Max<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
 {{% /md %}}</dd>
@@ -249,7 +258,7 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
             title="Optional">
         <span>Min<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
 {{% /md %}}</dd>
@@ -258,7 +267,7 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
 {{% /md %}}</dd>
@@ -267,18 +276,9 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
             title="Optional">
         <span>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -297,15 +297,6 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Scale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster<wbr>Id</span>
@@ -315,11 +306,29 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Droplet<wbr>Slug</span>
+    </dt>
+    <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto<wbr>Scale</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
 {{% /md %}}</dd>
@@ -328,7 +337,7 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
             title="Optional">
         <span>max<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
 {{% /md %}}</dd>
@@ -337,7 +346,7 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
             title="Optional">
         <span>min<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
 {{% /md %}}</dd>
@@ -346,7 +355,7 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
 {{% /md %}}</dd>
@@ -355,25 +364,16 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
             title="Optional">
         <span>node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">DropletSlug</span>
-    </dt>
-    <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -385,15 +385,6 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto_<wbr>scale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster_<wbr>id</span>
@@ -401,6 +392,24 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto_<wbr>scale</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -446,15 +455,6 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -496,72 +496,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Auto<wbr>Scale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Nodes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Nodes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesnodepoolnode">List&lt;Kubernetes<wbr>Node<wbr>Pool<wbr>Node&gt;</a></span>
+        <span class="property-type"><a href="#kubernetesnodepoolnode">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Kubernetes<wbr>Node<wbr>Pool<wbr>Node&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
 - `id` -  A unique ID that can be used to identify and reference the node.
@@ -570,24 +507,6 @@ The following output properties are available:
 - `droplet_id` - The id of the node's droplet
 - `created_at` - The date and time when the node was created.
 - `updated_at` - The date and time when the node was last updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -608,69 +527,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Auto<wbr>Scale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Nodes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Nodes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Nodes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesnodepoolnode">[]Kubernetes<wbr>Node<wbr>Pool<wbr>Node</a></span>
@@ -682,24 +538,6 @@ The following output properties are available:
 - `droplet_id` - The id of the node's droplet
 - `created_at` - The date and time when the node was created.
 - `updated_at` - The date and time when the node was last updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -720,69 +558,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>auto<wbr>Scale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Nodes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min<wbr>Nodes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>nodes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesnodepoolnode">Kubernetes<wbr>Node<wbr>Pool<wbr>Node[]</a></span>
@@ -794,24 +569,6 @@ The following output properties are available:
 - `droplet_id` - The id of the node's droplet
 - `created_at` - The date and time when the node was created.
 - `updated_at` - The date and time when the node was last updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">DropletSlug</span>
-    </dt>
-    <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -832,69 +589,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>auto_<wbr>scale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>nodes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min_<wbr>nodes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node_<wbr>count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>nodes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesnodepoolnode">List[Kubernetes<wbr>Node<wbr>Pool<wbr>Node]</a></span>
@@ -906,24 +600,6 @@ The following output properties are available:
 - `droplet_id` - The id of the node's droplet
 - `created_at` - The date and time when the node was created.
 - `updated_at` - The date and time when the node was last updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -955,7 +631,7 @@ Get an existing KubernetesNodePool resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..KubernetesNodePool.html">KubernetesNodePool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..KubernetesNodePoolState.html">KubernetesNodePoolState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.KubernetesNodePool.html">KubernetesNodePool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..KubernetesNodePoolState.html">KubernetesNodePoolState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1065,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Actual<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
 {{% /md %}}</dd>
@@ -1074,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Scale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
 {{% /md %}}</dd>
@@ -1083,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
 {{% /md %}}</dd>
@@ -1092,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
 {{% /md %}}</dd>
@@ -1101,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
 {{% /md %}}</dd>
@@ -1110,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
 {{% /md %}}</dd>
@@ -1119,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
 {{% /md %}}</dd>
@@ -1128,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
 {{% /md %}}</dd>
@@ -1137,7 +813,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesnodepoolnode">List&lt;Kubernetes<wbr>Node<wbr>Pool<wbr>Node<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#kubernetesnodepoolnode">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Kubernetes<wbr>Node<wbr>Pool<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
 - `id` -  A unique ID that can be used to identify and reference the node.
@@ -1152,7 +828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd>
@@ -1161,7 +837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -1177,7 +853,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Actual<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
 {{% /md %}}</dd>
@@ -1186,7 +862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Scale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
 {{% /md %}}</dd>
@@ -1195,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
 {{% /md %}}</dd>
@@ -1213,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
 {{% /md %}}</dd>
@@ -1222,7 +898,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
 {{% /md %}}</dd>
@@ -1231,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
 {{% /md %}}</dd>
@@ -1240,7 +916,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
 {{% /md %}}</dd>
@@ -1264,7 +940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd>
@@ -1289,7 +965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>actual<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
 {{% /md %}}</dd>
@@ -1298,7 +974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Scale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
 {{% /md %}}</dd>
@@ -1307,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
 {{% /md %}}</dd>
@@ -1316,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
 {{% /md %}}</dd>
@@ -1325,7 +1001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
 {{% /md %}}</dd>
@@ -1334,7 +1010,7 @@ The following state arguments are supported:
             title="Optional">
         <span>min<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
 {{% /md %}}</dd>
@@ -1343,7 +1019,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
 {{% /md %}}</dd>
@@ -1352,7 +1028,7 @@ The following state arguments are supported:
             title="Optional">
         <span>node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
 {{% /md %}}</dd>
@@ -1361,7 +1037,7 @@ The following state arguments are supported:
             title="Optional">
         <span>nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesnodepoolnode">Kubernetes<wbr>Node<wbr>Pool<wbr>Node[]?</a></span>
+        <span class="property-type"><a href="#kubernetesnodepoolnode">Kubernetes<wbr>Node<wbr>Pool<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
 - `id` -  A unique ID that can be used to identify and reference the node.
@@ -1376,7 +1052,7 @@ The following state arguments are supported:
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DropletSlug?</span>
+        <span class="property-type">Droplet<wbr>Slug</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd>
@@ -1385,7 +1061,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -1535,7 +1211,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1543,7 +1219,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Droplet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1551,7 +1227,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID that can be used to identify and reference the node pool.
 {{% /md %}}</dd>
@@ -1560,7 +1236,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
 {{% /md %}}</dd>
@@ -1569,7 +1245,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1577,7 +1253,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1592,7 +1268,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1600,7 +1276,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Droplet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1608,7 +1284,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID that can be used to identify and reference the node pool.
 {{% /md %}}</dd>
@@ -1617,7 +1293,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
 {{% /md %}}</dd>
@@ -1626,7 +1302,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1634,7 +1310,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1649,7 +1325,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1657,7 +1333,7 @@ The following state arguments are supported:
             title="Optional">
         <span>droplet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1665,7 +1341,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID that can be used to identify and reference the node pool.
 {{% /md %}}</dd>
@@ -1674,7 +1350,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
 {{% /md %}}</dd>
@@ -1683,7 +1359,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1691,7 +1367,7 @@ The following state arguments are supported:
             title="Optional">
         <span>updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

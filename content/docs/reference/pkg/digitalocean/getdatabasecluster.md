@@ -30,13 +30,13 @@ Provides information on a DigitalOcean database cluster resource.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDatabaseCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetDatabaseClusterArgs">GetDatabaseClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#LookupDatabaseClusterResult">LookupDatabaseClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDatabaseCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetDatabaseClusterArgs">GetDatabaseClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#LookupDatabaseClusterResult">LookupDatabaseClusterResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDatabaseCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetDatabaseClusterResult.html">GetDatabaseClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetDatabaseClusterArgs.html">GetDatabaseClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetDatabaseClusterResult.html">GetDatabaseClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.GetDatabaseClusterArgs.html">GetDatabaseClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -62,7 +62,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -110,7 +110,7 @@ The following arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -198,7 +198,7 @@ The following output properties are available:
             title="">
         <span>Maintenance<wbr>Windows</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseclustermaintenancewindow">List&lt;Get<wbr>Database<wbr>Cluster<wbr>Maintenance<wbr>Window&gt;</a></span>
+        <span class="property-type"><a href="#getdatabaseclustermaintenancewindow">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Database<wbr>Cluster<wbr>Maintenance<wbr>Window&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines when the automatic maintenance should be performed for the database cluster.
 {{% /md %}}</dd>
@@ -276,14 +276,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -317,6 +309,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -443,14 +443,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -484,6 +476,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -610,14 +610,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -651,6 +643,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -777,14 +777,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -818,6 +810,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

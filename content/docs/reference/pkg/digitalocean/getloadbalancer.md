@@ -27,13 +27,13 @@ block_external_search_index: true
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetLoadBalancerArgs">GetLoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#LookupLoadBalancerResult">LookupLoadBalancerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetLoadBalancerArgs">GetLoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#LookupLoadBalancerResult">LookupLoadBalancerResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLoadBalancer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetLoadBalancerResult.html">GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetLoadBalancerArgs.html">GetLoadBalancerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetLoadBalancerResult.html">GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.GetLoadBalancerArgs.html">GetLoadBalancerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -135,7 +135,7 @@ The following output properties are available:
             title="">
         <span>Droplet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<int></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -159,7 +159,7 @@ The following output properties are available:
             title="">
         <span>Forwarding<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerforwardingrule">List&lt;Get<wbr>Load<wbr>Balancer<wbr>Forwarding<wbr>Rule&gt;</a></span>
+        <span class="property-type"><a href="#getloadbalancerforwardingrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Forwarding<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -167,7 +167,7 @@ The following output properties are available:
             title="">
         <span>Healthcheck</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerhealthcheck">Get<wbr>Load<wbr>Balancer<wbr>Healthcheck</a></span>
+        <span class="property-type"><a href="#getloadbalancerhealthcheck">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -224,7 +224,7 @@ The following output properties are available:
             title="">
         <span>Sticky<wbr>Sessions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerstickysessions">Get<wbr>Load<wbr>Balancer<wbr>Sticky<wbr>Sessions</a></span>
+        <span class="property-type"><a href="#getloadbalancerstickysessions">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Load<wbr>Balancer<wbr>Sticky<wbr>Sessions</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

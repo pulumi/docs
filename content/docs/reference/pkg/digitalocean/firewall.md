@@ -18,7 +18,7 @@ modify, and delete Firewalls.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Firewall">Firewall</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#FirewallArgs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Firewall">Firewall</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#FirewallArgs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,11 +26,11 @@ modify, and delete Firewalls.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFirewall<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#FirewallArgs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#Firewall">Firewall</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFirewall<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#FirewallArgs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#Firewall">Firewall</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..Firewall.html">Firewall</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.FirewallArgs.html">FirewallArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.Firewall.html">Firewall</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.FirewallArgs.html">FirewallArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -126,7 +126,7 @@ modify, and delete Firewalls.
             title="Optional">
         <span>Droplet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<int>?</span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
@@ -136,7 +136,7 @@ to the Firewall.
             title="Optional">
         <span>Inbound<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">List&lt;Firewall<wbr>Inbound<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#firewallinboundrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Firewall<wbr>Inbound<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
@@ -146,7 +146,7 @@ The `inbound_rule` block is documented below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
 {{% /md %}}</dd>
@@ -155,7 +155,7 @@ The `inbound_rule` block is documented below.
             title="Optional">
         <span>Outbound<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">List&lt;Firewall<wbr>Outbound<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#firewalloutboundrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Firewall<wbr>Outbound<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
@@ -165,7 +165,7 @@ The `outbound_rule` block is documented below.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
 {{% /md %}}</dd>
@@ -201,7 +201,7 @@ The `inbound_rule` block is documented below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
 {{% /md %}}</dd>
@@ -236,7 +236,7 @@ The `outbound_rule` block is documented below.
             title="Optional">
         <span>droplet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]?</span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
@@ -246,7 +246,7 @@ to the Firewall.
             title="Optional">
         <span>inbound<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">Firewall<wbr>Inbound<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#firewallinboundrule">Firewall<wbr>Inbound<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
@@ -256,7 +256,7 @@ The `inbound_rule` block is documented below.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
 {{% /md %}}</dd>
@@ -265,7 +265,7 @@ The `inbound_rule` block is documented below.
             title="Optional">
         <span>outbound<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">Firewall<wbr>Outbound<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#firewalloutboundrule">Firewall<wbr>Outbound<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
@@ -275,7 +275,7 @@ The `outbound_rule` block is documented below.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
 {{% /md %}}</dd>
@@ -366,48 +366,9 @@ that represents when the Firewall was created.
 
     <dt class="property-"
             title="">
-        <span>Droplet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<int>?</span>
-    </dt>
-    <dd>{{% md %}}The list of the IDs of the Droplets assigned
-to the Firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Inbound<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">List&lt;Firewall<wbr>Inbound<wbr>Rule&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The inbound access rule block for the Firewall.
-The `inbound_rule` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Firewall name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Outbound<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">List&lt;Firewall<wbr>Outbound<wbr>Rule&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The outbound access rule block for the Firewall.
-The `outbound_rule` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Pending<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpendingchange">List&lt;Firewall<wbr>Pending<wbr>Change&gt;</a></span>
+        <span class="property-type"><a href="#firewallpendingchange">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Firewall<wbr>Pending<wbr>Change&gt;</a></span>
     </dt>
     <dd>{{% md %}}An list of object containing the fields, "droplet_id",
 "removing", and "status".  It is provided to detail exactly which Droplets
@@ -425,15 +386,6 @@ have been successfully applied.
 This can be "waiting", "succeeded", or "failed".
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The names of the Tags assigned to the Firewall.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -449,45 +401,6 @@ This can be "waiting", "succeeded", or "failed".
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Droplet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]int</span>
-    </dt>
-    <dd>{{% md %}}The list of the IDs of the Droplets assigned
-to the Firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Inbound<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">[]Firewall<wbr>Inbound<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}The inbound access rule block for the Firewall.
-The `inbound_rule` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Firewall name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Outbound<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">[]Firewall<wbr>Outbound<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}The outbound access rule block for the Firewall.
-The `outbound_rule` block is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -512,15 +425,6 @@ have been successfully applied.
 This can be "waiting", "succeeded", or "failed".
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The names of the Tags assigned to the Firewall.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -536,45 +440,6 @@ This can be "waiting", "succeeded", or "failed".
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>droplet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number[]?</span>
-    </dt>
-    <dd>{{% md %}}The list of the IDs of the Droplets assigned
-to the Firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>inbound<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">Firewall<wbr>Inbound<wbr>Rule[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The inbound access rule block for the Firewall.
-The `inbound_rule` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Firewall name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>outbound<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">Firewall<wbr>Outbound<wbr>Rule[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The outbound access rule block for the Firewall.
-The `outbound_rule` block is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -599,15 +464,6 @@ have been successfully applied.
 This can be "waiting", "succeeded", or "failed".
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The names of the Tags assigned to the Firewall.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -623,45 +479,6 @@ This can be "waiting", "succeeded", or "failed".
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>droplet_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[Integer]</span>
-    </dt>
-    <dd>{{% md %}}The list of the IDs of the Droplets assigned
-to the Firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>inbound_<wbr>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">List[Firewall<wbr>Inbound<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}The inbound access rule block for the Firewall.
-The `inbound_rule` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Firewall name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>outbound_<wbr>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">List[Firewall<wbr>Outbound<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}The outbound access rule block for the Firewall.
-The `outbound_rule` block is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -684,15 +501,6 @@ have been successfully applied.
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The names of the Tags assigned to the Firewall.
 {{% /md %}}</dd>
 
 </dl>
@@ -724,7 +532,7 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..Firewall.html">Firewall</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..FirewallState.html">FirewallState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.Firewall.html">Firewall</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..FirewallState.html">FirewallState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -834,7 +642,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
@@ -844,7 +652,7 @@ that represents when the Firewall was created.
             title="Optional">
         <span>Droplet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<int>?</span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
@@ -854,7 +662,7 @@ to the Firewall.
             title="Optional">
         <span>Inbound<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">List&lt;Firewall<wbr>Inbound<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#firewallinboundrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Firewall<wbr>Inbound<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
@@ -864,7 +672,7 @@ The `inbound_rule` block is documented below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
 {{% /md %}}</dd>
@@ -873,7 +681,7 @@ The `inbound_rule` block is documented below.
             title="Optional">
         <span>Outbound<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">List&lt;Firewall<wbr>Outbound<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#firewalloutboundrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Firewall<wbr>Outbound<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
@@ -883,7 +691,7 @@ The `outbound_rule` block is documented below.
             title="Optional">
         <span>Pending<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpendingchange">List&lt;Firewall<wbr>Pending<wbr>Change<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#firewallpendingchange">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Firewall<wbr>Pending<wbr>Change<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An list of object containing the fields, "droplet_id",
 "removing", and "status".  It is provided to detail exactly which Droplets
@@ -895,7 +703,7 @@ have been successfully applied.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
@@ -905,7 +713,7 @@ This can be "waiting", "succeeded", or "failed".
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
 {{% /md %}}</dd>
@@ -921,7 +729,7 @@ This can be "waiting", "succeeded", or "failed".
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
@@ -951,7 +759,7 @@ The `inbound_rule` block is documented below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
 {{% /md %}}</dd>
@@ -982,7 +790,7 @@ have been successfully applied.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
@@ -1008,7 +816,7 @@ This can be "waiting", "succeeded", or "failed".
             title="Optional">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
@@ -1018,7 +826,7 @@ that represents when the Firewall was created.
             title="Optional">
         <span>droplet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]?</span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
@@ -1028,7 +836,7 @@ to the Firewall.
             title="Optional">
         <span>inbound<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">Firewall<wbr>Inbound<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#firewallinboundrule">Firewall<wbr>Inbound<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
@@ -1038,7 +846,7 @@ The `inbound_rule` block is documented below.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
 {{% /md %}}</dd>
@@ -1047,7 +855,7 @@ The `inbound_rule` block is documented below.
             title="Optional">
         <span>outbound<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">Firewall<wbr>Outbound<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#firewalloutboundrule">Firewall<wbr>Outbound<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
@@ -1057,7 +865,7 @@ The `outbound_rule` block is documented below.
             title="Optional">
         <span>pending<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpendingchange">Firewall<wbr>Pending<wbr>Change[]?</a></span>
+        <span class="property-type"><a href="#firewallpendingchange">Firewall<wbr>Pending<wbr>Change[]</a></span>
     </dt>
     <dd>{{% md %}}An list of object containing the fields, "droplet_id",
 "removing", and "status".  It is provided to detail exactly which Droplets
@@ -1069,7 +877,7 @@ have been successfully applied.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
@@ -1079,7 +887,7 @@ This can be "waiting", "succeeded", or "failed".
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
 {{% /md %}}</dd>
@@ -1200,18 +1008,6 @@ This can be "waiting", "succeeded", or "failed".
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ports on which traffic will be allowed
-specified as a string containing a single port, a range (e.g. "8000-9000"),
-or "1-65535" to open all ports for a protocol. Required for when protocol is
-`tcp` or `udp`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Protocol</span>
@@ -1224,9 +1020,21 @@ This may be one of "tcp", "udp", or "icmp".
 
     <dt class="property-optional"
             title="Optional">
+        <span>Port<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ports on which traffic will be allowed
+specified as a string containing a single port, a range (e.g. "8000-9000"),
+or "1-65535" to open all ports for a protocol. Required for when protocol is
+`tcp` or `udp`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Source<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs from which the
@@ -1237,7 +1045,7 @@ inbound traffic will be accepted.
             title="Optional">
         <span>Source<wbr>Droplet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<int>?</span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets from which the inbound traffic will be accepted.
@@ -1247,7 +1055,7 @@ the Droplets from which the inbound traffic will be accepted.
             title="Optional">
         <span>Source<wbr>Load<wbr>Balancer<wbr>Uids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers from which the inbound traffic will be accepted.
@@ -1257,7 +1065,7 @@ of the Load Balancers from which the inbound traffic will be accepted.
             title="Optional">
         <span>Source<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array containing the names of Tags
 corresponding to groups of Droplets from which the inbound traffic
@@ -1271,18 +1079,6 @@ will be accepted.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ports on which traffic will be allowed
-specified as a string containing a single port, a range (e.g. "8000-9000"),
-or "1-65535" to open all ports for a protocol. Required for when protocol is
-`tcp` or `udp`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Protocol</span>
@@ -1291,6 +1087,18 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
     </dt>
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ports on which traffic will be allowed
+specified as a string containing a single port, a range (e.g. "8000-9000"),
+or "1-65535" to open all ports for a protocol. Required for when protocol is
+`tcp` or `udp`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1342,18 +1150,6 @@ will be accepted.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>port<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ports on which traffic will be allowed
-specified as a string containing a single port, a range (e.g. "8000-9000"),
-or "1-65535" to open all ports for a protocol. Required for when protocol is
-`tcp` or `udp`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>protocol</span>
@@ -1366,9 +1162,21 @@ This may be one of "tcp", "udp", or "icmp".
 
     <dt class="property-optional"
             title="Optional">
+        <span>port<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ports on which traffic will be allowed
+specified as a string containing a single port, a range (e.g. "8000-9000"),
+or "1-65535" to open all ports for a protocol. Required for when protocol is
+`tcp` or `udp`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>source<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs from which the
@@ -1379,7 +1187,7 @@ inbound traffic will be accepted.
             title="Optional">
         <span>source<wbr>Droplet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]?</span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets from which the inbound traffic will be accepted.
@@ -1389,7 +1197,7 @@ the Droplets from which the inbound traffic will be accepted.
             title="Optional">
         <span>source<wbr>Load<wbr>Balancer<wbr>Uids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers from which the inbound traffic will be accepted.
@@ -1399,7 +1207,7 @@ of the Load Balancers from which the inbound traffic will be accepted.
             title="Optional">
         <span>source<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array containing the names of Tags
 corresponding to groups of Droplets from which the inbound traffic
@@ -1413,6 +1221,16 @@ will be accepted.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of traffic to be allowed.
+This may be one of "tcp", "udp", or "icmp".
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>port<wbr>Range</span>
@@ -1423,16 +1241,6 @@ will be accepted.
 specified as a string containing a single port, a range (e.g. "8000-9000"),
 or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of traffic to be allowed.
-This may be one of "tcp", "udp", or "icmp".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1499,11 +1307,21 @@ will be accepted.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of traffic to be allowed.
+This may be one of "tcp", "udp", or "icmp".
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Destination<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs to which the
@@ -1514,7 +1332,7 @@ outbound traffic will be allowed.
             title="Optional">
         <span>Destination<wbr>Droplet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<int>?</span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets to which the outbound traffic will be allowed.
@@ -1524,7 +1342,7 @@ the Droplets to which the outbound traffic will be allowed.
             title="Optional">
         <span>Destination<wbr>Load<wbr>Balancer<wbr>Uids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers to which the outbound traffic will be allowed.
@@ -1534,7 +1352,7 @@ of the Load Balancers to which the outbound traffic will be allowed.
             title="Optional">
         <span>Destination<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array containing the names of Tags
 corresponding to groups of Droplets to which the outbound traffic will
@@ -1546,13 +1364,20 @@ traffic.
             title="Optional">
         <span>Port<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ports on which traffic will be allowed
 specified as a string containing a single port, a range (e.g. "8000-9000"),
 or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1563,13 +1388,6 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
 {{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
@@ -1618,22 +1436,12 @@ traffic.
             title="Optional">
         <span>Port<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ports on which traffic will be allowed
 specified as a string containing a single port, a range (e.g. "8000-9000"),
 or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of traffic to be allowed.
-This may be one of "tcp", "udp", or "icmp".
 {{% /md %}}</dd>
 
 </dl>
@@ -1642,61 +1450,6 @@ This may be one of "tcp", "udp", or "icmp".
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>destination<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}An array of strings containing the IPv4
-addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs to which the
-outbound traffic will be allowed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>destination<wbr>Droplet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number[]?</span>
-    </dt>
-    <dd>{{% md %}}An array containing the IDs of
-the Droplets to which the outbound traffic will be allowed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>destination<wbr>Load<wbr>Balancer<wbr>Uids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}An array containing the IDs
-of the Load Balancers to which the outbound traffic will be allowed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>destination<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}An array containing the names of Tags
-corresponding to groups of Droplets to which the outbound traffic will
-be allowed.
-traffic.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>port<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ports on which traffic will be allowed
-specified as a string containing a single port, a range (e.g. "8000-9000"),
-or "1-65535" to open all ports for a protocol. Required for when protocol is
-`tcp` or `udp`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1708,12 +1461,77 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 This may be one of "tcp", "udp", or "icmp".
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>destination<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array of strings containing the IPv4
+addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs to which the
+outbound traffic will be allowed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>destination<wbr>Droplet<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}An array containing the IDs of
+the Droplets to which the outbound traffic will be allowed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>destination<wbr>Load<wbr>Balancer<wbr>Uids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array containing the IDs
+of the Load Balancers to which the outbound traffic will be allowed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>destination<wbr>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array containing the names of Tags
+corresponding to groups of Droplets to which the outbound traffic will
+be allowed.
+traffic.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>port<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ports on which traffic will be allowed
+specified as a string containing a single port, a range (e.g. "8000-9000"),
+or "1-65535" to open all ports for a protocol. Required for when protocol is
+`tcp` or `udp`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of traffic to be allowed.
+This may be one of "tcp", "udp", or "icmp".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1770,16 +1588,6 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of traffic to be allowed.
-This may be one of "tcp", "udp", or "icmp".
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1806,7 +1614,7 @@ This may be one of "tcp", "udp", or "icmp".
             title="Optional">
         <span>Droplet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1814,7 +1622,7 @@ This may be one of "tcp", "udp", or "icmp".
             title="Optional">
         <span>Removing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1822,7 +1630,7 @@ This may be one of "tcp", "udp", or "icmp".
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
@@ -1839,7 +1647,7 @@ This can be "waiting", "succeeded", or "failed".
             title="Optional">
         <span>Droplet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1847,7 +1655,7 @@ This can be "waiting", "succeeded", or "failed".
             title="Optional">
         <span>Removing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1855,7 +1663,7 @@ This can be "waiting", "succeeded", or "failed".
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
@@ -1872,7 +1680,7 @@ This can be "waiting", "succeeded", or "failed".
             title="Optional">
         <span>droplet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1880,7 +1688,7 @@ This can be "waiting", "succeeded", or "failed".
             title="Optional">
         <span>removing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1888,7 +1696,7 @@ This can be "waiting", "succeeded", or "failed".
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".

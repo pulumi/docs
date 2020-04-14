@@ -17,7 +17,7 @@ Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot f
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#VolumeSnapshot">VolumeSnapshot</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#VolumeSnapshotArgs">VolumeSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#VolumeSnapshot">VolumeSnapshot</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#VolumeSnapshotArgs">VolumeSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,11 +25,11 @@ Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot f
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVolumeSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#VolumeSnapshotArgs">VolumeSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#VolumeSnapshot">VolumeSnapshot</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVolumeSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#VolumeSnapshotArgs">VolumeSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#VolumeSnapshot">VolumeSnapshot</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..VolumeSnapshot.html">VolumeSnapshot</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.VolumeSnapshotArgs.html">VolumeSnapshotArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.VolumeSnapshot.html">VolumeSnapshot</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.VolumeSnapshotArgs.html">VolumeSnapshotArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -121,11 +121,20 @@ Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot f
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Volume<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the volume from which the volume snapshot originated.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the volume snapshot.
 {{% /md %}}</dd>
@@ -134,10 +143,17 @@ Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot f
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this volume snapshot.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -148,18 +164,11 @@ Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot f
     <dd>{{% md %}}The ID of the volume from which the volume snapshot originated.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the volume snapshot.
 {{% /md %}}</dd>
@@ -173,39 +182,12 @@ Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot f
     <dd>{{% md %}}A list of the tags to be applied to this volume snapshot.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the volume from which the volume snapshot originated.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A name for the volume snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of the tags to be applied to this volume snapshot.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -216,12 +198,39 @@ Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot f
     <dd>{{% md %}}The ID of the volume from which the volume snapshot originated.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the volume snapshot.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of the tags to be applied to this volume snapshot.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>volume_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the volume from which the volume snapshot originated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -239,15 +248,6 @@ Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot f
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this volume snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>volume_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the volume from which the volume snapshot originated.
 {{% /md %}}</dd>
 
 </dl>
@@ -289,18 +289,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the volume snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of DigitalOcean region "slugs" indicating where the volume snapshot is available.
 {{% /md %}}</dd>
@@ -312,24 +303,6 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The billable size of the volume snapshot in gigabytes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of the tags to be applied to this volume snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the volume from which the volume snapshot originated.
 {{% /md %}}</dd>
 
 </dl>
@@ -359,15 +332,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the volume snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Regions</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -382,24 +346,6 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The billable size of the volume snapshot in gigabytes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of the tags to be applied to this volume snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the volume from which the volume snapshot originated.
 {{% /md %}}</dd>
 
 </dl>
@@ -429,15 +375,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the volume snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>regions</span>
         <span class="property-indicator"></span>
         <span class="property-type">Region[]</span>
@@ -452,24 +389,6 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The billable size of the volume snapshot in gigabytes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of the tags to be applied to this volume snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the volume from which the volume snapshot originated.
 {{% /md %}}</dd>
 
 </dl>
@@ -499,15 +418,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name for the volume snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>regions</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[Region]</span>
@@ -522,24 +432,6 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The billable size of the volume snapshot in gigabytes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of the tags to be applied to this volume snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>volume_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the volume from which the volume snapshot originated.
 {{% /md %}}</dd>
 
 </dl>
@@ -571,7 +463,7 @@ Get an existing VolumeSnapshot resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..VolumeSnapshot.html">VolumeSnapshot</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..VolumeSnapshotState.html">VolumeSnapshotState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.VolumeSnapshot.html">VolumeSnapshot</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..VolumeSnapshotState.html">VolumeSnapshotState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -681,7 +573,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time the volume snapshot was created.
 {{% /md %}}</dd>
@@ -690,7 +582,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size in gigabytes required for a volume to be created based on this volume snapshot.
 {{% /md %}}</dd>
@@ -699,7 +591,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the volume snapshot.
 {{% /md %}}</dd>
@@ -708,7 +600,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of DigitalOcean region "slugs" indicating where the volume snapshot is available.
 {{% /md %}}</dd>
@@ -717,7 +609,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The billable size of the volume snapshot in gigabytes.
 {{% /md %}}</dd>
@@ -726,7 +618,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this volume snapshot.
 {{% /md %}}</dd>
@@ -735,7 +627,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the volume from which the volume snapshot originated.
 {{% /md %}}</dd>
@@ -751,7 +643,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time the volume snapshot was created.
 {{% /md %}}</dd>
@@ -760,7 +652,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size in gigabytes required for a volume to be created based on this volume snapshot.
 {{% /md %}}</dd>
@@ -769,7 +661,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the volume snapshot.
 {{% /md %}}</dd>
@@ -787,7 +679,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The billable size of the volume snapshot in gigabytes.
 {{% /md %}}</dd>
@@ -805,7 +697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the volume from which the volume snapshot originated.
 {{% /md %}}</dd>
@@ -821,7 +713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time the volume snapshot was created.
 {{% /md %}}</dd>
@@ -830,7 +722,7 @@ The following state arguments are supported:
             title="Optional">
         <span>min<wbr>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum size in gigabytes required for a volume to be created based on this volume snapshot.
 {{% /md %}}</dd>
@@ -839,7 +731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the volume snapshot.
 {{% /md %}}</dd>
@@ -848,7 +740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Region[]?</span>
+        <span class="property-type">Region[]</span>
     </dt>
     <dd>{{% md %}}A list of DigitalOcean region "slugs" indicating where the volume snapshot is available.
 {{% /md %}}</dd>
@@ -857,7 +749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The billable size of the volume snapshot in gigabytes.
 {{% /md %}}</dd>
@@ -866,7 +758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this volume snapshot.
 {{% /md %}}</dd>
@@ -875,7 +767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the volume from which the volume snapshot originated.
 {{% /md %}}</dd>

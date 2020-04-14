@@ -17,7 +17,7 @@ Provides a DigitalOcean DNS record resource.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DnsRecord">DnsRecord</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DnsRecordArgs">DnsRecordArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DnsRecord">DnsRecord</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DnsRecordArgs">DnsRecordArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,11 +25,11 @@ Provides a DigitalOcean DNS record resource.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDnsRecord<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#DnsRecordArgs">DnsRecordArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#DnsRecord">DnsRecord</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDnsRecord<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#DnsRecordArgs">DnsRecordArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#DnsRecord">DnsRecord</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..DnsRecord.html">DnsRecord</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.DnsRecordArgs.html">DnsRecordArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.DnsRecord.html">DnsRecord</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.DnsRecordArgs.html">DnsRecordArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -130,60 +130,6 @@ Provides a DigitalOcean DNS record resource.
     <dd>{{% md %}}The domain to add the record to.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Flags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the record. Use `@` for records on domain's name itself.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -204,9 +150,63 @@ Provides a DigitalOcean DNS record resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Flags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the record. Use `@` for records on domain's name itself.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tag</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ttl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
 {{% /md %}}</dd>
@@ -227,60 +227,6 @@ Provides a DigitalOcean DNS record resource.
     <dd>{{% md %}}The domain to add the record to.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Flags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the record. Use `@` for records on domain's name itself.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -301,9 +247,63 @@ Provides a DigitalOcean DNS record resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Flags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the record. Use `@` for records on domain's name itself.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tag</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ttl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
 {{% /md %}}</dd>
@@ -324,65 +324,11 @@ Provides a DigitalOcean DNS record resource.
     <dd>{{% md %}}The domain to add the record to.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>flags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the record. Use `@` for records on domain's name itself.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RecordType</span>
+        <span class="property-type">Record<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
 {{% /md %}}</dd>
@@ -398,9 +344,63 @@ Provides a DigitalOcean DNS record resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span>flags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the record. Use `@` for records on domain's name itself.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tag</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ttl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
 {{% /md %}}</dd>
@@ -421,6 +421,24 @@ Provides a DigitalOcean DNS record resource.
     <dd>{{% md %}}The domain to add the record to.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the record.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>flags</span>
@@ -473,24 +491,6 @@ Provides a DigitalOcean DNS record resource.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The value of the record.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -523,101 +523,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The domain to add the record to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Flags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Fqdn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the record. Use `@` for records on domain's name itself.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the record.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
 {{% /md %}}</dd>
 
 </dl>
@@ -629,101 +539,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The domain to add the record to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Flags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Fqdn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the record. Use `@` for records on domain's name itself.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the record.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
 {{% /md %}}</dd>
 
 </dl>
@@ -735,101 +555,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The domain to add the record to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>flags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>fqdn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the record. Use `@` for records on domain's name itself.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">RecordType</span>
-    </dt>
-    <dd>{{% md %}}The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the record.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
 {{% /md %}}</dd>
 
 </dl>
@@ -841,101 +571,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The domain to add the record to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>flags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>fqdn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FQDN of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the record. Use `@` for records on domain's name itself.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The value of the record.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
 {{% /md %}}</dd>
 
 </dl>
@@ -967,7 +607,7 @@ Get an existing DnsRecord resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..DnsRecord.html">DnsRecord</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..DnsRecordState.html">DnsRecordState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.DnsRecord.html">DnsRecord</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..DnsRecordState.html">DnsRecordState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1077,7 +717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to add the record to.
 {{% /md %}}</dd>
@@ -1086,7 +726,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Flags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
 {{% /md %}}</dd>
@@ -1095,7 +735,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the record
 {{% /md %}}</dd>
@@ -1104,7 +744,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the record. Use `@` for records on domain's name itself.
 {{% /md %}}</dd>
@@ -1113,7 +753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
 {{% /md %}}</dd>
@@ -1122,7 +762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
 {{% /md %}}</dd>
@@ -1131,7 +771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
 {{% /md %}}</dd>
@@ -1140,7 +780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
 {{% /md %}}</dd>
@@ -1149,7 +789,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
 {{% /md %}}</dd>
@@ -1158,7 +798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the record.
 {{% /md %}}</dd>
@@ -1167,7 +807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
 {{% /md %}}</dd>
@@ -1183,7 +823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to add the record to.
 {{% /md %}}</dd>
@@ -1192,7 +832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Flags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
 {{% /md %}}</dd>
@@ -1201,7 +841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the record
 {{% /md %}}</dd>
@@ -1210,7 +850,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the record. Use `@` for records on domain's name itself.
 {{% /md %}}</dd>
@@ -1219,7 +859,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
 {{% /md %}}</dd>
@@ -1228,7 +868,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
 {{% /md %}}</dd>
@@ -1237,7 +877,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
 {{% /md %}}</dd>
@@ -1246,7 +886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
 {{% /md %}}</dd>
@@ -1255,7 +895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
 {{% /md %}}</dd>
@@ -1264,7 +904,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the record.
 {{% /md %}}</dd>
@@ -1273,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
 {{% /md %}}</dd>
@@ -1289,7 +929,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to add the record to.
 {{% /md %}}</dd>
@@ -1298,7 +938,7 @@ The following state arguments are supported:
             title="Optional">
         <span>flags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
 {{% /md %}}</dd>
@@ -1307,7 +947,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the record
 {{% /md %}}</dd>
@@ -1316,7 +956,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the record. Use `@` for records on domain's name itself.
 {{% /md %}}</dd>
@@ -1325,7 +965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
 {{% /md %}}</dd>
@@ -1334,7 +974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
 {{% /md %}}</dd>
@@ -1343,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
 {{% /md %}}</dd>
@@ -1352,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time to live for the record, in seconds. Must be at least 0.
 {{% /md %}}</dd>
@@ -1361,7 +1001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">RecordType?</span>
+        <span class="property-type">Record<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
 {{% /md %}}</dd>
@@ -1370,7 +1010,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the record.
 {{% /md %}}</dd>
@@ -1379,7 +1019,7 @@ The following state arguments are supported:
             title="Optional">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
 {{% /md %}}</dd>

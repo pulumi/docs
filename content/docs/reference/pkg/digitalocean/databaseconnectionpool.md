@@ -17,7 +17,7 @@ Provides a DigitalOcean database connection pool resource.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DatabaseConnectionPool">DatabaseConnectionPool</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DatabaseConnectionPoolArgs">DatabaseConnectionPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DatabaseConnectionPool">DatabaseConnectionPool</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DatabaseConnectionPoolArgs">DatabaseConnectionPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,11 +25,11 @@ Provides a DigitalOcean database connection pool resource.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDatabaseConnectionPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#DatabaseConnectionPoolArgs">DatabaseConnectionPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#DatabaseConnectionPool">DatabaseConnectionPool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDatabaseConnectionPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#DatabaseConnectionPoolArgs">DatabaseConnectionPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#DatabaseConnectionPool">DatabaseConnectionPool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..DatabaseConnectionPool.html">DatabaseConnectionPool</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.DatabaseConnectionPoolArgs.html">DatabaseConnectionPoolArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.DatabaseConnectionPool.html">DatabaseConnectionPool</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.DatabaseConnectionPoolArgs.html">DatabaseConnectionPoolArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,15 +148,6 @@ Provides a DigitalOcean database connection pool resource.
     <dd>{{% md %}}The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name for the database connection pool.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size</span>
@@ -173,6 +164,15 @@ Provides a DigitalOcean database connection pool resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database user for use with the connection pool.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name for the database connection pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -209,15 +209,6 @@ Provides a DigitalOcean database connection pool resource.
     <dd>{{% md %}}The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name for the database connection pool.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size</span>
@@ -234,6 +225,15 @@ Provides a DigitalOcean database connection pool resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database user for use with the connection pool.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name for the database connection pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -270,15 +270,6 @@ Provides a DigitalOcean database connection pool resource.
     <dd>{{% md %}}The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name for the database connection pool.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>size</span>
@@ -295,6 +286,15 @@ Provides a DigitalOcean database connection pool resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database user for use with the connection pool.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name for the database connection pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -331,15 +331,6 @@ Provides a DigitalOcean database connection pool resource.
     <dd>{{% md %}}The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name for the database connection pool.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>size</span>
@@ -356,6 +347,15 @@ Provides a DigitalOcean database connection pool resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database user for use with the connection pool.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name for the database connection pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -379,47 +379,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the source database cluster. Note: This must be a PostgreSQL cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Db<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The database for use with the connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Host</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to connect to the database connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name for the database connection pool.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -460,29 +424,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The desired size of the PGBouncer connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full URI for connecting to the database connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the database user for use with the connection pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -494,47 +440,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the source database cluster. Note: This must be a PostgreSQL cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Db<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The database for use with the connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Host</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to connect to the database connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name for the database connection pool.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -575,29 +485,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The desired size of the PGBouncer connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full URI for connecting to the database connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the database user for use with the connection pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -609,47 +501,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the source database cluster. Note: This must be a PostgreSQL cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>db<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The database for use with the connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>host</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to connect to the database connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name for the database connection pool.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -690,29 +546,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The desired size of the PGBouncer connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full URI for connecting to the database connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the database user for use with the connection pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -724,47 +562,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cluster_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the source database cluster. Note: This must be a PostgreSQL cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>db_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The database for use with the connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>host</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname used to connect to the database connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name for the database connection pool.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -805,29 +607,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The desired size of the PGBouncer connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full URI for connecting to the database connection pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the database user for use with the connection pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -859,7 +643,7 @@ Get an existing DatabaseConnectionPool resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..DatabaseConnectionPool.html">DatabaseConnectionPool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..DatabaseConnectionPoolState.html">DatabaseConnectionPoolState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.DatabaseConnectionPool.html">DatabaseConnectionPool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..DatabaseConnectionPoolState.html">DatabaseConnectionPoolState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -969,7 +753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the source database cluster. Note: This must be a PostgreSQL cluster.
 {{% /md %}}</dd>
@@ -978,7 +762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database for use with the connection pool.
 {{% /md %}}</dd>
@@ -987,7 +771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to connect to the database connection pool.
 {{% /md %}}</dd>
@@ -996,7 +780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
 {{% /md %}}</dd>
@@ -1005,7 +789,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the database connection pool.
 {{% /md %}}</dd>
@@ -1014,7 +798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for the connection pool's user.
 {{% /md %}}</dd>
@@ -1023,7 +807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Network port that the database connection pool is listening on.
 {{% /md %}}</dd>
@@ -1032,7 +816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Same as `host`, but only accessible from resources within the account and in the same region.
 {{% /md %}}</dd>
@@ -1041,7 +825,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Same as `uri`, but only accessible from resources within the account and in the same region.
 {{% /md %}}</dd>
@@ -1050,7 +834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired size of the PGBouncer connection pool.
 {{% /md %}}</dd>
@@ -1059,7 +843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full URI for connecting to the database connection pool.
 {{% /md %}}</dd>
@@ -1068,7 +852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database user for use with the connection pool.
 {{% /md %}}</dd>
@@ -1084,7 +868,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the source database cluster. Note: This must be a PostgreSQL cluster.
 {{% /md %}}</dd>
@@ -1093,7 +877,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database for use with the connection pool.
 {{% /md %}}</dd>
@@ -1102,7 +886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to connect to the database connection pool.
 {{% /md %}}</dd>
@@ -1111,7 +895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
 {{% /md %}}</dd>
@@ -1120,7 +904,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the database connection pool.
 {{% /md %}}</dd>
@@ -1129,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for the connection pool's user.
 {{% /md %}}</dd>
@@ -1138,7 +922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Network port that the database connection pool is listening on.
 {{% /md %}}</dd>
@@ -1147,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Same as `host`, but only accessible from resources within the account and in the same region.
 {{% /md %}}</dd>
@@ -1156,7 +940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Same as `uri`, but only accessible from resources within the account and in the same region.
 {{% /md %}}</dd>
@@ -1165,7 +949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired size of the PGBouncer connection pool.
 {{% /md %}}</dd>
@@ -1174,7 +958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full URI for connecting to the database connection pool.
 {{% /md %}}</dd>
@@ -1183,7 +967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database user for use with the connection pool.
 {{% /md %}}</dd>
@@ -1199,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the source database cluster. Note: This must be a PostgreSQL cluster.
 {{% /md %}}</dd>
@@ -1208,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>db<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database for use with the connection pool.
 {{% /md %}}</dd>
@@ -1217,7 +1001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to connect to the database connection pool.
 {{% /md %}}</dd>
@@ -1226,7 +1010,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.
 {{% /md %}}</dd>
@@ -1235,7 +1019,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the database connection pool.
 {{% /md %}}</dd>
@@ -1244,7 +1028,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for the connection pool's user.
 {{% /md %}}</dd>
@@ -1253,7 +1037,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Network port that the database connection pool is listening on.
 {{% /md %}}</dd>
@@ -1262,7 +1046,7 @@ The following state arguments are supported:
             title="Optional">
         <span>private<wbr>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Same as `host`, but only accessible from resources within the account and in the same region.
 {{% /md %}}</dd>
@@ -1271,7 +1055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>private<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Same as `uri`, but only accessible from resources within the account and in the same region.
 {{% /md %}}</dd>
@@ -1280,7 +1064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired size of the PGBouncer connection pool.
 {{% /md %}}</dd>
@@ -1289,7 +1073,7 @@ The following state arguments are supported:
             title="Optional">
         <span>uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full URI for connecting to the database connection pool.
 {{% /md %}}</dd>
@@ -1298,7 +1082,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database user for use with the connection pool.
 {{% /md %}}</dd>
