@@ -34,22 +34,24 @@ generate_docs() {
     # Checkout the master branch of the provider repo, rather than
     # using the update_repos script. This is only temporary until
     # 2.0 is GA.
-    # ./scripts/update_repos.sh "pulumi-${provider}"
+    ./scripts/update_repos.sh "pulumi-${provider}"
 
     echo -e "\033[0;95m--- Updating repo pulumi/pulumi-${provider} ---\033[0m"
     pushd "../pulumi-${provider}"
-    echo -e "\033[0;93mPulling changes\033[0m"
-    git checkout master >/dev/null
-    git pull origin master >/dev/null
+    git fetch --tags
 
     if [ -n "${INSTALL_RESOURCE_PLUGIN:-}" ]; then
-        git fetch --tags
-        plugin_version=$(git describe --tags `git rev-list --max-count=1 --tags --not --tags='*-dev' --tags='*beta*'`)
+        # For the moment, choose only v1 tags, by default unless an override was provided.
+        plugin_version=$(git describe --tags `git rev-list --max-count=1 --tags='v1*'`)
         if [ -n "${INSTALL_RESOURCE_PLUGIN_VERSION:-}" ]; then
             plugin_version=${INSTALL_RESOURCE_PLUGIN_VERSION}
         elif [[ ${plugin_version} = sdk* ]]; then
             plugin_version=${plugin_version:4}
         fi
+
+        echo -e "\033[0;93mCheckout repo at tag $plugin_version\033[0m"
+        git -c advice.detachedHead=false checkout $plugin_version >/dev/null
+
         echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
         pulumi plugin install resource ${provider} ${plugin_version}
     fi
