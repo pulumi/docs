@@ -47,7 +47,7 @@ const existing = pulumi.output(aws.lambda.getFunction({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFunction<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LookupFunctionArgs">LookupFunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LookupFunctionResult">LookupFunctionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFunction<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LookupFunctionArgs">LookupFunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LookupFunctionResult">LookupFunctionResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -79,7 +79,7 @@ The following arguments are supported:
             title="Optional">
         <span>Qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias name or version number of the lambda function. e.g. `$LATEST`, `my-alias`, or `1`
 {{% /md %}}</dd>
@@ -88,7 +88,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -112,7 +112,7 @@ The following arguments are supported:
             title="Optional">
         <span>Qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias name or version number of the lambda function. e.g. `$LATEST`, `my-alias`, or `1`
 {{% /md %}}</dd>
@@ -145,7 +145,7 @@ The following arguments are supported:
             title="Optional">
         <span>qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias name or version number of the lambda function. e.g. `$LATEST`, `my-alias`, or `1`
 {{% /md %}}</dd>
@@ -154,7 +154,7 @@ The following arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -304,7 +304,7 @@ The following output properties are available:
             title="">
         <span>Layers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Lambda Layer ARNs attached to your Lambda Function.
 {{% /md %}}</dd>
@@ -326,14 +326,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Qualified (`:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `arn`.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Qualifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -384,7 +376,7 @@ The following output properties are available:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -423,6 +415,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}VPC configuration associated with your Lambda function.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -549,14 +549,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Qualifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Reserved<wbr>Concurrent<wbr>Executions</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -643,6 +635,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}VPC configuration associated with your Lambda function.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -769,14 +769,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>qualifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>reserved<wbr>Concurrent<wbr>Executions</span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -863,6 +855,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}VPC configuration associated with your Lambda function.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -989,14 +989,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>qualifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>reserved_<wbr>concurrent_<wbr>executions</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
@@ -1083,6 +1075,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}VPC configuration associated with your Lambda function.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1190,7 +1190,7 @@ The following output properties are available:
             title="Required">
         <span>Variables</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1340,7 +1340,7 @@ The following output properties are available:
             title="Required">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1348,7 +1348,7 @@ The following output properties are available:
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

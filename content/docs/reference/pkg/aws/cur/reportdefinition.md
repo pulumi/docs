@@ -45,7 +45,7 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cur/#ReportDefinition">ReportDefinition</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cur/#ReportDefinitionArgs">ReportDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cur/#ReportDefinition">ReportDefinition</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cur/#ReportDefinitionArgs">ReportDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -53,7 +53,7 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewReportDefinition<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cur?tab=doc#ReportDefinitionArgs">ReportDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cur?tab=doc#ReportDefinition">ReportDefinition</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewReportDefinition<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cur?tab=doc#ReportDefinitionArgs">ReportDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cur?tab=doc#ReportDefinition">ReportDefinition</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -149,20 +149,11 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Additional<wbr>Artifacts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Additional<wbr>Schema<wbr>Elements</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
 {{% /md %}}</dd>
@@ -203,15 +194,6 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
     <dd>{{% md %}}Name of the existing S3 bucket to hold generated reports.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>S3Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Report path prefix. Limited to 256 characters.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>S3Region</span>
@@ -228,6 +210,24 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Additional<wbr>Artifacts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>S3Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Report path prefix. Limited to 256 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -237,15 +237,6 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Additional<wbr>Artifacts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Additional<wbr>Schema<wbr>Elements</span>
@@ -291,15 +282,6 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
     <dd>{{% md %}}Name of the existing S3 bucket to hold generated reports.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>S3Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Report path prefix. Limited to 256 characters.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>S3Region</span>
@@ -318,21 +300,30 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
     <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Additional<wbr>Artifacts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>S3Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Report path prefix. Limited to 256 characters.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>additional<wbr>Artifacts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -379,15 +370,6 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
     <dd>{{% md %}}Name of the existing S3 bucket to hold generated reports.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>s3Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Report path prefix. Limited to 256 characters.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>s3Region</span>
@@ -406,368 +388,22 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
     <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>additional_<wbr>artifacts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>additional_<wbr>schema_<wbr>elements</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>compression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Format for report. Valid values are: textORcsv.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>report_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>s3_<wbr>bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the existing S3 bucket to hold generated reports.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>s3_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Report path prefix. Limited to 256 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>s3_<wbr>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Region of the existing S3 bucket to hold generated reports.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>time_<wbr>unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## ReportDefinition Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Additional<wbr>Artifacts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Additional<wbr>Schema<wbr>Elements</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Compression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Format for report. Valid values are: textORcsv.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Report<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the existing S3 bucket to hold generated reports.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Report path prefix. Limited to 256 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region of the existing S3 bucket to hold generated reports.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Time<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Additional<wbr>Artifacts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Additional<wbr>Schema<wbr>Elements</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Compression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Format for report. Valid values are: textORcsv.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Report<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the existing S3 bucket to hold generated reports.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Report path prefix. Limited to 256 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region of the existing S3 bucket to hold generated reports.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Time<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
         <span>additional<wbr>Artifacts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>additional<wbr>Schema<wbr>Elements</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
+    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>compression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Format for report. Valid values are: textORcsv.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>report<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the existing S3 bucket to hold generated reports.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>s3Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Report path prefix. Limited to 256 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region of the existing S3 bucket to hold generated reports.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>time<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
 {{% /md %}}</dd>
 
 </dl>
@@ -777,17 +413,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>additional_<wbr>artifacts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>additional_<wbr>schema_<wbr>elements</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -795,8 +422,8 @@ The following output properties are available:
     <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>compression</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -804,8 +431,8 @@ The following output properties are available:
     <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>format</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -813,8 +440,8 @@ The following output properties are available:
     <dd>{{% md %}}Format for report. Valid values are: textORcsv.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>report_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -822,8 +449,8 @@ The following output properties are available:
     <dd>{{% md %}}Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>s3_<wbr>bucket</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -831,17 +458,8 @@ The following output properties are available:
     <dd>{{% md %}}Name of the existing S3 bucket to hold generated reports.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>s3_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Report path prefix. Limited to 256 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>s3_<wbr>region</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -849,8 +467,8 @@ The following output properties are available:
     <dd>{{% md %}}Region of the existing S3 bucket to hold generated reports.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>time_<wbr>unit</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -858,8 +476,28 @@ The following output properties are available:
     <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>additional_<wbr>artifacts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>s3_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Report path prefix. Limited to 256 characters.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -997,7 +635,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Additional<wbr>Artifacts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
 {{% /md %}}</dd>
@@ -1006,7 +644,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Additional<wbr>Schema<wbr>Elements</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
 {{% /md %}}</dd>
@@ -1015,7 +653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP.
 {{% /md %}}</dd>
@@ -1024,7 +662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Format for report. Valid values are: textORcsv.
 {{% /md %}}</dd>
@@ -1033,7 +671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Report<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
 {{% /md %}}</dd>
@@ -1042,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the existing S3 bucket to hold generated reports.
 {{% /md %}}</dd>
@@ -1051,7 +689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Report path prefix. Limited to 256 characters.
 {{% /md %}}</dd>
@@ -1060,7 +698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of the existing S3 bucket to hold generated reports.
 {{% /md %}}</dd>
@@ -1069,7 +707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
 {{% /md %}}</dd>
@@ -1103,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP.
 {{% /md %}}</dd>
@@ -1112,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Format for report. Valid values are: textORcsv.
 {{% /md %}}</dd>
@@ -1121,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Report<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
 {{% /md %}}</dd>
@@ -1130,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the existing S3 bucket to hold generated reports.
 {{% /md %}}</dd>
@@ -1139,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Report path prefix. Limited to 256 characters.
 {{% /md %}}</dd>
@@ -1148,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of the existing S3 bucket to hold generated reports.
 {{% /md %}}</dd>
@@ -1157,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
 {{% /md %}}</dd>
@@ -1173,7 +811,7 @@ The following state arguments are supported:
             title="Optional">
         <span>additional<wbr>Artifacts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
 {{% /md %}}</dd>
@@ -1182,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>additional<wbr>Schema<wbr>Elements</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
 {{% /md %}}</dd>
@@ -1191,7 +829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>compression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP.
 {{% /md %}}</dd>
@@ -1200,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Format for report. Valid values are: textORcsv.
 {{% /md %}}</dd>
@@ -1209,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>report<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
 {{% /md %}}</dd>
@@ -1218,7 +856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the existing S3 bucket to hold generated reports.
 {{% /md %}}</dd>
@@ -1227,7 +865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Report path prefix. Limited to 256 characters.
 {{% /md %}}</dd>
@@ -1236,7 +874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of the existing S3 bucket to hold generated reports.
 {{% /md %}}</dd>
@@ -1245,7 +883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>time<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
 {{% /md %}}</dd>

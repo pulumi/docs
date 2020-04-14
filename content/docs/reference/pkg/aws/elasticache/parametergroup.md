@@ -43,7 +43,7 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#ParameterGroup">ParameterGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#ParameterGroupArgs">ParameterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#ParameterGroup">ParameterGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#ParameterGroupArgs">ParameterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -51,11 +51,11 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewParameterGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticache?tab=doc#ParameterGroupArgs">ParameterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticache?tab=doc#ParameterGroup">ParameterGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewParameterGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticache?tab=doc#ParameterGroupArgs">ParameterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticache?tab=doc#ParameterGroup">ParameterGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticache.ParameterGroup.html">ParameterGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.ParameterGroupArgs.html">ParameterGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.ParameterGroup.html">ParameterGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.ParameterGroupArgs.html">ParameterGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -147,15 +147,6 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Family</span>
@@ -167,9 +158,18 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ElastiCache parameter.
 {{% /md %}}</dd>
@@ -178,7 +178,7 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametergroupparameter">List&lt;Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#parametergroupparameter">List&lt;Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ElastiCache parameters to apply.
 {{% /md %}}</dd>
@@ -190,15 +190,6 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Family</span>
@@ -210,9 +201,18 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ElastiCache parameter.
 {{% /md %}}</dd>
@@ -233,15 +233,6 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>family</span>
@@ -253,9 +244,18 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ElastiCache parameter.
 {{% /md %}}</dd>
@@ -264,7 +264,7 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametergroupparameter">Parameter<wbr>Group<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#parametergroupparameter">Parameter<wbr>Group<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ElastiCache parameters to apply.
 {{% /md %}}</dd>
@@ -276,15 +276,6 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>family</span>
@@ -292,6 +283,15 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The family of the ElastiCache parameter group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -316,188 +316,6 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ParameterGroup Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The family of the ElastiCache parameter group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the ElastiCache parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametergroupparameter">List&lt;Parameter<wbr>Group<wbr>Parameter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of ElastiCache parameters to apply.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The family of the ElastiCache parameter group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the ElastiCache parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametergroupparameter">[]Parameter<wbr>Group<wbr>Parameter</a></span>
-    </dt>
-    <dd>{{% md %}}A list of ElastiCache parameters to apply.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The family of the ElastiCache parameter group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the ElastiCache parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametergroupparameter">Parameter<wbr>Group<wbr>Parameter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of ElastiCache parameters to apply.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The family of the ElastiCache parameter group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the ElastiCache parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametergroupparameter">List[Parameter<wbr>Group<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of ElastiCache parameters to apply.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -525,7 +343,7 @@ Get an existing ParameterGroup resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticache.ParameterGroup.html">ParameterGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticache.ParameterGroupState.html">ParameterGroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.ParameterGroup.html">ParameterGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.ParameterGroupState.html">ParameterGroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -635,7 +453,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
 {{% /md %}}</dd>
@@ -644,7 +462,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family of the ElastiCache parameter group.
 {{% /md %}}</dd>
@@ -653,7 +471,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ElastiCache parameter.
 {{% /md %}}</dd>
@@ -662,7 +480,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametergroupparameter">List&lt;Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#parametergroupparameter">List&lt;Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ElastiCache parameters to apply.
 {{% /md %}}</dd>
@@ -678,7 +496,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
 {{% /md %}}</dd>
@@ -687,7 +505,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family of the ElastiCache parameter group.
 {{% /md %}}</dd>
@@ -696,7 +514,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ElastiCache parameter.
 {{% /md %}}</dd>
@@ -721,7 +539,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
 {{% /md %}}</dd>
@@ -730,7 +548,7 @@ The following state arguments are supported:
             title="Optional">
         <span>family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family of the ElastiCache parameter group.
 {{% /md %}}</dd>
@@ -739,7 +557,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ElastiCache parameter.
 {{% /md %}}</dd>
@@ -748,7 +566,7 @@ The following state arguments are supported:
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametergroupparameter">Parameter<wbr>Group<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#parametergroupparameter">Parameter<wbr>Group<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ElastiCache parameters to apply.
 {{% /md %}}</dd>

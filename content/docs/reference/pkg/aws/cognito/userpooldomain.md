@@ -53,7 +53,7 @@ const main = new aws.cognito.UserPoolDomain("main", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPoolDomain">UserPoolDomain</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPoolDomainArgs">UserPoolDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPoolDomain">UserPoolDomain</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPoolDomainArgs">UserPoolDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -61,7 +61,7 @@ const main = new aws.cognito.UserPoolDomain("main", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserPoolDomain<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolDomainArgs">UserPoolDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolDomain">UserPoolDomain</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserPoolDomain<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolDomainArgs">UserPoolDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolDomain">UserPoolDomain</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -157,15 +157,6 @@ const main = new aws.cognito.UserPoolDomain("main", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Domain</span>
@@ -182,6 +173,15 @@ const main = new aws.cognito.UserPoolDomain("main", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
 {{% /md %}}</dd>
 
 </dl>
@@ -191,15 +191,6 @@ const main = new aws.cognito.UserPoolDomain("main", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Domain</span>
@@ -218,21 +209,21 @@ const main = new aws.cognito.UserPoolDomain("main", {
     <dd>{{% md %}}The user pool ID.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>certificate<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -252,21 +243,21 @@ const main = new aws.cognito.UserPoolDomain("main", {
     <dd>{{% md %}}The user pool ID.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>certificate_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -284,6 +275,15 @@ const main = new aws.cognito.UserPoolDomain("main", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user pool ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
 {{% /md %}}</dd>
 
 </dl>
@@ -316,15 +316,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Cloudfront<wbr>Distribution<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -334,29 +325,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The domain string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>S3Bucket</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user pool ID.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -386,15 +359,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Cloudfront<wbr>Distribution<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -404,29 +368,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The domain string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>S3Bucket</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user pool ID.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -456,15 +402,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>certificate<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>cloudfront<wbr>Distribution<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -474,29 +411,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The domain string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>s3Bucket</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user pool ID.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -526,15 +445,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>certificate_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>cloudfront_<wbr>distribution_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -544,29 +454,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The domain string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>s3_<wbr>bucket</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>pool_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The user pool ID.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -717,7 +609,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the user pool owner.
 {{% /md %}}</dd>
@@ -726,7 +618,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
 {{% /md %}}</dd>
@@ -735,7 +627,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloudfront<wbr>Distribution<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the CloudFront distribution.
 {{% /md %}}</dd>
@@ -744,7 +636,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain string.
 {{% /md %}}</dd>
@@ -753,7 +645,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
 {{% /md %}}</dd>
@@ -762,7 +654,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID.
 {{% /md %}}</dd>
@@ -771,7 +663,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app version.
 {{% /md %}}</dd>
@@ -787,7 +679,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the user pool owner.
 {{% /md %}}</dd>
@@ -796,7 +688,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
 {{% /md %}}</dd>
@@ -805,7 +697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloudfront<wbr>Distribution<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the CloudFront distribution.
 {{% /md %}}</dd>
@@ -814,7 +706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain string.
 {{% /md %}}</dd>
@@ -823,7 +715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
 {{% /md %}}</dd>
@@ -832,7 +724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID.
 {{% /md %}}</dd>
@@ -841,7 +733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app version.
 {{% /md %}}</dd>
@@ -857,7 +749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>aws<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the user pool owner.
 {{% /md %}}</dd>
@@ -866,7 +758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
 {{% /md %}}</dd>
@@ -875,7 +767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cloudfront<wbr>Distribution<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the CloudFront distribution.
 {{% /md %}}</dd>
@@ -884,7 +776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain string.
 {{% /md %}}</dd>
@@ -893,7 +785,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
 {{% /md %}}</dd>
@@ -902,7 +794,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID.
 {{% /md %}}</dd>
@@ -911,7 +803,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app version.
 {{% /md %}}</dd>

@@ -38,7 +38,7 @@ const sizeConstraintSet = new aws.waf.SizeConstraintSet("size_constraint_set", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#SizeConstraintSet">SizeConstraintSet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#SizeConstraintSetArgs">SizeConstraintSetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#SizeConstraintSet">SizeConstraintSet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#SizeConstraintSetArgs">SizeConstraintSetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -46,7 +46,7 @@ const sizeConstraintSet = new aws.waf.SizeConstraintSet("size_constraint_set", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSizeConstraintSet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/waf?tab=doc#SizeConstraintSetArgs">SizeConstraintSetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/waf?tab=doc#SizeConstraintSet">SizeConstraintSet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSizeConstraintSet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/waf?tab=doc#SizeConstraintSetArgs">SizeConstraintSetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/waf?tab=doc#SizeConstraintSet">SizeConstraintSet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -146,7 +146,7 @@ const sizeConstraintSet = new aws.waf.SizeConstraintSet("size_constraint_set", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
 {{% /md %}}</dd>
@@ -155,7 +155,7 @@ const sizeConstraintSet = new aws.waf.SizeConstraintSet("size_constraint_set", {
             title="Optional">
         <span>Size<wbr>Constraints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List&lt;Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List&lt;Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
 {{% /md %}}</dd>
@@ -171,7 +171,7 @@ const sizeConstraintSet = new aws.waf.SizeConstraintSet("size_constraint_set", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
 {{% /md %}}</dd>
@@ -196,7 +196,7 @@ const sizeConstraintSet = new aws.waf.SizeConstraintSet("size_constraint_set", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
 {{% /md %}}</dd>
@@ -205,7 +205,7 @@ const sizeConstraintSet = new aws.waf.SizeConstraintSet("size_constraint_set", {
             title="Optional">
         <span>size<wbr>Constraints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]?</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
 {{% /md %}}</dd>
@@ -263,24 +263,6 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the Size Constraint Set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size<wbr>Constraints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List&lt;Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -295,24 +277,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the Size Constraint Set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size<wbr>Constraints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">[]Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
 {{% /md %}}</dd>
 
 </dl>
@@ -331,24 +295,6 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the Size Constraint Set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size<wbr>Constraints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -363,24 +309,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the Size Constraint Set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size_<wbr>constraints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
 {{% /md %}}</dd>
 
 </dl>
@@ -522,7 +450,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
@@ -531,7 +459,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
 {{% /md %}}</dd>
@@ -540,7 +468,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size<wbr>Constraints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List&lt;Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List&lt;Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
 {{% /md %}}</dd>
@@ -556,7 +484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
@@ -565,7 +493,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
 {{% /md %}}</dd>
@@ -590,7 +518,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
@@ -599,7 +527,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
 {{% /md %}}</dd>
@@ -608,7 +536,7 @@ The following state arguments are supported:
             title="Optional">
         <span>size<wbr>Constraints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]?</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
 {{% /md %}}</dd>
@@ -895,16 +823,6 @@ for all supported values.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
-If `type` is any other value, omit this field.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -915,6 +833,16 @@ If `type` is any other value, omit this field.
 e.g. `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
+If `type` is any other value, omit this field.
 {{% /md %}}</dd>
 
 </dl>
@@ -924,16 +852,6 @@ for all supported values.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
-If `type` is any other value, omit this field.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -946,22 +864,22 @@ See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.h
 for all supported values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
+If `type` is any other value, omit this field.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
-If `type` is any other value, omit this field.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -975,22 +893,22 @@ See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.h
 for all supported values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
+If `type` is any other value, omit this field.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
-If `type` is any other value, omit this field.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1002,6 +920,16 @@ If `type` is any other value, omit this field.
 e.g. `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
+If `type` is any other value, omit this field.
 {{% /md %}}</dd>
 
 </dl>

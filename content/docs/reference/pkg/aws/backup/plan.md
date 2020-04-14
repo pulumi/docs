@@ -35,7 +35,7 @@ const example = new aws.backup.Plan("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#Plan">Plan</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#PlanArgs">PlanArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#Plan">Plan</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#PlanArgs">PlanArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -43,7 +43,7 @@ const example = new aws.backup.Plan("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPlan<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/backup?tab=doc#PlanArgs">PlanArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/backup?tab=doc#Plan">Plan</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPlan<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/backup?tab=doc#PlanArgs">PlanArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/backup?tab=doc#Plan">Plan</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -139,15 +139,6 @@ const example = new aws.backup.Plan("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Rules</span>
@@ -159,9 +150,18 @@ const example = new aws.backup.Plan("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of a backup plan.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -173,15 +173,6 @@ const example = new aws.backup.Plan("example", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Rules</span>
@@ -189,6 +180,15 @@ const example = new aws.backup.Plan("example", {
         <span class="property-type"><a href="#planrule">[]Plan<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of a backup plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -207,15 +207,6 @@ const example = new aws.backup.Plan("example", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>rules</span>
@@ -227,9 +218,18 @@ const example = new aws.backup.Plan("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of a backup plan.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -241,15 +241,6 @@ const example = new aws.backup.Plan("example", {
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>rules</span>
@@ -257,6 +248,15 @@ const example = new aws.backup.Plan("example", {
         <span class="property-type"><a href="#planrule">List[Plan<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The display name of a backup plan.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -298,33 +298,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">List&lt;Plan<wbr>Rule&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -346,33 +319,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">[]Plan<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -402,33 +348,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">Plan<wbr>Rule[]</a></span>
-    </dt>
-    <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -450,33 +369,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">List[Plan<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -627,7 +519,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
 {{% /md %}}</dd>
@@ -636,7 +528,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
 {{% /md %}}</dd>
@@ -645,7 +537,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">List&lt;Plan<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#planrule">List&lt;Plan<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
 {{% /md %}}</dd>
@@ -654,7 +546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -663,7 +555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
 {{% /md %}}</dd>
@@ -679,7 +571,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
 {{% /md %}}</dd>
@@ -688,7 +580,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
 {{% /md %}}</dd>
@@ -715,7 +607,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
 {{% /md %}}</dd>
@@ -731,7 +623,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
 {{% /md %}}</dd>
@@ -740,7 +632,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
 {{% /md %}}</dd>
@@ -749,7 +641,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrule">Plan<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#planrule">Plan<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
 {{% /md %}}</dd>
@@ -758,7 +650,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -767,7 +659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
 {{% /md %}}</dd>
@@ -853,33 +745,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Completion<wbr>Window</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Recovery<wbr>Point<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Rule<wbr>Name</span>
@@ -887,24 +752,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An display name for a backup rule.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A CRON expression specifying when AWS Backup initiates a backup job.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Start<wbr>Window</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time in minutes before beginning a backup.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -916,18 +763,11 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a logical container where backups are stored.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Completion<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
 {{% /md %}}</dd>
@@ -936,7 +776,77 @@ The following state arguments are supported:
             title="Optional">
         <span>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulelifecycle">*Plan<wbr>Rule<wbr>Lifecycle</a></span>
+        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Recovery<wbr>Point<wbr>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Schedule</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A CRON expression specifying when AWS Backup initiates a backup job.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Start<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of time in minutes before beginning a backup.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Rule<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An display name for a backup rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Vault<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of a logical container where backups are stored.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Completion<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Lifecycle</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.
 {{% /md %}}</dd>
@@ -950,20 +860,11 @@ The following state arguments are supported:
     <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Rule<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An display name for a backup rule.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CRON expression specifying when AWS Backup initiates a backup job.
 {{% /md %}}</dd>
@@ -972,18 +873,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Start<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time in minutes before beginning a backup.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Target<wbr>Vault<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of a logical container where backups are stored.
 {{% /md %}}</dd>
 
 </dl>
@@ -993,33 +885,6 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>completion<wbr>Window</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle?</a></span>
-    </dt>
-    <dd>{{% md %}}The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>recovery<wbr>Point<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>rule<wbr>Name</span>
@@ -1027,24 +892,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An display name for a backup rule.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A CRON expression specifying when AWS Backup initiates a backup job.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>start<wbr>Window</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time in minutes before beginning a backup.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1056,12 +903,75 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a logical container where backups are stored.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>completion<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>lifecycle</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle</a></span>
+    </dt>
+    <dd>{{% md %}}The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>recovery<wbr>Point<wbr>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>schedule</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A CRON expression specifying when AWS Backup initiates a backup job.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>start<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of time in minutes before beginning a backup.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>rule_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An display name for a backup rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Vault<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of a logical container where backups are stored.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1090,15 +1000,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>rule_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An display name for a backup rule.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>schedule</span>
@@ -1115,15 +1016,6 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The amount of time in minutes before beginning a backup.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>target<wbr>Vault<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of a logical container where backups are stored.
 {{% /md %}}</dd>
 
 </dl>
@@ -1152,7 +1044,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cold<wbr>Storage<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
 {{% /md %}}</dd>
@@ -1161,7 +1053,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Delete<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
 {{% /md %}}</dd>
@@ -1177,7 +1069,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cold<wbr>Storage<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
 {{% /md %}}</dd>
@@ -1186,7 +1078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Delete<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
 {{% /md %}}</dd>
@@ -1202,7 +1094,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cold<wbr>Storage<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
 {{% /md %}}</dd>
@@ -1211,7 +1103,7 @@ The following state arguments are supported:
             title="Optional">
         <span>delete<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
 {{% /md %}}</dd>

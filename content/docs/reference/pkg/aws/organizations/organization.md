@@ -35,7 +35,7 @@ const org = new aws.organizations.Organization("org", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/organizations/#Organization">Organization</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/organizations/#OrganizationArgs">OrganizationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/organizations/#Organization">Organization</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/organizations/#OrganizationArgs">OrganizationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -43,7 +43,7 @@ const org = new aws.organizations.Organization("org", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewOrganization<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/organizations?tab=doc#OrganizationArgs">OrganizationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/organizations?tab=doc#Organization">Organization</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewOrganization<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/organizations?tab=doc#OrganizationArgs">OrganizationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/organizations?tab=doc#Organization">Organization</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -143,7 +143,7 @@ const org = new aws.organizations.Organization("org", {
             title="Optional">
         <span>Aws<wbr>Service<wbr>Access<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
 {{% /md %}}</dd>
@@ -152,7 +152,7 @@ const org = new aws.organizations.Organization("org", {
             title="Optional">
         <span>Enabled<wbr>Policy<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g. `SERVICE_CONTROL_POLICY` and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
 {{% /md %}}</dd>
@@ -161,7 +161,7 @@ const org = new aws.organizations.Organization("org", {
             title="Optional">
         <span>Feature<wbr>Set</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ const org = new aws.organizations.Organization("org", {
             title="Optional">
         <span>Feature<wbr>Set</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 {{% /md %}}</dd>
@@ -211,7 +211,7 @@ const org = new aws.organizations.Organization("org", {
             title="Optional">
         <span>aws<wbr>Service<wbr>Access<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
 {{% /md %}}</dd>
@@ -220,7 +220,7 @@ const org = new aws.organizations.Organization("org", {
             title="Optional">
         <span>enabled<wbr>Policy<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g. `SERVICE_CONTROL_POLICY` and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
 {{% /md %}}</dd>
@@ -229,7 +229,7 @@ const org = new aws.organizations.Organization("org", {
             title="Optional">
         <span>feature<wbr>Set</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 {{% /md %}}</dd>
@@ -307,33 +307,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Aws<wbr>Service<wbr>Access<wbr>Principals</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled<wbr>Policy<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g. `SERVICE_CONTROL_POLICY` and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Feature<wbr>Set</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specify "ALL" (default) or "CONSOLIDATED_BILLING".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Master<wbr>Account<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -400,33 +373,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the root
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Aws<wbr>Service<wbr>Access<wbr>Principals</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled<wbr>Policy<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g. `SERVICE_CONTROL_POLICY` and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Feature<wbr>Set</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -501,33 +447,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>aws<wbr>Service<wbr>Access<wbr>Principals</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled<wbr>Policy<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g. `SERVICE_CONTROL_POLICY` and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>feature<wbr>Set</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specify "ALL" (default) or "CONSOLIDATED_BILLING".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>master<wbr>Account<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -594,33 +513,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the root
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>aws_<wbr>service_<wbr>access_<wbr>principals</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled_<wbr>policy_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g. `SERVICE_CONTROL_POLICY` and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>feature_<wbr>set</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -807,7 +699,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationaccount">List&lt;Organization<wbr>Account<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#organizationaccount">List&lt;Organization<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd>
@@ -816,7 +708,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the root
 {{% /md %}}</dd>
@@ -825,7 +717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Service<wbr>Access<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
 {{% /md %}}</dd>
@@ -834,7 +726,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled<wbr>Policy<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g. `SERVICE_CONTROL_POLICY` and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
 {{% /md %}}</dd>
@@ -843,7 +735,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Feature<wbr>Set</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 {{% /md %}}</dd>
@@ -852,7 +744,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Account<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the master account
 {{% /md %}}</dd>
@@ -861,7 +753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Account<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the master account
 {{% /md %}}</dd>
@@ -870,7 +762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the master account
 {{% /md %}}</dd>
@@ -879,7 +771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Non<wbr>Master<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationnonmasteraccount">List&lt;Organization<wbr>Non<wbr>Master<wbr>Account<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#organizationnonmasteraccount">List&lt;Organization<wbr>Non<wbr>Master<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd>
@@ -888,7 +780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Roots</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationroot">List&lt;Organization<wbr>Root<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#organizationroot">List&lt;Organization<wbr>Root<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of organization roots. All elements have these attributes:
 {{% /md %}}</dd>
@@ -913,7 +805,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the root
 {{% /md %}}</dd>
@@ -940,7 +832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Feature<wbr>Set</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 {{% /md %}}</dd>
@@ -949,7 +841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Account<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the master account
 {{% /md %}}</dd>
@@ -958,7 +850,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Account<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the master account
 {{% /md %}}</dd>
@@ -967,7 +859,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the master account
 {{% /md %}}</dd>
@@ -1001,7 +893,7 @@ The following state arguments are supported:
             title="Optional">
         <span>accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationaccount">Organization<wbr>Account[]?</a></span>
+        <span class="property-type"><a href="#organizationaccount">Organization<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd>
@@ -1010,7 +902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the root
 {{% /md %}}</dd>
@@ -1019,7 +911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>aws<wbr>Service<wbr>Access<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
 {{% /md %}}</dd>
@@ -1028,7 +920,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled<wbr>Policy<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g. `SERVICE_CONTROL_POLICY` and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
 {{% /md %}}</dd>
@@ -1037,7 +929,7 @@ The following state arguments are supported:
             title="Optional">
         <span>feature<wbr>Set</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 {{% /md %}}</dd>
@@ -1046,7 +938,7 @@ The following state arguments are supported:
             title="Optional">
         <span>master<wbr>Account<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the master account
 {{% /md %}}</dd>
@@ -1055,7 +947,7 @@ The following state arguments are supported:
             title="Optional">
         <span>master<wbr>Account<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the master account
 {{% /md %}}</dd>
@@ -1064,7 +956,7 @@ The following state arguments are supported:
             title="Optional">
         <span>master<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the master account
 {{% /md %}}</dd>
@@ -1073,7 +965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>non<wbr>Master<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationnonmasteraccount">Organization<wbr>Non<wbr>Master<wbr>Account[]?</a></span>
+        <span class="property-type"><a href="#organizationnonmasteraccount">Organization<wbr>Non<wbr>Master<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd>
@@ -1082,7 +974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>roots</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationroot">Organization<wbr>Root[]?</a></span>
+        <span class="property-type"><a href="#organizationroot">Organization<wbr>Root[]</a></span>
     </dt>
     <dd>{{% md %}}List of organization roots. All elements have these attributes:
 {{% /md %}}</dd>
@@ -1217,7 +1109,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the root
 {{% /md %}}</dd>
@@ -1226,7 +1118,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the account
 {{% /md %}}</dd>
@@ -1235,7 +1127,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the root
 {{% /md %}}</dd>
@@ -1244,7 +1136,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy type
 {{% /md %}}</dd>
@@ -1253,7 +1145,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the policy type as it relates to the associated root
 {{% /md %}}</dd>
@@ -1269,7 +1161,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the root
 {{% /md %}}</dd>
@@ -1278,7 +1170,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the account
 {{% /md %}}</dd>
@@ -1287,7 +1179,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the root
 {{% /md %}}</dd>
@@ -1296,7 +1188,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy type
 {{% /md %}}</dd>
@@ -1305,7 +1197,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the policy type as it relates to the associated root
 {{% /md %}}</dd>
@@ -1321,7 +1213,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the root
 {{% /md %}}</dd>
@@ -1330,7 +1222,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the account
 {{% /md %}}</dd>
@@ -1339,7 +1231,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the root
 {{% /md %}}</dd>
@@ -1348,7 +1240,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy type
 {{% /md %}}</dd>
@@ -1357,7 +1249,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the policy type as it relates to the associated root
 {{% /md %}}</dd>
@@ -1440,7 +1332,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the root
 {{% /md %}}</dd>
@@ -1449,7 +1341,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the account
 {{% /md %}}</dd>
@@ -1458,7 +1350,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the root
 {{% /md %}}</dd>
@@ -1467,7 +1359,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy type
 {{% /md %}}</dd>
@@ -1476,7 +1368,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the policy type as it relates to the associated root
 {{% /md %}}</dd>
@@ -1492,7 +1384,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the root
 {{% /md %}}</dd>
@@ -1501,7 +1393,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the account
 {{% /md %}}</dd>
@@ -1510,7 +1402,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the root
 {{% /md %}}</dd>
@@ -1519,7 +1411,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy type
 {{% /md %}}</dd>
@@ -1528,7 +1420,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the policy type as it relates to the associated root
 {{% /md %}}</dd>
@@ -1544,7 +1436,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the root
 {{% /md %}}</dd>
@@ -1553,7 +1445,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the account
 {{% /md %}}</dd>
@@ -1562,7 +1454,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the root
 {{% /md %}}</dd>
@@ -1571,7 +1463,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy type
 {{% /md %}}</dd>
@@ -1580,7 +1472,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the policy type as it relates to the associated root
 {{% /md %}}</dd>
@@ -1663,7 +1555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the root
 {{% /md %}}</dd>
@@ -1672,7 +1564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the root
 {{% /md %}}</dd>
@@ -1681,7 +1573,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy type
 {{% /md %}}</dd>
@@ -1690,7 +1582,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationrootpolicytype">List&lt;Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#organizationrootpolicytype">List&lt;Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of policy types enabled for this root. All elements have these attributes:
 {{% /md %}}</dd>
@@ -1706,7 +1598,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the root
 {{% /md %}}</dd>
@@ -1715,7 +1607,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the root
 {{% /md %}}</dd>
@@ -1724,7 +1616,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy type
 {{% /md %}}</dd>
@@ -1749,7 +1641,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the root
 {{% /md %}}</dd>
@@ -1758,7 +1650,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the root
 {{% /md %}}</dd>
@@ -1767,7 +1659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy type
 {{% /md %}}</dd>
@@ -1776,7 +1668,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationrootpolicytype">Organization<wbr>Root<wbr>Policy<wbr>Type[]?</a></span>
+        <span class="property-type"><a href="#organizationrootpolicytype">Organization<wbr>Root<wbr>Policy<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}List of policy types enabled for this root. All elements have these attributes:
 {{% /md %}}</dd>
@@ -1850,7 +1742,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the policy type as it relates to the associated root
 {{% /md %}}</dd>
@@ -1859,7 +1751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1874,7 +1766,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the policy type as it relates to the associated root
 {{% /md %}}</dd>
@@ -1883,7 +1775,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1898,7 +1790,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the policy type as it relates to the associated root
 {{% /md %}}</dd>
@@ -1907,7 +1799,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -44,7 +44,7 @@ const store = new aws.ses.ReceiptRule("store", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ses/#ReceiptRule">ReceiptRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ses/#ReceiptRuleArgs">ReceiptRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ses/#ReceiptRule">ReceiptRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ses/#ReceiptRuleArgs">ReceiptRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -52,7 +52,7 @@ const store = new aws.ses.ReceiptRule("store", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewReceiptRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleArgs">ReceiptRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRule">ReceiptRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewReceiptRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleArgs">ReceiptRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRule">ReceiptRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -148,69 +148,6 @@ const store = new aws.ses.ReceiptRule("store", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Add<wbr>Header<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">List&lt;Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>After</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bounce<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">List&lt;Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Lambda<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">List&lt;Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Rule<wbr>Set<wbr>Name</span>
@@ -222,9 +159,72 @@ const store = new aws.ses.ReceiptRule("store", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Add<wbr>Header<wbr>Actions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#receiptruleaddheaderaction">List&lt;Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>After</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the rule to place this rule after
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bounce<wbr>Actions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#receiptrulebounceaction">List&lt;Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the rule will be enabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Lambda<wbr>Actions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#receiptrulelambdaaction">List&lt;Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the rule
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Recipients</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of email addresses
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>S3Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">List&lt;Receipt<wbr>Rule<wbr>S3Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#receiptrules3action">List&lt;Receipt<wbr>Rule<wbr>S3Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Scan<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -242,7 +242,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Sns<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">List&lt;Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#receiptrulesnsaction">List&lt;Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Stop<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">List&lt;Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#receiptrulestopaction">List&lt;Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Tls<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Workmail<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">List&lt;Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#receiptruleworkmailaction">List&lt;Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -280,6 +280,15 @@ const store = new aws.ses.ReceiptRule("store", {
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Rule<wbr>Set<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the rule set
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -294,7 +303,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd>
@@ -312,7 +321,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd>
@@ -330,7 +339,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -342,15 +351,6 @@ const store = new aws.ses.ReceiptRule("store", {
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Rule<wbr>Set<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -366,7 +366,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Scan<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -393,7 +393,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Tls<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -414,69 +414,6 @@ const store = new aws.ses.ReceiptRule("store", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>add<wbr>Header<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>after</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>bounce<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">Receipt<wbr>Rule<wbr>Bounce<wbr>Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>lambda<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">Receipt<wbr>Rule<wbr>Lambda<wbr>Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>rule<wbr>Set<wbr>Name</span>
@@ -488,9 +425,72 @@ const store = new aws.ses.ReceiptRule("store", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>add<wbr>Header<wbr>Actions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#receiptruleaddheaderaction">Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>after</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the rule to place this rule after
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>bounce<wbr>Actions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#receiptrulebounceaction">Receipt<wbr>Rule<wbr>Bounce<wbr>Action[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, the rule will be enabled
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>lambda<wbr>Actions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#receiptrulelambdaaction">Receipt<wbr>Rule<wbr>Lambda<wbr>Action[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the rule
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>recipients</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of email addresses
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>s3Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">Receipt<wbr>Rule<wbr>S3Action[]?</a></span>
+        <span class="property-type"><a href="#receiptrules3action">Receipt<wbr>Rule<wbr>S3Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>scan<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -508,7 +508,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>sns<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">Receipt<wbr>Rule<wbr>Sns<wbr>Action[]?</a></span>
+        <span class="property-type"><a href="#receiptrulesnsaction">Receipt<wbr>Rule<wbr>Sns<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -517,7 +517,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>stop<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">Receipt<wbr>Rule<wbr>Stop<wbr>Action[]?</a></span>
+        <span class="property-type"><a href="#receiptrulestopaction">Receipt<wbr>Rule<wbr>Stop<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -526,7 +526,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>tls<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -535,7 +535,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>workmail<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">Receipt<wbr>Rule<wbr>Workmail<wbr>Action[]?</a></span>
+        <span class="property-type"><a href="#receiptruleworkmailaction">Receipt<wbr>Rule<wbr>Workmail<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -546,6 +546,15 @@ const store = new aws.ses.ReceiptRule("store", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>rule_<wbr>set_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the rule set
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -610,15 +619,6 @@ const store = new aws.ses.ReceiptRule("store", {
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>rule_<wbr>set_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule set
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>s3_<wbr>actions</span>
@@ -677,548 +677,6 @@ const store = new aws.ses.ReceiptRule("store", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ReceiptRule Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Add<wbr>Header<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">List&lt;Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>After</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bounce<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">List&lt;Receipt<wbr>Rule<wbr>Bounce<wbr>Action&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Lambda<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">List&lt;Receipt<wbr>Rule<wbr>Lambda<wbr>Action&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rule<wbr>Set<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule set
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">List&lt;Receipt<wbr>Rule<wbr>S3Action&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of S3 Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scan<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sns<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">List&lt;Receipt<wbr>Rule<wbr>Sns<wbr>Action&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of SNS Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stop<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">List&lt;Receipt<wbr>Rule<wbr>Stop<wbr>Action&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Stop Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tls<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Require or Optional
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Workmail<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">List&lt;Receipt<wbr>Rule<wbr>Workmail<wbr>Action&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Add<wbr>Header<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">[]Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>After</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bounce<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">[]Receipt<wbr>Rule<wbr>Bounce<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Lambda<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">[]Receipt<wbr>Rule<wbr>Lambda<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rule<wbr>Set<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule set
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">[]Receipt<wbr>Rule<wbr>S3Action</a></span>
-    </dt>
-    <dd>{{% md %}}A list of S3 Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scan<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sns<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">[]Receipt<wbr>Rule<wbr>Sns<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}A list of SNS Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stop<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">[]Receipt<wbr>Rule<wbr>Stop<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Stop Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tls<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Require or Optional
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Workmail<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">[]Receipt<wbr>Rule<wbr>Workmail<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>add<wbr>Header<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>after</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bounce<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">Receipt<wbr>Rule<wbr>Bounce<wbr>Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>lambda<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">Receipt<wbr>Rule<wbr>Lambda<wbr>Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rule<wbr>Set<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule set
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">Receipt<wbr>Rule<wbr>S3Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of S3 Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scan<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sns<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">Receipt<wbr>Rule<wbr>Sns<wbr>Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of SNS Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>stop<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">Receipt<wbr>Rule<wbr>Stop<wbr>Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Stop Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tls<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Require or Optional
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>workmail<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">Receipt<wbr>Rule<wbr>Workmail<wbr>Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>add_<wbr>header_<wbr>actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">List[Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>after</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule to place this rule after
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bounce_<wbr>actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">List[Receipt<wbr>Rule<wbr>Bounce<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the rule will be enabled
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>lambda_<wbr>actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">List[Receipt<wbr>Rule<wbr>Lambda<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of email addresses
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rule_<wbr>set_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule set
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3_<wbr>actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">List[Receipt<wbr>Rule<wbr>S3Action]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of S3 Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scan_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sns_<wbr>actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">List[Receipt<wbr>Rule<wbr>Sns<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of SNS Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>stop_<wbr>actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">List[Receipt<wbr>Rule<wbr>Stop<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Stop Action blocks. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tls_<wbr>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Require or Optional
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>workmail_<wbr>actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">List[Receipt<wbr>Rule<wbr>Workmail<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1356,7 +814,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Add<wbr>Header<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">List&lt;Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#receiptruleaddheaderaction">List&lt;Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1365,7 +823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd>
@@ -1374,7 +832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bounce<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">List&lt;Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#receiptrulebounceaction">List&lt;Receipt<wbr>Rule<wbr>Bounce<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1383,7 +841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd>
@@ -1392,7 +850,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">List&lt;Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#receiptrulelambdaaction">List&lt;Receipt<wbr>Rule<wbr>Lambda<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1401,7 +859,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -1410,7 +868,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd>
@@ -1419,7 +877,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rule<wbr>Set<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd>
@@ -1428,7 +886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">List&lt;Receipt<wbr>Rule<wbr>S3Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#receiptrules3action">List&lt;Receipt<wbr>Rule<wbr>S3Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1437,7 +895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scan<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -1446,7 +904,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sns<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">List&lt;Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#receiptrulesnsaction">List&lt;Receipt<wbr>Rule<wbr>Sns<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1455,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stop<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">List&lt;Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#receiptrulestopaction">List&lt;Receipt<wbr>Rule<wbr>Stop<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1464,7 +922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tls<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -1473,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Workmail<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">List&lt;Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#receiptruleworkmailaction">List&lt;Receipt<wbr>Rule<wbr>Workmail<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1498,7 +956,7 @@ The following state arguments are supported:
             title="Optional">
         <span>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd>
@@ -1516,7 +974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd>
@@ -1534,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -1552,7 +1010,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rule<wbr>Set<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd>
@@ -1570,7 +1028,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scan<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -1597,7 +1055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tls<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -1622,7 +1080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>add<wbr>Header<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleaddheaderaction">Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action[]?</a></span>
+        <span class="property-type"><a href="#receiptruleaddheaderaction">Receipt<wbr>Rule<wbr>Add<wbr>Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Add Header Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1631,7 +1089,7 @@ The following state arguments are supported:
             title="Optional">
         <span>after</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd>
@@ -1640,7 +1098,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bounce<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulebounceaction">Receipt<wbr>Rule<wbr>Bounce<wbr>Action[]?</a></span>
+        <span class="property-type"><a href="#receiptrulebounceaction">Receipt<wbr>Rule<wbr>Bounce<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Bounce Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1649,7 +1107,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd>
@@ -1658,7 +1116,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulelambdaaction">Receipt<wbr>Rule<wbr>Lambda<wbr>Action[]?</a></span>
+        <span class="property-type"><a href="#receiptrulelambdaaction">Receipt<wbr>Rule<wbr>Lambda<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Lambda Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1667,7 +1125,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -1676,7 +1134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd>
@@ -1685,7 +1143,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rule<wbr>Set<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd>
@@ -1694,7 +1152,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrules3action">Receipt<wbr>Rule<wbr>S3Action[]?</a></span>
+        <span class="property-type"><a href="#receiptrules3action">Receipt<wbr>Rule<wbr>S3Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of S3 Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1703,7 +1161,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scan<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -1712,7 +1170,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sns<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulesnsaction">Receipt<wbr>Rule<wbr>Sns<wbr>Action[]?</a></span>
+        <span class="property-type"><a href="#receiptrulesnsaction">Receipt<wbr>Rule<wbr>Sns<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1721,7 +1179,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stop<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptrulestopaction">Receipt<wbr>Rule<wbr>Stop<wbr>Action[]?</a></span>
+        <span class="property-type"><a href="#receiptrulestopaction">Receipt<wbr>Rule<wbr>Stop<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Stop Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -1730,7 +1188,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tls<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -1739,7 +1197,7 @@ The following state arguments are supported:
             title="Optional">
         <span>workmail<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#receiptruleworkmailaction">Receipt<wbr>Rule<wbr>Workmail<wbr>Action[]?</a></span>
+        <span class="property-type"><a href="#receiptruleworkmailaction">Receipt<wbr>Rule<wbr>Workmail<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of WorkMail Action blocks. Documented below.
 {{% /md %}}</dd>
@@ -2097,7 +1555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC 3463 SMTP enhanced status code
 {{% /md %}}</dd>
@@ -2106,7 +1564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2158,7 +1616,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC 3463 SMTP enhanced status code
 {{% /md %}}</dd>
@@ -2167,7 +1625,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2219,7 +1677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC 3463 SMTP enhanced status code
 {{% /md %}}</dd>
@@ -2228,7 +1686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2325,15 +1783,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The ARN of the Lambda function to invoke
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Invocation<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Event or RequestResponse
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Position</span>
@@ -2345,9 +1794,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Invocation<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Event or RequestResponse
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2368,15 +1826,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The ARN of the Lambda function to invoke
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Invocation<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Event or RequestResponse
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Position</span>
@@ -2388,9 +1837,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Invocation<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Event or RequestResponse
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2411,15 +1869,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The ARN of the Lambda function to invoke
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>invocation<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Event or RequestResponse
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>position</span>
@@ -2431,9 +1880,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>invocation<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Event or RequestResponse
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2454,15 +1912,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The ARN of the Lambda function to invoke
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>invocation<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Event or RequestResponse
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>position</span>
@@ -2470,6 +1919,15 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>invocation<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Event or RequestResponse
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2512,24 +1970,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the S3 bucket
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the KMS key
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Object<wbr>Key<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The key prefix of the S3 bucket
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Position</span>
@@ -2541,9 +1981,27 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the KMS key
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Object<wbr>Key<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key prefix of the S3 bucket
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2564,24 +2022,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the S3 bucket
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the KMS key
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Object<wbr>Key<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The key prefix of the S3 bucket
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Position</span>
@@ -2593,9 +2033,27 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the KMS key
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Object<wbr>Key<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key prefix of the S3 bucket
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2616,24 +2074,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the S3 bucket
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the KMS key
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>object<wbr>Key<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The key prefix of the S3 bucket
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>position</span>
@@ -2645,9 +2085,27 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>kms<wbr>Key<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the KMS key
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>object<wbr>Key<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key prefix of the S3 bucket
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2668,6 +2126,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the S3 bucket
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>position</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The position of the action in the receipt rule
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>kms_<wbr>key_<wbr>arn</span>
@@ -2684,15 +2151,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key prefix of the S3 bucket
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>position</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2863,7 +2321,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2897,7 +2355,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2931,7 +2389,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -3014,7 +2472,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -3048,7 +2506,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -3082,7 +2540,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>

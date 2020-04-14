@@ -46,7 +46,7 @@ large files efficiently.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#LayerVersion">LayerVersion</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#LayerVersionArgs">LayerVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#LayerVersion">LayerVersion</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#LayerVersionArgs">LayerVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -54,7 +54,7 @@ large files efficiently.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLayerVersion<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LayerVersionArgs">LayerVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LayerVersion">LayerVersion</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLayerVersion<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LayerVersionArgs">LayerVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LayerVersion">LayerVersion</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -150,11 +150,20 @@ large files efficiently.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Layer<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique name for your Lambda Layer
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Archive?</span>
+        <span class="property-type">Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd>
@@ -163,7 +172,7 @@ large files efficiently.
             title="Optional">
         <span>Compatible<wbr>Runtimes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
 {{% /md %}}</dd>
@@ -172,10 +181,62 @@ large files efficiently.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Layer does.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>License<wbr>Info</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>S3Bucket</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>S3Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>S3Object<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Code<wbr>Hash</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -188,61 +249,9 @@ large files efficiently.
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>S3Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>S3Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>S3Object<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Source<wbr>Code<wbr>Hash</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.Archive</span>
+        <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd>
@@ -260,25 +269,16 @@ large files efficiently.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of what your Lambda Layer does.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Layer<wbr>Name</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name for your Lambda Layer
+    <dd>{{% md %}}Description of what your Lambda Layer does.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>License<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ large files efficiently.
             title="Optional">
         <span>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
@@ -296,7 +296,7 @@ large files efficiently.
             title="Optional">
         <span>S3Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ large files efficiently.
             title="Optional">
         <span>S3Object<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -314,7 +314,7 @@ large files efficiently.
             title="Optional">
         <span>Source<wbr>Code<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
 {{% /md %}}</dd>
@@ -325,33 +325,6 @@ large files efficiently.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.asset.Archive?</span>
-    </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>compatible<wbr>Runtimes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of what your Lambda Layer does.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -364,9 +337,36 @@ large files efficiently.
 
     <dt class="property-optional"
             title="Optional">
+        <span>code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.asset.<wbr>Archive</span>
+    </dt>
+    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>compatible<wbr>Runtimes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of what your Lambda Layer does.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>license<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
 {{% /md %}}</dd>
@@ -375,7 +375,7 @@ large files efficiently.
             title="Optional">
         <span>s3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
@@ -384,7 +384,7 @@ large files efficiently.
             title="Optional">
         <span>s3Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -393,7 +393,7 @@ large files efficiently.
             title="Optional">
         <span>s3Object<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -402,7 +402,7 @@ large files efficiently.
             title="Optional">
         <span>source<wbr>Code<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
 {{% /md %}}</dd>
@@ -414,11 +414,20 @@ large files efficiently.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>layer_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique name for your Lambda Layer
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.Archive</span>
+        <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd>
@@ -439,15 +448,6 @@ large files efficiently.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Layer does.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>layer_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique name for your Lambda Layer
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -525,24 +525,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Archive?</span>
-    </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Compatible<wbr>Runtimes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -552,74 +534,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of what your Lambda Layer does.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Layer<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer without version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Layer<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for your Lambda Layer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>License<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Object<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Code<wbr>Hash</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -658,24 +577,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.Archive</span>
-    </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Compatible<wbr>Runtimes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -685,74 +586,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of what your Lambda Layer does.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Layer<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer without version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Layer<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for your Lambda Layer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>License<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Object<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Code<wbr>Hash</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -791,24 +629,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.asset.Archive?</span>
-    </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>compatible<wbr>Runtimes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>created<wbr>Date</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -818,74 +638,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of what your Lambda Layer does.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>layer<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer without version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>layer<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for your Lambda Layer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>license<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3Object<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source<wbr>Code<wbr>Hash</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -924,24 +681,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.Archive</span>
-    </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>compatible_<wbr>runtimes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>created_<wbr>date</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -951,74 +690,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of what your Lambda Layer does.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>layer_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer without version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>layer_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique name for your Lambda Layer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>license_<wbr>info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3_<wbr>bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3_<wbr>object_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source_<wbr>code_<wbr>hash</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1178,7 +854,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer with version.
 {{% /md %}}</dd>
@@ -1187,7 +863,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Archive?</span>
+        <span class="property-type">Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd>
@@ -1196,7 +872,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compatible<wbr>Runtimes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
 {{% /md %}}</dd>
@@ -1205,7 +881,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was created.
 {{% /md %}}</dd>
@@ -1214,7 +890,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Layer does.
 {{% /md %}}</dd>
@@ -1223,7 +899,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Layer<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer without version.
 {{% /md %}}</dd>
@@ -1232,7 +908,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Layer<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for your Lambda Layer
 {{% /md %}}</dd>
@@ -1241,7 +917,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
 {{% /md %}}</dd>
@@ -1250,7 +926,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
@@ -1259,7 +935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -1268,7 +944,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Object<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -1277,7 +953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Code<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
 {{% /md %}}</dd>
@@ -1286,7 +962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Code<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the function .zip file.
 {{% /md %}}</dd>
@@ -1295,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Lamba Layer version.
 {{% /md %}}</dd>
@@ -1311,7 +987,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer with version.
 {{% /md %}}</dd>
@@ -1320,7 +996,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.Archive</span>
+        <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd>
@@ -1338,7 +1014,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was created.
 {{% /md %}}</dd>
@@ -1347,7 +1023,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Layer does.
 {{% /md %}}</dd>
@@ -1356,7 +1032,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Layer<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer without version.
 {{% /md %}}</dd>
@@ -1365,7 +1041,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Layer<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for your Lambda Layer
 {{% /md %}}</dd>
@@ -1374,7 +1050,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
 {{% /md %}}</dd>
@@ -1383,7 +1059,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
@@ -1392,7 +1068,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -1401,7 +1077,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Object<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -1410,7 +1086,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Code<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
 {{% /md %}}</dd>
@@ -1419,7 +1095,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Code<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the function .zip file.
 {{% /md %}}</dd>
@@ -1428,7 +1104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Lamba Layer version.
 {{% /md %}}</dd>
@@ -1444,7 +1120,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer with version.
 {{% /md %}}</dd>
@@ -1453,7 +1129,7 @@ The following state arguments are supported:
             title="Optional">
         <span>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.asset.Archive?</span>
+        <span class="property-type">pulumi.asset.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd>
@@ -1462,7 +1138,7 @@ The following state arguments are supported:
             title="Optional">
         <span>compatible<wbr>Runtimes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
 {{% /md %}}</dd>
@@ -1471,7 +1147,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was created.
 {{% /md %}}</dd>
@@ -1480,7 +1156,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Layer does.
 {{% /md %}}</dd>
@@ -1489,7 +1165,7 @@ The following state arguments are supported:
             title="Optional">
         <span>layer<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer without version.
 {{% /md %}}</dd>
@@ -1498,7 +1174,7 @@ The following state arguments are supported:
             title="Optional">
         <span>layer<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for your Lambda Layer
 {{% /md %}}</dd>
@@ -1507,7 +1183,7 @@ The following state arguments are supported:
             title="Optional">
         <span>license<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
 {{% /md %}}</dd>
@@ -1516,7 +1192,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
@@ -1525,7 +1201,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -1534,7 +1210,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Object<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -1543,7 +1219,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Code<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
 {{% /md %}}</dd>
@@ -1552,7 +1228,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Code<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the function .zip file.
 {{% /md %}}</dd>
@@ -1561,7 +1237,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Lamba Layer version.
 {{% /md %}}</dd>
@@ -1586,7 +1262,7 @@ The following state arguments are supported:
             title="Optional">
         <span>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.Archive</span>
+        <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd>

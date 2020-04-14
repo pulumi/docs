@@ -51,7 +51,7 @@ const example = new aws.codebuild.Webhook("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codebuild/#Webhook">Webhook</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codebuild/#WebhookArgs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codebuild/#Webhook">Webhook</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codebuild/#WebhookArgs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -59,11 +59,11 @@ const example = new aws.codebuild.Webhook("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewWebhook<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#WebhookArgs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#Webhook">Webhook</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewWebhook<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#WebhookArgs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#Webhook">Webhook</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codebuild.Webhook.html">Webhook</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.WebhookArgs.html">WebhookArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.Webhook.html">Webhook</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.WebhookArgs.html">WebhookArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -155,11 +155,20 @@ const example = new aws.codebuild.Webhook("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Project<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the build project.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Branch<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
 {{% /md %}}</dd>
@@ -168,10 +177,17 @@ const example = new aws.codebuild.Webhook("example", {
             title="Optional">
         <span>Filter<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroup">List&lt;Webhook<wbr>Filter<wbr>Group<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#webhookfiltergroup">List&lt;Webhook<wbr>Filter<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -182,18 +198,11 @@ const example = new aws.codebuild.Webhook("example", {
     <dd>{{% md %}}The name of the build project.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Branch<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
 {{% /md %}}</dd>
@@ -207,39 +216,12 @@ const example = new aws.codebuild.Webhook("example", {
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Project<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the build project.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>branch<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>filter<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroup">Webhook<wbr>Filter<wbr>Group[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -250,12 +232,39 @@ const example = new aws.codebuild.Webhook("example", {
     <dd>{{% md %}}The name of the build project.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>branch<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filter<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#webhookfiltergroup">Webhook<wbr>Filter<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>project_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the build project.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -273,15 +282,6 @@ const example = new aws.codebuild.Webhook("example", {
         <span class="property-type"><a href="#webhookfiltergroup">List[Webhook<wbr>Filter<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>project_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the build project.
 {{% /md %}}</dd>
 
 </dl>
@@ -305,38 +305,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Branch<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filter<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroup">List&lt;Webhook<wbr>Filter<wbr>Group&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Payload<wbr>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the build project.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -366,38 +339,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Branch<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filter<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroup">[]Webhook<wbr>Filter<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Payload<wbr>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the build project.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -427,38 +373,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>branch<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filter<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroup">Webhook<wbr>Filter<wbr>Group[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>payload<wbr>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the build project.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -488,38 +407,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>branch_<wbr>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filter_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroup">List[Webhook<wbr>Filter<wbr>Group]</a></span>
-    </dt>
-    <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>payload_<wbr>url</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the build project.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -569,7 +461,7 @@ Get an existing Webhook resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codebuild.Webhook.html">Webhook</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codebuild.WebhookState.html">WebhookState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.Webhook.html">Webhook</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.WebhookState.html">WebhookState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -679,7 +571,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Branch<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
 {{% /md %}}</dd>
@@ -688,7 +580,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Filter<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroup">List&lt;Webhook<wbr>Filter<wbr>Group<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#webhookfiltergroup">List&lt;Webhook<wbr>Filter<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
 {{% /md %}}</dd>
@@ -697,7 +589,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Payload<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
 {{% /md %}}</dd>
@@ -706,7 +598,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the build project.
 {{% /md %}}</dd>
@@ -715,7 +607,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
 {{% /md %}}</dd>
@@ -724,7 +616,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the webhook.
 {{% /md %}}</dd>
@@ -740,7 +632,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Branch<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
 {{% /md %}}</dd>
@@ -758,7 +650,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Payload<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
 {{% /md %}}</dd>
@@ -767,7 +659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the build project.
 {{% /md %}}</dd>
@@ -776,7 +668,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
 {{% /md %}}</dd>
@@ -785,7 +677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the webhook.
 {{% /md %}}</dd>
@@ -801,7 +693,7 @@ The following state arguments are supported:
             title="Optional">
         <span>branch<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
 {{% /md %}}</dd>
@@ -810,7 +702,7 @@ The following state arguments are supported:
             title="Optional">
         <span>filter<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroup">Webhook<wbr>Filter<wbr>Group[]?</a></span>
+        <span class="property-type"><a href="#webhookfiltergroup">Webhook<wbr>Filter<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
 {{% /md %}}</dd>
@@ -819,7 +711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>payload<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
 {{% /md %}}</dd>
@@ -828,7 +720,7 @@ The following state arguments are supported:
             title="Optional">
         <span>project<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the build project.
 {{% /md %}}</dd>
@@ -837,7 +729,7 @@ The following state arguments are supported:
             title="Optional">
         <span>secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
 {{% /md %}}</dd>
@@ -846,7 +738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the webhook.
 {{% /md %}}</dd>
@@ -945,7 +837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroupfilter">List&lt;Webhook<wbr>Filter<wbr>Group<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#webhookfiltergroupfilter">List&lt;Webhook<wbr>Filter<wbr>Group<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A webhook filter for the group. Filter blocks are documented below.
 {{% /md %}}</dd>
@@ -977,7 +869,7 @@ The following state arguments are supported:
             title="Optional">
         <span>filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroupfilter">Webhook<wbr>Filter<wbr>Group<wbr>Filter[]?</a></span>
+        <span class="property-type"><a href="#webhookfiltergroupfilter">Webhook<wbr>Filter<wbr>Group<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A webhook filter for the group. Filter blocks are documented below.
 {{% /md %}}</dd>
@@ -1020,15 +912,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Exclude<wbr>Matched<wbr>Pattern</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Pattern</span>
@@ -1045,6 +928,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook filter group's type. Valid values for this parameter are: `EVENT`, `BASE_REF`, `HEAD_REF`, `ACTOR_ACCOUNT_ID`, `FILE_PATH`. At least one filter group must specify `EVENT` as its type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Exclude<wbr>Matched<wbr>Pattern</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1054,15 +946,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Exclude<wbr>Matched<wbr>Pattern</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Pattern</span>
@@ -1081,21 +964,21 @@ The following state arguments are supported:
     <dd>{{% md %}}The webhook filter group's type. Valid values for this parameter are: `EVENT`, `BASE_REF`, `HEAD_REF`, `ACTOR_ACCOUNT_ID`, `FILE_PATH`. At least one filter group must specify `EVENT` as its type.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Exclude<wbr>Matched<wbr>Pattern</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>exclude<wbr>Matched<wbr>Pattern</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1113,6 +996,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook filter group's type. Valid values for this parameter are: `EVENT`, `BASE_REF`, `HEAD_REF`, `ACTOR_ACCOUNT_ID`, `FILE_PATH`. At least one filter group must specify `EVENT` as its type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>exclude<wbr>Matched<wbr>Pattern</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1122,15 +1014,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>exclude<wbr>Matched<wbr>Pattern</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>pattern</span>
@@ -1147,6 +1030,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The webhook filter group's type. Valid values for this parameter are: `EVENT`, `BASE_REF`, `HEAD_REF`, `ACTOR_ACCOUNT_ID`, `FILE_PATH`. At least one filter group must specify `EVENT` as its type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>exclude<wbr>Matched<wbr>Pattern</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>

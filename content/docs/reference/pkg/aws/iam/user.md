@@ -55,7 +55,7 @@ const lbRo = new aws.iam.UserPolicy("lb_ro", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#User">User</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#UserArgs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#User">User</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#UserArgs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -63,7 +63,7 @@ const lbRo = new aws.iam.UserPolicy("lb_ro", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUser<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#UserArgs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#User">User</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUser<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#UserArgs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#User">User</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -163,7 +163,7 @@ const lbRo = new aws.iam.UserPolicy("lb_ro", {
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
 has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
@@ -174,7 +174,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path in which to create the user.
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Permissions<wbr>Boundary</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the user.
 {{% /md %}}</dd>
@@ -201,7 +201,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of tags for the IAM user
 {{% /md %}}</dd>
@@ -217,7 +217,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
 has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
@@ -228,7 +228,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
 {{% /md %}}</dd>
@@ -237,7 +237,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path in which to create the user.
 {{% /md %}}</dd>
@@ -246,7 +246,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Permissions<wbr>Boundary</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the user.
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
 has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
@@ -282,7 +282,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
 {{% /md %}}</dd>
@@ -291,7 +291,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path in which to create the user.
 {{% /md %}}</dd>
@@ -300,7 +300,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>permissions<wbr>Boundary</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the user.
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of tags for the IAM user
 {{% /md %}}</dd>
@@ -398,53 +398,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Path in which to create the user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Permissions<wbr>Boundary</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM user
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Unique<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -466,53 +419,6 @@ a user with non-this provider-managed access keys and login profile will fail to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS for this user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Path in which to create the user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Permissions<wbr>Boundary</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM user
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -542,53 +448,6 @@ a user with non-this provider-managed access keys and login profile will fail to
 
     <dt class="property-"
             title="">
-        <span>force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Path in which to create the user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>permissions<wbr>Boundary</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM user
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>unique<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -610,53 +469,6 @@ a user with non-this provider-managed access keys and login profile will fail to
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS for this user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force_<wbr>destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Path in which to create the user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>permissions_<wbr>boundary</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM user
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -807,7 +619,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS for this user.
 {{% /md %}}</dd>
@@ -816,7 +628,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
 has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
@@ -827,7 +639,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
 {{% /md %}}</dd>
@@ -836,7 +648,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path in which to create the user.
 {{% /md %}}</dd>
@@ -845,7 +657,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Permissions<wbr>Boundary</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the user.
 {{% /md %}}</dd>
@@ -854,7 +666,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of tags for the IAM user
 {{% /md %}}</dd>
@@ -863,7 +675,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Unique<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
@@ -879,7 +691,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS for this user.
 {{% /md %}}</dd>
@@ -888,7 +700,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
 has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
@@ -899,7 +711,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
 {{% /md %}}</dd>
@@ -908,7 +720,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path in which to create the user.
 {{% /md %}}</dd>
@@ -917,7 +729,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Permissions<wbr>Boundary</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the user.
 {{% /md %}}</dd>
@@ -935,7 +747,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>Unique<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
@@ -951,7 +763,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS for this user.
 {{% /md %}}</dd>
@@ -960,7 +772,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
 has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
@@ -971,7 +783,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
 {{% /md %}}</dd>
@@ -980,7 +792,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path in which to create the user.
 {{% /md %}}</dd>
@@ -989,7 +801,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>permissions<wbr>Boundary</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the user.
 {{% /md %}}</dd>
@@ -998,7 +810,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of tags for the IAM user
 {{% /md %}}</dd>
@@ -1007,7 +819,7 @@ a user with non-this provider-managed access keys and login profile will fail to
             title="Optional">
         <span>unique<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [unique ID][1] assigned by AWS.
 {{% /md %}}</dd>

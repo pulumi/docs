@@ -29,7 +29,7 @@ const foo = new aws.iot.ThingType("foo", {});
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iot/#ThingType">ThingType</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iot/#ThingTypeArgs">ThingTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iot/#ThingType">ThingType</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iot/#ThingTypeArgs">ThingTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -37,7 +37,7 @@ const foo = new aws.iot.ThingType("foo", {});
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewThingType<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iot?tab=doc#ThingTypeArgs">ThingTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iot?tab=doc#ThingType">ThingType</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewThingType<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iot?tab=doc#ThingTypeArgs">ThingTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iot?tab=doc#ThingType">ThingType</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -137,7 +137,7 @@ const foo = new aws.iot.ThingType("foo", {});
             title="Optional">
         <span>Deprecated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the thing type is deprecated. If true, no new things could be associated with this type.
 {{% /md %}}</dd>
@@ -146,7 +146,7 @@ const foo = new aws.iot.ThingType("foo", {});
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the thing type.
 {{% /md %}}</dd>
@@ -155,7 +155,7 @@ const foo = new aws.iot.ThingType("foo", {});
             title="Optional">
         <span>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties<wbr>Args?</a></span>
+        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}, Configuration block that can contain the following properties of the thing type:
 {{% /md %}}</dd>
@@ -171,7 +171,7 @@ const foo = new aws.iot.ThingType("foo", {});
             title="Optional">
         <span>Deprecated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the thing type is deprecated. If true, no new things could be associated with this type.
 {{% /md %}}</dd>
@@ -180,7 +180,7 @@ const foo = new aws.iot.ThingType("foo", {});
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the thing type.
 {{% /md %}}</dd>
@@ -189,7 +189,7 @@ const foo = new aws.iot.ThingType("foo", {});
             title="Optional">
         <span>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thingtypeproperties">*Thing<wbr>Type<wbr>Properties</a></span>
+        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}, Configuration block that can contain the following properties of the thing type:
 {{% /md %}}</dd>
@@ -205,7 +205,7 @@ const foo = new aws.iot.ThingType("foo", {});
             title="Optional">
         <span>deprecated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the thing type is deprecated. If true, no new things could be associated with this type.
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ const foo = new aws.iot.ThingType("foo", {});
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the thing type.
 {{% /md %}}</dd>
@@ -223,7 +223,7 @@ const foo = new aws.iot.ThingType("foo", {});
             title="Optional">
         <span>properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties?</a></span>
+        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}, Configuration block that can contain the following properties of the thing type:
 {{% /md %}}</dd>
@@ -290,33 +290,6 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the created AWS IoT Thing Type.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Deprecated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the thing type is deprecated. If true, no new things could be associated with this type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the thing type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties?</a></span>
-    </dt>
-    <dd>{{% md %}}, Configuration block that can contain the following properties of the thing type:
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -331,33 +304,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created AWS IoT Thing Type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deprecated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the thing type is deprecated. If true, no new things could be associated with this type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the thing type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thingtypeproperties">*Thing<wbr>Type<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}, Configuration block that can contain the following properties of the thing type:
 {{% /md %}}</dd>
 
 </dl>
@@ -376,33 +322,6 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the created AWS IoT Thing Type.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>deprecated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the thing type is deprecated. If true, no new things could be associated with this type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the thing type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties?</a></span>
-    </dt>
-    <dd>{{% md %}}, Configuration block that can contain the following properties of the thing type:
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -417,33 +336,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the created AWS IoT Thing Type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deprecated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the thing type is deprecated. If true, no new things could be associated with this type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the thing type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thingtypeproperties">Dict[Thing<wbr>Type<wbr>Properties]</a></span>
-    </dt>
-    <dd>{{% md %}}, Configuration block that can contain the following properties of the thing type:
 {{% /md %}}</dd>
 
 </dl>
@@ -585,7 +477,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created AWS IoT Thing Type.
 {{% /md %}}</dd>
@@ -594,7 +486,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deprecated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the thing type is deprecated. If true, no new things could be associated with this type.
 {{% /md %}}</dd>
@@ -603,7 +495,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the thing type.
 {{% /md %}}</dd>
@@ -612,7 +504,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties<wbr>Args?</a></span>
+        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}, Configuration block that can contain the following properties of the thing type:
 {{% /md %}}</dd>
@@ -628,7 +520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created AWS IoT Thing Type.
 {{% /md %}}</dd>
@@ -637,7 +529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deprecated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the thing type is deprecated. If true, no new things could be associated with this type.
 {{% /md %}}</dd>
@@ -646,7 +538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the thing type.
 {{% /md %}}</dd>
@@ -655,7 +547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thingtypeproperties">*Thing<wbr>Type<wbr>Properties</a></span>
+        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}, Configuration block that can contain the following properties of the thing type:
 {{% /md %}}</dd>
@@ -671,7 +563,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created AWS IoT Thing Type.
 {{% /md %}}</dd>
@@ -680,7 +572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deprecated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the thing type is deprecated. If true, no new things could be associated with this type.
 {{% /md %}}</dd>
@@ -689,7 +581,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the thing type.
 {{% /md %}}</dd>
@@ -698,7 +590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties?</a></span>
+        <span class="property-type"><a href="#thingtypeproperties">Thing<wbr>Type<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}, Configuration block that can contain the following properties of the thing type:
 {{% /md %}}</dd>
@@ -779,7 +671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the thing type.
 {{% /md %}}</dd>
@@ -788,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Searchable<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of searchable thing attribute names.
 {{% /md %}}</dd>
@@ -804,7 +696,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the thing type.
 {{% /md %}}</dd>
@@ -829,7 +721,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the thing type.
 {{% /md %}}</dd>
@@ -838,7 +730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>searchable<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of searchable thing attribute names.
 {{% /md %}}</dd>

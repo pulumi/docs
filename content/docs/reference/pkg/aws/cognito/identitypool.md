@@ -54,7 +54,7 @@ const main = new aws.cognito.IdentityPool("main", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#IdentityPool">IdentityPool</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#IdentityPoolArgs">IdentityPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#IdentityPool">IdentityPool</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#IdentityPoolArgs">IdentityPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -62,7 +62,7 @@ const main = new aws.cognito.IdentityPool("main", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIdentityPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#IdentityPoolArgs">IdentityPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#IdentityPool">IdentityPool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIdentityPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#IdentityPoolArgs">IdentityPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#IdentityPool">IdentityPool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -158,11 +158,20 @@ const main = new aws.cognito.IdentityPool("main", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Identity<wbr>Pool<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cognito Identity Pool name.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Allow<wbr>Unauthenticated<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}</dd>
@@ -171,7 +180,7 @@ const main = new aws.cognito.IdentityPool("main", {
             title="Optional">
         <span>Cognito<wbr>Identity<wbr>Providers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">List&lt;Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">List&lt;Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}</dd>
@@ -180,11 +189,54 @@ const main = new aws.cognito.IdentityPool("main", {
             title="Optional">
         <span>Developer<wbr>Provider<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
 backend and the Cognito service to communicate about the developer provider.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Openid<wbr>Connect<wbr>Provider<wbr>Arns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of OpendID Connect provider ARNs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Saml<wbr>Provider<wbr>Arns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Supported<wbr>Login<wbr>Providers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Key-Value pairs mapping provider names to provider app IDs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -197,52 +249,9 @@ backend and the Cognito service to communicate about the developer provider.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Openid<wbr>Connect<wbr>Provider<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of OpendID Connect provider ARNs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Saml<wbr>Provider<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Supported<wbr>Login<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Key-Value pairs mapping provider names to provider app IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Allow<wbr>Unauthenticated<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}</dd>
@@ -260,19 +269,10 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Developer<wbr>Provider<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
 backend and the Cognito service to communicate about the developer provider.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Identity<wbr>Pool<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Cognito Identity Pool name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -318,34 +318,6 @@ backend and the Cognito service to communicate about the developer provider.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>allow<wbr>Unauthenticated<wbr>Identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cognito<wbr>Identity<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>developer<wbr>Provider<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
-backend and the Cognito service to communicate about the developer provider.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>identity<wbr>Pool<wbr>Name</span>
@@ -357,9 +329,37 @@ backend and the Cognito service to communicate about the developer provider.
 
     <dt class="property-optional"
             title="Optional">
+        <span>allow<wbr>Unauthenticated<wbr>Identities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cognito<wbr>Identity<wbr>Providers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>developer<wbr>Provider<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
+backend and the Cognito service to communicate about the developer provider.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>openid<wbr>Connect<wbr>Provider<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of OpendID Connect provider ARNs.
 {{% /md %}}</dd>
@@ -368,7 +368,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>saml<wbr>Provider<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
 {{% /md %}}</dd>
@@ -377,7 +377,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>supported<wbr>Login<wbr>Providers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-Value pairs mapping provider names to provider app IDs.
 {{% /md %}}</dd>
@@ -386,7 +386,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
@@ -397,6 +397,15 @@ backend and the Cognito service to communicate about the developer provider.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>identity_<wbr>pool_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Cognito Identity Pool name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -424,15 +433,6 @@ backend and the Cognito service to communicate about the developer provider.
     </dt>
     <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
 backend and the Cognito service to communicate about the developer provider.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>identity_<wbr>pool_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Cognito Identity Pool name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -492,84 +492,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Allow<wbr>Unauthenticated<wbr>Identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the identity pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cognito<wbr>Identity<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">List&lt;Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Developer<wbr>Provider<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
-backend and the Cognito service to communicate about the developer provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identity<wbr>Pool<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Cognito Identity Pool name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Openid<wbr>Connect<wbr>Provider<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of OpendID Connect provider ARNs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Saml<wbr>Provider<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Supported<wbr>Login<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Key-Value pairs mapping provider names to provider app IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -581,84 +508,11 @@ backend and the Cognito service to communicate about the developer provider.
 
     <dt class="property-"
             title="">
-        <span>Allow<wbr>Unauthenticated<wbr>Identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the identity pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cognito<wbr>Identity<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">[]Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider</a></span>
-    </dt>
-    <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Developer<wbr>Provider<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
-backend and the Cognito service to communicate about the developer provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identity<wbr>Pool<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Cognito Identity Pool name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Openid<wbr>Connect<wbr>Provider<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of OpendID Connect provider ARNs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Saml<wbr>Provider<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Supported<wbr>Login<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Key-Value pairs mapping provider names to provider app IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -670,84 +524,11 @@ backend and the Cognito service to communicate about the developer provider.
 
     <dt class="property-"
             title="">
-        <span>allow<wbr>Unauthenticated<wbr>Identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the identity pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cognito<wbr>Identity<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>developer<wbr>Provider<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
-backend and the Cognito service to communicate about the developer provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identity<wbr>Pool<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Cognito Identity Pool name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>openid<wbr>Connect<wbr>Provider<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of OpendID Connect provider ARNs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>saml<wbr>Provider<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>supported<wbr>Login<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Key-Value pairs mapping provider names to provider app IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -759,84 +540,11 @@ backend and the Cognito service to communicate about the developer provider.
 
     <dt class="property-"
             title="">
-        <span>allow_<wbr>unauthenticated_<wbr>identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the identity pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cognito_<wbr>identity_<wbr>providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">List[Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>developer_<wbr>provider_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
-backend and the Cognito service to communicate about the developer provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identity_<wbr>pool_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Cognito Identity Pool name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>openid_<wbr>connect_<wbr>provider_<wbr>arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of OpendID Connect provider ARNs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>saml_<wbr>provider_<wbr>arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>supported_<wbr>login_<wbr>providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Key-Value pairs mapping provider names to provider app IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -978,7 +686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allow<wbr>Unauthenticated<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}</dd>
@@ -987,7 +695,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the identity pool.
 {{% /md %}}</dd>
@@ -996,7 +704,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cognito<wbr>Identity<wbr>Providers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">List&lt;Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">List&lt;Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}</dd>
@@ -1005,7 +713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Developer<wbr>Provider<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
 backend and the Cognito service to communicate about the developer provider.
@@ -1015,7 +723,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Identity<wbr>Pool<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity Pool name.
 {{% /md %}}</dd>
@@ -1024,7 +732,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Openid<wbr>Connect<wbr>Provider<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of OpendID Connect provider ARNs.
 {{% /md %}}</dd>
@@ -1033,7 +741,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Saml<wbr>Provider<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
 {{% /md %}}</dd>
@@ -1042,7 +750,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Supported<wbr>Login<wbr>Providers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-Value pairs mapping provider names to provider app IDs.
 {{% /md %}}</dd>
@@ -1051,7 +759,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
@@ -1067,7 +775,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Allow<wbr>Unauthenticated<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}</dd>
@@ -1076,7 +784,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the identity pool.
 {{% /md %}}</dd>
@@ -1094,7 +802,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Developer<wbr>Provider<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
 backend and the Cognito service to communicate about the developer provider.
@@ -1104,7 +812,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Identity<wbr>Pool<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity Pool name.
 {{% /md %}}</dd>
@@ -1156,7 +864,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>allow<wbr>Unauthenticated<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}</dd>
@@ -1165,7 +873,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the identity pool.
 {{% /md %}}</dd>
@@ -1174,7 +882,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>cognito<wbr>Identity<wbr>Providers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider[]?</a></span>
+        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider[]</a></span>
     </dt>
     <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}</dd>
@@ -1183,7 +891,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>developer<wbr>Provider<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
 backend and the Cognito service to communicate about the developer provider.
@@ -1193,7 +901,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>identity<wbr>Pool<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity Pool name.
 {{% /md %}}</dd>
@@ -1202,7 +910,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>openid<wbr>Connect<wbr>Provider<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of OpendID Connect provider ARNs.
 {{% /md %}}</dd>
@@ -1211,7 +919,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>saml<wbr>Provider<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
 {{% /md %}}</dd>
@@ -1220,7 +928,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>supported<wbr>Login<wbr>Providers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-Value pairs mapping provider names to provider app IDs.
 {{% /md %}}</dd>
@@ -1229,7 +937,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
@@ -1356,7 +1064,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID for the Amazon Cognito Identity User Pool.
 {{% /md %}}</dd>
@@ -1365,7 +1073,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Provider<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider name for an Amazon Cognito Identity User Pool.
 {{% /md %}}</dd>
@@ -1374,7 +1082,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Server<wbr>Side<wbr>Token<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether server-side token validation is enabled for the identity provider’s token or not.
 {{% /md %}}</dd>
@@ -1390,7 +1098,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID for the Amazon Cognito Identity User Pool.
 {{% /md %}}</dd>
@@ -1399,7 +1107,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Provider<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider name for an Amazon Cognito Identity User Pool.
 {{% /md %}}</dd>
@@ -1408,7 +1116,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>Server<wbr>Side<wbr>Token<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether server-side token validation is enabled for the identity provider’s token or not.
 {{% /md %}}</dd>
@@ -1424,7 +1132,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID for the Amazon Cognito Identity User Pool.
 {{% /md %}}</dd>
@@ -1433,7 +1141,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>provider<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider name for an Amazon Cognito Identity User Pool.
 {{% /md %}}</dd>
@@ -1442,7 +1150,7 @@ backend and the Cognito service to communicate about the developer provider.
             title="Optional">
         <span>server<wbr>Side<wbr>Token<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether server-side token validation is enabled for the identity provider’s token or not.
 {{% /md %}}</dd>

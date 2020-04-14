@@ -33,7 +33,7 @@ const hogeDatabase = new aws.athena.Database("hoge", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/athena/#Database">Database</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/athena/#DatabaseArgs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/athena/#Database">Database</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/athena/#DatabaseArgs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -41,7 +41,7 @@ const hogeDatabase = new aws.athena.Database("hoge", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDatabase<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/athena?tab=doc#DatabaseArgs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/athena?tab=doc#Database">Database</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDatabase<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/athena?tab=doc#DatabaseArgs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/athena?tab=doc#Database">Database</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -150,7 +150,7 @@ const hogeDatabase = new aws.athena.Database("hoge", {
             title="Optional">
         <span>Encryption<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
 {{% /md %}}</dd>
@@ -159,7 +159,7 @@ const hogeDatabase = new aws.athena.Database("hoge", {
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ const hogeDatabase = new aws.athena.Database("hoge", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database to create.
 {{% /md %}}</dd>
@@ -193,7 +193,7 @@ const hogeDatabase = new aws.athena.Database("hoge", {
             title="Optional">
         <span>Encryption<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfiguration">*Database<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
 {{% /md %}}</dd>
@@ -202,7 +202,7 @@ const hogeDatabase = new aws.athena.Database("hoge", {
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
 {{% /md %}}</dd>
@@ -211,7 +211,7 @@ const hogeDatabase = new aws.athena.Database("hoge", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database to create.
 {{% /md %}}</dd>
@@ -236,7 +236,7 @@ const hogeDatabase = new aws.athena.Database("hoge", {
             title="Optional">
         <span>encryption<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
 {{% /md %}}</dd>
@@ -245,7 +245,7 @@ const hogeDatabase = new aws.athena.Database("hoge", {
             title="Optional">
         <span>force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
 {{% /md %}}</dd>
@@ -254,7 +254,7 @@ const hogeDatabase = new aws.athena.Database("hoge", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database to create.
 {{% /md %}}</dd>
@@ -306,188 +306,6 @@ const hogeDatabase = new aws.athena.Database("hoge", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Database Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of s3 bucket to save the results of the query execution.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Encryption<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the database to create.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of s3 bucket to save the results of the query execution.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Encryption<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfiguration">*Database<wbr>Encryption<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the database to create.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of s3 bucket to save the results of the query execution.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>encryption<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the database to create.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of s3 bucket to save the results of the query execution.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>encryption_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfiguration">Dict[Database<wbr>Encryption<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force_<wbr>destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the database to create.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -625,7 +443,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of s3 bucket to save the results of the query execution.
 {{% /md %}}</dd>
@@ -634,7 +452,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
 {{% /md %}}</dd>
@@ -643,7 +461,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
 {{% /md %}}</dd>
@@ -652,7 +470,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database to create.
 {{% /md %}}</dd>
@@ -668,7 +486,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of s3 bucket to save the results of the query execution.
 {{% /md %}}</dd>
@@ -677,7 +495,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfiguration">*Database<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
 {{% /md %}}</dd>
@@ -686,7 +504,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
 {{% /md %}}</dd>
@@ -695,7 +513,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database to create.
 {{% /md %}}</dd>
@@ -711,7 +529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of s3 bucket to save the results of the query execution.
 {{% /md %}}</dd>
@@ -720,7 +538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encryption<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#databaseencryptionconfiguration">Database<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
 {{% /md %}}</dd>
@@ -729,7 +547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
 {{% /md %}}</dd>
@@ -738,7 +556,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database to create.
 {{% /md %}}</dd>
@@ -828,7 +646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS key ARN or ID; required for key types `SSE_KMS` and `CSE_KMS`.
 {{% /md %}}</dd>
@@ -853,7 +671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS key ARN or ID; required for key types `SSE_KMS` and `CSE_KMS`.
 {{% /md %}}</dd>
@@ -878,7 +696,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS key ARN or ID; required for key types `SSE_KMS` and `CSE_KMS`.
 {{% /md %}}</dd>

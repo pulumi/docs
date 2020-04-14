@@ -137,7 +137,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketNotification">BucketNotification</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketNotificationArgs">BucketNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketNotification">BucketNotification</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketNotificationArgs">BucketNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -145,7 +145,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBucketNotification<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#BucketNotificationArgs">BucketNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#BucketNotification">BucketNotification</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBucketNotification<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#BucketNotificationArgs">BucketNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#BucketNotification">BucketNotification</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -254,7 +254,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
             title="Optional">
         <span>Lambda<wbr>Functions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">List&lt;Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#bucketnotificationlambdafunction">List&lt;Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
@@ -263,7 +263,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
             title="Optional">
         <span>Queues</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">List&lt;Bucket<wbr>Notification<wbr>Queue<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#bucketnotificationqueue">List&lt;Bucket<wbr>Notification<wbr>Queue<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
@@ -272,7 +272,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
             title="Optional">
         <span>Topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">List&lt;Bucket<wbr>Notification<wbr>Topic<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#bucketnotificationtopic">List&lt;Bucket<wbr>Notification<wbr>Topic<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
@@ -340,7 +340,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
             title="Optional">
         <span>lambda<wbr>Functions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">Bucket<wbr>Notification<wbr>Lambda<wbr>Function[]?</a></span>
+        <span class="property-type"><a href="#bucketnotificationlambdafunction">Bucket<wbr>Notification<wbr>Lambda<wbr>Function[]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
@@ -349,7 +349,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
             title="Optional">
         <span>queues</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">Bucket<wbr>Notification<wbr>Queue[]?</a></span>
+        <span class="property-type"><a href="#bucketnotificationqueue">Bucket<wbr>Notification<wbr>Queue[]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
@@ -358,7 +358,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
             title="Optional">
         <span>topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">Bucket<wbr>Notification<wbr>Topic[]?</a></span>
+        <span class="property-type"><a href="#bucketnotificationtopic">Bucket<wbr>Notification<wbr>Topic[]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
@@ -410,188 +410,6 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
 {{% /choosable %}}
 
 
-
-
-
-
-
-## BucketNotification Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the bucket to put notification configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Lambda<wbr>Functions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">List&lt;Bucket<wbr>Notification<wbr>Lambda<wbr>Function&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Queues</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">List&lt;Bucket<wbr>Notification<wbr>Queue&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Topics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">List&lt;Bucket<wbr>Notification<wbr>Topic&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the bucket to put notification configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Lambda<wbr>Functions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">[]Bucket<wbr>Notification<wbr>Lambda<wbr>Function</a></span>
-    </dt>
-    <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Queues</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">[]Bucket<wbr>Notification<wbr>Queue</a></span>
-    </dt>
-    <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Topics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">[]Bucket<wbr>Notification<wbr>Topic</a></span>
-    </dt>
-    <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the bucket to put notification configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>lambda<wbr>Functions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">Bucket<wbr>Notification<wbr>Lambda<wbr>Function[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>queues</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">Bucket<wbr>Notification<wbr>Queue[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>topics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">Bucket<wbr>Notification<wbr>Topic[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the bucket to put notification configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>lambda_<wbr>functions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">List[Bucket<wbr>Notification<wbr>Lambda<wbr>Function]</a></span>
-    </dt>
-    <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>queues</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">List[Bucket<wbr>Notification<wbr>Queue]</a></span>
-    </dt>
-    <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>topics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">List[Bucket<wbr>Notification<wbr>Topic]</a></span>
-    </dt>
-    <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -729,7 +547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
 {{% /md %}}</dd>
@@ -738,7 +556,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Functions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">List&lt;Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#bucketnotificationlambdafunction">List&lt;Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
@@ -747,7 +565,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Queues</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">List&lt;Bucket<wbr>Notification<wbr>Queue<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#bucketnotificationqueue">List&lt;Bucket<wbr>Notification<wbr>Queue<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
@@ -756,7 +574,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">List&lt;Bucket<wbr>Notification<wbr>Topic<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#bucketnotificationtopic">List&lt;Bucket<wbr>Notification<wbr>Topic<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
@@ -772,7 +590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
 {{% /md %}}</dd>
@@ -815,7 +633,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
 {{% /md %}}</dd>
@@ -824,7 +642,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda<wbr>Functions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">Bucket<wbr>Notification<wbr>Lambda<wbr>Function[]?</a></span>
+        <span class="property-type"><a href="#bucketnotificationlambdafunction">Bucket<wbr>Notification<wbr>Lambda<wbr>Function[]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
@@ -833,7 +651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>queues</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">Bucket<wbr>Notification<wbr>Queue[]?</a></span>
+        <span class="property-type"><a href="#bucketnotificationqueue">Bucket<wbr>Notification<wbr>Queue[]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
@@ -842,7 +660,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">Bucket<wbr>Notification<wbr>Topic[]?</a></span>
+        <span class="property-type"><a href="#bucketnotificationtopic">Bucket<wbr>Notification<wbr>Topic[]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
@@ -923,7 +741,7 @@ The following state arguments are supported:
             title="Required">
         <span>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
@@ -932,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Filter<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
@@ -941,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Filter<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
@@ -950,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
@@ -959,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Function<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon Lambda function ARN.
 {{% /md %}}</dd>
@@ -984,7 +802,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Filter<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
@@ -993,7 +811,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Filter<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
@@ -1002,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
@@ -1011,7 +829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Function<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon Lambda function ARN.
 {{% /md %}}</dd>
@@ -1036,7 +854,7 @@ The following state arguments are supported:
             title="Optional">
         <span>filter<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
@@ -1045,7 +863,7 @@ The following state arguments are supported:
             title="Optional">
         <span>filter<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
@@ -1054,7 +872,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
@@ -1063,7 +881,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda<wbr>Function<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon Lambda function ARN.
 {{% /md %}}</dd>
@@ -1146,36 +964,9 @@ The following state arguments are supported:
             title="Required">
         <span>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filter<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filter<wbr>Suffix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1185,6 +976,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SQS queue ARN.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Filter<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies object key name prefix.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Filter<wbr>Suffix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies object key name suffix.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
 
 </dl>
@@ -1203,11 +1021,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Queue<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies Amazon SQS queue ARN.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Filter<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
@@ -1216,7 +1043,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Filter<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
@@ -1225,18 +1052,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Queue<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies Amazon SQS queue ARN.
+    <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
 
 </dl>
@@ -1255,11 +1073,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>queue<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies Amazon SQS queue ARN.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>filter<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
@@ -1268,7 +1095,7 @@ The following state arguments are supported:
             title="Optional">
         <span>filter<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
@@ -1277,18 +1104,9 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>queue<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies Amazon SQS queue ARN.
+    <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
 
 </dl>
@@ -1307,6 +1125,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>queue<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies Amazon SQS queue ARN.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>filter<wbr>Prefix</span>
@@ -1332,15 +1159,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>queue<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies Amazon SQS queue ARN.
 {{% /md %}}</dd>
 
 </dl>
@@ -1369,36 +1187,9 @@ The following state arguments are supported:
             title="Required">
         <span>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filter<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filter<wbr>Suffix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1408,6 +1199,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SNS topic ARN.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Filter<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies object key name prefix.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Filter<wbr>Suffix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies object key name suffix.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
 
 </dl>
@@ -1426,11 +1244,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Topic<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies Amazon SNS topic ARN.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Filter<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
@@ -1439,7 +1266,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Filter<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
@@ -1448,18 +1275,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Topic<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies Amazon SNS topic ARN.
+    <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
 
 </dl>
@@ -1478,11 +1296,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>topic<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies Amazon SNS topic ARN.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>filter<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
@@ -1491,7 +1318,7 @@ The following state arguments are supported:
             title="Optional">
         <span>filter<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
@@ -1500,18 +1327,9 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>topic<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies Amazon SNS topic ARN.
+    <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
 
 </dl>
@@ -1530,6 +1348,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>topic_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies Amazon SNS topic ARN.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>filter<wbr>Prefix</span>
@@ -1555,15 +1382,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>topic_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies Amazon SNS topic ARN.
 {{% /md %}}</dd>
 
 </dl>

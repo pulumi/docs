@@ -44,7 +44,7 @@ const defaultDefaultVpc = new aws.ec2.DefaultVpc("default", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultVpc">DefaultVpc</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultVpcArgs">DefaultVpcArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultVpc">DefaultVpc</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultVpcArgs">DefaultVpcArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -52,7 +52,7 @@ const defaultDefaultVpc = new aws.ec2.DefaultVpc("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDefaultVpc<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#DefaultVpcArgs">DefaultVpcArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#DefaultVpc">DefaultVpc</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDefaultVpc<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#DefaultVpcArgs">DefaultVpcArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#DefaultVpc">DefaultVpc</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -152,7 +152,7 @@ const defaultDefaultVpc = new aws.ec2.DefaultVpc("default", {
             title="Optional">
         <span>Enable<wbr>Classiclink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
@@ -163,7 +163,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Enable<wbr>Classiclink<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -171,7 +171,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Enable<wbr>Dns<wbr>Hostnames</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
 {{% /md %}}</dd>
@@ -180,7 +180,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Enable<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable DNS support in the VPC. Defaults true.
 {{% /md %}}</dd>
@@ -189,7 +189,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -205,7 +205,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Enable<wbr>Classiclink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
@@ -216,7 +216,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Enable<wbr>Classiclink<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -224,7 +224,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Enable<wbr>Dns<wbr>Hostnames</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Enable<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable DNS support in the VPC. Defaults true.
 {{% /md %}}</dd>
@@ -258,7 +258,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>enable<wbr>Classiclink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
@@ -269,7 +269,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>enable<wbr>Classiclink<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -277,7 +277,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>enable<wbr>Dns<wbr>Hostnames</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
 {{% /md %}}</dd>
@@ -286,7 +286,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>enable<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable DNS support in the VPC. Defaults true.
 {{% /md %}}</dd>
@@ -295,7 +295,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -437,43 +437,6 @@ block with a /56 prefix length for the VPC was assigned
 
     <dt class="property-"
             title="">
-        <span>Enable<wbr>Classiclink</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
-for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Classiclink<wbr>Dns<wbr>Support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Dns<wbr>Hostnames</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Dns<wbr>Support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}A boolean flag to enable/disable DNS support in the VPC. Defaults true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Instance<wbr>Tenancy</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -517,15 +480,6 @@ this VPC. Note that you can change a VPC's main route table by using an
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -600,43 +554,6 @@ block with a /56 prefix length for the VPC was assigned
 
     <dt class="property-"
             title="">
-        <span>Enable<wbr>Classiclink</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
-for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Classiclink<wbr>Dns<wbr>Support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Dns<wbr>Hostnames</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Dns<wbr>Support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}A boolean flag to enable/disable DNS support in the VPC. Defaults true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Instance<wbr>Tenancy</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -680,15 +597,6 @@ this VPC. Note that you can change a VPC's main route table by using an
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -763,43 +671,6 @@ block with a /56 prefix length for the VPC was assigned
 
     <dt class="property-"
             title="">
-        <span>enable<wbr>Classiclink</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
-for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable<wbr>Classiclink<wbr>Dns<wbr>Support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable<wbr>Dns<wbr>Hostnames</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable<wbr>Dns<wbr>Support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}A boolean flag to enable/disable DNS support in the VPC. Defaults true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>instance<wbr>Tenancy</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -843,15 +714,6 @@ this VPC. Note that you can change a VPC's main route table by using an
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -926,43 +788,6 @@ block with a /56 prefix length for the VPC was assigned
 
     <dt class="property-"
             title="">
-        <span>enable_<wbr>classiclink</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
-for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable_<wbr>classiclink_<wbr>dns_<wbr>support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable_<wbr>dns_<wbr>hostnames</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable_<wbr>dns_<wbr>support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}A boolean flag to enable/disable DNS support in the VPC. Defaults true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>instance_<wbr>tenancy</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1006,15 +831,6 @@ this VPC. Note that you can change a VPC's main route table by using an
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1156,7 +972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of VPC
 {{% /md %}}</dd>
@@ -1165,7 +981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Assign<wbr>Generated<wbr>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not an Amazon-provided IPv6 CIDR
 block with a /56 prefix length for the VPC was assigned
@@ -1175,7 +991,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC
 {{% /md %}}</dd>
@@ -1184,7 +1000,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>Default<wbr>Network<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network ACL created by default on VPC creation
 {{% /md %}}</dd>
@@ -1193,7 +1009,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>Default<wbr>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the route table created by default on VPC creation
 {{% /md %}}</dd>
@@ -1202,7 +1018,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>Default<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by default on VPC creation
 {{% /md %}}</dd>
@@ -1211,7 +1027,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>Dhcp<wbr>Options<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1219,7 +1035,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>Enable<wbr>Classiclink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
@@ -1230,7 +1046,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Enable<wbr>Classiclink<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1238,7 +1054,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Enable<wbr>Dns<wbr>Hostnames</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
 {{% /md %}}</dd>
@@ -1247,7 +1063,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Enable<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable DNS support in the VPC. Defaults true.
 {{% /md %}}</dd>
@@ -1256,7 +1072,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Instance<wbr>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tenancy of instances spin up within VPC.
 {{% /md %}}</dd>
@@ -1265,7 +1081,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Ipv6Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block of the VPC
 {{% /md %}}</dd>
@@ -1274,7 +1090,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block of the VPC
 {{% /md %}}</dd>
@@ -1283,7 +1099,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Main<wbr>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
@@ -1294,7 +1110,7 @@ this VPC. Note that you can change a VPC's main route table by using an
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
 {{% /md %}}</dd>
@@ -1303,7 +1119,7 @@ this VPC. Note that you can change a VPC's main route table by using an
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1319,7 +1135,7 @@ this VPC. Note that you can change a VPC's main route table by using an
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of VPC
 {{% /md %}}</dd>
@@ -1328,7 +1144,7 @@ this VPC. Note that you can change a VPC's main route table by using an
             title="Optional">
         <span>Assign<wbr>Generated<wbr>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not an Amazon-provided IPv6 CIDR
 block with a /56 prefix length for the VPC was assigned
@@ -1338,7 +1154,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC
 {{% /md %}}</dd>
@@ -1347,7 +1163,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>Default<wbr>Network<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network ACL created by default on VPC creation
 {{% /md %}}</dd>
@@ -1356,7 +1172,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>Default<wbr>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the route table created by default on VPC creation
 {{% /md %}}</dd>
@@ -1365,7 +1181,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>Default<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by default on VPC creation
 {{% /md %}}</dd>
@@ -1374,7 +1190,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>Dhcp<wbr>Options<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1382,7 +1198,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>Enable<wbr>Classiclink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
@@ -1393,7 +1209,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Enable<wbr>Classiclink<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1401,7 +1217,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Enable<wbr>Dns<wbr>Hostnames</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
 {{% /md %}}</dd>
@@ -1410,7 +1226,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Enable<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable DNS support in the VPC. Defaults true.
 {{% /md %}}</dd>
@@ -1419,7 +1235,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Instance<wbr>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tenancy of instances spin up within VPC.
 {{% /md %}}</dd>
@@ -1428,7 +1244,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Ipv6Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block of the VPC
 {{% /md %}}</dd>
@@ -1437,7 +1253,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block of the VPC
 {{% /md %}}</dd>
@@ -1446,7 +1262,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>Main<wbr>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
@@ -1457,7 +1273,7 @@ this VPC. Note that you can change a VPC's main route table by using an
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
 {{% /md %}}</dd>
@@ -1482,7 +1298,7 @@ this VPC. Note that you can change a VPC's main route table by using an
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of VPC
 {{% /md %}}</dd>
@@ -1491,7 +1307,7 @@ this VPC. Note that you can change a VPC's main route table by using an
             title="Optional">
         <span>assign<wbr>Generated<wbr>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not an Amazon-provided IPv6 CIDR
 block with a /56 prefix length for the VPC was assigned
@@ -1501,7 +1317,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC
 {{% /md %}}</dd>
@@ -1510,7 +1326,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>default<wbr>Network<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network ACL created by default on VPC creation
 {{% /md %}}</dd>
@@ -1519,7 +1335,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>default<wbr>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the route table created by default on VPC creation
 {{% /md %}}</dd>
@@ -1528,7 +1344,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>default<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by default on VPC creation
 {{% /md %}}</dd>
@@ -1537,7 +1353,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>dhcp<wbr>Options<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1545,7 +1361,7 @@ block with a /56 prefix length for the VPC was assigned
             title="Optional">
         <span>enable<wbr>Classiclink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
@@ -1556,7 +1372,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>enable<wbr>Classiclink<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1564,7 +1380,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>enable<wbr>Dns<wbr>Hostnames</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
 {{% /md %}}</dd>
@@ -1573,7 +1389,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>enable<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable DNS support in the VPC. Defaults true.
 {{% /md %}}</dd>
@@ -1582,7 +1398,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>instance<wbr>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tenancy of instances spin up within VPC.
 {{% /md %}}</dd>
@@ -1591,7 +1407,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>ipv6Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block of the VPC
 {{% /md %}}</dd>
@@ -1600,7 +1416,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block of the VPC
 {{% /md %}}</dd>
@@ -1609,7 +1425,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
             title="Optional">
         <span>main<wbr>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
@@ -1620,7 +1436,7 @@ this VPC. Note that you can change a VPC's main route table by using an
             title="Optional">
         <span>owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
 {{% /md %}}</dd>
@@ -1629,7 +1445,7 @@ this VPC. Note that you can change a VPC's main route table by using an
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>

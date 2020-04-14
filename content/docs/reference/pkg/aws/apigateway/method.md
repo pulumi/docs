@@ -76,7 +76,7 @@ const any = new aws.apigateway.Method("any", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Method">Method</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#MethodArgs">MethodArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Method">Method</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#MethodArgs">MethodArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -84,11 +84,11 @@ const any = new aws.apigateway.Method("any", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMethod<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#MethodArgs">MethodArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#Method">Method</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMethod<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#MethodArgs">MethodArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#Method">Method</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.Method.html">Method</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.MethodArgs.html">MethodArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Method.html">Method</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.MethodArgs.html">MethodArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -180,15 +180,6 @@ const any = new aws.apigateway.Method("any", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Key<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Authorization</span>
@@ -198,24 +189,6 @@ const any = new aws.apigateway.Method("any", {
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authorization<wbr>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authorizer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Http<wbr>Method</span>
@@ -223,36 +196,6 @@ const any = new aws.apigateway.Method("any", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Request<wbr>Models</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A map of the API models used for the request's content type
-where key is the content type (e.g. `application/json`)
-and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Request<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, bool>?</span>
-    </dt>
-    <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
-For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Request<wbr>Validator<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -273,36 +216,20 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Api<wbr>Key<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Authorization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Authorization<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
 {{% /md %}}</dd>
@@ -311,25 +238,16 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>Authorizer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Http<wbr>Method</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
+    <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Request<wbr>Models</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the request's content type
 where key is the content type (e.g. `application/json`)
@@ -340,7 +258,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
             title="Optional">
         <span>Request<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]bool</span>
+        <span class="property-type">Dictionary&lt;string, bool&gt;</span>
     </dt>
     <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
@@ -350,9 +268,34 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>Request<wbr>Validator<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Authorization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Http<wbr>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -373,345 +316,17 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Key<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>authorization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authorization<wbr>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authorizer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>http<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>request<wbr>Models</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A map of the API models used for the request's content type
-where key is the content type (e.g. `application/json`)
-and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>request<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: boolean}?</span>
-    </dt>
-    <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
-For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>request<wbr>Validator<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>rest<wbr>Api</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | RestApi</span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>api_<wbr>key_<wbr>required</span>
+        <span>Api<wbr>Key<wbr>Required</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the method requires an API key
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>authorization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span>authorization_<wbr>scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authorizer_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>http_<wbr>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>request_<wbr>models</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A map of the API models used for the request's content type
-where key is the content type (e.g. `application/json`)
-and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>request_<wbr>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Boolean]</span>
-    </dt>
-    <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
-For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>request_<wbr>validator_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>rest_<wbr>api</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## Method Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Api<wbr>Key<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authorization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authorization<wbr>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authorizer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Http<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Request<wbr>Models</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A map of the API models used for the request's content type
-where key is the content type (e.g. `application/json`)
-and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Request<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, bool>?</span>
-    </dt>
-    <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
-For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Request<wbr>Validator<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rest<wbr>Api</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Api<wbr>Key<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authorization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Authorization<wbr>Scopes</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -719,26 +334,17 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>Authorizer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Http<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>Request<wbr>Models</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
@@ -748,8 +354,8 @@ where key is the content type (e.g. `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>Request<wbr>Parameters</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]bool</span>
@@ -758,31 +364,13 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>Request<wbr>Validator<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rest<wbr>Api</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
 
 </dl>
@@ -792,17 +380,8 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>api<wbr>Key<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>authorization</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -810,26 +389,8 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>authorization<wbr>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authorizer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>http<wbr>Method</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -837,38 +398,8 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>request<wbr>Models</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A map of the API models used for the request's content type
-where key is the content type (e.g. `application/json`)
-and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>request<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: boolean}?</span>
-    </dt>
-    <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
-For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>request<wbr>Validator<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>resource<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -876,13 +407,70 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}The API resource ID
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>rest<wbr>Api</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | Rest<wbr>Api</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated REST API
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>api<wbr>Key<wbr>Required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specify if the method requires an API key
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authorization<wbr>Scopes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authorizer<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the associated REST API
+    <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>request<wbr>Models</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of the API models used for the request's content type
+where key is the content type (e.g. `application/json`)
+and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>request<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: boolean}</span>
+    </dt>
+    <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
+For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>request<wbr>Validator<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
 {{% /md %}}</dd>
 
 </dl>
@@ -892,17 +480,8 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>api_<wbr>key_<wbr>required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>authorization</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -910,26 +489,8 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>authorization_<wbr>scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authorizer_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>http_<wbr>method</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -937,8 +498,53 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The API resource ID
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>rest_<wbr>api</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated REST API
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>api_<wbr>key_<wbr>required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specify if the method requires an API key
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authorization_<wbr>scopes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authorizer_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>request_<wbr>models</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
@@ -948,8 +554,8 @@ where key is the content type (e.g. `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>request_<wbr>parameters</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Boolean]</span>
@@ -958,8 +564,8 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>request_<wbr>validator_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -967,26 +573,10 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rest_<wbr>api</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -1014,7 +604,7 @@ Get an existing Method resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.Method.html">Method</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.MethodState.html">MethodState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Method.html">Method</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.MethodState.html">MethodState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1124,7 +714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Key<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the method requires an API key
 {{% /md %}}</dd>
@@ -1133,7 +723,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authorization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
 {{% /md %}}</dd>
@@ -1142,7 +732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authorization<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
 {{% /md %}}</dd>
@@ -1151,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authorizer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
 {{% /md %}}</dd>
@@ -1160,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
@@ -1169,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Request<wbr>Models</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the request's content type
 where key is the content type (e.g. `application/json`)
@@ -1180,7 +770,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
             title="Optional">
         <span>Request<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, bool>?</span>
+        <span class="property-type">Dictionary&lt;string, bool&gt;</span>
     </dt>
     <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
@@ -1190,7 +780,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>Request<wbr>Validator<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
 {{% /md %}}</dd>
@@ -1199,7 +789,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
 {{% /md %}}</dd>
@@ -1208,7 +798,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>Rest<wbr>Api</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
@@ -1224,7 +814,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>Api<wbr>Key<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the method requires an API key
 {{% /md %}}</dd>
@@ -1233,7 +823,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>Authorization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
 {{% /md %}}</dd>
@@ -1251,7 +841,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>Authorizer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
 {{% /md %}}</dd>
@@ -1260,7 +850,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>Http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
@@ -1290,7 +880,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>Request<wbr>Validator<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
 {{% /md %}}</dd>
@@ -1299,7 +889,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
 {{% /md %}}</dd>
@@ -1324,7 +914,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>api<wbr>Key<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify if the method requires an API key
 {{% /md %}}</dd>
@@ -1333,7 +923,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>authorization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
 {{% /md %}}</dd>
@@ -1342,7 +932,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>authorization<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
 {{% /md %}}</dd>
@@ -1351,7 +941,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>authorizer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
 {{% /md %}}</dd>
@@ -1360,7 +950,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
@@ -1369,7 +959,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>request<wbr>Models</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the request's content type
 where key is the content type (e.g. `application/json`)
@@ -1380,7 +970,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
             title="Optional">
         <span>request<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: boolean}?</span>
+        <span class="property-type">{[key: string]: boolean}</span>
     </dt>
     <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
@@ -1390,7 +980,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>request<wbr>Validator<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
 {{% /md %}}</dd>
@@ -1399,7 +989,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
 {{% /md %}}</dd>
@@ -1408,7 +998,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>rest<wbr>Api</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | RestApi</span>
+        <span class="property-type">string | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
@@ -1508,7 +1098,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
             title="Optional">
         <span>rest_<wbr>api</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">string | str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>

@@ -72,7 +72,7 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyAttachment">PolicyAttachment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyAttachmentArgs">PolicyAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyAttachment">PolicyAttachment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyAttachmentArgs">PolicyAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -80,7 +80,7 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPolicyAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#PolicyAttachmentArgs">PolicyAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#PolicyAttachment">PolicyAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPolicyAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#PolicyAttachmentArgs">PolicyAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#PolicyAttachment">PolicyAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -176,24 +176,6 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The group(s) the policy should be applied to
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policy<wbr>Arn</span>
@@ -205,9 +187,27 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The group(s) the policy should be applied to
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -216,7 +216,7 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
             title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -227,6 +227,15 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Policy<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the policy you want to apply
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -241,18 +250,9 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Policy<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the policy you want to apply
+    <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -280,24 +280,6 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | Group[]?</span>
-    </dt>
-    <dd>{{% md %}}The group(s) the policy should be applied to
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>policy<wbr>Arn</span>
@@ -309,9 +291,27 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | Group[]</span>
+    </dt>
+    <dd>{{% md %}}The group(s) the policy should be applied to
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Role[]?</span>
+        <span class="property-type">string | Role[]</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -320,7 +320,7 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | User[]?</span>
+        <span class="property-type">string | User[]</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -331,6 +331,15 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>policy_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the policy you want to apply
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -348,15 +357,6 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>policy_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the policy you want to apply
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -381,224 +381,6 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## PolicyAttachment Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The group(s) the policy should be applied to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the policy you want to apply
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The role(s) the policy should be applied to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The user(s) the policy should be applied to
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The group(s) the policy should be applied to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the policy you want to apply
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The role(s) the policy should be applied to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The user(s) the policy should be applied to
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The group(s) the policy should be applied to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">ARN</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the policy you want to apply
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The role(s) the policy should be applied to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The user(s) the policy should be applied to
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The group(s) the policy should be applied to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the policy you want to apply
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The role(s) the policy should be applied to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The user(s) the policy should be applied to
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -736,7 +518,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -745,7 +527,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
 {{% /md %}}</dd>
@@ -754,7 +536,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
 {{% /md %}}</dd>
@@ -763,7 +545,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -772,7 +554,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -797,7 +579,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
 {{% /md %}}</dd>
@@ -806,7 +588,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
 {{% /md %}}</dd>
@@ -840,7 +622,7 @@ The following state arguments are supported:
             title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Group[]?</span>
+        <span class="property-type">string | Group[]</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -849,7 +631,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
 {{% /md %}}</dd>
@@ -858,7 +640,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ARN?</span>
+        <span class="property-type">ARN</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
 {{% /md %}}</dd>
@@ -867,7 +649,7 @@ The following state arguments are supported:
             title="Optional">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Role[]?</span>
+        <span class="property-type">string | Role[]</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -876,7 +658,7 @@ The following state arguments are supported:
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | User[]?</span>
+        <span class="property-type">string | User[]</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>

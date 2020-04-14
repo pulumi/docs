@@ -69,7 +69,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iot/#TopicRule">TopicRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iot/#TopicRuleArgs">TopicRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iot/#TopicRule">TopicRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iot/#TopicRuleArgs">TopicRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -77,7 +77,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTopicRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iot?tab=doc#TopicRuleArgs">TopicRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iot?tab=doc#TopicRule">TopicRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTopicRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iot?tab=doc#TopicRuleArgs">TopicRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iot?tab=doc#TopicRule">TopicRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -173,47 +173,6 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloudwatch<wbr>Alarm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloudwatch<wbr>Metric</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dynamodb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Elasticsearch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Enabled</span>
@@ -222,63 +181,6 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
     </dt>
     <dd>{{% md %}}Specifies whether the rule is enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Firehose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kinesis</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Lambda</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Republish</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>S3</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Sns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -300,9 +202,107 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Cloudwatch<wbr>Alarm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Metric</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dynamodb</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Elasticsearch</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Lambda</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Republish</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>S3</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Sns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Sqs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -313,47 +313,6 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloudwatch<wbr>Alarm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">*Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloudwatch<wbr>Metric</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">*Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dynamodb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">*Topic<wbr>Rule<wbr>Dynamodb</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Elasticsearch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">*Topic<wbr>Rule<wbr>Elasticsearch</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Enabled</span>
@@ -362,63 +321,6 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
     </dt>
     <dd>{{% md %}}Specifies whether the rule is enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Firehose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">*Topic<wbr>Rule<wbr>Firehose</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kinesis</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">*Topic<wbr>Rule<wbr>Kinesis</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Lambda</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">*Topic<wbr>Rule<wbr>Lambda</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Republish</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">*Topic<wbr>Rule<wbr>Republish</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>S3</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">*Topic<wbr>Rule<wbr>S3</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Sns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">*Topic<wbr>Rule<wbr>Sns</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -440,9 +342,107 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Cloudwatch<wbr>Alarm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Metric</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dynamodb</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Elasticsearch</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Lambda</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Republish</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>S3</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Sns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Sqs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">*Topic<wbr>Rule<wbr>Sqs</a></span>
+        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -453,47 +453,6 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloudwatch<wbr>Alarm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloudwatch<wbr>Metric</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dynamodb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>elasticsearch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>enabled</span>
@@ -502,63 +461,6 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
     </dt>
     <dd>{{% md %}}Specifies whether the rule is enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>firehose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kinesis</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>lambda</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>republish</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>s3</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>sns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -580,9 +482,107 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>cloudwatch<wbr>Alarm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloudwatch<wbr>Metric</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dynamodb</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>elasticsearch</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kinesis</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>lambda</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>republish</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>s3</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>sns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>sqs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs?</a></span>
+        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -592,6 +592,33 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the rule is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>sql</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>sql_<wbr>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of the SQL rules engine to use when evaluating the rule.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -633,15 +660,6 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
         <span class="property-type"><a href="#topicruleelasticsearch">Dict[Topic<wbr>Rule<wbr>Elasticsearch]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the rule is enabled.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -699,24 +717,6 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
         <span class="property-type"><a href="#topicrulesns">Dict[Topic<wbr>Rule<wbr>Sns]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>sql</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>sql_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The version of the SQL rules engine to use when evaluating the rule.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -754,139 +754,6 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the topic rule
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Cloudwatch<wbr>Alarm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cloudwatch<wbr>Metric</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dynamodb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elasticsearch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the rule is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Firehose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kinesis</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Lambda</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Republish</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of the SQL rules engine to use when evaluating the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sqs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -902,139 +769,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN of the topic rule
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cloudwatch<wbr>Alarm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">*Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cloudwatch<wbr>Metric</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">*Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dynamodb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">*Topic<wbr>Rule<wbr>Dynamodb</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elasticsearch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">*Topic<wbr>Rule<wbr>Elasticsearch</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the rule is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Firehose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">*Topic<wbr>Rule<wbr>Firehose</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kinesis</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">*Topic<wbr>Rule<wbr>Kinesis</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Lambda</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">*Topic<wbr>Rule<wbr>Lambda</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Republish</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">*Topic<wbr>Rule<wbr>Republish</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">*Topic<wbr>Rule<wbr>S3</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">*Topic<wbr>Rule<wbr>Sns</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of the SQL rules engine to use when evaluating the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sqs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">*Topic<wbr>Rule<wbr>Sqs</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1052,139 +786,6 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the topic rule
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>cloudwatch<wbr>Alarm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cloudwatch<wbr>Metric</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dynamodb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elasticsearch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the rule is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>firehose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kinesis</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>lambda</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>republish</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of the SQL rules engine to use when evaluating the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sqs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1200,139 +801,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN of the topic rule
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cloudwatch_<wbr>alarm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Dict[Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cloudwatch_<wbr>metric</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Dict[Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dynamodb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Dict[Topic<wbr>Rule<wbr>Dynamodb]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elasticsearch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Dict[Topic<wbr>Rule<wbr>Elasticsearch]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the rule is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>firehose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Dict[Topic<wbr>Rule<wbr>Firehose]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kinesis</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Dict[Topic<wbr>Rule<wbr>Kinesis]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>lambda_</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Dict[Topic<wbr>Rule<wbr>Lambda]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>republish</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Dict[Topic<wbr>Rule<wbr>Republish]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Dict[Topic<wbr>Rule<wbr>S3]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Dict[Topic<wbr>Rule<wbr>Sns]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The version of the SQL rules engine to use when evaluating the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sqs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Dict[Topic<wbr>Rule<wbr>Sqs]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1473,7 +941,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the topic rule
 {{% /md %}}</dd>
@@ -1482,7 +950,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloudwatch<wbr>Alarm</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args?</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1490,7 +958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloudwatch<wbr>Metric</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args?</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1498,7 +966,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd>
@@ -1507,7 +975,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dynamodb</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb<wbr>Args?</a></span>
+        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1515,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Elasticsearch</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args?</a></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1523,7 +991,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the rule is enabled.
 {{% /md %}}</dd>
@@ -1532,7 +1000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Firehose</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose<wbr>Args?</a></span>
+        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1540,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kinesis</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis<wbr>Args?</a></span>
+        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1548,7 +1016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda<wbr>Args?</a></span>
+        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1556,7 +1024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd>
@@ -1565,7 +1033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Republish</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish<wbr>Args?</a></span>
+        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1573,7 +1041,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3Args?</a></span>
+        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1581,7 +1049,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns<wbr>Args?</a></span>
+        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1589,7 +1057,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
 {{% /md %}}</dd>
@@ -1598,7 +1066,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the SQL rules engine to use when evaluating the rule.
 {{% /md %}}</dd>
@@ -1607,7 +1075,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sqs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1622,7 +1090,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the topic rule
 {{% /md %}}</dd>
@@ -1631,7 +1099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloudwatch<wbr>Alarm</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">*Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1639,7 +1107,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloudwatch<wbr>Metric</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">*Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1647,7 +1115,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd>
@@ -1656,7 +1124,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dynamodb</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">*Topic<wbr>Rule<wbr>Dynamodb</a></span>
+        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1664,7 +1132,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Elasticsearch</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">*Topic<wbr>Rule<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1672,7 +1140,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the rule is enabled.
 {{% /md %}}</dd>
@@ -1681,7 +1149,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Firehose</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">*Topic<wbr>Rule<wbr>Firehose</a></span>
+        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1689,7 +1157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kinesis</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">*Topic<wbr>Rule<wbr>Kinesis</a></span>
+        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1697,7 +1165,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">*Topic<wbr>Rule<wbr>Lambda</a></span>
+        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1705,7 +1173,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd>
@@ -1714,7 +1182,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Republish</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">*Topic<wbr>Rule<wbr>Republish</a></span>
+        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1722,7 +1190,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">*Topic<wbr>Rule<wbr>S3</a></span>
+        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1730,7 +1198,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">*Topic<wbr>Rule<wbr>Sns</a></span>
+        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1738,7 +1206,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
 {{% /md %}}</dd>
@@ -1747,7 +1215,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the SQL rules engine to use when evaluating the rule.
 {{% /md %}}</dd>
@@ -1756,7 +1224,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sqs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">*Topic<wbr>Rule<wbr>Sqs</a></span>
+        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1771,7 +1239,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the topic rule
 {{% /md %}}</dd>
@@ -1780,7 +1248,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cloudwatch<wbr>Alarm</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm?</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1788,7 +1256,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cloudwatch<wbr>Metric</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric?</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1796,7 +1264,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd>
@@ -1805,7 +1273,7 @@ The following state arguments are supported:
             title="Optional">
         <span>dynamodb</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb?</a></span>
+        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1813,7 +1281,7 @@ The following state arguments are supported:
             title="Optional">
         <span>elasticsearch</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch?</a></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1821,7 +1289,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the rule is enabled.
 {{% /md %}}</dd>
@@ -1830,7 +1298,7 @@ The following state arguments are supported:
             title="Optional">
         <span>firehose</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose?</a></span>
+        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1838,7 +1306,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kinesis</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis?</a></span>
+        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1846,7 +1314,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda?</a></span>
+        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1854,7 +1322,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd>
@@ -1863,7 +1331,7 @@ The following state arguments are supported:
             title="Optional">
         <span>republish</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish?</a></span>
+        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1871,7 +1339,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3?</a></span>
+        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1879,7 +1347,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns?</a></span>
+        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1887,7 +1355,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sql</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
 {{% /md %}}</dd>
@@ -1896,7 +1364,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sql<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the SQL rules engine to use when evaluating the rule.
 {{% /md %}}</dd>
@@ -1905,7 +1373,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sqs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs?</a></span>
+        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2292,15 +1760,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The CloudWatch metric namespace name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metric<wbr>Timestamp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Metric<wbr>Unit</span>
@@ -2326,6 +1785,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch metric.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metric<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
 {{% /md %}}</dd>
 
 </dl>
@@ -2353,15 +1821,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The CloudWatch metric namespace name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metric<wbr>Timestamp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Metric<wbr>Unit</span>
@@ -2389,6 +1848,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch metric.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metric<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2412,15 +1880,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric namespace name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metric<wbr>Timestamp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2450,6 +1909,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch metric.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>metric<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2473,15 +1941,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric namespace name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metric<wbr>Timestamp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2509,6 +1968,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch metric.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metric<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
 {{% /md %}}</dd>
 
 </dl>
@@ -2542,15 +2010,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The hash key name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hash<wbr>Key<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Hash<wbr>Key<wbr>Value</span>
@@ -2558,42 +2017,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hash key value.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Payload<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The action payload.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Range<wbr>Key<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The range key name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Range<wbr>Key<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Range<wbr>Key<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The range key value.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2612,6 +2035,51 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DynamoDB table.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hash<wbr>Key<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Payload<wbr>Field</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action payload.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Range<wbr>Key<wbr>Field</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range key name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Range<wbr>Key<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Range<wbr>Key<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range key value.
 {{% /md %}}</dd>
 
 </dl>
@@ -2630,15 +2098,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The hash key name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hash<wbr>Key<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Hash<wbr>Key<wbr>Value</span>
@@ -2646,42 +2105,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hash key value.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Payload<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The action payload.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Range<wbr>Key<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The range key name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Range<wbr>Key<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Range<wbr>Key<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The range key value.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2702,6 +2125,51 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the DynamoDB table.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hash<wbr>Key<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Payload<wbr>Field</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action payload.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Range<wbr>Key<wbr>Field</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range key name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Range<wbr>Key<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Range<wbr>Key<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range key value.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2718,15 +2186,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The hash key name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>hash<wbr>Key<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>hash<wbr>Key<wbr>Value</span>
@@ -2734,42 +2193,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hash key value.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>payload<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The action payload.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>range<wbr>Key<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The range key name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>range<wbr>Key<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>range<wbr>Key<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The range key value.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2790,6 +2213,51 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the DynamoDB table.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>hash<wbr>Key<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>payload<wbr>Field</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action payload.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>range<wbr>Key<wbr>Field</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range key name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>range<wbr>Key<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>range<wbr>Key<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range key value.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2806,15 +2274,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The hash key name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>hash<wbr>Key<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>hash<wbr>Key<wbr>Value</span>
@@ -2822,6 +2281,33 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hash key value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to the DynamoDB table.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>table_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the DynamoDB table.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hash<wbr>Key<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2858,24 +2344,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The range key value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role that grants access to the DynamoDB table.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>table_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the DynamoDB table.
 {{% /md %}}</dd>
 
 </dl>
@@ -3145,7 +2613,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Separator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
 {{% /md %}}</dd>
@@ -3179,7 +2647,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Separator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
 {{% /md %}}</dd>
@@ -3213,7 +2681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>separator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
 {{% /md %}}</dd>
@@ -3274,15 +2742,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Partition<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The partition key.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role<wbr>Arn</span>
@@ -3299,6 +2758,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon Kinesis stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Partition<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The partition key.
 {{% /md %}}</dd>
 
 </dl>
@@ -3308,15 +2776,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Partition<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The partition key.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role<wbr>Arn</span>
@@ -3335,21 +2794,21 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Amazon Kinesis stream.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Partition<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The partition key.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>partition<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The partition key.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3369,21 +2828,21 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Amazon Kinesis stream.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>partition<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The partition key.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>partition<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The partition key.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3401,6 +2860,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon Kinesis stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>partition<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The partition key.
 {{% /md %}}</dd>
 
 </dl>
@@ -3770,15 +3238,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Message<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role<wbr>Arn</span>
@@ -3795,6 +3254,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Message<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
 {{% /md %}}</dd>
 
 </dl>
@@ -3804,15 +3272,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Message<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role<wbr>Arn</span>
@@ -3831,21 +3290,21 @@ The following state arguments are supported:
     <dd>{{% md %}}The ARN of the SNS topic.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Message<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>message<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3865,21 +3324,21 @@ The following state arguments are supported:
     <dd>{{% md %}}The ARN of the SNS topic.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>message<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>message<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3897,6 +3356,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>message<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
 {{% /md %}}</dd>
 
 </dl>

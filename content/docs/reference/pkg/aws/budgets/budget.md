@@ -131,7 +131,7 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#Budget">Budget</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#BudgetArgs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#Budget">Budget</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#BudgetArgs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -139,7 +139,7 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBudget<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/budgets?tab=doc#BudgetArgs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/budgets?tab=doc#Budget">Budget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBudget<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/budgets?tab=doc#BudgetArgs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/budgets?tab=doc#Budget">Budget</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -235,15 +235,6 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Budget<wbr>Type</span>
@@ -251,24 +242,6 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cost<wbr>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cost<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -287,42 +260,6 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of a budget. Unique within accounts.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Notifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">List&lt;Budget<wbr>Notification<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Time<wbr>Period<wbr>End</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -343,36 +280,20 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Budget<wbr>Type</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
+    <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Cost<wbr>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
@@ -381,9 +302,61 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
             title="Optional">
         <span>Cost<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">*Budget<wbr>Cost<wbr>Types</a></span>
+        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of a budget. Unique within accounts.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Notifications</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#budgetnotification">List&lt;Budget<wbr>Notification<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Time<wbr>Period<wbr>End</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Budget<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -404,11 +377,56 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Time<wbr>Period<wbr>Start</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Time<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Account<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cost<wbr>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cost<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd>
@@ -417,7 +435,7 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd>
@@ -435,27 +453,9 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
             title="Optional">
         <span>Time<wbr>Period<wbr>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Time<wbr>Period<wbr>Start</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Time<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -465,15 +465,6 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>budget<wbr>Type</span>
@@ -481,24 +472,6 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cost<wbr>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cost<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types?</a></span>
-    </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -519,42 +492,6 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of a budget. Unique within accounts.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>notifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">Budget<wbr>Notification[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>time<wbr>Period<wbr>End</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>time<wbr>Period<wbr>Start</span>
@@ -573,372 +510,8 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>account_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>budget_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cost_<wbr>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cost_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Dict[Budget<wbr>Cost<wbr>Types]</a></span>
-    </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>limit_<wbr>amount</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The amount of cost or usage being measured for a budget.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>limit_<wbr>unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of a budget. Unique within accounts.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>notifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">List[Budget<wbr>Notification]</a></span>
-    </dt>
-    <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>time_<wbr>period_<wbr>end</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>time_<wbr>period_<wbr>start</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>time_<wbr>unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## Budget Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Budget<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cost<wbr>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cost<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
-    </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Limit<wbr>Amount</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of cost or usage being measured for a budget.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Limit<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of a budget. Unique within accounts.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">List&lt;Budget<wbr>Notification&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Time<wbr>Period<wbr>End</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Time<wbr>Period<wbr>Start</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Time<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Budget<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cost<wbr>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cost<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
-    </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Limit<wbr>Amount</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of cost or usage being measured for a budget.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Limit<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of a budget. Unique within accounts.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">[]Budget<wbr>Notification</a></span>
-    </dt>
-    <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Time<wbr>Period<wbr>End</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Time<wbr>Period<wbr>Start</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Time<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
         <span>account<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -946,17 +519,8 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>budget<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>cost<wbr>Filters</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
@@ -964,8 +528,8 @@ The following output properties are available:
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>cost<wbr>Types</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
@@ -973,26 +537,8 @@ The following output properties are available:
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>limit<wbr>Amount</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The amount of cost or usage being measured for a budget.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>limit<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1000,8 +546,8 @@ The following output properties are available:
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1009,40 +555,22 @@ The following output properties are available:
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>notifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">Budget<wbr>Notification[]?</a></span>
+        <span class="property-type"><a href="#budgetnotification">Budget<wbr>Notification[]</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>time<wbr>Period<wbr>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>time<wbr>Period<wbr>Start</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>time<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1052,17 +580,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>account_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>budget_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1070,26 +589,8 @@ The following output properties are available:
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>cost_<wbr>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cost_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Dict[Budget<wbr>Cost<wbr>Types]</a></span>
-    </dt>
-    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>limit_<wbr>amount</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1097,8 +598,8 @@ The following output properties are available:
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>limit_<wbr>unit</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1106,44 +607,8 @@ The following output properties are available:
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of a budget. Unique within accounts.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>notifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">List[Budget<wbr>Notification]</a></span>
-    </dt>
-    <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>time_<wbr>period_<wbr>end</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>time_<wbr>period_<wbr>start</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1151,8 +616,8 @@ The following output properties are available:
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>time_<wbr>unit</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1160,8 +625,73 @@ The following output properties are available:
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>account_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cost_<wbr>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cost_<wbr>types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#budgetcosttypes">Dict[Budget<wbr>Cost<wbr>Types]</a></span>
+    </dt>
+    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of a budget. Unique within accounts.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>notifications</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#budgetnotification">List[Budget<wbr>Notification]</a></span>
+    </dt>
+    <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>time_<wbr>period_<wbr>end</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -1299,7 +829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd>
@@ -1308,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Budget<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd>
@@ -1317,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cost<wbr>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
@@ -1326,7 +856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cost<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args?</a></span>
+        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
@@ -1335,7 +865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Limit<wbr>Amount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd>
@@ -1344,7 +874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Limit<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
@@ -1353,7 +883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd>
@@ -1362,7 +892,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd>
@@ -1371,7 +901,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">List&lt;Budget<wbr>Notification<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#budgetnotification">List&lt;Budget<wbr>Notification<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd>
@@ -1380,7 +910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Period<wbr>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
@@ -1389,7 +919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Period<wbr>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
@@ -1398,7 +928,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
@@ -1414,7 +944,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd>
@@ -1423,7 +953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Budget<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd>
@@ -1441,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cost<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">*Budget<wbr>Cost<wbr>Types</a></span>
+        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
@@ -1450,7 +980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Limit<wbr>Amount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd>
@@ -1459,7 +989,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Limit<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
@@ -1468,7 +998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd>
@@ -1477,7 +1007,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd>
@@ -1495,7 +1025,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Period<wbr>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
@@ -1504,7 +1034,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Period<wbr>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
@@ -1513,7 +1043,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
@@ -1529,7 +1059,7 @@ The following state arguments are supported:
             title="Optional">
         <span>account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd>
@@ -1538,7 +1068,7 @@ The following state arguments are supported:
             title="Optional">
         <span>budget<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd>
@@ -1547,7 +1077,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cost<wbr>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
@@ -1556,7 +1086,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cost<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types?</a></span>
+        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd>
@@ -1565,7 +1095,7 @@ The following state arguments are supported:
             title="Optional">
         <span>limit<wbr>Amount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd>
@@ -1574,7 +1104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>limit<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd>
@@ -1583,7 +1113,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd>
@@ -1592,7 +1122,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd>
@@ -1601,7 +1131,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">Budget<wbr>Notification[]?</a></span>
+        <span class="property-type"><a href="#budgetnotification">Budget<wbr>Notification[]</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd>
@@ -1610,7 +1140,7 @@ The following state arguments are supported:
             title="Optional">
         <span>time<wbr>Period<wbr>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
@@ -1619,7 +1149,7 @@ The following state arguments are supported:
             title="Optional">
         <span>time<wbr>Period<wbr>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd>
@@ -1628,7 +1158,7 @@ The following state arguments are supported:
             title="Optional">
         <span>time<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
 {{% /md %}}</dd>
@@ -1781,7 +1311,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Credit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include credits in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1790,7 +1320,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Discount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget includes discounts. Defaults to `true`
 {{% /md %}}</dd>
@@ -1799,7 +1329,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Other<wbr>Subscription</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include other subscription costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1808,7 +1338,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Recurring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include recurring costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1817,7 +1347,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Refund</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include refunds in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1826,7 +1356,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Subscription</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include subscriptions in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1835,7 +1365,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include support costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1844,7 +1374,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Tax</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include tax in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1853,7 +1383,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Upfront</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include upfront costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1862,7 +1392,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Amortized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget uses the amortized rate. Defaults to `false`
 {{% /md %}}</dd>
@@ -1871,7 +1401,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Blended</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to use blended costs in the cost budget. Defaults to `false`
 {{% /md %}}</dd>
@@ -1887,7 +1417,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Credit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include credits in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1896,7 +1426,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Discount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget includes discounts. Defaults to `true`
 {{% /md %}}</dd>
@@ -1905,7 +1435,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Other<wbr>Subscription</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include other subscription costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1914,7 +1444,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Recurring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include recurring costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1923,7 +1453,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Refund</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include refunds in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1932,7 +1462,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Subscription</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include subscriptions in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1941,7 +1471,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include support costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1950,7 +1480,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Tax</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include tax in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1959,7 +1489,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Include<wbr>Upfront</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include upfront costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -1968,7 +1498,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Amortized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget uses the amortized rate. Defaults to `false`
 {{% /md %}}</dd>
@@ -1977,7 +1507,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Blended</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to use blended costs in the cost budget. Defaults to `false`
 {{% /md %}}</dd>
@@ -1993,7 +1523,7 @@ The following state arguments are supported:
             title="Optional">
         <span>include<wbr>Credit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include credits in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -2002,7 +1532,7 @@ The following state arguments are supported:
             title="Optional">
         <span>include<wbr>Discount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget includes discounts. Defaults to `true`
 {{% /md %}}</dd>
@@ -2011,7 +1541,7 @@ The following state arguments are supported:
             title="Optional">
         <span>include<wbr>Other<wbr>Subscription</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include other subscription costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -2020,7 +1550,7 @@ The following state arguments are supported:
             title="Optional">
         <span>include<wbr>Recurring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include recurring costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -2029,7 +1559,7 @@ The following state arguments are supported:
             title="Optional">
         <span>include<wbr>Refund</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include refunds in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -2038,7 +1568,7 @@ The following state arguments are supported:
             title="Optional">
         <span>include<wbr>Subscription</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include subscriptions in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -2047,7 +1577,7 @@ The following state arguments are supported:
             title="Optional">
         <span>include<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include support costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -2056,7 +1586,7 @@ The following state arguments are supported:
             title="Optional">
         <span>include<wbr>Tax</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include tax in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -2065,7 +1595,7 @@ The following state arguments are supported:
             title="Optional">
         <span>include<wbr>Upfront</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include upfront costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd>
@@ -2074,7 +1604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Amortized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget uses the amortized rate. Defaults to `false`
 {{% /md %}}</dd>
@@ -2083,7 +1613,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Blended</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to use blended costs in the cost budget. Defaults to `false`
 {{% /md %}}</dd>
@@ -2234,24 +1764,6 @@ The following state arguments are supported:
     <dd>{{% md %}}(Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Subscriber<wbr>Email<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Subscriber<wbr>Sns<wbr>Topic<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Threshold</span>
@@ -2268,6 +1780,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Subscriber<wbr>Email<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Subscriber<wbr>Sns<wbr>Topic<wbr>Arns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
 {{% /md %}}</dd>
 
 </dl>
@@ -2295,24 +1825,6 @@ The following state arguments are supported:
     <dd>{{% md %}}(Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Subscriber<wbr>Email<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Subscriber<wbr>Sns<wbr>Topic<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Threshold</span>
@@ -2329,6 +1841,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Subscriber<wbr>Email<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Subscriber<wbr>Sns<wbr>Topic<wbr>Arns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
 {{% /md %}}</dd>
 
 </dl>
@@ -2356,24 +1886,6 @@ The following state arguments are supported:
     <dd>{{% md %}}(Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>subscriber<wbr>Email<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>subscriber<wbr>Sns<wbr>Topic<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>threshold</span>
@@ -2390,6 +1902,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>subscriber<wbr>Email<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>subscriber<wbr>Sns<wbr>Topic<wbr>Arns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
 {{% /md %}}</dd>
 
 </dl>
@@ -2417,24 +1947,6 @@ The following state arguments are supported:
     <dd>{{% md %}}(Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>subscriber<wbr>Email<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>subscriber<wbr>Sns<wbr>Topic<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>threshold</span>
@@ -2451,6 +1963,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>subscriber<wbr>Email<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>subscriber<wbr>Sns<wbr>Topic<wbr>Arns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
 {{% /md %}}</dd>
 
 </dl>

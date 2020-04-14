@@ -130,7 +130,7 @@ large files efficiently.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Function">Function</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#FunctionArgs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Function">Function</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#FunctionArgs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -138,7 +138,7 @@ large files efficiently.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFunction<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#FunctionArgs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFunction<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#FunctionArgs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -234,42 +234,6 @@ large files efficiently.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Archive?</span>
-    </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dead<wbr>Letter<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Handler</span>
@@ -277,60 +241,6 @@ large files efficiently.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function [entrypoint][3] in your code.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN for the KMS encryption key.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Layers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Memory<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits][5]
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Publish</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Reserved<wbr>Concurrent<wbr>Executions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency][9]
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -353,9 +263,99 @@ large files efficiently.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Archive</span>
+    </dt>
+    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dead<wbr>Letter<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of what your Lambda Function does.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Environment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Layers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Memory<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits][5]
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique name for your Lambda Function.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Publish</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reserved<wbr>Concurrent<wbr>Executions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency][9]
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
@@ -364,7 +364,7 @@ large files efficiently.
             title="Optional">
         <span>S3Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -373,7 +373,7 @@ large files efficiently.
             title="Optional">
         <span>S3Object<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -382,7 +382,7 @@ large files efficiently.
             title="Optional">
         <span>Source<wbr>Code<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
 {{% /md %}}</dd>
@@ -391,7 +391,7 @@ large files efficiently.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -400,7 +400,7 @@ large files efficiently.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits][5]
 {{% /md %}}</dd>
@@ -409,7 +409,7 @@ large files efficiently.
             title="Optional">
         <span>Tracing<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -417,7 +417,7 @@ large files efficiently.
             title="Optional">
         <span>Vpc<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
 {{% /md %}}</dd>
@@ -429,42 +429,6 @@ large files efficiently.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.Archive</span>
-    </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dead<wbr>Letter<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">*Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">*Function<wbr>Environment</a></span>
-    </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Handler</span>
@@ -474,11 +438,65 @@ large files efficiently.
     <dd>{{% md %}}The function [entrypoint][3] in your code.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Runtime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See [Runtimes][6] for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Archive</span>
+    </dt>
+    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dead<wbr>Letter<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of what your Lambda Function does.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Environment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -496,7 +514,7 @@ large files efficiently.
             title="Optional">
         <span>Memory<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits][5]
 {{% /md %}}</dd>
@@ -505,7 +523,7 @@ large files efficiently.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for your Lambda Function.
 {{% /md %}}</dd>
@@ -514,7 +532,7 @@ large files efficiently.
             title="Optional">
         <span>Publish</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 {{% /md %}}</dd>
@@ -523,34 +541,16 @@ large files efficiently.
             title="Optional">
         <span>Reserved<wbr>Concurrent<wbr>Executions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency][9]
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}See [Runtimes][6] for valid values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
@@ -559,7 +559,7 @@ large files efficiently.
             title="Optional">
         <span>S3Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -568,7 +568,7 @@ large files efficiently.
             title="Optional">
         <span>S3Object<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -577,7 +577,7 @@ large files efficiently.
             title="Optional">
         <span>Source<wbr>Code<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
 {{% /md %}}</dd>
@@ -595,7 +595,7 @@ large files efficiently.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits][5]
 {{% /md %}}</dd>
@@ -604,7 +604,7 @@ large files efficiently.
             title="Optional">
         <span>Tracing<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">*Function<wbr>Tracing<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -612,7 +612,7 @@ large files efficiently.
             title="Optional">
         <span>Vpc<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">*Function<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
 {{% /md %}}</dd>
@@ -624,42 +624,6 @@ large files efficiently.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.asset.Archive?</span>
-    </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dead<wbr>Letter<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment?</a></span>
-    </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>handler</span>
@@ -667,60 +631,6 @@ large files efficiently.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function [entrypoint][3] in your code.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN for the KMS encryption key.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>layers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>memory<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits][5]
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>publish</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>reserved<wbr>Concurrent<wbr>Executions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency][9]
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -743,9 +653,99 @@ large files efficiently.
 
     <dt class="property-optional"
             title="Optional">
+        <span>code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.asset.<wbr>Archive</span>
+    </dt>
+    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dead<wbr>Letter<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of what your Lambda Function does.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>environment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kms<wbr>Key<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>layers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>memory<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits][5]
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique name for your Lambda Function.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>publish</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>reserved<wbr>Concurrent<wbr>Executions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency][9]
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>s3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
@@ -754,7 +754,7 @@ large files efficiently.
             title="Optional">
         <span>s3Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -763,7 +763,7 @@ large files efficiently.
             title="Optional">
         <span>s3Object<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -772,7 +772,7 @@ large files efficiently.
             title="Optional">
         <span>source<wbr>Code<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
 {{% /md %}}</dd>
@@ -781,7 +781,7 @@ large files efficiently.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -790,7 +790,7 @@ large files efficiently.
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits][5]
 {{% /md %}}</dd>
@@ -799,7 +799,7 @@ large files efficiently.
             title="Optional">
         <span>tracing<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config?</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -807,7 +807,7 @@ large files efficiently.
             title="Optional">
         <span>vpc<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config?</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
 {{% /md %}}</dd>
@@ -819,11 +819,38 @@ large files efficiently.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>handler</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The function [entrypoint][3] in your code.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>runtime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}See [Runtimes][6] for valid values.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.Archive</span>
+        <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd>
@@ -853,15 +880,6 @@ large files efficiently.
         <span class="property-type"><a href="#functionenvironment">Dict[Function<wbr>Environment]</a></span>
     </dt>
     <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>handler</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The function [entrypoint][3] in your code.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -916,24 +934,6 @@ large files efficiently.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency][9]
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}See [Runtimes][6] for valid values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1037,51 +1037,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Archive?</span>
-    </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dead<wbr>Letter<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment?</a></span>
-    </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Handler</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The function [entrypoint][3] in your code.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Invoke<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1091,56 +1046,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN for the KMS encryption key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Last<wbr>Modified</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Layers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits][5]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Publish</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1155,69 +1065,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Reserved<wbr>Concurrent<wbr>Executions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency][9]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}See [Runtimes][6] for valid values.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Object<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Code<wbr>Hash</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Source<wbr>Code<wbr>Size</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -1227,46 +1074,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits][5]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tracing<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
 {{% /md %}}</dd>
 
 </dl>
@@ -1287,51 +1099,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.Archive</span>
-    </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dead<wbr>Letter<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">*Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">*Function<wbr>Environment</a></span>
-    </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Handler</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The function [entrypoint][3] in your code.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Invoke<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1341,56 +1108,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ARN for the KMS encryption key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Last<wbr>Modified</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Layers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Memory<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits][5]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Publish</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1405,69 +1127,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Reserved<wbr>Concurrent<wbr>Executions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency][9]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}See [Runtimes][6] for valid values.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Object<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Code<wbr>Hash</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Source<wbr>Code<wbr>Size</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -1477,46 +1136,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits][5]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tracing<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">*Function<wbr>Vpc<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
 {{% /md %}}</dd>
 
 </dl>
@@ -1537,51 +1161,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.asset.Archive?</span>
-    </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dead<wbr>Letter<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment?</a></span>
-    </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>handler</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The function [entrypoint][3] in your code.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>invoke<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1591,56 +1170,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN for the KMS encryption key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>last<wbr>Modified</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>layers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>memory<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits][5]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>publish</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1655,69 +1189,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>reserved<wbr>Concurrent<wbr>Executions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency][9]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">ARN</span>
-    </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}See [Runtimes][6] for valid values.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3Object<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source<wbr>Code<wbr>Hash</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>source<wbr>Code<wbr>Size</span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -1727,46 +1198,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits][5]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tracing<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
 {{% /md %}}</dd>
 
 </dl>
@@ -1787,51 +1223,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.Archive</span>
-    </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dead_<wbr>letter_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Dict[Function<wbr>Dead<wbr>Letter<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of what your Lambda Function does.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Dict[Function<wbr>Environment]</a></span>
-    </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>handler</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The function [entrypoint][3] in your code.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>invoke_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1841,56 +1232,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>kms_<wbr>key_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN for the KMS encryption key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>last_<wbr>modified</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>layers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>memory_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits][5]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>publish</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1905,69 +1251,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>reserved_<wbr>concurrent_<wbr>executions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency][9]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}See [Runtimes][6] for valid values.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3_<wbr>bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3_<wbr>object_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source_<wbr>code_<wbr>hash</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>source_<wbr>code_<wbr>size</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
@@ -1977,46 +1260,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits][5]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tracing_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Dict[Function<wbr>Tracing<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Dict[Function<wbr>Vpc<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
 {{% /md %}}</dd>
 
 </dl>
@@ -2158,7 +1406,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function.
 {{% /md %}}</dd>
@@ -2167,7 +1415,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Archive?</span>
+        <span class="property-type">Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd>
@@ -2176,7 +1424,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dead<wbr>Letter<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
 {{% /md %}}</dd>
@@ -2185,7 +1433,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
 {{% /md %}}</dd>
@@ -2194,7 +1442,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Environment</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
 {{% /md %}}</dd>
@@ -2203,7 +1451,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Handler</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function [entrypoint][3] in your code.
 {{% /md %}}</dd>
@@ -2212,7 +1460,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invoke<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
 {{% /md %}}</dd>
@@ -2221,7 +1469,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -2230,7 +1478,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Modified</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
 {{% /md %}}</dd>
@@ -2239,7 +1487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Layers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]
 {{% /md %}}</dd>
@@ -2248,7 +1496,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Memory<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits][5]
 {{% /md %}}</dd>
@@ -2257,7 +1505,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for your Lambda Function.
 {{% /md %}}</dd>
@@ -2266,7 +1514,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Publish</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2275,7 +1523,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Qualified<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function Version
 (if versioning is enabled via `publish = true`).
@@ -2285,7 +1533,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reserved<wbr>Concurrent<wbr>Executions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency][9]
 {{% /md %}}</dd>
@@ -2294,7 +1542,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
 {{% /md %}}</dd>
@@ -2303,7 +1551,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See [Runtimes][6] for valid values.
 {{% /md %}}</dd>
@@ -2312,7 +1560,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
@@ -2321,7 +1569,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -2330,7 +1578,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Object<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -2339,7 +1587,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Code<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
 {{% /md %}}</dd>
@@ -2348,7 +1596,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Code<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the function .zip file.
 {{% /md %}}</dd>
@@ -2357,7 +1605,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -2366,7 +1614,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits][5]
 {{% /md %}}</dd>
@@ -2375,7 +1623,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tracing<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2383,7 +1631,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
 {{% /md %}}</dd>
@@ -2392,7 +1640,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
 {{% /md %}}</dd>
@@ -2408,7 +1656,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function.
 {{% /md %}}</dd>
@@ -2417,7 +1665,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.Archive</span>
+        <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd>
@@ -2426,7 +1674,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dead<wbr>Letter<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">*Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
 {{% /md %}}</dd>
@@ -2435,7 +1683,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
 {{% /md %}}</dd>
@@ -2444,7 +1692,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Environment</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">*Function<wbr>Environment</a></span>
+        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
 {{% /md %}}</dd>
@@ -2453,7 +1701,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Handler</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function [entrypoint][3] in your code.
 {{% /md %}}</dd>
@@ -2462,7 +1710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invoke<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
 {{% /md %}}</dd>
@@ -2471,7 +1719,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -2480,7 +1728,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Modified</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
 {{% /md %}}</dd>
@@ -2498,7 +1746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Memory<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits][5]
 {{% /md %}}</dd>
@@ -2507,7 +1755,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for your Lambda Function.
 {{% /md %}}</dd>
@@ -2516,7 +1764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Publish</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2525,7 +1773,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Qualified<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function Version
 (if versioning is enabled via `publish = true`).
@@ -2535,7 +1783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reserved<wbr>Concurrent<wbr>Executions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency][9]
 {{% /md %}}</dd>
@@ -2544,7 +1792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
 {{% /md %}}</dd>
@@ -2553,7 +1801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See [Runtimes][6] for valid values.
 {{% /md %}}</dd>
@@ -2562,7 +1810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
@@ -2571,7 +1819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -2580,7 +1828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Object<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -2589,7 +1837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Code<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
 {{% /md %}}</dd>
@@ -2598,7 +1846,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Code<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the function .zip file.
 {{% /md %}}</dd>
@@ -2616,7 +1864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits][5]
 {{% /md %}}</dd>
@@ -2625,7 +1873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tracing<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">*Function<wbr>Tracing<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2633,7 +1881,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
 {{% /md %}}</dd>
@@ -2642,7 +1890,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">*Function<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
 {{% /md %}}</dd>
@@ -2658,7 +1906,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function.
 {{% /md %}}</dd>
@@ -2667,7 +1915,7 @@ The following state arguments are supported:
             title="Optional">
         <span>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.asset.Archive?</span>
+        <span class="property-type">pulumi.asset.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd>
@@ -2676,7 +1924,7 @@ The following state arguments are supported:
             title="Optional">
         <span>dead<wbr>Letter<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config?</a></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
 {{% /md %}}</dd>
@@ -2685,7 +1933,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of what your Lambda Function does.
 {{% /md %}}</dd>
@@ -2694,7 +1942,7 @@ The following state arguments are supported:
             title="Optional">
         <span>environment</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment?</a></span>
+        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
 {{% /md %}}</dd>
@@ -2703,7 +1951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>handler</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function [entrypoint][3] in your code.
 {{% /md %}}</dd>
@@ -2712,7 +1960,7 @@ The following state arguments are supported:
             title="Optional">
         <span>invoke<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
 {{% /md %}}</dd>
@@ -2721,7 +1969,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -2730,7 +1978,7 @@ The following state arguments are supported:
             title="Optional">
         <span>last<wbr>Modified</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
 {{% /md %}}</dd>
@@ -2739,7 +1987,7 @@ The following state arguments are supported:
             title="Optional">
         <span>layers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]
 {{% /md %}}</dd>
@@ -2748,7 +1996,7 @@ The following state arguments are supported:
             title="Optional">
         <span>memory<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits][5]
 {{% /md %}}</dd>
@@ -2757,7 +2005,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for your Lambda Function.
 {{% /md %}}</dd>
@@ -2766,7 +2014,7 @@ The following state arguments are supported:
             title="Optional">
         <span>publish</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2775,7 +2023,7 @@ The following state arguments are supported:
             title="Optional">
         <span>qualified<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function Version
 (if versioning is enabled via `publish = true`).
@@ -2785,7 +2033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>reserved<wbr>Concurrent<wbr>Executions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency][9]
 {{% /md %}}</dd>
@@ -2794,7 +2042,7 @@ The following state arguments are supported:
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ARN?</span>
+        <span class="property-type">ARN</span>
     </dt>
     <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
 {{% /md %}}</dd>
@@ -2803,7 +2051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See [Runtimes][6] for valid values.
 {{% /md %}}</dd>
@@ -2812,7 +2060,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
@@ -2821,7 +2069,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -2830,7 +2078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Object<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename`.
 {{% /md %}}</dd>
@@ -2839,7 +2087,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Code<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
 {{% /md %}}</dd>
@@ -2848,7 +2096,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Code<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the function .zip file.
 {{% /md %}}</dd>
@@ -2857,7 +2105,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -2866,7 +2114,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits][5]
 {{% /md %}}</dd>
@@ -2875,7 +2123,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tracing<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config?</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2883,7 +2131,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
 {{% /md %}}</dd>
@@ -2892,7 +2140,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config?</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
 {{% /md %}}</dd>
@@ -2917,7 +2165,7 @@ The following state arguments are supported:
             title="Optional">
         <span>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.Archive</span>
+        <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 {{% /md %}}</dd>
@@ -3271,7 +2519,7 @@ which service is targeted.
             title="Optional">
         <span>Variables</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map that defines environment variables for the Lambda function.
 {{% /md %}}</dd>
@@ -3303,7 +2551,7 @@ which service is targeted.
             title="Optional">
         <span>variables</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map that defines environment variables for the Lambda function.
 {{% /md %}}</dd>
@@ -3445,7 +2693,7 @@ X-Ray for a tracing decision.
             title="Required">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs associated with the Lambda function.
 {{% /md %}}</dd>
@@ -3454,7 +2702,7 @@ X-Ray for a tracing decision.
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs associated with the Lambda function.
 {{% /md %}}</dd>
@@ -3463,7 +2711,7 @@ X-Ray for a tracing decision.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3496,7 +2744,7 @@ X-Ray for a tracing decision.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3529,7 +2777,7 @@ X-Ray for a tracing decision.
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

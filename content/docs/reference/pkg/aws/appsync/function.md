@@ -76,7 +76,7 @@ const testFunction = new aws.appsync.Function("test", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appsync/#Function">Function</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appsync/#FunctionArgs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appsync/#Function">Function</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appsync/#FunctionArgs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -84,11 +84,11 @@ const testFunction = new aws.appsync.Function("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFunction<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appsync?tab=doc#FunctionArgs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appsync?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFunction<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appsync?tab=doc#FunctionArgs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appsync?tab=doc#Function">Function</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appsync.Function.html">Function</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.FunctionArgs.html">FunctionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Function.html">Function</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.FunctionArgs.html">FunctionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -198,33 +198,6 @@ const testFunction = new aws.appsync.Function("test", {
     <dd>{{% md %}}The Function DataSource name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Function description.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Function<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The version of the request mapping template. Currently the supported value is `2018-05-29`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Function name. The function name does not have to be unique.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Request<wbr>Mapping<wbr>Template</span>
@@ -241,6 +214,33 @@ const testFunction = new aws.appsync.Function("test", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function response mapping template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Function description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Function<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the request mapping template. Currently the supported value is `2018-05-29`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Function name. The function name does not have to be unique.
 {{% /md %}}</dd>
 
 </dl>
@@ -268,33 +268,6 @@ const testFunction = new aws.appsync.Function("test", {
     <dd>{{% md %}}The Function DataSource name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Function description.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Function<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The version of the request mapping template. Currently the supported value is `2018-05-29`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Function name. The function name does not have to be unique.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Request<wbr>Mapping<wbr>Template</span>
@@ -311,6 +284,33 @@ const testFunction = new aws.appsync.Function("test", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function response mapping template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Function description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Function<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the request mapping template. Currently the supported value is `2018-05-29`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Function name. The function name does not have to be unique.
 {{% /md %}}</dd>
 
 </dl>
@@ -338,33 +338,6 @@ const testFunction = new aws.appsync.Function("test", {
     <dd>{{% md %}}The Function DataSource name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Function description.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>function<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The version of the request mapping template. Currently the supported value is `2018-05-29`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Function name. The function name does not have to be unique.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>request<wbr>Mapping<wbr>Template</span>
@@ -381,6 +354,33 @@ const testFunction = new aws.appsync.Function("test", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function response mapping template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Function description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>function<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the request mapping template. Currently the supported value is `2018-05-29`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Function name. The function name does not have to be unique.
 {{% /md %}}</dd>
 
 </dl>
@@ -408,6 +408,24 @@ const testFunction = new aws.appsync.Function("test", {
     <dd>{{% md %}}The Function DataSource name.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>request_<wbr>mapping_<wbr>template</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>response_<wbr>mapping_<wbr>template</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Function response mapping template.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
@@ -433,24 +451,6 @@ const testFunction = new aws.appsync.Function("test", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function name. The function name does not have to be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>request_<wbr>mapping_<wbr>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>response_<wbr>mapping_<wbr>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Function response mapping template.
 {{% /md %}}</dd>
 
 </dl>
@@ -474,15 +474,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Api<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated AppSync API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -492,65 +483,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Data<wbr>Source</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function DataSource name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Function description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Function<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID representing the Function object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Function<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The version of the request mapping template. Currently the supported value is `2018-05-29`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function name. The function name does not have to be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Request<wbr>Mapping<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Response<wbr>Mapping<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function response mapping template.
 {{% /md %}}</dd>
 
 </dl>
@@ -562,38 +499,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Api<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated AppSync API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Function object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Data<wbr>Source</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function DataSource name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Function description.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -605,42 +515,6 @@ The following output properties are available:
     <dd>{{% md %}}A unique ID representing the Function object.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Function<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The version of the request mapping template. Currently the supported value is `2018-05-29`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function name. The function name does not have to be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Request<wbr>Mapping<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Response<wbr>Mapping<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function response mapping template.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -650,38 +524,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>api<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated AppSync API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Function object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>data<wbr>Source</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function DataSource name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Function description.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -693,57 +540,12 @@ The following output properties are available:
     <dd>{{% md %}}A unique ID representing the Function object.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>function<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The version of the request mapping template. Currently the supported value is `2018-05-29`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function name. The function name does not have to be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>request<wbr>Mapping<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>response<wbr>Mapping<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function response mapping template.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>api_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated AppSync API.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -756,65 +558,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>data_<wbr>source</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Function DataSource name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Function description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>function_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique ID representing the Function object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>function_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The version of the request mapping template. Currently the supported value is `2018-05-29`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Function name. The function name does not have to be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>request_<wbr>mapping_<wbr>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>response_<wbr>mapping_<wbr>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Function response mapping template.
 {{% /md %}}</dd>
 
 </dl>
@@ -846,7 +594,7 @@ Get an existing Function resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appsync.Function.html">Function</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appsync.FunctionState.html">FunctionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Function.html">Function</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.FunctionState.html">FunctionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -956,7 +704,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated AppSync API.
 {{% /md %}}</dd>
@@ -965,7 +713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Function object.
 {{% /md %}}</dd>
@@ -974,7 +722,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function DataSource name.
 {{% /md %}}</dd>
@@ -983,7 +731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function description.
 {{% /md %}}</dd>
@@ -992,7 +740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Function<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID representing the Function object.
 {{% /md %}}</dd>
@@ -1001,7 +749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Function<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the request mapping template. Currently the supported value is `2018-05-29`.
 {{% /md %}}</dd>
@@ -1010,7 +758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function name. The function name does not have to be unique.
 {{% /md %}}</dd>
@@ -1019,7 +767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Request<wbr>Mapping<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
 {{% /md %}}</dd>
@@ -1028,7 +776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Response<wbr>Mapping<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function response mapping template.
 {{% /md %}}</dd>
@@ -1044,7 +792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated AppSync API.
 {{% /md %}}</dd>
@@ -1053,7 +801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Function object.
 {{% /md %}}</dd>
@@ -1062,7 +810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function DataSource name.
 {{% /md %}}</dd>
@@ -1071,7 +819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function description.
 {{% /md %}}</dd>
@@ -1080,7 +828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Function<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID representing the Function object.
 {{% /md %}}</dd>
@@ -1089,7 +837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Function<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the request mapping template. Currently the supported value is `2018-05-29`.
 {{% /md %}}</dd>
@@ -1098,7 +846,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function name. The function name does not have to be unique.
 {{% /md %}}</dd>
@@ -1107,7 +855,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Request<wbr>Mapping<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
 {{% /md %}}</dd>
@@ -1116,7 +864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Response<wbr>Mapping<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function response mapping template.
 {{% /md %}}</dd>
@@ -1132,7 +880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>api<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated AppSync API.
 {{% /md %}}</dd>
@@ -1141,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Function object.
 {{% /md %}}</dd>
@@ -1150,7 +898,7 @@ The following state arguments are supported:
             title="Optional">
         <span>data<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function DataSource name.
 {{% /md %}}</dd>
@@ -1159,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function description.
 {{% /md %}}</dd>
@@ -1168,7 +916,7 @@ The following state arguments are supported:
             title="Optional">
         <span>function<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID representing the Function object.
 {{% /md %}}</dd>
@@ -1177,7 +925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>function<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the request mapping template. Currently the supported value is `2018-05-29`.
 {{% /md %}}</dd>
@@ -1186,7 +934,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function name. The function name does not have to be unique.
 {{% /md %}}</dd>
@@ -1195,7 +943,7 @@ The following state arguments are supported:
             title="Optional">
         <span>request<wbr>Mapping<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
 {{% /md %}}</dd>
@@ -1204,7 +952,7 @@ The following state arguments are supported:
             title="Optional">
         <span>response<wbr>Mapping<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function response mapping template.
 {{% /md %}}</dd>

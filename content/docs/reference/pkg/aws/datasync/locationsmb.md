@@ -37,7 +37,7 @@ const example = new aws.datasync.LocationSmb("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/datasync/#LocationSmb">LocationSmb</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/datasync/#LocationSmbArgs">LocationSmbArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/datasync/#LocationSmb">LocationSmb</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/datasync/#LocationSmbArgs">LocationSmbArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -45,11 +45,11 @@ const example = new aws.datasync.LocationSmb("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLocationSmb<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#LocationSmbArgs">LocationSmbArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#LocationSmb">LocationSmb</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLocationSmb<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#LocationSmbArgs">LocationSmbArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#LocationSmb">LocationSmb</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Datasync.LocationSmb.html">LocationSmb</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.LocationSmbArgs.html">LocationSmbArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.LocationSmb.html">LocationSmb</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.LocationSmbArgs.html">LocationSmbArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -145,27 +145,9 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>Agent<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mount<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -195,15 +177,6 @@ const example = new aws.datasync.LocationSmb("example", {
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>User</span>
@@ -211,6 +184,33 @@ const example = new aws.datasync.LocationSmb("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mount<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
 {{% /md %}}</dd>
 
 </dl>
@@ -229,24 +229,6 @@ const example = new aws.datasync.LocationSmb("example", {
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mount<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationsmbmountoptions">*Location<wbr>Smb<wbr>Mount<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Password</span>
@@ -274,15 +256,6 @@ const example = new aws.datasync.LocationSmb("example", {
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>User</span>
@@ -290,6 +263,33 @@ const example = new aws.datasync.LocationSmb("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mount<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
 {{% /md %}}</dd>
 
 </dl>
@@ -306,24 +306,6 @@ const example = new aws.datasync.LocationSmb("example", {
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mount<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -353,15 +335,6 @@ const example = new aws.datasync.LocationSmb("example", {
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>user</span>
@@ -369,6 +342,33 @@ const example = new aws.datasync.LocationSmb("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mount<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
 {{% /md %}}</dd>
 
 </dl>
@@ -385,24 +385,6 @@ const example = new aws.datasync.LocationSmb("example", {
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mount_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationsmbmountoptions">Dict[Location<wbr>Smb<wbr>Mount<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -432,15 +414,6 @@ const example = new aws.datasync.LocationSmb("example", {
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>user</span>
@@ -448,6 +421,33 @@ const example = new aws.datasync.LocationSmb("example", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mount_<wbr>options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#locationsmbmountoptions">Dict[Location<wbr>Smb<wbr>Mount<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
 {{% /md %}}</dd>
 
 </dl>
@@ -471,15 +471,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Agent<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -489,74 +480,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mount<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subdirectory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -567,74 +495,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Agent<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mount<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationsmbmountoptions">*Location<wbr>Smb<wbr>Mount<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subdirectory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -645,30 +510,12 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>agent<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -681,74 +528,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mount<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>server<wbr>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subdirectory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -759,15 +543,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>agent_<wbr>arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -777,74 +552,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mount_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationsmbmountoptions">Dict[Location<wbr>Smb<wbr>Mount<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>server_<wbr>hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subdirectory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -875,7 +587,7 @@ Get an existing LocationSmb resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Datasync.LocationSmb.html">LocationSmb</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Datasync.LocationSmbState.html">LocationSmbState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.LocationSmb.html">LocationSmb</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.LocationSmbState.html">LocationSmbState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -985,7 +697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Agent<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
 {{% /md %}}</dd>
@@ -994,7 +706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -1003,7 +715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
 {{% /md %}}</dd>
@@ -1012,7 +724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mount<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
 {{% /md %}}</dd>
@@ -1021,7 +733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
 {{% /md %}}</dd>
@@ -1030,7 +742,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Server<wbr>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
 {{% /md %}}</dd>
@@ -1039,7 +751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
@@ -1048,7 +760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
 {{% /md %}}</dd>
@@ -1057,7 +769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1065,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
 {{% /md %}}</dd>
@@ -1090,7 +802,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -1099,7 +811,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
 {{% /md %}}</dd>
@@ -1108,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mount<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationsmbmountoptions">*Location<wbr>Smb<wbr>Mount<wbr>Options</a></span>
+        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
 {{% /md %}}</dd>
@@ -1117,7 +829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
 {{% /md %}}</dd>
@@ -1126,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Server<wbr>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
 {{% /md %}}</dd>
@@ -1135,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
@@ -1153,7 +865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1161,7 +873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
 {{% /md %}}</dd>
@@ -1177,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>agent<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
 {{% /md %}}</dd>
@@ -1186,7 +898,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -1195,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
 {{% /md %}}</dd>
@@ -1204,7 +916,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mount<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options?</a></span>
+        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
 {{% /md %}}</dd>
@@ -1213,7 +925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
 {{% /md %}}</dd>
@@ -1222,7 +934,7 @@ The following state arguments are supported:
             title="Optional">
         <span>server<wbr>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
 {{% /md %}}</dd>
@@ -1231,7 +943,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
@@ -1240,7 +952,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
 {{% /md %}}</dd>
@@ -1249,7 +961,7 @@ The following state arguments are supported:
             title="Optional">
         <span>uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1257,7 +969,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
 {{% /md %}}</dd>
@@ -1391,7 +1103,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific SMB version that you want DataSync to use for mounting your SMB share. Valid values: `AUTOMATIC`, `SMB2`, and `SMB3`. Default: `AUTOMATIC`
 {{% /md %}}</dd>
@@ -1407,7 +1119,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific SMB version that you want DataSync to use for mounting your SMB share. Valid values: `AUTOMATIC`, `SMB2`, and `SMB3`. Default: `AUTOMATIC`
 {{% /md %}}</dd>
@@ -1423,7 +1135,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific SMB version that you want DataSync to use for mounting your SMB share. Valid values: `AUTOMATIC`, `SMB2`, and `SMB3`. Default: `AUTOMATIC`
 {{% /md %}}</dd>

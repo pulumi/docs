@@ -94,7 +94,7 @@ const example = new aws.backup.Selection("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#Selection">Selection</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#SelectionArgs">SelectionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#Selection">Selection</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#SelectionArgs">SelectionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -102,7 +102,7 @@ const example = new aws.backup.Selection("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSelection<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/backup?tab=doc#SelectionArgs">SelectionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/backup?tab=doc#Selection">Selection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSelection<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/backup?tab=doc#SelectionArgs">SelectionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/backup?tab=doc#Selection">Selection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -207,15 +207,6 @@ const example = new aws.backup.Selection("example", {
     <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The display name of a resource selection document.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Plan<wbr>Id</span>
@@ -227,9 +218,18 @@ const example = new aws.backup.Selection("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of a resource selection document.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
 {{% /md %}}</dd>
@@ -238,7 +238,7 @@ const example = new aws.backup.Selection("example", {
             title="Optional">
         <span>Selection<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectionselectiontag">List&lt;Selection<wbr>Selection<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#selectionselectiontag">List&lt;Selection<wbr>Selection<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tag-based conditions used to specify a set of resources to assign to a backup plan.
 {{% /md %}}</dd>
@@ -259,15 +259,6 @@ const example = new aws.backup.Selection("example", {
     <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The display name of a resource selection document.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Plan<wbr>Id</span>
@@ -275,6 +266,15 @@ const example = new aws.backup.Selection("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backup plan ID to be associated with the selection of resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of a resource selection document.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -311,15 +311,6 @@ const example = new aws.backup.Selection("example", {
     <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The display name of a resource selection document.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>plan<wbr>Id</span>
@@ -331,9 +322,18 @@ const example = new aws.backup.Selection("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of a resource selection document.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
 {{% /md %}}</dd>
@@ -342,7 +342,7 @@ const example = new aws.backup.Selection("example", {
             title="Optional">
         <span>selection<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectionselectiontag">Selection<wbr>Selection<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#selectionselectiontag">Selection<wbr>Selection<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}Tag-based conditions used to specify a set of resources to assign to a backup plan.
 {{% /md %}}</dd>
@@ -363,15 +363,6 @@ const example = new aws.backup.Selection("example", {
     <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The display name of a resource selection document.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>plan_<wbr>id</span>
@@ -379,6 +370,15 @@ const example = new aws.backup.Selection("example", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backup plan ID to be associated with the selection of resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The display name of a resource selection document.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -403,224 +403,6 @@ const example = new aws.backup.Selection("example", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Selection Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The display name of a resource selection document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Plan<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The backup plan ID to be associated with the selection of resources.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Selection<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectionselectiontag">List&lt;Selection<wbr>Selection<wbr>Tag&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Tag-based conditions used to specify a set of resources to assign to a backup plan.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The display name of a resource selection document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Plan<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The backup plan ID to be associated with the selection of resources.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Selection<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectionselectiontag">[]Selection<wbr>Selection<wbr>Tag</a></span>
-    </dt>
-    <dd>{{% md %}}Tag-based conditions used to specify a set of resources to assign to a backup plan.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>iam<wbr>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The display name of a resource selection document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>plan<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The backup plan ID to be associated with the selection of resources.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>selection<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectionselectiontag">Selection<wbr>Selection<wbr>Tag[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Tag-based conditions used to specify a set of resources to assign to a backup plan.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>iam_<wbr>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The display name of a resource selection document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>plan_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The backup plan ID to be associated with the selection of resources.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>selection_<wbr>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectionselectiontag">List[Selection<wbr>Selection<wbr>Tag]</a></span>
-    </dt>
-    <dd>{{% md %}}Tag-based conditions used to specify a set of resources to assign to a backup plan.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -758,7 +540,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iam<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
 {{% /md %}}</dd>
@@ -767,7 +549,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a resource selection document.
 {{% /md %}}</dd>
@@ -776,7 +558,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Plan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backup plan ID to be associated with the selection of resources.
 {{% /md %}}</dd>
@@ -785,7 +567,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
 {{% /md %}}</dd>
@@ -794,7 +576,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Selection<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectionselectiontag">List&lt;Selection<wbr>Selection<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#selectionselectiontag">List&lt;Selection<wbr>Selection<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tag-based conditions used to specify a set of resources to assign to a backup plan.
 {{% /md %}}</dd>
@@ -810,7 +592,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iam<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
 {{% /md %}}</dd>
@@ -819,7 +601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a resource selection document.
 {{% /md %}}</dd>
@@ -828,7 +610,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Plan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backup plan ID to be associated with the selection of resources.
 {{% /md %}}</dd>
@@ -862,7 +644,7 @@ The following state arguments are supported:
             title="Optional">
         <span>iam<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
 {{% /md %}}</dd>
@@ -871,7 +653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a resource selection document.
 {{% /md %}}</dd>
@@ -880,7 +662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>plan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backup plan ID to be associated with the selection of resources.
 {{% /md %}}</dd>
@@ -889,7 +671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..
 {{% /md %}}</dd>
@@ -898,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>selection<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectionselectiontag">Selection<wbr>Selection<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#selectionselectiontag">Selection<wbr>Selection<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}Tag-based conditions used to specify a set of resources to assign to a backup plan.
 {{% /md %}}</dd>

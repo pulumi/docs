@@ -61,7 +61,7 @@ const foopolicy = new aws.ecr.RepositoryPolicy("foopolicy", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ecr/#RepositoryPolicy">RepositoryPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ecr/#RepositoryPolicyArgs">RepositoryPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ecr/#RepositoryPolicy">RepositoryPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ecr/#RepositoryPolicyArgs">RepositoryPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -69,7 +69,7 @@ const foopolicy = new aws.ecr.RepositoryPolicy("foopolicy", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRepositoryPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecr?tab=doc#RepositoryPolicyArgs">RepositoryPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecr?tab=doc#RepositoryPolicy">RepositoryPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRepositoryPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecr?tab=doc#RepositoryPolicyArgs">RepositoryPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecr?tab=doc#RepositoryPolicy">RepositoryPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -219,7 +219,7 @@ const foopolicy = new aws.ecr.RepositoryPolicy("foopolicy", {
             title="Required">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | PolicyDocument</span>
+        <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
     <dd>{{% md %}}The policy document. This is a JSON formatted string.
 {{% /md %}}</dd>
@@ -244,7 +244,7 @@ const foopolicy = new aws.ecr.RepositoryPolicy("foopolicy", {
             title="Required">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">string | str</span>
     </dt>
     <dd>{{% md %}}The policy document. This is a JSON formatted string.
 {{% /md %}}</dd>
@@ -279,29 +279,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy document. This is a JSON formatted string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Registry<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry ID where the repository was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Repository</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the repository to apply the policy.
 {{% /md %}}</dd>
 
 </dl>
@@ -313,29 +295,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy document. This is a JSON formatted string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Registry<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry ID where the repository was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Repository</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the repository to apply the policy.
 {{% /md %}}</dd>
 
 </dl>
@@ -347,29 +311,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy document. This is a JSON formatted string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>registry<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry ID where the repository was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>repository</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the repository to apply the policy.
 {{% /md %}}</dd>
 
 </dl>
@@ -381,29 +327,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The policy document. This is a JSON formatted string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>registry_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registry ID where the repository was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>repository</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the repository to apply the policy.
 {{% /md %}}</dd>
 
 </dl>
@@ -545,7 +473,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy document. This is a JSON formatted string.
 {{% /md %}}</dd>
@@ -554,7 +482,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Registry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry ID where the repository was created.
 {{% /md %}}</dd>
@@ -563,7 +491,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Repository</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the repository to apply the policy.
 {{% /md %}}</dd>
@@ -588,7 +516,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Registry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry ID where the repository was created.
 {{% /md %}}</dd>
@@ -597,7 +525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Repository</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the repository to apply the policy.
 {{% /md %}}</dd>
@@ -613,7 +541,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | PolicyDocument</span>
+        <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
     <dd>{{% md %}}The policy document. This is a JSON formatted string.
 {{% /md %}}</dd>
@@ -622,7 +550,7 @@ The following state arguments are supported:
             title="Optional">
         <span>registry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry ID where the repository was created.
 {{% /md %}}</dd>
@@ -631,7 +559,7 @@ The following state arguments are supported:
             title="Optional">
         <span>repository</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the repository to apply the policy.
 {{% /md %}}</dd>
@@ -647,7 +575,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">string | str</span>
     </dt>
     <dd>{{% md %}}The policy document. This is a JSON formatted string.
 {{% /md %}}</dd>

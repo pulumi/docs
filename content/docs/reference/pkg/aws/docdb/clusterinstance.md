@@ -53,7 +53,7 @@ for (let i = 0; i < 2; i++) {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#ClusterInstance">ClusterInstance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#ClusterInstanceArgs">ClusterInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#ClusterInstance">ClusterInstance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#ClusterInstanceArgs">ClusterInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -61,11 +61,11 @@ for (let i = 0; i < 2; i++) {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewClusterInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#ClusterInstanceArgs">ClusterInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#ClusterInstance">ClusterInstance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewClusterInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#ClusterInstanceArgs">ClusterInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#ClusterInstance">ClusterInstance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Docdb.ClusterInstance.html">ClusterInstance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DocDB.ClusterInstanceArgs.html">ClusterInstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DocDB.ClusterInstance.html">ClusterInstance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DocDB.ClusterInstanceArgs.html">ClusterInstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -157,43 +157,6 @@ for (let i = 0; i < 2; i++) {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Apply<wbr>Immediately</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether any database modifications
-are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ca<wbr>Cert<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Identifier</span>
@@ -201,33 +164,6 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Engine</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Identifier<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -248,9 +184,73 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
 
     <dt class="property-optional"
             title="Optional">
+        <span>Apply<wbr>Immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any database modifications
+are applied immediately, or during the next maintenance window. Default is`false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ca<wbr>Cert<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identifier<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
@@ -260,7 +260,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>Promotion<wbr>Tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the instance.
 {{% /md %}}</dd>
@@ -281,43 +281,6 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Apply<wbr>Immediately</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether any database modifications
-are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ca<wbr>Cert<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Identifier</span>
@@ -325,33 +288,6 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Engine</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Identifier<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -372,9 +308,73 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
 
     <dt class="property-optional"
             title="Optional">
+        <span>Apply<wbr>Immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any database modifications
+are applied immediately, or during the next maintenance window. Default is`false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ca<wbr>Cert<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identifier<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
@@ -384,7 +384,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>Promotion<wbr>Tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 {{% /md %}}</dd>
@@ -405,43 +405,6 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>apply<wbr>Immediately</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether any database modifications
-are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ca<wbr>Cert<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster<wbr>Identifier</span>
@@ -449,33 +412,6 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>engine</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>identifier<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -496,9 +432,73 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
 
     <dt class="property-optional"
             title="Optional">
+        <span>apply<wbr>Immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any database modifications
+are applied immediately, or during the next maintenance window. Default is`false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ca<wbr>Cert<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identifier<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
@@ -508,7 +508,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>promotion<wbr>Tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 {{% /md %}}</dd>
@@ -517,7 +517,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the instance.
 {{% /md %}}</dd>
@@ -528,6 +528,31 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>cluster_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
+supports the below instance classes. Please see [AWS Documentation][4] for complete details.
+- db.r4.large
+- db.r4.xlarge
+- db.r4.2xlarge
+- db.r4.4xlarge
+- db.r4.8xlarge
+- db.r4.16xlarge
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -566,15 +591,6 @@ are applied immediately, or during the next maintenance window. Default is`false
     <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>cluster_<wbr>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>engine</span>
@@ -600,22 +616,6 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
-supports the below instance classes. Please see [AWS Documentation][4] for complete details.
-- db.r4.large
-- db.r4.xlarge
-- db.r4.2xlarge
-- db.r4.4xlarge
-- db.r4.8xlarge
-- db.r4.16xlarge
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -667,57 +667,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Apply<wbr>Immediately</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether any database modifications
-are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ca<wbr>Cert<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -749,54 +703,11 @@ are applied immediately, or during the next maintenance window. Default is`false
 
     <dt class="property-"
             title="">
-        <span>Engine</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identifier<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
-supports the below instance classes. Please see [AWS Documentation][4] for complete details.
-- db.r4.large
-- db.r4.xlarge
-- db.r4.2xlarge
-- db.r4.4xlarge
-- db.r4.8xlarge
-- db.r4.16xlarge
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -828,25 +739,6 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
 
     <dt class="property-"
             title="">
-        <span>Preferred<wbr>Maintenance<wbr>Window</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The window to perform maintenance in.
-Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Promotion<wbr>Tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Publicly<wbr>Accessible</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -860,15 +752,6 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -889,57 +772,11 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
     <dt class="property-"
             title="">
-        <span>Apply<wbr>Immediately</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether any database modifications
-are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ca<wbr>Cert<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -971,54 +808,11 @@ are applied immediately, or during the next maintenance window. Default is`false
 
     <dt class="property-"
             title="">
-        <span>Engine</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identifier<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
-supports the below instance classes. Please see [AWS Documentation][4] for complete details.
-- db.r4.large
-- db.r4.xlarge
-- db.r4.2xlarge
-- db.r4.4xlarge
-- db.r4.8xlarge
-- db.r4.16xlarge
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1050,25 +844,6 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
 
     <dt class="property-"
             title="">
-        <span>Preferred<wbr>Maintenance<wbr>Window</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The window to perform maintenance in.
-Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Promotion<wbr>Tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Publicly<wbr>Accessible</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1082,15 +857,6 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1111,57 +877,11 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
     <dt class="property-"
             title="">
-        <span>apply<wbr>Immediately</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether any database modifications
-are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ca<wbr>Cert<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1193,54 +913,11 @@ are applied immediately, or during the next maintenance window. Default is`false
 
     <dt class="property-"
             title="">
-        <span>engine</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>engine<wbr>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identifier<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
-supports the below instance classes. Please see [AWS Documentation][4] for complete details.
-- db.r4.large
-- db.r4.xlarge
-- db.r4.2xlarge
-- db.r4.4xlarge
-- db.r4.8xlarge
-- db.r4.16xlarge
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1272,25 +949,6 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
 
     <dt class="property-"
             title="">
-        <span>preferred<wbr>Maintenance<wbr>Window</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The window to perform maintenance in.
-Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>promotion<wbr>Tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>publicly<wbr>Accessible</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -1304,15 +962,6 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1333,57 +982,11 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
     <dt class="property-"
             title="">
-        <span>apply_<wbr>immediately</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether any database modifications
-are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>minor_<wbr>version_<wbr>upgrade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability_<wbr>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ca_<wbr>cert_<wbr>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster_<wbr>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1415,54 +1018,11 @@ are applied immediately, or during the next maintenance window. Default is`false
 
     <dt class="property-"
             title="">
-        <span>engine</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>engine_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identifier_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
-supports the below instance classes. Please see [AWS Documentation][4] for complete details.
-- db.r4.large
-- db.r4.xlarge
-- db.r4.2xlarge
-- db.r4.4xlarge
-- db.r4.8xlarge
-- db.r4.16xlarge
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1494,25 +1054,6 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
 
     <dt class="property-"
             title="">
-        <span>preferred_<wbr>maintenance_<wbr>window</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The window to perform maintenance in.
-Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>promotion_<wbr>tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>publicly_<wbr>accessible</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1526,15 +1067,6 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1575,7 +1107,7 @@ Get an existing ClusterInstance resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Docdb.ClusterInstance.html">ClusterInstance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Docdb.ClusterInstanceState.html">ClusterInstanceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DocDB.ClusterInstance.html">ClusterInstance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DocDB.ClusterInstanceState.html">ClusterInstanceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1685,7 +1217,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
@@ -1695,7 +1227,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
 {{% /md %}}</dd>
@@ -1704,7 +1236,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
 {{% /md %}}</dd>
@@ -1713,7 +1245,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
 {{% /md %}}</dd>
@@ -1722,7 +1254,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Ca<wbr>Cert<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
 {{% /md %}}</dd>
@@ -1731,7 +1263,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
 {{% /md %}}</dd>
@@ -1740,7 +1272,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB subnet group to associate with this DB instance.
 {{% /md %}}</dd>
@@ -1749,7 +1281,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Dbi<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
 {{% /md %}}</dd>
@@ -1758,7 +1290,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
 {{% /md %}}</dd>
@@ -1767,7 +1299,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
 {{% /md %}}</dd>
@@ -1776,7 +1308,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
 {{% /md %}}</dd>
@@ -1785,7 +1317,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
 {{% /md %}}</dd>
@@ -1794,7 +1326,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Identifier<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
 {{% /md %}}</dd>
@@ -1803,7 +1335,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Instance<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
 supports the below instance classes. Please see [AWS Documentation][4] for complete details.
@@ -1819,7 +1351,7 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
 {{% /md %}}</dd>
@@ -1828,7 +1360,7 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
 {{% /md %}}</dd>
@@ -1837,7 +1369,7 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
             title="Optional">
         <span>Preferred<wbr>Backup<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
 {{% /md %}}</dd>
@@ -1846,7 +1378,7 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
             title="Optional">
         <span>Preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
@@ -1856,7 +1388,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>Promotion<wbr>Tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 {{% /md %}}</dd>
@@ -1865,7 +1397,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>Publicly<wbr>Accessible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1873,7 +1405,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>Storage<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
 {{% /md %}}</dd>
@@ -1882,7 +1414,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the instance.
 {{% /md %}}</dd>
@@ -1891,7 +1423,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>Writer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
 {{% /md %}}</dd>
@@ -1907,7 +1439,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>Apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
@@ -1917,7 +1449,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
 {{% /md %}}</dd>
@@ -1926,7 +1458,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
 {{% /md %}}</dd>
@@ -1935,7 +1467,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
 {{% /md %}}</dd>
@@ -1944,7 +1476,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Ca<wbr>Cert<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
 {{% /md %}}</dd>
@@ -1953,7 +1485,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
 {{% /md %}}</dd>
@@ -1962,7 +1494,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB subnet group to associate with this DB instance.
 {{% /md %}}</dd>
@@ -1971,7 +1503,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Dbi<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
 {{% /md %}}</dd>
@@ -1980,7 +1512,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
 {{% /md %}}</dd>
@@ -1989,7 +1521,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
 {{% /md %}}</dd>
@@ -1998,7 +1530,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
 {{% /md %}}</dd>
@@ -2007,7 +1539,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
 {{% /md %}}</dd>
@@ -2016,7 +1548,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Identifier<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
 {{% /md %}}</dd>
@@ -2025,7 +1557,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>Instance<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
 supports the below instance classes. Please see [AWS Documentation][4] for complete details.
@@ -2041,7 +1573,7 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
 {{% /md %}}</dd>
@@ -2050,7 +1582,7 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
 {{% /md %}}</dd>
@@ -2059,7 +1591,7 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
             title="Optional">
         <span>Preferred<wbr>Backup<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
 {{% /md %}}</dd>
@@ -2068,7 +1600,7 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
             title="Optional">
         <span>Preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
@@ -2078,7 +1610,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>Promotion<wbr>Tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 {{% /md %}}</dd>
@@ -2087,7 +1619,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>Publicly<wbr>Accessible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2095,7 +1627,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>Storage<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
 {{% /md %}}</dd>
@@ -2113,7 +1645,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>Writer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
 {{% /md %}}</dd>
@@ -2129,7 +1661,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
@@ -2139,7 +1671,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
 {{% /md %}}</dd>
@@ -2148,7 +1680,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
 {{% /md %}}</dd>
@@ -2157,7 +1689,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
 {{% /md %}}</dd>
@@ -2166,7 +1698,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>ca<wbr>Cert<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
 {{% /md %}}</dd>
@@ -2175,7 +1707,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
 {{% /md %}}</dd>
@@ -2184,7 +1716,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>db<wbr>Subnet<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB subnet group to associate with this DB instance.
 {{% /md %}}</dd>
@@ -2193,7 +1725,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>dbi<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
 {{% /md %}}</dd>
@@ -2202,7 +1734,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
 {{% /md %}}</dd>
@@ -2211,7 +1743,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
 {{% /md %}}</dd>
@@ -2220,7 +1752,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
 {{% /md %}}</dd>
@@ -2229,7 +1761,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
 {{% /md %}}</dd>
@@ -2238,7 +1770,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>identifier<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
 {{% /md %}}</dd>
@@ -2247,7 +1779,7 @@ are applied immediately, or during the next maintenance window. Default is`false
             title="Optional">
         <span>instance<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
 supports the below instance classes. Please see [AWS Documentation][4] for complete details.
@@ -2263,7 +1795,7 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
             title="Optional">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
 {{% /md %}}</dd>
@@ -2272,7 +1804,7 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The database port
 {{% /md %}}</dd>
@@ -2281,7 +1813,7 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
             title="Optional">
         <span>preferred<wbr>Backup<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
 {{% /md %}}</dd>
@@ -2290,7 +1822,7 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
             title="Optional">
         <span>preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
@@ -2300,7 +1832,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>promotion<wbr>Tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 {{% /md %}}</dd>
@@ -2309,7 +1841,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>publicly<wbr>Accessible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2317,7 +1849,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>storage<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
 {{% /md %}}</dd>
@@ -2326,7 +1858,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the instance.
 {{% /md %}}</dd>
@@ -2335,7 +1867,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
             title="Optional">
         <span>writer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
 {{% /md %}}</dd>

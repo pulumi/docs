@@ -61,7 +61,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("test_application",
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#AnalyticsApplication">AnalyticsApplication</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#AnalyticsApplicationArgs">AnalyticsApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#AnalyticsApplication">AnalyticsApplication</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#AnalyticsApplicationArgs">AnalyticsApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -69,7 +69,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("test_application",
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAnalyticsApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationArgs">AnalyticsApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplication">AnalyticsApplication</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAnalyticsApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationArgs">AnalyticsApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplication">AnalyticsApplication</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -169,7 +169,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("test_application",
             title="Optional">
         <span>Cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
@@ -179,7 +179,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Code to transform input data, and generate output.
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the application.
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Inputs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Kinesis Analytics Application.
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Outputs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Reference<wbr>Data<wbr>Sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
@@ -234,7 +234,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
 {{% /md %}}</dd>
@@ -250,7 +250,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>Cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">*Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
@@ -260,7 +260,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Code to transform input data, and generate output.
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the application.
 {{% /md %}}</dd>
@@ -278,7 +278,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Inputs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">*Analytics<wbr>Application<wbr>Inputs</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs</a></span>
     </dt>
     <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Kinesis Analytics Application.
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Reference<wbr>Data<wbr>Sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></span>
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
@@ -331,7 +331,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
@@ -341,7 +341,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Code to transform input data, and generate output.
 {{% /md %}}</dd>
@@ -350,7 +350,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the application.
 {{% /md %}}</dd>
@@ -359,7 +359,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>inputs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs</a></span>
     </dt>
     <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd>
@@ -368,7 +368,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Kinesis Analytics Application.
 {{% /md %}}</dd>
@@ -377,7 +377,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>outputs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]</a></span>
     </dt>
     <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
 {{% /md %}}</dd>
@@ -386,7 +386,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>reference<wbr>Data<wbr>Sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></span>
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
@@ -396,7 +396,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
 {{% /md %}}</dd>
@@ -512,48 +512,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
-See CloudWatch Logging Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SQL Code to transform input data, and generate output.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Create<wbr>Timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Timestamp when the application version was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Inputs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></span>
-    </dt>
-    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -567,48 +530,11 @@ See CloudWatch Logging Options below for more details.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the Kinesis Analytics Application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Outputs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reference<wbr>Data<wbr>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></span>
-    </dt>
-    <dd>{{% md %}}An S3 Reference Data Source for the application.
-See Reference Data Sources below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Status of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -638,48 +564,11 @@ See Reference Data Sources below for more details.
 
     <dt class="property-"
             title="">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">*Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
-See CloudWatch Logging Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SQL Code to transform input data, and generate output.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Create<wbr>Timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Timestamp when the application version was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Inputs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">*Analytics<wbr>Application<wbr>Inputs</a></span>
-    </dt>
-    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -693,48 +582,11 @@ See CloudWatch Logging Options below for more details.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the Kinesis Analytics Application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Outputs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutput">[]Analytics<wbr>Application<wbr>Output</a></span>
-    </dt>
-    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reference<wbr>Data<wbr>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></span>
-    </dt>
-    <dd>{{% md %}}An S3 Reference Data Source for the application.
-See Reference Data Sources below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Status of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -764,48 +616,11 @@ See Reference Data Sources below for more details.
 
     <dt class="property-"
             title="">
-        <span>cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
-See CloudWatch Logging Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SQL Code to transform input data, and generate output.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>create<wbr>Timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Timestamp when the application version was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>inputs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></span>
-    </dt>
-    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -819,48 +634,11 @@ See CloudWatch Logging Options below for more details.
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the Kinesis Analytics Application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>outputs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reference<wbr>Data<wbr>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></span>
-    </dt>
-    <dd>{{% md %}}An S3 Reference Data Source for the application.
-See Reference Data Sources below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Status of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -890,48 +668,11 @@ See Reference Data Sources below for more details.
 
     <dt class="property-"
             title="">
-        <span>cloudwatch_<wbr>logging_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Dict[Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
-See CloudWatch Logging Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}SQL Code to transform input data, and generate output.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>create_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Timestamp when the application version was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>inputs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">Dict[Analytics<wbr>Application<wbr>Inputs]</a></span>
-    </dt>
-    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -945,48 +686,11 @@ See CloudWatch Logging Options below for more details.
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the Kinesis Analytics Application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>outputs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutput">List[Analytics<wbr>Application<wbr>Output]</a></span>
-    </dt>
-    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reference_<wbr>data_<wbr>sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources]</a></span>
-    </dt>
-    <dd>{{% md %}}An S3 Reference Data Source for the application.
-See Reference Data Sources below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Status of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1137,7 +841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Kinesis Analytics Appliation.
 {{% /md %}}</dd>
@@ -1146,7 +850,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
@@ -1156,7 +860,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Code to transform input data, and generate output.
 {{% /md %}}</dd>
@@ -1165,7 +869,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Create<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Timestamp when the application version was created.
 {{% /md %}}</dd>
@@ -1174,7 +878,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the application.
 {{% /md %}}</dd>
@@ -1183,7 +887,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Inputs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd>
@@ -1192,7 +896,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Last<wbr>Update<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Timestamp when the application was last updated.
 {{% /md %}}</dd>
@@ -1201,7 +905,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Kinesis Analytics Application.
 {{% /md %}}</dd>
@@ -1210,7 +914,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Outputs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
 {{% /md %}}</dd>
@@ -1219,7 +923,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Reference<wbr>Data<wbr>Sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
@@ -1229,7 +933,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Status of the application.
 {{% /md %}}</dd>
@@ -1238,7 +942,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
 {{% /md %}}</dd>
@@ -1247,7 +951,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Version of the application.
 {{% /md %}}</dd>
@@ -1263,7 +967,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Kinesis Analytics Appliation.
 {{% /md %}}</dd>
@@ -1272,7 +976,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>Cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">*Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
@@ -1282,7 +986,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Code to transform input data, and generate output.
 {{% /md %}}</dd>
@@ -1291,7 +995,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Create<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Timestamp when the application version was created.
 {{% /md %}}</dd>
@@ -1300,7 +1004,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the application.
 {{% /md %}}</dd>
@@ -1309,7 +1013,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Inputs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">*Analytics<wbr>Application<wbr>Inputs</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs</a></span>
     </dt>
     <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd>
@@ -1318,7 +1022,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Last<wbr>Update<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Timestamp when the application was last updated.
 {{% /md %}}</dd>
@@ -1327,7 +1031,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Kinesis Analytics Application.
 {{% /md %}}</dd>
@@ -1345,7 +1049,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>Reference<wbr>Data<wbr>Sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></span>
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
@@ -1355,7 +1059,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Status of the application.
 {{% /md %}}</dd>
@@ -1373,7 +1077,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Version of the application.
 {{% /md %}}</dd>
@@ -1389,7 +1093,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ARN?</span>
+        <span class="property-type">ARN</span>
     </dt>
     <dd>{{% md %}}The ARN of the Kinesis Analytics Appliation.
 {{% /md %}}</dd>
@@ -1398,7 +1102,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
@@ -1408,7 +1112,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Code to transform input data, and generate output.
 {{% /md %}}</dd>
@@ -1417,7 +1121,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>create<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Timestamp when the application version was created.
 {{% /md %}}</dd>
@@ -1426,7 +1130,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the application.
 {{% /md %}}</dd>
@@ -1435,7 +1139,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>inputs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs</a></span>
     </dt>
     <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd>
@@ -1444,7 +1148,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>last<wbr>Update<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Timestamp when the application was last updated.
 {{% /md %}}</dd>
@@ -1453,7 +1157,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Kinesis Analytics Application.
 {{% /md %}}</dd>
@@ -1462,7 +1166,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>outputs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]</a></span>
     </dt>
     <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
 {{% /md %}}</dd>
@@ -1471,7 +1175,7 @@ See CloudWatch Logging Options below for more details.
             title="Optional">
         <span>reference<wbr>Data<wbr>Sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></span>
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
@@ -1481,7 +1185,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Status of the application.
 {{% /md %}}</dd>
@@ -1490,7 +1194,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
 {{% /md %}}</dd>
@@ -1499,7 +1203,7 @@ See Reference Data Sources below for more details.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Version of the application.
 {{% /md %}}</dd>
@@ -1659,15 +1363,6 @@ See Reference Data Sources below for more details.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Log<wbr>Stream<wbr>Arn</span>
@@ -1684,6 +1379,15 @@ See Reference Data Sources below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM Role used to send application messages.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
 {{% /md %}}</dd>
 
 </dl>
@@ -1693,15 +1397,6 @@ See Reference Data Sources below for more details.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Log<wbr>Stream<wbr>Arn</span>
@@ -1720,21 +1415,21 @@ See Reference Data Sources below for more details.
     <dd>{{% md %}}The ARN of the IAM Role used to send application messages.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1754,21 +1449,21 @@ See Reference Data Sources below for more details.
     <dd>{{% md %}}The ARN of the IAM Role used to send application messages.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1786,6 +1481,15 @@ See Reference Data Sources below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM Role used to send application messages.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
 {{% /md %}}</dd>
 
 </dl>
@@ -1810,35 +1514,6 @@ See Reference Data Sources below for more details.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kinesis<wbr>Firehose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
-See Kinesis Firehose below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kinesis<wbr>Stream</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
-See Kinesis Stream below for more details.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name<wbr>Prefix</span>
@@ -1846,26 +1521,6 @@ See Kinesis Stream below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name Prefix to use when creating an in-application stream.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Parallelism</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The number of Parallel in-application streams to create.
-See Parallelism below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Processing<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
-See Processing Configuration below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1879,9 +1534,58 @@ See Processing Configuration below for more details.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis<wbr>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
+See Kinesis Firehose below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis<wbr>Stream</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
+See Kinesis Stream below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Parallelism</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The number of Parallel in-application streams to create.
+See Parallelism below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
+See Processing Configuration below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Starting<wbr>Position<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">List&lt;Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">List&lt;Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1889,7 +1593,7 @@ See Processing Configuration below for more details.
             title="Optional">
         <span>Stream<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1900,35 +1604,6 @@ See Processing Configuration below for more details.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kinesis<wbr>Firehose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">*Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose</a></span>
-    </dt>
-    <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
-See Kinesis Firehose below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kinesis<wbr>Stream</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">*Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream</a></span>
-    </dt>
-    <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
-See Kinesis Stream below for more details.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name<wbr>Prefix</span>
@@ -1938,11 +1613,49 @@ See Kinesis Stream below for more details.
     <dd>{{% md %}}The Name Prefix to use when creating an in-application stream.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis<wbr>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
+See Kinesis Firehose below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis<wbr>Stream</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
+See Kinesis Stream below for more details.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Parallelism</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">*Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism</a></span>
     </dt>
     <dd>{{% md %}}The number of Parallel in-application streams to create.
 See Parallelism below for more details.
@@ -1952,19 +1665,10 @@ See Parallelism below for more details.
             title="Optional">
         <span>Processing<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">*Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
 See Processing Configuration below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Schema</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema</a></span>
-    </dt>
-    <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1990,35 +1694,6 @@ See Processing Configuration below for more details.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kinesis<wbr>Firehose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose?</a></span>
-    </dt>
-    <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
-See Kinesis Firehose below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kinesis<wbr>Stream</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream?</a></span>
-    </dt>
-    <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
-See Kinesis Stream below for more details.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name<wbr>Prefix</span>
@@ -2026,26 +1701,6 @@ See Kinesis Stream below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name Prefix to use when creating an in-application stream.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>parallelism</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism?</a></span>
-    </dt>
-    <dd>{{% md %}}The number of Parallel in-application streams to create.
-See Parallelism below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>processing<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
-See Processing Configuration below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2059,9 +1714,58 @@ See Processing Configuration below for more details.
 
     <dt class="property-optional"
             title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kinesis<wbr>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
+See Kinesis Firehose below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kinesis<wbr>Stream</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
+See Kinesis Stream below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parallelism</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism</a></span>
+    </dt>
+    <dd>{{% md %}}The number of Parallel in-application streams to create.
+See Parallelism below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
+See Processing Configuration below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>starting<wbr>Position<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration[]?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2069,7 +1773,7 @@ See Processing Configuration below for more details.
             title="Optional">
         <span>stream<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2079,6 +1783,24 @@ See Processing Configuration below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Name Prefix to use when creating an in-application stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschema">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema]</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2109,15 +1831,6 @@ See Kinesis Firehose below for more details.
 See Kinesis Stream below for more details.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>name_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Name Prefix to use when creating an in-application stream.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>parallelism</span>
@@ -2136,15 +1849,6 @@ See Parallelism below for more details.
     </dt>
     <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
 See Processing Configuration below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>schema</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschema">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema]</a></span>
-    </dt>
-    <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2698,15 +2402,6 @@ See Processing Configuration below for more details.
 See Record Columns below for more details.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Record<wbr>Encoding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Encoding of the record in the streaming source.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Record<wbr>Format</span>
@@ -2715,6 +2410,15 @@ See Record Columns below for more details.
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
 {{% /md %}}</dd>
 
 </dl>
@@ -2734,15 +2438,6 @@ See Record Format below for more details.
 See Record Columns below for more details.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Record<wbr>Encoding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Encoding of the record in the streaming source.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Record<wbr>Format</span>
@@ -2751,6 +2446,15 @@ See Record Columns below for more details.
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
 {{% /md %}}</dd>
 
 </dl>
@@ -2770,15 +2474,6 @@ See Record Format below for more details.
 See Record Columns below for more details.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>record<wbr>Encoding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Encoding of the record in the streaming source.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>record<wbr>Format</span>
@@ -2787,6 +2482,15 @@ See Record Columns below for more details.
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
 {{% /md %}}</dd>
 
 </dl>
@@ -2806,15 +2510,6 @@ See Record Format below for more details.
 See Record Columns below for more details.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>record<wbr>Encoding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Encoding of the record in the streaming source.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>record<wbr>Format</span>
@@ -2823,6 +2518,15 @@ See Record Columns below for more details.
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
 {{% /md %}}</dd>
 
 </dl>
@@ -2847,15 +2551,6 @@ See Record Format below for more details.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mapping</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Mapping reference to the data element.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -2872,6 +2567,15 @@ See Record Format below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
 {{% /md %}}</dd>
 
 </dl>
@@ -2881,15 +2585,6 @@ See Record Format below for more details.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mapping</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Mapping reference to the data element.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -2908,21 +2603,21 @@ See Record Format below for more details.
     <dd>{{% md %}}The SQL Type of the column.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mapping</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Mapping reference to the data element.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2940,6 +2635,15 @@ See Record Format below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
 {{% /md %}}</dd>
 
 </dl>
@@ -2949,15 +2653,6 @@ See Record Format below for more details.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>mapping</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Mapping reference to the data element.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -2974,6 +2669,15 @@ See Record Format below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
 {{% /md %}}</dd>
 
 </dl>
@@ -3002,7 +2706,7 @@ See Record Format below for more details.
             title="Optional">
         <span>Mapping<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -3012,7 +2716,7 @@ See Mapping Parameters below for more details.
             title="Optional">
         <span>Record<wbr>Format<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
 {{% /md %}}</dd>
@@ -3028,7 +2732,7 @@ See Mapping Parameters below for more details.
             title="Optional">
         <span>Mapping<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">*Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -3038,7 +2742,7 @@ See Mapping Parameters below for more details.
             title="Optional">
         <span>Record<wbr>Format<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
 {{% /md %}}</dd>
@@ -3054,7 +2758,7 @@ See Mapping Parameters below for more details.
             title="Optional">
         <span>mapping<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -3064,7 +2768,7 @@ See Mapping Parameters below for more details.
             title="Optional">
         <span>record<wbr>Format<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
 {{% /md %}}</dd>
@@ -3121,7 +2825,7 @@ See Mapping Parameters below for more details.
             title="Optional">
         <span>Csv</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -3131,7 +2835,7 @@ See CSV Mapping Parameters below for more details.
             title="Optional">
         <span>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.
@@ -3148,7 +2852,7 @@ See JSON Mapping Parameters below for more details.
             title="Optional">
         <span>Csv</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">*Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -3158,7 +2862,7 @@ See CSV Mapping Parameters below for more details.
             title="Optional">
         <span>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">*Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.
@@ -3175,7 +2879,7 @@ See JSON Mapping Parameters below for more details.
             title="Optional">
         <span>csv</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -3185,7 +2889,7 @@ See CSV Mapping Parameters below for more details.
             title="Optional">
         <span>json</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.
@@ -3438,7 +3142,7 @@ See JSON Mapping Parameters below for more details.
             title="Optional">
         <span>Starting<wbr>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3453,7 +3157,7 @@ See JSON Mapping Parameters below for more details.
             title="Optional">
         <span>Starting<wbr>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3468,7 +3172,7 @@ See JSON Mapping Parameters below for more details.
             title="Optional">
         <span>starting<wbr>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3509,44 +3213,6 @@ See JSON Mapping Parameters below for more details.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kinesis<wbr>Firehose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
-See Kinesis Firehose below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kinesis<wbr>Stream</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
-See Kinesis Stream below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Lambda</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The Lambda function destination. See Lambda below for more details.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -3565,18 +3231,11 @@ See Kinesis Stream below for more details.
     <dd>{{% md %}}The Schema format of the data written to the destination. See Destination Schema below for more details.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
 {{% /md %}}</dd>
@@ -3585,7 +3244,7 @@ See Kinesis Stream below for more details.
             title="Optional">
         <span>Kinesis<wbr>Firehose</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">*Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
 See Kinesis Firehose below for more details.
@@ -3595,7 +3254,7 @@ See Kinesis Firehose below for more details.
             title="Optional">
         <span>Kinesis<wbr>Stream</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">*Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
 See Kinesis Stream below for more details.
@@ -3605,10 +3264,17 @@ See Kinesis Stream below for more details.
             title="Optional">
         <span>Lambda</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputlambda">*Analytics<wbr>Application<wbr>Output<wbr>Lambda</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Lambda function destination. See Lambda below for more details.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -3628,27 +3294,20 @@ See Kinesis Stream below for more details.
     <dd>{{% md %}}The Schema format of the data written to the destination. See Destination Schema below for more details.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>kinesis<wbr>Firehose</span>
+        <span>Kinesis<wbr>Firehose</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
 See Kinesis Firehose below for more details.
@@ -3656,9 +3315,9 @@ See Kinesis Firehose below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>kinesis<wbr>Stream</span>
+        <span>Kinesis<wbr>Stream</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
 See Kinesis Stream below for more details.
@@ -3666,12 +3325,19 @@ See Kinesis Stream below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lambda</span>
+        <span>Lambda</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda</a></span>
     </dt>
     <dd>{{% md %}}The Lambda function destination. See Lambda below for more details.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -3691,12 +3357,68 @@ See Kinesis Stream below for more details.
     <dd>{{% md %}}The Schema format of the data written to the destination. See Destination Schema below for more details.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kinesis<wbr>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
+See Kinesis Firehose below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kinesis<wbr>Stream</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
+See Kinesis Stream below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>lambda</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda function destination. See Lambda below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Name of the in-application stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputschema">Dict[Analytics<wbr>Application<wbr>Output<wbr>Schema]</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data written to the destination. See Destination Schema below for more details.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3734,24 +3456,6 @@ See Kinesis Stream below for more details.
         <span class="property-type"><a href="#analyticsapplicationoutputlambda">Dict[Analytics<wbr>Application<wbr>Output<wbr>Lambda]</a></span>
     </dt>
     <dd>{{% md %}}The Lambda function destination. See Lambda below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Name of the in-application stream.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>schema</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputschema">Dict[Analytics<wbr>Application<wbr>Output<wbr>Schema]</a></span>
-    </dt>
-    <dd>{{% md %}}The Schema format of the data written to the destination. See Destination Schema below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -4125,7 +3829,7 @@ See Kinesis Stream below for more details.
             title="Optional">
         <span>Record<wbr>Format<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
 {{% /md %}}</dd>
@@ -4141,7 +3845,7 @@ See Kinesis Stream below for more details.
             title="Optional">
         <span>Record<wbr>Format<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
 {{% /md %}}</dd>
@@ -4157,7 +3861,7 @@ See Kinesis Stream below for more details.
             title="Optional">
         <span>record<wbr>Format<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
 {{% /md %}}</dd>
@@ -4200,15 +3904,6 @@ See Kinesis Stream below for more details.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>S3</span>
@@ -4236,21 +3931,21 @@ See Kinesis Stream below for more details.
     <dd>{{% md %}}The in-application Table Name.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4279,21 +3974,21 @@ See Kinesis Stream below for more details.
     <dd>{{% md %}}The in-application Table Name.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4322,21 +4017,21 @@ See Kinesis Stream below for more details.
     <dd>{{% md %}}The in-application Table Name.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4363,6 +4058,15 @@ See Kinesis Stream below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The in-application Table Name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
 {{% /md %}}</dd>
 
 </dl>
@@ -4548,15 +4252,6 @@ See Kinesis Stream below for more details.
 See Record Columns below for more details.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Record<wbr>Encoding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Encoding of the record in the streaming source.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Record<wbr>Format</span>
@@ -4565,6 +4260,15 @@ See Record Columns below for more details.
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
 {{% /md %}}</dd>
 
 </dl>
@@ -4584,15 +4288,6 @@ See Record Format below for more details.
 See Record Columns below for more details.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Record<wbr>Encoding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Encoding of the record in the streaming source.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Record<wbr>Format</span>
@@ -4601,6 +4296,15 @@ See Record Columns below for more details.
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
 {{% /md %}}</dd>
 
 </dl>
@@ -4620,15 +4324,6 @@ See Record Format below for more details.
 See Record Columns below for more details.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>record<wbr>Encoding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Encoding of the record in the streaming source.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>record<wbr>Format</span>
@@ -4637,6 +4332,15 @@ See Record Columns below for more details.
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
 {{% /md %}}</dd>
 
 </dl>
@@ -4656,15 +4360,6 @@ See Record Format below for more details.
 See Record Columns below for more details.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>record<wbr>Encoding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Encoding of the record in the streaming source.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>record<wbr>Format</span>
@@ -4673,6 +4368,15 @@ See Record Columns below for more details.
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
 {{% /md %}}</dd>
 
 </dl>
@@ -4697,15 +4401,6 @@ See Record Format below for more details.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mapping</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Mapping reference to the data element.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -4722,6 +4417,15 @@ See Record Format below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
 {{% /md %}}</dd>
 
 </dl>
@@ -4731,15 +4435,6 @@ See Record Format below for more details.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mapping</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Mapping reference to the data element.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -4758,21 +4453,21 @@ See Record Format below for more details.
     <dd>{{% md %}}The SQL Type of the column.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mapping</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Mapping reference to the data element.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4790,6 +4485,15 @@ See Record Format below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
 {{% /md %}}</dd>
 
 </dl>
@@ -4799,15 +4503,6 @@ See Record Format below for more details.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>mapping</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Mapping reference to the data element.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -4824,6 +4519,15 @@ See Record Format below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
 {{% /md %}}</dd>
 
 </dl>
@@ -4852,7 +4556,7 @@ See Record Format below for more details.
             title="Optional">
         <span>Mapping<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -4862,7 +4566,7 @@ See Mapping Parameters below for more details.
             title="Optional">
         <span>Record<wbr>Format<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
 {{% /md %}}</dd>
@@ -4878,7 +4582,7 @@ See Mapping Parameters below for more details.
             title="Optional">
         <span>Mapping<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -4888,7 +4592,7 @@ See Mapping Parameters below for more details.
             title="Optional">
         <span>Record<wbr>Format<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
 {{% /md %}}</dd>
@@ -4904,7 +4608,7 @@ See Mapping Parameters below for more details.
             title="Optional">
         <span>mapping<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -4914,7 +4618,7 @@ See Mapping Parameters below for more details.
             title="Optional">
         <span>record<wbr>Format<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
 {{% /md %}}</dd>
@@ -4971,7 +4675,7 @@ See Mapping Parameters below for more details.
             title="Optional">
         <span>Csv</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -4981,7 +4685,7 @@ See CSV Mapping Parameters below for more details.
             title="Optional">
         <span>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.
@@ -4998,7 +4702,7 @@ See JSON Mapping Parameters below for more details.
             title="Optional">
         <span>Csv</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -5008,7 +4712,7 @@ See CSV Mapping Parameters below for more details.
             title="Optional">
         <span>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.
@@ -5025,7 +4729,7 @@ See JSON Mapping Parameters below for more details.
             title="Optional">
         <span>csv</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -5035,7 +4739,7 @@ See CSV Mapping Parameters below for more details.
             title="Optional">
         <span>json</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json?</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.

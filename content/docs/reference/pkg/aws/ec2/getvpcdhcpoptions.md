@@ -68,7 +68,7 @@ const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcDhcpOptions<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcDhcpOptionsArgs">LookupVpcDhcpOptionsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcDhcpOptionsResult">LookupVpcDhcpOptionsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcDhcpOptions<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcDhcpOptionsArgs">LookupVpcDhcpOptionsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcDhcpOptionsResult">LookupVpcDhcpOptionsResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -91,7 +91,7 @@ The following arguments are supported:
             title="Optional">
         <span>Dhcp<wbr>Options<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 DHCP Options ID.
 {{% /md %}}</dd>
@@ -100,7 +100,7 @@ The following arguments are supported:
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcdhcpoptionsfilter">List&lt;Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getvpcdhcpoptionsfilter">List&lt;Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of custom filters as described below.
 {{% /md %}}</dd>
@@ -109,7 +109,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
@@ -125,7 +125,7 @@ The following arguments are supported:
             title="Optional">
         <span>Dhcp<wbr>Options<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 DHCP Options ID.
 {{% /md %}}</dd>
@@ -159,7 +159,7 @@ The following arguments are supported:
             title="Optional">
         <span>dhcp<wbr>Options<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 DHCP Options ID.
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ The following arguments are supported:
             title="Optional">
         <span>filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcdhcpoptionsfilter">Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter[]?</a></span>
+        <span class="property-type"><a href="#getvpcdhcpoptionsfilter">Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}List of custom filters as described below.
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ The following arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
@@ -258,18 +258,10 @@ The following output properties are available:
             title="">
         <span>Domain<wbr>Name<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of name servers.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcdhcpoptionsfilter">List&lt;Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -284,7 +276,7 @@ The following output properties are available:
             title="">
         <span>Netbios<wbr>Name<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of NETBIOS name servers.
 {{% /md %}}</dd>
@@ -302,7 +294,7 @@ The following output properties are available:
             title="">
         <span>Ntp<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of NTP servers.
 {{% /md %}}</dd>
@@ -320,10 +312,18 @@ The following output properties are available:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcdhcpoptionsfilter">List&lt;Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -358,14 +358,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of name servers.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcdhcpoptionsfilter">[]Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -421,6 +413,14 @@ The following output properties are available:
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcdhcpoptionsfilter">[]Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -454,14 +454,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of name servers.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcdhcpoptionsfilter">Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -517,6 +509,14 @@ The following output properties are available:
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcdhcpoptionsfilter">Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -550,14 +550,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of name servers.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcdhcpoptionsfilter">List[Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -613,6 +605,14 @@ The following output properties are available:
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcdhcpoptionsfilter">List[Get<wbr>Vpc<wbr>Dhcp<wbr>Options<wbr>Filter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -653,7 +653,7 @@ The following output properties are available:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of values for filtering.
 {{% /md %}}</dd>

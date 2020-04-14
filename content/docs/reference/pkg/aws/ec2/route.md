@@ -43,7 +43,7 @@ const route = new aws.ec2.Route("r", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Route">Route</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Route">Route</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -51,7 +51,7 @@ const route = new aws.ec2.Route("r", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRoute<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRoute<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -147,69 +147,6 @@ const route = new aws.ec2.Route("r", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Destination<wbr>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Destination<wbr>Ipv6Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination IPv6 CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Egress<wbr>Only<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nat<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC NAT gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network<wbr>Interface<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 network interface.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Route<wbr>Table<wbr>Id</span>
@@ -221,9 +158,72 @@ const route = new aws.ec2.Route("r", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Destination<wbr>Cidr<wbr>Block</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination CIDR block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Destination<wbr>Ipv6Cidr<wbr>Block</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination IPv6 CIDR block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Egress<wbr>Only<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of an EC2 instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nat<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of a VPC NAT gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Interface<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of an EC2 network interface.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -232,7 +232,7 @@ const route = new aws.ec2.Route("r", {
             title="Optional">
         <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC peering connection.
 {{% /md %}}</dd>
@@ -244,69 +244,6 @@ const route = new aws.ec2.Route("r", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Destination<wbr>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The destination CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Destination<wbr>Ipv6Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The destination IPv6 CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Egress<wbr>Only<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nat<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC NAT gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network<wbr>Interface<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 network interface.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Route<wbr>Table<wbr>Id</span>
@@ -318,9 +255,72 @@ const route = new aws.ec2.Route("r", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Destination<wbr>Cidr<wbr>Block</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination CIDR block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Destination<wbr>Ipv6Cidr<wbr>Block</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination IPv6 CIDR block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Egress<wbr>Only<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of an EC2 instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nat<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of a VPC NAT gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Interface<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of an EC2 network interface.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -329,7 +329,7 @@ const route = new aws.ec2.Route("r", {
             title="Optional">
         <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC peering connection.
 {{% /md %}}</dd>
@@ -340,69 +340,6 @@ const route = new aws.ec2.Route("r", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>destination<wbr>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>destination<wbr>Ipv6Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination IPv6 CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>egress<wbr>Only<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>nat<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC NAT gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>network<wbr>Interface<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 network interface.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -415,9 +352,72 @@ const route = new aws.ec2.Route("r", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>destination<wbr>Cidr<wbr>Block</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination CIDR block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>destination<wbr>Ipv6Cidr<wbr>Block</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination IPv6 CIDR block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>egress<wbr>Only<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of an EC2 instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nat<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of a VPC NAT gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network<wbr>Interface<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identifier of an EC2 network interface.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -426,7 +426,7 @@ const route = new aws.ec2.Route("r", {
             title="Optional">
         <span>vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC peering connection.
 {{% /md %}}</dd>
@@ -437,6 +437,15 @@ const route = new aws.ec2.Route("r", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>route_<wbr>table_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the routing table.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -499,15 +508,6 @@ const route = new aws.ec2.Route("r", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 network interface.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>route_<wbr>table_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the routing table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -549,56 +549,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Destination<wbr>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Destination<wbr>Ipv6Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination IPv6 CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Destination<wbr>Prefix<wbr>List<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Egress<wbr>Only<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 instance.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -610,24 +565,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Nat<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC NAT gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Interface<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 network interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Origin</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -636,38 +573,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Route<wbr>Table<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the routing table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>State</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Transit<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC peering connection.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -678,56 +588,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Destination<wbr>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The destination CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Destination<wbr>Ipv6Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The destination IPv6 CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Destination<wbr>Prefix<wbr>List<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Egress<wbr>Only<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 instance.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -739,38 +604,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Nat<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC NAT gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Interface<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 network interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Origin</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Route<wbr>Table<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the routing table.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -780,48 +618,12 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Transit<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC peering connection.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>destination<wbr>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>destination<wbr>Ipv6Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination IPv6 CIDR block.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -833,56 +635,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>egress<wbr>Only<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>instance<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>nat<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC NAT gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Interface<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 network interface.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -894,38 +651,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>route<wbr>Table<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the routing table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>state</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>transit<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC peering connection.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -933,24 +663,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>destination_<wbr>cidr_<wbr>block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The destination CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>destination_<wbr>ipv6_<wbr>cidr_<wbr>block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The destination IPv6 CIDR block.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -962,56 +674,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>egress_<wbr>only_<wbr>gateway_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>gateway_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>instance_<wbr>owner_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>nat_<wbr>gateway_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC NAT gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>interface_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 network interface.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1023,38 +690,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>route_<wbr>table_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the routing table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>state</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>transit_<wbr>gateway_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>peering_<wbr>connection_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Identifier of a VPC peering connection.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1195,7 +835,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destination<wbr>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR block.
 {{% /md %}}</dd>
@@ -1204,7 +844,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destination<wbr>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -1213,7 +853,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destination<wbr>Prefix<wbr>List<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1221,7 +861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Egress<wbr>Only<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
 {{% /md %}}</dd>
@@ -1230,7 +870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
 {{% /md %}}</dd>
@@ -1239,7 +879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 instance.
 {{% /md %}}</dd>
@@ -1248,7 +888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1256,7 +896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nat<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC NAT gateway.
 {{% /md %}}</dd>
@@ -1265,7 +905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 network interface.
 {{% /md %}}</dd>
@@ -1274,7 +914,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1282,7 +922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the routing table.
 {{% /md %}}</dd>
@@ -1291,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1299,7 +939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -1308,7 +948,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC peering connection.
 {{% /md %}}</dd>
@@ -1324,7 +964,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destination<wbr>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR block.
 {{% /md %}}</dd>
@@ -1333,7 +973,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destination<wbr>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -1342,7 +982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destination<wbr>Prefix<wbr>List<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1350,7 +990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Egress<wbr>Only<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
 {{% /md %}}</dd>
@@ -1359,7 +999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
 {{% /md %}}</dd>
@@ -1368,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 instance.
 {{% /md %}}</dd>
@@ -1377,7 +1017,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1385,7 +1025,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nat<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC NAT gateway.
 {{% /md %}}</dd>
@@ -1394,7 +1034,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 network interface.
 {{% /md %}}</dd>
@@ -1403,7 +1043,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1411,7 +1051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the routing table.
 {{% /md %}}</dd>
@@ -1420,7 +1060,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1428,7 +1068,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -1437,7 +1077,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC peering connection.
 {{% /md %}}</dd>
@@ -1453,7 +1093,7 @@ The following state arguments are supported:
             title="Optional">
         <span>destination<wbr>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR block.
 {{% /md %}}</dd>
@@ -1462,7 +1102,7 @@ The following state arguments are supported:
             title="Optional">
         <span>destination<wbr>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -1471,7 +1111,7 @@ The following state arguments are supported:
             title="Optional">
         <span>destination<wbr>Prefix<wbr>List<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1479,7 +1119,7 @@ The following state arguments are supported:
             title="Optional">
         <span>egress<wbr>Only<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
 {{% /md %}}</dd>
@@ -1488,7 +1128,7 @@ The following state arguments are supported:
             title="Optional">
         <span>gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
 {{% /md %}}</dd>
@@ -1497,7 +1137,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 instance.
 {{% /md %}}</dd>
@@ -1506,7 +1146,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1514,7 +1154,7 @@ The following state arguments are supported:
             title="Optional">
         <span>nat<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC NAT gateway.
 {{% /md %}}</dd>
@@ -1523,7 +1163,7 @@ The following state arguments are supported:
             title="Optional">
         <span>network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 network interface.
 {{% /md %}}</dd>
@@ -1532,7 +1172,7 @@ The following state arguments are supported:
             title="Optional">
         <span>origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1540,7 +1180,7 @@ The following state arguments are supported:
             title="Optional">
         <span>route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the routing table.
 {{% /md %}}</dd>
@@ -1549,7 +1189,7 @@ The following state arguments are supported:
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1557,7 +1197,7 @@ The following state arguments are supported:
             title="Optional">
         <span>transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -1566,7 +1206,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC peering connection.
 {{% /md %}}</dd>

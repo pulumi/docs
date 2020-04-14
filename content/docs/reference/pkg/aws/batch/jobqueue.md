@@ -36,7 +36,7 @@ const testQueue = new aws.batch.JobQueue("test_queue", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobQueue">JobQueue</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobQueueArgs">JobQueueArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobQueue">JobQueue</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobQueueArgs">JobQueueArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -44,7 +44,7 @@ const testQueue = new aws.batch.JobQueue("test_queue", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewJobQueue<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobQueueArgs">JobQueueArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobQueue">JobQueue</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewJobQueue<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobQueueArgs">JobQueueArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobQueue">JobQueue</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -144,21 +144,12 @@ const testQueue = new aws.batch.JobQueue("test_queue", {
             title="Required">
         <span>Compute<wbr>Environments</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the set of compute environments
 mapped to a job queue and their order.  The position of the compute environments
 in the list will dictate the order. You can associate up to 3 compute environments
 with a job queue.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the job queue.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -178,6 +169,15 @@ are evaluated first when associated with the same compute environment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job queue.
 {{% /md %}}</dd>
 
 </dl>
@@ -199,15 +199,6 @@ in the list will dictate the order. You can associate up to 3 compute environmen
 with a job queue.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the job queue.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Priority</span>
@@ -225,6 +216,15 @@ are evaluated first when associated with the same compute environment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job queue.
 {{% /md %}}</dd>
 
 </dl>
@@ -246,15 +246,6 @@ in the list will dictate the order. You can associate up to 3 compute environmen
 with a job queue.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the job queue.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>priority</span>
@@ -272,6 +263,15 @@ are evaluated first when associated with the same compute environment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job queue.
 {{% /md %}}</dd>
 
 </dl>
@@ -293,15 +293,6 @@ in the list will dictate the order. You can associate up to 3 compute environmen
 with a job queue.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the job queue.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>priority</span>
@@ -319,6 +310,15 @@ are evaluated first when associated with the same compute environment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job queue.
 {{% /md %}}</dd>
 
 </dl>
@@ -349,46 +349,6 @@ The following output properties are available:
     <dd>{{% md %}}The Amazon Resource Name of the job queue.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Compute<wbr>Environments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}Specifies the set of compute environments
-mapped to a job queue and their order.  The position of the compute environments
-in the list will dictate the order. You can associate up to 3 compute environments
-with a job queue.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the job queue.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The priority of the job queue. Job queues with a higher priority
-are evaluated first when associated with the same compute environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -403,46 +363,6 @@ are evaluated first when associated with the same compute environment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job queue.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Compute<wbr>Environments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the set of compute environments
-mapped to a job queue and their order.  The position of the compute environments
-in the list will dictate the order. You can associate up to 3 compute environments
-with a job queue.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the job queue.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The priority of the job queue. Job queues with a higher priority
-are evaluated first when associated with the same compute environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
 {{% /md %}}</dd>
 
 </dl>
@@ -461,46 +381,6 @@ are evaluated first when associated with the same compute environment.
     <dd>{{% md %}}The Amazon Resource Name of the job queue.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>compute<wbr>Environments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Specifies the set of compute environments
-mapped to a job queue and their order.  The position of the compute environments
-in the list will dictate the order. You can associate up to 3 compute environments
-with a job queue.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the job queue.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The priority of the job queue. Job queues with a higher priority
-are evaluated first when associated with the same compute environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -515,46 +395,6 @@ are evaluated first when associated with the same compute environment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job queue.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>compute_<wbr>environments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Specifies the set of compute environments
-mapped to a job queue and their order.  The position of the compute environments
-in the list will dictate the order. You can associate up to 3 compute environments
-with a job queue.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the job queue.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The priority of the job queue. Job queues with a higher priority
-are evaluated first when associated with the same compute environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
 {{% /md %}}</dd>
 
 </dl>
@@ -696,7 +536,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job queue.
 {{% /md %}}</dd>
@@ -705,7 +545,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compute<wbr>Environments</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the set of compute environments
 mapped to a job queue and their order.  The position of the compute environments
@@ -717,7 +557,7 @@ with a job queue.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job queue.
 {{% /md %}}</dd>
@@ -726,7 +566,7 @@ with a job queue.
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the job queue. Job queues with a higher priority
 are evaluated first when associated with the same compute environment.
@@ -736,7 +576,7 @@ are evaluated first when associated with the same compute environment.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
 {{% /md %}}</dd>
@@ -752,7 +592,7 @@ are evaluated first when associated with the same compute environment.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job queue.
 {{% /md %}}</dd>
@@ -773,7 +613,7 @@ with a job queue.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job queue.
 {{% /md %}}</dd>
@@ -782,7 +622,7 @@ with a job queue.
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the job queue. Job queues with a higher priority
 are evaluated first when associated with the same compute environment.
@@ -792,7 +632,7 @@ are evaluated first when associated with the same compute environment.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
 {{% /md %}}</dd>
@@ -808,7 +648,7 @@ are evaluated first when associated with the same compute environment.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job queue.
 {{% /md %}}</dd>
@@ -817,7 +657,7 @@ are evaluated first when associated with the same compute environment.
             title="Optional">
         <span>compute<wbr>Environments</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the set of compute environments
 mapped to a job queue and their order.  The position of the compute environments
@@ -829,7 +669,7 @@ with a job queue.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job queue.
 {{% /md %}}</dd>
@@ -838,7 +678,7 @@ with a job queue.
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of the job queue. Job queues with a higher priority
 are evaluated first when associated with the same compute environment.
@@ -848,7 +688,7 @@ are evaluated first when associated with the same compute environment.
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
 {{% /md %}}</dd>

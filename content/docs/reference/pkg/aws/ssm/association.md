@@ -34,7 +34,7 @@ const example = new aws.ssm.Association("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#Association">Association</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#AssociationArgs">AssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#Association">Association</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#AssociationArgs">AssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -42,7 +42,7 @@ const example = new aws.ssm.Association("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAssociation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#AssociationArgs">AssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#Association">Association</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAssociation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#AssociationArgs">AssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#Association">Association</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -142,7 +142,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Association<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The descriptive name for the association.
 {{% /md %}}</dd>
@@ -151,7 +151,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Automation<wbr>Target<wbr>Parameter<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls.
 {{% /md %}}</dd>
@@ -160,7 +160,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Compliance<wbr>Severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
 {{% /md %}}</dd>
@@ -169,7 +169,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Document<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The document version you want to associate with the target(s). Can be a specific version or the default version.
 {{% /md %}}</dd>
@@ -178,7 +178,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
 {{% /md %}}</dd>
@@ -187,7 +187,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Max<wbr>Concurrency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 {{% /md %}}</dd>
@@ -196,7 +196,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Max<wbr>Errors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 {{% /md %}}</dd>
@@ -205,7 +205,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SSM document to apply.
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Output<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location<wbr>Args?</a></span>
+        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An output location block. Output Location is documented below.
 {{% /md %}}</dd>
@@ -223,7 +223,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>
@@ -232,7 +232,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Schedule<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cron expression when the association will be applied to the target(s).
 {{% /md %}}</dd>
@@ -241,7 +241,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Targets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">List&lt;Association<wbr>Target<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#associationtarget">List&lt;Association<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Association<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The descriptive name for the association.
 {{% /md %}}</dd>
@@ -266,7 +266,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Automation<wbr>Target<wbr>Parameter<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls.
 {{% /md %}}</dd>
@@ -275,7 +275,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Compliance<wbr>Severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
 {{% /md %}}</dd>
@@ -284,7 +284,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Document<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The document version you want to associate with the target(s). Can be a specific version or the default version.
 {{% /md %}}</dd>
@@ -293,7 +293,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Max<wbr>Concurrency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 {{% /md %}}</dd>
@@ -311,7 +311,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Max<wbr>Errors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 {{% /md %}}</dd>
@@ -320,7 +320,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SSM document to apply.
 {{% /md %}}</dd>
@@ -329,7 +329,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Output<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">*Association<wbr>Output<wbr>Location</a></span>
+        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}An output location block. Output Location is documented below.
 {{% /md %}}</dd>
@@ -347,7 +347,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>Schedule<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cron expression when the association will be applied to the target(s).
 {{% /md %}}</dd>
@@ -372,7 +372,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>association<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The descriptive name for the association.
 {{% /md %}}</dd>
@@ -381,7 +381,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>automation<wbr>Target<wbr>Parameter<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls.
 {{% /md %}}</dd>
@@ -390,7 +390,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>compliance<wbr>Severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
 {{% /md %}}</dd>
@@ -399,7 +399,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>document<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The document version you want to associate with the target(s). Can be a specific version or the default version.
 {{% /md %}}</dd>
@@ -408,7 +408,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
 {{% /md %}}</dd>
@@ -417,7 +417,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>max<wbr>Concurrency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 {{% /md %}}</dd>
@@ -426,7 +426,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>max<wbr>Errors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 {{% /md %}}</dd>
@@ -435,7 +435,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SSM document to apply.
 {{% /md %}}</dd>
@@ -444,7 +444,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>output<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location?</a></span>
+        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}An output location block. Output Location is documented below.
 {{% /md %}}</dd>
@@ -453,7 +453,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>
@@ -462,7 +462,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>schedule<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cron expression when the association will be applied to the target(s).
 {{% /md %}}</dd>
@@ -471,7 +471,7 @@ const example = new aws.ssm.Association("example", {
             title="Optional">
         <span>targets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">Association<wbr>Target[]?</a></span>
+        <span class="property-type"><a href="#associationtarget">Association<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 {{% /md %}}</dd>
@@ -619,114 +619,6 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the SSM association.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Association<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The descriptive name for the association.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Automation<wbr>Target<wbr>Parameter<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Compliance<wbr>Severity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Document<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The document version you want to associate with the target(s). Can be a specific version or the default version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Concurrency</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the SSM document to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Output<wbr>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location?</a></span>
-    </dt>
-    <dd>{{% md %}}An output location block. Output Location is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule<wbr>Expression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A cron expression when the association will be applied to the target(s).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">List&lt;Association<wbr>Target&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -741,114 +633,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the SSM association.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Association<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The descriptive name for the association.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Automation<wbr>Target<wbr>Parameter<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Compliance<wbr>Severity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Document<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The document version you want to associate with the target(s). Can be a specific version or the default version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Concurrency</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the SSM document to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Output<wbr>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">*Association<wbr>Output<wbr>Location</a></span>
-    </dt>
-    <dd>{{% md %}}An output location block. Output Location is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule<wbr>Expression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A cron expression when the association will be applied to the target(s).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">[]Association<wbr>Target</a></span>
-    </dt>
-    <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 {{% /md %}}</dd>
 
 </dl>
@@ -867,114 +651,6 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the SSM association.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>association<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The descriptive name for the association.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>automation<wbr>Target<wbr>Parameter<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>compliance<wbr>Severity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>document<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The document version you want to associate with the target(s). Can be a specific version or the default version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Concurrency</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the SSM document to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>output<wbr>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location?</a></span>
-    </dt>
-    <dd>{{% md %}}An output location block. Output Location is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>schedule<wbr>Expression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A cron expression when the association will be applied to the target(s).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">Association<wbr>Target[]</a></span>
-    </dt>
-    <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -989,114 +665,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the SSM association.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>association_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The descriptive name for the association.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>automation_<wbr>target_<wbr>parameter_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>compliance_<wbr>severity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>document_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The document version you want to associate with the target(s). Can be a specific version or the default version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>concurrency</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the SSM document to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>output_<wbr>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">Dict[Association<wbr>Output<wbr>Location]</a></span>
-    </dt>
-    <dd>{{% md %}}An output location block. Output Location is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>schedule_<wbr>expression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A cron expression when the association will be applied to the target(s).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">List[Association<wbr>Target]</a></span>
-    </dt>
-    <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 {{% /md %}}</dd>
 
 </dl>
@@ -1238,7 +806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the SSM association.
 {{% /md %}}</dd>
@@ -1247,7 +815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Association<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The descriptive name for the association.
 {{% /md %}}</dd>
@@ -1256,7 +824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Automation<wbr>Target<wbr>Parameter<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls.
 {{% /md %}}</dd>
@@ -1265,7 +833,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compliance<wbr>Severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
 {{% /md %}}</dd>
@@ -1274,7 +842,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The document version you want to associate with the target(s). Can be a specific version or the default version.
 {{% /md %}}</dd>
@@ -1283,7 +851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
 {{% /md %}}</dd>
@@ -1292,7 +860,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Concurrency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 {{% /md %}}</dd>
@@ -1301,7 +869,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Errors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 {{% /md %}}</dd>
@@ -1310,7 +878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SSM document to apply.
 {{% /md %}}</dd>
@@ -1319,7 +887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location<wbr>Args?</a></span>
+        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An output location block. Output Location is documented below.
 {{% /md %}}</dd>
@@ -1328,7 +896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>
@@ -1337,7 +905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schedule<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cron expression when the association will be applied to the target(s).
 {{% /md %}}</dd>
@@ -1346,7 +914,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Targets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">List&lt;Association<wbr>Target<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#associationtarget">List&lt;Association<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 {{% /md %}}</dd>
@@ -1362,7 +930,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the SSM association.
 {{% /md %}}</dd>
@@ -1371,7 +939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Association<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The descriptive name for the association.
 {{% /md %}}</dd>
@@ -1380,7 +948,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Automation<wbr>Target<wbr>Parameter<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls.
 {{% /md %}}</dd>
@@ -1389,7 +957,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compliance<wbr>Severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
 {{% /md %}}</dd>
@@ -1398,7 +966,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The document version you want to associate with the target(s). Can be a specific version or the default version.
 {{% /md %}}</dd>
@@ -1407,7 +975,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
 {{% /md %}}</dd>
@@ -1416,7 +984,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Concurrency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 {{% /md %}}</dd>
@@ -1425,7 +993,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Errors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 {{% /md %}}</dd>
@@ -1434,7 +1002,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SSM document to apply.
 {{% /md %}}</dd>
@@ -1443,7 +1011,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">*Association<wbr>Output<wbr>Location</a></span>
+        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}An output location block. Output Location is documented below.
 {{% /md %}}</dd>
@@ -1461,7 +1029,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schedule<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cron expression when the association will be applied to the target(s).
 {{% /md %}}</dd>
@@ -1486,7 +1054,7 @@ The following state arguments are supported:
             title="Optional">
         <span>association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the SSM association.
 {{% /md %}}</dd>
@@ -1495,7 +1063,7 @@ The following state arguments are supported:
             title="Optional">
         <span>association<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The descriptive name for the association.
 {{% /md %}}</dd>
@@ -1504,7 +1072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>automation<wbr>Target<wbr>Parameter<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls.
 {{% /md %}}</dd>
@@ -1513,7 +1081,7 @@ The following state arguments are supported:
             title="Optional">
         <span>compliance<wbr>Severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
 {{% /md %}}</dd>
@@ -1522,7 +1090,7 @@ The following state arguments are supported:
             title="Optional">
         <span>document<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The document version you want to associate with the target(s). Can be a specific version or the default version.
 {{% /md %}}</dd>
@@ -1531,7 +1099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
 {{% /md %}}</dd>
@@ -1540,7 +1108,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Concurrency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 {{% /md %}}</dd>
@@ -1549,7 +1117,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Errors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
 {{% /md %}}</dd>
@@ -1558,7 +1126,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SSM document to apply.
 {{% /md %}}</dd>
@@ -1567,7 +1135,7 @@ The following state arguments are supported:
             title="Optional">
         <span>output<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location?</a></span>
+        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}An output location block. Output Location is documented below.
 {{% /md %}}</dd>
@@ -1576,7 +1144,7 @@ The following state arguments are supported:
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>
@@ -1585,7 +1153,7 @@ The following state arguments are supported:
             title="Optional">
         <span>schedule<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cron expression when the association will be applied to the target(s).
 {{% /md %}}</dd>
@@ -1594,7 +1162,7 @@ The following state arguments are supported:
             title="Optional">
         <span>targets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">Association<wbr>Target[]?</a></span>
+        <span class="property-type"><a href="#associationtarget">Association<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 {{% /md %}}</dd>
@@ -1765,7 +1333,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket prefix. Results stored in the root if not configured.
 {{% /md %}}</dd>
@@ -1790,7 +1358,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket prefix. Results stored in the root if not configured.
 {{% /md %}}</dd>
@@ -1815,7 +1383,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket prefix. Results stored in the root if not configured.
 {{% /md %}}</dd>
@@ -1880,7 +1448,7 @@ The following state arguments are supported:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of instance IDs or tag values. AWS currently limits this list size to one value.
 {{% /md %}}</dd>

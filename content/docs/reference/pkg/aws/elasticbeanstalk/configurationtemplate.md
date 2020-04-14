@@ -45,7 +45,7 @@ The `setting` field supports the following format:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#ConfigurationTemplate">ConfigurationTemplate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#ConfigurationTemplateArgs">ConfigurationTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#ConfigurationTemplate">ConfigurationTemplate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#ConfigurationTemplateArgs">ConfigurationTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -53,11 +53,11 @@ The `setting` field supports the following format:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewConfigurationTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticbeanstalk?tab=doc#ConfigurationTemplateArgs">ConfigurationTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticbeanstalk?tab=doc#ConfigurationTemplate">ConfigurationTemplate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewConfigurationTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticbeanstalk?tab=doc#ConfigurationTemplateArgs">ConfigurationTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticbeanstalk?tab=doc#ConfigurationTemplate">ConfigurationTemplate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticbeanstalk.ConfigurationTemplate.html">ConfigurationTemplate</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.ConfigurationTemplateArgs.html">ConfigurationTemplateArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.ConfigurationTemplate.html">ConfigurationTemplate</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.ConfigurationTemplateArgs.html">ConfigurationTemplateArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -162,7 +162,7 @@ The `setting` field supports the following format:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
 {{% /md %}}</dd>
@@ -171,7 +171,7 @@ The `setting` field supports the following format:
             title="Optional">
         <span>Environment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
 {{% /md %}}</dd>
@@ -180,7 +180,7 @@ The `setting` field supports the following format:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
 {{% /md %}}</dd>
@@ -189,7 +189,7 @@ The `setting` field supports the following format:
             title="Optional">
         <span>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationtemplatesetting">List&lt;Configuration<wbr>Template<wbr>Setting<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#configurationtemplatesetting">List&lt;Configuration<wbr>Template<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -200,7 +200,7 @@ below in Option Settings
             title="Optional">
         <span>Solution<wbr>Stack<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation][1]
@@ -226,7 +226,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
 {{% /md %}}</dd>
@@ -235,7 +235,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>Environment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
 {{% /md %}}</dd>
@@ -244,7 +244,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
 {{% /md %}}</dd>
@@ -264,7 +264,7 @@ below in Option Settings
             title="Optional">
         <span>Solution<wbr>Stack<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation][1]
@@ -290,7 +290,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
 {{% /md %}}</dd>
@@ -299,7 +299,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>environment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
 {{% /md %}}</dd>
@@ -308,281 +308,13 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationtemplatesetting">Configuration<wbr>Template<wbr>Setting[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Option settings to configure the new Environment. These
-override specific values that are set as defaults. The format is detailed
-below in Option Settings
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>solution<wbr>Stack<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A solution stack to base your Template
-off of. Example stacks can be found in the [Amazon API documentation][1]
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span>application</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}name of the application to associate with this configuration template
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Short description of the Template
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>environment_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the environment used with this configuration template
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationtemplatesetting">List[Configuration<wbr>Template<wbr>Setting]</a></span>
-    </dt>
-    <dd>{{% md %}}Option settings to configure the new Environment. These
-override specific values that are set as defaults. The format is detailed
-below in Option Settings
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>solution_<wbr>stack_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A solution stack to base your Template
-off of. Example stacks can be found in the [Amazon API documentation][1]
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## ConfigurationTemplate Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Application</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}name of the application to associate with this configuration template
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Short description of the Template
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Environment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the environment used with this configuration template
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationtemplatesetting">List&lt;Configuration<wbr>Template<wbr>Setting&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Option settings to configure the new Environment. These
-override specific values that are set as defaults. The format is detailed
-below in Option Settings
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Solution<wbr>Stack<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A solution stack to base your Template
-off of. Example stacks can be found in the [Amazon API documentation][1]
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Application</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}name of the application to associate with this configuration template
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Short description of the Template
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Environment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the environment used with this configuration template
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationtemplatesetting">[]Configuration<wbr>Template<wbr>Setting</a></span>
-    </dt>
-    <dd>{{% md %}}Option settings to configure the new Environment. These
-override specific values that are set as defaults. The format is detailed
-below in Option Settings
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Solution<wbr>Stack<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A solution stack to base your Template
-off of. Example stacks can be found in the [Amazon API documentation][1]
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>application</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}name of the application to associate with this configuration template
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Short description of the Template
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>environment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the environment used with this configuration template
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>settings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationtemplatesetting">Configuration<wbr>Template<wbr>Setting[]</a></span>
@@ -592,11 +324,11 @@ override specific values that are set as defaults. The format is detailed
 below in Option Settings
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>solution<wbr>Stack<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation][1]
@@ -609,8 +341,8 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>application</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -618,8 +350,8 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
     <dd>{{% md %}}name of the application to associate with this configuration template
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -627,8 +359,8 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
     <dd>{{% md %}}Short description of the Template
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>environment_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -636,8 +368,8 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
     <dd>{{% md %}}The ID of the environment used with this configuration template
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -645,8 +377,8 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
     <dd>{{% md %}}A unique name for this Template.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>settings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationtemplatesetting">List[Configuration<wbr>Template<wbr>Setting]</a></span>
@@ -656,8 +388,8 @@ override specific values that are set as defaults. The format is detailed
 below in Option Settings
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>solution_<wbr>stack_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -668,6 +400,8 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -695,7 +429,7 @@ Get an existing ConfigurationTemplate resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticbeanstalk.ConfigurationTemplate.html">ConfigurationTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticbeanstalk.ConfigurationTemplateState.html">ConfigurationTemplateState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.ConfigurationTemplate.html">ConfigurationTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.ConfigurationTemplateState.html">ConfigurationTemplateState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -805,7 +539,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the application to associate with this configuration template
 {{% /md %}}</dd>
@@ -814,7 +548,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
 {{% /md %}}</dd>
@@ -823,7 +557,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Environment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
 {{% /md %}}</dd>
@@ -832,7 +566,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
 {{% /md %}}</dd>
@@ -841,7 +575,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationtemplatesetting">List&lt;Configuration<wbr>Template<wbr>Setting<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#configurationtemplatesetting">List&lt;Configuration<wbr>Template<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -852,7 +586,7 @@ below in Option Settings
             title="Optional">
         <span>Solution<wbr>Stack<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation][1]
@@ -869,7 +603,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>Application</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the application to associate with this configuration template
 {{% /md %}}</dd>
@@ -878,7 +612,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
 {{% /md %}}</dd>
@@ -887,7 +621,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>Environment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
 {{% /md %}}</dd>
@@ -896,7 +630,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
 {{% /md %}}</dd>
@@ -916,7 +650,7 @@ below in Option Settings
             title="Optional">
         <span>Solution<wbr>Stack<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation][1]
@@ -933,7 +667,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>application</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the application to associate with this configuration template
 {{% /md %}}</dd>
@@ -942,7 +676,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
 {{% /md %}}</dd>
@@ -951,7 +685,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>environment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
 {{% /md %}}</dd>
@@ -960,7 +694,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
 {{% /md %}}</dd>
@@ -969,7 +703,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationtemplatesetting">Configuration<wbr>Template<wbr>Setting[]?</a></span>
+        <span class="property-type"><a href="#configurationtemplatesetting">Configuration<wbr>Template<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -980,7 +714,7 @@ below in Option Settings
             title="Optional">
         <span>solution<wbr>Stack<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation][1]
@@ -1096,17 +830,17 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Resource</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1136,17 +870,17 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Resource</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1176,17 +910,17 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>resource</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1216,17 +950,17 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>resource</span>
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>value</span>
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

@@ -41,7 +41,7 @@ const example = new aws.athena.Workgroup("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/athena/#Workgroup">Workgroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/athena/#WorkgroupArgs">WorkgroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/athena/#Workgroup">Workgroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/athena/#WorkgroupArgs">WorkgroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -49,7 +49,7 @@ const example = new aws.athena.Workgroup("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewWorkgroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/athena?tab=doc#WorkgroupArgs">WorkgroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/athena?tab=doc#Workgroup">Workgroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewWorkgroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/athena?tab=doc#WorkgroupArgs">WorkgroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/athena?tab=doc#Workgroup">Workgroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -149,7 +149,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the workgroup.
 {{% /md %}}</dd>
@@ -167,7 +167,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The option to delete the workgroup and its contents even if the workgroup contains any named queries.
 {{% /md %}}</dd>
@@ -176,7 +176,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the workgroup.
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -194,7 +194,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags for the workgroup.
 {{% /md %}}</dd>
@@ -210,7 +210,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">*Workgroup<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
 {{% /md %}}</dd>
@@ -219,7 +219,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the workgroup.
 {{% /md %}}</dd>
@@ -228,7 +228,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The option to delete the workgroup and its contents even if the workgroup contains any named queries.
 {{% /md %}}</dd>
@@ -237,7 +237,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the workgroup.
 {{% /md %}}</dd>
@@ -246,7 +246,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
 {{% /md %}}</dd>
@@ -280,7 +280,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the workgroup.
 {{% /md %}}</dd>
@@ -289,7 +289,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The option to delete the workgroup and its contents even if the workgroup contains any named queries.
 {{% /md %}}</dd>
@@ -298,7 +298,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the workgroup.
 {{% /md %}}</dd>
@@ -307,7 +307,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -316,7 +316,7 @@ const example = new aws.athena.Workgroup("example", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags for the workgroup.
 {{% /md %}}</dd>
@@ -410,60 +410,6 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the workgroup
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the workgroup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The option to delete the workgroup and its contents even if the workgroup contains any named queries.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the workgroup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags for the workgroup.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -478,60 +424,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the workgroup
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">*Workgroup<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of the workgroup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}The option to delete the workgroup and its contents even if the workgroup contains any named queries.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the workgroup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags for the workgroup.
 {{% /md %}}</dd>
 
 </dl>
@@ -550,60 +442,6 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the workgroup
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the workgroup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The option to delete the workgroup and its contents even if the workgroup contains any named queries.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the workgroup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags for the workgroup.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -618,60 +456,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the workgroup
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">Dict[Workgroup<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the workgroup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force_<wbr>destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The option to delete the workgroup and its contents even if the workgroup contains any named queries.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the workgroup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags for the workgroup.
 {{% /md %}}</dd>
 
 </dl>
@@ -813,7 +597,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the workgroup
 {{% /md %}}</dd>
@@ -822,7 +606,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
 {{% /md %}}</dd>
@@ -831,7 +615,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the workgroup.
 {{% /md %}}</dd>
@@ -840,7 +624,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The option to delete the workgroup and its contents even if the workgroup contains any named queries.
 {{% /md %}}</dd>
@@ -849,7 +633,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the workgroup.
 {{% /md %}}</dd>
@@ -858,7 +642,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -867,7 +651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags for the workgroup.
 {{% /md %}}</dd>
@@ -883,7 +667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the workgroup
 {{% /md %}}</dd>
@@ -892,7 +676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">*Workgroup<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
 {{% /md %}}</dd>
@@ -901,7 +685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the workgroup.
 {{% /md %}}</dd>
@@ -910,7 +694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The option to delete the workgroup and its contents even if the workgroup contains any named queries.
 {{% /md %}}</dd>
@@ -919,7 +703,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the workgroup.
 {{% /md %}}</dd>
@@ -928,7 +712,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -953,7 +737,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the workgroup
 {{% /md %}}</dd>
@@ -962,7 +746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
 {{% /md %}}</dd>
@@ -971,7 +755,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the workgroup.
 {{% /md %}}</dd>
@@ -980,7 +764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The option to delete the workgroup and its contents even if the workgroup contains any named queries.
 {{% /md %}}</dd>
@@ -989,7 +773,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the workgroup.
 {{% /md %}}</dd>
@@ -998,7 +782,7 @@ The following state arguments are supported:
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -1007,7 +791,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags for the workgroup.
 {{% /md %}}</dd>
@@ -1115,7 +899,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer for the upper data usage limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan. Must be at least `10485760`.
 {{% /md %}}</dd>
@@ -1124,7 +908,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enforce<wbr>Workgroup<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether the settings for the workgroup override client-side settings. For more information, see [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html). Defaults to `true`.
 {{% /md %}}</dd>
@@ -1133,7 +917,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Publish<wbr>Cloudwatch<wbr>Metrics<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1142,7 +926,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Result<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with result settings. Documented below.
 {{% /md %}}</dd>
@@ -1158,7 +942,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer for the upper data usage limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan. Must be at least `10485760`.
 {{% /md %}}</dd>
@@ -1167,7 +951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enforce<wbr>Workgroup<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether the settings for the workgroup override client-side settings. For more information, see [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html). Defaults to `true`.
 {{% /md %}}</dd>
@@ -1176,7 +960,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Publish<wbr>Cloudwatch<wbr>Metrics<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1185,7 +969,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Result<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">*Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with result settings. Documented below.
 {{% /md %}}</dd>
@@ -1201,7 +985,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bytes<wbr>Scanned<wbr>Cutoff<wbr>Per<wbr>Query</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer for the upper data usage limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan. Must be at least `10485760`.
 {{% /md %}}</dd>
@@ -1210,7 +994,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enforce<wbr>Workgroup<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean whether the settings for the workgroup override client-side settings. For more information, see [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html). Defaults to `true`.
 {{% /md %}}</dd>
@@ -1219,7 +1003,7 @@ The following state arguments are supported:
             title="Optional">
         <span>publish<wbr>Cloudwatch<wbr>Metrics<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1228,7 +1012,7 @@ The following state arguments are supported:
             title="Optional">
         <span>result<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with result settings. Documented below.
 {{% /md %}}</dd>
@@ -1302,7 +1086,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with encryption settings. Documented below.
 {{% /md %}}</dd>
@@ -1311,7 +1095,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`. For more information, see [Queries and Query Result Files](https://docs.aws.amazon.com/athena/latest/ug/querying.html).
 {{% /md %}}</dd>
@@ -1327,7 +1111,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">*Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with encryption settings. Documented below.
 {{% /md %}}</dd>
@@ -1336,7 +1120,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`. For more information, see [Queries and Query Result Files](https://docs.aws.amazon.com/athena/latest/ug/querying.html).
 {{% /md %}}</dd>
@@ -1352,7 +1136,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encryption<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with encryption settings. Documented below.
 {{% /md %}}</dd>
@@ -1361,7 +1145,7 @@ The following state arguments are supported:
             title="Optional">
         <span>output<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`. For more information, see [Queries and Query Result Files](https://docs.aws.amazon.com/athena/latest/ug/querying.html).
 {{% /md %}}</dd>
@@ -1417,7 +1201,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys (`SSE_S3`), server-side encryption with KMS-managed keys (`SSE_KMS`), or client-side encryption with KMS-managed keys (`CSE_KMS`) is used. If a query runs in a workgroup and the workgroup overrides client-side settings, then the workgroup's setting for encryption is used. It specifies whether query results must be encrypted, for all queries that run in this workgroup.
 {{% /md %}}</dd>
@@ -1426,7 +1210,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For `SSE_KMS` and `CSE_KMS`, this is the KMS key Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -1442,7 +1226,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys (`SSE_S3`), server-side encryption with KMS-managed keys (`SSE_KMS`), or client-side encryption with KMS-managed keys (`CSE_KMS`) is used. If a query runs in a workgroup and the workgroup overrides client-side settings, then the workgroup's setting for encryption is used. It specifies whether query results must be encrypted, for all queries that run in this workgroup.
 {{% /md %}}</dd>
@@ -1451,7 +1235,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For `SSE_KMS` and `CSE_KMS`, this is the KMS key Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -1467,7 +1251,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encryption<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys (`SSE_S3`), server-side encryption with KMS-managed keys (`SSE_KMS`), or client-side encryption with KMS-managed keys (`CSE_KMS`) is used. If a query runs in a workgroup and the workgroup overrides client-side settings, then the workgroup's setting for encryption is used. It specifies whether query results must be encrypted, for all queries that run in this workgroup.
 {{% /md %}}</dd>
@@ -1476,7 +1260,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For `SSE_KMS` and `CSE_KMS`, this is the KMS key Amazon Resource Name (ARN).
 {{% /md %}}</dd>

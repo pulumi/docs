@@ -60,7 +60,7 @@ const test = new aws.worklink.Fleet("test", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/worklink/#Fleet">Fleet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/worklink/#FleetArgs">FleetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/worklink/#Fleet">Fleet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/worklink/#FleetArgs">FleetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -68,11 +68,11 @@ const test = new aws.worklink.Fleet("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFleet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/worklink?tab=doc#FleetArgs">FleetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/worklink?tab=doc#Fleet">Fleet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFleet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/worklink?tab=doc#FleetArgs">FleetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/worklink?tab=doc#Fleet">Fleet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Worklink.Fleet.html">Fleet</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WorkLink.FleetArgs.html">FleetArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WorkLink.Fleet.html">Fleet</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WorkLink.FleetArgs.html">FleetArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -168,7 +168,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Audit<wbr>Stream<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Device<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Identity<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider<wbr>Args?</a></span>
+        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -204,7 +204,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
@@ -213,7 +213,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network<wbr>Args?</a></span>
+        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -222,7 +222,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Optimize<wbr>For<wbr>End<wbr>User<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
 {{% /md %}}</dd>
@@ -238,7 +238,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Audit<wbr>Stream<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
 {{% /md %}}</dd>
@@ -247,7 +247,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Device<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
 {{% /md %}}</dd>
@@ -256,7 +256,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -265,7 +265,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Identity<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">*Fleet<wbr>Identity<wbr>Provider</a></span>
+        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
@@ -283,7 +283,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">*Fleet<wbr>Network</a></span>
+        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>Optimize<wbr>For<wbr>End<wbr>User<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
 {{% /md %}}</dd>
@@ -308,7 +308,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>audit<wbr>Stream<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
 {{% /md %}}</dd>
@@ -317,7 +317,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>device<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
 {{% /md %}}</dd>
@@ -326,7 +326,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -335,7 +335,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>identity<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider?</a></span>
+        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -344,7 +344,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
@@ -353,7 +353,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network?</a></span>
+        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -362,7 +362,7 @@ const test = new aws.worklink.Fleet("test", {
             title="Optional">
         <span>optimize<wbr>For<wbr>End<wbr>User<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
 {{% /md %}}</dd>
@@ -467,15 +467,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Audit<wbr>Stream<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Company<wbr>Code</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -494,65 +485,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Device<wbr>Ca<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the fleet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identity<wbr>Provider</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider?</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Last<wbr>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the fleet was last updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network?</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Optimize<wbr>For<wbr>End<wbr>User<wbr>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -573,15 +510,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Audit<wbr>Stream<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Company<wbr>Code</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -600,65 +528,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Device<wbr>Ca<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the fleet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identity<wbr>Provider</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">*Fleet<wbr>Identity<wbr>Provider</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Last<wbr>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the fleet was last updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">*Fleet<wbr>Network</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Optimize<wbr>For<wbr>End<wbr>User<wbr>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -675,15 +549,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created WorkLink Fleet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>audit<wbr>Stream<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -706,65 +571,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>device<wbr>Ca<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the fleet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identity<wbr>Provider</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider?</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>last<wbr>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the fleet was last updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network?</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>optimize<wbr>For<wbr>End<wbr>User<wbr>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -781,15 +592,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the created WorkLink Fleet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>audit_<wbr>stream_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -812,65 +614,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>device_<wbr>ca_<wbr>certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the fleet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identity_<wbr>provider</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">Dict[Fleet<wbr>Identity<wbr>Provider]</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>last_<wbr>updated_<wbr>time</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that the fleet was last updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">Dict[Fleet<wbr>Network]</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>optimize_<wbr>for_<wbr>end_<wbr>user_<wbr>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -902,7 +650,7 @@ Get an existing Fleet resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Worklink.Fleet.html">Fleet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Worklink.FleetState.html">FleetState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WorkLink.Fleet.html">Fleet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WorkLink.FleetState.html">FleetState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1012,7 +760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created WorkLink Fleet.
 {{% /md %}}</dd>
@@ -1021,7 +769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Audit<wbr>Stream<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
 {{% /md %}}</dd>
@@ -1030,7 +778,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Company<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier used by users to sign in to the Amazon WorkLink app.
 {{% /md %}}</dd>
@@ -1039,7 +787,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the fleet was created.
 {{% /md %}}</dd>
@@ -1048,7 +796,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Device<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
 {{% /md %}}</dd>
@@ -1057,7 +805,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -1066,7 +814,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider<wbr>Args?</a></span>
+        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -1075,7 +823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the fleet was last updated.
 {{% /md %}}</dd>
@@ -1084,7 +832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
@@ -1093,7 +841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network<wbr>Args?</a></span>
+        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -1102,7 +850,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Optimize<wbr>For<wbr>End<wbr>User<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1118,7 +866,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created WorkLink Fleet.
 {{% /md %}}</dd>
@@ -1127,7 +875,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Audit<wbr>Stream<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
 {{% /md %}}</dd>
@@ -1136,7 +884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Company<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier used by users to sign in to the Amazon WorkLink app.
 {{% /md %}}</dd>
@@ -1145,7 +893,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the fleet was created.
 {{% /md %}}</dd>
@@ -1154,7 +902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Device<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
 {{% /md %}}</dd>
@@ -1163,7 +911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -1172,7 +920,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">*Fleet<wbr>Identity<wbr>Provider</a></span>
+        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -1181,7 +929,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the fleet was last updated.
 {{% /md %}}</dd>
@@ -1190,7 +938,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
@@ -1199,7 +947,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">*Fleet<wbr>Network</a></span>
+        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -1208,7 +956,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Optimize<wbr>For<wbr>End<wbr>User<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1224,7 +972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created WorkLink Fleet.
 {{% /md %}}</dd>
@@ -1233,7 +981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>audit<wbr>Stream<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
 {{% /md %}}</dd>
@@ -1242,7 +990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>company<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier used by users to sign in to the Amazon WorkLink app.
 {{% /md %}}</dd>
@@ -1251,7 +999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the fleet was created.
 {{% /md %}}</dd>
@@ -1260,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>device<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
 {{% /md %}}</dd>
@@ -1269,7 +1017,7 @@ The following state arguments are supported:
             title="Optional">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -1278,7 +1026,7 @@ The following state arguments are supported:
             title="Optional">
         <span>identity<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider?</a></span>
+        <span class="property-type"><a href="#fleetidentityprovider">Fleet<wbr>Identity<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -1287,7 +1035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>last<wbr>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the fleet was last updated.
 {{% /md %}}</dd>
@@ -1296,7 +1044,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
@@ -1305,7 +1053,7 @@ The following state arguments are supported:
             title="Optional">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network?</a></span>
+        <span class="property-type"><a href="#fleetnetwork">Fleet<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow manage the company network configuration for the fleet. Fields documented below.
 {{% /md %}}</dd>
@@ -1314,7 +1062,7 @@ The following state arguments are supported:
             title="Optional">
         <span>optimize<wbr>For<wbr>End<wbr>User<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1573,7 +1321,7 @@ The following state arguments are supported:
             title="Required">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs associated with access to the provided subnets.
 {{% /md %}}</dd>
@@ -1582,7 +1330,7 @@ The following state arguments are supported:
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs used for X-ENI connections from Amazon WorkLink rendering containers.
 {{% /md %}}</dd>

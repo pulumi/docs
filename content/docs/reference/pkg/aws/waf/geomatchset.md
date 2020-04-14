@@ -40,7 +40,7 @@ const geoMatchSet = new aws.waf.GeoMatchSet("geo_match_set", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#GeoMatchSet">GeoMatchSet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#GeoMatchSetArgs">GeoMatchSetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#GeoMatchSet">GeoMatchSet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#GeoMatchSetArgs">GeoMatchSetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -48,7 +48,7 @@ const geoMatchSet = new aws.waf.GeoMatchSet("geo_match_set", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGeoMatchSet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/waf?tab=doc#GeoMatchSetArgs">GeoMatchSetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/waf?tab=doc#GeoMatchSet">GeoMatchSet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGeoMatchSet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/waf?tab=doc#GeoMatchSetArgs">GeoMatchSetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/waf?tab=doc#GeoMatchSet">GeoMatchSet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -148,7 +148,7 @@ const geoMatchSet = new aws.waf.GeoMatchSet("geo_match_set", {
             title="Optional">
         <span>Geo<wbr>Match<wbr>Constraints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">List&lt;Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">List&lt;Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
 {{% /md %}}</dd>
@@ -157,7 +157,7 @@ const geoMatchSet = new aws.waf.GeoMatchSet("geo_match_set", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the GeoMatchSet.
 {{% /md %}}</dd>
@@ -182,7 +182,7 @@ const geoMatchSet = new aws.waf.GeoMatchSet("geo_match_set", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the GeoMatchSet.
 {{% /md %}}</dd>
@@ -198,7 +198,7 @@ const geoMatchSet = new aws.waf.GeoMatchSet("geo_match_set", {
             title="Optional">
         <span>geo<wbr>Match<wbr>Constraints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint[]?</a></span>
+        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
 {{% /md %}}</dd>
@@ -207,7 +207,7 @@ const geoMatchSet = new aws.waf.GeoMatchSet("geo_match_set", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the GeoMatchSet.
 {{% /md %}}</dd>
@@ -265,24 +265,6 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Geo<wbr>Match<wbr>Constraints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">List&lt;Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the GeoMatchSet.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -297,24 +279,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Geo<wbr>Match<wbr>Constraints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">[]Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint</a></span>
-    </dt>
-    <dd>{{% md %}}The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the GeoMatchSet.
 {{% /md %}}</dd>
 
 </dl>
@@ -333,24 +297,6 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>geo<wbr>Match<wbr>Constraints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the GeoMatchSet.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -365,24 +311,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>geo_<wbr>match_<wbr>constraints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">List[Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint]</a></span>
-    </dt>
-    <dd>{{% md %}}The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the GeoMatchSet.
 {{% /md %}}</dd>
 
 </dl>
@@ -524,7 +452,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
@@ -533,7 +461,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Geo<wbr>Match<wbr>Constraints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">List&lt;Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">List&lt;Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
 {{% /md %}}</dd>
@@ -542,7 +470,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the GeoMatchSet.
 {{% /md %}}</dd>
@@ -558,7 +486,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
@@ -576,7 +504,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the GeoMatchSet.
 {{% /md %}}</dd>
@@ -592,7 +520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
@@ -601,7 +529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>geo<wbr>Match<wbr>Constraints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint[]?</a></span>
+        <span class="property-type"><a href="#geomatchsetgeomatchconstraint">Geo<wbr>Match<wbr>Set<wbr>Geo<wbr>Match<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
 {{% /md %}}</dd>
@@ -610,7 +538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the GeoMatchSet.
 {{% /md %}}</dd>

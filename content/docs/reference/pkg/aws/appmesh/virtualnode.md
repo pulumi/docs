@@ -175,7 +175,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualNode">VirtualNode</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualNodeArgs">VirtualNodeArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualNode">VirtualNode</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualNodeArgs">VirtualNodeArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -183,11 +183,11 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVirtualNode<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeArgs">VirtualNodeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVirtualNode<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeArgs">VirtualNodeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.VirtualNode.html">VirtualNode</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNodeArgs.html">VirtualNodeArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNode.html">VirtualNode</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNodeArgs.html">VirtualNodeArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -288,15 +288,6 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Spec</span>
@@ -308,9 +299,18 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name to use for the virtual node.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -331,15 +331,6 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Spec</span>
@@ -347,6 +338,15 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
         <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual node specification to apply.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name to use for the virtual node.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -374,15 +374,6 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>spec</span>
@@ -394,9 +385,18 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name to use for the virtual node.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -417,15 +417,6 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>spec</span>
@@ -433,6 +424,15 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
         <span class="property-type"><a href="#virtualnodespec">Dict[Virtual<wbr>Node<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}The virtual node specification to apply.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name to use for the virtual node.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -490,42 +490,6 @@ The following output properties are available:
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Mesh<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}The virtual node specification to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -558,42 +522,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mesh<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}The virtual node specification to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -630,42 +558,6 @@ The following output properties are available:
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>mesh<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}The virtual node specification to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -700,42 +592,6 @@ The following output properties are available:
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>mesh_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">Dict[Virtual<wbr>Node<wbr>Spec]</a></span>
-    </dt>
-    <dd>{{% md %}}The virtual node specification to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -765,7 +621,7 @@ Get an existing VirtualNode resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.VirtualNode.html">VirtualNode</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.VirtualNodeState.html">VirtualNodeState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNode.html">VirtualNode</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNodeState.html">VirtualNodeState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -875,7 +731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual node.
 {{% /md %}}</dd>
@@ -884,7 +740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual node.
 {{% /md %}}</dd>
@@ -893,7 +749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
@@ -902,7 +758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mesh<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
@@ -911,7 +767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual node.
 {{% /md %}}</dd>
@@ -920,7 +776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual node specification to apply.
 {{% /md %}}</dd>
@@ -929,7 +785,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -945,7 +801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual node.
 {{% /md %}}</dd>
@@ -954,7 +810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual node.
 {{% /md %}}</dd>
@@ -963,7 +819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
@@ -972,7 +828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mesh<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
@@ -981,7 +837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual node.
 {{% /md %}}</dd>
@@ -990,7 +846,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">*Virtual<wbr>Node<wbr>Spec</a></span>
+        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual node specification to apply.
 {{% /md %}}</dd>
@@ -1015,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual node.
 {{% /md %}}</dd>
@@ -1024,7 +880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual node.
 {{% /md %}}</dd>
@@ -1033,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
@@ -1042,7 +898,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mesh<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
@@ -1051,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual node.
 {{% /md %}}</dd>
@@ -1060,7 +916,7 @@ The following state arguments are supported:
             title="Optional">
         <span>spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec?</a></span>
+        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual node specification to apply.
 {{% /md %}}</dd>
@@ -1069,7 +925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1177,7 +1033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backends</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackend">List&lt;Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackend">List&lt;Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The backends to which the virtual node is expected to send outbound traffic.
 {{% /md %}}</dd>
@@ -1186,7 +1042,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Listener</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The listeners from which the virtual node is expected to receive inbound traffic.
 {{% /md %}}</dd>
@@ -1195,7 +1051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual node.
 {{% /md %}}</dd>
@@ -1204,7 +1060,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Discovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service discovery information for the virtual node.
 {{% /md %}}</dd>
@@ -1229,7 +1085,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Listener</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistener">*Virtual<wbr>Node<wbr>Spec<wbr>Listener</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners from which the virtual node is expected to receive inbound traffic.
 {{% /md %}}</dd>
@@ -1238,7 +1094,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclogging">*Virtual<wbr>Node<wbr>Spec<wbr>Logging</a></span>
+        <span class="property-type"><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual node.
 {{% /md %}}</dd>
@@ -1247,7 +1103,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Discovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscovery">*Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery</a></span>
     </dt>
     <dd>{{% md %}}The service discovery information for the virtual node.
 {{% /md %}}</dd>
@@ -1263,7 +1119,7 @@ The following state arguments are supported:
             title="Optional">
         <span>backends</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackend">Virtual<wbr>Node<wbr>Spec<wbr>Backend[]?</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackend">Virtual<wbr>Node<wbr>Spec<wbr>Backend[]</a></span>
     </dt>
     <dd>{{% md %}}The backends to which the virtual node is expected to send outbound traffic.
 {{% /md %}}</dd>
@@ -1272,7 +1128,7 @@ The following state arguments are supported:
             title="Optional">
         <span>listener</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener?</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners from which the virtual node is expected to receive inbound traffic.
 {{% /md %}}</dd>
@@ -1281,7 +1137,7 @@ The following state arguments are supported:
             title="Optional">
         <span>logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging?</a></span>
+        <span class="property-type"><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual node.
 {{% /md %}}</dd>
@@ -1290,7 +1146,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Discovery</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery?</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery</a></span>
     </dt>
     <dd>{{% md %}}The service discovery information for the virtual node.
 {{% /md %}}</dd>
@@ -1364,7 +1220,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Virtual<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a virtual service to use as a backend for a virtual node.
 {{% /md %}}</dd>
@@ -1380,7 +1236,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Virtual<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">*Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Specifies a virtual service to use as a backend for a virtual node.
 {{% /md %}}</dd>
@@ -1396,7 +1252,7 @@ The following state arguments are supported:
             title="Optional">
         <span>virtual<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service?</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Specifies a virtual service to use as a backend for a virtual node.
 {{% /md %}}</dd>
@@ -1518,15 +1374,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The health check information for the listener.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Port<wbr>Mapping</span>
@@ -1536,21 +1383,21 @@ The following state arguments are supported:
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The health check information for the listener.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">*Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
-    </dt>
-    <dd>{{% md %}}The health check information for the listener.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1561,21 +1408,21 @@ The following state arguments are supported:
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}The health check information for the listener.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}The health check information for the listener.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1586,21 +1433,21 @@ The following state arguments are supported:
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}The health check information for the listener.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>health_<wbr>check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check]</a></span>
-    </dt>
-    <dd>{{% md %}}The health check information for the listener.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1609,6 +1456,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualnodespeclistenerportmapping">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>health_<wbr>check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check]</a></span>
+    </dt>
+    <dd>{{% md %}}The health check information for the listener.
 {{% /md %}}</dd>
 
 </dl>
@@ -1651,24 +1507,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Protocol</span>
@@ -1694,6 +1532,24 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
 {{% /md %}}</dd>
 
 </dl>
@@ -1721,24 +1577,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Protocol</span>
@@ -1766,6 +1604,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1790,24 +1646,6 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1836,6 +1674,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1860,24 +1716,6 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1904,6 +1742,24 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
 {{% /md %}}</dd>
 
 </dl>
@@ -2047,7 +1903,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Log</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual node.
 {{% /md %}}</dd>
@@ -2063,7 +1919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Log</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">*Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual node.
 {{% /md %}}</dd>
@@ -2079,7 +1935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Log</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log?</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual node.
 {{% /md %}}</dd>
@@ -2126,7 +1982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual node access logs to.
 {{% /md %}}</dd>
@@ -2142,7 +1998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">*Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual node access logs to.
 {{% /md %}}</dd>
@@ -2158,7 +2014,7 @@ The following state arguments are supported:
             title="Optional">
         <span>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File?</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual node access logs to.
 {{% /md %}}</dd>
@@ -2284,7 +2140,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Cloud<wbr>Map</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies any AWS Cloud Map information for the virtual node.
 {{% /md %}}</dd>
@@ -2293,7 +2149,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the DNS service name for the virtual node.
 {{% /md %}}</dd>
@@ -2309,7 +2165,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Cloud<wbr>Map</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">*Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map</a></span>
     </dt>
     <dd>{{% md %}}Specifies any AWS Cloud Map information for the virtual node.
 {{% /md %}}</dd>
@@ -2318,7 +2174,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">*Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Specifies the DNS service name for the virtual node.
 {{% /md %}}</dd>
@@ -2334,7 +2190,7 @@ The following state arguments are supported:
             title="Optional">
         <span>aws<wbr>Cloud<wbr>Map</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map?</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map</a></span>
     </dt>
     <dd>{{% md %}}Specifies any AWS Cloud Map information for the virtual node.
 {{% /md %}}</dd>
@@ -2343,7 +2199,7 @@ The following state arguments are supported:
             title="Optional">
         <span>dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns?</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Specifies the DNS service name for the virtual node.
 {{% /md %}}</dd>
@@ -2395,15 +2251,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Namespace<wbr>Name</span>
@@ -2423,12 +2270,40 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
     <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Service`](https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html) resource to configure a Cloud Map service.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
+Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html) resource to configure a Cloud Map namespace.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Service<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Service`](https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html) resource to configure a Cloud Map service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2439,40 +2314,12 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
     <dd>{{% md %}}A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Namespace<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
-Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html) resource to configure a Cloud Map namespace.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Service<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Service`](https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html) resource to configure a Cloud Map service.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2493,21 +2340,21 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
     <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Service`](https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html) resource to configure a Cloud Map service.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2526,6 +2373,15 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Service`](https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html) resource to configure a Cloud Map service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
 {{% /md %}}</dd>
 
 </dl>

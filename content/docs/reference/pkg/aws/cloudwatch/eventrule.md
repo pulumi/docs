@@ -57,7 +57,7 @@ const defaultTopicPolicy = new aws.sns.TopicPolicy("default", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventRule">EventRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventRuleArgs">EventRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventRule">EventRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventRuleArgs">EventRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -65,11 +65,11 @@ const defaultTopicPolicy = new aws.sns.TopicPolicy("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEventRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventRuleArgs">EventRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventRule">EventRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEventRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventRuleArgs">EventRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventRule">EventRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.EventRule.html">EventRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.EventRuleArgs.html">EventRuleArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.EventRule.html">EventRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.EventRuleArgs.html">EventRuleArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -165,7 +165,7 @@ const defaultTopicPolicy = new aws.sns.TopicPolicy("default", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd>
@@ -174,7 +174,7 @@ const defaultTopicPolicy = new aws.sns.TopicPolicy("default", {
             title="Optional">
         <span>Event<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Event pattern
 described a JSON object.
@@ -185,7 +185,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the rule should be enabled (defaults to `true`).
 {{% /md %}}</dd>
@@ -194,7 +194,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule's name. By default generated by this provider.
 {{% /md %}}</dd>
@@ -203,7 +203,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule's name. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -212,7 +212,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
 {{% /md %}}</dd>
@@ -221,7 +221,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Schedule<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scheduling expression.
 For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
@@ -231,7 +231,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -247,7 +247,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd>
@@ -256,7 +256,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>Event<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Event pattern
 described a JSON object.
@@ -267,7 +267,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the rule should be enabled (defaults to `true`).
 {{% /md %}}</dd>
@@ -276,7 +276,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule's name. By default generated by this provider.
 {{% /md %}}</dd>
@@ -285,7 +285,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule's name. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -294,7 +294,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
 {{% /md %}}</dd>
@@ -303,7 +303,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Schedule<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scheduling expression.
 For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
@@ -329,7 +329,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd>
@@ -338,7 +338,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>event<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Event pattern
 described a JSON object.
@@ -349,7 +349,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the rule should be enabled (defaults to `true`).
 {{% /md %}}</dd>
@@ -358,7 +358,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule's name. By default generated by this provider.
 {{% /md %}}</dd>
@@ -367,7 +367,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule's name. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -376,7 +376,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>schedule<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scheduling expression.
 For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
@@ -395,7 +395,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -510,81 +510,6 @@ The following output properties are available:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the rule.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Event<wbr>Pattern</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Event pattern
-described a JSON object.
-See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CloudWatchEventsandEventPatterns.html) for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Is<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the rule should be enabled (defaults to `true`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The rule's name. By default generated by this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The rule's name. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule<wbr>Expression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The scheduling expression.
-For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -599,81 +524,6 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Event<wbr>Pattern</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Event pattern
-described a JSON object.
-See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CloudWatchEventsandEventPatterns.html) for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Is<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the rule should be enabled (defaults to `true`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The rule's name. By default generated by this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The rule's name. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule<wbr>Expression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The scheduling expression.
-For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -692,81 +542,6 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the rule.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>event<wbr>Pattern</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Event pattern
-described a JSON object.
-See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CloudWatchEventsandEventPatterns.html) for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>is<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the rule should be enabled (defaults to `true`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The rule's name. By default generated by this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The rule's name. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>schedule<wbr>Expression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The scheduling expression.
-For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -781,81 +556,6 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>event_<wbr>pattern</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Event pattern
-described a JSON object.
-See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CloudWatchEventsandEventPatterns.html) for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>is_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the rule should be enabled (defaults to `true`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The rule's name. By default generated by this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The rule's name. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>schedule_<wbr>expression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The scheduling expression.
-For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -887,7 +587,7 @@ Get an existing EventRule resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.EventRule.html">EventRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.EventRuleState.html">EventRuleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.EventRule.html">EventRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.EventRuleState.html">EventRuleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -997,7 +697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the rule.
 {{% /md %}}</dd>
@@ -1006,7 +706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd>
@@ -1015,7 +715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Event pattern
 described a JSON object.
@@ -1026,7 +726,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the rule should be enabled (defaults to `true`).
 {{% /md %}}</dd>
@@ -1035,7 +735,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule's name. By default generated by this provider.
 {{% /md %}}</dd>
@@ -1044,7 +744,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule's name. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -1053,7 +753,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
 {{% /md %}}</dd>
@@ -1062,7 +762,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Schedule<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scheduling expression.
 For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
@@ -1072,7 +772,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1088,7 +788,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the rule.
 {{% /md %}}</dd>
@@ -1097,7 +797,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd>
@@ -1106,7 +806,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>Event<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Event pattern
 described a JSON object.
@@ -1117,7 +817,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the rule should be enabled (defaults to `true`).
 {{% /md %}}</dd>
@@ -1126,7 +826,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule's name. By default generated by this provider.
 {{% /md %}}</dd>
@@ -1135,7 +835,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule's name. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -1144,7 +844,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
 {{% /md %}}</dd>
@@ -1153,7 +853,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>Schedule<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scheduling expression.
 For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
@@ -1179,7 +879,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the rule.
 {{% /md %}}</dd>
@@ -1188,7 +888,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd>
@@ -1197,7 +897,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>event<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Event pattern
 described a JSON object.
@@ -1208,7 +908,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the rule should be enabled (defaults to `true`).
 {{% /md %}}</dd>
@@ -1217,7 +917,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule's name. By default generated by this provider.
 {{% /md %}}</dd>
@@ -1226,7 +926,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule's name. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -1235,7 +935,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
 {{% /md %}}</dd>
@@ -1244,7 +944,7 @@ See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws
             title="Optional">
         <span>schedule<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scheduling expression.
 For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
@@ -1254,7 +954,7 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>

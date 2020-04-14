@@ -44,7 +44,7 @@ const test = new aws.rds.Snapshot("test", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#Snapshot">Snapshot</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#SnapshotArgs">SnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#Snapshot">Snapshot</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#SnapshotArgs">SnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -52,7 +52,7 @@ const test = new aws.rds.Snapshot("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/rds?tab=doc#SnapshotArgs">SnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/rds?tab=doc#Snapshot">Snapshot</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/rds?tab=doc#SnapshotArgs">SnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/rds?tab=doc#Snapshot">Snapshot</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -170,7 +170,7 @@ const test = new aws.rds.Snapshot("test", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -238,7 +238,7 @@ const test = new aws.rds.Snapshot("test", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -316,29 +316,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Instance<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DB Instance Identifier from which to take the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Db<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Db<wbr>Snapshot<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -454,15 +436,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -501,29 +474,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Instance<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DB Instance Identifier from which to take the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Db<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Db<wbr>Snapshot<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -643,15 +598,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -686,29 +632,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db<wbr>Instance<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DB Instance Identifier from which to take the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>db<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>db<wbr>Snapshot<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -828,15 +756,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -871,29 +790,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db_<wbr>instance_<wbr>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The DB Instance Identifier from which to take the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>db_<wbr>snapshot_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>db_<wbr>snapshot_<wbr>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1009,15 +910,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1168,7 +1060,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allocated<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allocated storage size in gigabytes (GB).
 {{% /md %}}</dd>
@@ -1177,7 +1069,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
 {{% /md %}}</dd>
@@ -1186,7 +1078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Instance<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB Instance Identifier from which to take the snapshot.
 {{% /md %}}</dd>
@@ -1195,7 +1087,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB snapshot.
 {{% /md %}}</dd>
@@ -1204,7 +1096,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
@@ -1213,7 +1105,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB snapshot is encrypted.
 {{% /md %}}</dd>
@@ -1222,7 +1114,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the database engine.
 {{% /md %}}</dd>
@@ -1231,7 +1123,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the database engine.
 {{% /md %}}</dd>
@@ -1240,7 +1132,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
 {{% /md %}}</dd>
@@ -1249,7 +1141,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -1258,7 +1150,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Model</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License model information for the restored DB instance.
 {{% /md %}}</dd>
@@ -1267,7 +1159,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Option<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provides the option group name for the DB snapshot.
 {{% /md %}}</dd>
@@ -1276,7 +1168,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1284,7 +1176,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snapshot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1292,7 +1184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Db<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
 {{% /md %}}</dd>
@@ -1301,7 +1193,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region that the DB snapshot was created in or copied from.
 {{% /md %}}</dd>
@@ -1310,7 +1202,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the status of this DB snapshot.
 {{% /md %}}</dd>
@@ -1319,7 +1211,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
 {{% /md %}}</dd>
@@ -1328,7 +1220,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -1337,7 +1229,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
 {{% /md %}}</dd>
@@ -1353,7 +1245,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allocated<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allocated storage size in gigabytes (GB).
 {{% /md %}}</dd>
@@ -1362,7 +1254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
 {{% /md %}}</dd>
@@ -1371,7 +1263,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Instance<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB Instance Identifier from which to take the snapshot.
 {{% /md %}}</dd>
@@ -1380,7 +1272,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB snapshot.
 {{% /md %}}</dd>
@@ -1389,7 +1281,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
@@ -1398,7 +1290,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB snapshot is encrypted.
 {{% /md %}}</dd>
@@ -1407,7 +1299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the database engine.
 {{% /md %}}</dd>
@@ -1416,7 +1308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the database engine.
 {{% /md %}}</dd>
@@ -1425,7 +1317,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
 {{% /md %}}</dd>
@@ -1434,7 +1326,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -1443,7 +1335,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Model</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License model information for the restored DB instance.
 {{% /md %}}</dd>
@@ -1452,7 +1344,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Option<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provides the option group name for the DB snapshot.
 {{% /md %}}</dd>
@@ -1461,7 +1353,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1469,7 +1361,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snapshot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1477,7 +1369,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Db<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
 {{% /md %}}</dd>
@@ -1486,7 +1378,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region that the DB snapshot was created in or copied from.
 {{% /md %}}</dd>
@@ -1495,7 +1387,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the status of this DB snapshot.
 {{% /md %}}</dd>
@@ -1504,7 +1396,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
 {{% /md %}}</dd>
@@ -1522,7 +1414,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
 {{% /md %}}</dd>
@@ -1538,7 +1430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allocated<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the allocated storage size in gigabytes (GB).
 {{% /md %}}</dd>
@@ -1547,7 +1439,7 @@ The following state arguments are supported:
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
 {{% /md %}}</dd>
@@ -1556,7 +1448,7 @@ The following state arguments are supported:
             title="Optional">
         <span>db<wbr>Instance<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB Instance Identifier from which to take the snapshot.
 {{% /md %}}</dd>
@@ -1565,7 +1457,7 @@ The following state arguments are supported:
             title="Optional">
         <span>db<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB snapshot.
 {{% /md %}}</dd>
@@ -1574,7 +1466,7 @@ The following state arguments are supported:
             title="Optional">
         <span>db<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
@@ -1583,7 +1475,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB snapshot is encrypted.
 {{% /md %}}</dd>
@@ -1592,7 +1484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the database engine.
 {{% /md %}}</dd>
@@ -1601,7 +1493,7 @@ The following state arguments are supported:
             title="Optional">
         <span>engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the database engine.
 {{% /md %}}</dd>
@@ -1610,7 +1502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
 {{% /md %}}</dd>
@@ -1619,7 +1511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -1628,7 +1520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>license<wbr>Model</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License model information for the restored DB instance.
 {{% /md %}}</dd>
@@ -1637,7 +1529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>option<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provides the option group name for the DB snapshot.
 {{% /md %}}</dd>
@@ -1646,7 +1538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1654,7 +1546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>snapshot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1662,7 +1554,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Db<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
 {{% /md %}}</dd>
@@ -1671,7 +1563,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region that the DB snapshot was created in or copied from.
 {{% /md %}}</dd>
@@ -1680,7 +1572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the status of this DB snapshot.
 {{% /md %}}</dd>
@@ -1689,7 +1581,7 @@ The following state arguments are supported:
             title="Optional">
         <span>storage<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
 {{% /md %}}</dd>
@@ -1698,7 +1590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -1707,7 +1599,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage type associated with DB snapshot.
 {{% /md %}}</dd>

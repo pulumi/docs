@@ -45,7 +45,7 @@ const serviceImage = pulumi.output(aws.ecr.getImage({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupImage<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecr?tab=doc#LookupImageArgs">LookupImageArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecr?tab=doc#LookupImageResult">LookupImageResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupImage<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecr?tab=doc#LookupImageArgs">LookupImageArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecr?tab=doc#LookupImageResult">LookupImageResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -64,11 +64,20 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Repository<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the ECR Repository.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Image<wbr>Digest</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sha256 digest of the image manifest. At least one of `image_digest` or `image_tag` must be specified.
 {{% /md %}}</dd>
@@ -77,7 +86,7 @@ The following arguments are supported:
             title="Optional">
         <span>Image<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag associated with this image. At least one of `image_digest` or `image_tag` must be specified.
 {{% /md %}}</dd>
@@ -86,18 +95,9 @@ The following arguments are supported:
             title="Optional">
         <span>Registry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Registry where the repository resides.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Repository<wbr>Name</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ECR Repository.
+    <dd>{{% md %}}The ID of the Registry where the repository resides.
 {{% /md %}}</dd>
 
 </dl>
@@ -107,33 +107,6 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Image<wbr>Digest</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The sha256 digest of the image manifest. At least one of `image_digest` or `image_tag` must be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Image<wbr>Tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The tag associated with this image. At least one of `image_digest` or `image_tag` must be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Registry<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Registry where the repository resides.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Repository<wbr>Name</span>
@@ -143,39 +116,39 @@ The following arguments are supported:
     <dd>{{% md %}}The name of the ECR Repository.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Digest</span>
+        <span>Image<wbr>Digest</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sha256 digest of the image manifest. At least one of `image_digest` or `image_tag` must be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Tag</span>
+        <span>Image<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag associated with this image. At least one of `image_digest` or `image_tag` must be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>registry<wbr>Id</span>
+        <span>Registry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Registry where the repository resides.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -186,12 +159,48 @@ The following arguments are supported:
     <dd>{{% md %}}The name of the ECR Repository.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>image<wbr>Digest</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The sha256 digest of the image manifest. At least one of `image_digest` or `image_tag` must be specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>image<wbr>Tag</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tag associated with this image. At least one of `image_digest` or `image_tag` must be specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>registry<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Registry where the repository resides.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>repository_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the ECR Repository.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -218,15 +227,6 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Registry where the repository resides.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>repository_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the ECR Repository.
 {{% /md %}}</dd>
 
 </dl>
@@ -286,17 +286,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Image<wbr>Tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Image<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this image.
 {{% /md %}}</dd>
@@ -312,6 +304,14 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span>Repository<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Image<wbr>Tag</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -361,14 +361,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Image<wbr>Tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Image<wbr>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -387,6 +379,14 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span>Repository<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Image<wbr>Tag</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -436,14 +436,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>image<wbr>Tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>image<wbr>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -462,6 +454,14 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span>repository<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>image<wbr>Tag</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -511,14 +511,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>image_<wbr>tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>image_<wbr>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -537,6 +529,14 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span>repository_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>image_<wbr>tag</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

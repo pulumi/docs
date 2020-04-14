@@ -42,7 +42,7 @@ const test = new aws.dms.ReplicationTask("test", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dms/#ReplicationTask">ReplicationTask</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dms/#ReplicationTaskArgs">ReplicationTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dms/#ReplicationTask">ReplicationTask</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dms/#ReplicationTaskArgs">ReplicationTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -50,7 +50,7 @@ const test = new aws.dms.ReplicationTask("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewReplicationTask<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#ReplicationTaskArgs">ReplicationTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#ReplicationTask">ReplicationTask</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewReplicationTask<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#ReplicationTaskArgs">ReplicationTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#ReplicationTask">ReplicationTask</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -146,15 +146,6 @@ const test = new aws.dms.ReplicationTask("test", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cdc<wbr>Start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Migration<wbr>Type</span>
@@ -182,15 +173,6 @@ const test = new aws.dms.ReplicationTask("test", {
     <dd>{{% md %}}The replication task identifier.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Replication<wbr>Task<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Source<wbr>Endpoint<wbr>Arn</span>
@@ -207,15 +189,6 @@ const test = new aws.dms.ReplicationTask("test", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -227,21 +200,39 @@ const test = new aws.dms.ReplicationTask("test", {
     <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cdc<wbr>Start<wbr>Time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Replication<wbr>Task<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cdc<wbr>Start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -270,15 +261,6 @@ const test = new aws.dms.ReplicationTask("test", {
     <dd>{{% md %}}The replication task identifier.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Replication<wbr>Task<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Source<wbr>Endpoint<wbr>Arn</span>
@@ -295,6 +277,33 @@ const test = new aws.dms.ReplicationTask("test", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Endpoint<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cdc<wbr>Start<wbr>Time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Replication<wbr>Task<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -306,30 +315,12 @@ const test = new aws.dms.ReplicationTask("test", {
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Target<wbr>Endpoint<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cdc<wbr>Start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -358,15 +349,6 @@ const test = new aws.dms.ReplicationTask("test", {
     <dd>{{% md %}}The replication task identifier.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>replication<wbr>Task<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>source<wbr>Endpoint<wbr>Arn</span>
@@ -385,15 +367,6 @@ const test = new aws.dms.ReplicationTask("test", {
     <dd>{{% md %}}An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>target<wbr>Endpoint<wbr>Arn</span>
@@ -403,21 +376,39 @@ const test = new aws.dms.ReplicationTask("test", {
     <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>cdc<wbr>Start<wbr>Time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>replication<wbr>Task<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cdc_<wbr>start_<wbr>time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -446,15 +437,6 @@ const test = new aws.dms.ReplicationTask("test", {
     <dd>{{% md %}}The replication task identifier.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>replication_<wbr>task_<wbr>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>source_<wbr>endpoint_<wbr>arn</span>
@@ -473,15 +455,6 @@ const test = new aws.dms.ReplicationTask("test", {
     <dd>{{% md %}}An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>target_<wbr>endpoint_<wbr>arn</span>
@@ -489,6 +462,33 @@ const test = new aws.dms.ReplicationTask("test", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cdc_<wbr>start_<wbr>time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>replication_<wbr>task_<wbr>settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -512,92 +512,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cdc<wbr>Start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Migration<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Replication<wbr>Instance<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Replication<wbr>Task<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the replication task.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Replication<wbr>Task<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The replication task identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Replication<wbr>Task<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Endpoint<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Table<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Endpoint<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
 {{% /md %}}</dd>
 
 </dl>
@@ -609,92 +528,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cdc<wbr>Start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Migration<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Replication<wbr>Instance<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Replication<wbr>Task<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the replication task.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Replication<wbr>Task<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The replication task identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Replication<wbr>Task<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Endpoint<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Table<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Endpoint<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
 {{% /md %}}</dd>
 
 </dl>
@@ -706,92 +544,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cdc<wbr>Start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>migration<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>replication<wbr>Instance<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>replication<wbr>Task<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the replication task.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>replication<wbr>Task<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The replication task identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>replication<wbr>Task<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source<wbr>Endpoint<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>table<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Endpoint<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
 {{% /md %}}</dd>
 
 </dl>
@@ -803,92 +560,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cdc_<wbr>start_<wbr>time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>migration_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>replication_<wbr>instance_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>replication_<wbr>task_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the replication task.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>replication_<wbr>task_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The replication task identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>replication_<wbr>task_<wbr>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source_<wbr>endpoint_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>table_<wbr>mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>endpoint_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
 {{% /md %}}</dd>
 
 </dl>
@@ -1030,7 +706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cdc<wbr>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
 {{% /md %}}</dd>
@@ -1039,7 +715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Migration<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
 {{% /md %}}</dd>
@@ -1048,7 +724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Replication<wbr>Instance<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
 {{% /md %}}</dd>
@@ -1057,7 +733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Replication<wbr>Task<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the replication task.
 {{% /md %}}</dd>
@@ -1066,7 +742,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Replication<wbr>Task<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replication task identifier.
 {{% /md %}}</dd>
@@ -1075,7 +751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Replication<wbr>Task<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
 {{% /md %}}</dd>
@@ -1084,7 +760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
 {{% /md %}}</dd>
@@ -1093,7 +769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Table<wbr>Mappings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
 {{% /md %}}</dd>
@@ -1102,7 +778,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1111,7 +787,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
 {{% /md %}}</dd>
@@ -1127,7 +803,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cdc<wbr>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
 {{% /md %}}</dd>
@@ -1136,7 +812,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Migration<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
 {{% /md %}}</dd>
@@ -1145,7 +821,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Replication<wbr>Instance<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
 {{% /md %}}</dd>
@@ -1154,7 +830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Replication<wbr>Task<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the replication task.
 {{% /md %}}</dd>
@@ -1163,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Replication<wbr>Task<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replication task identifier.
 {{% /md %}}</dd>
@@ -1172,7 +848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Replication<wbr>Task<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
 {{% /md %}}</dd>
@@ -1181,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
 {{% /md %}}</dd>
@@ -1190,7 +866,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Table<wbr>Mappings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
 {{% /md %}}</dd>
@@ -1208,7 +884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
 {{% /md %}}</dd>
@@ -1224,7 +900,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cdc<wbr>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
 {{% /md %}}</dd>
@@ -1233,7 +909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>migration<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
 {{% /md %}}</dd>
@@ -1242,7 +918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>replication<wbr>Instance<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
 {{% /md %}}</dd>
@@ -1251,7 +927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>replication<wbr>Task<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the replication task.
 {{% /md %}}</dd>
@@ -1260,7 +936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>replication<wbr>Task<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replication task identifier.
 {{% /md %}}</dd>
@@ -1269,7 +945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>replication<wbr>Task<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
 {{% /md %}}</dd>
@@ -1278,7 +954,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
 {{% /md %}}</dd>
@@ -1287,7 +963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>table<wbr>Mappings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
 {{% /md %}}</dd>
@@ -1296,7 +972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1305,7 +981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target<wbr>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
 {{% /md %}}</dd>

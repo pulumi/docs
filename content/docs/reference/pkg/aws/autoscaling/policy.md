@@ -49,7 +49,7 @@ const bat = new aws.autoscaling.Policy("bat", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#Policy">Policy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#Policy">Policy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -57,11 +57,11 @@ const bat = new aws.autoscaling.Policy("bat", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.Policy.html">Policy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.PolicyArgs.html">PolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Policy.html">Policy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.PolicyArgs.html">PolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -153,15 +153,6 @@ const bat = new aws.autoscaling.Policy("bat", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Adjustment<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Autoscaling<wbr>Group<wbr>Name</span>
@@ -173,9 +164,18 @@ const bat = new aws.autoscaling.Policy("bat", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Adjustment<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
 {{% /md %}}</dd>
@@ -184,7 +184,7 @@ const bat = new aws.autoscaling.Policy("bat", {
             title="Optional">
         <span>Estimated<wbr>Instance<wbr>Warmup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
 {{% /md %}}</dd>
@@ -193,7 +193,7 @@ const bat = new aws.autoscaling.Policy("bat", {
             title="Optional">
         <span>Metric<wbr>Aggregation<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
 {{% /md %}}</dd>
@@ -202,7 +202,7 @@ const bat = new aws.autoscaling.Policy("bat", {
             title="Optional">
         <span>Min<wbr>Adjustment<wbr>Magnitude</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -210,7 +210,7 @@ const bat = new aws.autoscaling.Policy("bat", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the dimension.
 {{% /md %}}</dd>
@@ -219,7 +219,7 @@ const bat = new aws.autoscaling.Policy("bat", {
             title="Optional">
         <span>Policy<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
 {{% /md %}}</dd>
@@ -228,7 +228,7 @@ const bat = new aws.autoscaling.Policy("bat", {
             title="Optional">
         <span>Scaling<wbr>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of members by which to
 scale, when the adjustment bounds are breached. A positive value scales
@@ -239,7 +239,7 @@ up. A negative value scales down.
             title="Optional">
         <span>Step<wbr>Adjustments</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">List&lt;Policy<wbr>Step<wbr>Adjustment<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#policystepadjustment">List&lt;Policy<wbr>Step<wbr>Adjustment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage
 group scaling. These have the following structure:
@@ -249,7 +249,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Target<wbr>Tracking<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
@@ -261,15 +261,6 @@ group scaling. These have the following structure:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Adjustment<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Autoscaling<wbr>Group<wbr>Name</span>
@@ -281,9 +272,18 @@ group scaling. These have the following structure:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Adjustment<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Estimated<wbr>Instance<wbr>Warmup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
 {{% /md %}}</dd>
@@ -301,7 +301,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Metric<wbr>Aggregation<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
 {{% /md %}}</dd>
@@ -310,7 +310,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Min<wbr>Adjustment<wbr>Magnitude</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -318,7 +318,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the dimension.
 {{% /md %}}</dd>
@@ -327,7 +327,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Policy<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
 {{% /md %}}</dd>
@@ -336,7 +336,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Scaling<wbr>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of members by which to
 scale, when the adjustment bounds are breached. A positive value scales
@@ -357,7 +357,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Target<wbr>Tracking<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">*Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
@@ -368,15 +368,6 @@ group scaling. These have the following structure:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>adjustment<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -389,9 +380,18 @@ group scaling. These have the following structure:
 
     <dt class="property-optional"
             title="Optional">
+        <span>adjustment<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
 {{% /md %}}</dd>
@@ -400,7 +400,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>estimated<wbr>Instance<wbr>Warmup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
 {{% /md %}}</dd>
@@ -409,7 +409,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>metric<wbr>Aggregation<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
 {{% /md %}}</dd>
@@ -418,7 +418,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>min<wbr>Adjustment<wbr>Magnitude</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -426,7 +426,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the dimension.
 {{% /md %}}</dd>
@@ -435,7 +435,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>policy<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
 {{% /md %}}</dd>
@@ -444,7 +444,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>scaling<wbr>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of members by which to
 scale, when the adjustment bounds are breached. A positive value scales
@@ -455,7 +455,7 @@ up. A negative value scales down.
             title="Optional">
         <span>step<wbr>Adjustments</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">Policy<wbr>Step<wbr>Adjustment[]?</a></span>
+        <span class="property-type"><a href="#policystepadjustment">Policy<wbr>Step<wbr>Adjustment[]</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage
 group scaling. These have the following structure:
@@ -465,7 +465,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>target<wbr>Tracking<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
@@ -477,15 +477,6 @@ group scaling. These have the following structure:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>adjustment_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>autoscaling_<wbr>group_<wbr>name</span>
@@ -493,6 +484,15 @@ group scaling. These have the following structure:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the autoscaling group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>adjustment_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -599,112 +599,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Adjustment<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Autoscaling<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the autoscaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Estimated<wbr>Instance<wbr>Warmup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metric<wbr>Aggregation<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Adjustment<wbr>Magnitude</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the dimension.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scaling<wbr>Adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of members by which to
-scale, when the adjustment bounds are breached. A positive value scales
-up. A negative value scales down.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Step<wbr>Adjustments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">List&lt;Policy<wbr>Step<wbr>Adjustment&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A set of adjustments that manage
-group scaling. These have the following structure:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Tracking<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
 
 </dl>
@@ -716,112 +615,11 @@ group scaling. These have the following structure:
 
     <dt class="property-"
             title="">
-        <span>Adjustment<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Autoscaling<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the autoscaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Estimated<wbr>Instance<wbr>Warmup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metric<wbr>Aggregation<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Adjustment<wbr>Magnitude</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the dimension.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scaling<wbr>Adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The number of members by which to
-scale, when the adjustment bounds are breached. A positive value scales
-up. A negative value scales down.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Step<wbr>Adjustments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">[]Policy<wbr>Step<wbr>Adjustment</a></span>
-    </dt>
-    <dd>{{% md %}}A set of adjustments that manage
-group scaling. These have the following structure:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Tracking<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">*Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
 
 </dl>
@@ -833,112 +631,11 @@ group scaling. These have the following structure:
 
     <dt class="property-"
             title="">
-        <span>adjustment<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>autoscaling<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the autoscaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>estimated<wbr>Instance<wbr>Warmup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metric<wbr>Aggregation<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min<wbr>Adjustment<wbr>Magnitude</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the dimension.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scaling<wbr>Adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of members by which to
-scale, when the adjustment bounds are breached. A positive value scales
-up. A negative value scales down.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>step<wbr>Adjustments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">Policy<wbr>Step<wbr>Adjustment[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A set of adjustments that manage
-group scaling. These have the following structure:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Tracking<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
 
 </dl>
@@ -950,112 +647,11 @@ group scaling. These have the following structure:
 
     <dt class="property-"
             title="">
-        <span>adjustment_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>autoscaling_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the autoscaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>estimated_<wbr>instance_<wbr>warmup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metric_<wbr>aggregation_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min_<wbr>adjustment_<wbr>magnitude</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the dimension.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scaling_<wbr>adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of members by which to
-scale, when the adjustment bounds are breached. A positive value scales
-up. A negative value scales down.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>step_<wbr>adjustments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">List[Policy<wbr>Step<wbr>Adjustment]</a></span>
-    </dt>
-    <dd>{{% md %}}A set of adjustments that manage
-group scaling. These have the following structure:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>tracking_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
 
 </dl>
@@ -1087,7 +683,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.PolicyState.html">PolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.PolicyState.html">PolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1197,7 +793,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Adjustment<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
 {{% /md %}}</dd>
@@ -1206,7 +802,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
 {{% /md %}}</dd>
@@ -1215,7 +811,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the autoscaling group.
 {{% /md %}}</dd>
@@ -1224,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
 {{% /md %}}</dd>
@@ -1233,7 +829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Estimated<wbr>Instance<wbr>Warmup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
 {{% /md %}}</dd>
@@ -1242,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metric<wbr>Aggregation<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
 {{% /md %}}</dd>
@@ -1251,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Adjustment<wbr>Magnitude</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1259,7 +855,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the dimension.
 {{% /md %}}</dd>
@@ -1268,7 +864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
 {{% /md %}}</dd>
@@ -1277,7 +873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scaling<wbr>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of members by which to
 scale, when the adjustment bounds are breached. A positive value scales
@@ -1288,7 +884,7 @@ up. A negative value scales down.
             title="Optional">
         <span>Step<wbr>Adjustments</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">List&lt;Policy<wbr>Step<wbr>Adjustment<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#policystepadjustment">List&lt;Policy<wbr>Step<wbr>Adjustment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage
 group scaling. These have the following structure:
@@ -1298,7 +894,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Target<wbr>Tracking<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
@@ -1314,7 +910,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Adjustment<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
 {{% /md %}}</dd>
@@ -1323,7 +919,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
 {{% /md %}}</dd>
@@ -1332,7 +928,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the autoscaling group.
 {{% /md %}}</dd>
@@ -1341,7 +937,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
 {{% /md %}}</dd>
@@ -1350,7 +946,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Estimated<wbr>Instance<wbr>Warmup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
 {{% /md %}}</dd>
@@ -1359,7 +955,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Metric<wbr>Aggregation<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
 {{% /md %}}</dd>
@@ -1368,7 +964,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Min<wbr>Adjustment<wbr>Magnitude</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1376,7 +972,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the dimension.
 {{% /md %}}</dd>
@@ -1385,7 +981,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Policy<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
 {{% /md %}}</dd>
@@ -1394,7 +990,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Scaling<wbr>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of members by which to
 scale, when the adjustment bounds are breached. A positive value scales
@@ -1415,7 +1011,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Target<wbr>Tracking<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">*Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
@@ -1431,7 +1027,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>adjustment<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
 {{% /md %}}</dd>
@@ -1440,7 +1036,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
 {{% /md %}}</dd>
@@ -1449,7 +1045,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the autoscaling group.
 {{% /md %}}</dd>
@@ -1458,7 +1054,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
 {{% /md %}}</dd>
@@ -1467,7 +1063,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>estimated<wbr>Instance<wbr>Warmup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
 {{% /md %}}</dd>
@@ -1476,7 +1072,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>metric<wbr>Aggregation<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
 {{% /md %}}</dd>
@@ -1485,7 +1081,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>min<wbr>Adjustment<wbr>Magnitude</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1493,7 +1089,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the dimension.
 {{% /md %}}</dd>
@@ -1502,7 +1098,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>policy<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
 {{% /md %}}</dd>
@@ -1511,7 +1107,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>scaling<wbr>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of members by which to
 scale, when the adjustment bounds are breached. A positive value scales
@@ -1522,7 +1118,7 @@ up. A negative value scales down.
             title="Optional">
         <span>step<wbr>Adjustments</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">Policy<wbr>Step<wbr>Adjustment[]?</a></span>
+        <span class="property-type"><a href="#policystepadjustment">Policy<wbr>Step<wbr>Adjustment[]</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage
 group scaling. These have the following structure:
@@ -1532,7 +1128,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>target<wbr>Tracking<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
@@ -1683,11 +1279,22 @@ group scaling. These have the following structure:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Scaling<wbr>Adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of members by which to
+scale, when the adjustment bounds are breached. A positive value scales
+up. A negative value scales down.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Metric<wbr>Interval<wbr>Lower<wbr>Bound</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lower bound for the
 difference between the alarm threshold and the CloudWatch metric.
@@ -1698,23 +1305,12 @@ Without a value, AWS will treat this bound as infinity.
             title="Optional">
         <span>Metric<wbr>Interval<wbr>Upper<wbr>Bound</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upper bound for the
 difference between the alarm threshold and the CloudWatch metric.
 Without a value, AWS will treat this bound as infinity. The upper bound
 must be greater than the lower bound.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Scaling<wbr>Adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of members by which to
-scale, when the adjustment bounds are breached. A positive value scales
-up. A negative value scales down.
 {{% /md %}}</dd>
 
 </dl>
@@ -1724,29 +1320,6 @@ up. A negative value scales down.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metric<wbr>Interval<wbr>Lower<wbr>Bound</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The lower bound for the
-difference between the alarm threshold and the CloudWatch metric.
-Without a value, AWS will treat this bound as infinity.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metric<wbr>Interval<wbr>Upper<wbr>Bound</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The upper bound for the
-difference between the alarm threshold and the CloudWatch metric.
-Without a value, AWS will treat this bound as infinity. The upper bound
-must be greater than the lower bound.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Scaling<wbr>Adjustment</span>
@@ -1758,18 +1331,11 @@ scale, when the adjustment bounds are breached. A positive value scales
 up. A negative value scales down.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>metric<wbr>Interval<wbr>Lower<wbr>Bound</span>
+        <span>Metric<wbr>Interval<wbr>Lower<wbr>Bound</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lower bound for the
 difference between the alarm threshold and the CloudWatch metric.
@@ -1778,15 +1344,22 @@ Without a value, AWS will treat this bound as infinity.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metric<wbr>Interval<wbr>Upper<wbr>Bound</span>
+        <span>Metric<wbr>Interval<wbr>Upper<wbr>Bound</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upper bound for the
 difference between the alarm threshold and the CloudWatch metric.
 Without a value, AWS will treat this bound as infinity. The upper bound
 must be greater than the lower bound.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1799,12 +1372,46 @@ scale, when the adjustment bounds are breached. A positive value scales
 up. A negative value scales down.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>metric<wbr>Interval<wbr>Lower<wbr>Bound</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The lower bound for the
+difference between the alarm threshold and the CloudWatch metric.
+Without a value, AWS will treat this bound as infinity.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metric<wbr>Interval<wbr>Upper<wbr>Bound</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upper bound for the
+difference between the alarm threshold and the CloudWatch metric.
+Without a value, AWS will treat this bound as infinity. The upper bound
+must be greater than the lower bound.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>scaling_<wbr>adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The number of members by which to
+scale, when the adjustment bounds are breached. A positive value scales
+up. A negative value scales down.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1827,17 +1434,6 @@ Without a value, AWS will treat this bound as infinity.
 difference between the alarm threshold and the CloudWatch metric.
 Without a value, AWS will treat this bound as infinity. The upper bound
 must be greater than the lower bound.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>scaling_<wbr>adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of members by which to
-scale, when the adjustment bounds are breached. A positive value scales
-up. A negative value scales down.
 {{% /md %}}</dd>
 
 </dl>
@@ -1862,33 +1458,6 @@ up. A negative value scales down.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Customized<wbr>Metric<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}A customized metric. Conflicts with `predefined_metric_specification`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Disable<wbr>Scale<wbr>In</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Predefined<wbr>Metric<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}A predefined metric. Conflicts with `customized_metric_specification`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Target<wbr>Value</span>
@@ -1898,18 +1467,11 @@ up. A negative value scales down.
     <dd>{{% md %}}The target value for the metric.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Customized<wbr>Metric<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">*Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A customized metric. Conflicts with `predefined_metric_specification`.
 {{% /md %}}</dd>
@@ -1918,7 +1480,7 @@ up. A negative value scales down.
             title="Optional">
         <span>Disable<wbr>Scale<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled.
 {{% /md %}}</dd>
@@ -1927,10 +1489,17 @@ up. A negative value scales down.
             title="Optional">
         <span>Predefined<wbr>Metric<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">*Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. Conflicts with `customized_metric_specification`.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1941,39 +1510,39 @@ up. A negative value scales down.
     <dd>{{% md %}}The target value for the metric.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>customized<wbr>Metric<wbr>Specification</span>
+        <span>Customized<wbr>Metric<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification?</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A customized metric. Conflicts with `predefined_metric_specification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Scale<wbr>In</span>
+        <span>Disable<wbr>Scale<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>predefined<wbr>Metric<wbr>Specification</span>
+        <span>Predefined<wbr>Metric<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification?</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. Conflicts with `customized_metric_specification`.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1984,12 +1553,48 @@ up. A negative value scales down.
     <dd>{{% md %}}The target value for the metric.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>customized<wbr>Metric<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}A customized metric. Conflicts with `predefined_metric_specification`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disable<wbr>Scale<wbr>In</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>predefined<wbr>Metric<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}A predefined metric. Conflicts with `customized_metric_specification`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The target value for the metric.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2018,15 +1623,6 @@ up. A negative value scales down.
     <dd>{{% md %}}A predefined metric. Conflicts with `customized_metric_specification`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>target<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The target value for the metric.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2049,15 +1645,6 @@ up. A negative value scales down.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metric<wbr>Dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">List&lt;Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The dimensions of the metric.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Metric<wbr>Name</span>
@@ -2087,9 +1674,18 @@ up. A negative value scales down.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Metric<wbr>Dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">List&lt;Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The dimensions of the metric.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
 {{% /md %}}</dd>
@@ -2101,15 +1697,6 @@ up. A negative value scales down.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metric<wbr>Dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">[]Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension</a></span>
-    </dt>
-    <dd>{{% md %}}The dimensions of the metric.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Metric<wbr>Name</span>
@@ -2139,9 +1726,18 @@ up. A negative value scales down.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Metric<wbr>Dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">[]Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension</a></span>
+    </dt>
+    <dd>{{% md %}}The dimensions of the metric.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
 {{% /md %}}</dd>
@@ -2152,15 +1748,6 @@ up. A negative value scales down.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metric<wbr>Dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The dimensions of the metric.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2191,9 +1778,18 @@ up. A negative value scales down.
 
     <dt class="property-optional"
             title="Optional">
+        <span>metric<wbr>Dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension[]</a></span>
+    </dt>
+    <dd>{{% md %}}The dimensions of the metric.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
 {{% /md %}}</dd>
@@ -2204,15 +1800,6 @@ up. A negative value scales down.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metric<wbr>Dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">List[Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension]</a></span>
-    </dt>
-    <dd>{{% md %}}The dimensions of the metric.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2239,6 +1826,15 @@ up. A negative value scales down.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metric<wbr>Dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">List[Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension]</a></span>
+    </dt>
+    <dd>{{% md %}}The dimensions of the metric.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2400,7 +1996,7 @@ up. A negative value scales down.
             title="Optional">
         <span>Resource<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
 {{% /md %}}</dd>
@@ -2425,7 +2021,7 @@ up. A negative value scales down.
             title="Optional">
         <span>Resource<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
 {{% /md %}}</dd>
@@ -2450,7 +2046,7 @@ up. A negative value scales down.
             title="Optional">
         <span>resource<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
 {{% /md %}}</dd>

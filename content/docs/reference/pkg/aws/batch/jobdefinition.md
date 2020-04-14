@@ -74,7 +74,7 @@ const test = new aws.batch.JobDefinition("test", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinition">JobDefinition</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinitionArgs">JobDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinition">JobDefinition</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinitionArgs">JobDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -82,7 +82,7 @@ const test = new aws.batch.JobDefinition("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewJobDefinition<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinitionArgs">JobDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinition">JobDefinition</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewJobDefinition<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinitionArgs">JobDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinition">JobDefinition</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -178,11 +178,20 @@ const test = new aws.batch.JobDefinition("test", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Container<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
@@ -192,7 +201,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job definition.
 {{% /md %}}</dd>
@@ -201,7 +210,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
 {{% /md %}}</dd>
@@ -210,7 +219,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             title="Optional">
         <span>Retry<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
@@ -220,10 +229,17 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -234,18 +250,11 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
     <dd>{{% md %}}The type of job definition.  Must be `container`
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Container<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
@@ -255,7 +264,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job definition.
 {{% /md %}}</dd>
@@ -273,7 +282,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             title="Optional">
         <span>Retry<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">*Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
@@ -283,18 +292,9 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">*Job<wbr>Definition<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of job definition.  Must be `container`
 {{% /md %}}</dd>
 
 </dl>
@@ -303,53 +303,6 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>container<wbr>Properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
-provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>retry<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
-Maximum number of `retry_strategy` is `1`.  Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -360,12 +313,68 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
     <dd>{{% md %}}The type of job definition.  Must be `container`
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>container<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
+provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job definition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retry<wbr>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+Maximum number of `retry_strategy` is `1`.  Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -412,15 +421,6 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-type"><a href="#jobdefinitiontimeout">Dict[Job<wbr>Definition<wbr>Timeout]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of job definition.  Must be `container`
 {{% /md %}}</dd>
 
 </dl>
@@ -453,67 +453,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Container<wbr>Properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
-provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Retry<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
-Maximum number of `retry_strategy` is `1`.  Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Revision</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of job definition.  Must be `container`
 {{% /md %}}</dd>
 
 </dl>
@@ -534,67 +478,11 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 
     <dt class="property-"
             title="">
-        <span>Container<wbr>Properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
-provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Retry<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">*Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
-Maximum number of `retry_strategy` is `1`.  Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Revision</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">*Job<wbr>Definition<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of job definition.  Must be `container`
 {{% /md %}}</dd>
 
 </dl>
@@ -615,67 +503,11 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 
     <dt class="property-"
             title="">
-        <span>container<wbr>Properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
-provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>retry<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
-Maximum number of `retry_strategy` is `1`.  Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>revision</span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of job definition.  Must be `container`
 {{% /md %}}</dd>
 
 </dl>
@@ -696,67 +528,11 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 
     <dt class="property-"
             title="">
-        <span>container_<wbr>properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
-provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>retry_<wbr>strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">Dict[Job<wbr>Definition<wbr>Retry<wbr>Strategy]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
-Maximum number of `retry_strategy` is `1`.  Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>revision</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">Dict[Job<wbr>Definition<wbr>Timeout]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of job definition.  Must be `container`
 {{% /md %}}</dd>
 
 </dl>
@@ -898,7 +674,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job definition.
 {{% /md %}}</dd>
@@ -907,7 +683,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Container<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
@@ -917,7 +693,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job definition.
 {{% /md %}}</dd>
@@ -926,7 +702,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
 {{% /md %}}</dd>
@@ -935,7 +711,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             title="Optional">
         <span>Retry<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
@@ -945,7 +721,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Revision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
 {{% /md %}}</dd>
@@ -954,7 +730,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
 {{% /md %}}</dd>
@@ -963,7 +739,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of job definition.  Must be `container`
 {{% /md %}}</dd>
@@ -979,7 +755,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job definition.
 {{% /md %}}</dd>
@@ -988,7 +764,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Container<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
@@ -998,7 +774,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job definition.
 {{% /md %}}</dd>
@@ -1016,7 +792,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             title="Optional">
         <span>Retry<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">*Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
@@ -1026,7 +802,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Revision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
 {{% /md %}}</dd>
@@ -1035,7 +811,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">*Job<wbr>Definition<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
 {{% /md %}}</dd>
@@ -1044,7 +820,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of job definition.  Must be `container`
 {{% /md %}}</dd>
@@ -1060,7 +836,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the job definition.
 {{% /md %}}</dd>
@@ -1069,7 +845,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>container<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
@@ -1079,7 +855,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the job definition.
 {{% /md %}}</dd>
@@ -1088,7 +864,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
 {{% /md %}}</dd>
@@ -1097,7 +873,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
             title="Optional">
         <span>retry<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
@@ -1107,7 +883,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>revision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The revision of the job definition.
 {{% /md %}}</dd>
@@ -1116,7 +892,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
 {{% /md %}}</dd>
@@ -1125,7 +901,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of job definition.  Must be `container`
 {{% /md %}}</dd>
@@ -1244,7 +1020,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1259,7 +1035,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1274,7 +1050,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1319,7 +1095,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Attempt<wbr>Duration<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1334,7 +1110,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>Attempt<wbr>Duration<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1349,7 +1125,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
             title="Optional">
         <span>attempt<wbr>Duration<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

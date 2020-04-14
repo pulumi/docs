@@ -40,7 +40,7 @@ export const password = exampleUserLoginProfile.encryptedPassword;
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#UserLoginProfile">UserLoginProfile</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#UserLoginProfileArgs">UserLoginProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#UserLoginProfile">UserLoginProfile</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#UserLoginProfileArgs">UserLoginProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -48,7 +48,7 @@ export const password = exampleUserLoginProfile.encryptedPassword;
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserLoginProfile<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#UserLoginProfileArgs">UserLoginProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#UserLoginProfile">UserLoginProfile</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserLoginProfile<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#UserLoginProfileArgs">UserLoginProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#UserLoginProfile">UserLoginProfile</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -144,24 +144,6 @@ export const password = exampleUserLoginProfile.encryptedPassword;
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Password<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Password<wbr>Reset<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Pgp<wbr>Key</span>
@@ -178,6 +160,24 @@ export const password = exampleUserLoginProfile.encryptedPassword;
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM user's name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Password<wbr>Length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Password<wbr>Reset<wbr>Required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
 
 </dl>
@@ -187,24 +187,6 @@ export const password = exampleUserLoginProfile.encryptedPassword;
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Password<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Password<wbr>Reset<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Pgp<wbr>Key</span>
@@ -223,30 +205,30 @@ export const password = exampleUserLoginProfile.encryptedPassword;
     <dd>{{% md %}}The IAM user's name.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>password<wbr>Length</span>
+        <span>Password<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>password<wbr>Reset<wbr>Required</span>
+        <span>Password<wbr>Reset<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -266,30 +248,30 @@ export const password = exampleUserLoginProfile.encryptedPassword;
     <dd>{{% md %}}The IAM user's name.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>password_<wbr>length</span>
+        <span>password<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>password_<wbr>reset_<wbr>required</span>
+        <span>password<wbr>Reset<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -307,6 +289,24 @@ export const password = exampleUserLoginProfile.encryptedPassword;
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM user's name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>password_<wbr>length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>password_<wbr>reset_<wbr>required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
 
 </dl>
@@ -346,42 +346,6 @@ The following output properties are available:
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the password. Only available if password was handled on this provider resource creation, not import.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Reset<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pgp<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IAM user's name.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -405,42 +369,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the password. Only available if password was handled on this provider resource creation, not import.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password<wbr>Reset<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pgp<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IAM user's name.
 {{% /md %}}</dd>
 
 </dl>
@@ -468,42 +396,6 @@ The following output properties are available:
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the password. Only available if password was handled on this provider resource creation, not import.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password<wbr>Reset<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pgp<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IAM user's name.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -527,42 +419,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the password. Only available if password was handled on this provider resource creation, not import.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password_<wbr>reset_<wbr>required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pgp_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IAM user's name.
 {{% /md %}}</dd>
 
 </dl>
@@ -704,7 +560,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encrypted<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encrypted password, base64 encoded. Only available if password was handled on this provider resource creation, not import.
 {{% /md %}}</dd>
@@ -713,7 +569,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the password. Only available if password was handled on this provider resource creation, not import.
 {{% /md %}}</dd>
@@ -722,7 +578,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
@@ -731,7 +587,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Reset<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
@@ -740,7 +596,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
@@ -749,7 +605,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM user's name.
 {{% /md %}}</dd>
@@ -765,7 +621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encrypted<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encrypted password, base64 encoded. Only available if password was handled on this provider resource creation, not import.
 {{% /md %}}</dd>
@@ -774,7 +630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the password. Only available if password was handled on this provider resource creation, not import.
 {{% /md %}}</dd>
@@ -783,7 +639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
@@ -792,7 +648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Reset<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
@@ -801,7 +657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
@@ -810,7 +666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM user's name.
 {{% /md %}}</dd>
@@ -826,7 +682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encrypted<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encrypted password, base64 encoded. Only available if password was handled on this provider resource creation, not import.
 {{% /md %}}</dd>
@@ -835,7 +691,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the password. Only available if password was handled on this provider resource creation, not import.
 {{% /md %}}</dd>
@@ -844,7 +700,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
@@ -853,7 +709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password<wbr>Reset<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
@@ -862,7 +718,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.
 {{% /md %}}</dd>
@@ -871,7 +727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM user's name.
 {{% /md %}}</dd>
