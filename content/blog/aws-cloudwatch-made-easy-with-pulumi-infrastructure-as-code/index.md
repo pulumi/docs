@@ -137,7 +137,7 @@ of the health of this app:
         ],
     });
 
-The [Crosswalk for AWS API for dashboards]({{< relref "/docs/guides/crosswalk/aws/cloudwatch/#defining-cloudwatch-dashboards-in-code" >}})
+The [Crosswalk for AWS API for dashboards](https://github.com/pulumi/pulumi-awsx/tree/master/nodejs/awsx/cloudwatch#dashboards)
 gives a lot of options for building up a dashboard programmatically.
 There are a wealth of Widgets and Annotations to expose the full power
 of Cloudwatch's dashboards to your app in a simple to use manner.
