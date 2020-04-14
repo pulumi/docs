@@ -306,4 +306,4 @@ Check out the full [GKE in Go example](https://github.com/pulumi/examples/tree/m
 
 ## Conclusion
 
-Kubernetes support is one of several significant new additions to the Pulumi Go support, and many more improvements are in progress over the coming weeks. Get started with Kubernetes and Go today, and let us know what you think!
+Kubernetes support is one of several significant new additions made available to Pulumi's Go community and more improvements are on the way. Get started with Kubernetes and Go today, and let us know what you think!
