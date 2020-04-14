@@ -98,9 +98,18 @@ If it is not provided, the provider project is used.</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">airflowConfigOverrides</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">env_variables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The version of the software running in the environment. This encapsulates both the version of Cloud Composer
+functionality and the version of Apache Airflow. It must match the regular expression
+<code class="docutils literal notranslate"><span class="pre">composer-[0-9]+\.[0-9]+(\.[0-9]+)?-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?</span></code>.
+The Cloud Composer portion of the version is a semantic version.
+The portion of the image version following ‘airflow-‘ is an official Apache Airflow repository release name.
+See <a class="reference external" href="https://cloud.google.com/composer/docs/reference/rest/v1beta1/projects.locations.environments#softwareconfig">documentation</a>
+for allowed release names.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pypiPackages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
+Can be set to ‘2’ or ‘3’. If not specified, the default is ‘2’. Cannot be updated.</p></li>
 </ul>
 </li>
 </ul>
@@ -164,9 +173,18 @@ If it is not provided, the provider project is used.</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">airflowConfigOverrides</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">env_variables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The version of the software running in the environment. This encapsulates both the version of Cloud Composer
+functionality and the version of Apache Airflow. It must match the regular expression
+<code class="docutils literal notranslate"><span class="pre">composer-[0-9]+\.[0-9]+(\.[0-9]+)?-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?</span></code>.
+The Cloud Composer portion of the version is a semantic version.
+The portion of the image version following ‘airflow-‘ is an official Apache Airflow repository release name.
+See <a class="reference external" href="https://cloud.google.com/composer/docs/reference/rest/v1beta1/projects.locations.environments#softwareconfig">documentation</a>
+for allowed release names.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pypiPackages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
+Can be set to ‘2’ or ‘3’. If not specified, the default is ‘2’. Cannot be updated.</p></li>
 </ul>
 </li>
 </ul>
