@@ -39,6 +39,8 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable description of the cluster.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server cluster. Each label is a key-value pair.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of the Cluster.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id of the game server realm.</p></li>
 </ul>
 </dd>
@@ -99,6 +101,13 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.gameservices.GameServerCluster.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerCluster.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.gameservices.GameServerCluster.realm_id">
 <code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerCluster.realm_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The realm id of the game server realm.</p>
@@ -123,6 +132,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource id of the game server cluster, eg:
 ‘projects/{project_id}/locations/{location}/realms/{realm_id}/gameServerClusters/{cluster_id}’. For example,
 ‘projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster’.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id of the game server realm.</p></li>
 </ul>
 </dd>
@@ -203,6 +214,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>fleet_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server config. Each label is a key-value pair.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of the Deployment.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>scaling_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optional. This contains the autoscaling settings.</p></li>
 </ul>
 </dd>
@@ -278,6 +291,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.gameservices.GameServerConfig.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerConfig.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.gameservices.GameServerConfig.scaling_configs">
 <code class="sig-name descname">scaling_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerConfig.scaling_configs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optional. This contains the autoscaling settings.</p>
@@ -319,6 +339,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of the Deployment.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the game server config, in the form:
 ‘projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}’.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>scaling_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optional. This contains the autoscaling settings.</p></li>
 </ul>
 </dd>
