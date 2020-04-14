@@ -1055,7 +1055,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>searches</strong> (<em>list</em>) – Map of search criteria to use to find users. It supports the following properties.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>searches</strong> (<em>list</em>) – Map of search criteria to use to find users. It supports the following properties.</p></li>
+<li><p><strong>users</strong> (<em>list</em>) – collection of users retrieved from Okta with the following properties.</p></li>
+</ul>
 </dd>
 </dl>
 <p>The <strong>searches</strong> object supports the following:</p>
