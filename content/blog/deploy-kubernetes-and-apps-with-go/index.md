@@ -224,7 +224,7 @@ We can also push to another Docker container registry (like ACR, GCR, ECR, or ot
 
 ## Cloud + Kubernetes with Go
 
-Pulumi works with both Kubernetes and cloud providers (AWS, Azure, GCP, and more). In the same Pulumi program, you can build a Kubernetes cluster and then deploy applications and services into the cluster. Using Pulumi's programming model, we have access to all these various cloud technologies.
+Pulumi works with both Kubernetes and cloud providers (AWS, Azure, GCP, and more.) Within the same Pulumi program, you can build a Kubernetes cluster and then deploy applications and services into that cluster. 
 
 For example, we can deploy a managed GKE cluster, and then deploy a Pod into it:
 
