@@ -62,7 +62,7 @@ for full reference on what is available and how to configure your provider.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#AccessIdentityProvider">AccessIdentityProvider</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#AccessIdentityProviderArgs">AccessIdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#AccessIdentityProvider">AccessIdentityProvider</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#AccessIdentityProviderArgs">AccessIdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -70,11 +70,11 @@ for full reference on what is available and how to configure your provider.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessIdentityProvider<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#AccessIdentityProviderArgs">AccessIdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#AccessIdentityProvider">AccessIdentityProvider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessIdentityProvider<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#AccessIdentityProviderArgs">AccessIdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#AccessIdentityProvider">AccessIdentityProvider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessIdentityProvider.html">AccessIdentityProvider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessIdentityProviderArgs.html">AccessIdentityProviderArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessIdentityProvider.html">AccessIdentityProvider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessIdentityProviderArgs.html">AccessIdentityProviderArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -174,15 +174,6 @@ for full reference on what is available and how to configure your provider.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessidentityproviderconfig">List&lt;Access<wbr>Identity<wbr>Provider<wbr>Config<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -201,6 +192,15 @@ for full reference on what is available and how to configure your provider.
     <dd>{{% md %}}The provider type to use. Must be one of: `"centrify"`,
 `"facebook"`, `"google-apps"`, `"oidc"`, `"github"`, `"google"`, `"saml"`,
 `"linkedin"`, `"azureAD"`, `"okta"`, `"onetimepin"`, `"onelogin"`, `"yandex"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessidentityproviderconfig">List&lt;Access<wbr>Identity<wbr>Provider<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
 {{% /md %}}</dd>
 
 </dl>
@@ -218,15 +218,6 @@ for full reference on what is available and how to configure your provider.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessidentityproviderconfig">[]Access<wbr>Identity<wbr>Provider<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -245,6 +236,15 @@ for full reference on what is available and how to configure your provider.
     <dd>{{% md %}}The provider type to use. Must be one of: `"centrify"`,
 `"facebook"`, `"google-apps"`, `"oidc"`, `"github"`, `"google"`, `"saml"`,
 `"linkedin"`, `"azureAD"`, `"okta"`, `"onetimepin"`, `"onelogin"`, `"yandex"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessidentityproviderconfig">[]Access<wbr>Identity<wbr>Provider<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
 {{% /md %}}</dd>
 
 </dl>
@@ -262,15 +262,6 @@ for full reference on what is available and how to configure your provider.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessidentityproviderconfig">Access<wbr>Identity<wbr>Provider<wbr>Config[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -289,6 +280,15 @@ for full reference on what is available and how to configure your provider.
     <dd>{{% md %}}The provider type to use. Must be one of: `"centrify"`,
 `"facebook"`, `"google-apps"`, `"oidc"`, `"github"`, `"google"`, `"saml"`,
 `"linkedin"`, `"azureAD"`, `"okta"`, `"onetimepin"`, `"onelogin"`, `"yandex"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessidentityproviderconfig">Access<wbr>Identity<wbr>Provider<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
 {{% /md %}}</dd>
 
 </dl>
@@ -306,6 +306,26 @@ for full reference on what is available and how to configure your provider.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Identity Provider configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The provider type to use. Must be one of: `"centrify"`,
+`"facebook"`, `"google-apps"`, `"oidc"`, `"github"`, `"google"`, `"saml"`,
+`"linkedin"`, `"azureAD"`, `"okta"`, `"onetimepin"`, `"onelogin"`, `"yandex"`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>configs</span>
@@ -315,216 +335,10 @@ for full reference on what is available and how to configure your provider.
     <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Friendly name of the Access Identity Provider configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The provider type to use. Must be one of: `"centrify"`,
-`"facebook"`, `"google-apps"`, `"oidc"`, `"github"`, `"google"`, `"saml"`,
-`"linkedin"`, `"azureAD"`, `"okta"`, `"onetimepin"`, `"onelogin"`, `"yandex"`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## AccessIdentityProvider Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessidentityproviderconfig">List&lt;Access<wbr>Identity<wbr>Provider<wbr>Config&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Friendly name of the Access Identity Provider configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provider type to use. Must be one of: `"centrify"`,
-`"facebook"`, `"google-apps"`, `"oidc"`, `"github"`, `"google"`, `"saml"`,
-`"linkedin"`, `"azureAD"`, `"okta"`, `"onetimepin"`, `"onelogin"`, `"yandex"`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessidentityproviderconfig">[]Access<wbr>Identity<wbr>Provider<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Friendly name of the Access Identity Provider configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provider type to use. Must be one of: `"centrify"`,
-`"facebook"`, `"google-apps"`, `"oidc"`, `"github"`, `"google"`, `"saml"`,
-`"linkedin"`, `"azureAD"`, `"okta"`, `"onetimepin"`, `"onelogin"`, `"yandex"`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessidentityproviderconfig">Access<wbr>Identity<wbr>Provider<wbr>Config[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Friendly name of the Access Identity Provider configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The provider type to use. Must be one of: `"centrify"`,
-`"facebook"`, `"google-apps"`, `"oidc"`, `"github"`, `"google"`, `"saml"`,
-`"linkedin"`, `"azureAD"`, `"okta"`, `"onetimepin"`, `"onelogin"`, `"yandex"`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>account_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessidentityproviderconfig">List[Access<wbr>Identity<wbr>Provider<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Friendly name of the Access Identity Provider configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The provider type to use. Must be one of: `"centrify"`,
-`"facebook"`, `"google-apps"`, `"oidc"`, `"github"`, `"google"`, `"saml"`,
-`"linkedin"`, `"azureAD"`, `"okta"`, `"onetimepin"`, `"onelogin"`, `"yandex"`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -552,7 +366,7 @@ Get an existing AccessIdentityProvider resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessIdentityProvider.html">AccessIdentityProvider</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessIdentityProviderState.html">AccessIdentityProviderState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessIdentityProvider.html">AccessIdentityProvider</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessIdentityProviderState.html">AccessIdentityProviderState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -662,7 +476,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -670,7 +484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessidentityproviderconfig">List&lt;Access<wbr>Identity<wbr>Provider<wbr>Config<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accessidentityproviderconfig">List&lt;Access<wbr>Identity<wbr>Provider<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
 {{% /md %}}</dd>
@@ -679,7 +493,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Identity Provider configuration.
 {{% /md %}}</dd>
@@ -688,7 +502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider type to use. Must be one of: `"centrify"`,
 `"facebook"`, `"google-apps"`, `"oidc"`, `"github"`, `"google"`, `"saml"`,
@@ -706,7 +520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -723,7 +537,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Identity Provider configuration.
 {{% /md %}}</dd>
@@ -732,7 +546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider type to use. Must be one of: `"centrify"`,
 `"facebook"`, `"google-apps"`, `"oidc"`, `"github"`, `"google"`, `"saml"`,
@@ -750,7 +564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -758,7 +572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessidentityproviderconfig">Access<wbr>Identity<wbr>Provider<wbr>Config[]?</a></span>
+        <span class="property-type"><a href="#accessidentityproviderconfig">Access<wbr>Identity<wbr>Provider<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Provider configuration from the [developer documentation][access_identity_provider_guide].
 {{% /md %}}</dd>
@@ -767,7 +581,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Identity Provider configuration.
 {{% /md %}}</dd>
@@ -776,7 +590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider type to use. Must be one of: `"centrify"`,
 `"facebook"`, `"google-apps"`, `"oidc"`, `"github"`, `"google"`, `"saml"`,
@@ -860,7 +674,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Apps<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -868,7 +682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -876,7 +690,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -884,7 +698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Centrify<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -892,7 +706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Centrify<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -900,7 +714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certs<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -908,7 +722,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -916,7 +730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -924,7 +738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Directory<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -932,7 +746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Attribute<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -940,7 +754,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Idp<wbr>Public<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -948,7 +762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issuer<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -956,7 +770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -964,7 +778,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Onelogin<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -972,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Redirect<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -980,7 +794,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sign<wbr>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -988,7 +802,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sso<wbr>Target<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -996,7 +810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Support<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1004,7 +818,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1019,7 +833,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Apps<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1035,7 +849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1043,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Centrify<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1051,7 +865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Centrify<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1059,7 +873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certs<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1067,7 +881,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1075,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1083,7 +897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Directory<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1091,7 +905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Attribute<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1099,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Idp<wbr>Public<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1107,7 +921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issuer<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1115,7 +929,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1123,7 +937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Onelogin<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1131,7 +945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Redirect<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1139,7 +953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sign<wbr>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1147,7 +961,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sso<wbr>Target<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1155,7 +969,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Support<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1163,7 +977,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1178,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>apps<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1186,7 +1000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1194,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1202,7 +1016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>centrify<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1210,7 +1024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>centrify<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1218,7 +1032,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certs<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1226,7 +1040,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1234,7 +1048,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1242,7 +1056,7 @@ The following state arguments are supported:
             title="Optional">
         <span>directory<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1250,7 +1064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Attribute<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1258,7 +1072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>idp<wbr>Public<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1266,7 +1080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>issuer<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1274,7 +1088,7 @@ The following state arguments are supported:
             title="Optional">
         <span>okta<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1282,7 +1096,7 @@ The following state arguments are supported:
             title="Optional">
         <span>onelogin<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1290,7 +1104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>redirect<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1298,7 +1112,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sign<wbr>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1306,7 +1120,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sso<wbr>Target<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1314,7 +1128,7 @@ The following state arguments are supported:
             title="Optional">
         <span>support<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1322,7 +1136,7 @@ The following state arguments are supported:
             title="Optional">
         <span>token<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -31,7 +31,7 @@ const basicChallenge = new cloudflare.CustomPages("basic_challenge", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#CustomPages">CustomPages</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#CustomPagesArgs">CustomPagesArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#CustomPages">CustomPages</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#CustomPagesArgs">CustomPagesArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -39,11 +39,11 @@ const basicChallenge = new cloudflare.CustomPages("basic_challenge", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCustomPages<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#CustomPagesArgs">CustomPagesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#CustomPages">CustomPages</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCustomPages<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#CustomPagesArgs">CustomPagesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#CustomPages">CustomPages</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..CustomPages.html">CustomPages</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.CustomPagesArgs.html">CustomPagesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.CustomPages.html">CustomPages</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.CustomPagesArgs.html">CustomPagesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -135,25 +135,6 @@ const basicChallenge = new cloudflare.CustomPages("basic_challenge", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The account ID where the custom pages should be
-updated. Either `account_id` or `zone_id` must be provided. If
-`account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -177,9 +158,28 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 
     <dt class="property-optional"
             title="Optional">
+        <span>Account<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The account ID where the custom pages should be
+updated. Either `account_id` or `zone_id` must be provided. If
+`account_id` is present, it will override the zone setting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>State</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.
@@ -192,25 +192,6 @@ updated. Either `zone_id` or `account_id` must be provided.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The account ID where the custom pages should be
-updated. Either `account_id` or `zone_id` must be provided. If
-`account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -234,9 +215,28 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 
     <dt class="property-optional"
             title="Optional">
+        <span>Account<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The account ID where the custom pages should be
+updated. Either `account_id` or `zone_id` must be provided. If
+`account_id` is present, it will override the zone setting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>State</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.
@@ -248,25 +248,6 @@ updated. Either `zone_id` or `account_id` must be provided.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The account ID where the custom pages should be
-updated. Either `account_id` or `zone_id` must be provided. If
-`account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -291,9 +272,28 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 
     <dt class="property-optional"
             title="Optional">
+        <span>account<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The account ID where the custom pages should be
+updated. Either `account_id` or `zone_id` must be provided. If
+`account_id` is present, it will override the zone setting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.
@@ -305,6 +305,27 @@ updated. Either `zone_id` or `account_id` must be provided.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of custom page you wish to update. Must
+be one of `basic_challenge`, `waf_challenge`, `waf_block`,
+`ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
+`500_errors`, `1000_errors`, `always_online`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}URL of where the custom page source is located.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -325,27 +346,6 @@ updated. Either `account_id` or `zone_id` must be provided. If
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of custom page you wish to update. Must
-be one of `basic_challenge`, `waf_challenge`, `waf_block`,
-`ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
-`500_errors`, `1000_errors`, `always_online`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}URL of where the custom page source is located.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>zone_<wbr>id</span>
@@ -360,244 +360,6 @@ updated. Either `zone_id` or `account_id` must be provided.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## CustomPages Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The account ID where the custom pages should be
-updated. Either `account_id` or `zone_id` must be provided. If
-`account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of custom page you wish to update. Must
-be one of `basic_challenge`, `waf_challenge`, `waf_block`,
-`ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
-`500_errors`, `1000_errors`, `always_online`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}URL of where the custom page source is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The zone ID where the custom pages should be
-updated. Either `zone_id` or `account_id` must be provided.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The account ID where the custom pages should be
-updated. Either `account_id` or `zone_id` must be provided. If
-`account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of custom page you wish to update. Must
-be one of `basic_challenge`, `waf_challenge`, `waf_block`,
-`ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
-`500_errors`, `1000_errors`, `always_online`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}URL of where the custom page source is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The zone ID where the custom pages should be
-updated. Either `zone_id` or `account_id` must be provided.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The account ID where the custom pages should be
-updated. Either `account_id` or `zone_id` must be provided. If
-`account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of custom page you wish to update. Must
-be one of `basic_challenge`, `waf_challenge`, `waf_block`,
-`ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
-`500_errors`, `1000_errors`, `always_online`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}URL of where the custom page source is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The zone ID where the custom pages should be
-updated. Either `zone_id` or `account_id` must be provided.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>account_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The account ID where the custom pages should be
-updated. Either `account_id` or `zone_id` must be provided. If
-`account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of custom page you wish to update. Must
-be one of `basic_challenge`, `waf_challenge`, `waf_block`,
-`ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
-`500_errors`, `1000_errors`, `always_online`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}URL of where the custom page source is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The zone ID where the custom pages should be
-updated. Either `zone_id` or `account_id` must be provided.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -625,7 +387,7 @@ Get an existing CustomPages resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..CustomPages.html">CustomPages</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..CustomPagesState.html">CustomPagesState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.CustomPages.html">CustomPages</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..CustomPagesState.html">CustomPagesState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -735,7 +497,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account ID where the custom pages should be
 updated. Either `account_id` or `zone_id` must be provided. If
@@ -746,7 +508,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -754,7 +516,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of custom page you wish to update. Must
 be one of `basic_challenge`, `waf_challenge`, `waf_block`,
@@ -766,7 +528,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of where the custom page source is located.
 {{% /md %}}</dd>
@@ -775,7 +537,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.
@@ -792,7 +554,7 @@ updated. Either `zone_id` or `account_id` must be provided.
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account ID where the custom pages should be
 updated. Either `account_id` or `zone_id` must be provided. If
@@ -803,7 +565,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -811,7 +573,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of custom page you wish to update. Must
 be one of `basic_challenge`, `waf_challenge`, `waf_block`,
@@ -823,7 +585,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of where the custom page source is located.
 {{% /md %}}</dd>
@@ -832,7 +594,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.
@@ -849,7 +611,7 @@ updated. Either `zone_id` or `account_id` must be provided.
             title="Optional">
         <span>account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account ID where the custom pages should be
 updated. Either `account_id` or `zone_id` must be provided. If
@@ -860,7 +622,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -868,7 +630,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of custom page you wish to update. Must
 be one of `basic_challenge`, `waf_challenge`, `waf_block`,
@@ -880,7 +642,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of where the custom page source is located.
 {{% /md %}}</dd>
@@ -889,7 +651,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.

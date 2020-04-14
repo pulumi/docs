@@ -30,7 +30,7 @@ const wordpress = new cloudflare.Filter("wordpress", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#Filter">Filter</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#FilterArgs">FilterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#Filter">Filter</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#FilterArgs">FilterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -38,11 +38,11 @@ const wordpress = new cloudflare.Filter("wordpress", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFilter<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#FilterArgs">FilterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#Filter">Filter</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFilter<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#FilterArgs">FilterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#Filter">Filter</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..Filter.html">Filter</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.FilterArgs.html">FilterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Filter.html">Filter</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.FilterArgs.html">FilterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -134,15 +134,6 @@ const wordpress = new cloudflare.Filter("wordpress", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Expression</span>
@@ -152,11 +143,29 @@ const wordpress = new cloudflare.Filter("wordpress", {
     <dd>{{% md %}}The filter expression to be used.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS zone to which the Filter should be added.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Paused</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this filter is currently paused. Boolean value.
 {{% /md %}}</dd>
@@ -165,18 +174,9 @@ const wordpress = new cloudflare.Filter("wordpress", {
             title="Optional">
         <span>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Short reference tag to quickly select related rules.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DNS zone to which the Filter should be added.
+    <dd>{{% md %}}Short reference tag to quickly select related rules.
 {{% /md %}}</dd>
 
 </dl>
@@ -186,15 +186,6 @@ const wordpress = new cloudflare.Filter("wordpress", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Expression</span>
@@ -202,24 +193,6 @@ const wordpress = new cloudflare.Filter("wordpress", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter expression to be used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Paused</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this filter is currently paused. Boolean value.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Short reference tag to quickly select related rules.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -231,21 +204,39 @@ const wordpress = new cloudflare.Filter("wordpress", {
     <dd>{{% md %}}The DNS zone to which the Filter should be added.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Paused</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this filter is currently paused. Boolean value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ref</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Short reference tag to quickly select related rules.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -254,24 +245,6 @@ const wordpress = new cloudflare.Filter("wordpress", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter expression to be used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>paused</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether this filter is currently paused. Boolean value.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Short reference tag to quickly select related rules.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -283,21 +256,39 @@ const wordpress = new cloudflare.Filter("wordpress", {
     <dd>{{% md %}}The DNS zone to which the Filter should be added.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>paused</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this filter is currently paused. Boolean value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ref</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Short reference tag to quickly select related rules.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -306,6 +297,24 @@ const wordpress = new cloudflare.Filter("wordpress", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The filter expression to be used.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>zone_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS zone to which the Filter should be added.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -326,237 +335,10 @@ const wordpress = new cloudflare.Filter("wordpress", {
     <dd>{{% md %}}Short reference tag to quickly select related rules.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>zone_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the Filter should be added.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Filter Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Expression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The filter expression to be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Paused</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether this filter is currently paused. Boolean value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Short reference tag to quickly select related rules.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the Filter should be added.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Expression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The filter expression to be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Paused</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this filter is currently paused. Boolean value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Short reference tag to quickly select related rules.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the Filter should be added.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The filter expression to be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>paused</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether this filter is currently paused. Boolean value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Short reference tag to quickly select related rules.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the Filter should be added.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expression</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The filter expression to be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>paused</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this filter is currently paused. Boolean value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Short reference tag to quickly select related rules.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the Filter should be added.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -584,7 +366,7 @@ Get an existing Filter resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..Filter.html">Filter</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..FilterState.html">FilterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Filter.html">Filter</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..FilterState.html">FilterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -694,7 +476,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
 {{% /md %}}</dd>
@@ -703,7 +485,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter expression to be used.
 {{% /md %}}</dd>
@@ -712,7 +494,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Paused</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this filter is currently paused. Boolean value.
 {{% /md %}}</dd>
@@ -721,7 +503,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short reference tag to quickly select related rules.
 {{% /md %}}</dd>
@@ -730,7 +512,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the Filter should be added.
 {{% /md %}}</dd>
@@ -746,7 +528,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
 {{% /md %}}</dd>
@@ -755,7 +537,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter expression to be used.
 {{% /md %}}</dd>
@@ -764,7 +546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Paused</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this filter is currently paused. Boolean value.
 {{% /md %}}</dd>
@@ -773,7 +555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short reference tag to quickly select related rules.
 {{% /md %}}</dd>
@@ -782,7 +564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the Filter should be added.
 {{% /md %}}</dd>
@@ -798,7 +580,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A note that you can use to describe the purpose of the filter.
 {{% /md %}}</dd>
@@ -807,7 +589,7 @@ The following state arguments are supported:
             title="Optional">
         <span>expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter expression to be used.
 {{% /md %}}</dd>
@@ -816,7 +598,7 @@ The following state arguments are supported:
             title="Optional">
         <span>paused</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this filter is currently paused. Boolean value.
 {{% /md %}}</dd>
@@ -825,7 +607,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short reference tag to quickly select related rules.
 {{% /md %}}</dd>
@@ -834,7 +616,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the Filter should be added.
 {{% /md %}}</dd>

@@ -33,7 +33,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#AccessApplication">AccessApplication</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#AccessApplicationArgs">AccessApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#AccessApplication">AccessApplication</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#AccessApplicationArgs">AccessApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -41,11 +41,11 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#AccessApplicationArgs">AccessApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#AccessApplication">AccessApplication</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#AccessApplicationArgs">AccessApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#AccessApplication">AccessApplication</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessApplication.html">AccessApplication</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessApplicationArgs.html">AccessApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessApplication.html">AccessApplication</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessApplicationArgs.html">AccessApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -156,16 +156,6 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Session<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Zone<wbr>Id</span>
@@ -173,6 +163,16 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Session<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How often a user will be forced to
+re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
 </dl>
@@ -201,16 +201,6 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Session<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Zone<wbr>Id</span>
@@ -218,6 +208,16 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Session<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How often a user will be forced to
+re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
 </dl>
@@ -246,16 +246,6 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>session<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>zone<wbr>Id</span>
@@ -263,6 +253,16 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>session<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}How often a user will be forced to
+re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}</dd>
 
 </dl>
@@ -291,6 +291,15 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>zone_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS zone to which the access rule should be added.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>session_<wbr>duration</span>
@@ -299,15 +308,6 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     </dt>
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>zone_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
 {{% /md %}}</dd>
 
 </dl>
@@ -338,44 +338,6 @@ The following output properties are available:
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The complete URL of the asset you wish to put
-Cloudflare Access in front of. Can include subdomains or paths. Or both.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -390,44 +352,6 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The complete URL of the asset you wish to put
-Cloudflare Access in front of. Can include subdomains or paths. Or both.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
 {{% /md %}}</dd>
 
 </dl>
@@ -446,44 +370,6 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The complete URL of the asset you wish to put
-Cloudflare Access in front of. Can include subdomains or paths. Or both.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>session<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -498,44 +384,6 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The complete URL of the asset you wish to put
-Cloudflare Access in front of. Can include subdomains or paths. Or both.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>session_<wbr>duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}How often a user will be forced to
-re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be added.
 {{% /md %}}</dd>
 
 </dl>
@@ -567,7 +415,7 @@ Get an existing AccessApplication resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessApplication.html">AccessApplication</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessApplicationState.html">AccessApplicationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessApplication.html">AccessApplication</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessApplicationState.html">AccessApplicationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -677,7 +525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aud</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
 {{% /md %}}</dd>
@@ -686,7 +534,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
@@ -696,7 +544,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -705,7 +553,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
             title="Optional">
         <span>Session<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
@@ -715,7 +563,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added.
 {{% /md %}}</dd>
@@ -731,7 +579,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
             title="Optional">
         <span>Aud</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
 {{% /md %}}</dd>
@@ -740,7 +588,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
@@ -750,7 +598,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -759,7 +607,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
             title="Optional">
         <span>Session<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
@@ -769,7 +617,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added.
 {{% /md %}}</dd>
@@ -785,7 +633,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
             title="Optional">
         <span>aud</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
 {{% /md %}}</dd>
@@ -794,7 +642,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
@@ -804,7 +652,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -813,7 +661,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
             title="Optional">
         <span>session<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
@@ -823,7 +671,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added.
 {{% /md %}}</dd>
