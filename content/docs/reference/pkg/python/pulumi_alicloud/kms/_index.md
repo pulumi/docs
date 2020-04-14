@@ -14,6 +14,92 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/issues">terraform-providers/terraform-provider-alicloud repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.kms"></span><dl class="class">
+<dt id="pulumi_alicloud.kms.Alias">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">Alias</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alias_name=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an alias for the master key (CMK).</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.77.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_alias.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>alias_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The alias of CMK. <code class="docutils literal notranslate"><span class="pre">Encrypt</span></code>、<code class="docutils literal notranslate"><span class="pre">GenerateDataKey</span></code>、<code class="docutils literal notranslate"><span class="pre">DescribeKey</span></code> can be called using aliases. Length of characters other than prefixes: minimum length of 1 character and maximum length of 255 characters. Must contain prefix <code class="docutils literal notranslate"><span class="pre">alias/</span></code>.</p></li>
+<li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the key.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Alias.alias_name">
+<code class="sig-name descname">alias_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Alias.alias_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The alias of CMK. <code class="docutils literal notranslate"><span class="pre">Encrypt</span></code>、<code class="docutils literal notranslate"><span class="pre">GenerateDataKey</span></code>、<code class="docutils literal notranslate"><span class="pre">DescribeKey</span></code> can be called using aliases. Length of characters other than prefixes: minimum length of 1 character and maximum length of 255 characters. Must contain prefix <code class="docutils literal notranslate"><span class="pre">alias/</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Alias.key_id">
+<code class="sig-name descname">key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Alias.key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the key.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.kms.Alias.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alias_name=None</em>, <em class="sig-param">key_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Alias.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Alias resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>alias_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The alias of CMK. <code class="docutils literal notranslate"><span class="pre">Encrypt</span></code>、<code class="docutils literal notranslate"><span class="pre">GenerateDataKey</span></code>、<code class="docutils literal notranslate"><span class="pre">DescribeKey</span></code> can be called using aliases. Length of characters other than prefixes: minimum length of 1 character and maximum length of 255 characters. Must contain prefix <code class="docutils literal notranslate"><span class="pre">alias/</span></code>.</p></li>
+<li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the key.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.kms.Alias.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Alias.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.kms.Alias.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Alias.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_alicloud.kms.AwaitableGetCiphertextResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetCiphertextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">encryption_context=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetCiphertextResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -297,6 +383,170 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_alicloud.kms.Key.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Key.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_alicloud.kms.Secret">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">Secret</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encryption_key_id=None</em>, <em class="sig-param">force_delete_without_recovery=None</em>, <em class="sig-param">recovery_window_in_days=None</em>, <em class="sig-param">secret_data=None</em>, <em class="sig-param">secret_data_type=None</em>, <em class="sig-param">secret_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">version_stages=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resouce used to create a secret and store its initial version.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in 1.76.0+.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_secret.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the secret.</p></li>
+<li><p><strong>encryption_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the KMS CMK that is used to encrypt the secret value. If you do not specify this parameter, Secrets Manager automatically creates an encryption key to encrypt the secret.</p></li>
+<li><p><strong>force_delete_without_recovery</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to forcibly delete the secret. If this parameter is set to true, the secret cannot be recovered. Valid values: true, false. Default to: false.</p></li>
+<li><p><strong>recovery_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the recovery period of the secret if you do not forcibly delete it. Default value: 30. It will be ignored when <code class="docutils literal notranslate"><span class="pre">force_delete_without_recovery</span></code> is true.</p></li>
+<li><p><strong>secret_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the secret that you want to create. Secrets Manager encrypts the secret value and stores it in the initial version.</p></li>
+<li><p><strong>secret_data_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the secret value. Valid values: text, binary. Default to “text”.</p></li>
+<li><p><strong>secret_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the secret.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version number of the initial version. Version numbers are unique in each secret object.</p></li>
+<li><p><strong>version_stages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ) The stage labels that mark the new secret version. If you do not specify this parameter, Secrets Manager marks it with “ACSCurrent”.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Secret.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Secret.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Alicloud Resource Name (ARN) of the secret.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Secret.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Secret.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the secret.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Secret.encryption_key_id">
+<code class="sig-name descname">encryption_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Secret.encryption_key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the KMS CMK that is used to encrypt the secret value. If you do not specify this parameter, Secrets Manager automatically creates an encryption key to encrypt the secret.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Secret.force_delete_without_recovery">
+<code class="sig-name descname">force_delete_without_recovery</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Secret.force_delete_without_recovery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether to forcibly delete the secret. If this parameter is set to true, the secret cannot be recovered. Valid values: true, false. Default to: false.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Secret.planned_delete_time">
+<code class="sig-name descname">planned_delete_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Secret.planned_delete_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time when the secret is scheduled to be deleted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Secret.recovery_window_in_days">
+<code class="sig-name descname">recovery_window_in_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Secret.recovery_window_in_days" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the recovery period of the secret if you do not forcibly delete it. Default value: 30. It will be ignored when <code class="docutils literal notranslate"><span class="pre">force_delete_without_recovery</span></code> is true.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Secret.secret_data">
+<code class="sig-name descname">secret_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Secret.secret_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the secret that you want to create. Secrets Manager encrypts the secret value and stores it in the initial version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Secret.secret_data_type">
+<code class="sig-name descname">secret_data_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Secret.secret_data_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the secret value. Valid values: text, binary. Default to “text”.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Secret.secret_name">
+<code class="sig-name descname">secret_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Secret.secret_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the secret.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Secret.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Secret.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Secret.version_id">
+<code class="sig-name descname">version_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Secret.version_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version number of the initial version. Version numbers are unique in each secret object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.Secret.version_stages">
+<code class="sig-name descname">version_stages</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Secret.version_stages" title="Permalink to this definition">¶</a></dt>
+<dd><p>) The stage labels that mark the new secret version. If you do not specify this parameter, Secrets Manager marks it with “ACSCurrent”.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.kms.Secret.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encryption_key_id=None</em>, <em class="sig-param">force_delete_without_recovery=None</em>, <em class="sig-param">planned_delete_time=None</em>, <em class="sig-param">recovery_window_in_days=None</em>, <em class="sig-param">secret_data=None</em>, <em class="sig-param">secret_data_type=None</em>, <em class="sig-param">secret_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">version_stages=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Secret.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Secret resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Alicloud Resource Name (ARN) of the secret.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the secret.</p></li>
+<li><p><strong>encryption_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the KMS CMK that is used to encrypt the secret value. If you do not specify this parameter, Secrets Manager automatically creates an encryption key to encrypt the secret.</p></li>
+<li><p><strong>force_delete_without_recovery</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to forcibly delete the secret. If this parameter is set to true, the secret cannot be recovered. Valid values: true, false. Default to: false.</p></li>
+<li><p><strong>planned_delete_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time when the secret is scheduled to be deleted.</p></li>
+<li><p><strong>recovery_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the recovery period of the secret if you do not forcibly delete it. Default value: 30. It will be ignored when <code class="docutils literal notranslate"><span class="pre">force_delete_without_recovery</span></code> is true.</p></li>
+<li><p><strong>secret_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the secret that you want to create. Secrets Manager encrypts the secret value and stores it in the initial version.</p></li>
+<li><p><strong>secret_data_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the secret value. Valid values: text, binary. Default to “text”.</p></li>
+<li><p><strong>secret_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the secret.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version number of the initial version. Version numbers are unique in each secret object.</p></li>
+<li><p><strong>version_stages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ) The stage labels that mark the new secret version. If you do not specify this parameter, Secrets Manager marks it with “ACSCurrent”.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.kms.Secret.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Secret.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.kms.Secret.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Secret.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

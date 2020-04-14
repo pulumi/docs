@@ -1652,7 +1652,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by the role name.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of ram role IDs.</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by the role name.</p></li>
+</ul>
 </dd>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ids` (Optional, Available 1.53.0+) - A list of ram role IDs.
@@ -1679,6 +1682,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>group_name</strong> (<em>str</em>) – Filter results by a specific group name. Returned users are in the specified group.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – A list of ram user IDs.</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter resulting users by their names.</p></li>
 </ul>
 </dd>
