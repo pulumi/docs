@@ -11,7 +11,7 @@ tags:
     - containers
 ---
 
-We're excited to announce that Go as a first-class language in Pulumi, and you can now build your infrastructure with Go on AWS, Azure, GCP, and many other clouds. Users often ask — "can I use Pulumi to manage Kubernetes infrastructure in Go today?" With the upcoming release of Pulumi 2.0., the answer is "yes!"
+We're excited that Go is now a first-class language in Pulumi and that you can build your infrastructure with Go on AWS, Azure, GCP, and many other clouds. Users often ask, "Can I use Pulumi to manage Kubernetes infrastructure in Go today?" With the release of Pulumi 2.0., the answer is "Yes!"
 
 <!--more-->
 
