@@ -25,10 +25,10 @@ import (
 	"github.com/golang/glog"
 	"github.com/pkg/errors"
 
-	docsgen "github.com/pulumi/pulumi/pkg/codegen/docs"
-	pschema "github.com/pulumi/pulumi/pkg/codegen/schema"
-	"github.com/pulumi/pulumi/sdk/go/common/tools"
-	"github.com/pulumi/pulumi/sdk/go/common/util/contract"
+	docsgen "github.com/pulumi/pulumi/pkg/v2/codegen/docs"
+	pschema "github.com/pulumi/pulumi/pkg/v2/codegen/schema"
+	"github.com/pulumi/pulumi/sdk/v2/go/common/tools"
+	"github.com/pulumi/pulumi/sdk/v2/go/common/util/contract"
 )
 
 func main() {
