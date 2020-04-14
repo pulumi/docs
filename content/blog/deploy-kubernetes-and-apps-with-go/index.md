@@ -70,7 +70,7 @@ Duration: 16s
 
 Although programming languages are imperative, Pulumi describes the desired state of the infrastructure. If we change our program, Pulumi will compute the minimum delta and apply it to our Kubernetes cluster, which will transition to the new desired state. For example, we can modify our Kubernetes resources in place inside the cluster by adding a label to our Pod:
 
-```go
+```patch
 pod, err := corev1.NewPod(ctx, "pod", &corev1.PodArgs{
 +	Metadata: &metav1.ObjectMetaArgs{
 +		Labels: pulumi.StringMap{"app": pulumi.String("nginx")},
