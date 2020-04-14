@@ -169,14 +169,20 @@ write a filter.</p>
 </dl>
 <p>The <strong>bigquery_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use <a class="reference external" href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery’s partition tables</a>.
+By default, Logging creates dated tables based on the log entries’ timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a class="reference external" href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.BillingAccountSink.bigquery_options">
 <code class="sig-name descname">bigquery_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountSink.bigquery_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Options that affect sinks exporting data to BigQuery. Structure documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to use <a class="reference external" href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery’s partition tables</a>.
+By default, Logging creates dated tables based on the log entries’ timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a class="reference external" href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p></li>
 </ul>
 </dd></dl>
 
@@ -243,7 +249,10 @@ configured <code class="docutils literal notranslate"><span class="pre">destinat
 </dl>
 <p>The <strong>bigquery_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use <a class="reference external" href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery’s partition tables</a>.
+By default, Logging creates dated tables based on the log entries’ timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a class="reference external" href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p></li>
 </ul>
 </dd></dl>
 
@@ -446,14 +455,20 @@ associated with child projects are also exported; otherwise only logs relating t
 </dl>
 <p>The <strong>bigquery_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use <a class="reference external" href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery’s partition tables</a>.
+By default, Logging creates dated tables based on the log entries’ timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a class="reference external" href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.FolderSink.bigquery_options">
 <code class="sig-name descname">bigquery_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderSink.bigquery_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Options that affect sinks exporting data to BigQuery. Structure documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to use <a class="reference external" href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery’s partition tables</a>.
+By default, Logging creates dated tables based on the log entries’ timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a class="reference external" href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p></li>
 </ul>
 </dd></dl>
 
@@ -531,7 +546,10 @@ configured <code class="docutils literal notranslate"><span class="pre">destinat
 </dl>
 <p>The <strong>bigquery_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use <a class="reference external" href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery’s partition tables</a>.
+By default, Logging creates dated tables based on the log entries’ timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a class="reference external" href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p></li>
 </ul>
 </dd></dl>
 
@@ -608,6 +626,8 @@ map. The syntax of the extractor expression is the same as for the valueExtracto
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client-assigned metric identifier. Examples - “error<em>count”, “nginx/requests”. Metric identifiers are limited to 100
 characters and can include only the following characters A-Z, a-z, 0-9, and the special characters *-.,+!</em>’,()%/. The
 forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of the name.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>value_extractor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
 entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
 are 1. field - The name of the log entry field from which the value is to be extracted. 2. regex - A regular expression
@@ -730,6 +750,13 @@ forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.logging.Metric.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.logging.Metric.value_extractor">
 <code class="sig-name descname">value_extractor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.value_extractor" title="Permalink to this definition">¶</a></dt>
 <dd><p>A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
@@ -763,6 +790,8 @@ map. The syntax of the extractor expression is the same as for the valueExtracto
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client-assigned metric identifier. Examples - “error<em>count”, “nginx/requests”. Metric identifiers are limited to 100
 characters and can include only the following characters A-Z, a-z, 0-9, and the special characters *-.,+!</em>’,()%/. The
 forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of the name.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>value_extractor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
 entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
 are 1. field - The name of the log entry field from which the value is to be extracted. 2. regex - A regular expression
@@ -1005,14 +1034,20 @@ associated with child projects are also exported; otherwise only logs relating t
 </dl>
 <p>The <strong>bigquery_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use <a class="reference external" href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery’s partition tables</a>.
+By default, Logging creates dated tables based on the log entries’ timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a class="reference external" href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.OrganizationSink.bigquery_options">
 <code class="sig-name descname">bigquery_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationSink.bigquery_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Options that affect sinks exporting data to BigQuery. Structure documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to use <a class="reference external" href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery’s partition tables</a>.
+By default, Logging creates dated tables based on the log entries’ timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a class="reference external" href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p></li>
 </ul>
 </dd></dl>
 
@@ -1088,7 +1123,10 @@ configured <code class="docutils literal notranslate"><span class="pre">destinat
 </dl>
 <p>The <strong>bigquery_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use <a class="reference external" href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery’s partition tables</a>.
+By default, Logging creates dated tables based on the log entries’ timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a class="reference external" href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p></li>
 </ul>
 </dd></dl>
 
@@ -1295,14 +1333,20 @@ must set <code class="docutils literal notranslate"><span class="pre">unique_wri
 </dl>
 <p>The <strong>bigquery_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use <a class="reference external" href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery’s partition tables</a>.
+By default, Logging creates dated tables based on the log entries’ timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a class="reference external" href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.ProjectSink.bigquery_options">
 <code class="sig-name descname">bigquery_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectSink.bigquery_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Options that affect sinks exporting data to BigQuery. Structure documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to use <a class="reference external" href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery’s partition tables</a>.
+By default, Logging creates dated tables based on the log entries’ timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a class="reference external" href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p></li>
 </ul>
 </dd></dl>
 
@@ -1384,7 +1428,10 @@ configured <code class="docutils literal notranslate"><span class="pre">destinat
 </dl>
 <p>The <strong>bigquery_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePartitionedTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use <a class="reference external" href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery’s partition tables</a>.
+By default, Logging creates dated tables based on the log entries’ timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a class="reference external" href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p></li>
 </ul>
 </dd></dl>
 
