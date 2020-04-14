@@ -31,7 +31,7 @@ The `consul..AclRole` data source returns the information related to a
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAclRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#GetAclRoleArgs">GetAclRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupAclRoleResult">LookupAclRoleResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAclRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#GetAclRoleArgs">GetAclRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupAclRoleResult">LookupAclRoleResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -50,15 +50,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -70,9 +61,18 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the ACL Role.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the role.
 {{% /md %}}</dd>
@@ -81,7 +81,7 @@ The following arguments are supported:
             title="Optional">
         <span>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaclrolepolicy">List&lt;Get<wbr>Acl<wbr>Role<wbr>Policy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getaclrolepolicy">List&lt;Get<wbr>Acl<wbr>Role<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of policies associated with the ACL Role. Each entry has
 an `id` and a `name` attribute.
@@ -91,7 +91,7 @@ an `id` and a `name` attribute.
             title="Optional">
         <span>Service<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaclroleserviceidentity">List&lt;Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getaclroleserviceidentity">List&lt;Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of service identities associated with the ACL
 Role. Each entry has a `service_name` attribute and a list of `datacenters`.
@@ -104,15 +104,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -124,9 +115,18 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the ACL Role.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the role.
 {{% /md %}}</dd>
@@ -158,15 +158,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -178,9 +169,18 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the ACL Role.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the role.
 {{% /md %}}</dd>
@@ -189,7 +189,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
             title="Optional">
         <span>policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaclrolepolicy">Get<wbr>Acl<wbr>Role<wbr>Policy[]?</a></span>
+        <span class="property-type"><a href="#getaclrolepolicy">Get<wbr>Acl<wbr>Role<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}The list of policies associated with the ACL Role. Each entry has
 an `id` and a `name` attribute.
@@ -199,7 +199,7 @@ an `id` and a `name` attribute.
             title="Optional">
         <span>service<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaclroleserviceidentity">Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity[]?</a></span>
+        <span class="property-type"><a href="#getaclroleserviceidentity">Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}The list of service identities associated with the ACL
 Role. Each entry has a `service_name` attribute and a list of `datacenters`.
@@ -212,15 +212,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -228,6 +219,15 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ACL Role.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the ACL Role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -281,15 +281,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -307,9 +298,18 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the ACL Role.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -317,7 +317,7 @@ The following output properties are available:
             title="">
         <span>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaclrolepolicy">List&lt;Get<wbr>Acl<wbr>Role<wbr>Policy&gt;?</a></span>
+        <span class="property-type"><a href="#getaclrolepolicy">List&lt;Get<wbr>Acl<wbr>Role<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of policies associated with the ACL Role. Each entry has
 an `id` and a `name` attribute.
@@ -327,7 +327,7 @@ an `id` and a `name` attribute.
             title="">
         <span>Service<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaclroleserviceidentity">List&lt;Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity&gt;?</a></span>
+        <span class="property-type"><a href="#getaclroleserviceidentity">List&lt;Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of service identities associated with the ACL
 Role. Each entry has a `service_name` attribute and a list of `datacenters`.
@@ -342,15 +342,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -368,9 +359,18 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
     <dt class="property-"
             title="">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the ACL Role.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -403,15 +403,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -429,9 +420,18 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
     <dt class="property-"
             title="">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the ACL Role.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -439,7 +439,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
             title="">
         <span>policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaclrolepolicy">Get<wbr>Acl<wbr>Role<wbr>Policy[]?</a></span>
+        <span class="property-type"><a href="#getaclrolepolicy">Get<wbr>Acl<wbr>Role<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}The list of policies associated with the ACL Role. Each entry has
 an `id` and a `name` attribute.
@@ -449,7 +449,7 @@ an `id` and a `name` attribute.
             title="">
         <span>service<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaclroleserviceidentity">Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity[]?</a></span>
+        <span class="property-type"><a href="#getaclroleserviceidentity">Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}The list of service identities associated with the ACL
 Role. Each entry has a `service_name` attribute and a list of `datacenters`.
@@ -464,15 +464,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -487,6 +478,15 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the ACL Role.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -658,7 +658,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
             title="Optional">
         <span>Datacenters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -666,7 +666,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -704,7 +704,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
             title="Optional">
         <span>datacenters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -712,7 +712,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
             title="Optional">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

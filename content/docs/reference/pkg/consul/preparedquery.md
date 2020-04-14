@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQuery">PreparedQuery</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQueryArgs">PreparedQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQuery">PreparedQuery</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQueryArgs">PreparedQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPreparedQuery<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#PreparedQueryArgs">PreparedQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#PreparedQuery">PreparedQuery</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPreparedQuery<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#PreparedQueryArgs">PreparedQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#PreparedQuery">PreparedQuery</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..PreparedQuery.html">PreparedQuery</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.PreparedQueryArgs.html">PreparedQueryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.PreparedQuery.html">PreparedQuery</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.PreparedQueryArgs.html">PreparedQueryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,79 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Connect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When `true` the prepared query will return connect
-proxy services for a queried service.  Conditions such as `tags` in the
-prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Failover</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Options for controlling behavior when no healthy
-nodes are available in the local DC.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the prepared query. Used to identify
-the prepared query during requests. Can be specified as an empty string
-to configure the query as a catch-all.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Near</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Allows specifying the name of a node to sort results
-near using Consul's distance sorting and network coordinates. The magic
-`_agent` value can be used to always sort nearest the node servicing the
-request.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Only<wbr>Passing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When `true`, the prepared query will only
-return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Service</span>
@@ -202,9 +129,82 @@ return nodes with passing health checks in the result.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Connect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true` the prepared query will return connect
+proxy services for a queried service.  Conditions such as `tags` in the
+prepared query will be matched against the proxy service. Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter to use. This overrides the
+agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for controlling the DNS response details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Failover</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options for controlling behavior when no healthy
+nodes are available in the local DC.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the prepared query. Used to identify
+the prepared query during requests. Can be specified as an empty string
+to configure the query as a catch-all.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Near</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allows specifying the name of a node to sort results
+near using Consul's distance sorting and network coordinates. The magic
+`_agent` value can be used to always sort nearest the node servicing the
+request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Only<wbr>Passing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, the prepared query will only
+return nodes with passing health checks in the result.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Session</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -217,7 +217,7 @@ parameter is omitted the query will not expire.
             title="Optional">
         <span>Stored<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
@@ -227,7 +227,7 @@ query. This token will be used by default whenever the query is executed.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
@@ -238,7 +238,7 @@ disallowed.
             title="Optional">
         <span>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template<wbr>Args?</a></span>
+        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
@@ -248,7 +248,7 @@ single prepared query respond to many different requests.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
@@ -261,79 +261,6 @@ This overrides the token that the agent provides by default.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Connect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When `true` the prepared query will return connect
-proxy services for a queried service.  Conditions such as `tags` in the
-prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">*Prepared<wbr>Query<wbr>Dns</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Failover</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">*Prepared<wbr>Query<wbr>Failover</a></span>
-    </dt>
-    <dd>{{% md %}}Options for controlling behavior when no healthy
-nodes are available in the local DC.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the prepared query. Used to identify
-the prepared query during requests. Can be specified as an empty string
-to configure the query as a catch-all.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Near</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Allows specifying the name of a node to sort results
-near using Consul's distance sorting and network coordinates. The magic
-`_agent` value can be used to always sort nearest the node servicing the
-request.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Only<wbr>Passing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When `true`, the prepared query will only
-return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Service</span>
@@ -345,9 +272,82 @@ return nodes with passing health checks in the result.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Connect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true` the prepared query will return connect
+proxy services for a queried service.  Conditions such as `tags` in the
+prepared query will be matched against the proxy service. Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter to use. This overrides the
+agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for controlling the DNS response details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Failover</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover</a></span>
+    </dt>
+    <dd>{{% md %}}Options for controlling behavior when no healthy
+nodes are available in the local DC.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the prepared query. Used to identify
+the prepared query during requests. Can be specified as an empty string
+to configure the query as a catch-all.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Near</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allows specifying the name of a node to sort results
+near using Consul's distance sorting and network coordinates. The magic
+`_agent` value can be used to always sort nearest the node servicing the
+request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Only<wbr>Passing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When `true`, the prepared query will only
+return nodes with passing health checks in the result.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Session</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -360,7 +360,7 @@ parameter is omitted the query will not expire.
             title="Optional">
         <span>Stored<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
@@ -381,7 +381,7 @@ disallowed.
             title="Optional">
         <span>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">*Prepared<wbr>Query<wbr>Template</a></span>
+        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
@@ -391,7 +391,7 @@ single prepared query respond to many different requests.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
@@ -404,79 +404,6 @@ This overrides the token that the agent provides by default.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>connect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When `true` the prepared query will return connect
-proxy services for a queried service.  Conditions such as `tags` in the
-prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns?</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>failover</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover?</a></span>
-    </dt>
-    <dd>{{% md %}}Options for controlling behavior when no healthy
-nodes are available in the local DC.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the prepared query. Used to identify
-the prepared query during requests. Can be specified as an empty string
-to configure the query as a catch-all.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>near</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Allows specifying the name of a node to sort results
-near using Consul's distance sorting and network coordinates. The magic
-`_agent` value can be used to always sort nearest the node servicing the
-request.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>only<wbr>Passing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When `true`, the prepared query will only
-return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>service</span>
@@ -488,9 +415,82 @@ return nodes with passing health checks in the result.
 
     <dt class="property-optional"
             title="Optional">
+        <span>connect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When `true` the prepared query will return connect
+proxy services for a queried service.  Conditions such as `tags` in the
+prepared query will be matched against the proxy service. Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter to use. This overrides the
+agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for controlling the DNS response details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>failover</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover</a></span>
+    </dt>
+    <dd>{{% md %}}Options for controlling behavior when no healthy
+nodes are available in the local DC.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the prepared query. Used to identify
+the prepared query during requests. Can be specified as an empty string
+to configure the query as a catch-all.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>near</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allows specifying the name of a node to sort results
+near using Consul's distance sorting and network coordinates. The magic
+`_agent` value can be used to always sort nearest the node servicing the
+request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>only<wbr>Passing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When `true`, the prepared query will only
+return nodes with passing health checks in the result.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>session</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -503,7 +503,7 @@ parameter is omitted the query will not expire.
             title="Optional">
         <span>stored<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
@@ -513,7 +513,7 @@ query. This token will be used by default whenever the query is executed.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
@@ -524,7 +524,7 @@ disallowed.
             title="Optional">
         <span>template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template?</a></span>
+        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
@@ -534,7 +534,7 @@ single prepared query respond to many different requests.
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
@@ -546,6 +546,15 @@ This overrides the token that the agent provides by default.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>service</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the service to query.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -620,15 +629,6 @@ request.
 return nodes with passing health checks in the result.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the service to query.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>session</span>
@@ -687,588 +687,6 @@ This overrides the token that the agent provides by default.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## PreparedQuery Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Connect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When `true` the prepared query will return connect
-proxy services for a queried service.  Conditions such as `tags` in the
-prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns?</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Failover</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover?</a></span>
-    </dt>
-    <dd>{{% md %}}Options for controlling behavior when no healthy
-nodes are available in the local DC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the prepared query. Used to identify
-the prepared query during requests. Can be specified as an empty string
-to configure the query as a catch-all.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Near</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Allows specifying the name of a node to sort results
-near using Consul's distance sorting and network coordinates. The magic
-`_agent` value can be used to always sort nearest the node servicing the
-request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Only<wbr>Passing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When `true`, the prepared query will only
-return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service to query.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Consul session to tie this query's
-lifetime to.  This is an advanced parameter that should not be used without a
-complete understanding of Consul sessions and the implications of their use
-(it is recommended to leave this blank in nearly all cases).  If this
-parameter is omitted the query will not expire.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stored<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ACL token to store with the prepared
-query. This token will be used by default whenever the query is executed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
-in this list it must be present.  If the tag is preceded with a "!" then it is
-disallowed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template?</a></span>
-    </dt>
-    <dd>{{% md %}}Query templating options. This is used to make a
-single prepared query respond to many different requests.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ACL token to use when saving the prepared query.
-This overrides the token that the agent provides by default.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Connect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When `true` the prepared query will return connect
-proxy services for a queried service.  Conditions such as `tags` in the
-prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">*Prepared<wbr>Query<wbr>Dns</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Failover</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">*Prepared<wbr>Query<wbr>Failover</a></span>
-    </dt>
-    <dd>{{% md %}}Options for controlling behavior when no healthy
-nodes are available in the local DC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the prepared query. Used to identify
-the prepared query during requests. Can be specified as an empty string
-to configure the query as a catch-all.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Near</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Allows specifying the name of a node to sort results
-near using Consul's distance sorting and network coordinates. The magic
-`_agent` value can be used to always sort nearest the node servicing the
-request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Only<wbr>Passing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When `true`, the prepared query will only
-return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service to query.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Consul session to tie this query's
-lifetime to.  This is an advanced parameter that should not be used without a
-complete understanding of Consul sessions and the implications of their use
-(it is recommended to leave this blank in nearly all cases).  If this
-parameter is omitted the query will not expire.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stored<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ACL token to store with the prepared
-query. This token will be used by default whenever the query is executed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
-in this list it must be present.  If the tag is preceded with a "!" then it is
-disallowed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">*Prepared<wbr>Query<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}Query templating options. This is used to make a
-single prepared query respond to many different requests.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ACL token to use when saving the prepared query.
-This overrides the token that the agent provides by default.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>connect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When `true` the prepared query will return connect
-proxy services for a queried service.  Conditions such as `tags` in the
-prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns?</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>failover</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover?</a></span>
-    </dt>
-    <dd>{{% md %}}Options for controlling behavior when no healthy
-nodes are available in the local DC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the prepared query. Used to identify
-the prepared query during requests. Can be specified as an empty string
-to configure the query as a catch-all.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>near</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Allows specifying the name of a node to sort results
-near using Consul's distance sorting and network coordinates. The magic
-`_agent` value can be used to always sort nearest the node servicing the
-request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>only<wbr>Passing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When `true`, the prepared query will only
-return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service to query.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>session</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Consul session to tie this query's
-lifetime to.  This is an advanced parameter that should not be used without a
-complete understanding of Consul sessions and the implications of their use
-(it is recommended to leave this blank in nearly all cases).  If this
-parameter is omitted the query will not expire.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>stored<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ACL token to store with the prepared
-query. This token will be used by default whenever the query is executed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
-in this list it must be present.  If the tag is preceded with a "!" then it is
-disallowed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template?</a></span>
-    </dt>
-    <dd>{{% md %}}Query templating options. This is used to make a
-single prepared query respond to many different requests.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ACL token to use when saving the prepared query.
-This overrides the token that the agent provides by default.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>connect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When `true` the prepared query will return connect
-proxy services for a queried service.  Conditions such as `tags` in the
-prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">Dict[Prepared<wbr>Query<wbr>Dns]</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>failover</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">Dict[Prepared<wbr>Query<wbr>Failover]</a></span>
-    </dt>
-    <dd>{{% md %}}Options for controlling behavior when no healthy
-nodes are available in the local DC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the prepared query. Used to identify
-the prepared query during requests. Can be specified as an empty string
-to configure the query as a catch-all.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>near</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Allows specifying the name of a node to sort results
-near using Consul's distance sorting and network coordinates. The magic
-`_agent` value can be used to always sort nearest the node servicing the
-request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>only_<wbr>passing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When `true`, the prepared query will only
-return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the service to query.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>session</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Consul session to tie this query's
-lifetime to.  This is an advanced parameter that should not be used without a
-complete understanding of Consul sessions and the implications of their use
-(it is recommended to leave this blank in nearly all cases).  If this
-parameter is omitted the query will not expire.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>stored_<wbr>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ACL token to store with the prepared
-query. This token will be used by default whenever the query is executed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
-in this list it must be present.  If the tag is preceded with a "!" then it is
-disallowed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">Dict[Prepared<wbr>Query<wbr>Template]</a></span>
-    </dt>
-    <dd>{{% md %}}Query templating options. This is used to make a
-single prepared query respond to many different requests.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ACL token to use when saving the prepared query.
-This overrides the token that the agent provides by default.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1296,7 +714,7 @@ Get an existing PreparedQuery resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..PreparedQuery.html">PreparedQuery</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..PreparedQueryState.html">PreparedQueryState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.PreparedQuery.html">PreparedQuery</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..PreparedQueryState.html">PreparedQueryState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1406,7 +824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
@@ -1417,7 +835,7 @@ prepared query will be matched against the proxy service. Defaults to false.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -1427,7 +845,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args?</a></span>
+        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd>
@@ -1436,7 +854,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>Failover</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover<wbr>Args?</a></span>
+        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
@@ -1446,7 +864,7 @@ nodes are available in the local DC.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
@@ -1457,7 +875,7 @@ to configure the query as a catch-all.
             title="Optional">
         <span>Near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
@@ -1469,7 +887,7 @@ request.
             title="Optional">
         <span>Only<wbr>Passing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
@@ -1479,7 +897,7 @@ return nodes with passing health checks in the result.
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd>
@@ -1488,7 +906,7 @@ return nodes with passing health checks in the result.
             title="Optional">
         <span>Session</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -1501,7 +919,7 @@ parameter is omitted the query will not expire.
             title="Optional">
         <span>Stored<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
@@ -1511,7 +929,7 @@ query. This token will be used by default whenever the query is executed.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
@@ -1522,7 +940,7 @@ disallowed.
             title="Optional">
         <span>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template<wbr>Args?</a></span>
+        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
@@ -1532,7 +950,7 @@ single prepared query respond to many different requests.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
@@ -1549,7 +967,7 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span>Connect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
@@ -1560,7 +978,7 @@ prepared query will be matched against the proxy service. Defaults to false.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -1570,7 +988,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">*Prepared<wbr>Query<wbr>Dns</a></span>
+        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd>
@@ -1579,7 +997,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>Failover</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">*Prepared<wbr>Query<wbr>Failover</a></span>
+        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
@@ -1589,7 +1007,7 @@ nodes are available in the local DC.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
@@ -1600,7 +1018,7 @@ to configure the query as a catch-all.
             title="Optional">
         <span>Near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
@@ -1612,7 +1030,7 @@ request.
             title="Optional">
         <span>Only<wbr>Passing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
@@ -1622,7 +1040,7 @@ return nodes with passing health checks in the result.
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd>
@@ -1631,7 +1049,7 @@ return nodes with passing health checks in the result.
             title="Optional">
         <span>Session</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -1644,7 +1062,7 @@ parameter is omitted the query will not expire.
             title="Optional">
         <span>Stored<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
@@ -1665,7 +1083,7 @@ disallowed.
             title="Optional">
         <span>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">*Prepared<wbr>Query<wbr>Template</a></span>
+        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
@@ -1675,7 +1093,7 @@ single prepared query respond to many different requests.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
@@ -1692,7 +1110,7 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span>connect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
@@ -1703,7 +1121,7 @@ prepared query will be matched against the proxy service. Defaults to false.
             title="Optional">
         <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -1713,7 +1131,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns?</a></span>
+        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd>
@@ -1722,7 +1140,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>failover</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover?</a></span>
+        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
@@ -1732,7 +1150,7 @@ nodes are available in the local DC.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
@@ -1743,7 +1161,7 @@ to configure the query as a catch-all.
             title="Optional">
         <span>near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
@@ -1755,7 +1173,7 @@ request.
             title="Optional">
         <span>only<wbr>Passing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
@@ -1765,7 +1183,7 @@ return nodes with passing health checks in the result.
             title="Optional">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd>
@@ -1774,7 +1192,7 @@ return nodes with passing health checks in the result.
             title="Optional">
         <span>session</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -1787,7 +1205,7 @@ parameter is omitted the query will not expire.
             title="Optional">
         <span>stored<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
@@ -1797,7 +1215,7 @@ query. This token will be used by default whenever the query is executed.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
@@ -1808,7 +1226,7 @@ disallowed.
             title="Optional">
         <span>template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template?</a></span>
+        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
@@ -1818,7 +1236,7 @@ single prepared query respond to many different requests.
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
@@ -2000,7 +1418,7 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL to send when returning DNS results.
 {{% /md %}}</dd>
@@ -2016,7 +1434,7 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL to send when returning DNS results.
 {{% /md %}}</dd>
@@ -2032,7 +1450,7 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL to send when returning DNS results.
 {{% /md %}}</dd>
@@ -2079,7 +1497,7 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span>Datacenters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Remote datacenters to return results from.
 {{% /md %}}</dd>
@@ -2088,7 +1506,7 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span>Nearest<wbr>N</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Return results from this many datacenters,
 sorted in ascending order of estimated RTT.
@@ -2114,7 +1532,7 @@ sorted in ascending order of estimated RTT.
             title="Optional">
         <span>Nearest<wbr>N</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Return results from this many datacenters,
 sorted in ascending order of estimated RTT.
@@ -2131,7 +1549,7 @@ sorted in ascending order of estimated RTT.
             title="Optional">
         <span>datacenters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Remote datacenters to return results from.
 {{% /md %}}</dd>
@@ -2140,7 +1558,7 @@ sorted in ascending order of estimated RTT.
             title="Optional">
         <span>nearest<wbr>N</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Return results from this many datacenters,
 sorted in ascending order of estimated RTT.

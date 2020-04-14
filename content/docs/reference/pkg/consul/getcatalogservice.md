@@ -27,7 +27,7 @@ block_external_search_index: true
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCatalogService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#GetCatalogServiceArgs">GetCatalogServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupCatalogServiceResult">LookupCatalogServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCatalogService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#GetCatalogServiceArgs">GetCatalogServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupCatalogServiceResult">LookupCatalogServiceResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -46,13 +46,44 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Query<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcatalogservicequeryoption">List&lt;Get<wbr>Catalog<wbr>Service<wbr>Query<wbr>Option<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tag</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -64,38 +95,7 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalogservicequeryoption">List&lt;Get<wbr>Catalog<wbr>Service<wbr>Query<wbr>Option<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -113,7 +113,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -123,14 +123,6 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -142,9 +134,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>query<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalogservicequeryoption">Get<wbr>Catalog<wbr>Service<wbr>Query<wbr>Option[]?</a></span>
+        <span class="property-type"><a href="#getcatalogservicequeryoption">Get<wbr>Catalog<wbr>Service<wbr>Query<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -152,7 +152,7 @@ The following arguments are supported:
             title="Optional">
         <span>tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -163,17 +163,17 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>datacenter</span>
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
+    <dt class="property-optional"
+            title="Optional">
+        <span>datacenter</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -217,14 +217,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -237,14 +229,6 @@ The following output properties are available:
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Query<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalogservicequeryoption">List&lt;Get<wbr>Catalog<wbr>Service<wbr>Query<wbr>Option&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -258,9 +242,25 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Query<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcatalogservicequeryoption">List&lt;Get<wbr>Catalog<wbr>Service<wbr>Query<wbr>Option&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -270,14 +270,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -291,6 +283,22 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcatalogserviceservice">[]Get<wbr>Catalog<wbr>Service<wbr>Service</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Datacenter</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -306,17 +314,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalogserviceservice">[]Get<wbr>Catalog<wbr>Service<wbr>Service</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -326,14 +326,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -349,14 +341,6 @@ The following output properties are available:
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>query<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalogservicequeryoption">Get<wbr>Catalog<wbr>Service<wbr>Query<wbr>Option[]?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -370,9 +354,25 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>query<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcatalogservicequeryoption">Get<wbr>Catalog<wbr>Service<wbr>Query<wbr>Option[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -382,14 +382,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -410,17 +402,25 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>query_<wbr>options</span>
+        <span>services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalogservicequeryoption">List[Get<wbr>Catalog<wbr>Service<wbr>Query<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getcatalogserviceservice">List[Get<wbr>Catalog<wbr>Service<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>services</span>
+        <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalogserviceservice">List[Get<wbr>Catalog<wbr>Service<wbr>Service]</a></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>query_<wbr>options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getcatalogservicequeryoption">List[Get<wbr>Catalog<wbr>Service<wbr>Query<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -463,7 +463,7 @@ The following output properties are available:
             title="Optional">
         <span>Allow<wbr>Stale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -471,7 +471,7 @@ The following output properties are available:
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -479,7 +479,7 @@ The following output properties are available:
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -487,7 +487,7 @@ The following output properties are available:
             title="Optional">
         <span>Near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -495,7 +495,7 @@ The following output properties are available:
             title="Optional">
         <span>Node<wbr>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -503,7 +503,7 @@ The following output properties are available:
             title="Optional">
         <span>Require<wbr>Consistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -511,7 +511,7 @@ The following output properties are available:
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ The following output properties are available:
             title="Optional">
         <span>Wait<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -527,7 +527,7 @@ The following output properties are available:
             title="Optional">
         <span>Wait<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -542,7 +542,7 @@ The following output properties are available:
             title="Optional">
         <span>Allow<wbr>Stale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -550,7 +550,7 @@ The following output properties are available:
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -558,7 +558,7 @@ The following output properties are available:
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -566,7 +566,7 @@ The following output properties are available:
             title="Optional">
         <span>Near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -582,7 +582,7 @@ The following output properties are available:
             title="Optional">
         <span>Require<wbr>Consistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -590,7 +590,7 @@ The following output properties are available:
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -598,7 +598,7 @@ The following output properties are available:
             title="Optional">
         <span>Wait<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -606,7 +606,7 @@ The following output properties are available:
             title="Optional">
         <span>Wait<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -621,7 +621,7 @@ The following output properties are available:
             title="Optional">
         <span>allow<wbr>Stale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The following output properties are available:
             title="Optional">
         <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -637,7 +637,7 @@ The following output properties are available:
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -645,7 +645,7 @@ The following output properties are available:
             title="Optional">
         <span>near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -653,7 +653,7 @@ The following output properties are available:
             title="Optional">
         <span>node<wbr>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -661,7 +661,7 @@ The following output properties are available:
             title="Optional">
         <span>require<wbr>Consistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -677,7 +677,7 @@ The following output properties are available:
             title="Optional">
         <span>wait<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -685,7 +685,7 @@ The following output properties are available:
             title="Optional">
         <span>wait<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -826,7 +826,7 @@ The following output properties are available:
             title="Required">
         <span>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -866,7 +866,7 @@ The following output properties are available:
             title="Required">
         <span>Node<wbr>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -890,7 +890,7 @@ The following output properties are available:
             title="Required">
         <span>Tagged<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -898,7 +898,7 @@ The following output properties are available:
             title="Required">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

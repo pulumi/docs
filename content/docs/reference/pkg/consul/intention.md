@@ -54,7 +54,7 @@ const pg = pulumi.output(consul.getService({
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#Intention">Intention</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#IntentionArgs">IntentionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#Intention">Intention</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#IntentionArgs">IntentionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -62,11 +62,11 @@ const pg = pulumi.output(consul.getService({
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIntention<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#IntentionArgs">IntentionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#Intention">Intention</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIntention<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#IntentionArgs">IntentionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#Intention">Intention</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..Intention.html">Intention</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.IntentionArgs.html">IntentionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Intention.html">Intention</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.IntentionArgs.html">IntentionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -167,16 +167,6 @@ const pg = pulumi.output(consul.getService({
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Optional description that can be used by Consul
-tooling, but is not used internally.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Destination<wbr>Name</span>
@@ -185,26 +175,6 @@ tooling, but is not used internally.
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Destination<wbr>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination
-namespace of the intention.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
-with the intention.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -219,9 +189,39 @@ service does not have to exist.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional description that can be used by Consul
+tooling, but is not used internally.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Destination<wbr>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination
+namespace of the intention.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Meta</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
+with the intention.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Source<wbr>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.
@@ -243,16 +243,6 @@ intention.
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Optional description that can be used by Consul
-tooling, but is not used internally.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Destination<wbr>Name</span>
@@ -263,11 +253,31 @@ tooling, but is not used internally.
 service does not have to exist.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Source<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the source service for the intention. This
+service does not have to exist.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional description that can be used by Consul
+tooling, but is not used internally.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Destination<wbr>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination
 namespace of the intention.
@@ -283,21 +293,11 @@ namespace of the intention.
 with the intention.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Source<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the source service for the intention. This
-service does not have to exist.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Source<wbr>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.
@@ -319,16 +319,6 @@ intention.
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Optional description that can be used by Consul
-tooling, but is not used internally.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>destination<wbr>Name</span>
@@ -337,26 +327,6 @@ tooling, but is not used internally.
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>destination<wbr>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination
-namespace of the intention.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
-with the intention.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -371,9 +341,39 @@ service does not have to exist.
 
     <dt class="property-optional"
             title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional description that can be used by Consul
+tooling, but is not used internally.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>destination<wbr>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination
+namespace of the intention.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>meta</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
+with the intention.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>source<wbr>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.
@@ -395,16 +395,6 @@ intention.
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Optional description that can be used by Consul
-tooling, but is not used internally.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>destination_<wbr>name</span>
@@ -413,6 +403,26 @@ tooling, but is not used internally.
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>source_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the source service for the intention. This
+service does not have to exist.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional description that can be used by Consul
+tooling, but is not used internally.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -435,16 +445,6 @@ namespace of the intention.
 with the intention.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>source_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the source service for the intention. This
-service does not have to exist.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>source_<wbr>namespace</span>
@@ -459,320 +459,6 @@ intention.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Intention Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Optional description that can be used by Consul
-tooling, but is not used internally.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Destination<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the destination service for the intention. This
-service does not have to exist.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Destination<wbr>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination
-namespace of the intention.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
-with the intention.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the source service for the intention. This
-service does not have to exist.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The source namespace of the
-intention.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Optional description that can be used by Consul
-tooling, but is not used internally.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Destination<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the destination service for the intention. This
-service does not have to exist.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Destination<wbr>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The destination
-namespace of the intention.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
-with the intention.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the source service for the intention. This
-service does not have to exist.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The source namespace of the
-intention.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Optional description that can be used by Consul
-tooling, but is not used internally.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>destination<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the destination service for the intention. This
-service does not have to exist.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>destination<wbr>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The destination
-namespace of the intention.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
-with the intention.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the source service for the intention. This
-service does not have to exist.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source<wbr>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The source namespace of the
-intention.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Optional description that can be used by Consul
-tooling, but is not used internally.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>destination_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the destination service for the intention. This
-service does not have to exist.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>destination_<wbr>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The destination
-namespace of the intention.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
-with the intention.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the source service for the intention. This
-service does not have to exist.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source_<wbr>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The source namespace of the
-intention.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -800,7 +486,7 @@ Get an existing Intention resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..Intention.html">Intention</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..IntentionState.html">IntentionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Intention.html">Intention</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..IntentionState.html">IntentionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -910,7 +596,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
 {{% /md %}}</dd>
@@ -919,7 +605,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description that can be used by Consul
 tooling, but is not used internally.
@@ -929,7 +615,7 @@ tooling, but is not used internally.
             title="Optional">
         <span>Destination<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
@@ -939,7 +625,7 @@ service does not have to exist.
             title="Optional">
         <span>Destination<wbr>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination
 namespace of the intention.
@@ -949,7 +635,7 @@ namespace of the intention.
             title="Optional">
         <span>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
 with the intention.
@@ -959,7 +645,7 @@ with the intention.
             title="Optional">
         <span>Source<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the source service for the intention. This
 service does not have to exist.
@@ -969,7 +655,7 @@ service does not have to exist.
             title="Optional">
         <span>Source<wbr>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.
@@ -986,7 +672,7 @@ intention.
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
 {{% /md %}}</dd>
@@ -995,7 +681,7 @@ intention.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description that can be used by Consul
 tooling, but is not used internally.
@@ -1005,7 +691,7 @@ tooling, but is not used internally.
             title="Optional">
         <span>Destination<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
@@ -1015,7 +701,7 @@ service does not have to exist.
             title="Optional">
         <span>Destination<wbr>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination
 namespace of the intention.
@@ -1035,7 +721,7 @@ with the intention.
             title="Optional">
         <span>Source<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the source service for the intention. This
 service does not have to exist.
@@ -1045,7 +731,7 @@ service does not have to exist.
             title="Optional">
         <span>Source<wbr>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.
@@ -1062,7 +748,7 @@ intention.
             title="Optional">
         <span>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
 {{% /md %}}</dd>
@@ -1071,7 +757,7 @@ intention.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description that can be used by Consul
 tooling, but is not used internally.
@@ -1081,7 +767,7 @@ tooling, but is not used internally.
             title="Optional">
         <span>destination<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
@@ -1091,7 +777,7 @@ service does not have to exist.
             title="Optional">
         <span>destination<wbr>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination
 namespace of the intention.
@@ -1101,7 +787,7 @@ namespace of the intention.
             title="Optional">
         <span>meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
 with the intention.
@@ -1111,7 +797,7 @@ with the intention.
             title="Optional">
         <span>source<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the source service for the intention. This
 service does not have to exist.
@@ -1121,7 +807,7 @@ service does not have to exist.
             title="Optional">
         <span>source<wbr>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.

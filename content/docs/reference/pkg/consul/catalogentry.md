@@ -44,7 +44,7 @@ const app = new consul.CatalogEntry("app", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#CatalogEntry">CatalogEntry</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#CatalogEntryArgs">CatalogEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#CatalogEntry">CatalogEntry</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#CatalogEntryArgs">CatalogEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -52,11 +52,11 @@ const app = new consul.CatalogEntry("app", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCatalogEntry<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#CatalogEntryArgs">CatalogEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#CatalogEntry">CatalogEntry</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCatalogEntry<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#CatalogEntryArgs">CatalogEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#CatalogEntry">CatalogEntry</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..CatalogEntry.html">CatalogEntry</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.CatalogEntryArgs.html">CatalogEntryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.CatalogEntry.html">CatalogEntry</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.CatalogEntryArgs.html">CatalogEntryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -158,16 +158,6 @@ const app = new consul.CatalogEntry("app", {
 or referenced in the catalog.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Node</span>
@@ -180,9 +170,19 @@ referenced in the catalog.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter to use. This overrides the
+agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogentryservice">List&lt;Catalog<wbr>Entry<wbr>Service<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#catalogentryservice">List&lt;Catalog<wbr>Entry<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A service to optionally associated with
 the node. Supported values are documented below.
@@ -192,7 +192,7 @@ the node. Supported values are documented below.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ACL token.
 {{% /md %}}</dd>
@@ -214,16 +214,6 @@ the node. Supported values are documented below.
 or referenced in the catalog.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Node</span>
@@ -232,6 +222,16 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The name of the node being added to, or
 referenced in the catalog.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter to use. This overrides the
+agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -248,7 +248,7 @@ the node. Supported values are documented below.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ACL token.
 {{% /md %}}</dd>
@@ -270,16 +270,6 @@ the node. Supported values are documented below.
 or referenced in the catalog.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>node</span>
@@ -292,9 +282,19 @@ referenced in the catalog.
 
     <dt class="property-optional"
             title="Optional">
+        <span>datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter to use. This overrides the
+agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogentryservice">Catalog<wbr>Entry<wbr>Service[]?</a></span>
+        <span class="property-type"><a href="#catalogentryservice">Catalog<wbr>Entry<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}A service to optionally associated with
 the node. Supported values are documented below.
@@ -304,7 +304,7 @@ the node. Supported values are documented below.
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ACL token.
 {{% /md %}}</dd>
@@ -326,16 +326,6 @@ the node. Supported values are documented below.
 or referenced in the catalog.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>node</span>
@@ -344,6 +334,16 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The name of the node being added to, or
 referenced in the catalog.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The datacenter to use. This overrides the
+agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -369,240 +369,6 @@ the node. Supported values are documented below.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## CatalogEntry Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address of the node being added to,
-or referenced in the catalog.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the node being added to, or
-referenced in the catalog.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogentryservice">List&lt;Catalog<wbr>Entry<wbr>Service&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A service to optionally associated with
-the node. Supported values are documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ACL token.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address of the node being added to,
-or referenced in the catalog.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the node being added to, or
-referenced in the catalog.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogentryservice">[]Catalog<wbr>Entry<wbr>Service</a></span>
-    </dt>
-    <dd>{{% md %}}A service to optionally associated with
-the node. Supported values are documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ACL token.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address of the node being added to,
-or referenced in the catalog.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the node being added to, or
-referenced in the catalog.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogentryservice">Catalog<wbr>Entry<wbr>Service[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A service to optionally associated with
-the node. Supported values are documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ACL token.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The address of the node being added to,
-or referenced in the catalog.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the node being added to, or
-referenced in the catalog.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogentryservice">List[Catalog<wbr>Entry<wbr>Service]</a></span>
-    </dt>
-    <dd>{{% md %}}A service to optionally associated with
-the node. Supported values are documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ACL token.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -630,7 +396,7 @@ Get an existing CatalogEntry resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..CatalogEntry.html">CatalogEntry</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..CatalogEntryState.html">CatalogEntryState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.CatalogEntry.html">CatalogEntry</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..CatalogEntryState.html">CatalogEntryState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -740,7 +506,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the node being added to,
 or referenced in the catalog.
@@ -750,7 +516,7 @@ or referenced in the catalog.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -760,7 +526,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node being added to, or
 referenced in the catalog.
@@ -770,7 +536,7 @@ referenced in the catalog.
             title="Optional">
         <span>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogentryservice">List&lt;Catalog<wbr>Entry<wbr>Service<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#catalogentryservice">List&lt;Catalog<wbr>Entry<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A service to optionally associated with
 the node. Supported values are documented below.
@@ -780,7 +546,7 @@ the node. Supported values are documented below.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ACL token.
 {{% /md %}}</dd>
@@ -796,7 +562,7 @@ the node. Supported values are documented below.
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the node being added to,
 or referenced in the catalog.
@@ -806,7 +572,7 @@ or referenced in the catalog.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -816,7 +582,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node being added to, or
 referenced in the catalog.
@@ -836,7 +602,7 @@ the node. Supported values are documented below.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ACL token.
 {{% /md %}}</dd>
@@ -852,7 +618,7 @@ the node. Supported values are documented below.
             title="Optional">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the node being added to,
 or referenced in the catalog.
@@ -862,7 +628,7 @@ or referenced in the catalog.
             title="Optional">
         <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -872,7 +638,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node being added to, or
 referenced in the catalog.
@@ -882,7 +648,7 @@ referenced in the catalog.
             title="Optional">
         <span>services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogentryservice">Catalog<wbr>Entry<wbr>Service[]?</a></span>
+        <span class="property-type"><a href="#catalogentryservice">Catalog<wbr>Entry<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}A service to optionally associated with
 the node. Supported values are documented below.
@@ -892,7 +658,7 @@ the node. Supported values are documented below.
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ACL token.
 {{% /md %}}</dd>
@@ -982,25 +748,6 @@ the node. Supported values are documented below.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The address of the service. Defaults to the
-node address.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the service. Defaults to the `name`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1012,9 +759,28 @@ node address.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address of the service. Defaults to the
+node address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the service. Defaults to the `name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
 {{% /md %}}</dd>
@@ -1023,7 +789,7 @@ node address.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
@@ -1036,25 +802,6 @@ but can be used to distinguish between services or nodes.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The address of the service. Defaults to the
-node address.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the service. Defaults to the `name`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1066,9 +813,28 @@ node address.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address of the service. Defaults to the
+node address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the service. Defaults to the `name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
 {{% /md %}}</dd>
@@ -1090,25 +856,6 @@ but can be used to distinguish between services or nodes.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The address of the service. Defaults to the
-node address.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the service. Defaults to the `name`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -1120,9 +867,28 @@ node address.
 
     <dt class="property-optional"
             title="Optional">
+        <span>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address of the service. Defaults to the
+node address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the service. Defaults to the `name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port of the service.
 {{% /md %}}</dd>
@@ -1131,7 +897,7 @@ node address.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
@@ -1144,6 +910,15 @@ but can be used to distinguish between services or nodes.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the service
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>address</span>
@@ -1161,15 +936,6 @@ node address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the service. Defaults to the `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the service
 {{% /md %}}</dd>
 
     <dt class="property-optional"

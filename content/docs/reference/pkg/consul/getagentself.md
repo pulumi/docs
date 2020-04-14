@@ -36,7 +36,7 @@ from the agent specified in the `provider`.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAgentSelf<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupAgentSelfResult">LookupAgentSelfResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAgentSelf<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupAgentSelfResult">LookupAgentSelfResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -111,7 +111,7 @@ The following output properties are available:
             title="">
         <span>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -135,7 +135,7 @@ The following output properties are available:
             title="">
         <span>Advertise<wbr>Addrs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -231,7 +231,7 @@ The following output properties are available:
             title="">
         <span>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of DNS configuration attributes.  See below for details on the
 contents of the `dns` attribute.
@@ -297,7 +297,7 @@ of telemetry configuration.
             title="">
         <span>Dns<wbr>Recursors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -409,7 +409,7 @@ of telemetry configuration.
             title="">
         <span>Performance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -425,7 +425,7 @@ of telemetry configuration.
             title="">
         <span>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, int></span>
+        <span class="property-type">Dictionary&lt;string, int&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -465,7 +465,7 @@ of telemetry configuration.
             title="">
         <span>Retry<wbr>Join<wbr>Ec2</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -473,7 +473,7 @@ of telemetry configuration.
             title="">
         <span>Retry<wbr>Join<wbr>Gce</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -481,7 +481,7 @@ of telemetry configuration.
             title="">
         <span>Retry<wbr>Join<wbr>Wans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -489,7 +489,7 @@ of telemetry configuration.
             title="">
         <span>Retry<wbr>Joins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -553,7 +553,7 @@ of telemetry configuration.
             title="">
         <span>Start<wbr>Join<wbr>Wans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -561,7 +561,7 @@ of telemetry configuration.
             title="">
         <span>Start<wbr>Joins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -577,7 +577,7 @@ of telemetry configuration.
             title="">
         <span>Tagged<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -585,7 +585,7 @@ of telemetry configuration.
             title="">
         <span>Telemetry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -665,7 +665,7 @@ of telemetry configuration.
             title="">
         <span>Unix<wbr>Sockets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
