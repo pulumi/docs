@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#MrScalar">MrScalar</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#MrScalarArgs">MrScalarArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#MrScalar">MrScalar</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#MrScalarArgs">MrScalarArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMrScalar<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#MrScalarArgs">MrScalarArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#MrScalar">MrScalar</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMrScalar<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#MrScalarArgs">MrScalarArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#MrScalar">MrScalar</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.MrScalar.html">MrScalar</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.MrScalarArgs.html">MrScalarArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.MrScalar.html">MrScalar</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.MrScalarArgs.html">MrScalarArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,11 +118,20 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MrScaler strategy. Allowed values are `new` `clone` and `wrap`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Additional<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -130,7 +139,7 @@ block_external_search_index: true
             title="Optional">
         <span>Additional<wbr>Primary<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -138,7 +147,7 @@ block_external_search_index: true
             title="Optional">
         <span>Additional<wbr>Replica<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -146,7 +155,7 @@ block_external_search_index: true
             title="Optional">
         <span>Applications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarapplication">List&lt;Mr<wbr>Scalar<wbr>Application<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarapplication">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Application<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -154,7 +163,7 @@ block_external_search_index: true
             title="Optional">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -162,7 +171,7 @@ block_external_search_index: true
             title="Optional">
         <span>Bootstrap<wbr>Actions<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">List&lt;Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -170,7 +179,7 @@ block_external_search_index: true
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler cluster id.
 {{% /md %}}</dd>
@@ -179,7 +188,7 @@ block_external_search_index: true
             title="Optional">
         <span>Configurations<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarconfigurationsfile">List&lt;Mr<wbr>Scalar<wbr>Configurations<wbr>File<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarconfigurationsfile">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Configurations<wbr>File<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -187,7 +196,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -195,7 +204,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">List&lt;Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -203,7 +212,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -211,7 +220,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -219,7 +228,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -227,7 +236,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -235,7 +244,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -243,7 +252,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Scaling<wbr>Down<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">List&lt;Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -251,7 +260,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Scaling<wbr>Up<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">List&lt;Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -259,7 +268,7 @@ block_external_search_index: true
             title="Optional">
         <span>Custom<wbr>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -267,7 +276,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler description.
 {{% /md %}}</dd>
@@ -276,7 +285,7 @@ block_external_search_index: true
             title="Optional">
         <span>Ebs<wbr>Root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -284,7 +293,7 @@ block_external_search_index: true
             title="Optional">
         <span>Ec2Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -292,7 +301,7 @@ block_external_search_index: true
             title="Optional">
         <span>Expose<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -300,7 +309,7 @@ block_external_search_index: true
             title="Optional">
         <span>Instance<wbr>Weights</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarinstanceweight">List&lt;Mr<wbr>Scalar<wbr>Instance<wbr>Weight<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarinstanceweight">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Instance<wbr>Weight<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -308,7 +317,7 @@ block_external_search_index: true
             title="Optional">
         <span>Job<wbr>Flow<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -316,7 +325,7 @@ block_external_search_index: true
             title="Optional">
         <span>Keep<wbr>Job<wbr>Flow<wbr>Alive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -324,7 +333,7 @@ block_external_search_index: true
             title="Optional">
         <span>Log<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -332,7 +341,7 @@ block_external_search_index: true
             title="Optional">
         <span>Managed<wbr>Primary<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -340,7 +349,7 @@ block_external_search_index: true
             title="Optional">
         <span>Managed<wbr>Replica<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -348,7 +357,7 @@ block_external_search_index: true
             title="Optional">
         <span>Master<wbr>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">List&lt;Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -356,7 +365,7 @@ block_external_search_index: true
             title="Optional">
         <span>Master<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -364,7 +373,7 @@ block_external_search_index: true
             title="Optional">
         <span>Master<wbr>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -372,7 +381,7 @@ block_external_search_index: true
             title="Optional">
         <span>Master<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -380,7 +389,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler name.
 {{% /md %}}</dd>
@@ -389,7 +398,7 @@ block_external_search_index: true
             title="Optional">
         <span>Provisioning<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -397,7 +406,7 @@ block_external_search_index: true
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler region.
 {{% /md %}}</dd>
@@ -406,7 +415,7 @@ block_external_search_index: true
             title="Optional">
         <span>Release<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -414,7 +423,7 @@ block_external_search_index: true
             title="Optional">
         <span>Repo<wbr>Upgrade<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -422,7 +431,7 @@ block_external_search_index: true
             title="Optional">
         <span>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -430,7 +439,7 @@ block_external_search_index: true
             title="Optional">
         <span>Scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarscheduledtask">List&lt;Mr<wbr>Scalar<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -438,7 +447,7 @@ block_external_search_index: true
             title="Optional">
         <span>Security<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -446,7 +455,7 @@ block_external_search_index: true
             title="Optional">
         <span>Service<wbr>Access<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -454,7 +463,7 @@ block_external_search_index: true
             title="Optional">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -462,9 +471,112 @@ block_external_search_index: true
             title="Optional">
         <span>Steps<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarstepsfile">List&lt;Mr<wbr>Scalar<wbr>Steps<wbr>File<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarstepsfile">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Steps<wbr>File<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalartag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Task<wbr>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Task<wbr>Ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalartaskebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Task<wbr>Ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Task<wbr>Instance<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Task<wbr>Lifecycle</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Task<wbr>Max<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Task<wbr>Min<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Task<wbr>Scaling<wbr>Down<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Task<wbr>Scaling<wbr>Up<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Termination<wbr>Protected</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Visible<wbr>To<wbr>All<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been removed from our API and is no longer functional.{{% /md %}}</p></dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -477,112 +589,9 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartag">List&lt;Mr<wbr>Scalar<wbr>Tag<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Task<wbr>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Task<wbr>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskebsblockdevice">List&lt;Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Task<wbr>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Task<wbr>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Task<wbr>Lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Task<wbr>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Task<wbr>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Task<wbr>Scaling<wbr>Down<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">List&lt;Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Task<wbr>Scaling<wbr>Up<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">List&lt;Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Termination<wbr>Protected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Visible<wbr>To<wbr>All<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been removed from our API and is no longer functional.{{% /md %}}</p></dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Additional<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -630,7 +639,7 @@ block_external_search_index: true
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler cluster id.
 {{% /md %}}</dd>
@@ -647,7 +656,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -663,7 +672,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -679,7 +688,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -687,7 +696,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -695,7 +704,7 @@ block_external_search_index: true
             title="Optional">
         <span>Core<wbr>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -719,7 +728,7 @@ block_external_search_index: true
             title="Optional">
         <span>Custom<wbr>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -727,7 +736,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler description.
 {{% /md %}}</dd>
@@ -736,7 +745,7 @@ block_external_search_index: true
             title="Optional">
         <span>Ebs<wbr>Root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -744,7 +753,7 @@ block_external_search_index: true
             title="Optional">
         <span>Ec2Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -752,7 +761,7 @@ block_external_search_index: true
             title="Optional">
         <span>Expose<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -768,7 +777,7 @@ block_external_search_index: true
             title="Optional">
         <span>Job<wbr>Flow<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -776,7 +785,7 @@ block_external_search_index: true
             title="Optional">
         <span>Keep<wbr>Job<wbr>Flow<wbr>Alive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -784,7 +793,7 @@ block_external_search_index: true
             title="Optional">
         <span>Log<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -792,7 +801,7 @@ block_external_search_index: true
             title="Optional">
         <span>Managed<wbr>Primary<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -800,7 +809,7 @@ block_external_search_index: true
             title="Optional">
         <span>Managed<wbr>Replica<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -816,7 +825,7 @@ block_external_search_index: true
             title="Optional">
         <span>Master<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -832,7 +841,7 @@ block_external_search_index: true
             title="Optional">
         <span>Master<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -840,7 +849,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler name.
 {{% /md %}}</dd>
@@ -849,7 +858,7 @@ block_external_search_index: true
             title="Optional">
         <span>Provisioning<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">*Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -857,7 +866,7 @@ block_external_search_index: true
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler region.
 {{% /md %}}</dd>
@@ -866,7 +875,7 @@ block_external_search_index: true
             title="Optional">
         <span>Release<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -874,7 +883,7 @@ block_external_search_index: true
             title="Optional">
         <span>Repo<wbr>Upgrade<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -882,7 +891,7 @@ block_external_search_index: true
             title="Optional">
         <span>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -898,7 +907,7 @@ block_external_search_index: true
             title="Optional">
         <span>Security<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -906,7 +915,7 @@ block_external_search_index: true
             title="Optional">
         <span>Service<wbr>Access<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -914,7 +923,7 @@ block_external_search_index: true
             title="Optional">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -925,15 +934,6 @@ block_external_search_index: true
         <span class="property-type"><a href="#mrscalarstepsfile">[]Mr<wbr>Scalar<wbr>Steps<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler strategy. Allowed values are `new` `clone` and `wrap`.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -947,7 +947,7 @@ block_external_search_index: true
             title="Optional">
         <span>Task<wbr>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -963,7 +963,7 @@ block_external_search_index: true
             title="Optional">
         <span>Task<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -979,7 +979,7 @@ block_external_search_index: true
             title="Optional">
         <span>Task<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -987,7 +987,7 @@ block_external_search_index: true
             title="Optional">
         <span>Task<wbr>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -995,7 +995,7 @@ block_external_search_index: true
             title="Optional">
         <span>Task<wbr>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1019,7 +1019,7 @@ block_external_search_index: true
             title="Optional">
         <span>Termination<wbr>Protected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1027,7 +1027,7 @@ block_external_search_index: true
             title="Optional, Deprecated">
         <span>Visible<wbr>To<wbr>All<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been removed from our API and is no longer functional.{{% /md %}}</p></dd>
 
@@ -1037,354 +1037,6 @@ block_external_search_index: true
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>additional<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>additional<wbr>Primary<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>additional<wbr>Replica<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>applications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarapplication">Mr<wbr>Scalar<wbr>Application[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>availability<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>bootstrap<wbr>Actions<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler cluster id.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>configurations<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarconfigurationsfile">Mr<wbr>Scalar<wbr>Configurations<wbr>File[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>core<wbr>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>core<wbr>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>core<wbr>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>core<wbr>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>core<wbr>Lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>core<wbr>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>core<wbr>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>core<wbr>Scaling<wbr>Down<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>core<wbr>Scaling<wbr>Up<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>custom<wbr>Ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler description.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ebs<wbr>Root<wbr>Volume<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ec2Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>expose<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>instance<wbr>Weights</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarinstanceweight">Mr<wbr>Scalar<wbr>Instance<wbr>Weight[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>job<wbr>Flow<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>keep<wbr>Job<wbr>Flow<wbr>Alive</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>log<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>managed<wbr>Primary<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>managed<wbr>Replica<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>master<wbr>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>master<wbr>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>master<wbr>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>master<wbr>Lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>provisioning<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler region.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>release<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>repo<wbr>Upgrade<wbr>On<wbr>Boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>retries</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarscheduledtask">Mr<wbr>Scalar<wbr>Scheduled<wbr>Task[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>security<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>service<wbr>Access<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>service<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>steps<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarstepsfile">Mr<wbr>Scalar<wbr>Steps<wbr>File[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1397,9 +1049,357 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>additional<wbr>Info</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>additional<wbr>Primary<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>additional<wbr>Replica<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>applications</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarapplication">Mr<wbr>Scalar<wbr>Application[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>bootstrap<wbr>Actions<wbr>Files</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MrScaler cluster id.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>configurations<wbr>Files</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarconfigurationsfile">Mr<wbr>Scalar<wbr>Configurations<wbr>File[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core<wbr>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core<wbr>Ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core<wbr>Ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core<wbr>Instance<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core<wbr>Lifecycle</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core<wbr>Max<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core<wbr>Min<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core<wbr>Scaling<wbr>Down<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core<wbr>Scaling<wbr>Up<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>custom<wbr>Ami<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MrScaler description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs<wbr>Root<wbr>Volume<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ec2Key<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>expose<wbr>Cluster<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance<wbr>Weights</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarinstanceweight">Mr<wbr>Scalar<wbr>Instance<wbr>Weight[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>job<wbr>Flow<wbr>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>keep<wbr>Job<wbr>Flow<wbr>Alive</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>log<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>managed<wbr>Primary<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>managed<wbr>Replica<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>master<wbr>Ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>master<wbr>Ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>master<wbr>Instance<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>master<wbr>Lifecycle</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MrScaler name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>provisioning<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MrScaler region.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>release<wbr>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>repo<wbr>Upgrade<wbr>On<wbr>Boot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retries</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarscheduledtask">Mr<wbr>Scalar<wbr>Scheduled<wbr>Task[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>security<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>service<wbr>Access<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>service<wbr>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>steps<wbr>Files</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mrscalarstepsfile">Mr<wbr>Scalar<wbr>Steps<wbr>File[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartag">Mr<wbr>Scalar<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#mrscalartag">Mr<wbr>Scalar<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1407,7 +1407,7 @@ block_external_search_index: true
             title="Optional">
         <span>task<wbr>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1415,7 +1415,7 @@ block_external_search_index: true
             title="Optional">
         <span>task<wbr>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskebsblockdevice">Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#mrscalartaskebsblockdevice">Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1423,7 +1423,7 @@ block_external_search_index: true
             title="Optional">
         <span>task<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1431,7 +1431,7 @@ block_external_search_index: true
             title="Optional">
         <span>task<wbr>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1439,7 +1439,7 @@ block_external_search_index: true
             title="Optional">
         <span>task<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1447,7 +1447,7 @@ block_external_search_index: true
             title="Optional">
         <span>task<wbr>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1455,7 +1455,7 @@ block_external_search_index: true
             title="Optional">
         <span>task<wbr>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1463,7 +1463,7 @@ block_external_search_index: true
             title="Optional">
         <span>task<wbr>Scaling<wbr>Down<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy[]?</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1471,7 +1471,7 @@ block_external_search_index: true
             title="Optional">
         <span>task<wbr>Scaling<wbr>Up<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy[]?</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1479,7 +1479,7 @@ block_external_search_index: true
             title="Optional">
         <span>termination<wbr>Protected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1487,7 +1487,7 @@ block_external_search_index: true
             title="Optional, Deprecated">
         <span>visible<wbr>To<wbr>All<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been removed from our API and is no longer functional.{{% /md %}}</p></dd>
 
@@ -1497,6 +1497,15 @@ block_external_search_index: true
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The MrScaler strategy. Allowed values are `new` `clone` and `wrap`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1845,15 +1854,6 @@ block_external_search_index: true
         <span class="property-type"><a href="#mrscalarstepsfile">List[Mr<wbr>Scalar<wbr>Steps<wbr>File]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler strategy. Allowed values are `new` `clone` and `wrap`.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1972,464 +1972,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Additional<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Additional<wbr>Primary<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Additional<wbr>Replica<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Applications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarapplication">List&lt;Mr<wbr>Scalar<wbr>Application&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bootstrap<wbr>Actions<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">List&lt;Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler cluster id.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Configurations<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarconfigurationsfile">List&lt;Mr<wbr>Scalar<wbr>Configurations<wbr>File&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">List&lt;Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Scaling<wbr>Down<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">List&lt;Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Scaling<wbr>Up<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">List&lt;Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Root<wbr>Volume<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ec2Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Expose<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Weights</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarinstanceweight">List&lt;Mr<wbr>Scalar<wbr>Instance<wbr>Weight&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Job<wbr>Flow<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Keep<wbr>Job<wbr>Flow<wbr>Alive</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Log<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Managed<wbr>Primary<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Managed<wbr>Replica<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master<wbr>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">List&lt;Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master<wbr>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master<wbr>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master<wbr>Lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Output<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Provisioning<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler region.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Release<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Repo<wbr>Upgrade<wbr>On<wbr>Boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Retries</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarscheduledtask">List&lt;Mr<wbr>Scalar<wbr>Scheduled<wbr>Task&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Access<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Steps<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarstepsfile">List&lt;Mr<wbr>Scalar<wbr>Steps<wbr>File&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler strategy. Allowed values are `new` `clone` and `wrap`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartag">List&lt;Mr<wbr>Scalar<wbr>Tag&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskebsblockdevice">List&lt;Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Scaling<wbr>Down<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">List&lt;Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Scaling<wbr>Up<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">List&lt;Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Termination<wbr>Protected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Visible<wbr>To<wbr>All<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been removed from our API and is no longer functional.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2440,464 +1987,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Additional<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Additional<wbr>Primary<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Additional<wbr>Replica<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Applications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarapplication">[]Mr<wbr>Scalar<wbr>Application</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bootstrap<wbr>Actions<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">[]Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler cluster id.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Configurations<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarconfigurationsfile">[]Mr<wbr>Scalar<wbr>Configurations<wbr>File</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">[]Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Scaling<wbr>Down<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">[]Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Scaling<wbr>Up<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">[]Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Root<wbr>Volume<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ec2Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Expose<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Weights</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarinstanceweight">[]Mr<wbr>Scalar<wbr>Instance<wbr>Weight</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Job<wbr>Flow<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Keep<wbr>Job<wbr>Flow<wbr>Alive</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Log<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Managed<wbr>Primary<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Managed<wbr>Replica<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master<wbr>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">[]Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master<wbr>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master<wbr>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master<wbr>Lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Output<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Provisioning<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">*Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler region.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Release<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Repo<wbr>Upgrade<wbr>On<wbr>Boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Retries</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarscheduledtask">[]Mr<wbr>Scalar<wbr>Scheduled<wbr>Task</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Access<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Steps<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarstepsfile">[]Mr<wbr>Scalar<wbr>Steps<wbr>File</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler strategy. Allowed values are `new` `clone` and `wrap`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartag">[]Mr<wbr>Scalar<wbr>Tag</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskebsblockdevice">[]Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Scaling<wbr>Down<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">[]Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Scaling<wbr>Up<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">[]Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Termination<wbr>Protected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Visible<wbr>To<wbr>All<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been removed from our API and is no longer functional.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2908,464 +2002,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>additional<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>additional<wbr>Primary<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>additional<wbr>Replica<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>applications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarapplication">Mr<wbr>Scalar<wbr>Application[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bootstrap<wbr>Actions<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler cluster id.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>configurations<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarconfigurationsfile">Mr<wbr>Scalar<wbr>Configurations<wbr>File[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core<wbr>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core<wbr>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core<wbr>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core<wbr>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core<wbr>Lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core<wbr>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core<wbr>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core<wbr>Scaling<wbr>Down<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core<wbr>Scaling<wbr>Up<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs<wbr>Root<wbr>Volume<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ec2Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expose<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Weights</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarinstanceweight">Mr<wbr>Scalar<wbr>Instance<wbr>Weight[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>job<wbr>Flow<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>keep<wbr>Job<wbr>Flow<wbr>Alive</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>log<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>managed<wbr>Primary<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>managed<wbr>Replica<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master<wbr>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master<wbr>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master<wbr>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master<wbr>Lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>output<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>provisioning<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler region.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>release<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>repo<wbr>Upgrade<wbr>On<wbr>Boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>retries</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarscheduledtask">Mr<wbr>Scalar<wbr>Scheduled<wbr>Task[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service<wbr>Access<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>steps<wbr>Files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarstepsfile">Mr<wbr>Scalar<wbr>Steps<wbr>File[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler strategy. Allowed values are `new` `clone` and `wrap`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartag">Mr<wbr>Scalar<wbr>Tag[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task<wbr>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task<wbr>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskebsblockdevice">Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task<wbr>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task<wbr>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task<wbr>Lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task<wbr>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task<wbr>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task<wbr>Scaling<wbr>Down<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task<wbr>Scaling<wbr>Up<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>termination<wbr>Protected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>visible<wbr>To<wbr>All<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been removed from our API and is no longer functional.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -3376,464 +2017,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>additional_<wbr>info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>additional_<wbr>primary_<wbr>security_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>additional_<wbr>replica_<wbr>security_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>applications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarapplication">List[Mr<wbr>Scalar<wbr>Application]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability_<wbr>zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bootstrap_<wbr>actions_<wbr>files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">List[Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler cluster id.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>configurations_<wbr>files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarconfigurationsfile">List[Mr<wbr>Scalar<wbr>Configurations<wbr>File]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core_<wbr>desired_<wbr>capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core_<wbr>ebs_<wbr>block_<wbr>devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">List[Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core_<wbr>ebs_<wbr>optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core_<wbr>instance_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core_<wbr>lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core_<wbr>max_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core_<wbr>min_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core_<wbr>scaling_<wbr>down_<wbr>policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">List[Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>core_<wbr>scaling_<wbr>up_<wbr>policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">List[Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>ami_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs_<wbr>root_<wbr>volume_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ec2_<wbr>key_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expose_<wbr>cluster_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>weights</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarinstanceweight">List[Mr<wbr>Scalar<wbr>Instance<wbr>Weight]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>job_<wbr>flow_<wbr>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>keep_<wbr>job_<wbr>flow_<wbr>alive</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>log_<wbr>uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>managed_<wbr>primary_<wbr>security_<wbr>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>managed_<wbr>replica_<wbr>security_<wbr>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master_<wbr>ebs_<wbr>block_<wbr>devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">List[Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master_<wbr>ebs_<wbr>optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master_<wbr>instance_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master_<wbr>lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>output_<wbr>cluster_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>provisioning_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Dict[Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler region.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>release_<wbr>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>repo_<wbr>upgrade_<wbr>on_<wbr>boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>retries</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduled_<wbr>tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarscheduledtask">List[Mr<wbr>Scalar<wbr>Scheduled<wbr>Task]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service_<wbr>access_<wbr>security_<wbr>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service_<wbr>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>steps_<wbr>files</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarstepsfile">List[Mr<wbr>Scalar<wbr>Steps<wbr>File]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The MrScaler strategy. Allowed values are `new` `clone` and `wrap`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartag">List[Mr<wbr>Scalar<wbr>Tag]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task_<wbr>desired_<wbr>capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task_<wbr>ebs_<wbr>block_<wbr>devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskebsblockdevice">List[Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task_<wbr>ebs_<wbr>optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task_<wbr>instance_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task_<wbr>lifecycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task_<wbr>max_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task_<wbr>min_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task_<wbr>scaling_<wbr>down_<wbr>policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">List[Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task_<wbr>scaling_<wbr>up_<wbr>policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">List[Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>termination_<wbr>protected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>visible_<wbr>to_<wbr>all_<wbr>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been removed from our API and is no longer functional.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -3974,7 +2162,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Additional<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3982,7 +2170,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Additional<wbr>Primary<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3990,7 +2178,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Additional<wbr>Replica<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3998,7 +2186,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Applications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarapplication">List&lt;Mr<wbr>Scalar<wbr>Application<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarapplication">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Application<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4006,7 +2194,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4014,7 +2202,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bootstrap<wbr>Actions<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">List&lt;Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4022,7 +2210,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler cluster id.
 {{% /md %}}</dd>
@@ -4031,7 +2219,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configurations<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarconfigurationsfile">List&lt;Mr<wbr>Scalar<wbr>Configurations<wbr>File<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarconfigurationsfile">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Configurations<wbr>File<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4039,7 +2227,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4047,7 +2235,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">List&lt;Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4055,7 +2243,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4063,7 +2251,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4071,7 +2259,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4079,7 +2267,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4087,7 +2275,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4095,7 +2283,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Scaling<wbr>Down<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">List&lt;Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4103,7 +2291,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Scaling<wbr>Up<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">List&lt;Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4111,7 +2299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4119,7 +2307,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler description.
 {{% /md %}}</dd>
@@ -4128,7 +2316,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ebs<wbr>Root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4136,7 +2324,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4144,7 +2332,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expose<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4152,7 +2340,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Weights</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarinstanceweight">List&lt;Mr<wbr>Scalar<wbr>Instance<wbr>Weight<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarinstanceweight">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Instance<wbr>Weight<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4160,7 +2348,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Job<wbr>Flow<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4168,7 +2356,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Keep<wbr>Job<wbr>Flow<wbr>Alive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4176,7 +2364,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Log<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4184,7 +2372,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Managed<wbr>Primary<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4192,7 +2380,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Managed<wbr>Replica<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4200,7 +2388,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">List&lt;Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4208,7 +2396,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4216,7 +2404,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4224,7 +2412,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4232,7 +2420,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler name.
 {{% /md %}}</dd>
@@ -4241,7 +2429,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4249,7 +2437,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Provisioning<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4257,7 +2445,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler region.
 {{% /md %}}</dd>
@@ -4266,7 +2454,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Release<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4274,7 +2462,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Repo<wbr>Upgrade<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4282,7 +2470,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4290,7 +2478,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarscheduledtask">List&lt;Mr<wbr>Scalar<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4298,7 +2486,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4306,7 +2494,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Access<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4314,7 +2502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4322,7 +2510,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Steps<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarstepsfile">List&lt;Mr<wbr>Scalar<wbr>Steps<wbr>File<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalarstepsfile">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Steps<wbr>File<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4330,7 +2518,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler strategy. Allowed values are `new` `clone` and `wrap`.
 {{% /md %}}</dd>
@@ -4339,7 +2527,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartag">List&lt;Mr<wbr>Scalar<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalartag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4347,7 +2535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4355,7 +2543,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskebsblockdevice">List&lt;Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalartaskebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4363,7 +2551,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4371,7 +2559,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4379,7 +2567,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4387,7 +2575,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4395,7 +2583,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4403,7 +2591,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Scaling<wbr>Down<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">List&lt;Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4411,7 +2599,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Scaling<wbr>Up<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">List&lt;Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4419,7 +2607,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Termination<wbr>Protected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4427,7 +2615,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Visible<wbr>To<wbr>All<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been removed from our API and is no longer functional.{{% /md %}}</p></dd>
 
@@ -4442,7 +2630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Additional<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4490,7 +2678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler cluster id.
 {{% /md %}}</dd>
@@ -4507,7 +2695,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4523,7 +2711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4539,7 +2727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4547,7 +2735,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4555,7 +2743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4579,7 +2767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4587,7 +2775,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler description.
 {{% /md %}}</dd>
@@ -4596,7 +2784,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ebs<wbr>Root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4604,7 +2792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4612,7 +2800,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expose<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4628,7 +2816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Job<wbr>Flow<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4636,7 +2824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Keep<wbr>Job<wbr>Flow<wbr>Alive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4644,7 +2832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Log<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4652,7 +2840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Managed<wbr>Primary<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4660,7 +2848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Managed<wbr>Replica<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4676,7 +2864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4692,7 +2880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4700,7 +2888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler name.
 {{% /md %}}</dd>
@@ -4709,7 +2897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4717,7 +2905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Provisioning<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">*Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4725,7 +2913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler region.
 {{% /md %}}</dd>
@@ -4734,7 +2922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Release<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4742,7 +2930,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Repo<wbr>Upgrade<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4750,7 +2938,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4766,7 +2954,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4774,7 +2962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Access<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4782,7 +2970,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4798,7 +2986,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler strategy. Allowed values are `new` `clone` and `wrap`.
 {{% /md %}}</dd>
@@ -4815,7 +3003,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4831,7 +3019,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4847,7 +3035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4855,7 +3043,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4863,7 +3051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4887,7 +3075,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Termination<wbr>Protected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4895,7 +3083,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Visible<wbr>To<wbr>All<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been removed from our API and is no longer functional.{{% /md %}}</p></dd>
 
@@ -4910,7 +3098,7 @@ The following state arguments are supported:
             title="Optional">
         <span>additional<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4918,7 +3106,7 @@ The following state arguments are supported:
             title="Optional">
         <span>additional<wbr>Primary<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4926,7 +3114,7 @@ The following state arguments are supported:
             title="Optional">
         <span>additional<wbr>Replica<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4934,7 +3122,7 @@ The following state arguments are supported:
             title="Optional">
         <span>applications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarapplication">Mr<wbr>Scalar<wbr>Application[]?</a></span>
+        <span class="property-type"><a href="#mrscalarapplication">Mr<wbr>Scalar<wbr>Application[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4942,7 +3130,7 @@ The following state arguments are supported:
             title="Optional">
         <span>availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4950,7 +3138,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bootstrap<wbr>Actions<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File[]?</a></span>
+        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4958,7 +3146,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler cluster id.
 {{% /md %}}</dd>
@@ -4967,7 +3155,7 @@ The following state arguments are supported:
             title="Optional">
         <span>configurations<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarconfigurationsfile">Mr<wbr>Scalar<wbr>Configurations<wbr>File[]?</a></span>
+        <span class="property-type"><a href="#mrscalarconfigurationsfile">Mr<wbr>Scalar<wbr>Configurations<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4975,7 +3163,7 @@ The following state arguments are supported:
             title="Optional">
         <span>core<wbr>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4983,7 +3171,7 @@ The following state arguments are supported:
             title="Optional">
         <span>core<wbr>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4991,7 +3179,7 @@ The following state arguments are supported:
             title="Optional">
         <span>core<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4999,7 +3187,7 @@ The following state arguments are supported:
             title="Optional">
         <span>core<wbr>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5007,7 +3195,7 @@ The following state arguments are supported:
             title="Optional">
         <span>core<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5015,7 +3203,7 @@ The following state arguments are supported:
             title="Optional">
         <span>core<wbr>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5023,7 +3211,7 @@ The following state arguments are supported:
             title="Optional">
         <span>core<wbr>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5031,7 +3219,7 @@ The following state arguments are supported:
             title="Optional">
         <span>core<wbr>Scaling<wbr>Down<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy[]?</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5039,7 +3227,7 @@ The following state arguments are supported:
             title="Optional">
         <span>core<wbr>Scaling<wbr>Up<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy[]?</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5047,7 +3235,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5055,7 +3243,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler description.
 {{% /md %}}</dd>
@@ -5064,7 +3252,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ebs<wbr>Root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5072,7 +3260,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ec2Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5080,7 +3268,7 @@ The following state arguments are supported:
             title="Optional">
         <span>expose<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5088,7 +3276,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Weights</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarinstanceweight">Mr<wbr>Scalar<wbr>Instance<wbr>Weight[]?</a></span>
+        <span class="property-type"><a href="#mrscalarinstanceweight">Mr<wbr>Scalar<wbr>Instance<wbr>Weight[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5096,7 +3284,7 @@ The following state arguments are supported:
             title="Optional">
         <span>job<wbr>Flow<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5104,7 +3292,7 @@ The following state arguments are supported:
             title="Optional">
         <span>keep<wbr>Job<wbr>Flow<wbr>Alive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5112,7 +3300,7 @@ The following state arguments are supported:
             title="Optional">
         <span>log<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5120,7 +3308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>managed<wbr>Primary<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5128,7 +3316,7 @@ The following state arguments are supported:
             title="Optional">
         <span>managed<wbr>Replica<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5136,7 +3324,7 @@ The following state arguments are supported:
             title="Optional">
         <span>master<wbr>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5144,7 +3332,7 @@ The following state arguments are supported:
             title="Optional">
         <span>master<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5152,7 +3340,7 @@ The following state arguments are supported:
             title="Optional">
         <span>master<wbr>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5160,7 +3348,7 @@ The following state arguments are supported:
             title="Optional">
         <span>master<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5168,7 +3356,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler name.
 {{% /md %}}</dd>
@@ -5177,7 +3365,7 @@ The following state arguments are supported:
             title="Optional">
         <span>output<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5185,7 +3373,7 @@ The following state arguments are supported:
             title="Optional">
         <span>provisioning<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout?</a></span>
+        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5193,7 +3381,7 @@ The following state arguments are supported:
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler region.
 {{% /md %}}</dd>
@@ -5202,7 +3390,7 @@ The following state arguments are supported:
             title="Optional">
         <span>release<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5210,7 +3398,7 @@ The following state arguments are supported:
             title="Optional">
         <span>repo<wbr>Upgrade<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5218,7 +3406,7 @@ The following state arguments are supported:
             title="Optional">
         <span>retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5226,7 +3414,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarscheduledtask">Mr<wbr>Scalar<wbr>Scheduled<wbr>Task[]?</a></span>
+        <span class="property-type"><a href="#mrscalarscheduledtask">Mr<wbr>Scalar<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5234,7 +3422,7 @@ The following state arguments are supported:
             title="Optional">
         <span>security<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5242,7 +3430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Access<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5250,7 +3438,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5258,7 +3446,7 @@ The following state arguments are supported:
             title="Optional">
         <span>steps<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarstepsfile">Mr<wbr>Scalar<wbr>Steps<wbr>File[]?</a></span>
+        <span class="property-type"><a href="#mrscalarstepsfile">Mr<wbr>Scalar<wbr>Steps<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5266,7 +3454,7 @@ The following state arguments are supported:
             title="Optional">
         <span>strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MrScaler strategy. Allowed values are `new` `clone` and `wrap`.
 {{% /md %}}</dd>
@@ -5275,7 +3463,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartag">Mr<wbr>Scalar<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#mrscalartag">Mr<wbr>Scalar<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5283,7 +3471,7 @@ The following state arguments are supported:
             title="Optional">
         <span>task<wbr>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5291,7 +3479,7 @@ The following state arguments are supported:
             title="Optional">
         <span>task<wbr>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskebsblockdevice">Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#mrscalartaskebsblockdevice">Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5299,7 +3487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>task<wbr>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5307,7 +3495,7 @@ The following state arguments are supported:
             title="Optional">
         <span>task<wbr>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5315,7 +3503,7 @@ The following state arguments are supported:
             title="Optional">
         <span>task<wbr>Lifecycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5323,7 +3511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>task<wbr>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5331,7 +3519,7 @@ The following state arguments are supported:
             title="Optional">
         <span>task<wbr>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5339,7 +3527,7 @@ The following state arguments are supported:
             title="Optional">
         <span>task<wbr>Scaling<wbr>Down<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy[]?</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5347,7 +3535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>task<wbr>Scaling<wbr>Up<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy[]?</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5355,7 +3543,7 @@ The following state arguments are supported:
             title="Optional">
         <span>termination<wbr>Protected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5363,7 +3551,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>visible<wbr>To<wbr>All<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been removed from our API and is no longer functional.{{% /md %}}</p></dd>
 
@@ -5864,14 +4052,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -5883,9 +4063,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5896,14 +4084,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -5915,9 +4095,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5927,14 +4115,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5947,9 +4127,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5960,14 +4148,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -5976,6 +4156,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The MrScaler name.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6221,14 +4409,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size<wbr>In<wbr>Gb</span>
@@ -6247,9 +4427,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6260,14 +4448,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size<wbr>In<wbr>Gb</span>
@@ -6286,9 +4466,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6298,14 +4486,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6325,9 +4505,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6337,14 +4525,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6359,6 +4539,14 @@ The following state arguments are supported:
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6392,83 +4580,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Action<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Evaluation<wbr>Periods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Min<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6480,43 +4596,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6536,18 +4620,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Action<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6555,7 +4632,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6563,7 +4640,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6571,7 +4648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dimensions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6579,7 +4656,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Evaluation<wbr>Periods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6587,21 +4664,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -6611,7 +4680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6619,7 +4688,54 @@ The following state arguments are supported:
             title="Optional">
         <span>Minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6631,43 +4747,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6687,72 +4771,9 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>action<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>evaluation<wbr>Periods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>metric<wbr>Name</span>
+        <span>Action<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -6760,17 +4781,112 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Target<wbr>Capacity</span>
+        <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum</span>
+        <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maximum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Minimum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6782,43 +4898,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6838,12 +4922,156 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>action<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>maximum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>minimum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>policy<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6901,14 +5129,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>metric<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>min<wbr>Target<wbr>Capacity</span>
@@ -6920,14 +5140,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6949,14 +5161,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>policy<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>statistic</span>
@@ -6968,22 +5172,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>unit</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7011,83 +5199,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Action<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Evaluation<wbr>Periods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Min<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7099,43 +5215,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7155,18 +5239,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Action<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7174,7 +5251,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7182,7 +5259,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7190,7 +5267,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dimensions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7198,7 +5275,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Evaluation<wbr>Periods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7206,21 +5283,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -7230,7 +5299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7238,7 +5307,54 @@ The following state arguments are supported:
             title="Optional">
         <span>Minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7250,43 +5366,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7306,72 +5390,9 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>action<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>evaluation<wbr>Periods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>metric<wbr>Name</span>
+        <span>Action<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -7379,17 +5400,112 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Target<wbr>Capacity</span>
+        <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum</span>
+        <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maximum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Minimum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7401,43 +5517,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7457,12 +5541,156 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>action<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>maximum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>minimum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>policy<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7520,14 +5748,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>metric<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>min<wbr>Target<wbr>Capacity</span>
@@ -7539,14 +5759,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7568,14 +5780,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>policy<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>statistic</span>
@@ -7587,22 +5791,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>unit</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7737,14 +5925,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size<wbr>In<wbr>Gb</span>
@@ -7763,9 +5943,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7776,14 +5964,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size<wbr>In<wbr>Gb</span>
@@ -7802,9 +5982,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7814,14 +6002,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7841,9 +6021,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7853,14 +6041,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7875,6 +6055,14 @@ The following state arguments are supported:
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8023,17 +6211,25 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Capacity</span>
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Group<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Group<wbr>Type</span>
+        <span>Task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -8043,7 +6239,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8051,21 +6247,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Min<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -8086,17 +6274,25 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Capacity</span>
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Group<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Group<wbr>Type</span>
+        <span>Task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -8106,7 +6302,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8114,21 +6310,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Min<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -8149,17 +6337,25 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>desired<wbr>Capacity</span>
+    <dt class="property-required"
+            title="Required">
+        <span>instance<wbr>Group<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Group<wbr>Type</span>
+        <span>task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -8169,7 +6365,7 @@ The following state arguments are supported:
             title="Optional">
         <span>is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8177,21 +6373,13 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>min<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -8212,9 +6400,9 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>desired_<wbr>capacity</span>
+    <dt class="property-required"
+            title="Required">
+        <span>instance<wbr>Group<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -8222,7 +6410,15 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Group<wbr>Type</span>
+        <span>task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>desired_<wbr>capacity</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -8247,14 +6443,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>min<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -8496,14 +6684,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size<wbr>In<wbr>Gb</span>
@@ -8522,9 +6702,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8535,14 +6723,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size<wbr>In<wbr>Gb</span>
@@ -8561,9 +6741,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8573,14 +6761,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8600,9 +6780,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8612,14 +6800,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8634,6 +6814,14 @@ The following state arguments are supported:
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8667,83 +6855,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Action<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Evaluation<wbr>Periods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Min<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8755,43 +6871,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8811,18 +6895,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Action<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8830,7 +6907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8838,7 +6915,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8846,7 +6923,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dimensions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8854,7 +6931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Evaluation<wbr>Periods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8862,21 +6939,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -8886,7 +6955,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8894,7 +6963,54 @@ The following state arguments are supported:
             title="Optional">
         <span>Minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8906,43 +7022,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8962,72 +7046,9 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>action<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>evaluation<wbr>Periods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>metric<wbr>Name</span>
+        <span>Action<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -9035,17 +7056,112 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Target<wbr>Capacity</span>
+        <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum</span>
+        <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maximum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Minimum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9057,43 +7173,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9113,12 +7197,156 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>action<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>maximum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>minimum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>policy<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9176,14 +7404,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>metric<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>min<wbr>Target<wbr>Capacity</span>
@@ -9195,14 +7415,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -9224,14 +7436,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>policy<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>statistic</span>
@@ -9243,22 +7447,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>unit</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -9286,83 +7474,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Action<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Evaluation<wbr>Periods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Min<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9374,43 +7490,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9430,18 +7514,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Action<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9449,7 +7526,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9457,7 +7534,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9465,7 +7542,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dimensions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9473,7 +7550,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Evaluation<wbr>Periods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9481,21 +7558,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -9505,7 +7574,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9513,7 +7582,54 @@ The following state arguments are supported:
             title="Optional">
         <span>Minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9525,43 +7641,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9581,72 +7665,9 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>action<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>evaluation<wbr>Periods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>metric<wbr>Name</span>
+        <span>Action<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -9654,17 +7675,112 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Target<wbr>Capacity</span>
+        <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum</span>
+        <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maximum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Minimum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9676,43 +7792,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9732,12 +7816,156 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>action<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>maximum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>minimum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>policy<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9795,14 +8023,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>metric<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>min<wbr>Target<wbr>Capacity</span>
@@ -9814,14 +8034,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -9843,14 +8055,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>policy<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>statistic</span>
@@ -9862,22 +8066,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>unit</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

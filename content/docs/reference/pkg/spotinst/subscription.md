@@ -39,7 +39,7 @@ const default_subscription = new spotinst.Subscription("default-subscription", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/#Subscription">Subscription</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/#SubscriptionArgs">SubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/#Subscription">Subscription</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/#SubscriptionArgs">SubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -47,11 +47,11 @@ const default_subscription = new spotinst.Subscription("default-subscription", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSubscription<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/?tab=doc#SubscriptionArgs">SubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/?tab=doc#Subscription">Subscription</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSubscription<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/?tab=doc#SubscriptionArgs">SubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/?tab=doc#Subscription">Subscription</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst..Subscription.html">Subscription</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.SubscriptionArgs.html">SubscriptionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Subscription.html">Subscription</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.SubscriptionArgs.html">SubscriptionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -161,15 +161,6 @@ const default_subscription = new spotinst.Subscription("default-subscription", {
     <dd>{{% md %}}The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`. 
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Protocol</span>
@@ -186,6 +177,15 @@ const default_subscription = new spotinst.Subscription("default-subscription", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Spotinst Resource ID (Elastigroup ID).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -213,15 +213,6 @@ const default_subscription = new spotinst.Subscription("default-subscription", {
     <dd>{{% md %}}The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`. 
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Protocol</span>
@@ -238,6 +229,15 @@ const default_subscription = new spotinst.Subscription("default-subscription", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Spotinst Resource ID (Elastigroup ID).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -265,15 +265,6 @@ const default_subscription = new spotinst.Subscription("default-subscription", {
     <dd>{{% md %}}The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`. 
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>protocol</span>
@@ -290,6 +281,15 @@ const default_subscription = new spotinst.Subscription("default-subscription", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Spotinst Resource ID (Elastigroup ID).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -317,6 +317,24 @@ const default_subscription = new spotinst.Subscription("default-subscription", {
     <dd>{{% md %}}The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`. 
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol to send the notification. Valid values: `"http"`, `"https"`, `"email"`, `"email-json"`, `"aws-sns"`, `"web"`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Spotinst Resource ID (Elastigroup ID).
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>format</span>
@@ -326,246 +344,10 @@ const default_subscription = new spotinst.Subscription("default-subscription", {
     <dd>{{% md %}}The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The protocol to send the notification. Valid values: `"http"`, `"https"`, `"email"`, `"email-json"`, `"aws-sns"`, `"web"`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Spotinst Resource ID (Elastigroup ID).
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Subscription Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint the notification will be sent to: url in case of `"http"`/`"https"`, email address in case of `"email"`/`"email-json"`, sns-topic-arn in case of `"aws-sns"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Event<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol to send the notification. Valid values: `"http"`, `"https"`, `"email"`, `"email-json"`, `"aws-sns"`, `"web"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Spotinst Resource ID (Elastigroup ID).
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint the notification will be sent to: url in case of `"http"`/`"https"`, email address in case of `"email"`/`"email-json"`, sns-topic-arn in case of `"aws-sns"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Event<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol to send the notification. Valid values: `"http"`, `"https"`, `"email"`, `"email-json"`, `"aws-sns"`, `"web"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Spotinst Resource ID (Elastigroup ID).
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint the notification will be sent to: url in case of `"http"`/`"https"`, email address in case of `"email"`/`"email-json"`, sns-topic-arn in case of `"aws-sns"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>event<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol to send the notification. Valid values: `"http"`, `"https"`, `"email"`, `"email-json"`, `"aws-sns"`, `"web"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Spotinst Resource ID (Elastigroup ID).
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The endpoint the notification will be sent to: url in case of `"http"`/`"https"`, email address in case of `"email"`/`"email-json"`, sns-topic-arn in case of `"aws-sns"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>event_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The protocol to send the notification. Valid values: `"http"`, `"https"`, `"email"`, `"email-json"`, `"aws-sns"`, `"web"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Spotinst Resource ID (Elastigroup ID).
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -593,7 +375,7 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst..Subscription.html">Subscription</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst..SubscriptionState.html">SubscriptionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Subscription.html">Subscription</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst..SubscriptionState.html">SubscriptionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -703,7 +485,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint the notification will be sent to: url in case of `"http"`/`"https"`, email address in case of `"email"`/`"email-json"`, sns-topic-arn in case of `"aws-sns"`.
 {{% /md %}}</dd>
@@ -712,7 +494,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`. 
 {{% /md %}}</dd>
@@ -721,7 +503,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
 {{% /md %}}</dd>
@@ -730,7 +512,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to send the notification. Valid values: `"http"`, `"https"`, `"email"`, `"email-json"`, `"aws-sns"`, `"web"`.
 {{% /md %}}</dd>
@@ -739,7 +521,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Spotinst Resource ID (Elastigroup ID).
 {{% /md %}}</dd>
@@ -755,7 +537,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint the notification will be sent to: url in case of `"http"`/`"https"`, email address in case of `"email"`/`"email-json"`, sns-topic-arn in case of `"aws-sns"`.
 {{% /md %}}</dd>
@@ -764,7 +546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`. 
 {{% /md %}}</dd>
@@ -782,7 +564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to send the notification. Valid values: `"http"`, `"https"`, `"email"`, `"email-json"`, `"aws-sns"`, `"web"`.
 {{% /md %}}</dd>
@@ -791,7 +573,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Spotinst Resource ID (Elastigroup ID).
 {{% /md %}}</dd>
@@ -807,7 +589,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint the notification will be sent to: url in case of `"http"`/`"https"`, email address in case of `"email"`/`"email-json"`, sns-topic-arn in case of `"aws-sns"`.
 {{% /md %}}</dd>
@@ -816,7 +598,7 @@ The following state arguments are supported:
             title="Optional">
         <span>event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`. 
 {{% /md %}}</dd>
@@ -825,7 +607,7 @@ The following state arguments are supported:
             title="Optional">
         <span>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
 {{% /md %}}</dd>
@@ -834,7 +616,7 @@ The following state arguments are supported:
             title="Optional">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to send the notification. Valid values: `"http"`, `"https"`, `"email"`, `"email-json"`, `"aws-sns"`, `"web"`.
 {{% /md %}}</dd>
@@ -843,7 +625,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Spotinst Resource ID (Elastigroup ID).
 {{% /md %}}</dd>

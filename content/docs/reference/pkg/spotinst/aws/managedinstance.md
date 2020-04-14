@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#ManagedInstance">ManagedInstance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#ManagedInstanceArgs">ManagedInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#ManagedInstance">ManagedInstance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#ManagedInstanceArgs">ManagedInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewManagedInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#ManagedInstanceArgs">ManagedInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#ManagedInstance">ManagedInstance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewManagedInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#ManagedInstanceArgs">ManagedInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#ManagedInstance">ManagedInstance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.ManagedInstance.html">ManagedInstance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.ManagedInstanceArgs.html">ManagedInstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.ManagedInstance.html">ManagedInstance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.ManagedInstanceArgs.html">ManagedInstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,118 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Healing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Block<wbr>Devices<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cpu<wbr>Credits</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
-Default: unlimited
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ManagedInstance description.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Draining<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
-Default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Elastic<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Elastic IP Allocation Id to associate to the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Describes whether instance Enhanced Monitoring is enabled.
-Default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Fall<wbr>Back<wbr>To<wbr>Od</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Grace<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Health<wbr>Check<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set IAM profile to instance. Set only one of ARN or Name.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Image<wbr>Id</span>
@@ -243,80 +131,9 @@ Default: `“EC2”`.
             title="Required">
         <span>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Comma separated list of available instance types for instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Integration<wbr>Route53</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Key<wbr>Pair</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specify a Key Pair to attach to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Life<wbr>Cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
-Default `"spot"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Load<wbr>Balancers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceloadbalancer">List&lt;Managed<wbr>Instance<wbr>Load<wbr>Balancer<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ManagedInstance name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancenetworkinterface">List&lt;Managed<wbr>Instance<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Optimization<wbr>Windows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Orientation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -328,52 +145,6 @@ Default: `"availabilityOriented"`.
     <dd>{{% md %}}Should the instance maintain its Data volumes. 
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Persist<wbr>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Persist<wbr>Root<wbr>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Placement<wbr>Tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
-Default: default
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Preferred<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Product</span>
@@ -383,93 +154,13 @@ Default: default
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The AWS region your group will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Revert<wbr>To<wbr>Spot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancereverttospot">Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancescheduledtask">List&lt;Managed<wbr>Instance<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}One or more security group IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Shutdown<wbr>Script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded shutdown script to execute prior to instance termination.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for your instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancetag">List&lt;Managed<wbr>Instance<wbr>Tag<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Set tags for the instance. Items should be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Unhealthy<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Utilize<wbr>Reserved<wbr>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -480,18 +171,11 @@ Default: `"false"`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
 {{% /md %}}</dd>
@@ -500,7 +184,7 @@ Default: `"false"`.
             title="Optional">
         <span>Block<wbr>Devices<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
 Default: `"onLaunch"`.
@@ -510,7 +194,7 @@ Default: `"onLaunch"`.
             title="Optional">
         <span>Cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
 Default: unlimited
@@ -520,7 +204,7 @@ Default: unlimited
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ManagedInstance description.
 {{% /md %}}</dd>
@@ -529,7 +213,7 @@ Default: unlimited
             title="Optional">
         <span>Draining<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.
 {{% /md %}}</dd>
@@ -538,7 +222,7 @@ Default: unlimited
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
 Default: false
@@ -548,7 +232,7 @@ Default: false
             title="Optional">
         <span>Elastic<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic IP Allocation Id to associate to the instance.
 {{% /md %}}</dd>
@@ -557,7 +241,7 @@ Default: false
             title="Optional">
         <span>Enable<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether instance Enhanced Monitoring is enabled.
 Default: false
@@ -567,7 +251,7 @@ Default: false
             title="Optional">
         <span>Fall<wbr>Back<wbr>To<wbr>Od</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -575,7 +259,7 @@ Default: false
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
 {{% /md %}}</dd>
@@ -584,7 +268,7 @@ Default: false
             title="Optional">
         <span>Health<wbr>Check<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
 Default: `“EC2”`.
@@ -594,10 +278,214 @@ Default: `“EC2”`.
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set IAM profile to instance. Set only one of ARN or Name.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Integration<wbr>Route53</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceintegrationroute53">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Integration<wbr>Route53Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Pair</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify a Key Pair to attach to the instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Life<wbr>Cycle</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
+Default `"spot"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Load<wbr>Balancers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceloadbalancer">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Load<wbr>Balancer<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ManagedInstance name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Interfaces</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancenetworkinterface">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Optimization<wbr>Windows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Orientation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
+Default: `"availabilityOriented"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Persist<wbr>Private<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the instance maintain its private IP.  
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Persist<wbr>Root<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the instance maintain its root device volumes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Placement<wbr>Tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Valid values: "default", "dedicated"
+Default: default
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Preferred<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Private<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS region your group will be created in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Revert<wbr>To<wbr>Spot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancereverttospot">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancescheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}One or more security group IDs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Shutdown<wbr>Script</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64-encoded shutdown script to execute prior to instance termination.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancetag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Set tags for the instance. Items should be unique.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Unhealthy<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64-encoded MIME user data to make available to the instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Utilize<wbr>Reserved<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
+Default: `"false"`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -617,11 +505,158 @@ Default: `“EC2”`.
     <dd>{{% md %}}Comma separated list of available instance types for instance.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Persist<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the instance maintain its Data volumes. 
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Product</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Subnet<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for your instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Healing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Block<wbr>Devices<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
+Default: `"onLaunch"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cpu<wbr>Credits</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
+Default: unlimited
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ManagedInstance description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
+Default: false
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Elastic<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Elastic IP Allocation Id to associate to the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Describes whether instance Enhanced Monitoring is enabled.
+Default: false
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Fall<wbr>Back<wbr>To<wbr>Od</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Grace<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
+Default: `“EC2”`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set IAM profile to instance. Set only one of ARN or Name.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Integration<wbr>Route53</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceintegrationroute53">*Managed<wbr>Instance<wbr>Integration<wbr>Route53</a></span>
+        <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -629,7 +664,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>Key<wbr>Pair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a Key Pair to attach to the instances.
 {{% /md %}}</dd>
@@ -638,7 +673,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>Life<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
 Default `"spot"`.
@@ -656,7 +691,7 @@ Default `"spot"`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ManagedInstance name.
 {{% /md %}}</dd>
@@ -682,26 +717,17 @@ Default `"spot"`.
             title="Optional">
         <span>Orientation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
 Default: `"availabilityOriented"`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Persist<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Persist<wbr>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the instance maintain its private IP.  
 {{% /md %}}</dd>
@@ -710,7 +736,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>Persist<wbr>Root<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the instance maintain its root device volumes.
 {{% /md %}}</dd>
@@ -719,7 +745,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>Placement<wbr>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: "default", "dedicated"
 Default: default
@@ -729,7 +755,7 @@ Default: default
             title="Optional">
         <span>Preferred<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency
 {{% /md %}}</dd>
@@ -738,25 +764,16 @@ Default: default
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Product</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
+    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 {{% /md %}}</dd>
@@ -765,7 +782,7 @@ Default: default
             title="Optional">
         <span>Revert<wbr>To<wbr>Spot</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancereverttospot">*Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot</a></span>
+        <span class="property-type"><a href="#managedinstancereverttospot">Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -790,18 +807,9 @@ Default: default
             title="Optional">
         <span>Shutdown<wbr>Script</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script to execute prior to instance termination.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for your instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -817,7 +825,7 @@ Default: default
             title="Optional">
         <span>Unhealthy<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
 {{% /md %}}</dd>
@@ -826,7 +834,7 @@ Default: default
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -835,19 +843,11 @@ Default: default
             title="Optional">
         <span>Utilize<wbr>Reserved<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
 Default: `"false"`.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -855,118 +855,6 @@ Default: `"false"`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Healing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>block<wbr>Devices<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cpu<wbr>Credits</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
-Default: unlimited
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ManagedInstance description.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>draining<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
-Default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>elastic<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Elastic IP Allocation Id to associate to the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enable<wbr>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Describes whether instance Enhanced Monitoring is enabled.
-Default: false
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>fall<wbr>Back<wbr>To<wbr>Od</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>grace<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>health<wbr>Check<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set IAM profile to instance. Set only one of ARN or Name.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -986,77 +874,6 @@ Default: `“EC2”`.
     <dd>{{% md %}}Comma separated list of available instance types for instance.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>integration<wbr>Route53</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>key<wbr>Pair</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specify a Key Pair to attach to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>life<wbr>Cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
-Default `"spot"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>load<wbr>Balancers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceloadbalancer">Managed<wbr>Instance<wbr>Load<wbr>Balancer[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ManagedInstance name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancenetworkinterface">Managed<wbr>Instance<wbr>Network<wbr>Interface[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>optimization<wbr>Windows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>orientation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>persist<wbr>Block<wbr>Devices</span>
@@ -1064,52 +881,6 @@ Default: `"availabilityOriented"`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the instance maintain its Data volumes. 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>persist<wbr>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>persist<wbr>Root<wbr>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>placement<wbr>Tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
-Default: default
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>preferred<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1121,49 +892,6 @@ Default: default
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The AWS region your group will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>revert<wbr>To<wbr>Spot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancereverttospot">Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancescheduledtask">Managed<wbr>Instance<wbr>Scheduled<wbr>Task[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}One or more security group IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>shutdown<wbr>Script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded shutdown script to execute prior to instance termination.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>subnet<wbr>Ids</span>
@@ -1171,43 +899,6 @@ Default: default
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for your instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancetag">Managed<wbr>Instance<wbr>Tag[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Set tags for the instance. Items should be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>unhealthy<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>user<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>utilize<wbr>Reserved<wbr>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1218,12 +909,374 @@ Default: `"false"`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto<wbr>Healing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>block<wbr>Devices<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
+Default: `"onLaunch"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cpu<wbr>Credits</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
+Default: unlimited
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ManagedInstance description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
+Default: false
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>elastic<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Elastic IP Allocation Id to associate to the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Describes whether instance Enhanced Monitoring is enabled.
+Default: false
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>fall<wbr>Back<wbr>To<wbr>Od</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>grace<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>health<wbr>Check<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
+Default: `“EC2”`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set IAM profile to instance. Set only one of ARN or Name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>integration<wbr>Route53</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>key<wbr>Pair</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify a Key Pair to attach to the instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>life<wbr>Cycle</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
+Default `"spot"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>load<wbr>Balancers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceloadbalancer">Managed<wbr>Instance<wbr>Load<wbr>Balancer[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ManagedInstance name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network<wbr>Interfaces</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancenetworkinterface">Managed<wbr>Instance<wbr>Network<wbr>Interface[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>optimization<wbr>Windows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>orientation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
+Default: `"availabilityOriented"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>persist<wbr>Private<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the instance maintain its private IP.  
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>persist<wbr>Root<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the instance maintain its root device volumes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>placement<wbr>Tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Valid values: "default", "dedicated"
+Default: default
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>preferred<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>private<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS region your group will be created in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>revert<wbr>To<wbr>Spot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancereverttospot">Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancescheduledtask">Managed<wbr>Instance<wbr>Scheduled<wbr>Task[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}One or more security group IDs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>shutdown<wbr>Script</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64-encoded shutdown script to execute prior to instance termination.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancetag">Managed<wbr>Instance<wbr>Tag[]</a></span>
+    </dt>
+    <dd>{{% md %}}Set tags for the instance. Items should be unique.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>unhealthy<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>user<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64-encoded MIME user data to make available to the instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>utilize<wbr>Reserved<wbr>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
+Default: `"false"`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>image_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the image used to launch the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}Comma separated list of available instance types for instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>persist_<wbr>block_<wbr>devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the instance maintain its Data volumes. 
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>product</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>subnet_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for your instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>vpc_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1337,24 +1390,6 @@ Default: `“EC2”`.
     <dd>{{% md %}}Set IAM profile to instance. Set only one of ARN or Name.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>image_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the image used to launch the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Comma separated list of available instance types for instance.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>integration_<wbr>route53</span>
@@ -1426,15 +1461,6 @@ Default `"spot"`.
 Default: `"availabilityOriented"`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>persist_<wbr>block_<wbr>devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>persist_<wbr>private_<wbr>ip</span>
@@ -1481,15 +1507,6 @@ Default: default
     <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>region</span>
@@ -1533,15 +1550,6 @@ Default: default
     <dd>{{% md %}}The Base64-encoded shutdown script to execute prior to instance termination.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>subnet_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for your instance.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
@@ -1579,1504 +1587,10 @@ Default: default
 Default: `"false"`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>vpc_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ManagedInstance Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Healing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Block<wbr>Devices<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Credits</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
-Default: unlimited
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ManagedInstance description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Draining<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
-Default: false
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elastic<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Elastic IP Allocation Id to associate to the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Describes whether instance Enhanced Monitoring is enabled.
-Default: false
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fall<wbr>Back<wbr>To<wbr>Od</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Grace<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set IAM profile to instance. Set only one of ARN or Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the image used to launch the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}Comma separated list of available instance types for instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Integration<wbr>Route53</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Pair</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specify a Key Pair to attach to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Life<wbr>Cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
-Default `"spot"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Load<wbr>Balancers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceloadbalancer">List&lt;Managed<wbr>Instance<wbr>Load<wbr>Balancer&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ManagedInstance name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancenetworkinterface">List&lt;Managed<wbr>Instance<wbr>Network<wbr>Interface&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Optimization<wbr>Windows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Orientation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Persist<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Persist<wbr>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Persist<wbr>Root<wbr>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Placement<wbr>Tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
-Default: default
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Preferred<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The AWS region your group will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Revert<wbr>To<wbr>Spot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancereverttospot">Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancescheduledtask">List&lt;Managed<wbr>Instance<wbr>Scheduled<wbr>Task&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}One or more security group IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Shutdown<wbr>Script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded shutdown script to execute prior to instance termination.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for your instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancetag">List&lt;Managed<wbr>Instance<wbr>Tag&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Set tags for the instance. Items should be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Unhealthy<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Utilize<wbr>Reserved<wbr>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Healing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Block<wbr>Devices<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Credits</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
-Default: unlimited
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ManagedInstance description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Draining<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
-Default: false
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elastic<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Elastic IP Allocation Id to associate to the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Describes whether instance Enhanced Monitoring is enabled.
-Default: false
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fall<wbr>Back<wbr>To<wbr>Od</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Grace<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Set IAM profile to instance. Set only one of ARN or Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the image used to launch the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Comma separated list of available instance types for instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Integration<wbr>Route53</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceintegrationroute53">*Managed<wbr>Instance<wbr>Integration<wbr>Route53</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Pair</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specify a Key Pair to attach to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Life<wbr>Cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
-Default `"spot"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Load<wbr>Balancers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceloadbalancer">[]Managed<wbr>Instance<wbr>Load<wbr>Balancer</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ManagedInstance name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancenetworkinterface">[]Managed<wbr>Instance<wbr>Network<wbr>Interface</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Optimization<wbr>Windows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Orientation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Persist<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Persist<wbr>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Persist<wbr>Root<wbr>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Placement<wbr>Tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
-Default: default
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Preferred<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The AWS region your group will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Revert<wbr>To<wbr>Spot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancereverttospot">*Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancescheduledtask">[]Managed<wbr>Instance<wbr>Scheduled<wbr>Task</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}One or more security group IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Shutdown<wbr>Script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded shutdown script to execute prior to instance termination.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for your instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancetag">[]Managed<wbr>Instance<wbr>Tag</a></span>
-    </dt>
-    <dd>{{% md %}}Set tags for the instance. Items should be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Unhealthy<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Utilize<wbr>Reserved<wbr>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Healing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>block<wbr>Devices<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu<wbr>Credits</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
-Default: unlimited
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ManagedInstance description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>draining<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
-Default: false
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elastic<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Elastic IP Allocation Id to associate to the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable<wbr>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Describes whether instance Enhanced Monitoring is enabled.
-Default: false
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fall<wbr>Back<wbr>To<wbr>Od</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>grace<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health<wbr>Check<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set IAM profile to instance. Set only one of ARN or Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the image used to launch the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Comma separated list of available instance types for instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>integration<wbr>Route53</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key<wbr>Pair</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specify a Key Pair to attach to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>life<wbr>Cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
-Default `"spot"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>load<wbr>Balancers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceloadbalancer">Managed<wbr>Instance<wbr>Load<wbr>Balancer[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ManagedInstance name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancenetworkinterface">Managed<wbr>Instance<wbr>Network<wbr>Interface[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>optimization<wbr>Windows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>orientation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>persist<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>persist<wbr>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>persist<wbr>Root<wbr>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>placement<wbr>Tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
-Default: default
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>preferred<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The AWS region your group will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>revert<wbr>To<wbr>Spot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancereverttospot">Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancescheduledtask">Managed<wbr>Instance<wbr>Scheduled<wbr>Task[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}One or more security group IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>shutdown<wbr>Script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded shutdown script to execute prior to instance termination.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for your instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancetag">Managed<wbr>Instance<wbr>Tag[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Set tags for the instance. Items should be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>unhealthy<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>utilize<wbr>Reserved<wbr>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>healing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>block_<wbr>devices_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
-Default: `"onLaunch"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu_<wbr>credits</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
-Default: unlimited
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ManagedInstance description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>draining_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs_<wbr>optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
-Default: false
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elastic_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Elastic IP Allocation Id to associate to the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable_<wbr>monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Describes whether instance Enhanced Monitoring is enabled.
-Default: false
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fall_<wbr>back_<wbr>to_<wbr>od</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>grace_<wbr>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health_<wbr>check_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
-Default: `“EC2”`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam_<wbr>instance_<wbr>profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Set IAM profile to instance. Set only one of ARN or Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the image used to launch the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Comma separated list of available instance types for instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>integration_<wbr>route53</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceintegrationroute53">Dict[Managed<wbr>Instance<wbr>Integration<wbr>Route53]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key_<wbr>pair</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specify a Key Pair to attach to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>life_<wbr>cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
-Default `"spot"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>load_<wbr>balancers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceloadbalancer">List[Managed<wbr>Instance<wbr>Load<wbr>Balancer]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ManagedInstance name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancenetworkinterface">List[Managed<wbr>Instance<wbr>Network<wbr>Interface]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>optimization_<wbr>windows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>orientation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
-Default: `"availabilityOriented"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>persist_<wbr>block_<wbr>devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its Data volumes. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>persist_<wbr>private_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its private IP.  
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>persist_<wbr>root_<wbr>device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>placement_<wbr>tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Valid values: "default", "dedicated"
-Default: default
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>preferred_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The AWS region your group will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>revert_<wbr>to_<wbr>spot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancereverttospot">Dict[Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduled_<wbr>tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancescheduledtask">List[Managed<wbr>Instance<wbr>Scheduled<wbr>Task]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>group_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}One or more security group IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>shutdown_<wbr>script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded shutdown script to execute prior to instance termination.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for your instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancetag">List[Managed<wbr>Instance<wbr>Tag]</a></span>
-    </dt>
-    <dd>{{% md %}}Set tags for the instance. Items should be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>unhealthy_<wbr>duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>utilize_<wbr>reserved_<wbr>instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
-Default: `"false"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -3214,7 +1728,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
 {{% /md %}}</dd>
@@ -3223,7 +1737,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Block<wbr>Devices<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
 Default: `"onLaunch"`.
@@ -3233,7 +1747,7 @@ Default: `"onLaunch"`.
             title="Optional">
         <span>Cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
 Default: unlimited
@@ -3243,7 +1757,7 @@ Default: unlimited
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ManagedInstance description.
 {{% /md %}}</dd>
@@ -3252,7 +1766,7 @@ Default: unlimited
             title="Optional">
         <span>Draining<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.
 {{% /md %}}</dd>
@@ -3261,7 +1775,7 @@ Default: unlimited
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
 Default: false
@@ -3271,7 +1785,7 @@ Default: false
             title="Optional">
         <span>Elastic<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic IP Allocation Id to associate to the instance.
 {{% /md %}}</dd>
@@ -3280,7 +1794,7 @@ Default: false
             title="Optional">
         <span>Enable<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether instance Enhanced Monitoring is enabled.
 Default: false
@@ -3290,7 +1804,7 @@ Default: false
             title="Optional">
         <span>Fall<wbr>Back<wbr>To<wbr>Od</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3298,7 +1812,7 @@ Default: false
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
 {{% /md %}}</dd>
@@ -3307,7 +1821,7 @@ Default: false
             title="Optional">
         <span>Health<wbr>Check<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
 Default: `“EC2”`.
@@ -3317,7 +1831,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set IAM profile to instance. Set only one of ARN or Name.
 {{% /md %}}</dd>
@@ -3326,7 +1840,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the image used to launch the instance.
 {{% /md %}}</dd>
@@ -3335,7 +1849,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Comma separated list of available instance types for instance.
 {{% /md %}}</dd>
@@ -3344,7 +1858,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>Integration<wbr>Route53</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53Args?</a></span>
+        <span class="property-type"><a href="#managedinstanceintegrationroute53">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Integration<wbr>Route53Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3352,7 +1866,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>Key<wbr>Pair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a Key Pair to attach to the instances.
 {{% /md %}}</dd>
@@ -3361,7 +1875,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>Life<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
 Default `"spot"`.
@@ -3371,7 +1885,7 @@ Default `"spot"`.
             title="Optional">
         <span>Load<wbr>Balancers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceloadbalancer">List&lt;Managed<wbr>Instance<wbr>Load<wbr>Balancer<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#managedinstanceloadbalancer">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Load<wbr>Balancer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3379,7 +1893,7 @@ Default `"spot"`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ManagedInstance name.
 {{% /md %}}</dd>
@@ -3388,7 +1902,7 @@ Default `"spot"`.
             title="Optional">
         <span>Network<wbr>Interfaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancenetworkinterface">List&lt;Managed<wbr>Instance<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#managedinstancenetworkinterface">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3396,7 +1910,7 @@ Default `"spot"`.
             title="Optional">
         <span>Optimization<wbr>Windows</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
 {{% /md %}}</dd>
@@ -3405,7 +1919,7 @@ Default `"spot"`.
             title="Optional">
         <span>Orientation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
 Default: `"availabilityOriented"`.
@@ -3415,7 +1929,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>Persist<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the instance maintain its Data volumes. 
 {{% /md %}}</dd>
@@ -3424,7 +1938,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>Persist<wbr>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the instance maintain its private IP.  
 {{% /md %}}</dd>
@@ -3433,7 +1947,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>Persist<wbr>Root<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the instance maintain its root device volumes.
 {{% /md %}}</dd>
@@ -3442,7 +1956,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>Placement<wbr>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: "default", "dedicated"
 Default: default
@@ -3452,7 +1966,7 @@ Default: default
             title="Optional">
         <span>Preferred<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency
 {{% /md %}}</dd>
@@ -3461,7 +1975,7 @@ Default: default
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
 {{% /md %}}</dd>
@@ -3470,7 +1984,7 @@ Default: default
             title="Optional">
         <span>Product</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
 {{% /md %}}</dd>
@@ -3479,7 +1993,7 @@ Default: default
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 {{% /md %}}</dd>
@@ -3488,7 +2002,7 @@ Default: default
             title="Optional">
         <span>Revert<wbr>To<wbr>Spot</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancereverttospot">Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot<wbr>Args?</a></span>
+        <span class="property-type"><a href="#managedinstancereverttospot">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3496,7 +2010,7 @@ Default: default
             title="Optional">
         <span>Scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancescheduledtask">List&lt;Managed<wbr>Instance<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#managedinstancescheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3504,7 +2018,7 @@ Default: default
             title="Optional">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more security group IDs.
 {{% /md %}}</dd>
@@ -3513,7 +2027,7 @@ Default: default
             title="Optional">
         <span>Shutdown<wbr>Script</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script to execute prior to instance termination.
 {{% /md %}}</dd>
@@ -3522,7 +2036,7 @@ Default: default
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for your instance.
 {{% /md %}}</dd>
@@ -3531,7 +2045,7 @@ Default: default
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancetag">List&lt;Managed<wbr>Instance<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#managedinstancetag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set tags for the instance. Items should be unique.
 {{% /md %}}</dd>
@@ -3540,7 +2054,7 @@ Default: default
             title="Optional">
         <span>Unhealthy<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
 {{% /md %}}</dd>
@@ -3549,7 +2063,7 @@ Default: default
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -3558,7 +2072,7 @@ Default: default
             title="Optional">
         <span>Utilize<wbr>Reserved<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
 Default: `"false"`.
@@ -3568,7 +2082,7 @@ Default: `"false"`.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3583,7 +2097,7 @@ Default: `"false"`.
             title="Optional">
         <span>Auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
 {{% /md %}}</dd>
@@ -3592,7 +2106,7 @@ Default: `"false"`.
             title="Optional">
         <span>Block<wbr>Devices<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
 Default: `"onLaunch"`.
@@ -3602,7 +2116,7 @@ Default: `"onLaunch"`.
             title="Optional">
         <span>Cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
 Default: unlimited
@@ -3612,7 +2126,7 @@ Default: unlimited
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ManagedInstance description.
 {{% /md %}}</dd>
@@ -3621,7 +2135,7 @@ Default: unlimited
             title="Optional">
         <span>Draining<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.
 {{% /md %}}</dd>
@@ -3630,7 +2144,7 @@ Default: unlimited
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
 Default: false
@@ -3640,7 +2154,7 @@ Default: false
             title="Optional">
         <span>Elastic<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic IP Allocation Id to associate to the instance.
 {{% /md %}}</dd>
@@ -3649,7 +2163,7 @@ Default: false
             title="Optional">
         <span>Enable<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether instance Enhanced Monitoring is enabled.
 Default: false
@@ -3659,7 +2173,7 @@ Default: false
             title="Optional">
         <span>Fall<wbr>Back<wbr>To<wbr>Od</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3667,7 +2181,7 @@ Default: false
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
 {{% /md %}}</dd>
@@ -3676,7 +2190,7 @@ Default: false
             title="Optional">
         <span>Health<wbr>Check<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
 Default: `“EC2”`.
@@ -3686,7 +2200,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set IAM profile to instance. Set only one of ARN or Name.
 {{% /md %}}</dd>
@@ -3695,7 +2209,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the image used to launch the instance.
 {{% /md %}}</dd>
@@ -3713,7 +2227,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>Integration<wbr>Route53</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceintegrationroute53">*Managed<wbr>Instance<wbr>Integration<wbr>Route53</a></span>
+        <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3721,7 +2235,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>Key<wbr>Pair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a Key Pair to attach to the instances.
 {{% /md %}}</dd>
@@ -3730,7 +2244,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>Life<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
 Default `"spot"`.
@@ -3748,7 +2262,7 @@ Default `"spot"`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ManagedInstance name.
 {{% /md %}}</dd>
@@ -3774,7 +2288,7 @@ Default `"spot"`.
             title="Optional">
         <span>Orientation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
 Default: `"availabilityOriented"`.
@@ -3784,7 +2298,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>Persist<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the instance maintain its Data volumes. 
 {{% /md %}}</dd>
@@ -3793,7 +2307,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>Persist<wbr>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the instance maintain its private IP.  
 {{% /md %}}</dd>
@@ -3802,7 +2316,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>Persist<wbr>Root<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the instance maintain its root device volumes.
 {{% /md %}}</dd>
@@ -3811,7 +2325,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>Placement<wbr>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: "default", "dedicated"
 Default: default
@@ -3821,7 +2335,7 @@ Default: default
             title="Optional">
         <span>Preferred<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency
 {{% /md %}}</dd>
@@ -3830,7 +2344,7 @@ Default: default
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
 {{% /md %}}</dd>
@@ -3839,7 +2353,7 @@ Default: default
             title="Optional">
         <span>Product</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
 {{% /md %}}</dd>
@@ -3848,7 +2362,7 @@ Default: default
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 {{% /md %}}</dd>
@@ -3857,7 +2371,7 @@ Default: default
             title="Optional">
         <span>Revert<wbr>To<wbr>Spot</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancereverttospot">*Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot</a></span>
+        <span class="property-type"><a href="#managedinstancereverttospot">Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3882,7 +2396,7 @@ Default: default
             title="Optional">
         <span>Shutdown<wbr>Script</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script to execute prior to instance termination.
 {{% /md %}}</dd>
@@ -3909,7 +2423,7 @@ Default: default
             title="Optional">
         <span>Unhealthy<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
 {{% /md %}}</dd>
@@ -3918,7 +2432,7 @@ Default: default
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -3927,7 +2441,7 @@ Default: default
             title="Optional">
         <span>Utilize<wbr>Reserved<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
 Default: `"false"`.
@@ -3937,7 +2451,7 @@ Default: `"false"`.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3952,7 +2466,7 @@ Default: `"false"`.
             title="Optional">
         <span>auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the auto healing which auto replaces the instance in case the health check fails, default: `“true”`. 
 {{% /md %}}</dd>
@@ -3961,7 +2475,7 @@ Default: `"false"`.
             title="Optional">
         <span>block<wbr>Devices<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determine the way we attach the data volumes to the data devices. Valid values: `"reattach"`, `"onLaunch"`.
 Default: `"onLaunch"`.
@@ -3971,7 +2485,7 @@ Default: `"onLaunch"`.
             title="Optional">
         <span>cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cpuCredits can have one of two values: “unlimited”, “standard”.
 Default: unlimited
@@ -3981,7 +2495,7 @@ Default: unlimited
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ManagedInstance description.
 {{% /md %}}</dd>
@@ -3990,7 +2504,7 @@ Default: unlimited
             title="Optional">
         <span>draining<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds to allow the instance be drained from incoming TCP connections and detached from ELB before terminating it, during a scale down operation.
 {{% /md %}}</dd>
@@ -3999,7 +2513,7 @@ Default: unlimited
             title="Optional">
         <span>ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimization for supported instance which is not enabled by default. Note - additional charges will be applied.
 Default: false
@@ -4009,7 +2523,7 @@ Default: false
             title="Optional">
         <span>elastic<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic IP Allocation Id to associate to the instance.
 {{% /md %}}</dd>
@@ -4018,7 +2532,7 @@ Default: false
             title="Optional">
         <span>enable<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes whether instance Enhanced Monitoring is enabled.
 Default: false
@@ -4028,7 +2542,7 @@ Default: false
             title="Optional">
         <span>fall<wbr>Back<wbr>To<wbr>Od</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4036,7 +2550,7 @@ Default: false
             title="Optional">
         <span>grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health, default `“120"`.
 {{% /md %}}</dd>
@@ -4045,7 +2559,7 @@ Default: false
             title="Optional">
         <span>health<wbr>Check<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service to use for the health check. Valid values: `“EC2”`, `“ELB”`, `“TARGET_GROUP”`, `“MULTAI_TARGET_SET”`.
 Default: `“EC2”`.
@@ -4055,7 +2569,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set IAM profile to instance. Set only one of ARN or Name.
 {{% /md %}}</dd>
@@ -4064,7 +2578,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the image used to launch the instance.
 {{% /md %}}</dd>
@@ -4073,7 +2587,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Comma separated list of available instance types for instance.
 {{% /md %}}</dd>
@@ -4082,7 +2596,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>integration<wbr>Route53</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53?</a></span>
+        <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4090,7 +2604,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>key<wbr>Pair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a Key Pair to attach to the instances.
 {{% /md %}}</dd>
@@ -4099,7 +2613,7 @@ Default: `“EC2”`.
             title="Optional">
         <span>life<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set lifecycle, valid values: `“spot”`, `“on_demand”`.
 Default `"spot"`.
@@ -4109,7 +2623,7 @@ Default `"spot"`.
             title="Optional">
         <span>load<wbr>Balancers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceloadbalancer">Managed<wbr>Instance<wbr>Load<wbr>Balancer[]?</a></span>
+        <span class="property-type"><a href="#managedinstanceloadbalancer">Managed<wbr>Instance<wbr>Load<wbr>Balancer[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4117,7 +2631,7 @@ Default `"spot"`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ManagedInstance name.
 {{% /md %}}</dd>
@@ -4126,7 +2640,7 @@ Default `"spot"`.
             title="Optional">
         <span>network<wbr>Interfaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancenetworkinterface">Managed<wbr>Instance<wbr>Network<wbr>Interface[]?</a></span>
+        <span class="property-type"><a href="#managedinstancenetworkinterface">Managed<wbr>Instance<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4134,7 +2648,7 @@ Default `"spot"`.
             title="Optional">
         <span>optimization<wbr>Windows</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}When performAt is 'timeWindow': must specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59.
 {{% /md %}}</dd>
@@ -4143,7 +2657,7 @@ Default `"spot"`.
             title="Optional">
         <span>orientation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"availabilityOriented"`, `"cheapest"`.
 Default: `"availabilityOriented"`.
@@ -4153,7 +2667,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>persist<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the instance maintain its Data volumes. 
 {{% /md %}}</dd>
@@ -4162,7 +2676,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>persist<wbr>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the instance maintain its private IP.  
 {{% /md %}}</dd>
@@ -4171,7 +2685,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>persist<wbr>Root<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the instance maintain its root device volumes.
 {{% /md %}}</dd>
@@ -4180,7 +2694,7 @@ Default: `"availabilityOriented"`.
             title="Optional">
         <span>placement<wbr>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: "default", "dedicated"
 Default: default
@@ -4190,7 +2704,7 @@ Default: default
             title="Optional">
         <span>preferred<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preferred instance types for the instance. We will automatically select optional similar instance types to ensure optimized cost efficiency
 {{% /md %}}</dd>
@@ -4199,7 +2713,7 @@ Default: default
             title="Optional">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP Allocation Id to associate to the instance. 
 {{% /md %}}</dd>
@@ -4208,7 +2722,7 @@ Default: default
             title="Optional">
         <span>product</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`, `"Red Hat Enterprise Linux"`, `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`,  `"Red Hat Enterprise Linux (Amazon VPC)"`.    
 {{% /md %}}</dd>
@@ -4217,7 +2731,7 @@ Default: default
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 {{% /md %}}</dd>
@@ -4226,7 +2740,7 @@ Default: default
             title="Optional">
         <span>revert<wbr>To<wbr>Spot</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancereverttospot">Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot?</a></span>
+        <span class="property-type"><a href="#managedinstancereverttospot">Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4234,7 +2748,7 @@ Default: default
             title="Optional">
         <span>scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancescheduledtask">Managed<wbr>Instance<wbr>Scheduled<wbr>Task[]?</a></span>
+        <span class="property-type"><a href="#managedinstancescheduledtask">Managed<wbr>Instance<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4242,7 +2756,7 @@ Default: default
             title="Optional">
         <span>security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more security group IDs.
 {{% /md %}}</dd>
@@ -4251,7 +2765,7 @@ Default: default
             title="Optional">
         <span>shutdown<wbr>Script</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script to execute prior to instance termination.
 {{% /md %}}</dd>
@@ -4260,7 +2774,7 @@ Default: default
             title="Optional">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for your instance.
 {{% /md %}}</dd>
@@ -4269,7 +2783,7 @@ Default: default
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancetag">Managed<wbr>Instance<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#managedinstancetag">Managed<wbr>Instance<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}Set tags for the instance. Items should be unique.
 {{% /md %}}</dd>
@@ -4278,7 +2792,7 @@ Default: default
             title="Optional">
         <span>unhealthy<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, an existing instance should remain active after becoming unhealthy. After the set time out the instance will be replaced, default `“120"`.
 {{% /md %}}</dd>
@@ -4287,7 +2801,7 @@ Default: default
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -4296,7 +2810,7 @@ Default: default
             title="Optional">
         <span>utilize<wbr>Reserved<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}In case of any available Reserved Instances, Managed Instance will utilize them before purchasing Spot instances.
 Default: `"false"`.
@@ -4306,7 +2820,7 @@ Default: `"false"`.
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4712,7 +3226,7 @@ Default: `"false"`.
             title="Required">
         <span>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceintegrationroute53domain">List&lt;Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedinstanceintegrationroute53domain">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4795,7 +3309,7 @@ Default: `"false"`.
             title="Required">
         <span>Record<wbr>Sets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceintegrationroute53domainrecordset">List&lt;Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedinstanceintegrationroute53domainrecordset">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4803,7 +3317,7 @@ Default: `"false"`.
             title="Optional">
         <span>Spotinst<wbr>Acct<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4834,7 +3348,7 @@ Default: `"false"`.
             title="Optional">
         <span>Spotinst<wbr>Acct<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4865,7 +3379,7 @@ Default: `"false"`.
             title="Optional">
         <span>spotinst<wbr>Acct<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4935,7 +3449,7 @@ Default: `"false"`.
             title="Optional">
         <span>Use<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4959,7 +3473,7 @@ Default: `"false"`.
             title="Optional">
         <span>Use<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4983,7 +3497,7 @@ Default: `"false"`.
             title="Optional">
         <span>use<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5033,11 +3547,19 @@ Default: `"false"`.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5045,7 +3567,7 @@ Default: `"false"`.
             title="Optional">
         <span>Auto<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5053,7 +3575,7 @@ Default: `"false"`.
             title="Optional">
         <span>Az<wbr>Awareness</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5061,7 +3583,7 @@ Default: `"false"`.
             title="Optional">
         <span>Balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5069,7 +3591,7 @@ Default: `"false"`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ManagedInstance name.
 {{% /md %}}</dd>
@@ -5077,14 +3599,6 @@ Default: `"false"`.
     <dt class="property-optional"
             title="Optional">
         <span>Target<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5097,11 +3611,19 @@ Default: `"false"`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5109,7 +3631,7 @@ Default: `"false"`.
             title="Optional">
         <span>Auto<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5117,7 +3639,7 @@ Default: `"false"`.
             title="Optional">
         <span>Az<wbr>Awareness</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5125,7 +3647,7 @@ Default: `"false"`.
             title="Optional">
         <span>Balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5133,7 +3655,7 @@ Default: `"false"`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ManagedInstance name.
 {{% /md %}}</dd>
@@ -5141,14 +3663,6 @@ Default: `"false"`.
     <dt class="property-optional"
             title="Optional">
         <span>Target<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5161,11 +3675,19 @@ Default: `"false"`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5173,7 +3695,7 @@ Default: `"false"`.
             title="Optional">
         <span>auto<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5181,7 +3703,7 @@ Default: `"false"`.
             title="Optional">
         <span>az<wbr>Awareness</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5189,7 +3711,7 @@ Default: `"false"`.
             title="Optional">
         <span>balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5197,7 +3719,7 @@ Default: `"false"`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ManagedInstance name.
 {{% /md %}}</dd>
@@ -5205,14 +3727,6 @@ Default: `"false"`.
     <dt class="property-optional"
             title="Optional">
         <span>target<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5224,6 +3738,14 @@ Default: `"false"`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5274,14 +3796,6 @@ Default: `"false"`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -5304,11 +3818,19 @@ Default: `"false"`.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Device<wbr>Index</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Associate<wbr>Ipv6Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5316,15 +3838,7 @@ Default: `"false"`.
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Device<wbr>Index</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5335,11 +3849,19 @@ Default: `"false"`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Device<wbr>Index</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Associate<wbr>Ipv6Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5347,15 +3869,7 @@ Default: `"false"`.
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Device<wbr>Index</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5366,11 +3880,19 @@ Default: `"false"`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>device<wbr>Index</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>associate<wbr>Ipv6Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5378,15 +3900,7 @@ Default: `"false"`.
             title="Optional">
         <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>device<wbr>Index</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5396,6 +3910,14 @@ Default: `"false"`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>device<wbr>Index</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5410,14 +3932,6 @@ Default: `"false"`.
         <span>associate_<wbr>public_<wbr>ip_<wbr>address</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>device<wbr>Index</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5526,11 +4040,19 @@ Default `"never"`.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Cron<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5538,7 +4060,7 @@ Default `"never"`.
             title="Optional">
         <span>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5546,21 +4068,13 @@ Default `"never"`.
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5573,11 +4087,19 @@ Default `"never"`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Cron<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5585,7 +4107,7 @@ Default `"never"`.
             title="Optional">
         <span>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5593,21 +4115,13 @@ Default `"never"`.
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5620,11 +4134,19 @@ Default `"never"`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>cron<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5632,7 +4154,7 @@ Default `"never"`.
             title="Optional">
         <span>frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5640,21 +4162,13 @@ Default `"never"`.
             title="Optional">
         <span>is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5666,6 +4180,14 @@ Default `"never"`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5699,14 +4221,6 @@ Default `"never"`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>task<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -5733,7 +4247,7 @@ Default `"never"`.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag's key.
 {{% /md %}}</dd>
@@ -5742,7 +4256,7 @@ Default `"never"`.
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag's name.
 {{% /md %}}</dd>
@@ -5758,7 +4272,7 @@ Default `"never"`.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag's key.
 {{% /md %}}</dd>
@@ -5767,7 +4281,7 @@ Default `"never"`.
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag's name.
 {{% /md %}}</dd>
@@ -5783,7 +4297,7 @@ Default `"never"`.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag's key.
 {{% /md %}}</dd>
@@ -5792,7 +4306,7 @@ Default `"never"`.
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag's name.
 {{% /md %}}</dd>

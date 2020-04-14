@@ -35,7 +35,7 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#RoutingRule">RoutingRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#RoutingRuleArgs">RoutingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#RoutingRule">RoutingRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#RoutingRuleArgs">RoutingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -43,11 +43,11 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRoutingRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#RoutingRuleArgs">RoutingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#RoutingRule">RoutingRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRoutingRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#RoutingRuleArgs">RoutingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#RoutingRule">RoutingRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.RoutingRule.html">RoutingRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.RoutingRuleArgs.html">RoutingRuleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.RoutingRule.html">RoutingRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Multai.RoutingRuleArgs.html">RoutingRuleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -157,22 +157,6 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
     <dd>{{% md %}}The ID of the listener.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Middleware<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Route</span>
@@ -182,11 +166,35 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
     <dd>{{% md %}}Route defines a simple language for matching HTTP requests and route the traffic accordingly. Route provides series of matchers that follow the syntax: Path matcher: — Path("/foo/bar") // trie-based PathRegexp(“/foo/.*”) // regexp-based Method matcher: — Method(“GET”) // trie-based MethodRegexp(“POST|PUT”) // regexp based Header matcher: — Header(“Content-Type”, “application/json”) // trie-based HeaderRegexp(“Content-Type”, “application/.*”) // regexp based Matchers can be combined using && operator: — Method(“POST”) && Path("/v1")
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Set<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Middleware<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Balancing strategy. Valid values: `ROUNDROBIN`, `RANDOM`, `LEASTCONN`, `IPHASH`.
 {{% /md %}}</dd>
@@ -195,18 +203,10 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruletag">List&lt;Routing<wbr>Rule<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#routingruletag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Routing<wbr>Rule<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Target<wbr>Set<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -233,6 +233,23 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
     <dd>{{% md %}}The ID of the listener.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Route</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Route defines a simple language for matching HTTP requests and route the traffic accordingly. Route provides series of matchers that follow the syntax: Path matcher: — Path("/foo/bar") // trie-based PathRegexp(“/foo/.*”) // regexp-based Method matcher: — Method(“GET”) // trie-based MethodRegexp(“POST|PUT”) // regexp based Header matcher: — Header(“Content-Type”, “application/json”) // trie-based HeaderRegexp(“Content-Type”, “application/.*”) // regexp based Matchers can be combined using && operator: — Method(“POST”) && Path("/v1")
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Set<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Middleware<wbr>Ids</span>
@@ -245,24 +262,15 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Route defines a simple language for matching HTTP requests and route the traffic accordingly. Route provides series of matchers that follow the syntax: Path matcher: — Path("/foo/bar") // trie-based PathRegexp(“/foo/.*”) // regexp-based Method matcher: — Method(“GET”) // trie-based MethodRegexp(“POST|PUT”) // regexp based Header matcher: — Header(“Content-Type”, “application/json”) // trie-based HeaderRegexp(“Content-Type”, “application/.*”) // regexp based Matchers can be combined using && operator: — Method(“POST”) && Path("/v1")
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Balancing strategy. Valid values: `ROUNDROBIN`, `RANDOM`, `LEASTCONN`, `IPHASH`.
 {{% /md %}}</dd>
@@ -275,14 +283,6 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Target<wbr>Set<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -309,22 +309,6 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
     <dd>{{% md %}}The ID of the listener.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>middleware<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>route</span>
@@ -334,11 +318,35 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
     <dd>{{% md %}}Route defines a simple language for matching HTTP requests and route the traffic accordingly. Route provides series of matchers that follow the syntax: Path matcher: — Path("/foo/bar") // trie-based PathRegexp(“/foo/.*”) // regexp-based Method matcher: — Method(“GET”) // trie-based MethodRegexp(“POST|PUT”) // regexp based Header matcher: — Header(“Content-Type”, “application/json”) // trie-based HeaderRegexp(“Content-Type”, “application/.*”) // regexp based Matchers can be combined using && operator: — Method(“POST”) && Path("/v1")
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Set<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>middleware<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Balancing strategy. Valid values: `ROUNDROBIN`, `RANDOM`, `LEASTCONN`, `IPHASH`.
 {{% /md %}}</dd>
@@ -347,18 +355,10 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruletag">Routing<wbr>Rule<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#routingruletag">Routing<wbr>Rule<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>target<wbr>Set<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -385,6 +385,23 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
     <dd>{{% md %}}The ID of the listener.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>route</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Route defines a simple language for matching HTTP requests and route the traffic accordingly. Route provides series of matchers that follow the syntax: Path matcher: — Path("/foo/bar") // trie-based PathRegexp(“/foo/.*”) // regexp-based Method matcher: — Method(“GET”) // trie-based MethodRegexp(“POST|PUT”) // regexp based Header matcher: — Header(“Content-Type”, “application/json”) // trie-based HeaderRegexp(“Content-Type”, “application/.*”) // regexp based Matchers can be combined using && operator: — Method(“POST”) && Path("/v1")
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>target_<wbr>set_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>middleware_<wbr>ids</span>
@@ -400,15 +417,6 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Route defines a simple language for matching HTTP requests and route the traffic accordingly. Route provides series of matchers that follow the syntax: Path matcher: — Path("/foo/bar") // trie-based PathRegexp(“/foo/.*”) // regexp-based Method matcher: — Method(“GET”) // trie-based MethodRegexp(“POST|PUT”) // regexp based Header matcher: — Header(“Content-Type”, “application/json”) // trie-based HeaderRegexp(“Content-Type”, “application/.*”) // regexp based Matchers can be combined using && operator: — Method(“POST”) && Path("/v1")
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -428,332 +436,10 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>target_<wbr>set_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## RoutingRule Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Balancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Listener<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Middleware<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Route defines a simple language for matching HTTP requests and route the traffic accordingly. Route provides series of matchers that follow the syntax: Path matcher: — Path("/foo/bar") // trie-based PathRegexp(“/foo/.*”) // regexp-based Method matcher: — Method(“GET”) // trie-based MethodRegexp(“POST|PUT”) // regexp based Header matcher: — Header(“Content-Type”, “application/json”) // trie-based HeaderRegexp(“Content-Type”, “application/.*”) // regexp based Matchers can be combined using && operator: — Method(“POST”) && Path("/v1")
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Balancing strategy. Valid values: `ROUNDROBIN`, `RANDOM`, `LEASTCONN`, `IPHASH`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruletag">List&lt;Routing<wbr>Rule<wbr>Tag&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Set<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Balancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Listener<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Middleware<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Route defines a simple language for matching HTTP requests and route the traffic accordingly. Route provides series of matchers that follow the syntax: Path matcher: — Path("/foo/bar") // trie-based PathRegexp(“/foo/.*”) // regexp-based Method matcher: — Method(“GET”) // trie-based MethodRegexp(“POST|PUT”) // regexp based Header matcher: — Header(“Content-Type”, “application/json”) // trie-based HeaderRegexp(“Content-Type”, “application/.*”) // regexp based Matchers can be combined using && operator: — Method(“POST”) && Path("/v1")
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Balancing strategy. Valid values: `ROUNDROBIN`, `RANDOM`, `LEASTCONN`, `IPHASH`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruletag">[]Routing<wbr>Rule<wbr>Tag</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Set<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>balancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>listener<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>middleware<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Route defines a simple language for matching HTTP requests and route the traffic accordingly. Route provides series of matchers that follow the syntax: Path matcher: — Path("/foo/bar") // trie-based PathRegexp(“/foo/.*”) // regexp-based Method matcher: — Method(“GET”) // trie-based MethodRegexp(“POST|PUT”) // regexp based Header matcher: — Header(“Content-Type”, “application/json”) // trie-based HeaderRegexp(“Content-Type”, “application/.*”) // regexp based Matchers can be combined using && operator: — Method(“POST”) && Path("/v1")
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Balancing strategy. Valid values: `ROUNDROBIN`, `RANDOM`, `LEASTCONN`, `IPHASH`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruletag">Routing<wbr>Rule<wbr>Tag[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Set<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>balancer_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>listener_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>middleware_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Route defines a simple language for matching HTTP requests and route the traffic accordingly. Route provides series of matchers that follow the syntax: Path matcher: — Path("/foo/bar") // trie-based PathRegexp(“/foo/.*”) // regexp-based Method matcher: — Method(“GET”) // trie-based MethodRegexp(“POST|PUT”) // regexp based Header matcher: — Header(“Content-Type”, “application/json”) // trie-based HeaderRegexp(“Content-Type”, “application/.*”) // regexp based Matchers can be combined using && operator: — Method(“POST”) && Path("/v1")
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Balancing strategy. Valid values: `ROUNDROBIN`, `RANDOM`, `LEASTCONN`, `IPHASH`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruletag">List[Routing<wbr>Rule<wbr>Tag]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>set_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -891,7 +577,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the balancer.
 {{% /md %}}</dd>
@@ -900,7 +586,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Listener<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the listener.
 {{% /md %}}</dd>
@@ -909,7 +595,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Middleware<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -917,7 +603,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -925,7 +611,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Route defines a simple language for matching HTTP requests and route the traffic accordingly. Route provides series of matchers that follow the syntax: Path matcher: — Path("/foo/bar") // trie-based PathRegexp(“/foo/.*”) // regexp-based Method matcher: — Method(“GET”) // trie-based MethodRegexp(“POST|PUT”) // regexp based Header matcher: — Header(“Content-Type”, “application/json”) // trie-based HeaderRegexp(“Content-Type”, “application/.*”) // regexp based Matchers can be combined using && operator: — Method(“POST”) && Path("/v1")
 {{% /md %}}</dd>
@@ -934,7 +620,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Balancing strategy. Valid values: `ROUNDROBIN`, `RANDOM`, `LEASTCONN`, `IPHASH`.
 {{% /md %}}</dd>
@@ -943,7 +629,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruletag">List&lt;Routing<wbr>Rule<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#routingruletag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Routing<wbr>Rule<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -952,7 +638,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Set<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -967,7 +653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the balancer.
 {{% /md %}}</dd>
@@ -976,7 +662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Listener<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the listener.
 {{% /md %}}</dd>
@@ -993,7 +679,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1001,7 +687,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Route defines a simple language for matching HTTP requests and route the traffic accordingly. Route provides series of matchers that follow the syntax: Path matcher: — Path("/foo/bar") // trie-based PathRegexp(“/foo/.*”) // regexp-based Method matcher: — Method(“GET”) // trie-based MethodRegexp(“POST|PUT”) // regexp based Header matcher: — Header(“Content-Type”, “application/json”) // trie-based HeaderRegexp(“Content-Type”, “application/.*”) // regexp based Matchers can be combined using && operator: — Method(“POST”) && Path("/v1")
 {{% /md %}}</dd>
@@ -1010,7 +696,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Balancing strategy. Valid values: `ROUNDROBIN`, `RANDOM`, `LEASTCONN`, `IPHASH`.
 {{% /md %}}</dd>
@@ -1043,7 +729,7 @@ The following state arguments are supported:
             title="Optional">
         <span>balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the balancer.
 {{% /md %}}</dd>
@@ -1052,7 +738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>listener<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the listener.
 {{% /md %}}</dd>
@@ -1061,7 +747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>middleware<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1069,7 +755,7 @@ The following state arguments are supported:
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1077,7 +763,7 @@ The following state arguments are supported:
             title="Optional">
         <span>route</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Route defines a simple language for matching HTTP requests and route the traffic accordingly. Route provides series of matchers that follow the syntax: Path matcher: — Path("/foo/bar") // trie-based PathRegexp(“/foo/.*”) // regexp-based Method matcher: — Method(“GET”) // trie-based MethodRegexp(“POST|PUT”) // regexp based Header matcher: — Header(“Content-Type”, “application/json”) // trie-based HeaderRegexp(“Content-Type”, “application/.*”) // regexp based Matchers can be combined using && operator: — Method(“POST”) && Path("/v1")
 {{% /md %}}</dd>
@@ -1086,7 +772,7 @@ The following state arguments are supported:
             title="Optional">
         <span>strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Balancing strategy. Valid values: `ROUNDROBIN`, `RANDOM`, `LEASTCONN`, `IPHASH`.
 {{% /md %}}</dd>
@@ -1095,7 +781,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruletag">Routing<wbr>Rule<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#routingruletag">Routing<wbr>Rule<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -1104,7 +790,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target<wbr>Set<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

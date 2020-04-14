@@ -81,7 +81,7 @@ import * as pulumi from "@pulumi/pulumi";
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#Beanstalk">Beanstalk</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#BeanstalkArgs">BeanstalkArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#Beanstalk">Beanstalk</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#BeanstalkArgs">BeanstalkArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -89,11 +89,11 @@ import * as pulumi from "@pulumi/pulumi";
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBeanstalk<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#BeanstalkArgs">BeanstalkArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#Beanstalk">Beanstalk</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBeanstalk<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#BeanstalkArgs">BeanstalkArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#Beanstalk">Beanstalk</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.Beanstalk.html">Beanstalk</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.BeanstalkArgs.html">BeanstalkArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.Beanstalk.html">Beanstalk</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.BeanstalkArgs.html">BeanstalkArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -185,33 +185,6 @@ import * as pulumi from "@pulumi/pulumi";
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Beanstalk<wbr>Environment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Beanstalk<wbr>Environment<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of an existing Beanstalk environment.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Deployment<wbr>Preferences</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Preferences when performing a roll
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Desired<wbr>Capacity</span>
@@ -225,26 +198,9 @@ import * as pulumi from "@pulumi/pulumi";
             title="Required">
         <span>Instance<wbr>Types<wbr>Spots</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more instance types. To maximize the availability of Spot instances, select as many instance types as possible.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Managed<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Managed Actions parameters
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -263,15 +219,6 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The group name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -295,9 +242,62 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
+        <span>Beanstalk<wbr>Environment<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id of an existing Beanstalk environment. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Beanstalk<wbr>Environment<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of an existing Beanstalk environment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Deployment<wbr>Preferences</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Preferences when performing a roll
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maintenance</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Managed<wbr>Actions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#beanstalkmanagedactions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Managed Actions parameters
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The group name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkscheduledtask">List&lt;Beanstalk<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#beanstalkscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -307,33 +307,6 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Beanstalk<wbr>Environment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Beanstalk<wbr>Environment<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of an existing Beanstalk environment.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Deployment<wbr>Preferences</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferences">*Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
-    </dt>
-    <dd>{{% md %}}Preferences when performing a roll
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -353,23 +326,6 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     <dd>{{% md %}}One or more instance types. To maximize the availability of Spot instances, select as many instance types as possible.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Managed<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactions">*Beanstalk<wbr>Managed<wbr>Actions</a></span>
-    </dt>
-    <dd>{{% md %}}Managed Actions parameters
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Max<wbr>Size</span>
@@ -386,15 +342,6 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The group name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -418,6 +365,59 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
+        <span>Beanstalk<wbr>Environment<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id of an existing Beanstalk environment. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Beanstalk<wbr>Environment<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of an existing Beanstalk environment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Deployment<wbr>Preferences</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
+    </dt>
+    <dd>{{% md %}}Preferences when performing a roll
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maintenance</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Managed<wbr>Actions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions</a></span>
+    </dt>
+    <dd>{{% md %}}Managed Actions parameters
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The group name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkscheduledtask">[]Beanstalk<wbr>Scheduled<wbr>Task</a></span>
@@ -430,33 +430,6 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>beanstalk<wbr>Environment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>beanstalk<wbr>Environment<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of an existing Beanstalk environment.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>deployment<wbr>Preferences</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences?</a></span>
-    </dt>
-    <dd>{{% md %}}Preferences when performing a roll
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -476,23 +449,6 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     <dd>{{% md %}}One or more instance types. To maximize the availability of Spot instances, select as many instance types as possible.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>managed<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions?</a></span>
-    </dt>
-    <dd>{{% md %}}Managed Actions parameters
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>max<wbr>Size</span>
@@ -509,15 +465,6 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The group name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -541,9 +488,62 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
+        <span>beanstalk<wbr>Environment<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id of an existing Beanstalk environment. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>beanstalk<wbr>Environment<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of an existing Beanstalk environment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>deployment<wbr>Preferences</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
+    </dt>
+    <dd>{{% md %}}Preferences when performing a roll
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>maintenance</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>managed<wbr>Actions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions</a></span>
+    </dt>
+    <dd>{{% md %}}Managed Actions parameters
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The group name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkscheduledtask">Beanstalk<wbr>Scheduled<wbr>Task[]?</a></span>
+        <span class="property-type"><a href="#beanstalkscheduledtask">Beanstalk<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -553,6 +553,61 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>desired_<wbr>capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The desired number of instances the group should have at any time.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>types_<wbr>spots</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}One or more instance types. To maximize the availability of Spot instances, select as many instance types as possible.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>max_<wbr>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of instances the group should have at any time.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>min_<wbr>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of instances the group should have at any time.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>product</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
+For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS region your group will be created in. Cannot be changed after the group has been created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -581,24 +636,6 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     <dd>{{% md %}}Preferences when performing a roll
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>desired_<wbr>capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>types_<wbr>spots</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}One or more instance types. To maximize the availability of Spot instances, select as many instance types as possible.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>maintenance</span>
@@ -616,24 +653,6 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     <dd>{{% md %}}Managed Actions parameters
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>max_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>min_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
@@ -641,25 +660,6 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The group name.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
-For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The AWS region your group will be created in. Cannot be changed after the group has been created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -674,508 +674,6 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Beanstalk Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Beanstalk<wbr>Environment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Beanstalk<wbr>Environment<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of an existing Beanstalk environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deployment<wbr>Preferences</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences?</a></span>
-    </dt>
-    <dd>{{% md %}}Preferences when performing a roll
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Types<wbr>Spots</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}One or more instance types. To maximize the availability of Spot instances, select as many instance types as possible.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Managed<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions?</a></span>
-    </dt>
-    <dd>{{% md %}}Managed Actions parameters
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The group name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
-For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AWS region your group will be created in. Cannot be changed after the group has been created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkscheduledtask">List&lt;Beanstalk<wbr>Scheduled<wbr>Task&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Beanstalk<wbr>Environment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Beanstalk<wbr>Environment<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of an existing Beanstalk environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deployment<wbr>Preferences</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferences">*Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
-    </dt>
-    <dd>{{% md %}}Preferences when performing a roll
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Types<wbr>Spots</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}One or more instance types. To maximize the availability of Spot instances, select as many instance types as possible.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Managed<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactions">*Beanstalk<wbr>Managed<wbr>Actions</a></span>
-    </dt>
-    <dd>{{% md %}}Managed Actions parameters
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The group name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
-For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AWS region your group will be created in. Cannot be changed after the group has been created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkscheduledtask">[]Beanstalk<wbr>Scheduled<wbr>Task</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>beanstalk<wbr>Environment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>beanstalk<wbr>Environment<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of an existing Beanstalk environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deployment<wbr>Preferences</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences?</a></span>
-    </dt>
-    <dd>{{% md %}}Preferences when performing a roll
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Types<wbr>Spots</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}One or more instance types. To maximize the availability of Spot instances, select as many instance types as possible.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>managed<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions?</a></span>
-    </dt>
-    <dd>{{% md %}}Managed Actions parameters
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The group name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
-For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AWS region your group will be created in. Cannot be changed after the group has been created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkscheduledtask">Beanstalk<wbr>Scheduled<wbr>Task[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>beanstalk_<wbr>environment_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of an existing Beanstalk environment. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>beanstalk_<wbr>environment_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of an existing Beanstalk environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deployment_<wbr>preferences</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Dict[Beanstalk<wbr>Deployment<wbr>Preferences]</a></span>
-    </dt>
-    <dd>{{% md %}}Preferences when performing a roll
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>desired_<wbr>capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>types_<wbr>spots</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}One or more instance types. To maximize the availability of Spot instances, select as many instance types as possible.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>managed_<wbr>actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactions">Dict[Beanstalk<wbr>Managed<wbr>Actions]</a></span>
-    </dt>
-    <dd>{{% md %}}Managed Actions parameters
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The group name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
-For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The AWS region your group will be created in. Cannot be changed after the group has been created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduled_<wbr>tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkscheduledtask">List[Beanstalk<wbr>Scheduled<wbr>Task]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1313,7 +811,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Beanstalk<wbr>Environment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an existing Beanstalk environment. 
 {{% /md %}}</dd>
@@ -1322,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Beanstalk<wbr>Environment<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an existing Beanstalk environment.
 {{% /md %}}</dd>
@@ -1331,7 +829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Preferences</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Args?</a></span>
+        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences when performing a roll
 {{% /md %}}</dd>
@@ -1340,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -1349,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Types<wbr>Spots</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more instance types. To maximize the availability of Spot instances, select as many instance types as possible.
 {{% /md %}}</dd>
@@ -1358,7 +856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1366,7 +864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Managed<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions<wbr>Args?</a></span>
+        <span class="property-type"><a href="#beanstalkmanagedactions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Actions parameters
 {{% /md %}}</dd>
@@ -1375,7 +873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -1384,7 +882,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -1393,7 +891,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group name.
 {{% /md %}}</dd>
@@ -1402,7 +900,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Product</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
@@ -1412,7 +910,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in. Cannot be changed after the group has been created.
 {{% /md %}}</dd>
@@ -1421,7 +919,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkscheduledtask">List&lt;Beanstalk<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#beanstalkscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1436,7 +934,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Beanstalk<wbr>Environment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an existing Beanstalk environment. 
 {{% /md %}}</dd>
@@ -1445,7 +943,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Beanstalk<wbr>Environment<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an existing Beanstalk environment.
 {{% /md %}}</dd>
@@ -1454,7 +952,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Deployment<wbr>Preferences</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferences">*Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
+        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
     </dt>
     <dd>{{% md %}}Preferences when performing a roll
 {{% /md %}}</dd>
@@ -1463,7 +961,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -1481,7 +979,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1489,7 +987,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Managed<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactions">*Beanstalk<wbr>Managed<wbr>Actions</a></span>
+        <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}Managed Actions parameters
 {{% /md %}}</dd>
@@ -1498,7 +996,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -1507,7 +1005,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -1516,7 +1014,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group name.
 {{% /md %}}</dd>
@@ -1525,7 +1023,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Product</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
@@ -1535,7 +1033,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in. Cannot be changed after the group has been created.
 {{% /md %}}</dd>
@@ -1559,7 +1057,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>beanstalk<wbr>Environment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an existing Beanstalk environment. 
 {{% /md %}}</dd>
@@ -1568,7 +1066,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>beanstalk<wbr>Environment<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an existing Beanstalk environment.
 {{% /md %}}</dd>
@@ -1577,7 +1075,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>deployment<wbr>Preferences</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences?</a></span>
+        <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
     </dt>
     <dd>{{% md %}}Preferences when performing a roll
 {{% /md %}}</dd>
@@ -1586,7 +1084,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -1595,7 +1093,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>instance<wbr>Types<wbr>Spots</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more instance types. To maximize the availability of Spot instances, select as many instance types as possible.
 {{% /md %}}</dd>
@@ -1604,7 +1102,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1612,7 +1110,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>managed<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions?</a></span>
+        <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}Managed Actions parameters
 {{% /md %}}</dd>
@@ -1621,7 +1119,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -1630,7 +1128,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -1639,7 +1137,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group name.
 {{% /md %}}</dd>
@@ -1648,7 +1146,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>product</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
@@ -1658,7 +1156,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in. Cannot be changed after the group has been created.
 {{% /md %}}</dd>
@@ -1667,7 +1165,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkscheduledtask">Beanstalk<wbr>Scheduled<wbr>Task[]?</a></span>
+        <span class="property-type"><a href="#beanstalkscheduledtask">Beanstalk<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1827,7 +1325,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Automatic<wbr>Roll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should roll perform automatically
 {{% /md %}}</dd>
@@ -1836,7 +1334,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Batch<wbr>Size<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percent size of each batch
 {{% /md %}}</dd>
@@ -1845,7 +1343,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of time to wait between batches
 {{% /md %}}</dd>
@@ -1854,7 +1352,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Strategies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferencesstrategy">List&lt;Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#beanstalkdeploymentpreferencesstrategy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Strategy parameters
 {{% /md %}}</dd>
@@ -1870,7 +1368,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Automatic<wbr>Roll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should roll perform automatically
 {{% /md %}}</dd>
@@ -1879,7 +1377,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Batch<wbr>Size<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percent size of each batch
 {{% /md %}}</dd>
@@ -1888,7 +1386,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of time to wait between batches
 {{% /md %}}</dd>
@@ -1913,7 +1411,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>automatic<wbr>Roll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should roll perform automatically
 {{% /md %}}</dd>
@@ -1922,7 +1420,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>batch<wbr>Size<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percent size of each batch
 {{% /md %}}</dd>
@@ -1931,7 +1429,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of time to wait between batches
 {{% /md %}}</dd>
@@ -1940,7 +1438,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>strategies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkdeploymentpreferencesstrategy">Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy[]?</a></span>
+        <span class="property-type"><a href="#beanstalkdeploymentpreferencesstrategy">Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy[]</a></span>
     </dt>
     <dd>{{% md %}}Strategy parameters
 {{% /md %}}</dd>
@@ -2014,7 +1512,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take
 {{% /md %}}</dd>
@@ -2023,7 +1521,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Should<wbr>Drain<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bool value if to wait to drain instance 
 {{% /md %}}</dd>
@@ -2039,7 +1537,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take
 {{% /md %}}</dd>
@@ -2048,7 +1546,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Should<wbr>Drain<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bool value if to wait to drain instance 
 {{% /md %}}</dd>
@@ -2064,7 +1562,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take
 {{% /md %}}</dd>
@@ -2073,7 +1571,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>should<wbr>Drain<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Bool value if to wait to drain instance 
 {{% /md %}}</dd>
@@ -2129,7 +1627,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Platform<wbr>Update</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactionsplatformupdate">Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update<wbr>Args?</a></span>
+        <span class="property-type"><a href="#beanstalkmanagedactionsplatformupdate">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Platform Update parameters
 {{% /md %}}</dd>
@@ -2145,7 +1643,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Platform<wbr>Update</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactionsplatformupdate">*Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</a></span>
+        <span class="property-type"><a href="#beanstalkmanagedactionsplatformupdate">Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Platform Update parameters
 {{% /md %}}</dd>
@@ -2161,7 +1659,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>platform<wbr>Update</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#beanstalkmanagedactionsplatformupdate">Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update?</a></span>
+        <span class="property-type"><a href="#beanstalkmanagedactionsplatformupdate">Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Platform Update parameters
 {{% /md %}}</dd>
@@ -2208,7 +1706,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Perform<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions to perform (options: timeWindow, never)
 {{% /md %}}</dd>
@@ -2217,7 +1715,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Time<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time Window for when action occurs ex. Mon:23:50-Tue:00:20
 {{% /md %}}</dd>
@@ -2226,7 +1724,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Update<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Level to update
 {{% /md %}}</dd>
@@ -2242,7 +1740,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Perform<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions to perform (options: timeWindow, never)
 {{% /md %}}</dd>
@@ -2251,7 +1749,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Time<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time Window for when action occurs ex. Mon:23:50-Tue:00:20
 {{% /md %}}</dd>
@@ -2260,7 +1758,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Update<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Level to update
 {{% /md %}}</dd>
@@ -2276,7 +1774,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>perform<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions to perform (options: timeWindow, never)
 {{% /md %}}</dd>
@@ -2285,7 +1783,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>time<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time Window for when action occurs ex. Mon:23:50-Tue:00:20
 {{% /md %}}</dd>
@@ -2294,7 +1792,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>update<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Level to update
 {{% /md %}}</dd>
@@ -2355,11 +1853,19 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2367,7 +1873,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Adjustment<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2375,7 +1881,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Batch<wbr>Size<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Percent size of each batch
 {{% /md %}}</dd>
@@ -2384,7 +1890,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Cron<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2392,7 +1898,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2400,7 +1906,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amount of time to wait between batches
 {{% /md %}}</dd>
@@ -2409,7 +1915,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2417,7 +1923,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2425,7 +1931,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Min<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2433,7 +1939,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Scale<wbr>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2441,7 +1947,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Scale<wbr>Min<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2449,7 +1955,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Scale<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2457,21 +1963,13 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -2484,11 +1982,19 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2496,7 +2002,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Adjustment<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2504,7 +2010,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Batch<wbr>Size<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Percent size of each batch
 {{% /md %}}</dd>
@@ -2513,7 +2019,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Cron<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2521,7 +2027,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2529,7 +2035,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amount of time to wait between batches
 {{% /md %}}</dd>
@@ -2538,7 +2044,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2546,7 +2052,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2554,7 +2060,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Min<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2562,7 +2068,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Scale<wbr>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2570,7 +2076,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Scale<wbr>Min<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2578,7 +2084,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Scale<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2586,21 +2092,13 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -2613,11 +2111,19 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2625,7 +2131,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>adjustment<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2633,7 +2139,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>batch<wbr>Size<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Percent size of each batch
 {{% /md %}}</dd>
@@ -2642,7 +2148,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>cron<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2650,7 +2156,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2658,7 +2164,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amount of time to wait between batches
 {{% /md %}}</dd>
@@ -2667,7 +2173,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2675,7 +2181,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2683,7 +2189,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>min<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2691,7 +2197,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>scale<wbr>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2699,7 +2205,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>scale<wbr>Min<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2707,7 +2213,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>scale<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2715,21 +2221,13 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
             title="Optional">
         <span>start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -2741,6 +2239,14 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2851,14 +2357,6 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     <dt class="property-optional"
             title="Optional">
         <span>target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

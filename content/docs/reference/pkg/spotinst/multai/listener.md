@@ -43,7 +43,7 @@ const myListener = new spotinst.multai.Listener("my_listener", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#Listener">Listener</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#ListenerArgs">ListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#Listener">Listener</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#ListenerArgs">ListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -51,11 +51,11 @@ const myListener = new spotinst.multai.Listener("my_listener", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewListener<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#ListenerArgs">ListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#Listener">Listener</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewListener<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#ListenerArgs">ListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#Listener">Listener</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.Listener.html">Listener</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.ListenerArgs.html">ListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.Listener.html">Listener</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Multai.ListenerArgs.html">ListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -178,7 +178,7 @@ const myListener = new spotinst.multai.Listener("my_listener", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertag">List&lt;Listener<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#listenertag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Listener<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -187,7 +187,7 @@ const myListener = new spotinst.multai.Listener("my_listener", {
             title="Optional">
         <span>Tls<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertlsconfig">Listener<wbr>Tls<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenertlsconfig">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Listener<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the TLSConfig configuration.
 {{% /md %}}</dd>
@@ -239,7 +239,7 @@ const myListener = new spotinst.multai.Listener("my_listener", {
             title="Optional">
         <span>Tls<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertlsconfig">*Listener<wbr>Tls<wbr>Config</a></span>
+        <span class="property-type"><a href="#listenertlsconfig">Listener<wbr>Tls<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes the TLSConfig configuration.
 {{% /md %}}</dd>
@@ -282,7 +282,7 @@ const myListener = new spotinst.multai.Listener("my_listener", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertag">Listener<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#listenertag">Listener<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -291,7 +291,7 @@ const myListener = new spotinst.multai.Listener("my_listener", {
             title="Optional">
         <span>tls<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertlsconfig">Listener<wbr>Tls<wbr>Config?</a></span>
+        <span class="property-type"><a href="#listenertlsconfig">Listener<wbr>Tls<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes the TLSConfig configuration.
 {{% /md %}}</dd>
@@ -352,224 +352,6 @@ const myListener = new spotinst.multai.Listener("my_listener", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Listener Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Balancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol to allow connections to the load balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertag">List&lt;Listener<wbr>Tag&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tls<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertlsconfig">Listener<wbr>Tls<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the TLSConfig configuration.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Balancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol to allow connections to the load balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertag">[]Listener<wbr>Tag</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tls<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertlsconfig">*Listener<wbr>Tls<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the TLSConfig configuration.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>balancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol to allow connections to the load balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertag">Listener<wbr>Tag[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tls<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertlsconfig">Listener<wbr>Tls<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the TLSConfig configuration.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>balancer_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The protocol to allow connections to the load balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertag">List[Listener<wbr>Tag]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tls_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertlsconfig">Dict[Listener<wbr>Tls<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the TLSConfig configuration.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -707,7 +489,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the balancer.
 {{% /md %}}</dd>
@@ -716,7 +498,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which the load balancer is listening.
 {{% /md %}}</dd>
@@ -725,7 +507,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to allow connections to the load balancer.
 {{% /md %}}</dd>
@@ -734,7 +516,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertag">List&lt;Listener<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#listenertag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Listener<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -743,7 +525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tls<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertlsconfig">Listener<wbr>Tls<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenertlsconfig">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Listener<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the TLSConfig configuration.
 {{% /md %}}</dd>
@@ -759,7 +541,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the balancer.
 {{% /md %}}</dd>
@@ -768,7 +550,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which the load balancer is listening.
 {{% /md %}}</dd>
@@ -777,7 +559,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to allow connections to the load balancer.
 {{% /md %}}</dd>
@@ -795,7 +577,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tls<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertlsconfig">*Listener<wbr>Tls<wbr>Config</a></span>
+        <span class="property-type"><a href="#listenertlsconfig">Listener<wbr>Tls<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes the TLSConfig configuration.
 {{% /md %}}</dd>
@@ -811,7 +593,7 @@ The following state arguments are supported:
             title="Optional">
         <span>balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the balancer.
 {{% /md %}}</dd>
@@ -820,7 +602,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port on which the load balancer is listening.
 {{% /md %}}</dd>
@@ -829,7 +611,7 @@ The following state arguments are supported:
             title="Optional">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to allow connections to the load balancer.
 {{% /md %}}</dd>
@@ -838,7 +620,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertag">Listener<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#listenertag">Listener<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -847,7 +629,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tls<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenertlsconfig">Listener<wbr>Tls<wbr>Config?</a></span>
+        <span class="property-type"><a href="#listenertlsconfig">Listener<wbr>Tls<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes the TLSConfig configuration.
 {{% /md %}}</dd>
@@ -1052,7 +834,7 @@ The following state arguments are supported:
             title="Required">
         <span>Certificate<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains one or more certificate chains to present to the other side of the connection.
 {{% /md %}}</dd>
@@ -1061,7 +843,7 @@ The following state arguments are supported:
             title="Required">
         <span>Cipher<wbr>Suites</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of supported cipher suites. If cipherSuites is nil, TLS uses a list of suites supported by the implementation.
 {{% /md %}}</dd>

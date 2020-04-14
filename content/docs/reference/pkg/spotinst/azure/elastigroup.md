@@ -271,7 +271,7 @@ import * as pulumi from "@pulumi/pulumi";
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/azure/#Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/azure/#ElastigroupArgs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/azure/#Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/azure/#ElastigroupArgs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -279,11 +279,11 @@ import * as pulumi from "@pulumi/pulumi";
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewElastigroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/azure?tab=doc#ElastigroupArgs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/azure?tab=doc#Elastigroup">Elastigroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewElastigroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/azure?tab=doc#ElastigroupArgs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/azure?tab=doc#Elastigroup">Elastigroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Azure.Elastigroup.html">Elastigroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Azure.ElastigroupArgs.html">ElastigroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Azure.Elastigroup.html">Elastigroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.ElastigroupArgs.html">ElastigroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -375,120 +375,20 @@ import * as pulumi from "@pulumi/pulumi";
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Images</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupimage">List&lt;Elastigroup<wbr>Image<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Integration<wbr>Kubernetes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Integration<wbr>Multai<wbr>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Load<wbr>Balancers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouploadbalancer">List&lt;Elastigroup<wbr>Load<wbr>Balancer<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Login</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Low<wbr>Priority<wbr>Sizes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Available Low-Priority sizes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Managed<wbr>Service<wbr>Identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">List&lt;Elastigroup<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the managed identity.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#elastigroupnetwork">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -496,7 +396,7 @@ import * as pulumi from "@pulumi/pulumi";
             title="Required">
         <span>Od<wbr>Sizes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Available On-Demand sizes
 {{% /md %}}</dd>
@@ -528,11 +428,120 @@ import * as pulumi from "@pulumi/pulumi";
     <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstrategy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Strategy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the deployment strategy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Custom<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The desired number of instances the group should have at any time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigrouphealthcheck">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Health<wbr>Check<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Images</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupimage">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Image<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Integration<wbr>Kubernetes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Integration<wbr>Multai<wbr>Runtime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Load<wbr>Balancers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigrouploadbalancer">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Load<wbr>Balancer<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Login</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigrouplogin">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Login<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Managed<wbr>Service<wbr>Identities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of instances the group should have at any time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of instances the group should have at any time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the managed identity.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Scaling<wbr>Down<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List&lt;Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -540,7 +549,7 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>Scaling<wbr>Up<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">List&lt;Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -548,7 +557,7 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>Scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">List&lt;Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -556,25 +565,16 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>Shutdown<wbr>Script</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstrategy">Elastigroup<wbr>Strategy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the deployment strategy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Update<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -582,7 +582,7 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -594,71 +594,6 @@ import * as pulumi from "@pulumi/pulumi";
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouphealthcheck">*Elastigroup<wbr>Health<wbr>Check</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Images</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupimage">[]Elastigroup<wbr>Image</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Integration<wbr>Kubernetes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">*Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Integration<wbr>Multai<wbr>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">*Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Load<wbr>Balancers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouploadbalancer">[]Elastigroup<wbr>Load<wbr>Balancer</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Login</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplogin">*Elastigroup<wbr>Login</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Low<wbr>Priority<wbr>Sizes</span>
@@ -666,41 +601,6 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Available Low-Priority sizes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Managed<wbr>Service<wbr>Identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">[]Elastigroup<wbr>Managed<wbr>Service<wbr>Identity</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the managed identity.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -747,6 +647,115 @@ import * as pulumi from "@pulumi/pulumi";
     <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstrategy">Elastigroup<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the deployment strategy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Custom<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The desired number of instances the group should have at any time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Images</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupimage">[]Elastigroup<wbr>Image</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Integration<wbr>Kubernetes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Integration<wbr>Multai<wbr>Runtime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Load<wbr>Balancers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigrouploadbalancer">[]Elastigroup<wbr>Load<wbr>Balancer</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Login</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Managed<wbr>Service<wbr>Identities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">[]Elastigroup<wbr>Managed<wbr>Service<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of instances the group should have at any time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of instances the group should have at any time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the managed identity.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Scaling<wbr>Down<wbr>Policies</span>
@@ -775,25 +784,16 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>Shutdown<wbr>Script</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstrategy">Elastigroup<wbr>Strategy</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the deployment strategy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Update<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">*Elastigroup<wbr>Update<wbr>Policy</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -801,7 +801,7 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -813,71 +813,6 @@ import * as pulumi from "@pulumi/pulumi";
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>custom<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>images</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupimage">Elastigroup<wbr>Image[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>integration<wbr>Kubernetes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>integration<wbr>Multai<wbr>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>load<wbr>Balancers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouploadbalancer">Elastigroup<wbr>Load<wbr>Balancer[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>login</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>low<wbr>Priority<wbr>Sizes</span>
@@ -885,41 +820,6 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Available Low-Priority sizes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>managed<wbr>Service<wbr>Identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">Elastigroup<wbr>Managed<wbr>Service<wbr>Identity[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the managed identity.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -966,39 +866,6 @@ import * as pulumi from "@pulumi/pulumi";
     <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>scaling<wbr>Down<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>scaling<wbr>Up<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>shutdown<wbr>Script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>strategy</span>
@@ -1010,9 +877,142 @@ import * as pulumi from "@pulumi/pulumi";
 
     <dt class="property-optional"
             title="Optional">
+        <span>custom<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The desired number of instances the group should have at any time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>images</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupimage">Elastigroup<wbr>Image[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>integration<wbr>Kubernetes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>integration<wbr>Multai<wbr>Runtime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>load<wbr>Balancers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigrouploadbalancer">Elastigroup<wbr>Load<wbr>Balancer[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>login</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>managed<wbr>Service<wbr>Identities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">Elastigroup<wbr>Managed<wbr>Service<wbr>Identity[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of instances the group should have at any time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of instances the group should have at any time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the managed identity.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scaling<wbr>Down<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scaling<wbr>Up<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>shutdown<wbr>Script</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>update<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1020,7 +1020,7 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -1031,6 +1031,68 @@ import * as pulumi from "@pulumi/pulumi";
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>low_<wbr>priority_<wbr>sizes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}Available Low-Priority sizes.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>network</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupnetwork">Dict[Elastigroup<wbr>Network]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>od_<wbr>sizes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}Available On-Demand sizes
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>product</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region your Azure group will be created in.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstrategy">Dict[Elastigroup<wbr>Strategy]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the deployment strategy.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1097,15 +1159,6 @@ import * as pulumi from "@pulumi/pulumi";
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>low_<wbr>priority_<wbr>sizes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Available Low-Priority sizes.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>managed_<wbr>service_<wbr>identities</span>
@@ -1141,50 +1194,6 @@ import * as pulumi from "@pulumi/pulumi";
     <dd>{{% md %}}The name of the managed identity.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetwork">Dict[Elastigroup<wbr>Network]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>od_<wbr>sizes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Available On-Demand sizes
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region your Azure group will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>scaling_<wbr>down_<wbr>policies</span>
@@ -1218,15 +1227,6 @@ import * as pulumi from "@pulumi/pulumi";
     <dd>{{% md %}}Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstrategy">Dict[Elastigroup<wbr>Strategy]</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the deployment strategy.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>update_<wbr>policy</span>
@@ -1248,892 +1248,6 @@ import * as pulumi from "@pulumi/pulumi";
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Elastigroup Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Images</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupimage">List&lt;Elastigroup<wbr>Image&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Integration<wbr>Kubernetes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Integration<wbr>Multai<wbr>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Load<wbr>Balancers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouploadbalancer">List&lt;Elastigroup<wbr>Load<wbr>Balancer&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Login</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Low<wbr>Priority<wbr>Sizes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}Available Low-Priority sizes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Managed<wbr>Service<wbr>Identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">List&lt;Elastigroup<wbr>Managed<wbr>Service<wbr>Identity&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the managed identity.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Od<wbr>Sizes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}Available On-Demand sizes
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region your Azure group will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scaling<wbr>Down<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List&lt;Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scaling<wbr>Up<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">List&lt;Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">List&lt;Elastigroup<wbr>Scheduled<wbr>Task&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Shutdown<wbr>Script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstrategy">Elastigroup<wbr>Strategy</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the deployment strategy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Update<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouphealthcheck">*Elastigroup<wbr>Health<wbr>Check</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Images</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupimage">[]Elastigroup<wbr>Image</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Integration<wbr>Kubernetes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">*Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Integration<wbr>Multai<wbr>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">*Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Load<wbr>Balancers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouploadbalancer">[]Elastigroup<wbr>Load<wbr>Balancer</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Login</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplogin">*Elastigroup<wbr>Login</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Low<wbr>Priority<wbr>Sizes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Available Low-Priority sizes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Managed<wbr>Service<wbr>Identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">[]Elastigroup<wbr>Managed<wbr>Service<wbr>Identity</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the managed identity.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Od<wbr>Sizes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Available On-Demand sizes
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region your Azure group will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scaling<wbr>Down<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">[]Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scaling<wbr>Up<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">[]Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">[]Elastigroup<wbr>Scheduled<wbr>Task</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Shutdown<wbr>Script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstrategy">Elastigroup<wbr>Strategy</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the deployment strategy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Update<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">*Elastigroup<wbr>Update<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>images</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupimage">Elastigroup<wbr>Image[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>integration<wbr>Kubernetes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>integration<wbr>Multai<wbr>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>load<wbr>Balancers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouploadbalancer">Elastigroup<wbr>Load<wbr>Balancer[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>login</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>low<wbr>Priority<wbr>Sizes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Available Low-Priority sizes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>managed<wbr>Service<wbr>Identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">Elastigroup<wbr>Managed<wbr>Service<wbr>Identity[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the managed identity.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>od<wbr>Sizes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Available On-Demand sizes
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region your Azure group will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scaling<wbr>Down<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scaling<wbr>Up<wbr>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>shutdown<wbr>Script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstrategy">Elastigroup<wbr>Strategy</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the deployment strategy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>update<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>desired_<wbr>capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health_<wbr>check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouphealthcheck">Dict[Elastigroup<wbr>Health<wbr>Check]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>images</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupimage">List[Elastigroup<wbr>Image]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>integration_<wbr>kubernetes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Dict[Elastigroup<wbr>Integration<wbr>Kubernetes]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>integration_<wbr>multai_<wbr>runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Dict[Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>load_<wbr>balancers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouploadbalancer">List[Elastigroup<wbr>Load<wbr>Balancer]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>login</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplogin">Dict[Elastigroup<wbr>Login]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>low_<wbr>priority_<wbr>sizes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Available Low-Priority sizes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>managed_<wbr>service_<wbr>identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">List[Elastigroup<wbr>Managed<wbr>Service<wbr>Identity]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the managed identity.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetwork">Dict[Elastigroup<wbr>Network]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>od_<wbr>sizes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Available On-Demand sizes
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>product</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region your Azure group will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scaling_<wbr>down_<wbr>policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scaling_<wbr>up_<wbr>policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduled_<wbr>tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">List[Elastigroup<wbr>Scheduled<wbr>Task]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>shutdown_<wbr>script</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstrategy">Dict[Elastigroup<wbr>Strategy]</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the deployment strategy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>update_<wbr>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">Dict[Elastigroup<wbr>Update<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -2271,7 +1385,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2279,7 +1393,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -2288,7 +1402,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check<wbr>Args?</a></span>
+        <span class="property-type"><a href="#elastigrouphealthcheck">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2296,7 +1410,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Images</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupimage">List&lt;Elastigroup<wbr>Image<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#elastigroupimage">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Image<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2304,7 +1418,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Integration<wbr>Kubernetes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args?</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2312,7 +1426,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Integration<wbr>Multai<wbr>Runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args?</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2320,7 +1434,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Load<wbr>Balancers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouploadbalancer">List&lt;Elastigroup<wbr>Load<wbr>Balancer<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#elastigrouploadbalancer">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Load<wbr>Balancer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2328,7 +1442,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Login</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login<wbr>Args?</a></span>
+        <span class="property-type"><a href="#elastigrouplogin">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2336,7 +1450,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Low<wbr>Priority<wbr>Sizes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Available Low-Priority sizes.
 {{% /md %}}</dd>
@@ -2345,7 +1459,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Managed<wbr>Service<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">List&lt;Elastigroup<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2353,7 +1467,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -2362,7 +1476,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -2371,7 +1485,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the managed identity.
 {{% /md %}}</dd>
@@ -2380,7 +1494,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network<wbr>Args?</a></span>
+        <span class="property-type"><a href="#elastigroupnetwork">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2388,7 +1502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Od<wbr>Sizes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Available On-Demand sizes
 {{% /md %}}</dd>
@@ -2397,7 +1511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Product</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
 {{% /md %}}</dd>
@@ -2406,7 +1520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region your Azure group will be created in.
 {{% /md %}}</dd>
@@ -2415,7 +1529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
 {{% /md %}}</dd>
@@ -2424,7 +1538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scaling<wbr>Down<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List&lt;Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2432,7 +1546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scaling<wbr>Up<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">List&lt;Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2440,7 +1554,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">List&lt;Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2448,7 +1562,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Shutdown<wbr>Script</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
 {{% /md %}}</dd>
@@ -2457,7 +1571,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstrategy">Elastigroup<wbr>Strategy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#elastigroupstrategy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the deployment strategy.
 {{% /md %}}</dd>
@@ -2466,7 +1580,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Update<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2474,7 +1588,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -2490,7 +1604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2498,7 +1612,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -2507,7 +1621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouphealthcheck">*Elastigroup<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2523,7 +1637,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Integration<wbr>Kubernetes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">*Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2531,7 +1645,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Integration<wbr>Multai<wbr>Runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">*Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2547,7 +1661,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Login</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplogin">*Elastigroup<wbr>Login</a></span>
+        <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2572,7 +1686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -2581,7 +1695,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -2590,7 +1704,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the managed identity.
 {{% /md %}}</dd>
@@ -2599,7 +1713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetwork">*Elastigroup<wbr>Network</a></span>
+        <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2616,7 +1730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Product</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
 {{% /md %}}</dd>
@@ -2625,7 +1739,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region your Azure group will be created in.
 {{% /md %}}</dd>
@@ -2634,7 +1748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
 {{% /md %}}</dd>
@@ -2667,7 +1781,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Shutdown<wbr>Script</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
 {{% /md %}}</dd>
@@ -2676,7 +1790,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstrategy">*Elastigroup<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#elastigroupstrategy">Elastigroup<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Describes the deployment strategy.
 {{% /md %}}</dd>
@@ -2685,7 +1799,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Update<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">*Elastigroup<wbr>Update<wbr>Policy</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2693,7 +1807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -2709,7 +1823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2717,7 +1831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -2726,7 +1840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check?</a></span>
+        <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2734,7 +1848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>images</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupimage">Elastigroup<wbr>Image[]?</a></span>
+        <span class="property-type"><a href="#elastigroupimage">Elastigroup<wbr>Image[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2742,7 +1856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>integration<wbr>Kubernetes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes?</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2750,7 +1864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>integration<wbr>Multai<wbr>Runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime?</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2758,7 +1872,7 @@ The following state arguments are supported:
             title="Optional">
         <span>load<wbr>Balancers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouploadbalancer">Elastigroup<wbr>Load<wbr>Balancer[]?</a></span>
+        <span class="property-type"><a href="#elastigrouploadbalancer">Elastigroup<wbr>Load<wbr>Balancer[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2766,7 +1880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>login</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login?</a></span>
+        <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2774,7 +1888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>low<wbr>Priority<wbr>Sizes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Available Low-Priority sizes.
 {{% /md %}}</dd>
@@ -2783,7 +1897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>managed<wbr>Service<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">Elastigroup<wbr>Managed<wbr>Service<wbr>Identity[]?</a></span>
+        <span class="property-type"><a href="#elastigroupmanagedserviceidentity">Elastigroup<wbr>Managed<wbr>Service<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2791,7 +1905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -2800,7 +1914,7 @@ The following state arguments are supported:
             title="Optional">
         <span>min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
@@ -2809,7 +1923,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the managed identity.
 {{% /md %}}</dd>
@@ -2818,7 +1932,7 @@ The following state arguments are supported:
             title="Optional">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network?</a></span>
+        <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2826,7 +1940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>od<wbr>Sizes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Available On-Demand sizes
 {{% /md %}}</dd>
@@ -2835,7 +1949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>product</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
 {{% /md %}}</dd>
@@ -2844,7 +1958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region your Azure group will be created in.
 {{% /md %}}</dd>
@@ -2853,7 +1967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
 {{% /md %}}</dd>
@@ -2862,7 +1976,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scaling<wbr>Down<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy[]?</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2870,7 +1984,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scaling<wbr>Up<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy[]?</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2878,7 +1992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task[]?</a></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2886,7 +2000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>shutdown<wbr>Script</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
 {{% /md %}}</dd>
@@ -2895,7 +2009,7 @@ The following state arguments are supported:
             title="Optional">
         <span>strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstrategy">Elastigroup<wbr>Strategy?</a></span>
+        <span class="property-type"><a href="#elastigroupstrategy">Elastigroup<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Describes the deployment strategy.
 {{% /md %}}</dd>
@@ -2904,7 +2018,7 @@ The following state arguments are supported:
             title="Optional">
         <span>update<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2912,7 +2026,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -3165,11 +2279,19 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Health<wbr>Check<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3177,15 +2299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Health<wbr>Check<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3196,11 +2310,19 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Health<wbr>Check<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3208,15 +2330,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Health<wbr>Check<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3227,11 +2341,19 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>health<wbr>Check<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3239,15 +2361,7 @@ The following state arguments are supported:
             title="Optional">
         <span>grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>health<wbr>Check<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3257,6 +2371,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>health_<wbr>check_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3271,14 +2393,6 @@ The following state arguments are supported:
         <span>grace_<wbr>period</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>health_<wbr>check_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3308,7 +2422,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Customs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupimagecustom">List&lt;Elastigroup<wbr>Image<wbr>Custom<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#elastigroupimagecustom">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Image<wbr>Custom<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3316,7 +2430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Marketplaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupimagemarketplace">List&lt;Elastigroup<wbr>Image<wbr>Marketplace<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#elastigroupimagemarketplace">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Image<wbr>Marketplace<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3354,7 +2468,7 @@ The following state arguments are supported:
             title="Optional">
         <span>customs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupimagecustom">Elastigroup<wbr>Image<wbr>Custom[]?</a></span>
+        <span class="property-type"><a href="#elastigroupimagecustom">Elastigroup<wbr>Image<wbr>Custom[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3362,7 +2476,7 @@ The following state arguments are supported:
             title="Optional">
         <span>marketplaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupimagemarketplace">Elastigroup<wbr>Image<wbr>Marketplace[]?</a></span>
+        <span class="property-type"><a href="#elastigroupimagemarketplace">Elastigroup<wbr>Image<wbr>Marketplace[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3811,11 +2925,19 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3823,21 +2945,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Target<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -3850,11 +2964,19 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3862,21 +2984,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Target<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -3889,11 +3003,19 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>auto<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3901,21 +3023,13 @@ The following state arguments are supported:
             title="Optional">
         <span>balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>target<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -3927,6 +3041,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3947,14 +3069,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>target_<wbr>set_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3982,25 +3096,25 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>User<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ssh<wbr>Public<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -4013,25 +3127,25 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>User<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ssh<wbr>Public<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -4044,25 +3158,25 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>user<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ssh<wbr>Public<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -4075,6 +3189,14 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>user<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>password</span>
@@ -4086,14 +3208,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>ssh<wbr>Public<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4236,22 +3350,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Additional<wbr>Ip<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkadditionalipconfig">List&lt;Elastigroup<wbr>Network<wbr>Additional<wbr>Ip<wbr>Config<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Assign<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
@@ -4277,12 +3375,53 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Additional<wbr>Ip<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupnetworkadditionalipconfig">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Additional<wbr>Ip<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Assign<wbr>Public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Subnet<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Virtual<wbr>Network<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4296,32 +3435,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Assign<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Subnet<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Virtual<wbr>Network<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4331,22 +3445,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>additional<wbr>Ip<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkadditionalipconfig">Elastigroup<wbr>Network<wbr>Additional<wbr>Ip<wbr>Config[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>assign<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4373,18 +3471,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>additional<wbr>Ip<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkadditionalipconfig">List[Elastigroup<wbr>Network<wbr>Additional<wbr>Ip<wbr>Config]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkadditionalipconfig">Elastigroup<wbr>Network<wbr>Additional<wbr>Ip<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4392,9 +3483,16 @@ The following state arguments are supported:
             title="Optional">
         <span>assign<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -4418,6 +3516,22 @@ The following state arguments are supported:
         <span>virtual<wbr>Network<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>additional<wbr>Ip<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupnetworkadditionalipconfig">List[Elastigroup<wbr>Network<wbr>Additional<wbr>Ip<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>assign<wbr>Public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4456,7 +3570,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Ip<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4480,7 +3594,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Ip<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4504,7 +3618,7 @@ The following state arguments are supported:
             title="Optional">
         <span>private<wbr>Ip<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4554,83 +3668,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Action<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">List&lt;Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Evaluation<wbr>Periods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Min<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4642,43 +3684,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4692,9 +3702,113 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Action<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maximum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Minimum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4705,11 +3819,43 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Policy<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Action<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4717,7 +3863,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4725,7 +3871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4741,7 +3887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Evaluation<wbr>Periods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4749,21 +3895,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -4773,21 +3911,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -4797,7 +3927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Operator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4805,15 +3935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Policy<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4821,7 +3943,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Statistic</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4829,15 +3951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4845,7 +3959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4856,83 +3970,11 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>action<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>evaluation<wbr>Periods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>min<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4944,43 +3986,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4994,9 +4004,113 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>action<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>maximum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>minimum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5006,6 +4120,38 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>policy<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5063,14 +4209,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>metric<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>min<wbr>Target<wbr>Capacity</span>
@@ -5082,14 +4220,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5111,14 +4241,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>policy<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>statistic</span>
@@ -5132,14 +4254,6 @@ The following state arguments are supported:
         <span>target</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5186,7 +4300,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5210,7 +4324,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5234,7 +4348,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5284,83 +4398,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Action<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">List&lt;Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Evaluation<wbr>Periods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Min<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5372,43 +4414,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5422,9 +4432,113 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Action<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maximum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Minimum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5435,11 +4549,43 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Policy<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Action<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5447,7 +4593,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5455,7 +4601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5471,7 +4617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Evaluation<wbr>Periods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5479,21 +4625,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5503,21 +4641,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5527,7 +4657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Operator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5535,15 +4665,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Policy<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5551,7 +4673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Statistic</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5559,15 +4681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5575,7 +4689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5586,83 +4700,11 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>action<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>adjustment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cooldown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dimensions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>evaluation<wbr>Periods</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>maximum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>metric<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>min<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5674,43 +4716,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>operator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>policy<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>statistic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5724,9 +4734,113 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>action<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>evaluation<wbr>Periods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>maximum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Target<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>minimum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5736,6 +4850,38 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>policy<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5793,14 +4939,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>metric<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>min<wbr>Target<wbr>Capacity</span>
@@ -5812,14 +4950,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>minimum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5841,14 +4971,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>policy<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>statistic</span>
@@ -5862,14 +4984,6 @@ The following state arguments are supported:
         <span>target</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5916,7 +5030,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5940,7 +5054,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5964,7 +5078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6014,11 +5128,27 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Cron<wbr>Expression</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6026,21 +5156,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Adjustment<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Batch<wbr>Size<wbr>Percentage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Cron<wbr>Expression</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -6050,7 +5172,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6058,7 +5180,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6066,7 +5188,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scale<wbr>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6074,21 +5196,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Scale<wbr>Min<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Scale<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -6101,11 +5215,27 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Cron<wbr>Expression</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6113,21 +5243,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Adjustment<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Batch<wbr>Size<wbr>Percentage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Cron<wbr>Expression</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -6137,7 +5259,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6145,7 +5267,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6153,7 +5275,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scale<wbr>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6161,21 +5283,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Scale<wbr>Min<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Scale<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -6188,11 +5302,27 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>cron<wbr>Expression</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>adjustment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6200,21 +5330,13 @@ The following state arguments are supported:
             title="Optional">
         <span>adjustment<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>batch<wbr>Size<wbr>Percentage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>cron<wbr>Expression</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -6224,7 +5346,7 @@ The following state arguments are supported:
             title="Optional">
         <span>grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6232,7 +5354,7 @@ The following state arguments are supported:
             title="Optional">
         <span>is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6240,7 +5362,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scale<wbr>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6248,21 +5370,13 @@ The following state arguments are supported:
             title="Optional">
         <span>scale<wbr>Min<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>scale<wbr>Target<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -6275,6 +5389,22 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>cron<wbr>Expression</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>adjustment</span>
@@ -6294,14 +5424,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>batch<wbr>Size<wbr>Percentage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>cron<wbr>Expression</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6347,14 +5469,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>task<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -6381,7 +5495,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Draining<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) to allow the instance to be drained from incoming TCP connections and detached from MLB before terminating it during a scale-down operation.
 {{% /md %}}</dd>
@@ -6390,7 +5504,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Low<wbr>Priority<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of Low Priority instances to maintain. Required if `od_count` is not specified.
 {{% /md %}}</dd>
@@ -6399,7 +5513,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Od<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of On-Demand instances to maintain. Required if low_priority_percentage is not specified.
 {{% /md %}}</dd>
@@ -6415,7 +5529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Draining<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) to allow the instance to be drained from incoming TCP connections and detached from MLB before terminating it during a scale-down operation.
 {{% /md %}}</dd>
@@ -6424,7 +5538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Low<wbr>Priority<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of Low Priority instances to maintain. Required if `od_count` is not specified.
 {{% /md %}}</dd>
@@ -6433,7 +5547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Od<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of On-Demand instances to maintain. Required if low_priority_percentage is not specified.
 {{% /md %}}</dd>
@@ -6449,7 +5563,7 @@ The following state arguments are supported:
             title="Optional">
         <span>draining<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time (seconds) to allow the instance to be drained from incoming TCP connections and detached from MLB before terminating it during a scale-down operation.
 {{% /md %}}</dd>
@@ -6458,7 +5572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>low<wbr>Priority<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of Low Priority instances to maintain. Required if `od_count` is not specified.
 {{% /md %}}</dd>
@@ -6467,7 +5581,7 @@ The following state arguments are supported:
             title="Optional">
         <span>od<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of On-Demand instances to maintain. Required if low_priority_percentage is not specified.
 {{% /md %}}</dd>
@@ -6528,19 +5642,19 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Roll<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Should<wbr>Roll</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Roll<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6551,19 +5665,19 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Roll<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">*Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Should<wbr>Roll</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Roll<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6574,19 +5688,19 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>roll<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>should<wbr>Roll</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>roll<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6597,19 +5711,19 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>roll<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Dict[Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>should<wbr>Roll</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>roll<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Dict[Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6647,7 +5761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6655,7 +5769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6678,7 +5792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6686,7 +5800,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6709,7 +5823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6717,7 +5831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>health<wbr>Check<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
