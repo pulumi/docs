@@ -218,7 +218,7 @@ FROM nginx
 COPY content /usr/share/nginx/html
 ```
 
-When we deploy this with Pulumi, the Dockerfile is built locally, pushed to a registry, then it is available by image name in the registry referenced from the Pod in Kubernetes. Our changes happen automatically, seamlessly deploying and versioning both the application code and infrastructure together with a simple `pulumi up`.
+When we deploy this with Pulumi, the Dockerfile is built locally, pushed to a registry, then made available by specifying the image name in the registry referenced from the Pod in Kubernetes. Our changes happen automatically, seamlessly deploying and versioning both the application code and infrastructure together with a simple `pulumi up`.
 
 We can also push to another Docker container registry (like ACR, GCR, ECR, or others) by using additional parameters on the `pulumi.docker.ImageArgs` class.
 
