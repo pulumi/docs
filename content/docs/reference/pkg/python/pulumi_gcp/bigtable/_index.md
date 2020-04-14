@@ -187,20 +187,30 @@ is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>clusters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Cloud Bigtable cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of nodes in your Cloud Bigtable cluster.
+Required, with a minimum of <code class="docutils literal notranslate"><span class="pre">3</span></code> for a <code class="docutils literal notranslate"><span class="pre">PRODUCTION</span></code> instance. Must be left unset
+for a <code class="docutils literal notranslate"><span class="pre">DEVELOPMENT</span></code> instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage type to use. One of <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&quot;HDD&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The zone to create the Cloud Bigtable cluster in. Each
+cluster must have a different zone in the same region. Zones that support
+Bigtable instances are noted on the <a class="reference external" href="https://cloud.google.com/bigtable/docs/locations">Cloud Bigtable locations page</a>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigtable.Instance.clusters">
 <code class="sig-name descname">clusters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.Instance.clusters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Cloud Bigtable cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of nodes in your Cloud Bigtable cluster.
+Required, with a minimum of <code class="docutils literal notranslate"><span class="pre">3</span></code> for a <code class="docutils literal notranslate"><span class="pre">PRODUCTION</span></code> instance. Must be left unset
+for a <code class="docutils literal notranslate"><span class="pre">DEVELOPMENT</span></code> instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The storage type to use. One of <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&quot;HDD&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The zone to create the Cloud Bigtable cluster in. Each
+cluster must have a different zone in the same region. Zones that support
+Bigtable instances are noted on the <a class="reference external" href="https://cloud.google.com/bigtable/docs/locations">Cloud Bigtable locations page</a>.</p></li>
 </ul>
 </dd></dl>
 
@@ -251,10 +261,15 @@ is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>clusters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Cloud Bigtable cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of nodes in your Cloud Bigtable cluster.
+Required, with a minimum of <code class="docutils literal notranslate"><span class="pre">3</span></code> for a <code class="docutils literal notranslate"><span class="pre">PRODUCTION</span></code> instance. Must be left unset
+for a <code class="docutils literal notranslate"><span class="pre">DEVELOPMENT</span></code> instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage type to use. One of <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&quot;HDD&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The zone to create the Cloud Bigtable cluster in. Each
+cluster must have a different zone in the same region. Zones that support
+Bigtable instances are noted on the <a class="reference external" href="https://cloud.google.com/bigtable/docs/locations">Cloud Bigtable locations page</a>.</p></li>
 </ul>
 </dd></dl>
 

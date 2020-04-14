@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_vault.database"></span><dl class="class">
 <dt id="pulumi_vault.database.SecretBackendConnection">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.database.</code><code class="sig-name descname">SecretBackendConnection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_roles=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cassandra=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">hana=None</em>, <em class="sig-param">mongodb=None</em>, <em class="sig-param">mssql=None</em>, <em class="sig-param">mysql=None</em>, <em class="sig-param">mysql_aurora=None</em>, <em class="sig-param">mysql_legacy=None</em>, <em class="sig-param">mysql_rds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oracle=None</em>, <em class="sig-param">postgresql=None</em>, <em class="sig-param">root_rotation_statements=None</em>, <em class="sig-param">verify_connection=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.database.</code><code class="sig-name descname">SecretBackendConnection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_roles=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cassandra=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">elasticsearch=None</em>, <em class="sig-param">hana=None</em>, <em class="sig-param">mongodb=None</em>, <em class="sig-param">mssql=None</em>, <em class="sig-param">mysql=None</em>, <em class="sig-param">mysql_aurora=None</em>, <em class="sig-param">mysql_legacy=None</em>, <em class="sig-param">mysql_rds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oracle=None</em>, <em class="sig-param">postgresql=None</em>, <em class="sig-param">root_rotation_statements=None</em>, <em class="sig-param">verify_connection=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a SecretBackendConnection resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -29,6 +29,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the Vault mount to configure.</p></li>
 <li><p><strong>cassandra</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for Cassandra connections.</p></li>
 <li><p><strong>data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of sensitive data to pass to the endpoint. Useful for templated connection strings.</p></li>
+<li><p><strong>elasticsearch</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for Elasticsearch connections.</p></li>
 <li><p><strong>hana</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for SAP HanaDB connections.</p></li>
 <li><p><strong>mongodb</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for MongoDB connections.</p></li>
 <li><p><strong>mssql</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for MSSQL connections.</p></li>
@@ -52,7 +53,7 @@ timeout.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The hosts to connect to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">insecure_tls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to skip verification of the server
 certificate when using TLS.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to authenticate with.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to be used in the connection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pem_bundle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Concatenated PEM blocks configuring the certificate
 chain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pemJson</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A JSON structure configuring the certificate chain.</p></li>
@@ -60,7 +61,14 @@ chain.</p></li>
 part of the host.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The CQL protocol version to use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use TLS when connecting to Cassandra.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to authenticate with.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to be used in the connection.</p></li>
+</ul>
+<p>The <strong>elasticsearch</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to be used in the connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL for Elasticsearch’s API. https requires certificate
+by trusted CA if used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to be used in the connection.</p></li>
 </ul>
 <p>The <strong>hana</strong> object supports the following:</p>
 <ul class="simple">
@@ -202,7 +210,7 @@ timeout.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hosts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The hosts to connect to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">insecure_tls</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to skip verification of the server
 certificate when using TLS.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password to authenticate with.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password to be used in the connection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pem_bundle</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Concatenated PEM blocks configuring the certificate
 chain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pemJson</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A JSON structure configuring the certificate chain.</p></li>
@@ -210,7 +218,7 @@ chain.</p></li>
 part of the host.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The CQL protocol version to use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tls</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to use TLS when connecting to Cassandra.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username to authenticate with.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username to be used in the connection.</p></li>
 </ul>
 </dd></dl>
 
@@ -218,6 +226,18 @@ part of the host.</p></li>
 <dt id="pulumi_vault.database.SecretBackendConnection.data">
 <code class="sig-name descname">data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection.data" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of sensitive data to pass to the endpoint. Useful for templated connection strings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.database.SecretBackendConnection.elasticsearch">
+<code class="sig-name descname">elasticsearch</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection.elasticsearch" title="Permalink to this definition">¶</a></dt>
+<dd><p>A nested block containing configuration options for Elasticsearch connections.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password to be used in the connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL for Elasticsearch’s API. https requires certificate
+by trusted CA if used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username to be used in the connection.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -403,7 +423,7 @@ initial configuration or not.</p>
 
 <dl class="method">
 <dt id="pulumi_vault.database.SecretBackendConnection.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_roles=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cassandra=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">hana=None</em>, <em class="sig-param">mongodb=None</em>, <em class="sig-param">mssql=None</em>, <em class="sig-param">mysql=None</em>, <em class="sig-param">mysql_aurora=None</em>, <em class="sig-param">mysql_legacy=None</em>, <em class="sig-param">mysql_rds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oracle=None</em>, <em class="sig-param">postgresql=None</em>, <em class="sig-param">root_rotation_statements=None</em>, <em class="sig-param">verify_connection=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_roles=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cassandra=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">elasticsearch=None</em>, <em class="sig-param">hana=None</em>, <em class="sig-param">mongodb=None</em>, <em class="sig-param">mssql=None</em>, <em class="sig-param">mysql=None</em>, <em class="sig-param">mysql_aurora=None</em>, <em class="sig-param">mysql_legacy=None</em>, <em class="sig-param">mysql_rds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oracle=None</em>, <em class="sig-param">postgresql=None</em>, <em class="sig-param">root_rotation_statements=None</em>, <em class="sig-param">verify_connection=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecretBackendConnection resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -417,6 +437,7 @@ connection.</p></li>
 <li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the Vault mount to configure.</p></li>
 <li><p><strong>cassandra</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for Cassandra connections.</p></li>
 <li><p><strong>data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of sensitive data to pass to the endpoint. Useful for templated connection strings.</p></li>
+<li><p><strong>elasticsearch</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for Elasticsearch connections.</p></li>
 <li><p><strong>hana</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for SAP HanaDB connections.</p></li>
 <li><p><strong>mongodb</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for MongoDB connections.</p></li>
 <li><p><strong>mssql</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for MSSQL connections.</p></li>
@@ -440,7 +461,7 @@ timeout.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The hosts to connect to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">insecure_tls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to skip verification of the server
 certificate when using TLS.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to authenticate with.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to be used in the connection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pem_bundle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Concatenated PEM blocks configuring the certificate
 chain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pemJson</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A JSON structure configuring the certificate chain.</p></li>
@@ -448,7 +469,14 @@ chain.</p></li>
 part of the host.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The CQL protocol version to use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use TLS when connecting to Cassandra.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to authenticate with.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to be used in the connection.</p></li>
+</ul>
+<p>The <strong>elasticsearch</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to be used in the connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL for Elasticsearch’s API. https requires certificate
+by trusted CA if used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to be used in the connection.</p></li>
 </ul>
 <p>The <strong>hana</strong> object supports the following:</p>
 <ul class="simple">
