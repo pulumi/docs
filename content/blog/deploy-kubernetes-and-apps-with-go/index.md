@@ -18,7 +18,7 @@ We're excited to announce that Go as a first-class language in Pulumi, and you c
 Building your Kubernetes infrastructure with Infrastructure as Code offers several benefits:
 
 - Strongly-typed inputs and outputs for resources and invokes
-- Use IDEs vim, VS Code, GoLand, and atom
+- First-class language support in editors/IDEs like vim, VS Code, GoLand, and atom
 - Reusable components and classes: Abstract standard functionality into classes and libraries for code reuse, and clean infrastructure design, instead of copy/pasting pages of YAML.
 - Embed Pulumi programs within other Go-based tools
 
