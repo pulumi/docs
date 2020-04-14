@@ -41,7 +41,7 @@ const foo = pulumi.output(rancher2.getNodeTemplate({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNodeTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetNodeTemplateArgs">GetNodeTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupNodeTemplateResult">LookupNodeTemplateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNodeTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetNodeTemplateArgs">GetNodeTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupNodeTemplateResult">LookupNodeTemplateResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -73,7 +73,7 @@ The following arguments are supported:
             title="Optional">
         <span>Use<wbr>Internal<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
@@ -98,7 +98,7 @@ The following arguments are supported:
             title="Optional">
         <span>Use<wbr>Internal<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
@@ -123,7 +123,7 @@ The following arguments are supported:
             title="Optional">
         <span>use<wbr>Internal<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ The following output properties are available:
             title="">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Node Template object (map)
 {{% /md %}}</dd>
@@ -213,7 +213,7 @@ The following output properties are available:
             title="">
         <span>Engine<wbr>Env</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine environment for the node template (string)
 {{% /md %}}</dd>
@@ -222,7 +222,7 @@ The following output properties are available:
             title="">
         <span>Engine<wbr>Insecure<wbr>Registries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Insecure registry for the node template (list)
 {{% /md %}}</dd>
@@ -240,7 +240,7 @@ The following output properties are available:
             title="">
         <span>Engine<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine label for the node template (string)
 {{% /md %}}</dd>
@@ -249,7 +249,7 @@ The following output properties are available:
             title="">
         <span>Engine<wbr>Opt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine options for the node template (map)
 {{% /md %}}</dd>
@@ -258,7 +258,7 @@ The following output properties are available:
             title="">
         <span>Engine<wbr>Registry<wbr>Mirrors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine registry mirror for the node template (list)
 {{% /md %}}</dd>
@@ -285,7 +285,7 @@ The following output properties are available:
             title="">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for Node Template object (map)
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ The following output properties are available:
             title="">
         <span>Use<wbr>Internal<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
@@ -443,7 +443,7 @@ The following output properties are available:
             title="">
         <span>Use<wbr>Internal<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
@@ -584,7 +584,7 @@ The following output properties are available:
             title="">
         <span>use<wbr>Internal<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>

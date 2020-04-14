@@ -41,7 +41,7 @@ const foo = pulumi.output(rancher2.getPodSecurityPolicyTemplate({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPodSecurityPolicyTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateArgs">GetPodSecurityPolicyTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupPodSecurityPolicyTemplateResult">LookupPodSecurityPolicyTemplateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPodSecurityPolicyTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateArgs">GetPodSecurityPolicyTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupPodSecurityPolicyTemplateResult">LookupPodSecurityPolicyTemplateResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -60,11 +60,20 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the PodSecurityPolicyTemplate (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Allow<wbr>Privilege<wbr>Escalation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -72,7 +81,7 @@ The following arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -81,7 +90,7 @@ The following arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Csi<wbr>Drivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -90,7 +99,7 @@ The following arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Flex<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -99,7 +108,7 @@ The following arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Host<wbr>Paths</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -108,7 +117,7 @@ The following arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Proc<wbr>Mount<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -117,7 +126,7 @@ The following arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Unsafe<wbr>Sysctls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -126,7 +135,7 @@ The following arguments are supported:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for PodSecurityPolicyTemplate object (map)
 {{% /md %}}</dd>
@@ -135,7 +144,7 @@ The following arguments are supported:
             title="Optional">
         <span>Default<wbr>Add<wbr>Capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -144,7 +153,7 @@ The following arguments are supported:
             title="Optional">
         <span>Default<wbr>Allow<wbr>Privilege<wbr>Escalation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -153,7 +162,7 @@ The following arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PodSecurityPolicyTemplate description (string)
 {{% /md %}}</dd>
@@ -162,7 +171,7 @@ The following arguments are supported:
             title="Optional">
         <span>Forbidden<wbr>Sysctls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -171,7 +180,7 @@ The following arguments are supported:
             title="Optional">
         <span>Fs<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Args?</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd>
@@ -180,7 +189,7 @@ The following arguments are supported:
             title="Optional">
         <span>Host<wbr>Ipc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd>
@@ -189,7 +198,7 @@ The following arguments are supported:
             title="Optional">
         <span>Host<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -197,7 +206,7 @@ The following arguments are supported:
             title="Optional">
         <span>Host<wbr>Pid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd>
@@ -206,7 +215,7 @@ The following arguments are supported:
             title="Optional">
         <span>Host<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatehostport">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatehostport">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -215,11 +224,99 @@ The following arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
 * `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Privileged</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Read<wbr>Only<wbr>Root<wbr>Filesystem</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Required<wbr>Drop<wbr>Capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}(list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Run<wbr>As<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Run<wbr>As<wbr>User</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Runtime<wbr>Class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Se<wbr>Linux</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinux">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Supplemental<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Volumes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}(list)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -232,97 +329,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Privileged</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}(bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Read<wbr>Only<wbr>Root<wbr>Filesystem</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}(bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Required<wbr>Drop<wbr>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}(list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Run<wbr>As<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}(list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Run<wbr>As<wbr>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}(list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Runtime<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}(list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Se<wbr>Linux</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinux">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}(list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Supplemental<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}(list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}(list)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Allow<wbr>Privilege<wbr>Escalation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -402,7 +411,7 @@ The following arguments are supported:
             title="Optional">
         <span>Default<wbr>Allow<wbr>Privilege<wbr>Escalation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -411,7 +420,7 @@ The following arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PodSecurityPolicyTemplate description (string)
 {{% /md %}}</dd>
@@ -429,7 +438,7 @@ The following arguments are supported:
             title="Optional">
         <span>Fs<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgroup">*Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd>
@@ -438,7 +447,7 @@ The following arguments are supported:
             title="Optional">
         <span>Host<wbr>Ipc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd>
@@ -447,7 +456,7 @@ The following arguments are supported:
             title="Optional">
         <span>Host<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -455,7 +464,7 @@ The following arguments are supported:
             title="Optional">
         <span>Host<wbr>Pid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd>
@@ -479,20 +488,11 @@ The following arguments are supported:
 * `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the PodSecurityPolicyTemplate (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Privileged</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd>
@@ -501,7 +501,7 @@ The following arguments are supported:
             title="Optional">
         <span>Read<wbr>Only<wbr>Root<wbr>Filesystem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd>
@@ -519,7 +519,7 @@ The following arguments are supported:
             title="Optional">
         <span>Run<wbr>As<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">*Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd>
@@ -528,7 +528,7 @@ The following arguments are supported:
             title="Optional">
         <span>Run<wbr>As<wbr>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">*Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd>
@@ -537,7 +537,7 @@ The following arguments are supported:
             title="Optional">
         <span>Runtime<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">*Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd>
@@ -546,7 +546,7 @@ The following arguments are supported:
             title="Optional">
         <span>Se<wbr>Linux</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinux">*Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinux">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd>
@@ -555,7 +555,7 @@ The following arguments are supported:
             title="Optional">
         <span>Supplemental<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgroup">*Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd>
@@ -576,167 +576,6 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>allow<wbr>Privilege<wbr>Escalation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}(list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Csi<wbr>Drivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}(list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Flex<wbr>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume[]?</a></span>
-    </dt>
-    <dd>{{% md %}}(list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Host<wbr>Paths</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path[]?</a></span>
-    </dt>
-    <dd>{{% md %}}(list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Proc<wbr>Mount<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}(list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Unsafe<wbr>Sysctls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}(list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Annotations for PodSecurityPolicyTemplate object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Add<wbr>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}(list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Allow<wbr>Privilege<wbr>Escalation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}(list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The PodSecurityPolicyTemplate description (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>forbidden<wbr>Sysctls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}(list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>fs<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group?</a></span>
-    </dt>
-    <dd>{{% md %}}(list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>host<wbr>Ipc</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}(bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>host<wbr>Network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>host<wbr>Pid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}(bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>host<wbr>Ports</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatehostport">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port[]?</a></span>
-    </dt>
-    <dd>{{% md %}}(list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -748,9 +587,170 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>allow<wbr>Privilege<wbr>Escalation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed<wbr>Capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}(list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed<wbr>Csi<wbr>Drivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver[]</a></span>
+    </dt>
+    <dd>{{% md %}}(list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed<wbr>Flex<wbr>Volumes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume[]</a></span>
+    </dt>
+    <dd>{{% md %}}(list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed<wbr>Host<wbr>Paths</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path[]</a></span>
+    </dt>
+    <dd>{{% md %}}(list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed<wbr>Proc<wbr>Mount<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}(list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed<wbr>Unsafe<wbr>Sysctls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}(list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Annotations for PodSecurityPolicyTemplate object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Add<wbr>Capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}(list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Allow<wbr>Privilege<wbr>Escalation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}(list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PodSecurityPolicyTemplate description (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>forbidden<wbr>Sysctls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}(list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>fs<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}(list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>host<wbr>Ipc</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}(bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>host<wbr>Network</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>host<wbr>Pid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}(bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>host<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatehostport">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port[]</a></span>
+    </dt>
+    <dd>{{% md %}}(list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
+* `allow_privilege_escalation` = (Optional)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>privileged</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd>
@@ -759,7 +759,7 @@ The following arguments are supported:
             title="Optional">
         <span>read<wbr>Only<wbr>Root<wbr>Filesystem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd>
@@ -768,7 +768,7 @@ The following arguments are supported:
             title="Optional">
         <span>required<wbr>Drop<wbr>Capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -777,7 +777,7 @@ The following arguments are supported:
             title="Optional">
         <span>run<wbr>As<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group?</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd>
@@ -786,7 +786,7 @@ The following arguments are supported:
             title="Optional">
         <span>run<wbr>As<wbr>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User?</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd>
@@ -795,7 +795,7 @@ The following arguments are supported:
             title="Optional">
         <span>runtime<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class?</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd>
@@ -804,7 +804,7 @@ The following arguments are supported:
             title="Optional">
         <span>se<wbr>Linux</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinux">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux?</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinux">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd>
@@ -813,7 +813,7 @@ The following arguments are supported:
             title="Optional">
         <span>supplemental<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group?</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd>
@@ -822,7 +822,7 @@ The following arguments are supported:
             title="Optional">
         <span>volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd>
@@ -833,6 +833,15 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the PodSecurityPolicyTemplate (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -993,15 +1002,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
 * `allow_privilege_escalation` = (Optional)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the PodSecurityPolicyTemplate (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1115,73 +1115,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Allowed<wbr>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Csi<wbr>Drivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Flex<wbr>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Host<wbr>Paths</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Proc<wbr>Mount<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Unsafe<wbr>Sysctls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Add<wbr>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Allow<wbr>Privilege<wbr>Escalation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1190,14 +1126,6 @@ The following output properties are available:
         <span>Description</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Forbidden<wbr>Sysctls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1254,7 +1182,7 @@ The following output properties are available:
             title="">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1284,33 +1212,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Required<wbr>Drop<wbr>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Run<wbr>As<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Run<wbr>As<wbr>User</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Runtime<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1334,7 +1238,103 @@ The following output properties are available:
             title="">
         <span>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Allowed<wbr>Capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Allowed<wbr>Csi<wbr>Drivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Allowed<wbr>Flex<wbr>Volumes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Allowed<wbr>Host<wbr>Paths</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Allowed<wbr>Proc<wbr>Mount<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Allowed<wbr>Unsafe<wbr>Sysctls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Default<wbr>Add<wbr>Capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Default<wbr>Allow<wbr>Privilege<wbr>Escalation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Forbidden<wbr>Sysctls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Required<wbr>Drop<wbr>Capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Run<wbr>As<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Runtime<wbr>Class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1355,54 +1355,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Allowed<wbr>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Csi<wbr>Drivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">[]Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Flex<wbr>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">[]Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Host<wbr>Paths</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">[]Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Proc<wbr>Mount<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Unsafe<wbr>Sysctls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Annotations</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
@@ -1411,33 +1363,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Add<wbr>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Allow<wbr>Privilege<wbr>Escalation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Description</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Forbidden<wbr>Sysctls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1524,33 +1452,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Required<wbr>Drop<wbr>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Run<wbr>As<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">*Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Run<wbr>As<wbr>User</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Runtime<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">*Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1578,6 +1482,102 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Allowed<wbr>Capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Allowed<wbr>Csi<wbr>Drivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">[]Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Allowed<wbr>Flex<wbr>Volumes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">[]Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Allowed<wbr>Host<wbr>Paths</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">[]Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Allowed<wbr>Proc<wbr>Mount<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Allowed<wbr>Unsafe<wbr>Sysctls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Default<wbr>Add<wbr>Capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Default<wbr>Allow<wbr>Privilege<wbr>Escalation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Forbidden<wbr>Sysctls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Required<wbr>Drop<wbr>Capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Run<wbr>As<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Runtime<wbr>Class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1595,54 +1595,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>allowed<wbr>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed<wbr>Csi<wbr>Drivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed<wbr>Flex<wbr>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed<wbr>Host<wbr>Paths</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed<wbr>Proc<wbr>Mount<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed<wbr>Unsafe<wbr>Sysctls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>annotations</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
@@ -1651,33 +1603,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Add<wbr>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default<wbr>Allow<wbr>Privilege<wbr>Escalation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>forbidden<wbr>Sysctls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1764,33 +1692,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>required<wbr>Drop<wbr>Capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>run<wbr>As<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>run<wbr>As<wbr>User</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>runtime<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1818,6 +1722,102 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>allowed<wbr>Capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>allowed<wbr>Csi<wbr>Drivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>allowed<wbr>Flex<wbr>Volumes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>allowed<wbr>Host<wbr>Paths</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>allowed<wbr>Proc<wbr>Mount<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>allowed<wbr>Unsafe<wbr>Sysctls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>default<wbr>Add<wbr>Capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>default<wbr>Allow<wbr>Privilege<wbr>Escalation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>forbidden<wbr>Sysctls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>required<wbr>Drop<wbr>Capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>run<wbr>As<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>runtime<wbr>Class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1835,54 +1835,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>allowed_<wbr>capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed_<wbr>csi_<wbr>drivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">List[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed_<wbr>flex_<wbr>volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">List[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed_<wbr>host_<wbr>paths</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">List[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed_<wbr>proc_<wbr>mount_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed_<wbr>unsafe_<wbr>sysctls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>annotations</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
@@ -1891,33 +1843,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>add_<wbr>capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default_<wbr>allow_<wbr>privilege_<wbr>escalation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>forbidden_<wbr>sysctls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2004,33 +1932,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>required_<wbr>drop_<wbr>capabilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>run_<wbr>as_<wbr>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Dict[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>run_<wbr>as_<wbr>user</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">Dict[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>runtime_<wbr>class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Dict[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2055,6 +1959,102 @@ The following output properties are available:
         <span>volumes</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>allowed_<wbr>capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>allowed_<wbr>csi_<wbr>drivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">List[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>allowed_<wbr>flex_<wbr>volumes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">List[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>allowed_<wbr>host_<wbr>paths</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">List[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>allowed_<wbr>proc_<wbr>mount_<wbr>types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>allowed_<wbr>unsafe_<wbr>sysctls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>default_<wbr>add_<wbr>capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>default_<wbr>allow_<wbr>privilege_<wbr>escalation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>forbidden_<wbr>sysctls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>required_<wbr>drop_<wbr>capabilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>run_<wbr>as_<wbr>group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Dict[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>runtime_<wbr>class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Dict[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2251,7 +2251,7 @@ The following output properties are available:
             title="Optional">
         <span>Read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2274,7 +2274,7 @@ The following output properties are available:
             title="Optional">
         <span>Read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2297,7 +2297,7 @@ The following output properties are available:
             title="Optional">
         <span>read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2358,7 +2358,7 @@ The following output properties are available:
             title="Optional">
         <span>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2381,7 +2381,7 @@ The following output properties are available:
             title="Optional">
         <span>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2404,7 +2404,7 @@ The following output properties are available:
             title="Optional">
         <span>rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2667,19 +2667,19 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ranges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgrouprange">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Rule</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ranges</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgrouprange">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2690,19 +2690,19 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ranges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgrouprange">[]Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Rule</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ranges</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgrouprange">[]Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2713,19 +2713,19 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>ranges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgrouprange">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>rule</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ranges</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgrouprange">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2736,19 +2736,19 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>ranges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgrouprange">List[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>rule</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ranges</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgrouprange">List[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2881,19 +2881,19 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ranges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuserrange">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Rule</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ranges</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuserrange">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2904,19 +2904,19 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ranges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuserrange">[]Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Rule</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ranges</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuserrange">[]Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2927,19 +2927,19 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>ranges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuserrange">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>rule</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ranges</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuserrange">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2950,19 +2950,19 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>ranges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuserrange">List[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>rule</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ranges</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuserrange">List[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3099,7 +3099,7 @@ The following output properties are available:
             title="Required">
         <span>Allowed<wbr>Runtime<wbr>Class<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3107,7 +3107,7 @@ The following output properties are available:
             title="Optional">
         <span>Default<wbr>Runtime<wbr>Class<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3130,7 +3130,7 @@ The following output properties are available:
             title="Optional">
         <span>Default<wbr>Runtime<wbr>Class<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3153,7 +3153,7 @@ The following output properties are available:
             title="Optional">
         <span>default<wbr>Runtime<wbr>Class<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3214,7 +3214,7 @@ The following output properties are available:
             title="Optional">
         <span>Se<wbr>Linux<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinuxselinuxoption">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option<wbr>Args?</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinuxselinuxoption">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3237,7 +3237,7 @@ The following output properties are available:
             title="Optional">
         <span>Se<wbr>Linux<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinuxselinuxoption">*Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinuxselinuxoption">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3260,7 +3260,7 @@ The following output properties are available:
             title="Optional">
         <span>se<wbr>Linux<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinuxselinuxoption">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option?</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinuxselinuxoption">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3313,7 +3313,7 @@ The following output properties are available:
             title="Optional">
         <span>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3321,7 +3321,7 @@ The following output properties are available:
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3329,7 +3329,7 @@ The following output properties are available:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3337,7 +3337,7 @@ The following output properties are available:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3352,7 +3352,7 @@ The following output properties are available:
             title="Optional">
         <span>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3360,7 +3360,7 @@ The following output properties are available:
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3368,7 +3368,7 @@ The following output properties are available:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3376,7 +3376,7 @@ The following output properties are available:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3391,7 +3391,7 @@ The following output properties are available:
             title="Optional">
         <span>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3399,7 +3399,7 @@ The following output properties are available:
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3407,7 +3407,7 @@ The following output properties are available:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3415,7 +3415,7 @@ The following output properties are available:
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3492,7 +3492,7 @@ The following output properties are available:
             title="Optional">
         <span>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3515,7 +3515,7 @@ The following output properties are available:
             title="Optional">
         <span>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3538,7 +3538,7 @@ The following output properties are available:
             title="Optional">
         <span>rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

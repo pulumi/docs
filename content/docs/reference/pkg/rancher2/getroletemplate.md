@@ -1,6 +1,6 @@
 
 ---
-title: "GetRoleTempalte"
+title: "GetRoleTemplate"
 block_external_search_index: true
 ---
 
@@ -25,29 +25,29 @@ const foo = pulumi.output(rancher2.getRoleTemplate({
 
 
 
-## Using GetRoleTempalte
+## Using GetRoleTemplate
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRoleTempalte<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#GetRoleTempalteArgs">GetRoleTempalteArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#GetRoleTempalteResult">GetRoleTempalteResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRoleTemplate<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#GetRoleTemplateArgs">GetRoleTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#GetRoleTemplateResult">GetRoleTemplateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_role_tempalte(</span>context=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_role_template(</span>context=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRoleTempalte<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetRoleTempalteArgs">GetRoleTempalteArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupRoleTempalteResult">LookupRoleTempalteResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRoleTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetRoleTemplateArgs">GetRoleTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupRoleTemplateResult">LookupRoleTemplateResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRoleTempalte </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.GetRoleTempalteResult.html">GetRoleTempalteResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.GetRoleTempalteArgs.html">GetRoleTempalteArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRoleTemplate </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.GetRoleTemplateResult.html">GetRoleTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.GetRoleTemplateArgs.html">GetRoleTemplateArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -163,7 +163,7 @@ The following arguments are supported:
 
 
 
-## GetRoleTempalte Result
+## GetRoleTemplate Result
 
 The following output properties are available:
 
@@ -292,7 +292,7 @@ The following output properties are available:
             title="">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroletempalterule">List&lt;Get<wbr>Role<wbr>Tempalte<wbr>Rule&gt;</a></span>
+        <span class="property-type"><a href="#getroletemplaterule">List&lt;Get<wbr>Role<wbr>Template<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Role template policy rules (list)
 {{% /md %}}</dd>
@@ -423,7 +423,7 @@ The following output properties are available:
             title="">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroletempalterule">[]Get<wbr>Role<wbr>Tempalte<wbr>Rule</a></span>
+        <span class="property-type"><a href="#getroletemplaterule">[]Get<wbr>Role<wbr>Template<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Role template policy rules (list)
 {{% /md %}}</dd>
@@ -554,7 +554,7 @@ The following output properties are available:
             title="">
         <span>rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroletempalterule">Get<wbr>Role<wbr>Tempalte<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#getroletemplaterule">Get<wbr>Role<wbr>Template<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Role template policy rules (list)
 {{% /md %}}</dd>
@@ -685,7 +685,7 @@ The following output properties are available:
             title="">
         <span>rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroletempalterule">List[Get<wbr>Role<wbr>Tempalte<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getroletemplaterule">List[Get<wbr>Role<wbr>Template<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Role template policy rules (list)
 {{% /md %}}</dd>
@@ -702,13 +702,13 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Role<wbr>Tempalte<wbr>Rule</h4>
+<h4>Get<wbr>Role<wbr>Template<wbr>Rule</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetRoleTempalteRule">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetRoleTemplateRule">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetRoleTempalteRule">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetRoleTemplateRule">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -19,7 +19,7 @@ In addition to the built-in local auth, only one external auth config provider c
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ActiveDirectory">ActiveDirectory</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ActiveDirectoryArgs">ActiveDirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ActiveDirectory">ActiveDirectory</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ActiveDirectoryArgs">ActiveDirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -27,11 +27,11 @@ In addition to the built-in local auth, only one external auth config provider c
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewActiveDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ActiveDirectoryArgs">ActiveDirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ActiveDirectory">ActiveDirectory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewActiveDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ActiveDirectoryArgs">ActiveDirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ActiveDirectory">ActiveDirectory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ActiveDirectory.html">ActiveDirectory</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ActiveDirectoryArgs.html">ActiveDirectoryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ActiveDirectory.html">ActiveDirectory</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ActiveDirectoryArgs.html">ActiveDirectoryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -123,173 +123,11 @@ In addition to the built-in local auth, only one external auth config provider c
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Connection<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Login<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory defult lgoin domain (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Dn<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Member<wbr>Mapping<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Member<wbr>User<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Name<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Object<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Search<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Search<wbr>Base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nested<wbr>Group<wbr>Membership<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory servers list (list)
 {{% /md %}}</dd>
@@ -312,69 +150,6 @@ In addition to the built-in local auth, only one external auth config provider c
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Disabled<wbr>Bit<wbr>Mask</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Enabled<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Login<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Name<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Object<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Search<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>User<wbr>Search<wbr>Base</span>
@@ -386,9 +161,234 @@ In addition to the built-in local auth, only one external auth config provider c
 
     <dt class="property-optional"
             title="Optional">
+        <span>Access<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Allowed<wbr>Principal<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Login<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ActiveDirectory defult lgoin domain (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Dn<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Member<wbr>Mapping<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Member<wbr>User<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Name<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group name attribute. Default `name` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Object<wbr>Class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group object class. Default `group` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Search<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Search<wbr>Base</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group search base (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Search<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group search filter (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Labels of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nested<wbr>Group<wbr>Membership<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable TLS connection (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Disabled<wbr>Bit<wbr>Mask</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}User disabled bit mask. Default `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Enabled<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User enable attribute (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Login<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Name<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User name attribute. Default `name` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Object<wbr>Class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User object class. Default `person` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Search<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>User<wbr>Search<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
 {{% /md %}}</dd>
@@ -400,168 +400,6 @@ In addition to the built-in local auth, only one external auth config provider c
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Connection<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Login<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory defult lgoin domain (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Dn<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Member<wbr>Mapping<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Member<wbr>User<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Name<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Object<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Search<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Search<wbr>Base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nested<wbr>Group<wbr>Membership<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Servers</span>
@@ -589,69 +427,6 @@ In addition to the built-in local auth, only one external auth config provider c
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Disabled<wbr>Bit<wbr>Mask</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Enabled<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Login<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Name<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Object<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Search<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>User<wbr>Search<wbr>Base</span>
@@ -663,9 +438,234 @@ In addition to the built-in local auth, only one external auth config provider c
 
     <dt class="property-optional"
             title="Optional">
+        <span>Access<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Allowed<wbr>Principal<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Login<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ActiveDirectory defult lgoin domain (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Dn<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Member<wbr>Mapping<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Member<wbr>User<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Name<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group name attribute. Default `name` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Object<wbr>Class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group object class. Default `group` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Search<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Search<wbr>Base</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group search base (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Search<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group search filter (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Labels of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nested<wbr>Group<wbr>Membership<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable TLS connection (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Disabled<wbr>Bit<wbr>Mask</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}User disabled bit mask. Default `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Enabled<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User enable attribute (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Login<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Name<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User name attribute. Default `name` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Object<wbr>Class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User object class. Default `person` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Search<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>User<wbr>Search<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
 {{% /md %}}</dd>
@@ -676,168 +676,6 @@ In addition to the built-in local auth, only one external auth config provider c
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>connection<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Login<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory defult lgoin domain (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Dn<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Member<wbr>Mapping<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Member<wbr>User<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Name<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Object<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Search<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Search<wbr>Base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>nested<wbr>Group<wbr>Membership<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -866,69 +704,6 @@ In addition to the built-in local auth, only one external auth config provider c
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>tls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>user<wbr>Disabled<wbr>Bit<wbr>Mask</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>user<wbr>Enabled<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>user<wbr>Login<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>user<wbr>Name<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>user<wbr>Object<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>user<wbr>Search<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>user<wbr>Search<wbr>Base</span>
@@ -940,9 +715,234 @@ In addition to the built-in local auth, only one external auth config provider c
 
     <dt class="property-optional"
             title="Optional">
+        <span>access<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed<wbr>Principal<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Login<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ActiveDirectory defult lgoin domain (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Dn<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Member<wbr>Mapping<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Member<wbr>User<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Name<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group name attribute. Default `name` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Object<wbr>Class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group object class. Default `group` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Search<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Search<wbr>Base</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group search base (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Search<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group search filter (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Labels of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nested<wbr>Group<wbr>Membership<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable TLS connection (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>user<wbr>Disabled<wbr>Bit<wbr>Mask</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}User disabled bit mask. Default `2` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>user<wbr>Enabled<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User enable attribute (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>user<wbr>Login<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>user<wbr>Name<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User name attribute. Default `name` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>user<wbr>Object<wbr>Class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User object class. Default `person` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>user<wbr>Search<wbr>Attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>user<wbr>Search<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
 {{% /md %}}</dd>
@@ -953,6 +953,42 @@ In addition to the built-in local auth, only one external auth config provider c
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}ActiveDirectory servers list (list)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>service_<wbr>account_<wbr>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>service_<wbr>account_<wbr>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>user_<wbr>search_<wbr>base</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User search base DN (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1116,33 +1152,6 @@ In addition to the built-in local auth, only one external auth config provider c
     <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>servers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory servers list (list)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>service_<wbr>account_<wbr>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>service_<wbr>account_<wbr>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>tls</span>
@@ -1204,15 +1213,6 @@ In addition to the built-in local auth, only one external auth config provider c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user_<wbr>search_<wbr>base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User search base DN (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1245,150 +1245,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connection<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Login<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory defult lgoin domain (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Dn<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Member<wbr>Mapping<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Member<wbr>User<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Name<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Object<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Search<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Search<wbr>Base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1398,137 +1254,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Nested<wbr>Group<wbr>Membership<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Servers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory servers list (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Account<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Account<wbr>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Disabled<wbr>Bit<wbr>Mask</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Enabled<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Login<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Name<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Object<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Search<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Search<wbr>Base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User search base DN (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User search filter (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1540,209 +1270,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connection<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Login<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory defult lgoin domain (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Dn<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Member<wbr>Mapping<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Member<wbr>User<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Name<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Object<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Search<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Search<wbr>Base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Nested<wbr>Group<wbr>Membership<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Servers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory servers list (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Account<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Account<wbr>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable TLS connection (bool)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1754,228 +1286,12 @@ The following output properties are available:
     <dd>{{% md %}}(Computed) The type of the resource (string)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Disabled<wbr>Bit<wbr>Mask</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Enabled<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Login<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Name<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Object<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Search<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Search<wbr>Base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User search base DN (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User search filter (string)
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connection<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default<wbr>Login<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory defult lgoin domain (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Dn<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Member<wbr>Mapping<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Member<wbr>User<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Name<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Object<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Search<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Search<wbr>Base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1988,137 +1304,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>nested<wbr>Group<wbr>Membership<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>servers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory servers list (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service<wbr>Account<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service<wbr>Account<wbr>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Disabled<wbr>Bit<wbr>Mask</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Enabled<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Login<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Name<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Object<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Search<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Search<wbr>Base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User search base DN (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User search filter (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -2130,150 +1320,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>access_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed_<wbr>principal_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connection_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default_<wbr>login_<wbr>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory defult lgoin domain (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>dn_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>member_<wbr>mapping_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>member_<wbr>user_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>name_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Group name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>object_<wbr>class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Group object class. Default `group` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>search_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>search_<wbr>base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Group search base (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>search_<wbr>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Group search filter (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2283,137 +1329,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>nested_<wbr>group_<wbr>membership_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>servers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}ActiveDirectory servers list (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service_<wbr>account_<wbr>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service_<wbr>account_<wbr>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable TLS connection (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>disabled_<wbr>bit_<wbr>mask</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}User disabled bit mask. Default `2` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>enabled_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User enable attribute (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>login_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>name_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User name attribute. Default `name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>object_<wbr>class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User object class. Default `person` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>search_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>search_<wbr>base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User search base DN (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>search_<wbr>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User search filter (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -2445,7 +1365,7 @@ Get an existing ActiveDirectory resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ActiveDirectory.html">ActiveDirectory</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ActiveDirectoryState.html">ActiveDirectoryState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ActiveDirectory.html">ActiveDirectory</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ActiveDirectoryState.html">ActiveDirectoryState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2555,7 +1475,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
 {{% /md %}}</dd>
@@ -2564,7 +1484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Principal<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
 {{% /md %}}</dd>
@@ -2573,7 +1493,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
 {{% /md %}}</dd>
@@ -2582,7 +1502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
 {{% /md %}}</dd>
@@ -2591,7 +1511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connection<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
 {{% /md %}}</dd>
@@ -2600,7 +1520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Login<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory defult lgoin domain (string)
 {{% /md %}}</dd>
@@ -2609,7 +1529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
@@ -2618,7 +1538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Dn<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
 {{% /md %}}</dd>
@@ -2627,7 +1547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Member<wbr>Mapping<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
 {{% /md %}}</dd>
@@ -2636,7 +1556,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Member<wbr>User<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
 {{% /md %}}</dd>
@@ -2645,7 +1565,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Name<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group name attribute. Default `name` (string)
 {{% /md %}}</dd>
@@ -2654,7 +1574,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Object<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group object class. Default `group` (string)
 {{% /md %}}</dd>
@@ -2663,7 +1583,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Search<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
 {{% /md %}}</dd>
@@ -2672,7 +1592,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Search<wbr>Base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search base (string)
 {{% /md %}}</dd>
@@ -2681,7 +1601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Search<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search filter (string)
 {{% /md %}}</dd>
@@ -2690,7 +1610,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
@@ -2699,7 +1619,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
 {{% /md %}}</dd>
@@ -2708,7 +1628,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nested<wbr>Group<wbr>Membership<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
 {{% /md %}}</dd>
@@ -2717,7 +1637,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
 {{% /md %}}</dd>
@@ -2726,7 +1646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory servers list (list)
 {{% /md %}}</dd>
@@ -2735,7 +1655,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Account<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
 {{% /md %}}</dd>
@@ -2744,7 +1664,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Account<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
 {{% /md %}}</dd>
@@ -2753,7 +1673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection (bool)
 {{% /md %}}</dd>
@@ -2762,7 +1682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
 {{% /md %}}</dd>
@@ -2771,7 +1691,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Disabled<wbr>Bit<wbr>Mask</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User disabled bit mask. Default `2` (int)
 {{% /md %}}</dd>
@@ -2780,7 +1700,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Enabled<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User enable attribute (string)
 {{% /md %}}</dd>
@@ -2789,7 +1709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Login<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
 {{% /md %}}</dd>
@@ -2798,7 +1718,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Name<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name attribute. Default `name` (string)
 {{% /md %}}</dd>
@@ -2807,7 +1727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Object<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User object class. Default `person` (string)
 {{% /md %}}</dd>
@@ -2816,7 +1736,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Search<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
 {{% /md %}}</dd>
@@ -2825,7 +1745,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Search<wbr>Base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search base DN (string)
 {{% /md %}}</dd>
@@ -2834,7 +1754,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Search<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
 {{% /md %}}</dd>
@@ -2850,7 +1770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
 {{% /md %}}</dd>
@@ -2877,7 +1797,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
 {{% /md %}}</dd>
@@ -2886,7 +1806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connection<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
 {{% /md %}}</dd>
@@ -2895,7 +1815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Login<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory defult lgoin domain (string)
 {{% /md %}}</dd>
@@ -2904,7 +1824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
@@ -2913,7 +1833,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Dn<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
 {{% /md %}}</dd>
@@ -2922,7 +1842,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Member<wbr>Mapping<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
 {{% /md %}}</dd>
@@ -2931,7 +1851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Member<wbr>User<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
 {{% /md %}}</dd>
@@ -2940,7 +1860,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Name<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group name attribute. Default `name` (string)
 {{% /md %}}</dd>
@@ -2949,7 +1869,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Object<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group object class. Default `group` (string)
 {{% /md %}}</dd>
@@ -2958,7 +1878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Search<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
 {{% /md %}}</dd>
@@ -2967,7 +1887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Search<wbr>Base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search base (string)
 {{% /md %}}</dd>
@@ -2976,7 +1896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Search<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search filter (string)
 {{% /md %}}</dd>
@@ -2994,7 +1914,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
 {{% /md %}}</dd>
@@ -3003,7 +1923,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nested<wbr>Group<wbr>Membership<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
 {{% /md %}}</dd>
@@ -3012,7 +1932,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
 {{% /md %}}</dd>
@@ -3030,7 +1950,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Account<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
 {{% /md %}}</dd>
@@ -3039,7 +1959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Account<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
 {{% /md %}}</dd>
@@ -3048,7 +1968,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection (bool)
 {{% /md %}}</dd>
@@ -3057,7 +1977,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
 {{% /md %}}</dd>
@@ -3066,7 +1986,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Disabled<wbr>Bit<wbr>Mask</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User disabled bit mask. Default `2` (int)
 {{% /md %}}</dd>
@@ -3075,7 +1995,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Enabled<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User enable attribute (string)
 {{% /md %}}</dd>
@@ -3084,7 +2004,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Login<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
 {{% /md %}}</dd>
@@ -3093,7 +2013,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Name<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name attribute. Default `name` (string)
 {{% /md %}}</dd>
@@ -3102,7 +2022,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Object<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User object class. Default `person` (string)
 {{% /md %}}</dd>
@@ -3111,7 +2031,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Search<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
 {{% /md %}}</dd>
@@ -3120,7 +2040,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Search<wbr>Base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search base DN (string)
 {{% /md %}}</dd>
@@ -3129,7 +2049,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Search<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
 {{% /md %}}</dd>
@@ -3145,7 +2065,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
 {{% /md %}}</dd>
@@ -3154,7 +2074,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allowed<wbr>Principal<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `activedirectory_user://<DN>`  `activedirectory_group://<DN>` (list)
 {{% /md %}}</dd>
@@ -3163,7 +2083,7 @@ The following state arguments are supported:
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
 {{% /md %}}</dd>
@@ -3172,7 +2092,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate for TLS if selfsigned (string)
 {{% /md %}}</dd>
@@ -3181,7 +2101,7 @@ The following state arguments are supported:
             title="Optional">
         <span>connection<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory connection timeout. Default `5000` (int)
 {{% /md %}}</dd>
@@ -3190,7 +2110,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Login<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory defult lgoin domain (string)
 {{% /md %}}</dd>
@@ -3199,7 +2119,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
@@ -3208,7 +2128,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Dn<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group DN attribute. Default `distinguishedName` (string)
 {{% /md %}}</dd>
@@ -3217,7 +2137,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Member<wbr>Mapping<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member mapping attribute. Default `member` (string)
 {{% /md %}}</dd>
@@ -3226,7 +2146,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Member<wbr>User<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group member user attribute. Default `distinguishedName` (string)
 {{% /md %}}</dd>
@@ -3235,7 +2155,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Name<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group name attribute. Default `name` (string)
 {{% /md %}}</dd>
@@ -3244,7 +2164,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Object<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group object class. Default `group` (string)
 {{% /md %}}</dd>
@@ -3253,7 +2173,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Search<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search attribute. Default `sAMAccountName` (string)
 {{% /md %}}</dd>
@@ -3262,7 +2182,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Search<wbr>Base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search base (string)
 {{% /md %}}</dd>
@@ -3271,7 +2191,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Search<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group search filter (string)
 {{% /md %}}</dd>
@@ -3280,7 +2200,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
@@ -3289,7 +2209,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
 {{% /md %}}</dd>
@@ -3298,7 +2218,7 @@ The following state arguments are supported:
             title="Optional">
         <span>nested<wbr>Group<wbr>Membership<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Nested group membership enable. Default `false` (bool)
 {{% /md %}}</dd>
@@ -3307,7 +2227,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory port. Default `389` (int)
 {{% /md %}}</dd>
@@ -3316,7 +2236,7 @@ The following state arguments are supported:
             title="Optional">
         <span>servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}ActiveDirectory servers list (list)
 {{% /md %}}</dd>
@@ -3325,7 +2245,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Account<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account password for access ActiveDirectory service (string)
 {{% /md %}}</dd>
@@ -3334,7 +2254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Account<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account DN for access ActiveDirectory service (string)
 {{% /md %}}</dd>
@@ -3343,7 +2263,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection (bool)
 {{% /md %}}</dd>
@@ -3352,7 +2272,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
 {{% /md %}}</dd>
@@ -3361,7 +2281,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Disabled<wbr>Bit<wbr>Mask</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}User disabled bit mask. Default `2` (int)
 {{% /md %}}</dd>
@@ -3370,7 +2290,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Enabled<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User enable attribute (string)
 {{% /md %}}</dd>
@@ -3379,7 +2299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Login<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User login attribute. Default `sAMAccountName` (string)
 {{% /md %}}</dd>
@@ -3388,7 +2308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Name<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name attribute. Default `name` (string)
 {{% /md %}}</dd>
@@ -3397,7 +2317,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Object<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User object class. Default `person` (string)
 {{% /md %}}</dd>
@@ -3406,7 +2326,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Search<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search attribute. Default `sAMAccountName|sn|givenName` (string)
 {{% /md %}}</dd>
@@ -3415,7 +2335,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Search<wbr>Base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search base DN (string)
 {{% /md %}}</dd>
@@ -3424,7 +2344,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Search<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User search filter (string)
 {{% /md %}}</dd>

@@ -59,7 +59,7 @@ const foo = pulumi.output(rancher2.getSecret({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecret<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetSecretArgs">GetSecretArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupSecretResult">LookupSecretResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecret<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetSecretArgs">GetSecretArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupSecretResult">LookupSecretResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -87,15 +87,6 @@ The following arguments are supported:
     <dd>{{% md %}}The name of the secret (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Namespace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace id where to assign the namespaced secret (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project<wbr>Id</span>
@@ -103,6 +94,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where to assign the secret (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Namespace<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace id where to assign the namespaced secret (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -121,15 +121,6 @@ The following arguments are supported:
     <dd>{{% md %}}The name of the secret (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Namespace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The namespace id where to assign the namespaced secret (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project<wbr>Id</span>
@@ -137,6 +128,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where to assign the secret (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Namespace<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace id where to assign the namespaced secret (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -155,15 +155,6 @@ The following arguments are supported:
     <dd>{{% md %}}The name of the secret (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>namespace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace id where to assign the namespaced secret (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>project<wbr>Id</span>
@@ -171,6 +162,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where to assign the secret (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>namespace<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace id where to assign the namespaced secret (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -189,15 +189,6 @@ The following arguments are supported:
     <dd>{{% md %}}The name of the secret (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>namespace_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The namespace id where to assign the namespaced secret (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>project_<wbr>id</span>
@@ -205,6 +196,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project id where to assign the secret (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>namespace_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The namespace id where to assign the namespaced secret (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -231,7 +231,7 @@ The following output properties are available:
             title="">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for secret object (map)
 {{% /md %}}</dd>
@@ -240,7 +240,7 @@ The following output properties are available:
             title="">
         <span>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Secret key/value data. Base64 encoding required for values (map)
 {{% /md %}}</dd>
@@ -267,7 +267,7 @@ The following output properties are available:
             title="">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for secret object (map)
 {{% /md %}}</dd>
@@ -282,15 +282,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Namespace<wbr>Id</span>
+        <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -358,15 +358,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Namespace<wbr>Id</span>
+        <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -434,15 +434,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>namespace<wbr>Id</span>
+        <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>project<wbr>Id</span>
+        <span>namespace<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -510,7 +510,7 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>namespace_<wbr>id</span>
+        <span>project_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -518,7 +518,7 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project_<wbr>id</span>
+        <span>namespace_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

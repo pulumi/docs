@@ -42,7 +42,7 @@ const foo = pulumi.output(rancher2.getClusterAlterRule({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupClusterAlterRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetClusterAlterRuleArgs">GetClusterAlterRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupClusterAlterRuleResult">LookupClusterAlterRuleResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupClusterAlterRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetClusterAlterRuleArgs">GetClusterAlterRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupClusterAlterRuleResult">LookupClusterAlterRuleResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -70,15 +70,6 @@ The following arguments are supported:
     <dd>{{% md %}}The cluster id where create cluster alert rule (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -86,6 +77,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule name (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
 {{% /md %}}</dd>
 
 </dl>
@@ -104,15 +104,6 @@ The following arguments are supported:
     <dd>{{% md %}}The cluster id where create cluster alert rule (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -120,6 +111,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule name (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
 {{% /md %}}</dd>
 
 </dl>
@@ -138,15 +138,6 @@ The following arguments are supported:
     <dd>{{% md %}}The cluster id where create cluster alert rule (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -154,6 +145,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule name (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
 {{% /md %}}</dd>
 
 </dl>
@@ -172,15 +172,6 @@ The following arguments are supported:
     <dd>{{% md %}}The cluster id where create cluster alert rule (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -188,6 +179,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule name (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
 {{% /md %}}</dd>
 
 </dl>
@@ -214,7 +214,7 @@ The following output properties are available:
             title="">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster alert rule annotations (map)
 {{% /md %}}</dd>
@@ -283,15 +283,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Metric<wbr>Rule</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusteralterrulemetricrule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
@@ -341,6 +332,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getclusteralterrulesystemservicerule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
 {{% /md %}}</dd>
 
 </dl>
@@ -423,15 +423,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Metric<wbr>Rule</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusteralterrulemetricrule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
@@ -481,6 +472,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getclusteralterrulesystemservicerule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
 {{% /md %}}</dd>
 
 </dl>
@@ -563,15 +563,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>metric<wbr>Rule</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusteralterrulemetricrule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
@@ -621,6 +612,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getclusteralterrulesystemservicerule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
 {{% /md %}}</dd>
 
 </dl>
@@ -703,15 +703,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>metric_<wbr>rule</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusteralterrulemetricrule">Dict[Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule]</a></span>
@@ -763,6 +754,15 @@ The following output properties are available:
     <dd>{{% md %}}(Computed) The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster alert rule labels (map)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -790,17 +790,17 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Event<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Resource<wbr>Kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Event<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -813,17 +813,17 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Event<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Resource<wbr>Kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Event<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -836,17 +836,17 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>event<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>resource<wbr>Kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>event<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -859,17 +859,17 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>event<wbr>Type</span>
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Kind</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>resource<wbr>Kind</span>
+    <dt class="property-optional"
+            title="Optional">
+        <span>event<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -897,22 +897,6 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Comparison</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Duration</span>
@@ -937,18 +921,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -956,9 +933,16 @@ The following output properties are available:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -984,28 +968,28 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Comparison</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>comparison</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1031,18 +1015,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1050,9 +1027,16 @@ The following output properties are available:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1075,6 +1059,22 @@ The following output properties are available:
         <span>threshold<wbr>Value</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>comparison</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1104,7 +1104,7 @@ The following output properties are available:
             title="Optional">
         <span>Condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1112,7 +1112,7 @@ The following output properties are available:
             title="Optional">
         <span>Cpu<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1120,7 +1120,7 @@ The following output properties are available:
             title="Optional">
         <span>Mem<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1128,7 +1128,7 @@ The following output properties are available:
             title="Optional">
         <span>Node<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1136,7 +1136,7 @@ The following output properties are available:
             title="Optional">
         <span>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1151,7 +1151,7 @@ The following output properties are available:
             title="Optional">
         <span>Condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1159,7 +1159,7 @@ The following output properties are available:
             title="Optional">
         <span>Cpu<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1167,7 +1167,7 @@ The following output properties are available:
             title="Optional">
         <span>Mem<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1175,7 +1175,7 @@ The following output properties are available:
             title="Optional">
         <span>Node<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1198,7 +1198,7 @@ The following output properties are available:
             title="Optional">
         <span>condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1206,7 +1206,7 @@ The following output properties are available:
             title="Optional">
         <span>cpu<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1214,7 +1214,7 @@ The following output properties are available:
             title="Optional">
         <span>mem<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1222,7 +1222,7 @@ The following output properties are available:
             title="Optional">
         <span>node<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1230,7 +1230,7 @@ The following output properties are available:
             title="Optional">
         <span>selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1307,7 +1307,7 @@ The following output properties are available:
             title="Optional">
         <span>Condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1322,7 +1322,7 @@ The following output properties are available:
             title="Optional">
         <span>Condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1337,7 +1337,7 @@ The following output properties are available:
             title="Optional">
         <span>condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

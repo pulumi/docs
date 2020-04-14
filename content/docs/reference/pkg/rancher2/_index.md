@@ -93,6 +93,7 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="getprojectroletemplatebinding" title="GetProjectRoleTemplateBinding"><span class="symbol function"></span>GetProjectRoleTemplateBinding</a></li>
     <li><a href="getregistry" title="GetRegistry"><span class="symbol function"></span>GetRegistry</a></li>
     <li><a href="getroletempalte" title="GetRoleTempalte"><span class="symbol function"></span>GetRoleTempalte</a></li>
+    <li><a href="getroletemplate" title="GetRoleTemplate"><span class="symbol function"></span>GetRoleTemplate</a></li>
     <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
     <li><a href="getsetting" title="GetSetting"><span class="symbol function"></span>GetSetting</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>

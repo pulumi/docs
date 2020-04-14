@@ -32,7 +32,7 @@ const github = new rancher2.AuthConfigGithub("github", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#AuthConfigGithub">AuthConfigGithub</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#AuthConfigGithubArgs">AuthConfigGithubArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#AuthConfigGithub">AuthConfigGithub</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#AuthConfigGithubArgs">AuthConfigGithubArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -40,11 +40,11 @@ const github = new rancher2.AuthConfigGithub("github", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthConfigGithub<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#AuthConfigGithubArgs">AuthConfigGithubArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#AuthConfigGithub">AuthConfigGithub</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthConfigGithub<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#AuthConfigGithubArgs">AuthConfigGithubArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#AuthConfigGithub">AuthConfigGithub</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..AuthConfigGithub.html">AuthConfigGithub</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.AuthConfigGithubArgs.html">AuthConfigGithubArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.AuthConfigGithub.html">AuthConfigGithub</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.AuthConfigGithubArgs.html">AuthConfigGithubArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -136,11 +136,29 @@ const github = new rancher2.AuthConfigGithub("github", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Client<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Github auth Client ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Client<wbr>Secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Github auth Client secret (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Access<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
 {{% /md %}}</dd>
@@ -149,7 +167,7 @@ const github = new rancher2.AuthConfigGithub("github", {
             title="Optional">
         <span>Allowed<wbr>Principal<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `github_user://<USER_ID>`  `github_team://<GROUP_ID>` `github_org://<ORG_ID>` (list)
 {{% /md %}}</dd>
@@ -158,10 +176,53 @@ const github = new rancher2.AuthConfigGithub("github", {
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Github hostname to connect. Default `github.com` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Labels of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable TLS connection. Default `true` (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -183,52 +244,9 @@ const github = new rancher2.AuthConfigGithub("github", {
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Github hostname to connect. Default `github.com` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable TLS connection. Default `true` (bool)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Access<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
 {{% /md %}}</dd>
@@ -251,29 +269,11 @@ const github = new rancher2.AuthConfigGithub("github", {
     <dd>{{% md %}}Annotations of the resource (map)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Client<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Github auth Client ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Client<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Github auth Client secret (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
@@ -282,7 +282,7 @@ const github = new rancher2.AuthConfigGithub("github", {
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Github hostname to connect. Default `github.com` (string)
 {{% /md %}}</dd>
@@ -300,7 +300,7 @@ const github = new rancher2.AuthConfigGithub("github", {
             title="Optional">
         <span>Tls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection. Default `true` (bool)
 {{% /md %}}</dd>
@@ -311,33 +311,6 @@ const github = new rancher2.AuthConfigGithub("github", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `github_user://<USER_ID>`  `github_team://<GROUP_ID>` `github_org://<ORG_ID>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -359,9 +332,36 @@ const github = new rancher2.AuthConfigGithub("github", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>access<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed<wbr>Principal<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `github_user://<USER_ID>`  `github_team://<GROUP_ID>` `github_org://<ORG_ID>` (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
@@ -370,7 +370,7 @@ const github = new rancher2.AuthConfigGithub("github", {
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Github hostname to connect. Default `github.com` (string)
 {{% /md %}}</dd>
@@ -379,7 +379,7 @@ const github = new rancher2.AuthConfigGithub("github", {
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ const github = new rancher2.AuthConfigGithub("github", {
             title="Optional">
         <span>tls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection. Default `true` (bool)
 {{% /md %}}</dd>
@@ -399,6 +399,24 @@ const github = new rancher2.AuthConfigGithub("github", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>client_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Github auth Client ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>client_<wbr>secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Github auth Client secret (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -425,24 +443,6 @@ const github = new rancher2.AuthConfigGithub("github", {
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>client_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Github auth Client ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>client_<wbr>secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Github auth Client secret (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -502,92 +502,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `github_user://<USER_ID>`  `github_team://<GROUP_ID>` `github_org://<ORG_ID>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Github auth Client ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Github auth Client secret (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Github hostname to connect. Default `github.com` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable TLS connection. Default `true` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -608,92 +527,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `github_user://<USER_ID>`  `github_team://<GROUP_ID>` `github_org://<ORG_ID>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Github auth Client ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Github auth Client secret (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Github hostname to connect. Default `github.com` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable TLS connection. Default `true` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -714,92 +552,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `github_user://<USER_ID>`  `github_team://<GROUP_ID>` `github_org://<ORG_ID>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Github auth Client ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Github auth Client secret (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Github hostname to connect. Default `github.com` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable TLS connection. Default `true` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -820,92 +577,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>access_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed_<wbr>principal_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `github_user://<USER_ID>`  `github_team://<GROUP_ID>` `github_org://<ORG_ID>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Github auth Client ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client_<wbr>secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Github auth Client secret (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Github hostname to connect. Default `github.com` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable TLS connection. Default `true` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -946,7 +622,7 @@ Get an existing AuthConfigGithub resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..AuthConfigGithub.html">AuthConfigGithub</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..AuthConfigGithubState.html">AuthConfigGithubState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.AuthConfigGithub.html">AuthConfigGithub</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..AuthConfigGithubState.html">AuthConfigGithubState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1056,7 +732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
 {{% /md %}}</dd>
@@ -1065,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Principal<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `github_user://<USER_ID>`  `github_team://<GROUP_ID>` `github_org://<ORG_ID>` (list)
 {{% /md %}}</dd>
@@ -1074,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
 {{% /md %}}</dd>
@@ -1083,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Github auth Client ID (string)
 {{% /md %}}</dd>
@@ -1092,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Github auth Client secret (string)
 {{% /md %}}</dd>
@@ -1101,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1110,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Github hostname to connect. Default `github.com` (string)
 {{% /md %}}</dd>
@@ -1119,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
@@ -1128,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
 {{% /md %}}</dd>
@@ -1137,7 +813,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1146,7 +822,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
 {{% /md %}}</dd>
@@ -1162,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
 {{% /md %}}</dd>
@@ -1189,7 +865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Github auth Client ID (string)
 {{% /md %}}</dd>
@@ -1198,7 +874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Github auth Client secret (string)
 {{% /md %}}</dd>
@@ -1207,7 +883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1216,7 +892,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Github hostname to connect. Default `github.com` (string)
 {{% /md %}}</dd>
@@ -1234,7 +910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
 {{% /md %}}</dd>
@@ -1243,7 +919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1252,7 +928,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
 {{% /md %}}</dd>
@@ -1268,7 +944,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
 {{% /md %}}</dd>
@@ -1277,7 +953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allowed<wbr>Principal<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `github_user://<USER_ID>`  `github_team://<GROUP_ID>` `github_org://<ORG_ID>` (list)
 {{% /md %}}</dd>
@@ -1286,7 +962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
 {{% /md %}}</dd>
@@ -1295,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Github auth Client ID (string)
 {{% /md %}}</dd>
@@ -1304,7 +980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Github auth Client secret (string)
 {{% /md %}}</dd>
@@ -1313,7 +989,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1322,7 +998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Github hostname to connect. Default `github.com` (string)
 {{% /md %}}</dd>
@@ -1331,7 +1007,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
@@ -1340,7 +1016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
 {{% /md %}}</dd>
@@ -1349,7 +1025,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable TLS connection. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1358,7 +1034,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
 {{% /md %}}</dd>

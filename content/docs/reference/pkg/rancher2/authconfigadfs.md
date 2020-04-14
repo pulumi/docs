@@ -38,7 +38,7 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#AuthConfigAdfs">AuthConfigAdfs</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#AuthConfigAdfsArgs">AuthConfigAdfsArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#AuthConfigAdfs">AuthConfigAdfs</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#AuthConfigAdfsArgs">AuthConfigAdfsArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -46,11 +46,11 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthConfigAdfs<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#AuthConfigAdfsArgs">AuthConfigAdfsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#AuthConfigAdfs">AuthConfigAdfs</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthConfigAdfs<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#AuthConfigAdfsArgs">AuthConfigAdfsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#AuthConfigAdfs">AuthConfigAdfs</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..AuthConfigAdfs.html">AuthConfigAdfs</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.AuthConfigAdfsArgs.html">AuthConfigAdfsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.AuthConfigAdfs.html">AuthConfigAdfs</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.AuthConfigAdfsArgs.html">AuthConfigAdfsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -142,33 +142,6 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `adfs_user://<USER_ID>`  `adfs_group://<GROUP_ID>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Display<wbr>Name<wbr>Field</span>
@@ -176,15 +149,6 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS display name field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -203,15 +167,6 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS IDP metadata content (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -259,6 +214,51 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
     <dd>{{% md %}}ADFS user name field (string)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Access<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Allowed<wbr>Principal<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `adfs_user://<USER_ID>`  `adfs_group://<GROUP_ID>` (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Labels of the resource (map)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -266,11 +266,83 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Display<wbr>Name<wbr>Field</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ADFS display name field (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Groups<wbr>Field</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ADFS group field (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Idp<wbr>Metadata<wbr>Content</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ADFS IDP metadata content (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Rancher<wbr>Api<wbr>Host</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Rancher url. Schema needs to be specified, `https://<RANCHER_API_HOST>` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Sp<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ADFS SP cert (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Sp<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ADFS SP key (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Uid<wbr>Field</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ADFS UID field (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>User<wbr>Name<wbr>Field</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ADFS user name field (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Access<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
 {{% /md %}}</dd>
@@ -293,40 +365,13 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
     <dd>{{% md %}}Annotations of the resource (map)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Display<wbr>Name<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS display name field (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Groups<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS group field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Idp<wbr>Metadata<wbr>Content</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS IDP metadata content (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -338,84 +383,12 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
     <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Rancher<wbr>Api<wbr>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Rancher url. Schema needs to be specified, `https://<RANCHER_API_HOST>` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Sp<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS SP cert (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Sp<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS SP key (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Uid<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS UID field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User<wbr>Name<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS user name field (string)
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `adfs_user://<USER_ID>`  `adfs_group://<GROUP_ID>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -424,15 +397,6 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS display name field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -451,15 +415,6 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS IDP metadata content (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -507,27 +462,20 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
     <dd>{{% md %}}ADFS user name field (string)
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>mode</span>
+        <span>access<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed_<wbr>principal_<wbr>ids</span>
+        <span>allowed<wbr>Principal<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `adfs_user://<USER_ID>`  `adfs_group://<GROUP_ID>` (list)
 {{% /md %}}</dd>
@@ -536,10 +484,35 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Labels of the resource (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -548,15 +521,6 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ADFS display name field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -575,15 +539,6 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ADFS IDP metadata content (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -629,6 +584,51 @@ const adfs = new rancher2.AuthConfigAdfs("adfs", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ADFS user name field (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>access_<wbr>mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed_<wbr>principal_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `adfs_user://<USER_ID>`  `adfs_group://<GROUP_ID>` (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
 
 </dl>
@@ -652,78 +652,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `adfs_user://<USER_ID>`  `adfs_group://<GROUP_ID>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS display name field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS group field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Idp<wbr>Metadata<wbr>Content</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS IDP metadata content (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -733,56 +661,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Rancher<wbr>Api<wbr>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Rancher url. Schema needs to be specified, `https://<RANCHER_API_HOST>` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sp<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS SP cert (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sp<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS SP key (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Uid<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS UID field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Name<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS user name field (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -794,110 +677,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `adfs_user://<USER_ID>`  `adfs_group://<GROUP_ID>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS display name field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS group field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Idp<wbr>Metadata<wbr>Content</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS IDP metadata content (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rancher<wbr>Api<wbr>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Rancher url. Schema needs to be specified, `https://<RANCHER_API_HOST>` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sp<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS SP cert (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sp<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS SP key (string)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -909,102 +693,12 @@ The following output properties are available:
     <dd>{{% md %}}(Computed) The type of the resource (string)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Uid<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS UID field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Name<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS user name field (string)
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed<wbr>Principal<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `adfs_user://<USER_ID>`  `adfs_group://<GROUP_ID>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display<wbr>Name<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS display name field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS group field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>idp<wbr>Metadata<wbr>Content</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS IDP metadata content (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1017,56 +711,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>rancher<wbr>Api<wbr>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Rancher url. Schema needs to be specified, `https://<RANCHER_API_HOST>` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sp<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS SP cert (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sp<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS SP key (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>uid<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS UID field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Name<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ADFS user name field (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1078,78 +727,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>access_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed_<wbr>principal_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `adfs_user://<USER_ID>`  `adfs_group://<GROUP_ID>` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display_<wbr>name_<wbr>field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ADFS display name field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups_<wbr>field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ADFS group field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>idp_<wbr>metadata_<wbr>content</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ADFS IDP metadata content (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1159,56 +736,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>rancher_<wbr>api_<wbr>host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Rancher url. Schema needs to be specified, `https://<RANCHER_API_HOST>` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sp_<wbr>cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ADFS SP cert (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sp_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ADFS SP key (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>uid_<wbr>field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ADFS UID field (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>name_<wbr>field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ADFS user name field (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1240,7 +772,7 @@ Get an existing AuthConfigAdfs resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..AuthConfigAdfs.html">AuthConfigAdfs</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..AuthConfigAdfsState.html">AuthConfigAdfsState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.AuthConfigAdfs.html">AuthConfigAdfs</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..AuthConfigAdfsState.html">AuthConfigAdfsState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1350,7 +882,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
 {{% /md %}}</dd>
@@ -1359,7 +891,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Principal<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `adfs_user://<USER_ID>`  `adfs_group://<GROUP_ID>` (list)
 {{% /md %}}</dd>
@@ -1368,7 +900,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
 {{% /md %}}</dd>
@@ -1377,7 +909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Display<wbr>Name<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS display name field (string)
 {{% /md %}}</dd>
@@ -1386,7 +918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1395,7 +927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Groups<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS group field (string)
 {{% /md %}}</dd>
@@ -1404,7 +936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Idp<wbr>Metadata<wbr>Content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS IDP metadata content (string)
 {{% /md %}}</dd>
@@ -1413,7 +945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
@@ -1422,7 +954,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
 {{% /md %}}</dd>
@@ -1431,7 +963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rancher<wbr>Api<wbr>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rancher url. Schema needs to be specified, `https://<RANCHER_API_HOST>` (string)
 {{% /md %}}</dd>
@@ -1440,7 +972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sp<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS SP cert (string)
 {{% /md %}}</dd>
@@ -1449,7 +981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS SP key (string)
 {{% /md %}}</dd>
@@ -1458,7 +990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
 {{% /md %}}</dd>
@@ -1467,7 +999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Uid<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS UID field (string)
 {{% /md %}}</dd>
@@ -1476,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Name<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS user name field (string)
 {{% /md %}}</dd>
@@ -1492,7 +1024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
 {{% /md %}}</dd>
@@ -1519,7 +1051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Display<wbr>Name<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS display name field (string)
 {{% /md %}}</dd>
@@ -1528,7 +1060,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1537,7 +1069,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Groups<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS group field (string)
 {{% /md %}}</dd>
@@ -1546,7 +1078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Idp<wbr>Metadata<wbr>Content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS IDP metadata content (string)
 {{% /md %}}</dd>
@@ -1564,7 +1096,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
 {{% /md %}}</dd>
@@ -1573,7 +1105,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rancher<wbr>Api<wbr>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rancher url. Schema needs to be specified, `https://<RANCHER_API_HOST>` (string)
 {{% /md %}}</dd>
@@ -1582,7 +1114,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sp<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS SP cert (string)
 {{% /md %}}</dd>
@@ -1591,7 +1123,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS SP key (string)
 {{% /md %}}</dd>
@@ -1600,7 +1132,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
 {{% /md %}}</dd>
@@ -1609,7 +1141,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Uid<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS UID field (string)
 {{% /md %}}</dd>
@@ -1618,7 +1150,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Name<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS user name field (string)
 {{% /md %}}</dd>
@@ -1634,7 +1166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for auth. `required`, `restricted`, `unrestricted` are supported. Default `unrestricted` (string)
 {{% /md %}}</dd>
@@ -1643,7 +1175,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allowed<wbr>Principal<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed principal ids for auth. Required if `access_mode` is `required` or `restricted`. Ex: `adfs_user://<USER_ID>`  `adfs_group://<GROUP_ID>` (list)
 {{% /md %}}</dd>
@@ -1652,7 +1184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
 {{% /md %}}</dd>
@@ -1661,7 +1193,7 @@ The following state arguments are supported:
             title="Optional">
         <span>display<wbr>Name<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS display name field (string)
 {{% /md %}}</dd>
@@ -1670,7 +1202,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable auth config provider. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1679,7 +1211,7 @@ The following state arguments are supported:
             title="Optional">
         <span>groups<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS group field (string)
 {{% /md %}}</dd>
@@ -1688,7 +1220,7 @@ The following state arguments are supported:
             title="Optional">
         <span>idp<wbr>Metadata<wbr>Content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS IDP metadata content (string)
 {{% /md %}}</dd>
@@ -1697,7 +1229,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
@@ -1706,7 +1238,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The name of the resource (string)
 {{% /md %}}</dd>
@@ -1715,7 +1247,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rancher<wbr>Api<wbr>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rancher url. Schema needs to be specified, `https://<RANCHER_API_HOST>` (string)
 {{% /md %}}</dd>
@@ -1724,7 +1256,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sp<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS SP cert (string)
 {{% /md %}}</dd>
@@ -1733,7 +1265,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS SP key (string)
 {{% /md %}}</dd>
@@ -1742,7 +1274,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The type of the resource (string)
 {{% /md %}}</dd>
@@ -1751,7 +1283,7 @@ The following state arguments are supported:
             title="Optional">
         <span>uid<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS UID field (string)
 {{% /md %}}</dd>
@@ -1760,7 +1292,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Name<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ADFS user name field (string)
 {{% /md %}}</dd>

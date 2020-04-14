@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#MultiClusterApp">MultiClusterApp</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#MultiClusterAppArgs">MultiClusterAppArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#MultiClusterApp">MultiClusterApp</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#MultiClusterAppArgs">MultiClusterAppArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMultiClusterApp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#MultiClusterAppArgs">MultiClusterAppArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#MultiClusterApp">MultiClusterApp</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMultiClusterApp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#MultiClusterAppArgs">MultiClusterAppArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#MultiClusterApp">MultiClusterApp</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..MultiClusterApp.html">MultiClusterApp</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.MultiClusterAppArgs.html">MultiClusterAppArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.MultiClusterApp.html">MultiClusterApp</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.MultiClusterAppArgs.html">MultiClusterAppArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,24 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Answers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Catalog<wbr>Name</span>
@@ -145,56 +127,11 @@ block_external_search_index: true
     <dd>{{% md %}}The multi cluster app catalog name (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Revision<wbr>History<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Revision<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
 {{% /md %}}</dd>
@@ -219,9 +156,72 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Annotations for multi cluster app object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Answers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiclusterappanswer">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app answers (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Labels for multi cluster app object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiclusterappmember">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app answers (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app name (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Revision<wbr>History<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Revision<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current revision id for the multi cluster app (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Template<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
 {{% /md %}}</dd>
@@ -230,7 +230,7 @@ block_external_search_index: true
             title="Optional">
         <span>Upgrade<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
 {{% /md %}}</dd>
@@ -239,7 +239,7 @@ block_external_search_index: true
             title="Optional">
         <span>Wait</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd>
@@ -251,24 +251,6 @@ block_external_search_index: true
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Answers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">[]Multi<wbr>Cluster<wbr>App<wbr>Answer</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Catalog<wbr>Name</span>
@@ -276,51 +258,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">[]Multi<wbr>Cluster<wbr>App<wbr>Member</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Revision<wbr>History<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Revision<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Current revision id for the multi cluster app (string)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -352,9 +289,72 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Annotations for multi cluster app object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Answers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiclusterappanswer">[]Multi<wbr>Cluster<wbr>App<wbr>Answer</a></span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app answers (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Labels for multi cluster app object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiclusterappmember">[]Multi<wbr>Cluster<wbr>App<wbr>Member</a></span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app answers (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app name (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Revision<wbr>History<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Revision<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current revision id for the multi cluster app (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Template<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
 {{% /md %}}</dd>
@@ -363,7 +363,7 @@ block_external_search_index: true
             title="Optional">
         <span>Upgrade<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">*Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
 {{% /md %}}</dd>
@@ -372,7 +372,7 @@ block_external_search_index: true
             title="Optional">
         <span>Wait</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd>
@@ -384,24 +384,6 @@ block_external_search_index: true
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>answers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">Multi<wbr>Cluster<wbr>App<wbr>Answer[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>catalog<wbr>Name</span>
@@ -409,51 +391,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">Multi<wbr>Cluster<wbr>App<wbr>Member[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>revision<wbr>History<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>revision<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Current revision id for the multi cluster app (string)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -485,9 +422,72 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Annotations for multi cluster app object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>answers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiclusterappanswer">Multi<wbr>Cluster<wbr>App<wbr>Answer[]</a></span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app answers (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Labels for multi cluster app object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiclusterappmember">Multi<wbr>Cluster<wbr>App<wbr>Member[]</a></span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app answers (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app name (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>revision<wbr>History<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>revision<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current revision id for the multi cluster app (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>template<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
 {{% /md %}}</dd>
@@ -496,7 +496,7 @@ block_external_search_index: true
             title="Optional">
         <span>upgrade<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy?</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
 {{% /md %}}</dd>
@@ -505,7 +505,7 @@ block_external_search_index: true
             title="Optional">
         <span>wait</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd>
@@ -516,6 +516,42 @@ block_external_search_index: true
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>catalog_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app catalog name (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>roles</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app roles (list)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>targets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#multiclusterapptarget">List[Multi<wbr>Cluster<wbr>App<wbr>Target]</a></span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app target projects (list)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>template_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The multi cluster app template name (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -533,15 +569,6 @@ block_external_search_index: true
         <span class="property-type"><a href="#multiclusterappanswer">List[Multi<wbr>Cluster<wbr>App<wbr>Answer]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>catalog_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app catalog name (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -587,33 +614,6 @@ block_external_search_index: true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app roles (list)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterapptarget">List[Multi<wbr>Cluster<wbr>App<wbr>Target]</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app target projects (list)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>template_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app template name (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -664,137 +664,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Answers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Answer&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Catalog<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Member&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Revision<wbr>History<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Revision<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app roles (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterapptarget">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Target&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app target projects (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app template name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Template<wbr>Version<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Upgrade<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wait</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd>
 
 </dl>
@@ -806,137 +680,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Answers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">[]Multi<wbr>Cluster<wbr>App<wbr>Answer</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Catalog<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">[]Multi<wbr>Cluster<wbr>App<wbr>Member</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Revision<wbr>History<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Revision<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app roles (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterapptarget">[]Multi<wbr>Cluster<wbr>App<wbr>Target</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app target projects (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app template name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Template<wbr>Version<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Upgrade<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wait</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd>
 
 </dl>
@@ -948,137 +696,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>answers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">Multi<wbr>Cluster<wbr>App<wbr>Answer[]</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>catalog<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">Multi<wbr>Cluster<wbr>App<wbr>Member[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>revision<wbr>History<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>revision<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app roles (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterapptarget">Multi<wbr>Cluster<wbr>App<wbr>Target[]</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app target projects (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app template name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>template<wbr>Version<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>upgrade<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wait</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd>
 
 </dl>
@@ -1090,137 +712,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>answers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">List[Multi<wbr>Cluster<wbr>App<wbr>Answer]</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>catalog_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">List[Multi<wbr>Cluster<wbr>App<wbr>Member]</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>revision_<wbr>history_<wbr>limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>revision_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app roles (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterapptarget">List[Multi<wbr>Cluster<wbr>App<wbr>Target]</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app target projects (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app template name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>template_<wbr>version_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>upgrade_<wbr>strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Dict[Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy]</a></span>
-    </dt>
-    <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wait</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd>
 
 </dl>
@@ -1252,7 +748,7 @@ Get an existing MultiClusterApp resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..MultiClusterApp.html">MultiClusterApp</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..MultiClusterAppState.html">MultiClusterAppState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.MultiClusterApp.html">MultiClusterApp</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..MultiClusterAppState.html">MultiClusterAppState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1362,7 +858,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
 {{% /md %}}</dd>
@@ -1371,7 +867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Answers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#multiclusterappanswer">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd>
@@ -1380,7 +876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Catalog<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
 {{% /md %}}</dd>
@@ -1389,7 +885,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
 {{% /md %}}</dd>
@@ -1398,7 +894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#multiclusterappmember">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd>
@@ -1407,7 +903,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
 {{% /md %}}</dd>
@@ -1416,7 +912,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Revision<wbr>History<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
 {{% /md %}}</dd>
@@ -1425,7 +921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Revision<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
 {{% /md %}}</dd>
@@ -1434,7 +930,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
 {{% /md %}}</dd>
@@ -1443,7 +939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Targets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterapptarget">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#multiclusterapptarget">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
 {{% /md %}}</dd>
@@ -1452,7 +948,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Template<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
 {{% /md %}}</dd>
@@ -1461,7 +957,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Template<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
 {{% /md %}}</dd>
@@ -1470,7 +966,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Template<wbr>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
 {{% /md %}}</dd>
@@ -1479,7 +975,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Upgrade<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
 {{% /md %}}</dd>
@@ -1488,7 +984,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Wait</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1522,7 +1018,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Catalog<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
 {{% /md %}}</dd>
@@ -1549,7 +1045,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
 {{% /md %}}</dd>
@@ -1558,7 +1054,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Revision<wbr>History<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
 {{% /md %}}</dd>
@@ -1567,7 +1063,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Revision<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
 {{% /md %}}</dd>
@@ -1594,7 +1090,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Template<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
 {{% /md %}}</dd>
@@ -1603,7 +1099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Template<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
 {{% /md %}}</dd>
@@ -1612,7 +1108,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Template<wbr>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
 {{% /md %}}</dd>
@@ -1621,7 +1117,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Upgrade<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">*Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
 {{% /md %}}</dd>
@@ -1630,7 +1126,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Wait</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1646,7 +1142,7 @@ The following state arguments are supported:
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
 {{% /md %}}</dd>
@@ -1655,7 +1151,7 @@ The following state arguments are supported:
             title="Optional">
         <span>answers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">Multi<wbr>Cluster<wbr>App<wbr>Answer[]?</a></span>
+        <span class="property-type"><a href="#multiclusterappanswer">Multi<wbr>Cluster<wbr>App<wbr>Answer[]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd>
@@ -1664,7 +1160,7 @@ The following state arguments are supported:
             title="Optional">
         <span>catalog<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
 {{% /md %}}</dd>
@@ -1673,7 +1169,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
 {{% /md %}}</dd>
@@ -1682,7 +1178,7 @@ The following state arguments are supported:
             title="Optional">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">Multi<wbr>Cluster<wbr>App<wbr>Member[]?</a></span>
+        <span class="property-type"><a href="#multiclusterappmember">Multi<wbr>Cluster<wbr>App<wbr>Member[]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd>
@@ -1691,7 +1187,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
 {{% /md %}}</dd>
@@ -1700,7 +1196,7 @@ The following state arguments are supported:
             title="Optional">
         <span>revision<wbr>History<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
 {{% /md %}}</dd>
@@ -1709,7 +1205,7 @@ The following state arguments are supported:
             title="Optional">
         <span>revision<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
 {{% /md %}}</dd>
@@ -1718,7 +1214,7 @@ The following state arguments are supported:
             title="Optional">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
 {{% /md %}}</dd>
@@ -1727,7 +1223,7 @@ The following state arguments are supported:
             title="Optional">
         <span>targets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterapptarget">Multi<wbr>Cluster<wbr>App<wbr>Target[]?</a></span>
+        <span class="property-type"><a href="#multiclusterapptarget">Multi<wbr>Cluster<wbr>App<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
 {{% /md %}}</dd>
@@ -1736,7 +1232,7 @@ The following state arguments are supported:
             title="Optional">
         <span>template<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
 {{% /md %}}</dd>
@@ -1745,7 +1241,7 @@ The following state arguments are supported:
             title="Optional">
         <span>template<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
 {{% /md %}}</dd>
@@ -1754,7 +1250,7 @@ The following state arguments are supported:
             title="Optional">
         <span>template<wbr>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
 {{% /md %}}</dd>
@@ -1763,7 +1259,7 @@ The following state arguments are supported:
             title="Optional">
         <span>upgrade<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy?</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
 {{% /md %}}</dd>
@@ -1772,7 +1268,7 @@ The following state arguments are supported:
             title="Optional">
         <span>wait</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1952,7 +1448,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster ID for answer (string)
 {{% /md %}}</dd>
@@ -1961,7 +1457,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
 {{% /md %}}</dd>
@@ -1970,7 +1466,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key/values for answer (map)
 {{% /md %}}</dd>
@@ -1986,7 +1482,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster ID for answer (string)
 {{% /md %}}</dd>
@@ -1995,7 +1491,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
 {{% /md %}}</dd>
@@ -2020,7 +1516,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster ID for answer (string)
 {{% /md %}}</dd>
@@ -2029,7 +1525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
 {{% /md %}}</dd>
@@ -2038,7 +1534,7 @@ The following state arguments are supported:
             title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key/values for answer (map)
 {{% /md %}}</dd>
@@ -2103,7 +1599,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["member" | "owner" | "read-only"]` (string)
 {{% /md %}}</dd>
@@ -2112,7 +1608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
 {{% /md %}}</dd>
@@ -2121,7 +1617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
 {{% /md %}}</dd>
@@ -2137,7 +1633,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["member" | "owner" | "read-only"]` (string)
 {{% /md %}}</dd>
@@ -2146,7 +1642,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
 {{% /md %}}</dd>
@@ -2155,7 +1651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
 {{% /md %}}</dd>
@@ -2171,7 +1667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["member" | "owner" | "read-only"]` (string)
 {{% /md %}}</dd>
@@ -2180,7 +1676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
 {{% /md %}}</dd>
@@ -2189,7 +1685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
 {{% /md %}}</dd>
@@ -2250,24 +1746,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>App<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}App ID for target (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Health<wbr>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}App health state for target (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project<wbr>Id</span>
@@ -2279,9 +1757,27 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>App<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}App ID for target (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>State</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}App health state for target (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App state for target (string)
 {{% /md %}}</dd>
@@ -2293,24 +1789,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>App<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}App ID for target (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Health<wbr>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}App health state for target (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project<wbr>Id</span>
@@ -2322,9 +1800,27 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>App<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}App ID for target (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>State</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}App health state for target (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App state for target (string)
 {{% /md %}}</dd>
@@ -2335,24 +1831,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>app<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}App ID for target (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>health<wbr>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}App health state for target (string)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2365,9 +1843,27 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>app<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}App ID for target (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>health<wbr>State</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}App health state for target (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App state for target (string)
 {{% /md %}}</dd>
@@ -2378,6 +1874,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>project_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Project ID for target (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2395,15 +1900,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App health state for target (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>project_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Project ID for target (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2441,7 +1937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rolling<wbr>Update</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args?</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upgrade strategy rolling update (list MaxItems:1)
 {{% /md %}}</dd>
@@ -2457,7 +1953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rolling<wbr>Update</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">*Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Upgrade strategy rolling update (list MaxItems:1)
 {{% /md %}}</dd>
@@ -2473,7 +1969,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rolling<wbr>Update</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update?</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Upgrade strategy rolling update (list MaxItems:1)
 {{% /md %}}</dd>
@@ -2520,7 +2016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Batch<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rolling update batch size. Default `1` (int)
 {{% /md %}}</dd>
@@ -2529,7 +2025,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rolling update interval. Default `1` (int)
 {{% /md %}}</dd>
@@ -2545,7 +2041,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Batch<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rolling update batch size. Default `1` (int)
 {{% /md %}}</dd>
@@ -2554,7 +2050,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rolling update interval. Default `1` (int)
 {{% /md %}}</dd>
@@ -2570,7 +2066,7 @@ The following state arguments are supported:
             title="Optional">
         <span>batch<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Rolling update batch size. Default `1` (int)
 {{% /md %}}</dd>
@@ -2579,7 +2075,7 @@ The following state arguments are supported:
             title="Optional">
         <span>interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Rolling update interval. Default `1` (int)
 {{% /md %}}</dd>

@@ -42,7 +42,7 @@ const foo = rancher2_cluster_foo_custom.defaultProjectId.apply(defaultProjectId 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNamespace<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetNamespaceArgs">GetNamespaceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupNamespaceResult">LookupNamespaceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNamespace<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetNamespaceArgs">GetNamespaceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupNamespaceResult">LookupNamespaceResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -178,7 +178,7 @@ The following output properties are available:
             title="">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Node Pool object (map)
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ The following output properties are available:
             title="">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for Node Pool object (map)
 {{% /md %}}</dd>
@@ -506,7 +506,7 @@ The following output properties are available:
             title="Optional">
         <span>Limits<wbr>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -514,7 +514,7 @@ The following output properties are available:
             title="Optional">
         <span>Limits<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -522,7 +522,7 @@ The following output properties are available:
             title="Optional">
         <span>Requests<wbr>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -530,7 +530,7 @@ The following output properties are available:
             title="Optional">
         <span>Requests<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -545,7 +545,7 @@ The following output properties are available:
             title="Optional">
         <span>Limits<wbr>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -553,7 +553,7 @@ The following output properties are available:
             title="Optional">
         <span>Limits<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -561,7 +561,7 @@ The following output properties are available:
             title="Optional">
         <span>Requests<wbr>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -569,7 +569,7 @@ The following output properties are available:
             title="Optional">
         <span>Requests<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -584,7 +584,7 @@ The following output properties are available:
             title="Optional">
         <span>limits<wbr>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -592,7 +592,7 @@ The following output properties are available:
             title="Optional">
         <span>limits<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -600,7 +600,7 @@ The following output properties are available:
             title="Optional">
         <span>requests<wbr>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -608,7 +608,7 @@ The following output properties are available:
             title="Optional">
         <span>requests<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -752,7 +752,7 @@ The following output properties are available:
             title="Optional">
         <span>Config<wbr>Maps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -760,7 +760,7 @@ The following output properties are available:
             title="Optional">
         <span>Limits<wbr>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -768,7 +768,7 @@ The following output properties are available:
             title="Optional">
         <span>Limits<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -776,7 +776,7 @@ The following output properties are available:
             title="Optional">
         <span>Persistent<wbr>Volume<wbr>Claims</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -784,7 +784,7 @@ The following output properties are available:
             title="Optional">
         <span>Pods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -792,7 +792,7 @@ The following output properties are available:
             title="Optional">
         <span>Replication<wbr>Controllers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -800,7 +800,7 @@ The following output properties are available:
             title="Optional">
         <span>Requests<wbr>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -808,7 +808,7 @@ The following output properties are available:
             title="Optional">
         <span>Requests<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -816,7 +816,7 @@ The following output properties are available:
             title="Optional">
         <span>Requests<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -824,7 +824,7 @@ The following output properties are available:
             title="Optional">
         <span>Secrets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -832,7 +832,7 @@ The following output properties are available:
             title="Optional">
         <span>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -840,7 +840,7 @@ The following output properties are available:
             title="Optional">
         <span>Services<wbr>Load<wbr>Balancers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -848,7 +848,7 @@ The following output properties are available:
             title="Optional">
         <span>Services<wbr>Node<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -863,7 +863,7 @@ The following output properties are available:
             title="Optional">
         <span>Config<wbr>Maps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -871,7 +871,7 @@ The following output properties are available:
             title="Optional">
         <span>Limits<wbr>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -879,7 +879,7 @@ The following output properties are available:
             title="Optional">
         <span>Limits<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -887,7 +887,7 @@ The following output properties are available:
             title="Optional">
         <span>Persistent<wbr>Volume<wbr>Claims</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -895,7 +895,7 @@ The following output properties are available:
             title="Optional">
         <span>Pods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -903,7 +903,7 @@ The following output properties are available:
             title="Optional">
         <span>Replication<wbr>Controllers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -911,7 +911,7 @@ The following output properties are available:
             title="Optional">
         <span>Requests<wbr>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -919,7 +919,7 @@ The following output properties are available:
             title="Optional">
         <span>Requests<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -927,7 +927,7 @@ The following output properties are available:
             title="Optional">
         <span>Requests<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -935,7 +935,7 @@ The following output properties are available:
             title="Optional">
         <span>Secrets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -943,7 +943,7 @@ The following output properties are available:
             title="Optional">
         <span>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -951,7 +951,7 @@ The following output properties are available:
             title="Optional">
         <span>Services<wbr>Load<wbr>Balancers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -959,7 +959,7 @@ The following output properties are available:
             title="Optional">
         <span>Services<wbr>Node<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -974,7 +974,7 @@ The following output properties are available:
             title="Optional">
         <span>config<wbr>Maps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -982,7 +982,7 @@ The following output properties are available:
             title="Optional">
         <span>limits<wbr>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -990,7 +990,7 @@ The following output properties are available:
             title="Optional">
         <span>limits<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -998,7 +998,7 @@ The following output properties are available:
             title="Optional">
         <span>persistent<wbr>Volume<wbr>Claims</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1006,7 +1006,7 @@ The following output properties are available:
             title="Optional">
         <span>pods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1014,7 +1014,7 @@ The following output properties are available:
             title="Optional">
         <span>replication<wbr>Controllers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1022,7 +1022,7 @@ The following output properties are available:
             title="Optional">
         <span>requests<wbr>Cpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1030,7 +1030,7 @@ The following output properties are available:
             title="Optional">
         <span>requests<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1038,7 +1038,7 @@ The following output properties are available:
             title="Optional">
         <span>requests<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1046,7 +1046,7 @@ The following output properties are available:
             title="Optional">
         <span>secrets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1054,7 +1054,7 @@ The following output properties are available:
             title="Optional">
         <span>services</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1062,7 +1062,7 @@ The following output properties are available:
             title="Optional">
         <span>services<wbr>Load<wbr>Balancers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1070,7 +1070,7 @@ The following output properties are available:
             title="Optional">
         <span>services<wbr>Node<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

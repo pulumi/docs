@@ -36,7 +36,7 @@ const foo = new rancher2.ProjectLogging("foo", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ProjectLogging">ProjectLogging</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ProjectLoggingArgs">ProjectLoggingArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ProjectLogging">ProjectLogging</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ProjectLoggingArgs">ProjectLoggingArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -44,11 +44,11 @@ const foo = new rancher2.ProjectLogging("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProjectLogging<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectLoggingArgs">ProjectLoggingArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectLogging">ProjectLogging</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProjectLogging<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectLoggingArgs">ProjectLoggingArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectLogging">ProjectLogging</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ProjectLogging.html">ProjectLogging</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ProjectLoggingArgs.html">ProjectLoggingArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ProjectLogging.html">ProjectLogging</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ProjectLoggingArgs.html">ProjectLoggingArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -140,60 +140,6 @@ const foo = new rancher2.ProjectLogging("foo", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Annotations for Project Logging object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>Target<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Elasticsearch<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Json<wbr>Parsing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Fluentd<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kafka<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Kind</span>
@@ -201,51 +147,6 @@ const foo = new rancher2.ProjectLogging("foo", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Labels for Project Logging object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Project Logging config (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Namespace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace id from Project logging (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Output<wbr>Flush<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Output<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}The output tags for Project Logging (map)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -259,9 +160,108 @@ const foo = new rancher2.ProjectLogging("foo", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Annotations for Project Logging object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Custom<wbr>Target<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Elasticsearch<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Json<wbr>Parsing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Fluentd<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kafka<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Labels for Project Logging object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Project Logging config (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Namespace<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace id from Project logging (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Output<wbr>Flush<wbr>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Output<wbr>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The output tags for Project Logging (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Splunk<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -270,7 +270,7 @@ const foo = new rancher2.ProjectLogging("foo", {
             title="Optional">
         <span>Syslog<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -282,6 +282,24 @@ const foo = new rancher2.ProjectLogging("foo", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Project<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project id to configure logging (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Annotations</span>
@@ -295,7 +313,7 @@ const foo = new rancher2.ProjectLogging("foo", {
             title="Optional">
         <span>Custom<wbr>Target<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">*Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -304,7 +322,7 @@ const foo = new rancher2.ProjectLogging("foo", {
             title="Optional">
         <span>Elasticsearch<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">*Project<wbr>Logging<wbr>Elasticsearch<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -313,7 +331,7 @@ const foo = new rancher2.ProjectLogging("foo", {
             title="Optional">
         <span>Enable<wbr>Json<wbr>Parsing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -322,7 +340,7 @@ const foo = new rancher2.ProjectLogging("foo", {
             title="Optional">
         <span>Fluentd<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">*Project<wbr>Logging<wbr>Fluentd<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -331,18 +349,9 @@ const foo = new rancher2.ProjectLogging("foo", {
             title="Optional">
         <span>Kafka<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">*Project<wbr>Logging<wbr>Kafka<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -358,7 +367,7 @@ const foo = new rancher2.ProjectLogging("foo", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Project Logging config (string)
 {{% /md %}}</dd>
@@ -367,7 +376,7 @@ const foo = new rancher2.ProjectLogging("foo", {
             title="Optional">
         <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace id from Project logging (string)
 {{% /md %}}</dd>
@@ -376,7 +385,7 @@ const foo = new rancher2.ProjectLogging("foo", {
             title="Optional">
         <span>Output<wbr>Flush<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
 {{% /md %}}</dd>
@@ -390,20 +399,11 @@ const foo = new rancher2.ProjectLogging("foo", {
     <dd>{{% md %}}The output tags for Project Logging (map)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project id to configure logging (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Splunk<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">*Project<wbr>Logging<wbr>Splunk<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -412,7 +412,7 @@ const foo = new rancher2.ProjectLogging("foo", {
             title="Optional">
         <span>Syslog<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">*Project<wbr>Logging<wbr>Syslog<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -424,60 +424,6 @@ const foo = new rancher2.ProjectLogging("foo", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Annotations for Project Logging object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>custom<wbr>Target<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>elasticsearch<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enable<wbr>Json<wbr>Parsing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>fluentd<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kafka<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>kind</span>
@@ -485,51 +431,6 @@ const foo = new rancher2.ProjectLogging("foo", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Labels for Project Logging object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Project Logging config (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>namespace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace id from Project logging (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>output<wbr>Flush<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>output<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}The output tags for Project Logging (map)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -543,9 +444,108 @@ const foo = new rancher2.ProjectLogging("foo", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Annotations for Project Logging object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>custom<wbr>Target<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>elasticsearch<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Json<wbr>Parsing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>fluentd<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kafka<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Labels for Project Logging object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Project Logging config (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>namespace<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace id from Project logging (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>output<wbr>Flush<wbr>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>output<wbr>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The output tags for Project Logging (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>splunk<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config?</a></span>
+        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -554,7 +554,7 @@ const foo = new rancher2.ProjectLogging("foo", {
             title="Optional">
         <span>syslog<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config?</a></span>
+        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -565,6 +565,24 @@ const foo = new rancher2.ProjectLogging("foo", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>project_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project id to configure logging (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -620,15 +638,6 @@ const foo = new rancher2.ProjectLogging("foo", {
     <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>labels</span>
@@ -674,15 +683,6 @@ const foo = new rancher2.ProjectLogging("foo", {
     <dd>{{% md %}}The output tags for Project Logging (map)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>project_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project id to configure logging (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>splunk_<wbr>config</span>
@@ -705,584 +705,6 @@ const foo = new rancher2.ProjectLogging("foo", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ProjectLogging Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Annotations for Project Logging object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Target<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elasticsearch<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Json<wbr>Parsing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fluentd<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kafka<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Labels for Project Logging object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Project Logging config (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace id from Project logging (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Output<wbr>Flush<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Output<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}The output tags for Project Logging (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project id to configure logging (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Splunk<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Syslog<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for Project Logging object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Target<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">*Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elasticsearch<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">*Project<wbr>Logging<wbr>Elasticsearch<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Json<wbr>Parsing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fluentd<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">*Project<wbr>Logging<wbr>Fluentd<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kafka<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">*Project<wbr>Logging<wbr>Kafka<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Labels for Project Logging object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Project Logging config (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The namespace id from Project logging (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Output<wbr>Flush<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Output<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}The output tags for Project Logging (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project id to configure logging (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Splunk<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">*Project<wbr>Logging<wbr>Splunk<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Syslog<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">*Project<wbr>Logging<wbr>Syslog<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for Project Logging object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Target<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elasticsearch<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable<wbr>Json<wbr>Parsing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fluentd<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kafka<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Labels for Project Logging object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Project Logging config (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace id from Project logging (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>output<wbr>Flush<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>output<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}The output tags for Project Logging (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project id to configure logging (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>splunk<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>syslog<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Annotations for Project Logging object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>target_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Dict[Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elasticsearch_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Dict[Project<wbr>Logging<wbr>Elasticsearch<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable_<wbr>json_<wbr>parsing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fluentd_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">Dict[Project<wbr>Logging<wbr>Fluentd<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kafka_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">Dict[Project<wbr>Logging<wbr>Kafka<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Labels for Project Logging object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Project Logging config (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The namespace id from Project logging (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>output_<wbr>flush_<wbr>interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>output_<wbr>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}The output tags for Project Logging (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project id to configure logging (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>splunk_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">Dict[Project<wbr>Logging<wbr>Splunk<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>syslog_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">Dict[Project<wbr>Logging<wbr>Syslog<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1310,7 +732,7 @@ Get an existing ProjectLogging resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ProjectLogging.html">ProjectLogging</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ProjectLoggingState.html">ProjectLoggingState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ProjectLogging.html">ProjectLogging</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ProjectLoggingState.html">ProjectLoggingState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1420,7 +842,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for Project Logging object (map)
 {{% /md %}}</dd>
@@ -1429,7 +851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Target<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1438,7 +860,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Elasticsearch<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1447,7 +869,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Json<wbr>Parsing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -1456,7 +878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fluentd<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1465,7 +887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kafka<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1474,7 +896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
 {{% /md %}}</dd>
@@ -1483,7 +905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for Project Logging object (map)
 {{% /md %}}</dd>
@@ -1492,7 +914,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Project Logging config (string)
 {{% /md %}}</dd>
@@ -1501,7 +923,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace id from Project logging (string)
 {{% /md %}}</dd>
@@ -1510,7 +932,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>Flush<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
 {{% /md %}}</dd>
@@ -1519,7 +941,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The output tags for Project Logging (map)
 {{% /md %}}</dd>
@@ -1528,7 +950,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id to configure logging (string)
 {{% /md %}}</dd>
@@ -1537,7 +959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Splunk<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1546,7 +968,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Syslog<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1571,7 +993,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Target<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">*Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1580,7 +1002,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Elasticsearch<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">*Project<wbr>Logging<wbr>Elasticsearch<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1589,7 +1011,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Json<wbr>Parsing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -1598,7 +1020,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fluentd<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">*Project<wbr>Logging<wbr>Fluentd<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1607,7 +1029,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kafka<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">*Project<wbr>Logging<wbr>Kafka<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1616,7 +1038,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
 {{% /md %}}</dd>
@@ -1634,7 +1056,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Project Logging config (string)
 {{% /md %}}</dd>
@@ -1643,7 +1065,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace id from Project logging (string)
 {{% /md %}}</dd>
@@ -1652,7 +1074,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>Flush<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
 {{% /md %}}</dd>
@@ -1670,7 +1092,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id to configure logging (string)
 {{% /md %}}</dd>
@@ -1679,7 +1101,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Splunk<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">*Project<wbr>Logging<wbr>Splunk<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1688,7 +1110,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Syslog<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">*Project<wbr>Logging<wbr>Syslog<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1704,7 +1126,7 @@ The following state arguments are supported:
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for Project Logging object (map)
 {{% /md %}}</dd>
@@ -1713,7 +1135,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Target<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config?</a></span>
+        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1722,7 +1144,7 @@ The following state arguments are supported:
             title="Optional">
         <span>elasticsearch<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config?</a></span>
+        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1731,7 +1153,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Json<wbr>Parsing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -1740,7 +1162,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fluentd<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config?</a></span>
+        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1749,7 +1171,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kafka<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config?</a></span>
+        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1758,7 +1180,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
 {{% /md %}}</dd>
@@ -1767,7 +1189,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for Project Logging object (map)
 {{% /md %}}</dd>
@@ -1776,7 +1198,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Project Logging config (string)
 {{% /md %}}</dd>
@@ -1785,7 +1207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace id from Project logging (string)
 {{% /md %}}</dd>
@@ -1794,7 +1216,7 @@ The following state arguments are supported:
             title="Optional">
         <span>output<wbr>Flush<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
 {{% /md %}}</dd>
@@ -1803,7 +1225,7 @@ The following state arguments are supported:
             title="Optional">
         <span>output<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The output tags for Project Logging (map)
 {{% /md %}}</dd>
@@ -1812,7 +1234,7 @@ The following state arguments are supported:
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id to configure logging (string)
 {{% /md %}}</dd>
@@ -1821,7 +1243,7 @@ The following state arguments are supported:
             title="Optional">
         <span>splunk<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config?</a></span>
+        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -1830,7 +1252,7 @@ The following state arguments are supported:
             title="Optional">
         <span>syslog<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config?</a></span>
+        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
 {{% /md %}}</dd>
@@ -2006,11 +1428,20 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Content</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom target config content (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd>
@@ -2019,7 +1450,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd>
@@ -2028,18 +1459,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Content</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom target config content (string)
+    <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -2049,33 +1471,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL client certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Content</span>
@@ -2085,39 +1480,39 @@ The following state arguments are supported:
     <dd>{{% md %}}Custom target config content (string)
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>certificate</span>
+        <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Cert</span>
+        <span>Client<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Key</span>
+        <span>Client<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -2128,12 +1523,48 @@ The following state arguments are supported:
     <dd>{{% md %}}Custom target config content (string)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key for the syslog service (string)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>content</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Custom target config content (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2160,15 +1591,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>content</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Custom target config content (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -2193,69 +1615,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auth<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User password for the elascticsearch service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auth<wbr>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Username for the elascticsearch service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Key<wbr>Pass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client key password for the splunk service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Date<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Date format for the elascticsearch logs. Default: `YYYY-MM-DD` (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Endpoint</span>
@@ -2267,9 +1626,72 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Auth<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User password for the elascticsearch service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auth<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username for the elascticsearch service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Key<wbr>Pass</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key password for the splunk service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Date<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date format for the elascticsearch logs. Default: `YYYY-MM-DD` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Index<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Index prefix for the elascticsearch logs. Default: `local` (string)
 {{% /md %}}</dd>
@@ -2278,7 +1700,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssl<wbr>Verify</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd>
@@ -2287,7 +1709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssl<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL version for the elascticsearch service (string)
 {{% /md %}}</dd>
@@ -2299,69 +1721,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auth<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User password for the elascticsearch service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auth<wbr>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Username for the elascticsearch service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL client certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Key<wbr>Pass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL client key password for the splunk service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Date<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Date format for the elascticsearch logs. Default: `YYYY-MM-DD` (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Endpoint</span>
@@ -2373,9 +1732,72 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Auth<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User password for the elascticsearch service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auth<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username for the elascticsearch service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Key<wbr>Pass</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key password for the splunk service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Date<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date format for the elascticsearch logs. Default: `YYYY-MM-DD` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Index<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Index prefix for the elascticsearch logs. Default: `local` (string)
 {{% /md %}}</dd>
@@ -2384,7 +1806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssl<wbr>Verify</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd>
@@ -2393,7 +1815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssl<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL version for the elascticsearch service (string)
 {{% /md %}}</dd>
@@ -2404,69 +1826,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auth<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User password for the elascticsearch service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auth<wbr>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Username for the elascticsearch service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>client<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>client<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>client<wbr>Key<wbr>Pass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client key password for the splunk service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>date<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Date format for the elascticsearch logs. Default: `YYYY-MM-DD` (string)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2479,9 +1838,72 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>auth<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User password for the elascticsearch service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auth<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username for the elascticsearch service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Key<wbr>Pass</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key password for the splunk service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>date<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date format for the elascticsearch logs. Default: `YYYY-MM-DD` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>index<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Index prefix for the elascticsearch logs. Default: `local` (string)
 {{% /md %}}</dd>
@@ -2490,7 +1912,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssl<wbr>Verify</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd>
@@ -2499,7 +1921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssl<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL version for the elascticsearch service (string)
 {{% /md %}}</dd>
@@ -2510,6 +1932,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Endpoint of the syslog service (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2572,15 +2003,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date format for the elascticsearch logs. Default: `YYYY-MM-DD` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Endpoint of the syslog service (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2632,33 +2054,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Compress</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Compress data for the fluentd service (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Tls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable TLS for the fluentd service (bool)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Fluent<wbr>Servers</span>
@@ -2668,18 +2063,11 @@ The following state arguments are supported:
     <dd>{{% md %}}Servers for the fluentd service (list)
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd>
@@ -2688,7 +2076,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compress</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Compress data for the fluentd service (bool)
 {{% /md %}}</dd>
@@ -2697,10 +2085,17 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Tls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS for the fluentd service (bool)
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -2711,39 +2106,39 @@ The following state arguments are supported:
     <dd>{{% md %}}Servers for the fluentd service (list)
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>certificate</span>
+        <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>compress</span>
+        <span>Compress</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Compress data for the fluentd service (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Tls</span>
+        <span>Enable<wbr>Tls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS for the fluentd service (bool)
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -2754,12 +2149,48 @@ The following state arguments are supported:
     <dd>{{% md %}}Servers for the fluentd service (list)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>compress</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Compress data for the fluentd service (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Tls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable TLS for the fluentd service (bool)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>fluent<wbr>Servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectloggingfluentdconfigfluentserver">List[Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server]</a></span>
+    </dt>
+    <dd>{{% md %}}Servers for the fluentd service (list)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2786,15 +2217,6 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS for the fluentd service (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>fluent<wbr>Servers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfigfluentserver">List[Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server]</a></span>
-    </dt>
-    <dd>{{% md %}}Servers for the fluentd service (list)
 {{% /md %}}</dd>
 
 </dl>
@@ -2832,7 +2254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname of the fluentd service (string)
 {{% /md %}}</dd>
@@ -2841,7 +2263,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password of the fluentd service (string)
 {{% /md %}}</dd>
@@ -2850,7 +2272,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Shared<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shared key of the fluentd service (string)
 {{% /md %}}</dd>
@@ -2859,7 +2281,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Standby</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Standby server of the fluentd service (bool)
 {{% /md %}}</dd>
@@ -2868,7 +2290,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of the fluentd service (string)
 {{% /md %}}</dd>
@@ -2877,7 +2299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight of the fluentd server (int)
 {{% /md %}}</dd>
@@ -2902,7 +2324,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname of the fluentd service (string)
 {{% /md %}}</dd>
@@ -2911,7 +2333,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password of the fluentd service (string)
 {{% /md %}}</dd>
@@ -2920,7 +2342,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Shared<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shared key of the fluentd service (string)
 {{% /md %}}</dd>
@@ -2929,7 +2351,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Standby</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Standby server of the fluentd service (bool)
 {{% /md %}}</dd>
@@ -2938,7 +2360,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of the fluentd service (string)
 {{% /md %}}</dd>
@@ -2947,7 +2369,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight of the fluentd server (int)
 {{% /md %}}</dd>
@@ -2972,7 +2394,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname of the fluentd service (string)
 {{% /md %}}</dd>
@@ -2981,7 +2403,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password of the fluentd service (string)
 {{% /md %}}</dd>
@@ -2990,7 +2412,7 @@ The following state arguments are supported:
             title="Optional">
         <span>shared<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shared key of the fluentd service (string)
 {{% /md %}}</dd>
@@ -2999,7 +2421,7 @@ The following state arguments are supported:
             title="Optional">
         <span>standby</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Standby server of the fluentd service (bool)
 {{% /md %}}</dd>
@@ -3008,7 +2430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of the fluentd service (string)
 {{% /md %}}</dd>
@@ -3017,7 +2439,7 @@ The following state arguments are supported:
             title="Optional">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Weight of the fluentd server (int)
 {{% /md %}}</dd>
@@ -3114,42 +2536,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Broker<wbr>Endpoints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Kafka endpoints for kafka service. Conflicts with `zookeeper_endpoint` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Topic</span>
@@ -3161,9 +2547,45 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Broker<wbr>Endpoints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Kafka endpoints for kafka service. Conflicts with `zookeeper_endpoint` (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Zookeeper<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zookeeper endpoint for kafka service. Conflicts with `broker_endpoints` (string)
 {{% /md %}}</dd>
@@ -3174,6 +2596,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Topic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Topic to publish on the kafka service (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3188,7 +2619,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd>
@@ -3197,7 +2628,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd>
@@ -3206,25 +2637,16 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Topic</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Topic to publish on the kafka service (string)
+    <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Zookeeper<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zookeeper endpoint for kafka service. Conflicts with `broker_endpoints` (string)
 {{% /md %}}</dd>
@@ -3235,42 +2657,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>broker<wbr>Endpoints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Kafka endpoints for kafka service. Conflicts with `zookeeper_endpoint` (list)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>client<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>client<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3283,9 +2669,45 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>broker<wbr>Endpoints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Kafka endpoints for kafka service. Conflicts with `zookeeper_endpoint` (list)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>zookeeper<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zookeeper endpoint for kafka service. Conflicts with `broker_endpoints` (string)
 {{% /md %}}</dd>
@@ -3296,6 +2718,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>topic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Topic to publish on the kafka service (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3333,15 +2764,6 @@ The following state arguments are supported:
     <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>topic</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Topic to publish on the kafka service (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>zookeeper<wbr>Endpoint</span>
@@ -3373,42 +2795,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Key<wbr>Pass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client key password for the splunk service (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Endpoint</span>
@@ -3418,11 +2804,56 @@ The following state arguments are supported:
     <dd>{{% md %}}Endpoint of the syslog service (string)
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Token for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Key<wbr>Pass</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key password for the splunk service (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Index prefix for the splunk logs (string)
 {{% /md %}}</dd>
@@ -3431,7 +2862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date format for the splunk logs (string)
 {{% /md %}}</dd>
@@ -3440,18 +2871,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssl<wbr>Verify</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}SSL verify for the syslog service (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Token for the syslog service (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -3461,42 +2883,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL client certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Key<wbr>Pass</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL client key password for the splunk service (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Endpoint</span>
@@ -3504,33 +2890,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint of the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Index</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Index prefix for the splunk logs (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Source</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Date format for the splunk logs (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ssl<wbr>Verify</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3542,48 +2901,75 @@ The following state arguments are supported:
     <dd>{{% md %}}Token for the syslog service (string)
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>certificate</span>
+        <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Cert</span>
+        <span>Client<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Key</span>
+        <span>Client<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Key<wbr>Pass</span>
+        <span>Client<wbr>Key<wbr>Pass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL client key password for the splunk service (string)
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Index</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Index prefix for the splunk logs (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date format for the splunk logs (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ssl<wbr>Verify</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}SSL verify for the syslog service (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -3592,33 +2978,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint of the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>index</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Index prefix for the splunk logs (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>source</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Date format for the splunk logs (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssl<wbr>Verify</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3630,12 +2989,93 @@ The following state arguments are supported:
     <dd>{{% md %}}Token for the syslog service (string)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Key<wbr>Pass</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key password for the splunk service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>index</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Index prefix for the splunk logs (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date format for the splunk logs (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ssl<wbr>Verify</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}SSL verify for the syslog service (bool)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Endpoint of the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Token for the syslog service (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3671,15 +3111,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSL client key password for the splunk service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Endpoint of the syslog service (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3709,15 +3140,6 @@ The following state arguments are supported:
     <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Token for the syslog service (string)
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -3740,33 +3162,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Endpoint</span>
@@ -3778,9 +3173,36 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Program</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Program for the syslog service (string)
 {{% /md %}}</dd>
@@ -3789,7 +3211,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol for the syslog service. `tcp` and `udp` are supported. Default: `udp` (string)
 {{% /md %}}</dd>
@@ -3798,7 +3220,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date format for the syslog logs. `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info` and `debug` are supported. Default: `notice` (string)
 {{% /md %}}</dd>
@@ -3807,7 +3229,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssl<wbr>Verify</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd>
@@ -3816,7 +3238,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token for the syslog service (string)
 {{% /md %}}</dd>
@@ -3828,33 +3250,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL client certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Endpoint</span>
@@ -3866,9 +3261,36 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Program</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Program for the syslog service (string)
 {{% /md %}}</dd>
@@ -3877,7 +3299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol for the syslog service. `tcp` and `udp` are supported. Default: `udp` (string)
 {{% /md %}}</dd>
@@ -3886,7 +3308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date format for the syslog logs. `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info` and `debug` are supported. Default: `notice` (string)
 {{% /md %}}</dd>
@@ -3895,7 +3317,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssl<wbr>Verify</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd>
@@ -3904,7 +3326,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token for the syslog service (string)
 {{% /md %}}</dd>
@@ -3915,33 +3337,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>client<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client certificate for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>client<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3954,9 +3349,36 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client certificate for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSL client key for the syslog service (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>program</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Program for the syslog service (string)
 {{% /md %}}</dd>
@@ -3965,7 +3387,7 @@ The following state arguments are supported:
             title="Optional">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol for the syslog service. `tcp` and `udp` are supported. Default: `udp` (string)
 {{% /md %}}</dd>
@@ -3974,7 +3396,7 @@ The following state arguments are supported:
             title="Optional">
         <span>severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date format for the syslog logs. `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info` and `debug` are supported. Default: `notice` (string)
 {{% /md %}}</dd>
@@ -3983,7 +3405,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssl<wbr>Verify</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd>
@@ -3992,7 +3414,7 @@ The following state arguments are supported:
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token for the syslog service (string)
 {{% /md %}}</dd>
@@ -4003,6 +3425,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Endpoint of the syslog service (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4029,15 +3460,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Endpoint of the syslog service (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"

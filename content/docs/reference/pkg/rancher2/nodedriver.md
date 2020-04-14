@@ -36,7 +36,7 @@ const foo = new rancher2.NodeDriver("foo", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NodeDriver">NodeDriver</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NodeDriverArgs">NodeDriverArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NodeDriver">NodeDriver</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NodeDriverArgs">NodeDriverArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -44,11 +44,11 @@ const foo = new rancher2.NodeDriver("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNodeDriver<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#NodeDriverArgs">NodeDriverArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#NodeDriver">NodeDriver</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNodeDriver<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#NodeDriverArgs">NodeDriverArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#NodeDriver">NodeDriver</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..NodeDriver.html">NodeDriver</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.NodeDriverArgs.html">NodeDriverArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.NodeDriver.html">NodeDriver</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.NodeDriverArgs.html">NodeDriverArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -149,15 +149,6 @@ const foo = new rancher2.NodeDriver("foo", {
     <dd>{{% md %}}Specify if the node driver state (bool)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Builtin</span>
@@ -165,60 +156,6 @@ const foo = new rancher2.NodeDriver("foo", {
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify wheter the node driver is an internal node driver or not (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Checksum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Verify that the downloaded driver matches the expected checksum (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the node driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>External<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}External ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the node driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ui<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -232,9 +169,72 @@ const foo = new rancher2.NodeDriver("foo", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Checksum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Verify that the downloaded driver matches the expected checksum (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the node driver (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>External<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Labels of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the node driver (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ui<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Whitelist<wbr>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Domains to whitelist for the ui (list)
 {{% /md %}}</dd>
@@ -255,15 +255,6 @@ const foo = new rancher2.NodeDriver("foo", {
     <dd>{{% md %}}Specify if the node driver state (bool)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Builtin</span>
@@ -273,11 +264,29 @@ const foo = new rancher2.NodeDriver("foo", {
     <dd>{{% md %}}Specify wheter the node driver is an internal node driver or not (bool)
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL to download the machine driver binary for 64-bit Linux (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the resource (map)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Checksum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verify that the downloaded driver matches the expected checksum (string)
 {{% /md %}}</dd>
@@ -286,7 +295,7 @@ const foo = new rancher2.NodeDriver("foo", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the node driver (string)
 {{% /md %}}</dd>
@@ -295,7 +304,7 @@ const foo = new rancher2.NodeDriver("foo", {
             title="Optional">
         <span>External<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External ID (string)
 {{% /md %}}</dd>
@@ -313,7 +322,7 @@ const foo = new rancher2.NodeDriver("foo", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the node driver (string)
 {{% /md %}}</dd>
@@ -322,18 +331,9 @@ const foo = new rancher2.NodeDriver("foo", {
             title="Optional">
         <span>Ui<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Url</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to download the machine driver binary for 64-bit Linux (string)
+    <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -361,15 +361,6 @@ const foo = new rancher2.NodeDriver("foo", {
     <dd>{{% md %}}Specify if the node driver state (bool)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>builtin</span>
@@ -377,60 +368,6 @@ const foo = new rancher2.NodeDriver("foo", {
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify wheter the node driver is an internal node driver or not (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>checksum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Verify that the downloaded driver matches the expected checksum (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the node driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>external<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}External ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the node driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ui<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -444,9 +381,72 @@ const foo = new rancher2.NodeDriver("foo", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>checksum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Verify that the downloaded driver matches the expected checksum (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the node driver (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>external<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Labels of the resource (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the node driver (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ui<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>whitelist<wbr>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Domains to whitelist for the ui (list)
 {{% /md %}}</dd>
@@ -467,15 +467,6 @@ const foo = new rancher2.NodeDriver("foo", {
     <dd>{{% md %}}Specify if the node driver state (bool)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>builtin</span>
@@ -483,6 +474,24 @@ const foo = new rancher2.NodeDriver("foo", {
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify wheter the node driver is an internal node driver or not (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL to download the machine driver binary for 64-bit Linux (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the resource (map)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -539,15 +548,6 @@ const foo = new rancher2.NodeDriver("foo", {
     <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URL to download the machine driver binary for 64-bit Linux (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>whitelist_<wbr>domains</span>
@@ -561,440 +561,6 @@ const foo = new rancher2.NodeDriver("foo", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## NodeDriver Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specify if the node driver state (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Builtin</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specify wheter the node driver is an internal node driver or not (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Checksum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Verify that the downloaded driver matches the expected checksum (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the node driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>External<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}External ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the node driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ui<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL to download the machine driver binary for 64-bit Linux (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Whitelist<wbr>Domains</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Domains to whitelist for the ui (list)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specify if the node driver state (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Builtin</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specify wheter the node driver is an internal node driver or not (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Checksum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Verify that the downloaded driver matches the expected checksum (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of the node driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>External<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}External ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the node driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ui<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL to download the machine driver binary for 64-bit Linux (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Whitelist<wbr>Domains</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Domains to whitelist for the ui (list)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Specify if the node driver state (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>builtin</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Specify wheter the node driver is an internal node driver or not (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>checksum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Verify that the downloaded driver matches the expected checksum (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the node driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>external<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}External ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the node driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ui<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL to download the machine driver binary for 64-bit Linux (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>whitelist<wbr>Domains</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Domains to whitelist for the ui (list)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specify if the node driver state (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Annotations of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>builtin</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specify wheter the node driver is an internal node driver or not (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>checksum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Verify that the downloaded driver matches the expected checksum (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the node driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>external_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}External ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Labels of the resource (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the node driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ui_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URL to download the machine driver binary for 64-bit Linux (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>whitelist_<wbr>domains</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Domains to whitelist for the ui (list)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1022,7 +588,7 @@ Get an existing NodeDriver resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..NodeDriver.html">NodeDriver</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..NodeDriverState.html">NodeDriverState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.NodeDriver.html">NodeDriver</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..NodeDriverState.html">NodeDriverState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1132,7 +698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the node driver state (bool)
 {{% /md %}}</dd>
@@ -1141,7 +707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
 {{% /md %}}</dd>
@@ -1150,7 +716,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Builtin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify wheter the node driver is an internal node driver or not (bool)
 {{% /md %}}</dd>
@@ -1159,7 +725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Checksum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verify that the downloaded driver matches the expected checksum (string)
 {{% /md %}}</dd>
@@ -1168,7 +734,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the node driver (string)
 {{% /md %}}</dd>
@@ -1177,7 +743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External ID (string)
 {{% /md %}}</dd>
@@ -1186,7 +752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
@@ -1195,7 +761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the node driver (string)
 {{% /md %}}</dd>
@@ -1204,7 +770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ui<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
 {{% /md %}}</dd>
@@ -1213,7 +779,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to download the machine driver binary for 64-bit Linux (string)
 {{% /md %}}</dd>
@@ -1222,7 +788,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Whitelist<wbr>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Domains to whitelist for the ui (list)
 {{% /md %}}</dd>
@@ -1238,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the node driver state (bool)
 {{% /md %}}</dd>
@@ -1256,7 +822,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Builtin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify wheter the node driver is an internal node driver or not (bool)
 {{% /md %}}</dd>
@@ -1265,7 +831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Checksum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verify that the downloaded driver matches the expected checksum (string)
 {{% /md %}}</dd>
@@ -1274,7 +840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the node driver (string)
 {{% /md %}}</dd>
@@ -1283,7 +849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External ID (string)
 {{% /md %}}</dd>
@@ -1301,7 +867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the node driver (string)
 {{% /md %}}</dd>
@@ -1310,7 +876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ui<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
 {{% /md %}}</dd>
@@ -1319,7 +885,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to download the machine driver binary for 64-bit Linux (string)
 {{% /md %}}</dd>
@@ -1344,7 +910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify if the node driver state (bool)
 {{% /md %}}</dd>
@@ -1353,7 +919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations of the resource (map)
 {{% /md %}}</dd>
@@ -1362,7 +928,7 @@ The following state arguments are supported:
             title="Optional">
         <span>builtin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify wheter the node driver is an internal node driver or not (bool)
 {{% /md %}}</dd>
@@ -1371,7 +937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>checksum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verify that the downloaded driver matches the expected checksum (string)
 {{% /md %}}</dd>
@@ -1380,7 +946,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the node driver (string)
 {{% /md %}}</dd>
@@ -1389,7 +955,7 @@ The following state arguments are supported:
             title="Optional">
         <span>external<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External ID (string)
 {{% /md %}}</dd>
@@ -1398,7 +964,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels of the resource (map)
 {{% /md %}}</dd>
@@ -1407,7 +973,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the node driver (string)
 {{% /md %}}</dd>
@@ -1416,7 +982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ui<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to load for customized Add Nodes screen for this driver (string)
 {{% /md %}}</dd>
@@ -1425,7 +991,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to download the machine driver binary for 64-bit Linux (string)
 {{% /md %}}</dd>
@@ -1434,7 +1000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>whitelist<wbr>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Domains to whitelist for the ui (list)
 {{% /md %}}</dd>

@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#RoleTempalte">RoleTempalte</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#RoleTempalteArgs">RoleTempalteArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#RoleTempalte">RoleTempalte</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#RoleTempalteArgs">RoleTempalteArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRoleTempalte<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#RoleTempalteArgs">RoleTempalteArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#RoleTempalte">RoleTempalte</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRoleTempalte<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#RoleTempalteArgs">RoleTempalteArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#RoleTempalte">RoleTempalte</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..RoleTempalte.html">RoleTempalte</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.RoleTempalteArgs.html">RoleTempalteArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.RoleTempalte.html">RoleTempalte</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.RoleTempalteArgs.html">RoleTempalteArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -122,7 +122,7 @@ block_external_search_index: true
             title="Optional">
         <span>Administrative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -131,7 +131,7 @@ block_external_search_index: true
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for role template object (map)
 {{% /md %}}</dd>
@@ -140,7 +140,7 @@ block_external_search_index: true
             title="Optional">
         <span>Context</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ block_external_search_index: true
             title="Optional">
         <span>Default<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
 {{% /md %}}</dd>
@@ -167,7 +167,7 @@ block_external_search_index: true
             title="Optional">
         <span>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -176,7 +176,7 @@ block_external_search_index: true
             title="Optional">
         <span>Hidden</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ block_external_search_index: true
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for role template object (map)
 {{% /md %}}</dd>
@@ -194,7 +194,7 @@ block_external_search_index: true
             title="Optional">
         <span>Locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -203,7 +203,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
 {{% /md %}}</dd>
@@ -212,7 +212,7 @@ block_external_search_index: true
             title="Optional">
         <span>Role<wbr>Template<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Inherit role template IDs (list)
 {{% /md %}}</dd>
@@ -221,7 +221,7 @@ block_external_search_index: true
             title="Optional">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roletempalterule">List&lt;Role<wbr>Tempalte<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#roletempalterule">List&lt;Role<wbr>Tempalte<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Role template policy rules (list)
 {{% /md %}}</dd>
@@ -237,7 +237,7 @@ block_external_search_index: true
             title="Optional">
         <span>Administrative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -255,7 +255,7 @@ block_external_search_index: true
             title="Optional">
         <span>Context</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
 {{% /md %}}</dd>
@@ -264,7 +264,7 @@ block_external_search_index: true
             title="Optional">
         <span>Default<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
 {{% /md %}}</dd>
@@ -273,7 +273,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
 {{% /md %}}</dd>
@@ -282,7 +282,7 @@ block_external_search_index: true
             title="Optional">
         <span>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -291,7 +291,7 @@ block_external_search_index: true
             title="Optional">
         <span>Hidden</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ block_external_search_index: true
             title="Optional">
         <span>Locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -318,7 +318,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
 {{% /md %}}</dd>
@@ -352,7 +352,7 @@ block_external_search_index: true
             title="Optional">
         <span>administrative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -361,7 +361,7 @@ block_external_search_index: true
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for role template object (map)
 {{% /md %}}</dd>
@@ -370,7 +370,7 @@ block_external_search_index: true
             title="Optional">
         <span>context</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
 {{% /md %}}</dd>
@@ -379,7 +379,7 @@ block_external_search_index: true
             title="Optional">
         <span>default<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ block_external_search_index: true
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
 {{% /md %}}</dd>
@@ -397,7 +397,7 @@ block_external_search_index: true
             title="Optional">
         <span>external</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -406,7 +406,7 @@ block_external_search_index: true
             title="Optional">
         <span>hidden</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -415,7 +415,7 @@ block_external_search_index: true
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for role template object (map)
 {{% /md %}}</dd>
@@ -424,7 +424,7 @@ block_external_search_index: true
             title="Optional">
         <span>locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -433,7 +433,7 @@ block_external_search_index: true
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
 {{% /md %}}</dd>
@@ -442,7 +442,7 @@ block_external_search_index: true
             title="Optional">
         <span>role<wbr>Template<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Inherit role template IDs (list)
 {{% /md %}}</dd>
@@ -451,7 +451,7 @@ block_external_search_index: true
             title="Optional">
         <span>rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roletempalterule">Role<wbr>Tempalte<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#roletempalterule">Role<wbr>Tempalte<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Role template policy rules (list)
 {{% /md %}}</dd>
@@ -592,119 +592,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Administrative</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Administrative role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Annotations for role template object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Builtin</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Context</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role template description (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>External</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}External role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hidden</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Hidden role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Labels for role template object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Locked</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Locked role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role template name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Template<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}Inherit role template IDs (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roletempalterule">List&lt;Role<wbr>Tempalte<wbr>Rule&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Role template policy rules (list)
 {{% /md %}}</dd>
 
 </dl>
@@ -716,119 +608,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Administrative</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Administrative role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for role template object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Builtin</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Context</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role template description (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>External</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}External role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hidden</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Hidden role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Labels for role template object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Locked</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Locked role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role template name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Template<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Inherit role template IDs (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roletempalterule">[]Role<wbr>Tempalte<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}Role template policy rules (list)
 {{% /md %}}</dd>
 
 </dl>
@@ -840,119 +624,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>administrative</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Administrative role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for role template object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>builtin</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>context</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role template description (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>external</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}External role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hidden</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Hidden role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Labels for role template object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>locked</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Locked role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role template name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role<wbr>Template<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Inherit role template IDs (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roletempalterule">Role<wbr>Tempalte<wbr>Rule[]</a></span>
-    </dt>
-    <dd>{{% md %}}Role template policy rules (list)
 {{% /md %}}</dd>
 
 </dl>
@@ -964,119 +640,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>administrative</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Administrative role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Annotations for role template object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>builtin</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>context</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default_<wbr>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Role template description (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>external</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}External role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hidden</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Hidden role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Labels for role template object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>locked</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Locked role template. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Role template name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role_<wbr>template_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Inherit role template IDs (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roletempalterule">List[Role<wbr>Tempalte<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}Role template policy rules (list)
 {{% /md %}}</dd>
 
 </dl>
@@ -1108,7 +676,7 @@ Get an existing RoleTempalte resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..RoleTempalte.html">RoleTempalte</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..RoleTempalteState.html">RoleTempalteState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.RoleTempalte.html">RoleTempalte</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..RoleTempalteState.html">RoleTempalteState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1218,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Administrative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1227,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for role template object (map)
 {{% /md %}}</dd>
@@ -1236,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Builtin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
 {{% /md %}}</dd>
@@ -1245,7 +813,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Context</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
 {{% /md %}}</dd>
@@ -1254,7 +822,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1263,7 +831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
 {{% /md %}}</dd>
@@ -1272,7 +840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1281,7 +849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hidden</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1290,7 +858,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for role template object (map)
 {{% /md %}}</dd>
@@ -1299,7 +867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1308,7 +876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
 {{% /md %}}</dd>
@@ -1317,7 +885,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role<wbr>Template<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Inherit role template IDs (list)
 {{% /md %}}</dd>
@@ -1326,7 +894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roletempalterule">List&lt;Role<wbr>Tempalte<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#roletempalterule">List&lt;Role<wbr>Tempalte<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Role template policy rules (list)
 {{% /md %}}</dd>
@@ -1342,7 +910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Administrative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1360,7 +928,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Builtin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
 {{% /md %}}</dd>
@@ -1369,7 +937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Context</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
 {{% /md %}}</dd>
@@ -1378,7 +946,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1387,7 +955,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
 {{% /md %}}</dd>
@@ -1396,7 +964,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1405,7 +973,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hidden</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1423,7 +991,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1432,7 +1000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
 {{% /md %}}</dd>
@@ -1466,7 +1034,7 @@ The following state arguments are supported:
             title="Optional">
         <span>administrative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1475,7 +1043,7 @@ The following state arguments are supported:
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for role template object (map)
 {{% /md %}}</dd>
@@ -1484,7 +1052,7 @@ The following state arguments are supported:
             title="Optional">
         <span>builtin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
 {{% /md %}}</dd>
@@ -1493,7 +1061,7 @@ The following state arguments are supported:
             title="Optional">
         <span>context</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
 {{% /md %}}</dd>
@@ -1502,7 +1070,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1511,7 +1079,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
 {{% /md %}}</dd>
@@ -1520,7 +1088,7 @@ The following state arguments are supported:
             title="Optional">
         <span>external</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1529,7 +1097,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hidden</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1538,7 +1106,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for role template object (map)
 {{% /md %}}</dd>
@@ -1547,7 +1115,7 @@ The following state arguments are supported:
             title="Optional">
         <span>locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
 {{% /md %}}</dd>
@@ -1556,7 +1124,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
 {{% /md %}}</dd>
@@ -1565,7 +1133,7 @@ The following state arguments are supported:
             title="Optional">
         <span>role<wbr>Template<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Inherit role template IDs (list)
 {{% /md %}}</dd>
@@ -1574,7 +1142,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roletempalterule">Role<wbr>Tempalte<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#roletempalterule">Role<wbr>Tempalte<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Role template policy rules (list)
 {{% /md %}}</dd>
@@ -1736,7 +1304,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Policy rule api groups (list)
 {{% /md %}}</dd>
@@ -1745,7 +1313,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Non<wbr>Resource<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Policy rule non resource urls (list)
 {{% /md %}}</dd>
@@ -1754,7 +1322,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Policy rule resource names (list)
 {{% /md %}}</dd>
@@ -1763,7 +1331,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Policy rule resources (list)
 {{% /md %}}</dd>
@@ -1772,7 +1340,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Verbs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Policy rule verbs. `create`, `delete`, `get`, `list`, `patch`, `update`, `watch` and `*` values are supported (list)
 {{% /md %}}</dd>
@@ -1840,7 +1408,7 @@ The following state arguments are supported:
             title="Optional">
         <span>api<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Policy rule api groups (list)
 {{% /md %}}</dd>
@@ -1849,7 +1417,7 @@ The following state arguments are supported:
             title="Optional">
         <span>non<wbr>Resource<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Policy rule non resource urls (list)
 {{% /md %}}</dd>
@@ -1858,7 +1426,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Policy rule resource names (list)
 {{% /md %}}</dd>
@@ -1867,7 +1435,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Policy rule resources (list)
 {{% /md %}}</dd>
@@ -1876,7 +1444,7 @@ The following state arguments are supported:
             title="Optional">
         <span>verbs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Policy rule verbs. `create`, `delete`, `get`, `list`, `patch`, `update`, `watch` and `*` values are supported (list)
 {{% /md %}}</dd>
