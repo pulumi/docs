@@ -94,7 +94,7 @@ taking. With Pulumi's
 [Crosswalk]({{< relref "/docs/guides/crosswalk/aws" >}}) APIs it's simple
 to get at this information. Inside all the main "Crosswalk for AWS"
 modules are exposed
-[Metrics]({{< relref "/docs/guides/crosswalk/aws/cloudwatch/#subscribing-to-cloudwatch-metrics" >}})
+[Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#Metric" >}})
 for almost anything you might ever need. In this case, we want to know
 how long those Functions are taking so we can get that information as
 follows:

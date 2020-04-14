@@ -24,7 +24,7 @@ We'll review referencing existing resources, and then dive deeper into how you c
 
 For referencing existing resources, Pulumi offers several tools.
 
-* The `.get` methods available on every resource let you [get all the details for a resource]({{< relref "/docs/reference/pkg/aws/ec2/vpc/#look-up-an-existing-vpc-resource" >}}) from the cloud provider based just on its `id`.
+* The `.get` methods available on every resource let you [get all the details for a resource]({{< relref "/docs/reference/pkg/aws/ec2/vpc#look-up-an-existing-vpc-resource" >}}) from the cloud provider based just on its `id`.
 * The `StackReference` resource lets you reference outputs of another stack for use as inputs to a stack, which is very useful for [organizing projects and stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}).
 * [`terraform.state.RemoteStateReference()`]({{< relref "/blog/using-terraform-remote-state-with-pulumi" >}}), [`aws.cloudformation.getStack()`]({{< relref "/docs/reference/pkg/aws/cloudformation/getstack" >}}) and [`azure.core.TemplateDeployment.get()`]({{< relref "/docs/reference/pkg/azure/core/templatedeployment/#look-up-an-existing-templatedeployment-resource" >}}) let you reference outputs from existing Terraform, CloudFormation and ARM deployments respectively.
 
