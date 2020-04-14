@@ -46,7 +46,7 @@ if err != nil {
 
 We can deploy this with `pulumi up`.
 
-```bash
+```
 $ pulumi up
 Previewing update (nginx):
      Type                    Name                 Plan
@@ -90,7 +90,7 @@ if err != nil {
 
 The Pulumi preview shows that the pod is updated in place with the new label.
 
-```bash
+```
 $ pulumi up
 Previewing update (nginx):
      Type                    Name                 Plan       Info
