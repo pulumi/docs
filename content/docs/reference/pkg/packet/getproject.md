@@ -30,7 +30,7 @@ Use this datasource to retrieve attributes of the Project API resource.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#GetProjectArgs">GetProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#LookupProjectResult">LookupProjectResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#GetProjectArgs">GetProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#LookupProjectResult">LookupProjectResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -53,7 +53,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which is used to look up the project
 {{% /md %}}</dd>
@@ -62,7 +62,7 @@ The following arguments are supported:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID by which to look up the project
 {{% /md %}}</dd>
@@ -78,7 +78,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which is used to look up the project
 {{% /md %}}</dd>
@@ -87,7 +87,7 @@ The following arguments are supported:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID by which to look up the project
 {{% /md %}}</dd>
@@ -103,7 +103,7 @@ The following arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which is used to look up the project
 {{% /md %}}</dd>
@@ -112,7 +112,7 @@ The following arguments are supported:
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID by which to look up the project
 {{% /md %}}</dd>
@@ -245,7 +245,7 @@ The following output properties are available:
             title="">
         <span>User<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of UUIDs of user accounts which beling to this project
 {{% /md %}}</dd>
@@ -589,15 +589,6 @@ The following output properties are available:
     <dd>{{% md %}}The maximum number of route filters allowed per server
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Md5</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password for BGP session in plaintext (not a checksum)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Status</span>
@@ -605,6 +596,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}status of BGP configuration in the project
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Md5</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password for BGP session in plaintext (not a checksum)
 {{% /md %}}</dd>
 
 </dl>
@@ -641,15 +641,6 @@ The following output properties are available:
     <dd>{{% md %}}The maximum number of route filters allowed per server
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Md5</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Password for BGP session in plaintext (not a checksum)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Status</span>
@@ -657,6 +648,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}status of BGP configuration in the project
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Md5</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password for BGP session in plaintext (not a checksum)
 {{% /md %}}</dd>
 
 </dl>
@@ -693,15 +693,6 @@ The following output properties are available:
     <dd>{{% md %}}The maximum number of route filters allowed per server
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>md5</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password for BGP session in plaintext (not a checksum)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>status</span>
@@ -709,6 +700,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}status of BGP configuration in the project
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>md5</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password for BGP session in plaintext (not a checksum)
 {{% /md %}}</dd>
 
 </dl>
@@ -745,15 +745,6 @@ The following output properties are available:
     <dd>{{% md %}}The maximum number of route filters allowed per server
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>md5</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Password for BGP session in plaintext (not a checksum)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>status</span>
@@ -761,6 +752,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}status of BGP configuration in the project
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>md5</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Password for BGP session in plaintext (not a checksum)
 {{% /md %}}</dd>
 
 </dl>

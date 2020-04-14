@@ -22,7 +22,7 @@ modify, and delete devices.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#Device">Device</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#DeviceArgs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#Device">Device</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#DeviceArgs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -30,11 +30,11 @@ modify, and delete devices.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDevice<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#DeviceArgs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDevice<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#DeviceArgs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet..Device.html">Device</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.DeviceArgs.html">DeviceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Device.html">Device</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.DeviceArgs.html">DeviceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -126,16 +126,6 @@ modify, and delete devices.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Always<wbr>Pxe</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Billing<wbr>Cycle</span>
@@ -145,41 +135,13 @@ continue to boot via iPXE on reboots.
     <dd>{{% md %}}monthly or hourly
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Facilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://www.packet.com/developers/api/facilities), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Force<wbr>Detach<wbr>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hardware<wbr>Reservation<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of hardware reservation which this device occupies
-* `hostname`- The hostname of the device
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -190,35 +152,6 @@ continue to boot via iPXE on reboots.
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ip<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">List&lt;Device<wbr>Ip<wbr>Address<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ipxe<wbr>Script<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://www.packet.com/developers/docs/servers/operating-systems/custom-ipxe/)
-doc.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -249,9 +182,76 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Always<wbr>Pxe</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
+continue to boot via iPXE on reboots.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description string for the device
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Force<wbr>Detach<wbr>Volumes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hardware<wbr>Reservation<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of hardware reservation which this device occupies
+* `hostname`- The hostname of the device
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ip<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deviceipaddress">List&lt;Device<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ipxe<wbr>Script<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
+information is in the
+[Custom iPXE](https://www.packet.com/developers/docs/servers/operating-systems/custom-ipxe/)
+doc.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Project<wbr>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -259,7 +259,7 @@ doc.
             title="Optional, Deprecated">
         <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -270,7 +270,7 @@ information is in the
             title="Optional">
         <span>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -279,7 +279,7 @@ information is in the
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ information is in the
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -297,7 +297,7 @@ information is in the
             title="Optional">
         <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -309,16 +309,6 @@ information is in the
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Always<wbr>Pxe</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Billing<wbr>Cycle</span>
@@ -326,15 +316,6 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -346,11 +327,66 @@ continue to boot via iPXE on reboots.
     <dd>{{% md %}}List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://www.packet.com/developers/api/facilities), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The device name
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Operating<wbr>System</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://www.packet.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Plan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://www.packet.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Project<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which to create the device
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Always<wbr>Pxe</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
+continue to boot via iPXE on reboots.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description string for the device
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Force<wbr>Detach<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd>
@@ -359,19 +395,10 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Hardware<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of hardware reservation which this device occupies
 * `hostname`- The hostname of the device
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device name
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -387,7 +414,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Ipxe<wbr>Script<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -399,36 +426,9 @@ doc.
             title="Optional">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Operating<wbr>System</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://www.packet.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://www.packet.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -442,7 +442,7 @@ doc.
             title="Optional, Deprecated">
         <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -453,7 +453,7 @@ information is in the
             title="Optional">
         <span>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -471,7 +471,7 @@ information is in the
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -480,7 +480,7 @@ information is in the
             title="Optional">
         <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -492,32 +492,13 @@ information is in the
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>always<wbr>Pxe</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>billing<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BillingCycle</span>
+        <span class="property-type">Billing<wbr>Cycle</span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -529,25 +510,6 @@ continue to boot via iPXE on reboots.
     <dd>{{% md %}}List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://www.packet.com/developers/api/facilities), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>force<wbr>Detach<wbr>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>hardware<wbr>Reservation<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of hardware reservation which this device occupies
-* `hostname`- The hostname of the device
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>hostname</span>
@@ -557,40 +519,11 @@ continue to boot via iPXE on reboots.
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>ip<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ipxe<wbr>Script<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://www.packet.com/developers/docs/servers/operating-systems/custom-ipxe/)
-doc.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>network<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">NetworkType?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>operating<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OperatingSystem</span>
+        <span class="property-type">Operating<wbr>System</span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://www.packet.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
@@ -615,9 +548,76 @@ doc.
 
     <dt class="property-optional"
             title="Optional">
+        <span>always<wbr>Pxe</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
+continue to boot via iPXE on reboots.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description string for the device
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>force<wbr>Detach<wbr>Volumes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hardware<wbr>Reservation<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of hardware reservation which this device occupies
+* `hostname`- The hostname of the device
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ipxe<wbr>Script<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
+information is in the
+[Custom iPXE](https://www.packet.com/developers/docs/servers/operating-systems/custom-ipxe/)
+doc.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Network<wbr>Type</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>project<wbr>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -625,7 +625,7 @@ doc.
             title="Optional, Deprecated">
         <span>public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -636,7 +636,7 @@ information is in the
             title="Optional">
         <span>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -645,7 +645,7 @@ information is in the
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -654,7 +654,7 @@ information is in the
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -663,7 +663,7 @@ information is in the
             title="Optional">
         <span>wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -675,6 +675,60 @@ information is in the
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>billing_<wbr>cycle</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}monthly or hourly
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>facilities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[Facility]</span>
+    </dt>
+    <dd>{{% md %}}List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://www.packet.com/developers/api/facilities), set your API auth token in the top of the page and see JSON from the API response.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The device name
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>operating_<wbr>system</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://www.packet.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>plan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://www.packet.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>project_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which to create the device
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>always_<wbr>pxe</span>
@@ -685,15 +739,6 @@ information is in the
 continue to boot via iPXE on reboots.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>billing_<wbr>cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
@@ -701,15 +746,6 @@ continue to boot via iPXE on reboots.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>facilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[Facility]</span>
-    </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://www.packet.com/developers/api/facilities), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -729,15 +765,6 @@ continue to boot via iPXE on reboots.
     </dt>
     <dd>{{% md %}}The ID of hardware reservation which this device occupies
 * `hostname`- The hostname of the device
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The device name
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -768,33 +795,6 @@ doc.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>operating_<wbr>system</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://www.packet.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://www.packet.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>project_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -899,25 +899,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Always<wbr>Pxe</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Billing<wbr>Cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -936,87 +917,12 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Facilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://www.packet.com/developers/api/facilities), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Detach<wbr>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hardware<wbr>Reservation<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of hardware reservation which this device occupies
-* `hostname`- The hostname of the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">List&lt;Device<wbr>Ip<wbr>Address&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipxe<wbr>Script<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://www.packet.com/developers/docs/servers/operating-systems/custom-ipxe/)
-doc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Locked</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1034,58 +940,12 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Operating<wbr>System</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://www.packet.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://www.packet.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Ports</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceport">List&lt;Device<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Ssh<wbr>Key<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Size of allocated subnet, more
-information is in the
-[Custom Subnet Size](https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/) doc.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of &#39;ip_address&#39; attribute.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -1100,7 +960,7 @@ information is in the
             title="">
         <span>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
 {{% /md %}}</dd>
@@ -1116,47 +976,11 @@ information is in the
 
     <dt class="property-"
             title="">
-        <span>Storage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Updated</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A string of the desired User Data for the device.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
 
 </dl>
@@ -1195,25 +1019,6 @@ information is in the
 
     <dt class="property-"
             title="">
-        <span>Always<wbr>Pxe</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Billing<wbr>Cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1232,87 +1037,12 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Facilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://www.packet.com/developers/api/facilities), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Detach<wbr>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hardware<wbr>Reservation<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of hardware reservation which this device occupies
-* `hostname`- The hostname of the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">[]Device<wbr>Ip<wbr>Address</a></span>
-    </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipxe<wbr>Script<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://www.packet.com/developers/docs/servers/operating-systems/custom-ipxe/)
-doc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Locked</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1330,58 +1060,12 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>Operating<wbr>System</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://www.packet.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://www.packet.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Ports</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceport">[]Device<wbr>Port</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Ssh<wbr>Key<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Size of allocated subnet, more
-information is in the
-[Custom Subnet Size](https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/) doc.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of &#39;ip_address&#39; attribute.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -1412,47 +1096,11 @@ information is in the
 
     <dt class="property-"
             title="">
-        <span>Storage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Updated</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A string of the desired User Data for the device.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
 
 </dl>
@@ -1491,25 +1139,6 @@ information is in the
 
     <dt class="property-"
             title="">
-        <span>always<wbr>Pxe</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>billing<wbr>Cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">BillingCycle</span>
-    </dt>
-    <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>created</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1528,87 +1157,12 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>facilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Facility[]</span>
-    </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://www.packet.com/developers/api/facilities), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force<wbr>Detach<wbr>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hardware<wbr>Reservation<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of hardware reservation which this device occupies
-* `hostname`- The hostname of the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipxe<wbr>Script<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://www.packet.com/developers/docs/servers/operating-systems/custom-ipxe/)
-doc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>locked</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">NetworkType?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1626,58 +1180,12 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>operating<wbr>System</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">OperatingSystem</span>
-    </dt>
-    <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://www.packet.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Plan</span>
-    </dt>
-    <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://www.packet.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>ports</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceport">Device<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project<wbr>Ssh<wbr>Key<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>public<wbr>Ipv4Subnet<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Size of allocated subnet, more
-information is in the
-[Custom Subnet Size](https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/) doc.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of &#39;ip_address&#39; attribute.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -1708,47 +1216,11 @@ information is in the
 
     <dt class="property-"
             title="">
-        <span>storage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>updated</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A string of the desired User Data for the device.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
 
 </dl>
@@ -1787,25 +1259,6 @@ information is in the
 
     <dt class="property-"
             title="">
-        <span>always_<wbr>pxe</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>billing_<wbr>cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>created</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1824,87 +1277,12 @@ continue to boot via iPXE on reboots.
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>facilities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[Facility]</span>
-    </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://www.packet.com/developers/api/facilities), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force_<wbr>detach_<wbr>volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hardware_<wbr>reservation_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of hardware reservation which this device occupies
-* `hostname`- The hostname of the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip_<wbr>addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">List[Device<wbr>Ip<wbr>Address]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipxe_<wbr>script_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://www.packet.com/developers/docs/servers/operating-systems/custom-ipxe/)
-doc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>locked</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1922,58 +1300,12 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
-        <span>operating_<wbr>system</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://www.packet.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://www.packet.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>ports</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deviceport">List[Device<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project_<wbr>ssh_<wbr>key_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>public_<wbr>ipv4_<wbr>subnet_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Size of allocated subnet, more
-information is in the
-[Custom Subnet Size](https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/) doc.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of &#39;ip_address&#39; attribute.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -2004,47 +1336,11 @@ information is in the
 
     <dt class="property-"
             title="">
-        <span>storage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>updated</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A string of the desired User Data for the device.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wait_<wbr>for_<wbr>reservation_<wbr>deprovision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
 
 </dl>
@@ -2076,7 +1372,7 @@ Get an existing Device resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet..Device.html">Device</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet..DeviceState.html">DeviceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Device.html">Device</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet..DeviceState.html">DeviceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2186,7 +1482,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Private<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -2195,7 +1491,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Public<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -2204,7 +1500,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Public<wbr>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -2213,7 +1509,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Always<wbr>Pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -2223,7 +1519,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Billing<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}monthly or hourly
 {{% /md %}}</dd>
@@ -2232,7 +1528,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
 {{% /md %}}</dd>
@@ -2241,7 +1537,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Deployed<wbr>Facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -2250,7 +1546,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -2259,7 +1555,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Facilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://www.packet.com/developers/api/facilities), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
@@ -2268,7 +1564,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Force<wbr>Detach<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd>
@@ -2277,7 +1573,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Hardware<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of hardware reservation which this device occupies
 * `hostname`- The hostname of the device
@@ -2287,7 +1583,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -2296,7 +1592,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">List&lt;Device<wbr>Ip<wbr>Address<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#deviceipaddress">List&lt;Device<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
 {{% /md %}}</dd>
@@ -2305,7 +1601,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Ipxe<wbr>Script<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -2317,7 +1613,7 @@ doc.
             title="Optional">
         <span>Locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
@@ -2326,7 +1622,7 @@ doc.
             title="Optional">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2334,7 +1630,7 @@ doc.
             title="Optional">
         <span>Networks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicenetwork">List&lt;Device<wbr>Network<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#devicenetwork">List&lt;Device<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The device's private and public IP (v4 and v6) network details. When a device is run without any special network configuration, it will have 3 networks: 
 * Public IPv4 at `packet_device.name.network.0`
@@ -2348,7 +1644,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>Operating<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://www.packet.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
@@ -2357,7 +1653,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://www.packet.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
@@ -2366,7 +1662,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceport">List&lt;Device<wbr>Port<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#deviceport">List&lt;Device<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
 {{% /md %}}</dd>
@@ -2375,7 +1671,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd>
@@ -2384,7 +1680,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>Project<wbr>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2392,7 +1688,7 @@ The fields of the network attributes are:
             title="Optional, Deprecated">
         <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -2403,7 +1699,7 @@ information is in the
             title="Optional">
         <span>Root<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
 {{% /md %}}</dd>
@@ -2412,7 +1708,7 @@ information is in the
             title="Optional">
         <span>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
 {{% /md %}}</dd>
@@ -2421,7 +1717,7 @@ information is in the
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the device
 {{% /md %}}</dd>
@@ -2430,7 +1726,7 @@ information is in the
             title="Optional">
         <span>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -2439,7 +1735,7 @@ information is in the
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -2448,7 +1744,7 @@ information is in the
             title="Optional">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
 {{% /md %}}</dd>
@@ -2457,7 +1753,7 @@ information is in the
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -2466,7 +1762,7 @@ information is in the
             title="Optional">
         <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -2482,7 +1778,7 @@ information is in the
             title="Optional">
         <span>Access<wbr>Private<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -2491,7 +1787,7 @@ information is in the
             title="Optional">
         <span>Access<wbr>Public<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -2500,7 +1796,7 @@ information is in the
             title="Optional">
         <span>Access<wbr>Public<wbr>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -2509,7 +1805,7 @@ information is in the
             title="Optional">
         <span>Always<wbr>Pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -2519,7 +1815,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Billing<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}monthly or hourly
 {{% /md %}}</dd>
@@ -2528,7 +1824,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
 {{% /md %}}</dd>
@@ -2537,7 +1833,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Deployed<wbr>Facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -2546,7 +1842,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -2564,7 +1860,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Force<wbr>Detach<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd>
@@ -2573,7 +1869,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Hardware<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of hardware reservation which this device occupies
 * `hostname`- The hostname of the device
@@ -2583,7 +1879,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -2601,7 +1897,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Ipxe<wbr>Script<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -2613,7 +1909,7 @@ doc.
             title="Optional">
         <span>Locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
@@ -2622,7 +1918,7 @@ doc.
             title="Optional">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2644,7 +1940,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>Operating<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://www.packet.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
@@ -2653,7 +1949,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://www.packet.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
@@ -2671,7 +1967,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd>
@@ -2688,7 +1984,7 @@ The fields of the network attributes are:
             title="Optional, Deprecated">
         <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -2699,7 +1995,7 @@ information is in the
             title="Optional">
         <span>Root<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
 {{% /md %}}</dd>
@@ -2717,7 +2013,7 @@ information is in the
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the device
 {{% /md %}}</dd>
@@ -2726,7 +2022,7 @@ information is in the
             title="Optional">
         <span>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -2744,7 +2040,7 @@ information is in the
             title="Optional">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
 {{% /md %}}</dd>
@@ -2753,7 +2049,7 @@ information is in the
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -2762,7 +2058,7 @@ information is in the
             title="Optional">
         <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -2778,7 +2074,7 @@ information is in the
             title="Optional">
         <span>access<wbr>Private<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -2787,7 +2083,7 @@ information is in the
             title="Optional">
         <span>access<wbr>Public<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -2796,7 +2092,7 @@ information is in the
             title="Optional">
         <span>access<wbr>Public<wbr>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -2805,7 +2101,7 @@ information is in the
             title="Optional">
         <span>always<wbr>Pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -2815,7 +2111,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>billing<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BillingCycle?</span>
+        <span class="property-type">Billing<wbr>Cycle</span>
     </dt>
     <dd>{{% md %}}monthly or hourly
 {{% /md %}}</dd>
@@ -2824,7 +2120,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
 {{% /md %}}</dd>
@@ -2833,7 +2129,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>deployed<wbr>Facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -2842,7 +2138,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -2851,7 +2147,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>facilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Facility[]?</span>
+        <span class="property-type">Facility[]</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://www.packet.com/developers/api/facilities), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
@@ -2860,7 +2156,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>force<wbr>Detach<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd>
@@ -2869,7 +2165,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>hardware<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of hardware reservation which this device occupies
 * `hostname`- The hostname of the device
@@ -2879,7 +2175,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -2888,7 +2184,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]?</a></span>
+        <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below). 
 {{% /md %}}</dd>
@@ -2897,7 +2193,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>ipxe<wbr>Script<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -2909,7 +2205,7 @@ doc.
             title="Optional">
         <span>locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
@@ -2918,7 +2214,7 @@ doc.
             title="Optional">
         <span>network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">NetworkType?</span>
+        <span class="property-type">Network<wbr>Type</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2926,7 +2222,7 @@ doc.
             title="Optional">
         <span>networks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicenetwork">Device<wbr>Network[]?</a></span>
+        <span class="property-type"><a href="#devicenetwork">Device<wbr>Network[]</a></span>
     </dt>
     <dd>{{% md %}}The device's private and public IP (v4 and v6) network details. When a device is run without any special network configuration, it will have 3 networks: 
 * Public IPv4 at `packet_device.name.network.0`
@@ -2940,7 +2236,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>operating<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OperatingSystem?</span>
+        <span class="property-type">Operating<wbr>System</span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://www.packet.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
@@ -2949,7 +2245,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Plan?</span>
+        <span class="property-type">Plan</span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://www.packet.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd>
@@ -2958,7 +2254,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceport">Device<wbr>Port[]?</a></span>
+        <span class="property-type"><a href="#deviceport">Device<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
 {{% /md %}}</dd>
@@ -2967,7 +2263,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd>
@@ -2976,7 +2272,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>project<wbr>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2984,7 +2280,7 @@ The fields of the network attributes are:
             title="Optional, Deprecated">
         <span>public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -2995,7 +2291,7 @@ information is in the
             title="Optional">
         <span>root<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
 {{% /md %}}</dd>
@@ -3004,7 +2300,7 @@ information is in the
             title="Optional">
         <span>ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
 {{% /md %}}</dd>
@@ -3013,7 +2309,7 @@ information is in the
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the device
 {{% /md %}}</dd>
@@ -3022,7 +2318,7 @@ information is in the
             title="Optional">
         <span>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -3031,7 +2327,7 @@ information is in the
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -3040,7 +2336,7 @@ information is in the
             title="Optional">
         <span>updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
 {{% /md %}}</dd>
@@ -3049,7 +2345,7 @@ information is in the
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -3058,7 +2354,7 @@ information is in the
             title="Optional">
         <span>wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -3388,11 +2684,20 @@ information is in the
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd>
@@ -3401,9 +2706,16 @@ information is in the
             title="Optional">
         <span>Reservation<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -3414,18 +2726,11 @@ information is in the
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd>
@@ -3438,38 +2743,12 @@ information is in the
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cidr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>reservation<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3480,12 +2759,38 @@ information is in the
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>cidr</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>reservation<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3503,15 +2808,6 @@ information is in the
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3539,7 +2835,7 @@ information is in the
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
 {{% /md %}}</dd>
@@ -3548,7 +2844,7 @@ information is in the
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd>
@@ -3557,7 +2853,7 @@ information is in the
             title="Optional">
         <span>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 {{% /md %}}</dd>
@@ -3566,7 +2862,7 @@ information is in the
             title="Optional">
         <span>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}address of router
 {{% /md %}}</dd>
@@ -3575,7 +2871,7 @@ information is in the
             title="Optional">
         <span>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether the address is routable from the Internet
 {{% /md %}}</dd>
@@ -3591,7 +2887,7 @@ information is in the
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
 {{% /md %}}</dd>
@@ -3600,7 +2896,7 @@ information is in the
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd>
@@ -3609,7 +2905,7 @@ information is in the
             title="Optional">
         <span>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 {{% /md %}}</dd>
@@ -3618,7 +2914,7 @@ information is in the
             title="Optional">
         <span>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}address of router
 {{% /md %}}</dd>
@@ -3627,7 +2923,7 @@ information is in the
             title="Optional">
         <span>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether the address is routable from the Internet
 {{% /md %}}</dd>
@@ -3643,7 +2939,7 @@ information is in the
             title="Optional">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
 {{% /md %}}</dd>
@@ -3652,7 +2948,7 @@ information is in the
             title="Optional">
         <span>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd>
@@ -3661,7 +2957,7 @@ information is in the
             title="Optional">
         <span>family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 {{% /md %}}</dd>
@@ -3670,7 +2966,7 @@ information is in the
             title="Optional">
         <span>gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}address of router
 {{% /md %}}</dd>
@@ -3679,7 +2975,7 @@ information is in the
             title="Optional">
         <span>public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}whether the address is routable from the Internet
 {{% /md %}}</dd>
@@ -3762,7 +3058,7 @@ information is in the
             title="Optional">
         <span>Bonded</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 * `project_id`- The ID of the project the device belongs to
@@ -3772,7 +3068,7 @@ information is in the
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the port
 {{% /md %}}</dd>
@@ -3781,7 +3077,7 @@ information is in the
             title="Optional">
         <span>Mac</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
 {{% /md %}}</dd>
@@ -3790,7 +3086,7 @@ information is in the
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
 {{% /md %}}</dd>
@@ -3799,7 +3095,7 @@ information is in the
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd>
@@ -3815,7 +3111,7 @@ information is in the
             title="Optional">
         <span>Bonded</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 * `project_id`- The ID of the project the device belongs to
@@ -3825,7 +3121,7 @@ information is in the
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the port
 {{% /md %}}</dd>
@@ -3834,7 +3130,7 @@ information is in the
             title="Optional">
         <span>Mac</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
 {{% /md %}}</dd>
@@ -3843,7 +3139,7 @@ information is in the
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
 {{% /md %}}</dd>
@@ -3852,7 +3148,7 @@ information is in the
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd>
@@ -3868,7 +3164,7 @@ information is in the
             title="Optional">
         <span>bonded</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 * `project_id`- The ID of the project the device belongs to
@@ -3878,7 +3174,7 @@ information is in the
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the port
 {{% /md %}}</dd>
@@ -3887,7 +3183,7 @@ information is in the
             title="Optional">
         <span>mac</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
 {{% /md %}}</dd>
@@ -3896,7 +3192,7 @@ information is in the
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
 {{% /md %}}</dd>
@@ -3905,7 +3201,7 @@ information is in the
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd>

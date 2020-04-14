@@ -34,7 +34,7 @@ Provides a Packet device datasource.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDevice<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#GetDeviceArgs">GetDeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#LookupDeviceResult">LookupDeviceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDevice<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#GetDeviceArgs">GetDeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#LookupDeviceResult">LookupDeviceResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -57,7 +57,7 @@ The following arguments are supported:
             title="Optional">
         <span>Device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device ID
 {{% /md %}}</dd>
@@ -66,7 +66,7 @@ The following arguments are supported:
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -75,7 +75,7 @@ The following arguments are supported:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project in which the devices exists
 {{% /md %}}</dd>
@@ -91,7 +91,7 @@ The following arguments are supported:
             title="Optional">
         <span>Device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device ID
 {{% /md %}}</dd>
@@ -100,7 +100,7 @@ The following arguments are supported:
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -109,7 +109,7 @@ The following arguments are supported:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project in which the devices exists
 {{% /md %}}</dd>
@@ -125,7 +125,7 @@ The following arguments are supported:
             title="Optional">
         <span>device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device ID
 {{% /md %}}</dd>
@@ -134,7 +134,7 @@ The following arguments are supported:
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -143,7 +143,7 @@ The following arguments are supported:
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project in which the devices exists
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ The fields of the network attributes are:
             title="">
         <span>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user or project SSH keys
 {{% /md %}}</dd>
@@ -411,7 +411,7 @@ The fields of the network attributes are:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
