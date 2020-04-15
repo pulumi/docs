@@ -7,6 +7,7 @@ meta_desc: "In this workshop, Luke Hoban shows you the easy way to start using I
 featured: false
 
 aliases: [ "/events/workshop-san-francisco-2020-04-09" ]
+redirect_to: "/webinars/getting-started-with-infrastructure-as-code/"
 
 # If the video is pre-recorded or live.
 pre_recorded: false
