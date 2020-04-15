@@ -112,7 +112,7 @@ Pulumi Crosswalk for AWS is currently supported only in
 ### What Packages Define Pulumi Crosswalk for AWS?
 
 Because Pulumi Crosswalk for AWS is a broader "brand" for our framework spanning multiple packages, there isn't
-a single package that contains everything. The [`@pulumi/aws`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}),
+a single package that contains everything. The [`@pulumi/aws`]({{< relref "/docs/reference/pkg/aws/" >}}),
 [`@pulumi/awsx`]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}), and
 [`@pulumi/eks`]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks" >}}) packages each has an important role to play.
 
