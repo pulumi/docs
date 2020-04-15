@@ -177,8 +177,8 @@ to configure the way that traffic is forwarded, health checks, and so on, see
 For more advanced cases, you will most likely want to use [EC2 Auto Scaling](
 https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html), rather than hard-coding
 the number of and placement of VMs. Please refer to the API docs for
-[LaunchConfiguration]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ec2#LaunchConfiguration" >}}) and
-[AutoScalingGroup]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/autoscaling#Group" >}}) for details on how to do so.
+[LaunchConfiguration]({{< relref "/docs/reference/pkg/aws/ec2/launchconfiguration" >}}) and
+[AutoScalingGroup]({{< relref "/docs/reference/pkg/aws/autoscaling/group" >}}) for details on how to do so.
 
 ## Load Balancing ECS Service Targets
 
